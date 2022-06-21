@@ -28,8 +28,6 @@ jobs:
         cache: 'yarn'
     - name: Install dependencies
     - run: yarn --frozen-lockfile
-    - name: Build
     - run: yarn build
-    - name: Test    
     - run: yarn lint
     - run: yarn test
