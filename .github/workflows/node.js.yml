@@ -19,6 +19,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@master
       with:
@@ -28,3 +29,12 @@ jobs:
     - run: yarn build
     - run: yarn lint
     - run: yarn test
+
+    - name:  'Automated Version Bump'
+      uses:  'phips28/gh-action-bump-version@master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        major-wording:  'MAJOR'
+        patch-wording:  'PATCH,FIX'
+        rc-wording:     'ALPHA,BETA'
