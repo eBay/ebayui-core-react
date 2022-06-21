@@ -1,0 +1,683 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-listbox-button Borderless 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="expand-btn expand-btn--borderless"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__text"
+      >
+        Option 2
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="BB"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
+exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="expand-btn"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__text"
+      >
+        Option 1
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="AA"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
+exports[`Storyshots ebay-listbox-button Default - with a11y prefix 1`] = `
+Array [
+  <label
+    id="listbox-button__label"
+  >
+    Select these items:
+  </label>,
+  <br />,
+  <br />,
+  <span
+    className="listbox-button"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      aria-labelledby="listbox-button__label expand-btn-text"
+      className="expand-btn"
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      type="button"
+    >
+      <span
+        className="expand-btn__cell"
+      >
+        <span
+          className="expand-btn__text"
+          id="expand-btn-text"
+        >
+          Option 2
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+    <select
+      className="listbox-button__native"
+      hidden={true}
+      value="BB"
+    >
+      <option
+        value="AA"
+      />
+      <option
+        value="BB"
+      />
+      <option
+        value="CC"
+      />
+    </select>
+  </span>,
+]
+`;
+
+exports[`Storyshots ebay-listbox-button Default 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="expand-btn"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__text"
+      >
+        Option 2
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="BB"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
+exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="expand-btn"
+    disabled={true}
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__text"
+      >
+        Option 2
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="BB"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
+exports[`Storyshots ebay-listbox-button Floating label 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="expand-btn expand-btn--floating-label"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__floating-label"
+      >
+        Select
+      </span>
+      <span
+        className="expand-btn__text"
+      >
+        Option 1
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="AA"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
+exports[`Storyshots ebay-listbox-button Fluid 1`] = `
+<span
+  className="listbox-button listbox-button--fluid"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="expand-btn"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__text"
+      >
+        Option 2
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="BB"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
+exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-invalid="true"
+    className="expand-btn"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__text"
+      >
+        Option 2
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="BB"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
+exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
+<div>
+  <span
+    className="listbox-button"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      className="expand-btn"
+      onClick={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      type="button"
+    >
+      <span
+        className="expand-btn__cell"
+      >
+        <span
+          className="expand-btn__text"
+        >
+          California
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+    <select
+      className="listbox-button__native"
+      hidden={true}
+      value="California"
+    >
+      <option
+        value="California"
+      />
+      <option
+        value="New York"
+      />
+      <option
+        value="Washington"
+      />
+    </select>
+  </span>
+  <label>
+    <input
+      name="listbox-value"
+      onClick={[Function]}
+      type="radio"
+    />
+    California
+  </label>
+  <label>
+    <input
+      name="listbox-value"
+      onClick={[Function]}
+      type="radio"
+    />
+    New York
+  </label>
+  <label>
+    <input
+      name="listbox-value"
+      onClick={[Function]}
+      type="radio"
+    />
+    Washington
+  </label>
+</div>
+`;
+
+exports[`Storyshots ebay-listbox-button Too many options 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="expand-btn"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="expand-btn__cell"
+    >
+      <span
+        className="expand-btn__text"
+      >
+        Option 2
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="BB"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+    <option
+      value="DD"
+    />
+    <option
+      value="EE"
+    />
+    <option
+      value="FF"
+    />
+    <option
+      value="GG"
+    />
+    <option
+      value="HH"
+    />
+    <option
+      value="II"
+    />
+    <option
+      value="JJ"
+    />
+    <option
+      value="KK"
+    />
+    <option
+      value="LL"
+    />
+    <option
+      value="MM"
+    />
+    <option
+      value="NN"
+    />
+    <option
+      value="OO"
+    />
+    <option
+      value="PP"
+    />
+    <option
+      value="QQ"
+    />
+    <option
+      value="RR"
+    />
+    <option
+      value="SS"
+    />
+    <option
+      value="TT"
+    />
+    <option
+      value="UU"
+    />
+    <option
+      value="VV"
+    />
+    <option
+      value="YY"
+    />
+    <option
+      value="XX"
+    />
+    <option
+      value="YY"
+    />
+    <option
+      value="ZZ"
+    />
+    <option
+      value="11"
+    />
+    <option
+      value="22"
+    />
+    <option
+      value="33"
+    />
+    <option
+      value="44"
+    />
+    <option
+      value="55"
+    />
+    <option
+      value="66"
+    />
+    <option
+      value="77"
+    />
+    <option
+      value="88"
+    />
+    <option
+      value="99"
+    />
+    <option
+      value="100"
+    />
+    <option
+      value="101"
+    />
+    <option
+      value="102"
+    />
+    <option
+      value="102"
+    />
+  </select>
+</span>
+`;

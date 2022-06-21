@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-progress-spinner Default & Large 1`] = `
+Array [
+  <p>
+    <span
+      aria-label="Busy"
+      className="progress-spinner"
+      role="img"
+    >
+      <svg
+        aria-hidden={true}
+        className="icon icon--spinner"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-spinner"
+        />
+      </svg>
+    </span>
+  </p>,
+  <p>
+    <span
+      aria-label="Stand by..."
+      className="progress-spinner progress-spinner--large"
+      role="img"
+    >
+      <svg
+        aria-hidden={true}
+        className="icon icon--spinner"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-spinner"
+        />
+      </svg>
+    </span>
+  </p>,
+]
+`;

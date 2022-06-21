@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-page-notice Attention message 1`] = `
+<section
+  aria-labelledby="attention-status"
+  class="page-notice page-notice--attention"
+  role="region"
+>
+  <div
+    class="page-notice__header"
+    id="attention-status"
+  >
+    <svg
+      aria-label="Attention"
+      class="icon icon--attention-filled"
+      focusable="false"
+      height="24px"
+      role="img"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-attention-filled"
+      />
+    </svg>
+  </div>
+  <div
+    class="page-notice__main"
+  >
+    <p>
+      <strong>
+        Error.
+      </strong>
+        Please take another look at the following:
+      <br />
+      <a
+        href="#"
+      >
+        Card number
+      </a>
+      , 
+      <a
+        href="#"
+      >
+        Expiration date
+      </a>
+       & 
+      <a
+        href="#"
+      >
+        Security code
+      </a>
+      .
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Storyshots ebay-page-notice Confirmation message 1`] = `
+<section
+  aria-labelledby="confirmation-status"
+  class="page-notice page-notice--confirmation"
+  role="region"
+>
+  <div
+    class="page-notice__header"
+    id="confirmation-status"
+  >
+    <svg
+      aria-label="Success"
+      class="icon icon--confirmation-filled"
+      focusable="false"
+      height="24px"
+      role="img"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-confirmation-filled"
+      />
+    </svg>
+  </div>
+  <div
+    class="page-notice__main"
+  >
+    <p>
+      <strong>
+        Congrats!
+      </strong>
+        You just listed 
+      <a
+        href="#"
+      >
+        Spam and Eggs From the Cows Perspective
+      </a>
+       (paperback).
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Storyshots ebay-page-notice Information message 1`] = `
+<section
+  aria-labelledby="information-status"
+  class="page-notice page-notice--information"
+  role="region"
+>
+  <div
+    class="page-notice__header"
+    id="information-status"
+  >
+    <svg
+      aria-label="Information"
+      class="icon icon--information-filled"
+      focusable="false"
+      height="24px"
+      role="img"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-information-filled"
+      />
+    </svg>
+  </div>
+  <div
+    class="page-notice__main"
+  >
+    <p>
+      <strong>
+        Good news!
+      </strong>
+        You get free shipping on your next pair of shoes! 
+      <a
+        href="#"
+      >
+        Learn more
+      </a>
+      .
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Storyshots ebay-page-notice Message with footer 1`] = `
+<section
+  aria-labelledby="confirmation-status"
+  class="page-notice page-notice--confirmation"
+  role="region"
+>
+  <div
+    class="page-notice__header"
+    id="confirmation-status"
+  >
+    <svg
+      aria-label="Congratulations"
+      class="icon icon--confirmation-filled"
+      focusable="false"
+      height="24px"
+      role="img"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-confirmation-filled"
+      />
+    </svg>
+  </div>
+  <div
+    class="page-notice__main"
+  >
+    <h2
+      class="page-notice__title"
+    >
+      Your order's in!
+    </h2>
+    <p>
+      We'll email updates to jonsnow@gmail.com. You should get it by Thu, Sept 22.
+    </p>
+  </div>
+  <div
+    class="page-notice__footer"
+  >
+    <a
+      href="https://ebay.com"
+    >
+      Action
+    </a>
+  </div>
+</section>
+`;
+
+exports[`Storyshots ebay-page-notice Simple usage 1`] = `
+<section
+  aria-labelledby="general-status"
+  class="page-notice "
+  role="region"
+>
+  <div
+    class="page-notice__main"
+  >
+    text message
+  </div>
+</section>
+`;

@@ -1,0 +1,63 @@
+# EbaySelect
+This component is used to create a native `<select>` form element with default browser styling.
+
+## Demo
+[Storybook](https://pages.github.com/eBay/ebayui-core-react/master/?path=/story/ebay-select--default)
+
+## Import JS
+```jsx harmony
+import { EbaySelect, EbaySelectOption } from '@ebay/ebayui-core-react/ebay-select'
+```
+## Import following styles from SKIN
+```jsx harmony
+import '@ebay/skin/src/less/select/ds6/select.less';
+import '@ebay/skin/src/less/global/ds6/global.less';
+```
+## Import styles using SCSS/CSS [Pending]
+```jsx harmony
+import '@ebay/skin/dist/ebay-select/ds6/select.css'
+```
+
+## Usage
+When no selected option is specified:
+```jsx harmony
+ <EbaySelect name='formSelect'>
+    <EbaySelectOption value='1'>Option 1</EbaySelectOption>
+    <EbaySelectOption value='2'>Option 2</EbaySelectOption>
+    <EbaySelectOption value='3'>Option 3</EbaySelectOption>
+</EbaySelect>
+```
+
+When a selected option is specified:
+```jsx harmony
+<EbaySelect name='formSelect' value='2'>
+    <EbaySelectOption value='1'>Option 1</EbaySelectOption>
+    <EbaySelectOption value='2'>Option 2</EbaySelectOption>
+    <EbaySelectOption value='3'>Option 3</EbaySelectOption>
+</EbaySelect>
+```
+Please look at this documentation as to the recommended way in React to pre-select a value:
+https://reactjs.org/docs/forms.html#the-select-tag. Notice that the selected value is set right in the props of `<EbaySelect/>`.
+
+## EbaySelect Attributes
+
+| Name            | Type     | Required | Description                                                  |
+| --------------- | -------- | -------- | ------------------------------------------------------------ |
+| `name`          | String   | Yes      | passed to the `<select>` element                             |
+| `value`         | String   | No       | Set the value of the `<select>` element. Use this for **controlled component**. |
+| `defaultValue`  | String   | No       | Set the initial value for `<select>` elemtn, only for **uncontrolled  component**. |
+| `disabled`      | String   | No       | passed to the `<select>` element, default is `false`         |
+| `className`     | String   | No       | passed to the wrapper-element of the `<select>` element      |
+| `borderless`    | String   | No       | whether button has borders, default is `false`               |
+| `onChange`      | Function | No       | { el, index, selected }                                      |
+| `floatingLabel` | String   | No       | Indicates that the select is a floating label type and renders it as a label |
+| `inputSize`     | String   | No       | `default` (default), `large`                                 |
+| `invalid`       | Boolean  | No       | Indicates a field-level error with red border if true        |
+
+## EbaySelectOption Attributes
+
+| Name    | Type   | Required | Description                      |
+| ------- | ------ | -------- | -------------------------------- |
+| `value` | String | Yes      | passed to the `<option>` element |
+
+It supports all the supported aria attributes (e.g. `aria-label`, `aria-invalid`)

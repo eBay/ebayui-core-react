@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-section-title Size 1`] = `
+Array [
+  <div
+    className="section-title section-title--small"
+  >
+    <div
+      className="section-title__title-container"
+    >
+      <h2
+        className="section-title__title"
+      >
+        Small Section Title
+      </h2>
+    </div>
+  </div>,
+  <div
+    className="section-title"
+  >
+    <div
+      className="section-title__title-container"
+    >
+      <h2
+        className="section-title__title"
+      >
+        Default Section Title
+      </h2>
+    </div>
+  </div>,
+  <div
+    className="section-title section-title--large"
+  >
+    <div
+      className="section-title__title-container"
+    >
+      <h2
+        className="section-title__title"
+      >
+        Large Section Title
+      </h2>
+    </div>
+  </div>,
+  <div
+    className="section-title section-title--giant"
+  >
+    <div
+      className="section-title__title-container"
+    >
+      <h2
+        className="section-title__title"
+      >
+        Giant Section Title
+      </h2>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots ebay-section-title With CTA 1`] = `
+Array [
+  <div
+    className="section-title"
+  >
+    <div
+      className="section-title__title-container"
+    >
+      <h2
+        className="section-title__title"
+      >
+        Today’s Deals – All With Free Shipping
+      </h2>
+      <span
+        className="section-title__subtitle"
+      >
+        Plus, guaranteed best prices.
+      </span>
+    </div>
+    <div
+      className="section-title__cta section-title__cta--no-text"
+    >
+      <a
+        aria-hidden="true"
+        href="https://www.ebay.com"
+        tabIndex={-1}
+      >
+        <svg
+          aria-hidden={true}
+          className="section-title__cta-icon"
+          focusable={false}
+          height="24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-arrow-right-bold"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>,
+  <div
+    className="section-title"
+  >
+    <div
+      className="section-title__title-container"
+    >
+      <h2
+        className="section-title__title"
+      >
+        Today’s Deals – All With Free Shipping
+      </h2>
+      <span
+        className="section-title__subtitle"
+      >
+        Plus, guaranteed best prices.
+      </span>
+    </div>
+    <div
+      className="section-title__cta"
+    >
+      <a
+        aria-hidden="true"
+        href="https://www.ebay.com"
+        tabIndex={-1}
+      >
+        <span
+          className="section-title__cta-text"
+        >
+          See All
+        </span>
+        <svg
+          aria-hidden={true}
+          className="section-title__cta-icon"
+          focusable={false}
+          height="24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-arrow-right-bold"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots ebay-section-title With Info 1`] = `
+<div
+  className="section-title"
+>
+  <div
+    className="section-title__title-container"
+  >
+    <h2
+      className="section-title__title"
+    >
+      Today’s Deals – All With Free Shipping
+    </h2>
+    <span
+      className="section-title__subtitle"
+    >
+      Plus, guaranteed best prices.
+    </span>
+  </div>
+  <div
+    className="section-title__info"
+  >
+    <span
+      className="infotip"
+    >
+      <button
+        aria-expanded={false}
+        aria-label="Important information"
+        className="icon-btn icon-btn--transparent infotip__host"
+        onClick={[Function]}
+        type="button"
+      >
+        <svg
+          aria-hidden={true}
+          className="icon icon--information"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-information"
+          />
+        </svg>
+      </button>
+      <span
+        className="infotip__overlay"
+        role="tooltip"
+        style={
+          Object {
+            "bottom": "auto",
+            "left": "-10px",
+            "right": "auto",
+            "top": "calc(100% + 16px)",
+          }
+        }
+      >
+        <span
+          className="infotip__pointer infotip__pointer--top-left"
+        />
+        <span
+          className="infotip__mask"
+        >
+          <span
+            className="infotip__cell"
+          >
+            <span
+              className="infotip__content"
+            >
+              <span
+                className="infotip__heading"
+              >
+                Important
+              </span>
+              <p>
+                This is some important info
+              </p>
+            </span>
+            <button
+              aria-label="Dismiss infotip"
+              className="icon-btn icon-btn--transparent infotip__close"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="icon icon--close"
+                focusable={false}
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlinkHref="#icon-close"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-section-title With Subtitle 1`] = `
+<div
+  className="section-title"
+>
+  <div
+    className="section-title__title-container"
+  >
+    <h2
+      className="section-title__title"
+    >
+      Today’s Deals – All With Free Shipping
+    </h2>
+    <span
+      className="section-title__subtitle"
+    >
+      Plus, guaranteed best prices.
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-section-title With Title But W/O Subtitle 1`] = `
+<div
+  className="section-title"
+>
+  <div
+    className="section-title__title-container"
+  >
+    <h2
+      className="section-title__title"
+    >
+      Missing subtitle shouldn't throw
+    </h2>
+  </div>
+</div>
+`;

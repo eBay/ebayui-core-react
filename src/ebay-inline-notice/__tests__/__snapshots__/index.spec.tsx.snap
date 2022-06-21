@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-inline-notice Attention message 1`] = `
+<div
+  class="inline-notice inline-notice--attention"
+>
+  <span
+    class="inline-notice__header"
+  >
+    <svg
+      aria-label="Attention"
+      class="icon icon--attention-filled"
+      focusable="false"
+      height="24px"
+      role="img"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-attention-filled"
+      />
+    </svg>
+  </span>
+  <span
+    class="inline-notice__main"
+  >
+    <p>
+      Update your credit card.
+    </p>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-inline-notice Confirmation message 1`] = `
+<div
+  class="inline-notice inline-notice--confirmation"
+>
+  <span
+    class="inline-notice__header"
+  >
+    <svg
+      aria-label="Confirmation"
+      class="icon icon--confirmation-filled"
+      focusable="false"
+      height="24px"
+      role="img"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-confirmation-filled"
+      />
+    </svg>
+  </span>
+  <span
+    class="inline-notice__main"
+  >
+    <p>
+      Delivered on May 1, 2017
+    </p>
+    <p>
+      Tracking number: 
+      <a
+        href="http://www.ebay.com"
+      >
+        93878473859376898908657567
+      </a>
+    </p>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-inline-notice Default 1`] = `
+<div
+  class="inline-notice "
+>
+  <span
+    class="inline-notice__main"
+  >
+    <p>
+      text message
+    </p>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-inline-notice Information message 1`] = `
+<div
+  class="inline-notice inline-notice--information"
+>
+  <span
+    class="inline-notice__header"
+  >
+    <svg
+      aria-label="Information"
+      class="icon icon--information-filled"
+      focusable="false"
+      height="24px"
+      role="img"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-information-filled"
+      />
+    </svg>
+  </span>
+  <span
+    class="inline-notice__main"
+  >
+    <p>
+      Global Shipping Program transaction.
+    </p>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-inline-notice Notice toggle 1`] = `
+<button
+  class="btn btn--secondary"
+>
+  Hide
+   Notice
+</button>
+`;

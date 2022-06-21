@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-legacy-floating-label Autofocus test 1`] = `
+<div>
+  <span
+    class="legacy-floating-label"
+  >
+    <label
+      class="legacy-floating-label__label legacy-floating-label__label--animate"
+    >
+      Autofocused field
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control legacy-textbox-underline"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+  <br />
+  <span
+    class="legacy-floating-label"
+  >
+    <label
+      class="legacy-floating-label__label legacy-floating-label__label--inline"
+    >
+      Regular field
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control legacy-textbox-underline"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-legacy-floating-label Control value from outside 1`] = `
+<p>
+  <span
+    class="legacy-floating-label"
+  >
+    <label
+      class="legacy-floating-label__label legacy-floating-label__label--inline"
+    >
+      Will convert to lowercase
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control legacy-textbox-underline"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</p>
+`;
+
+exports[`Storyshots ebay-legacy-floating-label Default floating label 1`] = `
+<form>
+  <p>
+    <span
+      class="legacy-floating-label"
+    >
+      <label
+        class="legacy-floating-label__label legacy-floating-label__label--inline"
+        for="input-1"
+      >
+        Email address
+      </label>
+      <span
+        class="textbox"
+      >
+        <input
+          class="textbox__control legacy-textbox-underline"
+          id="input-1"
+          type="email"
+          value=""
+        />
+      </span>
+    </span>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary"
+      type="submit"
+    >
+      Submit
+    </button>
+  </p>
+</form>
+`;
+
+exports[`Storyshots ebay-legacy-floating-label Floating label disabled 1`] = `
+<span
+  class="legacy-floating-label"
+>
+  <label
+    class="legacy-floating-label__label legacy-floating-label__label--disabled legacy-floating-label__label--inline"
+    for="input-4"
+  >
+    Email address
+  </label>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control legacy-textbox-underline"
+      disabled=""
+      id="input-4"
+      type="text"
+      value=""
+    />
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-legacy-floating-label Floating label invalid 1`] = `
+<span
+  class="legacy-floating-label"
+>
+  <label
+    class="legacy-floating-label__label legacy-floating-label__label--inline"
+    for="input-5"
+  >
+    Email address
+  </label>
+  <span
+    class="textbox"
+  >
+    <input
+      aria-invalid="true"
+      class="textbox__control legacy-textbox-underline"
+      id="input-5"
+      type="text"
+      value=""
+    />
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-legacy-floating-label Floating label with controlled value 1`] = `
+<span
+  class="legacy-floating-label"
+>
+  <label
+    class="legacy-floating-label__label"
+    for="input-21"
+  >
+    Email address
+  </label>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control legacy-textbox-underline"
+      id="input-21"
+      type="text"
+      value="can't change"
+    />
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-legacy-floating-label Floating label with placeholder 1`] = `
+<span
+  class="legacy-floating-label"
+>
+  <label
+    class="legacy-floating-label__label legacy-floating-label__label--inline"
+    for="input-3"
+  >
+    Email address
+  </label>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control legacy-textbox-underline"
+      id="input-3"
+      placeholder="placeholder text"
+      type="text"
+      value=""
+    />
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-legacy-floating-label Floating label with value 1`] = `
+<span
+  class="legacy-floating-label"
+>
+  <label
+    class="legacy-floating-label__label"
+    for="input-2"
+  >
+    Email address
+  </label>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control legacy-textbox-underline"
+      id="input-2"
+      type="text"
+      value="test"
+    />
+  </span>
+</span>
+`;

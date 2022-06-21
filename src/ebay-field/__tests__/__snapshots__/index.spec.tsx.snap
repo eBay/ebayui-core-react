@@ -1,0 +1,608 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-field Block 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label field__label--stacked"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label field__label--stacked"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label field__label--stacked"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-field Block and inline combination 1`] = `
+<div>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 2
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 3
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </div>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 4
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 5
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-field Default - inline 1`] = `
+<div>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 1
+    </label>
+    <span
+      className="switch"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="switch__control"
+        id="switch-1"
+        onChange={[Function]}
+        role="switch"
+        type="checkbox"
+        value="123"
+      />
+      <span
+        className="switch__button"
+      />
+    </span>
+  </span>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 1
+    </label>
+    <span
+      className="checkbox"
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }
+    >
+      <input
+        checked={true}
+        className="checkbox__control"
+        id="checkbox-2"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkbox__icon"
+        hidden={true}
+      >
+        <svg
+          aria-hidden={true}
+          className="checkbox__checked icon icon--checkbox-checked"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-checkbox-checked"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="checkbox__unchecked icon icon--checkbox-unchecked"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-checkbox-unchecked"
+          />
+        </svg>
+      </span>
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-field Labels on the right 1`] = `
+Array [
+  <p>
+    <span
+      className="field"
+    >
+      <span
+        className="textbox"
+      >
+        <input
+          className="textbox__control"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="placeholder text"
+          type="text"
+          value=""
+        />
+      </span>
+      <label
+        className="field__label field__label--end"
+      >
+        Label 1
+      </label>
+    </span>
+  </p>,
+  <p>
+    <span
+      className="field"
+    >
+      <span
+        className="switch"
+      >
+        <input
+          aria-checked={false}
+          checked={false}
+          className="switch__control"
+          id="switch-1"
+          onChange={[Function]}
+          role="switch"
+          type="checkbox"
+          value="123"
+        />
+        <span
+          className="switch__button"
+        />
+      </span>
+      <label
+        className="field__label field__label--end"
+      >
+        Label 1
+      </label>
+    </span>
+  </p>,
+  <p>
+    <span
+      className="field"
+    >
+      <span
+        className="checkbox"
+        style={
+          Object {
+            "alignItems": "center",
+          }
+        }
+      >
+        <input
+          checked={true}
+          className="checkbox__control"
+          id="checkbox-2"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="checkbox__icon"
+          hidden={true}
+        >
+          <svg
+            aria-hidden={true}
+            className="checkbox__checked icon icon--checkbox-checked"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-checkbox-checked"
+            />
+          </svg>
+          <svg
+            aria-hidden={true}
+            className="checkbox__unchecked icon icon--checkbox-unchecked"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-checkbox-unchecked"
+            />
+          </svg>
+        </span>
+      </span>
+      <label
+        className="field__label field__label--end"
+      >
+        Label 1
+      </label>
+    </span>
+  </p>,
+]
+`;
+
+exports[`Storyshots ebay-field required 1`] = `
+<div>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 1
+       
+      <sup>
+        *
+      </sup>
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+  <span
+    className="field"
+  >
+    <label
+      className="field__label"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots ebay-field with description 1`] = `
+<div>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label field__label--stacked"
+      htmlFor="field1"
+    >
+      Label 1
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        id="field1"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+    <div
+      className="field__description"
+    >
+      <span>
+        Some description Text
+      </span>
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label field__label--stacked"
+    >
+      Label 2
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+    <div
+      className="field__description field__description--confirmation"
+    >
+      <span>
+        Some description Text
+      </span>
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label field__label--stacked"
+    >
+      Label 3
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        aria-invalid={true}
+        className="textbox__control"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+    <div
+      className="field__description field__description--attention"
+    >
+      <span>
+        Some description Text
+      </span>
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <label
+      className="field__label field__label--stacked"
+      htmlFor="field4"
+    >
+      Label 4
+    </label>
+    <span
+      className="textbox"
+    >
+      <input
+        className="textbox__control"
+        id="field4"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        type="text"
+        value=""
+      />
+    </span>
+    <div
+      className="field__description field__description--confirmation"
+    >
+      <span>
+        Some description Text
+      </span>
+    </div>
+  </div>
+</div>
+`;

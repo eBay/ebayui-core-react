@@ -1,0 +1,952 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-progress-stepper Complete 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Started
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Shipped
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Transit
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Delivered
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Step 
+          1
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        aria-current="step"
+        className="progress-stepper__item progress-stepper__item--current"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="active"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Step 
+          2
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Step 
+          3
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Step 
+          4
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    <button
+      aria-live={null}
+      className="btn btn--secondary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      Back
+    </button>
+     
+    <button
+      aria-live={null}
+      className="btn btn--secondary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      Forward
+    </button>
+  </p>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h2>
+            Huge
+          </h2>
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        aria-current="step"
+        className="progress-stepper__item progress-stepper__item--current"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="active"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h2>
+            Huge
+          </h2>
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h2>
+            Huge
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Custom numbers (deprecated) 1`] = `
+<div
+  style={
+    Object {
+      "--progress-stepper-badge-current-color": "#3665f3",
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Three
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        aria-current="step"
+        className="progress-stepper__item progress-stepper__item--current"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="4"
+            role="img"
+          >
+            4
+          </span>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Four
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="5"
+            role="img"
+          >
+            5
+          </span>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Five
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Default 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Started
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Shipped
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        aria-current="step"
+        className="progress-stepper__item progress-stepper__item--current"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="active"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Transit
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Delivered
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Icons 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Paid
+          </h4>
+          July 3rd
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item progress-stepper__item--information"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--information-filled"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-information-filled"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Shipping Information
+          </h4>
+          July 4th
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        aria-current="step"
+        className="progress-stepper__item progress-stepper__item--attention progress-stepper__item--current"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--attention-filled"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-attention-filled"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Transit Problem
+          </h4>
+          July 5th
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Delivered
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Upcoming 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items progress-stepper__items--upcoming"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Paid
+          </h4>
+          July 3rd
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Shipped
+          </h4>
+          July 4th
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Transit
+          </h4>
+          July 5th
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Delivered
+          </h4>
+          July 6th
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper progress-stepper--vertical"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        className="progress-stepper__item progress-stepper__item--confirmation"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Order placed
+          </h4>
+          <p>
+            New Mens Addidas Ultra Boost
+          </p>
+          <p>
+            Order total $220
+          </p>
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        aria-current="step"
+        className="progress-stepper__item progress-stepper__item--current"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="active"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Preparing for shipment
+          </h4>
+          <p>
+            We will notify you once it ships.
+          </p>
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <span
+            aria-label="upcoming"
+            role="img"
+          />
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          <h4>
+            Delivered
+          </h4>
+          <p>
+            Guaranteed Wednesday, October 09.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

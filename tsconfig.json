@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "lib": [
+            "dom",
+            "es2017",
+            "dom.iterable"
+        ],
+        "allowJs": false,
+        "checkJs": false,
+        "jsx": "react",
+        "rootDir": "./src",
+        "outDir": "./lib",
+        "declaration": true,
+        "declarationMap": true,
+        "strict": false,
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true
+    },
+    "exclude": [
+        "lib",
+        "node_modules",
+        "src/**/__tests__"
+    ],
+    "include": [
+        "src",
+        "test"
+    ]
+}

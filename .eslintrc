@@ -1,0 +1,91 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": [
+        "ebay",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "./.eslint.react.js"
+    ],
+    "ignorePatterns": [
+        "**/__tests__/**"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018
+    },
+    "plugins": [
+        "jest",
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        // note you must disable the base rule as it can report incorrect errors
+        "no-use-before-define": "off",
+        // it's best not to use type 'any' but there are many cases we still need it (not all external & eBay module support type)
+        "@typescript-eslint/no-explicit-any": "off",
+        // require() is still necessary for dynamic import or test utils on server-side
+        "@typescript-eslint/no-var-requires": "off",
+        // function is hoisted so it's safe to be ignored by this rule
+        "@typescript-eslint/no-use-before-define": [
+            "error",
+            {
+                "functions": false
+            }
+        ],
+        // Not necessary but feel free to turn it on for required return type on any function/method
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        // Ignore unused function arguments
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+                "args": "none"
+            }
+        ],
+        // works incorrectly with type imports
+        "no-import-assign": "off",
+        "react/prop-types": "off",
+        "semi": ["error", "never"],
+        "object-curly-spacing": ["error", "always"],
+        //        "quotes": ["error", "backtick"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "template-curly-spacing": ["error", "never"],
+        "no-extra-parens": ["error", "all", {
+            "nestedBinaryExpressions": false,
+            "conditionalAssign": true,
+            "returnAssign": true,
+            "ignoreJSX": "all"
+        }],
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-indent": [2, 4],
+
+        // airbnb-overrides
+        "react/jsx-filename-extension": [0],
+        "react/jsx-closing-bracket-location": 0,
+        "react/require-default-props": 0,
+        "react/no-array-index-key": 0,
+        "react/no-danger": 0,
+        "react/jsx-fragments": ["warn", "syntax"]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}

@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-button Default 1`] = `
+<p>
+  <button
+    class="btn btn--secondary"
+  >
+    Hello, I am a button!
+  </button>
+</p>
+`;
+
+exports[`Storyshots ebay-button Disabled 1`] = `
+<p>
+  <button
+    class="btn btn--primary"
+    disabled=""
+  >
+    Primary Button
+  </button>
+</p>
+`;
+
+exports[`Storyshots ebay-button Flexible Button 1`] = `
+<button
+  class="btn btn--primary btn--fluid"
+>
+  <span
+    class="btn__cell"
+    style="justify-content: space-between;"
+  >
+    <span>
+      Select
+    </span>
+    <span
+      style="display: inline-flex;"
+    >
+      <span>
+        Any
+      </span>
+      <svg
+        aria-hidden="true"
+        class="icon icon--chevron-down"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-chevron-down"
+        />
+      </svg>
+    </span>
+  </span>
+</button>
+`;
+
+exports[`Storyshots ebay-button Fluid 1`] = `
+<p>
+  <button
+    class="btn btn--primary btn--fluid"
+  >
+    Primary Button
+  </button>
+</p>
+`;
+
+exports[`Storyshots ebay-button Icon Button 1`] = `
+<p>
+  <button
+    aria-label="Menu button"
+    class="btn btn--primary btn--icon-only"
+  >
+    <svg
+      aria-hidden="true"
+      class="icon icon--menu"
+      focusable="false"
+      height="24px"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-menu"
+      />
+    </svg>
+  </button>
+</p>
+`;
+
+exports[`Storyshots ebay-button Loading button 1`] = `
+<p>
+  <button
+    aria-live="polite"
+    class="btn btn--primary"
+  >
+    <span
+      class="btn__cell"
+    >
+      <span
+        aria-label="Busy"
+        class="progress-spinner"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon icon--spinner"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-spinner"
+          />
+        </svg>
+      </span>
+    </span>
+  </button>
+</p>
+`;
+
+exports[`Storyshots ebay-button Partially disabled Button 1`] = `
+<button
+  aria-disabled="true"
+  class="btn btn--primary"
+>
+  Hello, I am a button!
+</button>
+`;
+
+exports[`Storyshots ebay-button Priority 1`] = `
+<p>
+  <button
+    class="btn btn--primary"
+  >
+    Primary Button
+  </button>
+</p>
+`;
+
+exports[`Storyshots ebay-button Size 1`] = `
+<p>
+  <button
+    class="btn btn--secondary btn--large"
+  >
+    Large Button
+  </button>
+</p>
+`;
+
+exports[`Storyshots ebay-button Transparent 1`] = `
+<div
+  style="background: rgba(66, 214, 205, 0.5);"
+>
+  <p>
+    <button
+      class="btn btn--secondary"
+    >
+      Default Button
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary btn--transparent"
+    >
+      Transparent Button
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--delete btn--transparent"
+    >
+      Transparent Delete Button
+    </button>
+  </p>
+  <p>
+    <a
+      class="fake-btn fake-btn--secondary fake-btn--transparent"
+      href="https://ebay.com"
+    >
+      Transparent Link
+    </a>
+  </p>
+</div>
+`;
+
+exports[`Storyshots ebay-button Truncated 1`] = `
+<div
+  style="max-width: 200px;"
+>
+  <p>
+    <button
+      class="btn btn--secondary btn--truncated"
+    >
+      Hello, I am a button! this is a long text
+    </button>
+  </p>
+  <p>
+    <a
+      class="fake-btn fake-btn--secondary fake-btn--truncated"
+      href="https://ebay.com"
+    >
+      Hello, I am a link! this is a long text
+    </a>
+  </p>
+</div>
+`;
