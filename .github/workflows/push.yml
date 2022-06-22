@@ -15,7 +15,7 @@ jobs:
               uses: ./.github/workflows/build.yml
               with:
                 node-version: 16.x
-            - name: Bump
+            - name: Bump version
               uses: ./.github/workflows/bump.yml
               with:
                 githubToken: ${{ github.token }}
