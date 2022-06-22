@@ -21,4 +21,4 @@ jobs:
     bump:
         uses: ./.github/workflows/bump.yml
         with:
-            githubToken: ${{ secrets.GITHUB_TOKEN }}
+            githubToken: ${{ github.token }}
