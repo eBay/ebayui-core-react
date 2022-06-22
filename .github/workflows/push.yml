@@ -9,9 +9,15 @@ on:
 
 jobs:
     build:
+        name: Build on latest Node.js
         uses: ./.github/workflows/build.yml
         with:
             node-version: 16.x
+    build-legacy:
+        name: Build on legacy Node.js
+        uses: ./.github/workflows/build.yml
+        with:
+            node-version: 14.x
     bump:
         uses: ./.github/workflows/bump.yml
         with:
