@@ -14,6 +14,7 @@ jobs:
         with:
             node-version: 16.x
     bump:
+        needs: build
         name: Bump version
         uses: ./.github/workflows/bump.yml
         with:
