@@ -22,10 +22,6 @@ jobs:
               run: yarn --frozen-lockfile
             - name: Build
               run: yarn build
-    test:
-        runs-on: ubuntu-latest
-        needs: build
-        steps:
             - name: Lint
               run: yarn lint
             - name: Test
