@@ -4,11 +4,15 @@
 name: eBay UI React CI
 
 on:
-  pull_request:
-    branches: [ master ]
+    push:
+        branches: [ master ]
 
 jobs:
     build:
         uses: ./.github/workflows/build.yml
         with:
-          node-version: 16.x
+            node-version: 16.x
+    bump:
+        uses: ./.github/workflows/bump.yml
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}

@@ -4,11 +4,11 @@
 name: eBay UI React CI
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
     build:
         uses: ./.github/workflows/build.yml
         with:
-          node-version: 16.x
+            node-version: 14.x

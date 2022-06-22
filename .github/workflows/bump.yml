@@ -1,0 +1,22 @@
+name: Bump
+
+on:
+    workflow_call:
+        inputs:
+            token:
+                required: true
+                type: string
+
+jobs:
+    bump:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Automated Version Bump
+              uses: phips28/gh-action-bump-version@master
+              env:
+                GITHUB_TOKEN: ${{ inputs.token }}
+              with:
+                  major-wording: 'MAJOR'
+                  minor-wording: 'MINOR'
+                  patch-wording: 'PATCH,FIX'
+                  rc-wording: 'ALPHA,BETA'
