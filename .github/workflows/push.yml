@@ -9,16 +9,15 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Build on latest Node.js
-              uses: ./.github/workflows/build.yml
-              with:
-                node-version: 16.x
-            - name: Bump version
-              uses: ./.github/workflows/bump.yml
-              with:
-                githubToken: ${{ github.token }}
+        name: Build on latest Node.js
+        uses: ./.github/workflows/build.yml
+        with:
+            node-version: 16.x
+    bump:
+        name: Bump version
+        uses: ./.github/workflows/bump.yml
+        with:
+            githubToken: ${{ github.token }}
     build-legacy:
         name: Build on legacy Node.js
         uses: ./.github/workflows/build.yml
