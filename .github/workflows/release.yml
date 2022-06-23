@@ -1,4 +1,4 @@
-name: "reusable flow: Bump"
+name: "reusable flow: Release"
 
 on:
     workflow_call:
@@ -6,6 +6,10 @@ on:
             githubToken:
                 required: true
                 type: string
+            npmToken:
+                required: true
+                type: string
+
 
 jobs:
     bump:
@@ -13,12 +17,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@master
-            - name: Automated Version Bump
-              uses: phips28/gh-action-bump-version@master
+            - name: Version Bump and Release
+              uses: mikeal/merge-release@master
               env:
                 GITHUB_TOKEN: ${{ inputs.githubToken }}
-              with:
-                  major-wording: 'MAJOR,BREAK'
-                  minor-wording: 'MINOR,FEAT'
-                  patch-wording: 'PATCH,FIX'
-                  rc-wording: 'ALPHA,BETA'
+                NPM_AUTH_TOKEN: ${{ inputs.npmToken }}

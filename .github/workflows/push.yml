@@ -9,13 +9,14 @@ jobs:
         name: Build on latest Node.js
         uses: ./.github/workflows/build.yml
         with:
-            node-version: 16.x
+            node-version: 16.14.2
     bump:
         needs: build
         name: Bump version
         uses: ./.github/workflows/bump.yml
         with:
             githubToken: ${{ github.token }}
+            npmToken: ${{ secrets.NPM_TOKEN }}
     build-legacy:
         name: Build on legacy Node.js
         uses: ./.github/workflows/build.yml
