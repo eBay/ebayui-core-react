@@ -1,3 +1,5 @@
+name: "reusable flow: Bump"
+
 on:
     workflow_call:
         inputs:

@@ -1,3 +1,5 @@
+name: "reusable flow: Build"
+
 on:
     workflow_call:
         inputs:
