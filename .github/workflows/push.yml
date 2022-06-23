@@ -10,10 +10,10 @@ jobs:
         uses: ./.github/workflows/build.yml
         with:
             node-version: 16.14.2
-    bump:
+    release:
         needs: build
         name: Bump version
-        uses: ./.github/workflows/bump.yml
+        uses: ./.github/workflows/release.yml
         with:
             githubToken: ${{ github.token }}
             npmToken: ${{ secrets.NPM_TOKEN }}
