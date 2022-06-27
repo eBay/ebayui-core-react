@@ -4,6 +4,9 @@
   "description": "Skin components build off React",
   "main": "index.js",
   "types": "index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "clean": "node scripts/clean",
     "lint": "yarn eslint",
@@ -20,10 +23,8 @@
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' lib",
     "pre-release": "yarn clean && yarn build && yarn copy",
     "post-release": "echo todo: yarn deploy-storybook",
-    "release": "yarn pre-release && DO_PUBLISH=1 npm publish lib/ && yarn post-release",
-    "post-release-beta": "yarn storybook-ebay-deploy --target=beta",
-    "release-beta": "yarn pre-release && DO_PUBLISH=1 npm publish --tag beta lib/ && yarn post-release-beta",
-    "prepublishOnly": "if [ -z \"$DO_PUBLISH\" ]; then echo \"Please use 'release' command for publishing\"; exit 1; fi"
+    "release": "yarn pre-release && CI=1 npm publish lib/ --access public && yarn post-release",
+    "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi"
   },
   "husky": {
     "hooks": {
