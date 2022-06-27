@@ -2,13 +2,11 @@ name: "reusable flow: Release"
 
 on:
     workflow_call:
-        inputs:
+        secrets:
             githubToken:
                 required: true
-                type: string
             npmToken:
                 required: true
-                type: string
 
 
 jobs:
@@ -20,5 +18,5 @@ jobs:
             - name: Version Bump and Release
               uses: mikeal/merge-release@master
               env:
-                GITHUB_TOKEN: ${{ inputs.githubToken }}
-                NPM_AUTH_TOKEN: ${{ inputs.npmToken }}
+                GITHUB_TOKEN: ${{ secrets.githubToken }}
+                NPM_AUTH_TOKEN: ${{ secrets.npmToken }}

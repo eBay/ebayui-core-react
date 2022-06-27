@@ -14,7 +14,7 @@ jobs:
         needs: build
         name: Bump version
         uses: ./.github/workflows/release.yml
-        with:
+        secrets:
             githubToken: ${{ github.token }}
             npmToken: ${{ secrets.NPM_TOKEN }}
     build-legacy:
