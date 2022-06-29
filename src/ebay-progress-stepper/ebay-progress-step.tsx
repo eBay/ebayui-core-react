@@ -1,4 +1,4 @@
-import React, { Children, FC, ReactElement } from 'react'
+import React, { Children, FC, ReactElement, ReactNode } from 'react'
 import classNames from 'classnames'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { StepState, StepType } from './types'
@@ -10,6 +10,7 @@ export type EbayProgressStepProps = {
     current?: boolean;
     number?: number;
     className?: string;
+    children?: ReactNode;
 }
 
 const typeClasses: { [key in StepType]: string } = {

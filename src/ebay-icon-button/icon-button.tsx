@@ -19,6 +19,7 @@ const EbayIconButton:FC<Props> = ({
     href,
     icon,
     badgeNumber,
+    badgeAriaLabel,
     transparent,
     className: extraClasses,
     ...rest
@@ -35,7 +36,7 @@ const EbayIconButton:FC<Props> = ({
     const children = (
         <>
             <EbayIcon name={icon} />
-            {badgeNumber && <EbayBadge type="icon" number={badgeNumber} />}
+            {badgeNumber && <EbayBadge type="icon" number={badgeNumber} aria-label={badgeAriaLabel} />}
         </>
     )
 

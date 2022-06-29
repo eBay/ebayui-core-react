@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect, ReactNode } from 'react'
 import classNames from 'classnames'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import NoticeContent from '../common/notice-utils/notice-content'
@@ -12,6 +12,7 @@ type Props = {
     'aria-label': string;
     hidden?: boolean;
     className?: string
+    children?: ReactNode;
 }
 
 const EbayInlineNotice: FC<Props> = ({

@@ -1,10 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
 import { FieldLayoutType } from './types'
 
 type FieldProps = {
     className?: string;
     layout?: FieldLayoutType;
+    children?: ReactNode;
 };
 
 const Field: FC<FieldProps> = ({

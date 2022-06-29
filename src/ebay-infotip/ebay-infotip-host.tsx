@@ -1,4 +1,4 @@
-import React, { ComponentProps, FC, RefObject } from 'react'
+import React, { ComponentProps, FC, RefObject, ReactNode } from 'react'
 import classNames from 'classnames/dedupe'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { withForwardRef } from '../common/component-utils/forwardRef'
@@ -8,6 +8,7 @@ type InfotipHostProps = ComponentProps<'button'> & {
     icon?: Icon;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     variant?: Variant;
+    children?: ({ icon }) => ReactNode | ReactNode
 }
 
 const EbayInfotipHost: FC<InfotipHostProps> = ({
