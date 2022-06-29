@@ -25,4 +25,5 @@ jobs:
             - name: Build Storybook
               run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }}
               env:
+                CI: true
                 GH_TOKEN: ${{ secrets.githubToken }}
