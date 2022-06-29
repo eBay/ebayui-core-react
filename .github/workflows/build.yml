@@ -22,6 +22,28 @@ jobs:
               run: yarn --frozen-lockfile
             - name: Build library
               run: yarn build
+            - uses: actions/cache@master
+              id: restore-build
+              with:
+                path: ./lib
+                key: ${{ github.sha }}
+
+    lint-test:
+        name: Lint & Test
+        runs-on: ubuntu-latest
+        needs: [build]
+
+        steps:
+            - uses: actions/checkout@master
+            - uses: actions/setup-node@master
+              with:
+                  node-version: ${{ inputs.node-version }}
+                  cache: 'yarn'
+            - uses: actions/cache@master
+              id: restore-build
+              with:
+                  path: ./lib
+                  key: ${{ github.sha }}
             - name: Lint
               run: yarn lint
             - name: Test

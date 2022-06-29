@@ -15,8 +15,11 @@ jobs:
     build-storybook:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@master
+            - uses: actions/checkout@master
+            - uses: actions/setup-node@master
+              with:
+                node-version: ${{ inputs.node-version }}
+                cache: 'yarn'
             - name: Build Storybook
               run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }}
               env:
