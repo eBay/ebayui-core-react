@@ -25,7 +25,7 @@ jobs:
             - uses: actions/cache@master
               id: restore-build
               with:
-                path: ./lib
+                path: ./*
                 key: ${{ github.sha }}
 
     lint-test:
@@ -42,7 +42,7 @@ jobs:
             - uses: actions/cache@master
               id: restore-build
               with:
-                  path: ./lib
+                  path: ./*
                   key: ${{ github.sha }}
             - name: Lint
               run: yarn lint

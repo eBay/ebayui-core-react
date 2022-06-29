@@ -20,6 +20,8 @@ jobs:
               with:
                 node-version: ${{ inputs.node-version }}
                 cache: 'yarn'
+            - name: Install dependencies
+              run: yarn --frozen-lockfile
             - name: Build Storybook
               run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }}
               env:

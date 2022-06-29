@@ -6,7 +6,7 @@ on:
 
 jobs:
     build:
-        name: Build on latest Node.js
+        name: Node.js latest
         uses: ./.github/workflows/build.yml
         with:
             node-version: 16.14.2
@@ -26,7 +26,7 @@ jobs:
         secrets:
             githubToken: ${{ github.token }}
     build-legacy:
-        name: Build on legacy Node.js
+        name: Node.js legacy
         uses: ./.github/workflows/build.yml
         with:
             node-version: 14.x
