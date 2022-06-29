@@ -17,6 +17,14 @@ jobs:
         secrets:
             githubToken: ${{ github.token }}
             npmToken: ${{ secrets.NPM_TOKEN }}
+    publish-storybook:
+        needs: build
+        name: Publish Storybook on Github Pages
+        uses: ./.github/workflows/storybook.yml
+        with:
+            branch: master
+        secrets:
+            githubToken: ${{ github.token }}
     build-legacy:
         name: Build on legacy Node.js
         uses: ./.github/workflows/build.yml

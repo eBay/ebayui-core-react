@@ -1,0 +1,23 @@
+name: "reusable flow: Deploy Storybook"
+
+on:
+    workflow_call:
+        inputs:
+            branch:
+                type: string
+                required: false
+                default: master
+        secrets:
+            githubToken:
+                required: true
+
+jobs:
+    build-storybook:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+            - name: Build Storybook
+              run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }}
+              env:
+                GH_TOKEN: ${{ secrets.githubToken }}
