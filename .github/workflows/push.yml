@@ -23,6 +23,7 @@ jobs:
         uses: ./.github/workflows/storybook.yml
         with:
             branch: master
+            githubActor: ${{ github.actor }}
         secrets:
             githubToken: ${{ github.token }}
     build-legacy:
