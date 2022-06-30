@@ -24,13 +24,8 @@
     "pre-release": "yarn clean && yarn build && yarn copy",
     "post-release": "echo todo: yarn deploy-storybook",
     "release": "yarn pre-release && CI=1 npm publish lib/ --access public && yarn post-release",
-    "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn eslint-local && yarn test"
-    }
+    "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -90,7 +85,7 @@
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
-    "husky": "^2.2.0",
+    "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "jest-junit": "^8.0.0",
