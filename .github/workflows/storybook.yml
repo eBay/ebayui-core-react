@@ -7,6 +7,9 @@ on:
                 type: string
                 required: false
                 default: master
+            githubActor:
+                type: string
+                required: true
         secrets:
             githubToken:
                 required: true
@@ -23,7 +26,6 @@ jobs:
             - name: Install dependencies
               run: yarn --frozen-lockfile
             - name: Build Storybook
-              run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }}
+              run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }} --ci
               env:
-                CI: true
-                GH_TOKEN: ${{ secrets.githubToken }}
+                GH_TOKEN: ${{ inputs.githubActor }}:${{ secrets.githubToken }}
