@@ -7,7 +7,8 @@ import React, {
     useState,
     ReactElement,
     cloneElement,
-    MouseEventHandler
+    MouseEventHandler,
+    ReactNode
 } from 'react'
 import classNames from 'classnames'
 import * as screenreaderTrap from 'makeup-screenreader-trap'
@@ -42,7 +43,8 @@ export interface DialogBaseProps<T> extends HTMLProps<T> {
     closeButton?: ReactElement;
     focus?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     animated?: boolean;
-    transitionElement?: TransitionElement
+    transitionElement?: TransitionElement;
+    children?: ReactNode;
 }
 
 export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({

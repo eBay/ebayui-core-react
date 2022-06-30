@@ -1,6 +1,10 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
-const EbayNoticeTitle: FC = ({ children }) => (
+type EbayNoticeTitleProps = {
+    children?: ReactNode;
+}
+
+const EbayNoticeTitle: FC = ({ children }: EbayNoticeTitleProps) => (
     <span className="page-notice__title">
         {children}
     </span>
