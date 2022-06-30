@@ -130,7 +130,9 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const onButtonClick = () => {
         setExpanded(!expanded)
         setOptionsOpened(true)
-        setTimeout(() => optionsContainerRef.current.focus(), 0)
+        setTimeout(() => optionsContainerRef.current.focus({
+            preventScroll: true
+        }), 0)
     }
 
     const onButtonKeyup = (e: KeyboardEvent<HTMLButtonElement>) => {
