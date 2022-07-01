@@ -26,8 +26,8 @@ jobs:
                 rc-wording: 'ALPHA,BETA'
 
             - name: Publish to NPM
-              uses: JS-DevTools/npm-publish@master
               env:
                 CI: true
-              with:
-                token: ${{ secrets.npmToken }}
+                HUSKY: 0
+                NPM_AUTH_TOKEN: ${{ secrets.npmToken }}
+              run: yarn release
