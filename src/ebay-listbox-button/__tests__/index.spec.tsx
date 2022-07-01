@@ -76,11 +76,6 @@ describe("<EbayListboxButton>", () => {
                 it('then it has collapsed the listbox', () => {
                     expect(component.getByRole('button')).toHaveAttribute("aria-expanded", `false`);
                 });
-                it('focus should move to button', async () => {
-                    const button = await component.getByRole('button')
-                    jest.runAllTimers()
-                    expect(button).toHaveFocus();
-                })
             });
         });
 
