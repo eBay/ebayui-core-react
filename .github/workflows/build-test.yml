@@ -1,4 +1,4 @@
-name: "reusable flow: Build"
+name: "reusable flow: Build and test"
 
 on:
     workflow_call:
@@ -14,20 +14,10 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@master
-            - name: Use Node.js ${{ inputs.node-version }}
-              uses: actions/setup-node@master
+            - id: build
+              uses: ./.github/workflows/build
               with:
                   node-version: ${{ inputs.node-version }}
-                  cache: 'yarn'
-            - name: Install dependencies
-              run: yarn --frozen-lockfile
-            - name: Build library
-              run: yarn build
-            - uses: actions/cache@master
-              id: restore-build
-              with:
-                path: ./*
-                key: ${{ github.sha }}
 
     lint-test:
         name: Lint & Test

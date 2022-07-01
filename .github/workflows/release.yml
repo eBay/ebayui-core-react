@@ -29,14 +29,6 @@ jobs:
                 minor-wording: 'MINOR,FEAT,CHORE'
                 rc-wording: 'ALPHA,BETA'
 
-            - name: Use Node.js ${{ inputs.node-version }}
-              uses: actions/setup-node@master
-              with:
-                  node-version: ${{ inputs.node-version }}
-                  cache: 'yarn'
-            - name: Install dependencies
-              run: yarn --frozen-lockfile
-
             - id: build
               uses: ./.github/workflows/build
               with:

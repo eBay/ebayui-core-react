@@ -7,7 +7,7 @@ on:
 jobs:
     build:
         name: Node.js 16
-        uses: ./.github/workflows/build.yml
+        uses: ./.github/workflows/build-test.yml
         with:
             node-version: 16.13.2
     release:

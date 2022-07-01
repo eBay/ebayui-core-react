@@ -24,7 +24,7 @@
     "pre-release": "yarn clean && yarn build && yarn copy",
     "release": "yarn pre-release && CI=1 npm publish lib/ --access public",
     "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi",
-    "prepare": "husky install"
+    "prepare": "yarn husky install"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
