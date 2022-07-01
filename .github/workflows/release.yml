@@ -27,5 +27,7 @@ jobs:
 
             - name: Publish to NPM
               uses: JS-DevTools/npm-publish@master
+              env:
+                CI: true
               with:
                 token: ${{ secrets.npmToken }}

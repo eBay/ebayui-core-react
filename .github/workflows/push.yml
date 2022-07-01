@@ -6,13 +6,13 @@ on:
 
 jobs:
     build:
-        name: Node.js latest
+        name: Node.js 16
         uses: ./.github/workflows/build.yml
         with:
-            node-version: 16.14.2
+            node-version: 16.13.2
     release:
         needs: build
-        name: Bump version
+        name: Bump & Release
         uses: ./.github/workflows/release.yml
         secrets:
             githubToken: ${{ github.token }}
@@ -27,7 +27,7 @@ jobs:
         secrets:
             githubToken: ${{ github.token }}
     build-legacy:
-        name: Node.js legacy
+        name: Node.js 14
         uses: ./.github/workflows/build.yml
         with:
             node-version: 14.x
