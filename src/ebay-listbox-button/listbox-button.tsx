@@ -127,7 +127,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     }
 
     const focusOptionsContainer = (focusOptions?: FocusOptions) =>
-        setTimeout(() => optionsContainerRef.current.focus(focusOptions), 0)
+        setTimeout(() => optionsContainerRef?.current?.focus(focusOptions), 0)
     const onButtonClick = () => {
         setExpanded(!expanded)
         setOptionsOpened(true)

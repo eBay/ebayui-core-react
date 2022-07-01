@@ -3,7 +3,7 @@ import React from "react";
 import { fireEvent, render } from '@testing-library/react'
 
 import { EbayListboxButton, EbayListboxButtonOption } from "..";
-
+jest.useFakeTimers()
 describe("<EbayListboxButton>", () => {
     describe("a11y prefix", () => {
         const renderListbox = async (listboxBtnLabel?) => {
@@ -64,14 +64,23 @@ describe("<EbayListboxButton>", () => {
             it('then listbox options and rendered', () => {
                 expect(component.getByRole('listbox')).toBeInTheDocument();
             })
+            it('focus should move to listbox', async () => {
+                const listbox = await component.getByRole('listbox')
+                jest.runAllTimers()
+                expect(listbox).toHaveFocus();
+            })
             describe('when the button is clicked again', () => {
                 beforeEach(async () => {
                     await fireEvent.click(component.getByRole('button'));
                 });
-
                 it('then it has collapsed the listbox', () => {
                     expect(component.getByRole('button')).toHaveAttribute("aria-expanded", `false`);
                 });
+                it('focus should move to button', async () => {
+                    const button = await component.getByRole('button')
+                    jest.runAllTimers()
+                    expect(button).toHaveFocus();
+                })
             });
         });
 
