@@ -64,8 +64,8 @@ describe("<EbayListboxButton>", () => {
             it('then listbox options and rendered', () => {
                 expect(component.getByRole('listbox')).toBeInTheDocument();
             })
-            it('focus should move to listbox', async () => {
-                const listbox = await component.getByRole('listbox')
+            it('focus should move to listbox', () => {
+                const listbox =  component.getByRole('listbox')
                 jest.runAllTimers()
                 expect(listbox).toHaveFocus();
             })
@@ -73,9 +73,14 @@ describe("<EbayListboxButton>", () => {
                 beforeEach(async () => {
                     await fireEvent.click(component.getByRole('button'));
                 });
-                it('then it has collapsed the listbox', () => {
+                it('then it has collapsed the listbox',() => {
                     expect(component.getByRole('button')).toHaveAttribute("aria-expanded", `false`);
                 });
+                it('focus should move to button', () => {
+                    const button =  component.getByRole('button')
+                    jest.runAllTimers()
+                    expect(button).toHaveFocus();
+                })
             });
         });
 
