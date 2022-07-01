@@ -1,0 +1,26 @@
+name: "job: Build"
+description: 'Composite build action'
+inputs:
+    node-version:
+        required: true
+        type: string
+
+runs:
+    using: "composite"
+    steps:
+        - name: Checkout
+          uses: actions/checkout@master
+        - name: Use Node.js ${{ inputs.node-version }}
+          uses: actions/setup-node@master
+          with:
+              node-version: ${{ inputs.node-version }}
+              cache: 'yarn'
+        - name: Install dependencies
+          run: yarn --frozen-lockfile
+        - name: Build library
+          run: yarn build
+        - uses: actions/cache@master
+          id: restore-build
+          with:
+            path: ./*
+            key: ${{ github.sha }}

@@ -2,6 +2,10 @@ name: "reusable flow: Release"
 
 on:
     workflow_call:
+        inputs:
+            node-version:
+                type: string
+                required: true
         secrets:
             githubToken:
                 required: true
@@ -25,9 +29,21 @@ jobs:
                 minor-wording: 'MINOR,FEAT,CHORE'
                 rc-wording: 'ALPHA,BETA'
 
+            - name: Use Node.js ${{ inputs.node-version }}
+              uses: actions/setup-node@master
+              with:
+                  node-version: ${{ inputs.node-version }}
+                  cache: 'yarn'
+            - name: Install dependencies
+              run: yarn --frozen-lockfile
+
+            - id: build
+              uses: ./.github/workflows/job-build.yml
+              with:
+                node-version: ${{ node-version }}
+
             - name: Publish to NPM
               env:
                 CI: true
-                HUSKY: 0
                 NPM_AUTH_TOKEN: ${{ secrets.npmToken }}
               run: yarn release
