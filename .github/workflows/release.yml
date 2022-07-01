@@ -34,6 +34,12 @@ jobs:
               with:
                 node-version: ${{ inputs.node-version }}
 
+            - uses: actions/cache@master
+              id: restore-build
+              with:
+                  path: ./*
+                  key: ${{ github.sha }}
+
             - name: Publish to NPM
               env:
                 CI: true
