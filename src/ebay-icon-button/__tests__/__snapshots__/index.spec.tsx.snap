@@ -47,7 +47,6 @@ exports[`Storyshots ebay-icon-button Transparent 1`] = `
 exports[`Storyshots ebay-icon-button With Badges 1`] = `
 <p>
   <button
-    badgearialabel="new feature available"
     class="icon-btn icon-btn--badged"
     type="button"
   >
@@ -65,6 +64,7 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
     </svg>
     <span
       aria-hidden="true"
+      aria-label="new feature available"
       class="badge"
     >
       1

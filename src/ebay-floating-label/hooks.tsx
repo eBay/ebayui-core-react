@@ -18,7 +18,7 @@ type FloatingLabelHookReturn = {
     label: ReactNode;
     onBlur: () => void;
     onFocus: () => void;
-    Container: FC;
+    Container: FC<{ children?: ReactNode }>;
     ref: InputRef;
     placeholder: string;
 }
@@ -124,7 +124,7 @@ export function useFloatingLabel({
     })
 
     const FragmentContainer = useCallback(({ children }) => <>{children}</>, [])
-    const FloatingLabelContainer = useCallback(
+    const FloatingLabelContainer: FC<{ children?: ReactNode }> = useCallback(
         ({ children }) => <span className={floatingLabelClassName}>{children}</span>,
         [floatingLabelClassName]
     )

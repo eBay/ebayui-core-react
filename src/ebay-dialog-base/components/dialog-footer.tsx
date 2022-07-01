@@ -1,5 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
-const EbayDialogFooter:FC = ({ children }) => <>{children}</>
+type EbayDialogFooterProps = {
+    children?: ReactNode;
+}
+
+const EbayDialogFooter:FC<EbayDialogFooterProps> = ({ children }) => <>{children}</>
 
 export default EbayDialogFooter

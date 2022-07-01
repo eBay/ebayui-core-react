@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, FC, Fragment, ReactElement } from 'react'
+import React, { Children, cloneElement, FC, Fragment, ReactElement, ReactNode } from 'react'
 import classNames from 'classnames'
 import { StepperDirection, StepState, StepType } from './types'
 import { EbayProgressStepProps } from './ebay-progress-step'
@@ -7,6 +7,7 @@ type ProgressStepperProps = {
     direction?: StepperDirection;
     defaultState?: StepState;
     className?: string;
+    children?: ReactNode;
 }
 
 const EbayProgressStepper: FC<ProgressStepperProps> = ({

@@ -1,5 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
-const EbayDialogCloseButton: FC = ({ children }) => <>{children}</>
+type EbayDialogFooterProps = {
+    children?: ReactNode;
+}
+
+const EbayDialogCloseButton: FC = ({ children }: EbayDialogFooterProps) => <>{children}</>
 
 export default EbayDialogCloseButton

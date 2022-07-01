@@ -2,8 +2,12 @@
  * This Component is used only for finding it as a child of EbayInfotip
  * and pass the properties to TooltipContent
 */
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
-const EbayInfotipContent: FC = ({ children }) => <>{children}</>
+type EbayInfotipContentProps = {
+    children?: ReactNode;
+}
+
+const EbayInfotipContent: FC = ({ children }: EbayInfotipContentProps) => <>{children}</>
 
 export default EbayInfotipContent

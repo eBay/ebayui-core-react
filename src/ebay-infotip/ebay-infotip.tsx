@@ -1,4 +1,4 @@
-import React, { cloneElement, createElement, CSSProperties, FC, useRef } from 'react'
+import React, { cloneElement, createElement, CSSProperties, FC, useRef, ReactNode } from 'react'
 import classNames from 'classnames'
 import { findComponent } from '../common/component-utils'
 import { Tooltip, TooltipHost, TooltipContent, PointerDirection, useTooltip } from '../common/tooltip-utils'
@@ -21,6 +21,7 @@ type InfotipProps = {
     a11yCloseText: string;
     'aria-label'?: string;
     className?: string;
+    children?: ReactNode;
 };
 
 const EbayInfotip: FC<InfotipProps> = ({

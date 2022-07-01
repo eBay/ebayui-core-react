@@ -1,4 +1,4 @@
-import React, { FC, CSSProperties } from 'react'
+import React, { FC, CSSProperties, ReactNode } from 'react'
 import { EbayIcon } from '../../ebay-icon'
 import { findComponent } from '../component-utils'
 import { PointerDirection, TooltipType } from './types'
@@ -13,6 +13,7 @@ type TooltipContentProps = {
     showCloseButton?: boolean;
     a11yCloseText?: string;
     onClose?: () => void;
+    children?: ReactNode;
 }
 
 const TooltipContent: FC<TooltipContentProps> = ({

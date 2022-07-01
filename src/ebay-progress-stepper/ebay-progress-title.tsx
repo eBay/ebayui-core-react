@@ -1,7 +1,8 @@
-import { createElement, FC } from 'react'
+import { createElement, FC, ReactNode } from 'react'
 
 type Props = {
     as?: string;
+    children?: ReactNode;
 }
 
 const EbayProgressTitle: FC<Props> = ({
