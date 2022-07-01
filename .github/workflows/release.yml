@@ -38,7 +38,7 @@ jobs:
               run: yarn --frozen-lockfile
 
             - id: build
-              uses: ./.github/workflows/job-build.yml
+              uses: ./.github/workflows/build/action
               with:
                 node-version: ${{ inputs.node-version }}
 

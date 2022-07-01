@@ -1,5 +1,6 @@
 name: "job: Build"
 description: 'Composite build action'
+
 inputs:
     node-version:
         required: true
