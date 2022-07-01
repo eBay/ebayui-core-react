@@ -26,7 +26,7 @@ jobs:
         with:
             branch: master
             githubActor: ${{ github.actor }}
-          secrets:
+        secrets:
             githubToken: ${{ github.token }}
     build-legacy:
         name: Node.js 14
