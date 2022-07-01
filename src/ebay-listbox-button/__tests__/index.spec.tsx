@@ -1,6 +1,6 @@
 import initStoryshots from '@storybook/addon-storyshots';
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react';
 
 import { EbayListboxButton, EbayListboxButtonOption } from '..';
 jest.useFakeTimers()
