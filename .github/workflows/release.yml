@@ -40,7 +40,7 @@ jobs:
             - id: build
               uses: ./.github/workflows/job-build.yml
               with:
-                node-version: ${{ node-version }}
+                node-version: ${{ inputs.node-version }}
 
             - name: Publish to NPM
               env:
