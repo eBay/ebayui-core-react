@@ -26,11 +26,11 @@ jobs:
         with:
             branch: master
             githubActor: ${{ github.actor }}
-        secrets:
+          secrets:
             githubToken: ${{ github.token }}
     build-legacy:
         name: Node.js 14
-        uses: ./.github/workflows/build.yml
+        uses: ./.github/workflows/build-test.yml
         with:
             node-version: 14.x
 
