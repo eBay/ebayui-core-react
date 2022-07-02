@@ -12,7 +12,6 @@ on:
             npmToken:
                 required: true
 
-
 jobs:
     bump:
         runs-on: ubuntu-latest
@@ -45,4 +44,5 @@ jobs:
             - name: Publish to NPM
               run: |
                 yarn copy
+                echo "//registry.npmjs.org/:_authToken=${{ secrets.npmToken }} >> ./.npmrc"
                 npm publish lib/ --access public
