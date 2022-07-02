@@ -5,10 +5,11 @@ inputs:
     node-version:
         description: Node.js version
         required: true
-secrets:
     githubToken:
+        description: Github Token
         required: true
     npmToken:
+        description: NPM Token
         required: true
 
 runs:
@@ -20,7 +21,7 @@ runs:
         - name: Version bump
           uses: phips28/gh-action-bump-version@master
           env:
-              GITHUB_TOKEN: ${{ secrets.githubToken }}
+              GITHUB_TOKEN: ${{ inputs.githubToken }}
           with:
               major-wording: 'MAJOR,BREAKING CHANGE'
               minor-wording: 'MINOR,FEAT,CHORE'
@@ -41,5 +42,5 @@ runs:
           shell: sh
           run: |
               yarn copy
-              echo "//registry.npmjs.org/:_authToken=${{ secrets.npmToken }}" >> ./.npmrc
+              echo "//registry.npmjs.org/:_authToken=${{ inputs.npmToken }}" >> ./.npmrc
               CI=1 npm publish lib/ --access public
