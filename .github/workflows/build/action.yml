@@ -3,8 +3,8 @@ description: 'Composite build action'
 
 inputs:
     node-version:
+        description: Node.js version
         required: true
-        type: string
 
 runs:
     using: "composite"

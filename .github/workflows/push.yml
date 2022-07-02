@@ -26,7 +26,8 @@ jobs:
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
-            - uses: ./.github/workflows/storybook
+            - id: storybook
+              uses: ./.github/workflows/storybook
               with:
                 branch: master
 
