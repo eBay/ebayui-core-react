@@ -43,5 +43,6 @@ jobs:
             - name: Publish to NPM
               env:
                 CI: true
-                NPM_AUTH_TOKEN: ${{ secrets.npmToken }}
-              run: yarn release
+              run: |
+                echo "//registry.npmjs.org/:_authToken=\${{ secrets.npmToken }}" >> .npmrc
+                yarn release
