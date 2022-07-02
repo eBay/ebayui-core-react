@@ -27,8 +27,7 @@ runs:
               minor-wording: 'MINOR,FEAT,CHORE'
               rc-wording: 'ALPHA,BETA'
 
-        - id: build
-          uses: ./.github/workflows/build
+        - uses: ./.github/actions/build
           with:
               node-version: ${{ inputs.node-version }}
 
