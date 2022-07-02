@@ -30,7 +30,7 @@ jobs:
 #              env:
 #                GH_TOKEN: ${{ secrets.githubActor }}:${{ secrets.githubToken }}
             - name: Publish Storybook
-              uses: JamesIves/github-pages-deploy-action@4
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
                 GITHUB_TOKEN: ${{ secrets.githubToken }}
                 FOLDER: storybook-static
