@@ -1,0 +1,31 @@
+name: "job: Deploy Storybook"
+description: 'Composite storybook deploy action'
+
+inputs:
+    branch:
+        description: branch name
+        required: false
+        default: master
+
+runs:
+    using: "composite"
+    steps:
+        - uses: actions/checkout@master
+
+        - uses: actions/setup-node@master
+          with:
+              node-version: ${{ inputs.node-version }}
+              cache: 'yarn'
+
+        - name: Install dependencies
+          shell: sh
+          run: yarn --frozen-lockfile
+
+        - name: Build Storybook
+          shell: sh
+          run: yarn build-storybook --output-dir storybook-static/${{ inputs.branch }}
+
+        - name: Publish Storybook
+          uses: JamesIves/github-pages-deploy-action@v4
+          with:
+              FOLDER: storybook-static

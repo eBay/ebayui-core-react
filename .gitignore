@@ -23,6 +23,5 @@ oom_*
 xunit.xml
 junit.xml
 .xo-resources.json
-storybook
 coverage
 /.vscode
