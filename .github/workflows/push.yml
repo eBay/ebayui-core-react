@@ -26,6 +26,7 @@ jobs:
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@master
             - id: storybook
               uses: ./.github/actions/storybook
               with:
