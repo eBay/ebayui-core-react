@@ -14,12 +14,15 @@ jobs:
     release:
         needs: build
         name: Bump & Release
-        uses: ./.github/workflows/release.yml
-        with:
-            node-version: 16.13.2
-        secrets:
-            githubToken: ${{ github.token }}
-            npmToken: ${{ secrets.NPM_TOKEN }}
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/release
+              with:
+                node-version: 16.13.2
+              secrets:
+                githubToken: ${{ github.token }}
+                npmToken: ${{ secrets.NPM_TOKEN }}
 
     publish-storybook:
         needs: build
@@ -27,8 +30,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@master
-            - id: storybook
-              uses: ./.github/actions/storybook
+            - uses: ./.github/actions/storybook
               with:
                 branch: master
 
