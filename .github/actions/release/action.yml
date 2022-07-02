@@ -1,0 +1,45 @@
+name: "job: Release"
+description: 'Composite release action'
+
+inputs:
+    node-version:
+        description: Node.js version
+        required: true
+secrets:
+    githubToken:
+        required: true
+    npmToken:
+        required: true
+
+runs:
+    using: "composite"
+    steps:
+        - name: Checkout
+          uses: actions/checkout@master
+
+        - name: Version bump
+          uses: phips28/gh-action-bump-version@master
+          env:
+              GITHUB_TOKEN: ${{ secrets.githubToken }}
+          with:
+              major-wording: 'MAJOR,BREAKING CHANGE'
+              minor-wording: 'MINOR,FEAT,CHORE'
+              rc-wording: 'ALPHA,BETA'
+
+        - id: build
+          uses: ./.github/workflows/build
+          with:
+              node-version: ${{ inputs.node-version }}
+
+        - uses: actions/cache@master
+          id: restore-build
+          with:
+              path: ./*
+              key: ${{ github.sha }}
+
+        - name: Publish to NPM
+          shell: sh
+          run: |
+              yarn copy
+              echo "//registry.npmjs.org/:_authToken=${{ secrets.npmToken }}" >> ./.npmrc
+              CI=1 npm publish lib/ --access public

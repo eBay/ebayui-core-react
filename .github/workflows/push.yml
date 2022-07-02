@@ -27,7 +27,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - id: storybook
-              uses: ./.github/workflows/storybook
+              uses: ./.github/actions/storybook
               with:
                 branch: master
 
