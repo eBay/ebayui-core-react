@@ -24,13 +24,12 @@ jobs:
             npmToken: ${{ secrets.NPM_TOKEN }}
     publish-storybook:
         needs: build
-        name: Publish Storybook on Github Pages
-        uses: ./.github/workflows/storybook.yml
-        with:
-            branch: master
-        secrets:
-            githubActor: ${{ github.actor }}
-            githubToken: ${{ github.token }}
+        name: Publish Storybook
+        runs-on: ubuntu-latest
+        steps:
+            - uses: ./.github/workflows/storybook
+              with:
+                branch: master
     build-legacy:
         name: Node.js 14
         uses: ./.github/workflows/build-test.yml
