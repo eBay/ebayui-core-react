@@ -25,6 +25,12 @@ jobs:
             - name: Install dependencies
               run: yarn --frozen-lockfile
             - name: Build Storybook
-              run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }} --ci
-              env:
-                GH_TOKEN: ${{ secrets.githubActor }}:${{ secrets.githubToken }}
+              run: yarn build-storybook --output-dir storybook-static/${{ inputs.branch }}
+#              run: yarn storybook-to-ghpages --source-branch ${{ inputs.branch }} --out ${{ inputs.branch }} --ci
+#              env:
+#                GH_TOKEN: ${{ secrets.githubActor }}:${{ secrets.githubToken }}
+            - name: Publish Storybook
+              uses: JamesIves/github-pages-deploy-action@master
+              with:
+                GITHUB_TOKEN: ${{ secrets.githubToken }}
+                FOLDER: storybook-static
