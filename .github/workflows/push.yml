@@ -4,15 +4,13 @@ on:
     push:
         branches: [ master ]
 
-env:
-    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 jobs:
     build:
         name: Node.js 16
         uses: ./.github/workflows/build-test.yml
         with:
             node-version: 16.13.2
+
     release:
         needs: build
         name: Bump & Release
@@ -22,6 +20,7 @@ jobs:
         secrets:
             githubToken: ${{ github.token }}
             npmToken: ${{ secrets.NPM_TOKEN }}
+
     publish-storybook:
         needs: build
         name: Publish Storybook
@@ -30,6 +29,7 @@ jobs:
             - uses: ./.github/workflows/storybook
               with:
                 branch: master
+
     build-legacy:
         name: Node.js 14
         uses: ./.github/workflows/build-test.yml
