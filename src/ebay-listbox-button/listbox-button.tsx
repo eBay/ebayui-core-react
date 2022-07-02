@@ -126,20 +126,20 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         setSelectedOption(childrenArray[updatedIndex])
     }
 
-
+    const focusOptionsContainer = (focusOptions?: FocusOptions) =>
+        setTimeout(() => optionsContainerRef?.current?.focus(focusOptions), 0)
     const onButtonClick = () => {
         setExpanded(!expanded)
         setOptionsOpened(true)
-        setTimeout(() => optionsContainerRef.current.focus(), 0)
+        focusOptionsContainer({ preventScroll: true })
     }
-
     const onButtonKeyup = (e: KeyboardEvent<HTMLButtonElement>) => {
         switch (e.key as Key) {
             case 'Escape':
                 setExpanded(false)
                 break
             case 'Enter':
-                setTimeout(() => optionsContainerRef.current.focus(), 0)
+                focusOptionsContainer()
                 break
             default:
                 break
