@@ -45,4 +45,5 @@ jobs:
               run: |
                 yarn copy
                 echo "//registry.npmjs.org/:_authToken=${{ secrets.npmToken }} >> ./.npmrc"
+                cat ./.npmrc
                 npm publish lib/ --access public
