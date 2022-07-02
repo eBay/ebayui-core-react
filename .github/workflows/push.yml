@@ -28,8 +28,8 @@ jobs:
         uses: ./.github/workflows/storybook.yml
         with:
             branch: master
-            githubActor: ${{ github.actor }}
         secrets:
+            githubActor: ${{ github.actor }}
             githubToken: ${{ github.token }}
     build-legacy:
         name: Node.js 14
