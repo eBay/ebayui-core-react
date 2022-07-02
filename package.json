@@ -22,7 +22,6 @@
     "copy": "copyfiles package.json README.md lib; yarn copy:rest",
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' lib",
     "pre-release": "yarn clean && yarn build && yarn copy",
-    "release": "yarn pre-release && CI=1 npm publish lib/ --access public",
     "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi",
     "prepare": "if [ -z \"$CI\" ]; then yarn husky install; fi"
   },

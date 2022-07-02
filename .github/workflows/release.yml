@@ -41,8 +41,10 @@ jobs:
                   key: ${{ github.sha }}
 
             - name: Publish to NPM
+              run: |
+                yarn copy
+                npm publish lib/ --access public
               env:
                 CI: true
                 NPM_TOKEN: ${{ secrets.npmToken }}
                 NODE_AUTH_TOKEN: ${{ secrets.npmToken }}
-              run: yarn release

@@ -6,6 +6,7 @@ on:
 
 env:
     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
 jobs:
     build:
         name: Node.js 16
