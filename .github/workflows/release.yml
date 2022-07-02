@@ -44,4 +44,5 @@ jobs:
               env:
                 CI: true
                 NPM_TOKEN: ${{ secrets.npmToken }}
+                NODE_AUTH_TOKEN: ${{ secrets.npmToken }}
               run: yarn release
