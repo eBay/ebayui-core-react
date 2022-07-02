@@ -25,16 +25,6 @@ jobs:
 
         steps:
             - uses: actions/checkout@master
-            - uses: actions/setup-node@master
+            - uses: ./.github/actions/test
               with:
                   node-version: ${{ inputs.node-version }}
-                  cache: 'yarn'
-            - uses: actions/cache@master
-              id: restore-build
-              with:
-                  path: ./*
-                  key: ${{ github.sha }}
-            - name: Lint
-              run: yarn lint
-            - name: Test
-              run: yarn test

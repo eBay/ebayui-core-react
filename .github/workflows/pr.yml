@@ -6,6 +6,21 @@ on:
 
 jobs:
     build:
-        uses: ./.github/workflows/build-test.yml
-        with:
-          node-version: 16.x
+        name: Build
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/build
+              with:
+                  node-version: 16.x
+
+    lint-test:
+        name: Lint & Test
+        runs-on: ubuntu-latest
+        needs: [build]
+
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/test
+              with:
+                  node-version: 16.x
