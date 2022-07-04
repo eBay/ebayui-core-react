@@ -3,7 +3,7 @@ name: Push to Master
 on:
     push:
         branches: [ master ]
-    workflow_call:
+    workflow_run:
         inputs:
             node-version:
                 type: string
@@ -12,6 +12,18 @@ on:
             node-legacy-version:
                 type: string
                 required: false
+                default: 14.x
+    workflow_dispatch:
+        inputs:
+            node-version:
+                type: string
+                required: false
+                description: nodejs version
+                default: 16.13.2
+            node-legacy-version:
+                type: string
+                required: false
+                description: nodejs legacy version
                 default: 14.x
 
 jobs:
@@ -27,7 +39,7 @@ jobs:
     lint-test:
         name: Lint & Test
         runs-on: ubuntu-latest
-        needs: [build]
+        needs: build
         steps:
             - uses: actions/checkout@master
             - uses: ./.github/actions/test
@@ -35,7 +47,7 @@ jobs:
                   node-version: ${{ inputs.node-version }}
 
     release:
-        needs: build
+        needs: lint-test
         name: Bump & Release
         runs-on: ubuntu-latest
         steps:
@@ -47,7 +59,7 @@ jobs:
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
     publish-storybook:
-        needs: build
+        needs: lint-test
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
@@ -68,7 +80,7 @@ jobs:
     lint-test-legacy:
         name: Lint & Test
         runs-on: ubuntu-latest
-        needs: [build-legacy]
+        needs: build-legacy
         steps:
             - uses: actions/checkout@master
             - uses: ./.github/actions/test
