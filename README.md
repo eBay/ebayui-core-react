@@ -2,7 +2,7 @@
 
 eBayUI React components
 
-[Demo](https://pages.github.com/eBay/ebayui-core-react/master)
+[Demo](https://opensource.ebay.com/ebayui-core-react/master)
 
 ### Requirements
 

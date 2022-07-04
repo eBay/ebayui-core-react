@@ -1,7 +1,7 @@
 # EbayBreadcrumbs
 
 ## Demo
-[Storybook](https://pages.github.com/eBay/ebayui-core-react/master/?path=/story/ebay-breadcrumbs--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-breadcrumbs--default)
 
 ## Usage
 

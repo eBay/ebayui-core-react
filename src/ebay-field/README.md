@@ -1,7 +1,7 @@
 # ebay-field
 
 ## Demo
-[Storybook](https://pages.github.com/eBay/ebayui-core-react/master/?path=/story/ebay-field--default-inline)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-field--default-inline)
 
 ## Import JS
 ```jsx harmony

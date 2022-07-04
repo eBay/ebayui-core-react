@@ -4,7 +4,7 @@ Use `EbayTextbox` or `EbaySelect` with the `floatingLabel` attribute instead
 
 ## Demo
 
-[Storybook](https://pages.github.com/eBay/ebayui-core-react/master/?path=/story/ebay-floating-label--default-floating-label)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-floating-label--default-floating-label)
 
 ## Import JS
 

@@ -1,7 +1,7 @@
 # EbayProgressSpinner
 
 ## Demo
-[Storybook](https://pages.github.com/eBay/ebayui-core-react/master/?path=/story/ebay-progress-spinner--default-large)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-progress-spinner--default-large)
 
 ## Usage
 

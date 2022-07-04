@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Storybook](https://pages.github.com/eBay/ebayui-core-react/master/?path=/story/ebay-inline-notice--confirmation-message)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-inline-notice--confirmation-message)
 
 ## Use
 

@@ -1,7 +1,7 @@
 # ebay-menu
 
 ## Demo
-[Storybook](https://pages.github.com/eBay/ebayui-core-react/master/?path=/story/ebay-menu--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-menu--default)
 
 ## Install
 ```
