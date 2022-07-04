@@ -3,13 +3,40 @@ name: Push to Master
 on:
     push:
         branches: [ master ]
+    workflow_call:
+        inputs:
+            node-version:
+                type: string
+                required: false
+                default: 16.13.2
+            node-major-version:
+                type: string
+                required: false
+                default: 16
+            node-legacy-version:
+                type: string
+                required: false
+                default: 14.x
 
 jobs:
     build:
-        name: Node.js 16
-        uses: ./.github/workflows/build-test.yml
-        with:
-            node-version: 16.13.2
+        name: Node.js ${{ node-major-version }}
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/build
+              with:
+                  node-version: ${{ node-version }}
+
+    lint-test:
+        name: Lint & Test
+        runs-on: ubuntu-latest
+        needs: [build]
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/test
+              with:
+                  node-version: ${{ node-version }}
 
     release:
         needs: build
@@ -19,7 +46,7 @@ jobs:
             - uses: actions/checkout@master
             - uses: ./.github/actions/release
               with:
-                node-version: 16.13.2
+                node-version: ${{ node-version }}
                 githubToken: ${{ github.token }}
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
@@ -37,5 +64,4 @@ jobs:
         name: Node.js 14
         uses: ./.github/workflows/build-test.yml
         with:
-            node-version: 14.x
-
+            node-version: ${{ node-legacy-version }}
