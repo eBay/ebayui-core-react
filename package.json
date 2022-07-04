@@ -21,7 +21,8 @@
     "update-icons": "node ./scripts/update-icons",
     "copy": "copyfiles package.json README.md lib; yarn copy:rest",
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' lib",
-    "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi"
+    "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\""
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
