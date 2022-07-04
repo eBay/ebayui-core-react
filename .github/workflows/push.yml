@@ -3,13 +3,22 @@ name: Push to Master
 on:
     push:
         branches: [ master ]
-
+    workflow_dispatch:
+        inputs:
+            node-version:
+                description: Node.js version
+                required: false
+                default: 16.13.2
+            node-legacy-version:
+                description: Node.js legacy version
+                required: false
+                default: 14.x
 jobs:
     build-test:
         strategy:
             matrix:
                 os: [ubuntu-latest, windows-latest]
-                node: [14, 16.13.2]
+                node: [${{ inputs.node-version }}, ${{ inputs.node-legacy-version }}]
         name: Node.js ${{ matrix.node }} @ ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
         steps:
