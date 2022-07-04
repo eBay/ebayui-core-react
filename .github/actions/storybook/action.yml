@@ -1,4 +1,4 @@
-name: "job: Deploy Storybook"
+name: "Action: Deploy Storybook"
 description: 'Composite storybook deploy action'
 
 inputs:

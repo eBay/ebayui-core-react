@@ -1,4 +1,4 @@
-name: "job: Release"
+name: "Action: Release"
 description: 'Composite release action'
 
 inputs:

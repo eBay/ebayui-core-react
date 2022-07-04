@@ -1,4 +1,4 @@
-name: "job: Build and test"
+name: "Action: Build and test"
 description: 'Composite build & test action'
 
 inputs:
