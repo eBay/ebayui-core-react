@@ -9,10 +9,6 @@ on:
                 type: string
                 required: false
                 default: 16.13.2
-            node-major-version:
-                type: string
-                required: false
-                default: 16
             node-legacy-version:
                 type: string
                 required: false
@@ -20,13 +16,13 @@ on:
 
 jobs:
     build:
-        name: Node.js ${{ node-major-version }}
+        name: Node.js ${{ inputs.node-version }}
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@master
             - uses: ./.github/actions/build
               with:
-                  node-version: ${{ node-version }}
+                  node-version: ${{ inputs.node-version }}
 
     lint-test:
         name: Lint & Test
@@ -36,7 +32,7 @@ jobs:
             - uses: actions/checkout@master
             - uses: ./.github/actions/test
               with:
-                  node-version: ${{ node-version }}
+                  node-version: ${{ inputs.node-version }}
 
     release:
         needs: build
@@ -46,7 +42,7 @@ jobs:
             - uses: actions/checkout@master
             - uses: ./.github/actions/release
               with:
-                node-version: ${{ node-version }}
+                node-version: ${{ inputs.node-version }}
                 githubToken: ${{ github.token }}
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
@@ -61,7 +57,7 @@ jobs:
                 branch: master
 
     build-legacy:
-        name: Node.js 14
+        name: Node.js ${{ inputs.node-legacy-version }}
         uses: ./.github/workflows/build-test.yml
         with:
-            node-version: ${{ node-legacy-version }}
+            node-version: ${{ inputs.node-legacy-version }}
