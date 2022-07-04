@@ -9,29 +9,24 @@ runs:
         - uses: actions/setup-node@master
           with:
               cache: 'yarn'
-
         - shell: sh
           run: yarn install --frozen-lockfile
-
         - uses: actions/cache@master
           id: restore-build
           with:
               path: ./*
               key: ${{ github.sha }}
 
-        - shell: sh
+        - name: Lint
+          shell: sh
           run: yarn lint
 
-        - name: Initialize CodeQL
+        - CodeQL
           uses: github/codeql-action/init@v2
           with:
               languages: 'javascript'
+        - uses: github/codeql-action/autobuild@v2
+        - uses: github/codeql-action/analyze@v2
 
-        - name: Autobuild
-          uses: github/codeql-action/autobuild@v2
-
-        - name: Perform CodeQL Analysis
-          uses: github/codeql-action/analyze@v2
-
-        - name: CodeQL Report
-          uses: awshole/codeql-report@v1.1
+        - name: Coveralls
+          uses: coverallsapp/github-action@1.1.3

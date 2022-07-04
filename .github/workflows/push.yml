@@ -14,9 +14,13 @@ jobs:
         runs-on: ${{ matrix.os }}
         steps:
             - uses: actions/checkout@master
-            - uses: ./.github/actions/build-test
+            - uses: ./.github/actions/build
               with:
-                  node-version: ${{ matrix.node }}
+                node-version: ${{ matrix.node }}
+            - uses: ./.github/actions/test
+              with:
+                node-version: ${{ matrix.node }}
+                with-coverage: true
 
     analyze:
         needs: build-test

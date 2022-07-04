@@ -5,6 +5,10 @@ inputs:
     node-version:
         description: Node.js version
         required: true
+    with-coverage:
+        description: Generate coverage reports
+        required: false
+        default: false
 
 runs:
     using: "composite"
@@ -26,4 +30,10 @@ runs:
               key: ${{ github.sha }}
 
         - shell: sh
-          run: yarn test
+          run: yarn coverage
+
+        - name: Coveralls
+          if: inputs.with-coverage == true
+          uses: coverallsapp/github-action@master
+          with:
+            github-token: ${{ inputs.githubToken }}
