@@ -3,16 +3,7 @@ name: Push to Master
 on:
     push:
         branches: [ master ]
-    workflow_run:
-        inputs:
-            node-version:
-                type: string
-                required: false
-                default: 16.13.2
-            node-legacy-version:
-                type: string
-                required: false
-                default: 14.x
+
     workflow_dispatch:
         inputs:
             node-version:
