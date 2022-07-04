@@ -1,0 +1,37 @@
+name: "Action: Analyze"
+description: 'Composite analyze action'
+
+runs:
+    using: "composite"
+    steps:
+        - uses: actions/checkout@master
+
+        - uses: actions/setup-node@master
+          with:
+              cache: 'yarn'
+
+        - shell: sh
+          run: yarn install --frozen-lockfile
+
+        - uses: actions/cache@master
+          id: restore-build
+          with:
+              path: ./*
+              key: ${{ github.sha }}
+
+        - shell: sh
+          run: yarn lint
+
+        - name: Initialize CodeQL
+          uses: github/codeql-action/init@v2
+          with:
+              languages: 'javascript'
+
+        - name: Autobuild
+          uses: github/codeql-action/autobuild@v2
+
+        - name: Perform CodeQL Analysis
+          uses: github/codeql-action/analyze@v2
+
+        - name: CodeQL Report
+          uses: awshole/codeql-report@v1.1

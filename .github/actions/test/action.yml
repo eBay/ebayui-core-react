@@ -1,4 +1,4 @@
-name: "Action: Lint and Test"
+name: "Action: Test"
 description: 'Composite test action'
 
 inputs:
@@ -26,9 +26,4 @@ runs:
               key: ${{ github.sha }}
 
         - shell: sh
-          run: yarn lint
-
-        - shell: sh
           run: yarn test
-
-        - uses: actions/codeql

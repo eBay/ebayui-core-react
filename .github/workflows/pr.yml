@@ -17,3 +17,10 @@ jobs:
             - uses: ./.github/actions/build-test
               with:
                   node-version: ${{ matrix.node }}
+
+    analyze:
+        needs: build-test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/analyze

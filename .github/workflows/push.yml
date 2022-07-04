@@ -18,8 +18,15 @@ jobs:
               with:
                   node-version: ${{ matrix.node }}
 
-    release:
+    analyze:
         needs: build-test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/analyze
+
+    release:
+        needs: analyze
         name: Bump & Release
         runs-on: ubuntu-latest
         steps:
@@ -31,7 +38,7 @@ jobs:
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
     publish-storybook:
-        needs: build-test
+        needs: analyze
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
