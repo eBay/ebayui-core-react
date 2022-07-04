@@ -58,6 +58,19 @@ jobs:
 
     build-legacy:
         name: Node.js ${{ inputs.node-legacy-version }}
-        uses: ./.github/workflows/build-test.yml
-        with:
-            node-version: ${{ inputs.node-legacy-version }}
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/build
+              with:
+                node-version: ${{ inputs.node-legacy-version }}
+
+    lint-test-legacy:
+        name: Lint & Test
+        runs-on: ubuntu-latest
+        needs: [build-legacy]
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./.github/actions/test
+              with:
+                  node-version: ${{ inputs.node-legacy-version }}
