@@ -10,18 +10,23 @@ runs:
     using: "composite"
     steps:
         - uses: actions/checkout@master
+
         - uses: actions/setup-node@master
           with:
               node-version: ${{ inputs.node-version }}
               cache: 'yarn'
+
+        - shell: sh
+          run: yarn install --frozen-lockfile
+
         - uses: actions/cache@master
           id: restore-build
           with:
               path: ./*
               key: ${{ github.sha }}
-        - name: Lint
-          shell: sh
+
+        - shell: sh
           run: yarn lint
-        - name: Test
-          shell: sh
+
+        - shell: sh
           run: yarn test
