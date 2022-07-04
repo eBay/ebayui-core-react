@@ -30,3 +30,5 @@ runs:
 
         - shell: sh
           run: yarn test
+
+        - uses: actions/codeql
