@@ -21,7 +21,7 @@ runs:
           shell: sh
           run: yarn lint
 
-        - CodeQL
+        - name: CodeQL
           uses: github/codeql-action/init@v2
           with:
               languages: 'javascript'
