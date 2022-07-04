@@ -21,8 +21,7 @@
     "update-icons": "node ./scripts/update-icons",
     "copy": "copyfiles package.json README.md lib; yarn copy:rest",
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' lib",
-    "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi",
-    "prepare": "if [ -z \"$CI\" ]; then yarn husky install; fi"
+    "prepublishOnly": "if [ -z \"$CI\" ]; then echo \"Please use CI, do not publish manually\"; exit 1; fi"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
