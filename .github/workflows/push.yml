@@ -26,7 +26,7 @@ jobs:
             - uses: actions/checkout@master
             - uses: ./.github/actions/release
               with:
-                node-version: ${{ inputs.node-version }}
+                node-version: ${{ 16.13.2 }}
                 githubToken: ${{ github.token }}
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
