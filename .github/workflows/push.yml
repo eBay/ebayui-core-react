@@ -4,41 +4,22 @@ on:
     push:
         branches: [ master ]
 
-    workflow_dispatch:
-        inputs:
-            node-version:
-                type: string
-                required: false
-                description: nodejs version
-                default: 16.13.2
-            node-legacy-version:
-                type: string
-                required: false
-                description: nodejs legacy version
-                default: 14.x
-
 jobs:
-    build:
-        name: Node.js ${{ inputs.node-version }}
-        runs-on: ubuntu-latest
+    build-test:
+        strategy:
+            matrix:
+                os: [ubuntu-latest, windows-latest]
+                node: [14, 16.13.2]
+        name: Node.js ${{ matrix.node }} @ ${{ matrix.os }}
+        runs-on: ${{ matrix.os }}
         steps:
             - uses: actions/checkout@master
-            - uses: ./.github/actions/build
+            - uses: ./.github/actions/build-test
               with:
-                  node-version: ${{ inputs.node-version }}
-
-    lint-test:
-        name: Lint & Test
-        runs-on: ubuntu-latest
-        needs: build
-        steps:
-            - uses: actions/checkout@master
-            - uses: ./.github/actions/test
-              with:
-                  node-version: ${{ inputs.node-version }}
+                  node-version: ${{ matrix.node }}
 
     release:
-        needs: lint-test
+        needs: build-test
         name: Bump & Release
         runs-on: ubuntu-latest
         steps:
@@ -50,7 +31,7 @@ jobs:
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
     publish-storybook:
-        needs: lint-test
+        needs: build-test
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
@@ -58,22 +39,3 @@ jobs:
             - uses: ./.github/actions/storybook
               with:
                 branch: master
-
-    build-legacy:
-        name: Node.js ${{ inputs.node-legacy-version }}
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@master
-            - uses: ./.github/actions/build
-              with:
-                node-version: ${{ inputs.node-legacy-version }}
-
-    lint-test-legacy:
-        name: Lint & Test
-        runs-on: ubuntu-latest
-        needs: build-legacy
-        steps:
-            - uses: actions/checkout@master
-            - uses: ./.github/actions/test
-              with:
-                  node-version: ${{ inputs.node-legacy-version }}
