@@ -25,6 +25,9 @@ jobs:
     analyze:
         needs: build-test
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            security-events: write
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/analyze
