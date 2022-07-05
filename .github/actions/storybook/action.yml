@@ -5,14 +5,14 @@ inputs:
     branch:
         description: branch name
         required: false
-        default: master
+        default: main
 
 runs:
     using: "composite"
     steps:
-        - uses: actions/checkout@master
+        - uses: actions/checkout@v3
 
-        - uses: actions/setup-node@master
+        - uses: actions/setup-node@v3
           with:
               node-version: ${{ inputs.node-version }}
               cache: 'yarn'

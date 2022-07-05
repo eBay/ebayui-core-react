@@ -1,7 +1,7 @@
 # ebay-checkbox
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-checkbox--default-checkbox-button)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-checkbox--default-checkbox-button)
 
 ## Usage
 ```

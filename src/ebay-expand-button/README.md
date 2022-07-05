@@ -1,7 +1,7 @@
 # ebay-expand-button
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-expand-button--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-expand-button--default)
 
 ## Install
 ```

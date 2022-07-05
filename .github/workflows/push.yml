@@ -1,8 +1,8 @@
-name: Push to Master
+name: Push to main
 
 on:
     push:
-        branches: [ master ]
+        branches: [ main ]
 
 jobs:
     build-test:
@@ -13,7 +13,7 @@ jobs:
         name: Node.js ${{ matrix.node }} @ ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
         steps:
-            - uses: actions/checkout@master
+            - uses: actions/checkout@v3
             - uses: ./.github/actions/build
               with:
                 node-version: ${{ matrix.node }}
@@ -26,7 +26,7 @@ jobs:
         needs: build-test
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@master
+            - uses: actions/checkout@v3
             - uses: ./.github/actions/analyze
 
     release:
@@ -34,7 +34,7 @@ jobs:
         name: Bump & Release
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@master
+            - uses: actions/checkout@v3
             - uses: ./.github/actions/release
               with:
                 node-version: 16.13.2
@@ -46,7 +46,7 @@ jobs:
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@master
+            - uses: actions/checkout@v3
             - uses: ./.github/actions/storybook
               with:
-                branch: master
+                branch: main

@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-page-notice--confirmation-message)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-page-notice--confirmation-message)
 
 ## Import JS
 

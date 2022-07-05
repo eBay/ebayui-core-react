@@ -6,7 +6,7 @@ type BreadcrumbProps = ComponentProps<'div'> & {
      * Breadcrumbs expects `<EbayBreadcrumbItem/>` as children.
      * Other elements will not work.
      *
-     * @see Docs https://github.com/eBay/ebayui-core-react/tree/master/src/components/ebay-breadcrumb#usage
+     * @see Docs https://github.com/eBay/ebayui-core-react/tree/main/src/components/ebay-breadcrumb#usage
      */
     children: ReactNode;
     id?: string;

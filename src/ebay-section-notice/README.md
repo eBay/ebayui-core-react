@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-section-notice--default-message-with-no-action)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-section-notice--default-message-with-no-action)
 
 ## Import JS
 

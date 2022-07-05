@@ -4,14 +4,14 @@ description: 'Composite analyze action'
 runs:
     using: "composite"
     steps:
-        - uses: actions/checkout@master
+        - uses: actions/checkout@v3
 
-        - uses: actions/setup-node@master
+        - uses: actions/setup-node@v3
           with:
               cache: 'yarn'
         - shell: sh
           run: yarn install --frozen-lockfile
-        - uses: actions/cache@master
+        - uses: actions/cache@v3
           id: restore-build
           with:
               path: ./*

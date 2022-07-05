@@ -1,7 +1,7 @@
 # ebay-switch
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-switch--default-switch-button)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-switch--default-switch-button)
 
 ## Import JS
 ```jsx harmony

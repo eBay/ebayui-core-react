@@ -1,7 +1,7 @@
 # ebay-listbox-button
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-listbox-button--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-listbox-button--default)
 
 ## Import JS
 ```jsx harmony

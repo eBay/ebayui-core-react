@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-infotip--default-infotip)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-infotip--default-infotip)
 
 ## Import JS
 

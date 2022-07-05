@@ -4,7 +4,7 @@
 Signals are data-backed recommendations to help customers make more informed decisions. There are four signal statuses, each corresponding to a specific color: `trustworthy`, `recent`, `time-sensitive` & `neutral`. Defaults to `neutral` if none specified.
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/master/?path=/story/ebay-signal)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-signal)
 
 ## Usage
 ```

@@ -16,7 +16,7 @@ runs:
     using: "composite"
     steps:
         - name: Checkout
-          uses: actions/checkout@master
+          uses: actions/checkout@v3
 
         - name: Version bump
           uses: phips28/gh-action-bump-version@master
@@ -31,7 +31,7 @@ runs:
           with:
               node-version: ${{ inputs.node-version }}
 
-        - uses: actions/cache@master
+        - uses: actions/cache@v3
           id: restore-build
           with:
               path: ./*

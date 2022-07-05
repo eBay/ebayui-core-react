@@ -10,7 +10,7 @@ runs:
     using: "composite"
     steps:
         - name: Use Node.js ${{ inputs.node-version }}
-          uses: actions/setup-node@master
+          uses: actions/setup-node@v3
           with:
               node-version: ${{ inputs.node-version }}
               cache: 'yarn'
@@ -20,7 +20,7 @@ runs:
         - name: Build library
           shell: sh
           run: yarn build
-        - uses: actions/cache@master
+        - uses: actions/cache@v3
           id: restore-build
           with:
             path: ./*
