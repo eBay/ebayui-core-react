@@ -27,6 +27,3 @@ runs:
               languages: 'javascript'
         - uses: github/codeql-action/autobuild@v2
         - uses: github/codeql-action/analyze@v2
-
-        - name: Coveralls
-          uses: coverallsapp/github-action@1.1.3
