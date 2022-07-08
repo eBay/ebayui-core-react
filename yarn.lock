@@ -1142,10 +1142,10 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@ebay/skin@^13.0.0", "@ebay/skin@^13.7.1":
-  version "13.7.1"
-  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-13.7.1.tgz#0ff6c8acb30afaa8bc1eec62038d937eb7adc9ae"
-  integrity sha512-zrkHM2ERVpWl0W8fL8IWfo82HapCZ1raau5VzaqcBNZAQEfDs+EuByeUjYpeoFMNC0Aavnc/r3w59w9glewVTg==
+"@ebay/skin@^14":
+  version "14.0.5"
+  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-14.0.5.tgz#430a3e4646f887c60465d4630c85e479053d139d"
+  integrity sha512-3Z8DRmFoJV8vpqpoEv5+Lasv/zypH7zK0b+UVyNoJa7ekOW9J1aK4lWxo6k0k3WF+gOkZUL/0+8rzHnQY57z5w==
 
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"
