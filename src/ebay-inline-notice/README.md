@@ -27,12 +27,6 @@ import { EbayInlineNotice, EbayNoticeContent } from '@ebay/ebayui-core-react/eba
 
 ### Import following styles from SKIN
 
-#### Less files
-
-```less
-@import "~@ebay/skin/src/less/inline-notice/ds6/inline-notice.less";
-```
-
 #### JavaScript files
 
 ```jsx harmony

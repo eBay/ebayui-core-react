@@ -9,11 +9,11 @@ import { EbayField, EbayLabel, fieldLayoutType, EbayFieldDescription, fieldDescr
 ```
 ## Import following styles from SKIN
 ```jsx harmony
-import '@ebay/skin/src/less/field/ds6/field';
+import '@ebay/skin/field';
 ```
 ## Import styles using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/field/ds6/field.css'
+import '@ebay/skin/dist/field/field.css'
 ```
 ## Usage
 ```

@@ -16,12 +16,6 @@ import '@ebay/skin/breadcrumbs';
 import '@ebay/skin/utility';
 ```
 
-### or if using LESS
-```jsx
-import '@ebay/skin/src/less/breadcrumbs/ds6/breadcrumbs.less';
-import '@ebay/skin/src/less/utility/ds6/utility.less';
-```
-
 ### Breadcrumbs
 ```jsx
 <EbayBreadcrumbs a11yHeadingText="Page navigation">

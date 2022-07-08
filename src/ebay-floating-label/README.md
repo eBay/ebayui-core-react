@@ -21,7 +21,7 @@ import "@ebay/skin/floating-label";
 ## or import styles using SCSS/CSS
 
 ```jsx harmony
-import "@ebay/skin/dist/floating-label/ds6/floating-label.css";
+import "@ebay/skin/dist/floating-label/floating-label.css";
 ```
 
 ## Usage

@@ -22,7 +22,7 @@ import "@ebay/skin/radio"
 
 ### or SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/radio/ds6/radio.css'
+import '@ebay/skin/dist/radio/radio.css'
 ```
 
 ## EbayRadio with EbayLabel

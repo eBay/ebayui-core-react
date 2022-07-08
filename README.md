@@ -8,7 +8,7 @@ eBayUI React components
 
 * [Node.js](https://nodejs.org/en/) (v16.14+)
 * [React](https://reactjs.org/) (v16.8+)
-* [eBay Skin](https://ebay.github.io/skin/) (v13)
+* [eBay Skin](https://ebay.github.io/skin/) (v14)
 
 ### eBayUI Components
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)

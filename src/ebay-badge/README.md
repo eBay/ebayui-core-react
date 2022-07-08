@@ -20,7 +20,7 @@ import '@ebay/skin/badge'
 
 ## ...or using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/badge/ds6/badge.css'
+import '@ebay/skin/dist/badge/badge.css'
 ```
 
 ```jsx harmony

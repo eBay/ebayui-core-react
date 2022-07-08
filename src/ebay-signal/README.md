@@ -19,14 +19,9 @@ import { EbaySignal } from '@ebay/ebayui-core-react/ebay-signal';
 import '@ebay/skin/signal'
 ```
 
-## or if using LESS:
-```jsx harmony
-import '@ebay/skin/signal[skin-ds6].less';
-```
-
 ## ...or using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/signal/ds6/signal.css'
+import '@ebay/skin/dist/signal/signal.css'
 ```
 
 ```jsx harmony

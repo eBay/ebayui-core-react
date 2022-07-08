@@ -17,14 +17,6 @@ import {
 
 ### Import following styles from SKIN
 
-#### Less files
-
-```less
-@import "~@ebay/skin/src/less/section-notice/ds6/section-notice.less";
-```
-
-#### JavaScript files
-
 ```jsx harmony
 import "@ebay/skin/section-notice";
 ```
