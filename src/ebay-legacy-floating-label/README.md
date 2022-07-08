@@ -19,7 +19,7 @@ import "@ebay/skin/legacy-textbox";
 ## or import styles using SCSS/CSS
 
 ```jsx harmony
-import "@ebay/skin/dist/legacy-textbox/legacy-textbox.css";
+import "@ebay/skin/legacy-textbox.css";
 ```
 
 ## Usage

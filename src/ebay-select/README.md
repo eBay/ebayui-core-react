@@ -12,9 +12,9 @@ import { EbaySelect, EbaySelectOption } from '@ebay/ebayui-core-react/ebay-selec
 ```jsx harmony
 import '@ebay/skin/select';
 ```
-## Import styles using SCSS/CSS [Pending]
+## Import styles using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/select/select.css'
+import '@ebay/skin/select.css'
 ```
 
 ## Usage

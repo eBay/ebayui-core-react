@@ -13,7 +13,7 @@ import '@ebay/skin/field';
 ```
 ## Import styles using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/field/field.css'
+import '@ebay/skin/field.css'
 ```
 ## Usage
 ```

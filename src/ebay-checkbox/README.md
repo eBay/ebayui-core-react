@@ -19,7 +19,7 @@ import '@ebay/skin/checkbox'
 
 ## ...or using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/checkbox/checkbox.css'
+import '@ebay/skin/checkbox.css'
 ```
 
 ```jsx

@@ -24,8 +24,8 @@ import '@ebay/skin/icon-button'
 
 ### or if using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/infotip/infotip.css'
-import '@ebay/skin/dist/icon-button/icon-button.css'
+import '@ebay/skin/infotip.css'
+import '@ebay/skin/icon-button.css'
 ```
 
 ## Usage

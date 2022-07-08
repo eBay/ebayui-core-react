@@ -17,7 +17,7 @@ import "@ebay/skin/expand-button"
 
 ### Or import styles using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/expand-button/expand-button.css'
+import '@ebay/skin/expand-button.css'
 
 ```
 

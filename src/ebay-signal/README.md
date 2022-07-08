@@ -21,7 +21,7 @@ import '@ebay/skin/signal'
 
 ## ...or using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/signal/signal.css'
+import '@ebay/skin/signal.css'
 ```
 
 ```jsx harmony
