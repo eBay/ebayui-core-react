@@ -5,6 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { EbaySvg } from '../src'
 
 import "@ebay/skin"
+import "@ebay/skin/tokens"
 
 export const decorators = [
     withA11y,

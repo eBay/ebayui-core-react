@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayButton, EbayLegacyFloatingLabel } from '../../index'
-import '@ebay/skin/dist/legacy-textbox/ds6/legacy-textbox.css'
+import '@ebay/skin/legacy-textbox'
 
 storiesOf(`ebay-legacy-floating-label`, module)
     .add(`Default floating label`, () => (
