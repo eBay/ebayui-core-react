@@ -58,7 +58,7 @@ yarn add @ebay/ebayui-core-react
 | ----------------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `variant`         | String   | No       | No       | Either modal or default. If modal will show the mobile version of infotip                                                                                    |
 | `pointer`         | String   | No       | No       | options are `top-left`, `top`, `top-right`, `right`, `right-bottom`, `right-top`, `bottom-left`, `bottom-right`, `bottom`, `left`, `left-bottom`, `left-top` |
-| `icon`            | String   | No       | No       | Different icon to be used than `information-small`. Full list [here](https://ebay.github.io/skin/ds6/index.html#icon)                                        |
+| `icon`            | String   | No       | No       | Different icon to be used than `information-small`. Full list [here](https://ebay.github.io/skin/index.html#icon)                                        |
 | `disabled`        | Boolean  | No       | No       | Define if the infotip is disabled or not                                                                                                                     |
 | `overlayStyle`    | Object   | No       | No       | Style object to customize default values for the overlay. It can be used all CSS properties like `top`, `left`, `bottom`, `right`.                           |
 | `initialExpanded` | Boolean  | No       | No       | Open the tooltip on the initial render                                                                                                                       |
