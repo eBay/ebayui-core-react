@@ -15,8 +15,16 @@ inputs:
 runs:
     using: "composite"
     steps:
-        - name: Checkout
-          uses: actions/checkout@v3
+        - uses: actions/checkout@v3
+
+        - name: Version bump
+          uses: phips28/gh-action-bump-version@master
+          env:
+              GITHUB_TOKEN: ${{ github.token }}
+          with:
+              major-wording: 'MAJOR,BREAKING CHANGE'
+              minor-wording: 'MINOR,FEAT,CHORE'
+              rc-wording: 'ALPHA,BETA'
 
 #        - uses: ./.github/actions/build
 #          with:
@@ -28,14 +36,7 @@ runs:
               path: ./*
               key: ${{ github.sha }}
 
-        - name: Version bump
-          uses: phips28/gh-action-bump-version@master
-          env:
-              GITHUB_TOKEN: ${{ github.token }}
-          with:
-              major-wording: 'MAJOR,BREAKING CHANGE'
-              minor-wording: 'MINOR,FEAT,CHORE'
-              rc-wording: 'ALPHA,BETA'
+        - uses: actions/checkout@v3
 
         - name: Publish to NPM
           shell: sh
