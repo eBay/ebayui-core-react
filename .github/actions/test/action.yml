@@ -27,7 +27,7 @@ runs:
           id: restore-build
           with:
               path: ./*
-              key: ${{ github.sha }}
+              key: ${{ runner.os }}-${{ github.sha }}
 
         - shell: sh
           run: yarn coverage

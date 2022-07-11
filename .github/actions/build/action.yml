@@ -14,14 +14,17 @@ runs:
           with:
               node-version: ${{ inputs.node-version }}
               cache: 'yarn'
+
         - name: Install dependencies
           shell: sh
           run: yarn --frozen-lockfile
+
         - name: Build library
           shell: sh
           run: yarn build
+
         - uses: actions/cache@v3
           id: restore-build
           with:
             path: ./*
-            key: ${{ github.sha }}
+            key: ${{ runner.os }}-${{ github.sha }}
