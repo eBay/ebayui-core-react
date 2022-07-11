@@ -34,7 +34,9 @@ runs:
         - uses: actions/cache@v3
           id: restore-build
           with:
-              path: ./*
+              path: |
+                ./*
+                !package.json
               key: ${{ github.sha }}
 
         - name: Publish to NPM
