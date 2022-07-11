@@ -12,7 +12,7 @@ import "@ebay/skin/drawer-dialog"
 ```
 ### Or import styles using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/drawer-dialog/ds6/drawer-dialog.css'
+import '@ebay/skin/drawer-dialog.css'
 ```
 ### Simple opened dialog
 ```jsx

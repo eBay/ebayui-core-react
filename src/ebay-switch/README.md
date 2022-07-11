@@ -9,7 +9,7 @@ import { EbaySwitch } from '@ebay/ebayui-core-react/ebay-switch';
 ```
 ## Import following styles from SKIN
 ```jsx harmony
-import '@ebay/skin/src/less/switch/ds6/switch';
+import '@ebay/skin/switch';
 ```
 ## Usage
 ```

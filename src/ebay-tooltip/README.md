@@ -17,7 +17,7 @@ import "@ebay/skin/tooltip"
 
 ### or if using SCSS/CSS
 ```jsx
-import "@ebay/skin/dist/tooltip/ds6/tooltip.css"
+import "@ebay/skin/tooltip.css"
 ```
 
 ## Usage

@@ -9,7 +9,7 @@ import { EbayListboxButton, EbayListboxButtonOption } from '@ebay/ebayui-core-re
 ```
 ## Import following styles from SKIN
 ```jsx harmony
-import '@ebay/skin/src/less/listbox-button/ds6/listbox-button';
+import '@ebay/skin/listbox-button';
 ```
 ## Usage
 ```

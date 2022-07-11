@@ -8,7 +8,7 @@ eBayUI React components
 
 * [Node.js](https://nodejs.org/en/) (v16.14+)
 * [React](https://reactjs.org/) (v16.8+)
-* [eBay Skin](https://ebay.github.io/skin/) (v13)
+* [eBay Skin](https://ebay.github.io/skin/) (v14)
 
 ### eBayUI Components
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
@@ -164,7 +164,7 @@ yarn update-icons
 ### Requirements for new component
 
 If you implement a new component, make sure that it complies with eBay UI guidelines:
-  * [Skin](https://ebay.github.io/skin/ds6/)
+  * [Skin](https://ebay.github.io/skin/)
   * [MIND pattern](https://ebay.gitbook.io/mindpatterns/) for accessibility
 
 One way to comply those guidelines is to implement your new component as similiar as possible with the Marko [eBayUI Core](https://github.com/eBay/ebayui-core), or port the Marko implementation to React. This means the new component should:

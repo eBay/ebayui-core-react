@@ -17,14 +17,6 @@ import {
 
 ### Import following styles from SKIN
 
-#### Less files
-
-```less
-@import "~@ebay/skin/src/less/page-notice/ds6/page-notice.less";
-```
-
-#### JavaScript files
-
 ```jsx harmony
 import "@ebay/skin/page-notice";
 ```

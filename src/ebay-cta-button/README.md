@@ -17,7 +17,7 @@ import "@ebay/skin/cta-button"
 
 ### Or import styles using SCSS/CSS
 ```jsx harmony
-import '@ebay/skin/dist/cta-button/ds6/cta-button.css'
+import '@ebay/skin/cta-button.css'
 ```
 
 ### Big button
