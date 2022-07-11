@@ -26,15 +26,16 @@ runs:
               minor-wording: 'MINOR,FEAT,CHORE'
               rc-wording: 'ALPHA,BETA'
 
-        - uses: ./.github/actions/build
-          with:
-              node-version: ${{ inputs.node-version }}
-
         - uses: actions/cache@v3
           id: restore-build
           with:
               path: ./*
-              key: ${{ github.sha }}
+              key: ${{ runner.os }}-${{ github.sha }}
+
+        - if: steps.restore-build.outputs.cache-hit != 'true'
+          uses: ./.github/actions/build
+          with:
+              node-version: ${{ inputs.node-version }}
 
         - uses: actions/checkout@v3
 
