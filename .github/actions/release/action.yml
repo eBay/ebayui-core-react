@@ -31,7 +31,7 @@ runs:
         - name: Version bump
           uses: phips28/gh-action-bump-version@master
           env:
-              GITHUB_TOKEN: ${{ inputs.githubToken }}
+              GITHUB_TOKEN: ${{ github.token }}
           with:
               major-wording: 'MAJOR,BREAKING CHANGE'
               minor-wording: 'MINOR,FEAT,CHORE'
