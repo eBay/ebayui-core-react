@@ -19,6 +19,12 @@ runs:
           shell: sh
           run: yarn --frozen-lockfile
 
+        - uses: actions/cache@v3
+          id: restore-node-modules
+          with:
+              path: ./*
+              key: node-modules-${{ runner.os }}-${{ github.sha }}
+
         - name: Build library
           shell: sh
           run: yarn build
