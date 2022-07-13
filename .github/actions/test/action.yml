@@ -2,9 +2,6 @@ name: "Action: Test"
 description: 'Composite test action'
 
 inputs:
-    node-version:
-        description: Node.js version
-        required: true
     with-coverage:
         description: Generate coverage reports
         required: false
@@ -13,17 +10,7 @@ inputs:
 runs:
     using: "composite"
     steps:
-        - uses: actions/checkout@v3
-
-        - uses: actions/cache@v3
-          id: restore-node-modules
-          with:
-              path: ./node_modules
-              key: node-modules-${{ runner.os }}-${{ github.sha }}
-
-        - shell: sh
-          run: yarn coverage
-
+        - run: yarn coverage
         - name: Coveralls
           if: inputs.with-coverage == 'true'
           uses: coverallsapp/github-action@master

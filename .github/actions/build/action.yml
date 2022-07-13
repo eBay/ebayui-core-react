@@ -1,38 +1,11 @@
 name: "Action: Build"
 description: 'Composite build action'
 
-inputs:
-    node-version:
-        description: Node.js version
-        required: true
-
 runs:
     using: "composite"
     steps:
-        - name: Use Node.js ${{ inputs.node-version }}
-          uses: actions/setup-node@v3
-          with:
-              node-version: ${{ inputs.node-version }}
-              cache: 'yarn'
-
-        - name: Install dependencies
-          shell: sh
-          run: yarn --frozen-lockfile
-
-        - uses: actions/cache@v3
-          id: restore-node-modules
-          with:
-              path: ./node_modules
-              key: node-modules-${{ runner.os }}-${{ github.sha }}
-
         - name: Build library
           shell: sh
           run: |
             yarn build
             yarn copy
-
-        - uses: actions/cache@v3
-          id: restore-build
-          with:
-            path: ./lib
-            key: build-${{ runner.os }}-${{ github.sha }}
