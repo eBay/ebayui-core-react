@@ -37,6 +37,17 @@ runs:
               minor-wording: 'MINOR,FEAT,CHORE'
               rc-wording: 'ALPHA,BETA'
 
+
+        - name: Use Node.js ${{ inputs.node-version }}
+          uses: actions/setup-node@v3
+          with:
+              node-version: ${{ inputs.node-version }}
+              cache: 'yarn'
+
+        - name: Install dependencies
+          shell: sh
+          run: yarn --frozen-lockfile
+
         - name: Publish to NPM
           shell: sh
           run: |
