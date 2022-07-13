@@ -15,19 +15,11 @@ runs:
     steps:
         - uses: actions/checkout@v3
 
-        - uses: actions/setup-node@v3
-          with:
-              node-version: ${{ inputs.node-version }}
-              cache: 'yarn'
-
-        - shell: sh
-          run: yarn install --frozen-lockfile
-
         - uses: actions/cache@v3
-          id: restore-build
+          id: restore-node-modules
           with:
-              path: ./*
-              key: ${{ runner.os }}-${{ github.sha }}
+              path: ./node_modules
+              key: node-modules-${{ runner.os }}-${{ github.sha }}
 
         - shell: sh
           run: yarn coverage
