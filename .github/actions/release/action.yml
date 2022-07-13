@@ -25,8 +25,14 @@ runs:
         - uses: actions/cache@v3
           id: restore-node-modules
           with:
-              path: ./*
+              path: ./node_modules
               key: node-modules-${{ runner.os }}-${{ github.sha }}
+
+        - uses: actions/cache@v3
+          id: restore-build
+          with:
+              path: ./lib
+              key: build-${{ runner.os }}-${{ github.sha }}
 
         - name: Publish to NPM
           shell: sh

@@ -22,15 +22,17 @@ runs:
         - uses: actions/cache@v3
           id: restore-node-modules
           with:
-              path: ./*
+              path: ./node_modules
               key: node-modules-${{ runner.os }}-${{ github.sha }}
 
         - name: Build library
           shell: sh
-          run: yarn build
+          run: |
+            yarn build
+            yarn copy
 
         - uses: actions/cache@v3
           id: restore-build
           with:
-            path: ./*
-            key: ${{ runner.os }}-${{ github.sha }}
+            path: ./lib
+            key: build-${{ runner.os }}-${{ github.sha }}
