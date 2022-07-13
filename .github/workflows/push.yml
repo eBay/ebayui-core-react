@@ -8,8 +8,10 @@ jobs:
     build-test:
         strategy:
             matrix:
-                os: [ubuntu-latest, windows-latest]
-                node: [14, 16.13.2]
+#                os: [ubuntu-latest, windows-latest]
+                os: [ubuntu-latest]
+#                node: [14, 16.13.2]
+                node: [16.13.2]
         name: Node.js ${{ matrix.node }} @ ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
         steps:
