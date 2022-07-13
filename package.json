@@ -64,11 +64,12 @@
     "@storybook/storybook-deployer": "^2.8.11",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.0.0",
+    "@testing-library/react": "^12",
+    "@testing-library/react-hooks": "^7",
+    "@testing-library/user-event": "^12",
     "@types/classnames": "^2.2.11",
-    "@types/react": "^18.0",
-    "@types/react-dom": "^18.0",
+    "@types/react": "^16.0",
+    "@types/react-dom": "^16.0",
     "@types/testing-library__jest-dom": "^5.9.5",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.10.0",
@@ -89,9 +90,9 @@
     "jest-pnp-resolver": "^1.0.1",
     "lint-staged": "^10.5.3",
     "node-require-context": "^1.0.0",
-    "react": "^18.0.0",
+    "react": "^16.0.0",
     "react-docgen-typescript-loader": "^3.7.2",
-    "react-dom": "^18.0.0",
+    "react-dom": "^16.0.0",
     "storybook-addon-jsx": "^7.3.14",
     "style-loader": "^2.0.0",
     "svgson": "^4.0.0",
@@ -100,6 +101,6 @@
     "typescript": "^3.9.5"
   },
   "resolutions": {
-    "react-test-renderer": "^18.2.0"
+    "@types/react": "^16.14.2"
   }
 }
