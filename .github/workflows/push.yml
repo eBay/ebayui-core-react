@@ -16,9 +16,10 @@ jobs:
         runs-on: ${{ matrix.os }}
         steps:
             - uses: actions/checkout@v3
-            - uses: ./.github/actions/build
+            - uses: ./.github/actions/setup-node
               with:
                 node-version: ${{ matrix.node }}
+            - uses: ./.github/actions/build
             - uses: ./.github/actions/test
               with:
                 node-version: ${{ matrix.node }}
@@ -32,6 +33,9 @@ jobs:
             security-events: write
         steps:
             - uses: actions/checkout@v3
+            - uses: ./.github/actions/setup-node
+              with:
+                node-version-file: '.npmrc'
             - uses: ./.github/actions/analyze
 
     release:
@@ -40,9 +44,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+            - uses: ./.github/actions/setup-node
+              with:
+                node-version-file: '.npmrc'
             - uses: ./.github/actions/release
               with:
-                node-version: 16.13.2
                 githubToken: ${{ github.token }}
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
@@ -52,6 +58,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+            - uses: ./.github/actions/setup-node
+              with:
+                node-version-file: '.npmrc'
             - uses: ./.github/actions/storybook
               with:
                 branch: main

@@ -10,17 +10,6 @@ inputs:
 runs:
     using: "composite"
     steps:
-        - uses: actions/checkout@v3
-
-        - uses: actions/setup-node@v3
-          with:
-              node-version: ${{ inputs.node-version }}
-              cache: 'yarn'
-
-        - name: Install dependencies
-          shell: sh
-          run: yarn --frozen-lockfile
-
         - name: Build Storybook
           shell: sh
           run: yarn build-storybook --output-dir storybook-static/${{ inputs.branch }}
