@@ -2,9 +2,6 @@ name: "Action: Release"
 description: 'Composite release action'
 
 inputs:
-    node-version:
-        description: Node.js version
-        required: true
     npmToken:
         description: NPM Token
         required: true

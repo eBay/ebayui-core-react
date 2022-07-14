@@ -10,22 +10,16 @@ jobs:
             matrix:
 #                os: [ubuntu-latest, windows-latest]
                 os: [ubuntu-latest]
-#                node: [14, 16.13.2]
-                node: [16.13.2]
-        name: Node.js ${{ matrix.node }} @ ${{ matrix.os }}
+        name: Build & Test  @ ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
-              with:
-                node-version: ${{ matrix.node }}
             - uses: ./.github/actions/build
             - uses: ./.github/actions/test
-              with:
-                node-version: ${{ matrix.node }}
-                with-coverage: 'true'
 
     analyze:
+        name: Analyze
         needs: build-test
         runs-on: ubuntu-latest
         permissions:
@@ -34,8 +28,6 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
-              with:
-                node-version-file: '.npmrc'
             - uses: ./.github/actions/analyze
 
     release:
@@ -45,11 +37,8 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
-              with:
-                node-version-file: '.npmrc'
             - uses: ./.github/actions/release
               with:
-                githubToken: ${{ github.token }}
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
     publish-storybook:
@@ -59,8 +48,4 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
-              with:
-                node-version-file: '.npmrc'
             - uses: ./.github/actions/storybook
-              with:
-                branch: main
