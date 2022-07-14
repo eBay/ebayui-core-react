@@ -21,4 +21,5 @@ runs:
 
         - name: Generate list using Markdown
           shell: sh
-          run: echo "Storybook published: https://opensource.ebay.com/ebayui-core-react/${{ inputs.branch }}" >> $GITHUB_STEP_SUMMARY
+          run: |
+            echo "Storybook published: https://opensource.ebay.com/ebayui-core-react/${{ inputs.branch }}" >> $GITHUB_STEP_SUMMARY
