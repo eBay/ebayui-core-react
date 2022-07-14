@@ -18,3 +18,7 @@ runs:
           uses: JamesIves/github-pages-deploy-action@v4
           with:
               FOLDER: storybook-static
+
+        - name: Generate list using Markdown
+          shell: sh
+          run: echo "Storybook published: https://opensource.ebay.com/ebayui-core-react/${{ inputs.branch }}" >> $GITHUB_STEP_SUMMARY
