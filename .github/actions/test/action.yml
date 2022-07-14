@@ -10,7 +10,8 @@ inputs:
 runs:
     using: "composite"
     steps:
-        - run: yarn coverage
+        - shell: sh
+          run: yarn coverage
         - name: Coveralls
           if: inputs.with-coverage == 'true'
           uses: coverallsapp/github-action@master
