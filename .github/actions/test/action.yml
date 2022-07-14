@@ -1,19 +1,13 @@
 name: "Action: Test"
 description: 'Composite test action'
 
-inputs:
-    with-coverage:
-        description: Generate coverage reports
-        required: false
-        default: 'false'
-
 runs:
     using: "composite"
     steps:
         - shell: sh
           run: yarn coverage
+
         - name: Coveralls
-          if: inputs.with-coverage == 'true'
           uses: coverallsapp/github-action@master
           with:
             github-token: ${{ github.token }}
