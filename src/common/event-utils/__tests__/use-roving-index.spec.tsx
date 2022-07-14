@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import { act, renderHook, fireEvent } from '@testing-library/react'
+import { act, renderHook } from '@testing-library/react-hooks'
+import { fireEvent } from '@testing-library/react'
 import useRovingIndex from '../use-roving-index'
 
 const TestComponent: FC = () => <div />
