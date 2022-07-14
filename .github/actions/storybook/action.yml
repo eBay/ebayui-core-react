@@ -19,7 +19,7 @@ runs:
           with:
               FOLDER: storybook-static
 
-        - name: Generate list using Markdown
+        - name: Output storybook link
           shell: sh
           run: |
             echo "Storybook published: https://opensource.ebay.com/ebayui-core-react/${{ inputs.branch }}" >> $GITHUB_STEP_SUMMARY

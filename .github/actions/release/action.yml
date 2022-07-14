@@ -10,6 +10,7 @@ runs:
     using: "composite"
     steps:
         - name: Version bump
+          id: bump
           uses: phips28/gh-action-bump-version@master
           env:
               GITHUB_TOKEN: ${{ github.token }}
@@ -25,3 +26,8 @@ runs:
               yarn copy
               echo "//registry.npmjs.org/:_authToken=${{ inputs.npmToken }}" >> ./.npmrc
               CI=1 npm publish lib/ --access public
+
+        - name: Output published version
+          shell: sh
+          run: |
+              echo "New version published: ${{ steps.bump.outputs.newTag }}" >> $GITHUB_STEP_SUMMARY
