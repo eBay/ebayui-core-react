@@ -6,7 +6,7 @@ on:
 
 jobs:
     build-test:
-        name: Node.js @ ubuntu-latest
+        name: Build & Test
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -15,6 +15,7 @@ jobs:
             - uses: ./.github/actions/test
 
     analyze:
+        name: Analyze
         needs: build-test
         runs-on: ubuntu-latest
         permissions:
