@@ -1,23 +1,14 @@
 name: "Action: Setup node"
 description: 'Composite setup node action'
 
-inputs:
-    node-version:
-        description: Node.js version
-    node-version-file:
-        description: Use nvmrc file
-
 runs:
     using: "composite"
     steps:
-        - name: Use Node.js ${{ inputs.node-version }}
-          uses: actions/setup-node@v3
+        - uses: actions/setup-node@v3
           with:
-              node-version: ${{ inputs.node-version }}
-              node-version-file: ${{ inputs.node-version-file }}
+              node-version-file: .nvmrc
               cache: 'yarn'
 
         - name: Install dependencies
           shell: sh
           run: yarn --frozen-lockfile
-

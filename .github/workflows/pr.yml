@@ -6,25 +6,13 @@ on:
 
 jobs:
     build-test:
-        strategy:
-            matrix:
-                os: [ubuntu-latest]
-                node: [16.13.2]
-        name: Node.js ${{ matrix.node }} @ ${{ matrix.os }}
-        runs-on: ${{ matrix.os }}
+        name: Node.js @ ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-
             - uses: ./.github/actions/setup-node
-              with:
-                  node-version: ${{ matrix.node }}
-
             - uses: ./.github/actions/build
-
             - uses: ./.github/actions/test
-              with:
-                  node-version: ${{ matrix.node }}
-                  with-coverage: 'true'
 
     analyze:
         needs: build-test
@@ -35,6 +23,4 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
-              with:
-                  node-version-file: '.nvmrc'
             - uses: ./.github/actions/analyze

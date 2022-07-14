@@ -19,6 +19,7 @@ runs:
           with:
               major-wording: 'MAJOR,BREAKING CHANGE'
               minor-wording: 'MINOR,FEAT,CHORE'
+              patch-wording: 'PATCH,FIX'
               rc-wording: 'ALPHA,BETA'
 
         - name: Publish to NPM
