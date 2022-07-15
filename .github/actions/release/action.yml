@@ -30,4 +30,4 @@ runs:
         - name: Output published version
           shell: sh
           run: |
-              echo "New version published: ${{ steps.bump.outputs.newTag }}" >> $GITHUB_STEP_SUMMARY
+              echo "New version published: [@ebay/ebayui-core-react@${{ steps.bump.outputs.newTag }}](https://www.npmjs.com/package/@ebay/ebayui-core-react/v/${{ steps.bump.outputs.newTag }})" >> $GITHUB_STEP_SUMMARY
