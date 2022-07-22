@@ -5,7 +5,7 @@ If pagination doesn't fit the page it will adjust to the available width.
 
 ## Import JS
 ```jsx harmony
-import { EbayPagination, EbayPaginationItem } from '@ebay/ebayui-core-react/ebay-pagination'
+import { EbayPagination, EbayPaginationItem } from '@ebay/ui-core-react/ebay-pagination'
 ```
 
 ## Import styles from Skin

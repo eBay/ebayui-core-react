@@ -7,7 +7,7 @@
 ## Import JS
 
 ```jsx harmony
-import { EbayLegacyFloatingLabel } from '@ebay/ebayui-core-react/ebay-legacy-floating-label'
+import { EbayLegacyFloatingLabel } from '@ebay/ui-core-react/ebay-legacy-floating-label'
 ```
 
 ## Import following styles from SKIN
@@ -25,7 +25,7 @@ import "@ebay/skin/legacy-textbox.css";
 ## Usage
 
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ```jsx harmony

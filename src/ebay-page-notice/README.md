@@ -12,7 +12,7 @@ import {
     EbayNoticeContent,
     EbayPageNoticeTitle,
     EbayPageNoticeFooter,
-} from '@ebay/ebayui-core-react/ebay-page-notice'
+} from '@ebay/ui-core-react/ebay-page-notice'
 ```
 
 ### Import following styles from SKIN

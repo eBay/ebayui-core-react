@@ -5,14 +5,14 @@
 
 ## Install
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ## Usage
 
 ### Import JS
 ```jsx harmony
-import { EbayRadio } from '@ebay/ebayui-core-react/ebay-radio'
+import { EbayRadio } from '@ebay/ui-core-react/ebay-radio'
 ```
 
 ### Import LESS from SKIN
@@ -27,7 +27,7 @@ import '@ebay/skin/radio.css'
 
 ## EbayRadio with EbayLabel
 ```jsx harmony
-import { EbayLabel } from '@ebay/ebayui-core-react/ebay-field';
+import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 
 <EbayRadio value="1" id="radio-1">
     <Ebaylabel>Choice 1</Ebaylabel>

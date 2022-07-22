@@ -5,12 +5,12 @@
 
 ## Usage
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ### Import JS
 ```jsx harmony
-import { EbayBadge } from '@ebay/ebayui-core-react/ebay-badge'
+import { EbayBadge } from '@ebay/ui-core-react/ebay-badge'
 ```
 
 ## Import following styles from Skin
