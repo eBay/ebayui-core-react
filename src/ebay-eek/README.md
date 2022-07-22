@@ -8,7 +8,7 @@ This component displays the current European Union Energy (EEK) rating of certai
 
 ### Import JS
 ```jsx harmony
-import { EbayEek } from '@ebay/ebayui-core-react/ebay-eek'
+import { EbayEek } from '@ebay/ui-core-react/ebay-eek'
 ```
 
 ### Import styles from Skin

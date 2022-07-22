@@ -5,11 +5,11 @@
 
 ## Usage
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 ### Import JS
 ```jsx harmony
-import { EbayCheckbox } from '@ebay/ebayui-core-react/ebay-checkbox'
+import { EbayCheckbox } from '@ebay/ui-core-react/ebay-checkbox'
 ```
 
 ## Import following styles from Skin
@@ -23,7 +23,7 @@ import '@ebay/skin/checkbox.css'
 ```
 
 ```jsx
-import { EbayLabel } from '@ebay/ebayui-core-react/ebay-field';
+import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 
 <EbayCheckbox id="checkbox-1">
     <EbayLabel>Remember me!</EbayLabel>

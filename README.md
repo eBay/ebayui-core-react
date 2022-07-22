@@ -67,17 +67,17 @@ eBayUI React components
 
 ## Getting Started
 
-These react components are available as `@ebay/ebayui-core-react` package on [NPM](https://npmjs.org/@ebay/ebayui-core-react).
+These react components are available as `@ebay/ui-core-react` package on [NPM](https://npmjs.org/@ebay/ui-core-react).
 
 Use npm or yarn to add the package dependency to your project:
 
 ```sh
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ### for quick development/POC
 ```jsx
-import { EbayTextbox, EbayButton } from '@ebay/ebayui-core-react'
+import { EbayTextbox, EbayButton } from '@ebay/ui-core-react'
 
 <EbayTextbox placeholder="Enter text here" />
 <EbayButton>Submit</EbayButton>
@@ -85,8 +85,8 @@ import { EbayTextbox, EbayButton } from '@ebay/ebayui-core-react'
 
 ### for smaller bundle size
 ```jsx harmony
-import { EbayTextbox } from '@ebay/ebayui-core-react/ebay-textbox'
-import { EbayButton } from '@ebay/ebayui-core-react/ebay-button'
+import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
+import { EbayButton } from '@ebay/ui-core-react/ebay-button'
 
 <EbayTextbox placeholder="Enter text here" />
 <EbayButton>Submit</EbayButton>

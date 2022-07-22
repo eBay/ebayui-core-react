@@ -7,7 +7,7 @@
 
 ### Import JS
 ```jsx
-import { EbayBreadcrumbs, EbayBreadcrumbItem } from '@ebay/ebayui-core-react/ebay-breadcrumbs'
+import { EbayBreadcrumbs, EbayBreadcrumbItem } from '@ebay/ui-core-react/ebay-breadcrumbs'
 ```
 
 ### Import styles from Skin

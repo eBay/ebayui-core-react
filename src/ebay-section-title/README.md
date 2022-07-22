@@ -2,7 +2,7 @@
 
 ## Install
 ```shell
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ import {
     EbaySectionTitle,
     EbaySectionTitleTitle as Title,
     EbaySectionTitleSubtitle as Subtitle
-} from '@ebay/ebayui-core-react/ebay-section-title'
+} from '@ebay/ui-core-react/ebay-section-title'
 ```
 
 ### Import styles from Skin
@@ -53,8 +53,8 @@ Name | Required | Description
 ### Examples
 
 ```jsx
-import { EbaySectionTitleInfo as Info } from '@ebay/ebayui-core-react/ebay-section-title'
-import { EbayInfotip, EbayInfotipHeading, EbayInfotipContent } from '@ebay/ebayui-core-react/ebay-infotip'
+import { EbaySectionTitleInfo as Info } from '@ebay/ui-core-react/ebay-section-title'
+import { EbayInfotip, EbayInfotipHeading, EbayInfotipContent } from '@ebay/ui-core-react/ebay-infotip'
 
 <Info>
     <EbayInfotip

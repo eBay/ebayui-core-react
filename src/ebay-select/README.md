@@ -6,7 +6,7 @@ This component is used to create a native `<select>` form element with default b
 
 ## Import JS
 ```jsx harmony
-import { EbaySelect, EbaySelectOption } from '@ebay/ebayui-core-react/ebay-select'
+import { EbaySelect, EbaySelectOption } from '@ebay/ui-core-react/ebay-select'
 ```
 ## Import following styles from SKIN
 ```jsx harmony

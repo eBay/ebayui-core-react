@@ -7,13 +7,13 @@
 ## Usage
 
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ### Import JS
 
 ```jsx harmony
-import { EbayTextbox } from '@ebay/ebayui-core-react/ebay-textbox'
+import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
 ```
 
 ### Import following styles from SKIN
@@ -64,7 +64,7 @@ It supports all the events supported by an input element (e.g. `onInput`, `onKey
 
 ### EbayTextboxPrefixIcon example
 ```jsx
-import { EbayTextbox, EbayTextboxPrefixIcon } from '@ebay/ebayui-core-react/ebay-textbox'
+import { EbayTextbox, EbayTextboxPrefixIcon } from '@ebay/ui-core-react/ebay-textbox'
 
 <EbayTextbox placeholder="email">
     <EbayTextboxPrefixIcon name="messages" />
