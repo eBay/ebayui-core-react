@@ -5,7 +5,7 @@
 const { resolve } = require('path');
 const { saveIconType, saveIconConstants, saveSvgIcons, skinIcons, iconKeys } = require('./update-icons-helpers');
 
-const skinIconsFile = resolve(process.cwd(), 'node_modules/@ebay/skin/dist/svg/ds6/icons.svg')
+const skinIconsFile = resolve(process.cwd(), 'node_modules/@ebay/skin/dist/svg/icons.svg')
 const typesFile = resolve(__dirname, `../src/ebay-icon/types.ts`)
 const constFile = resolve(__dirname, `../src/ebay-icon/__tests__/constants.ts`)
 const ebaySvgFile = resolve(__dirname, `../src/ebay-svg/svg.tsx`)

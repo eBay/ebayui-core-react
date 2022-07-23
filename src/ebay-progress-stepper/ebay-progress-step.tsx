@@ -48,7 +48,7 @@ const EbayProgressStep: FC<EbayProgressStepProps> = ({
     )
     const ariaLabel = number === undefined ? state : number.toString()
     const content: number | null = number === undefined ? null : number
-    const icon = typeIcons[type]
+    const icon = typeIcons[type] || (current && 'stepperCurrent')
 
     return (
         <div
