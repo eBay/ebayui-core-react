@@ -5,7 +5,7 @@
 
 ## Import JS
 ```jsx harmony
-import { EbayTab, EbayTabHeading, EbayTabPanel } from '@ebay/ebayui-core-react/ebay-tabs'
+import { EbayTab, EbayTabHeading, EbayTabPanel } from '@ebay/ui-core-react/ebay-tabs'
 ```
 ## Import following styles from SKIN
 ```jsx harmony

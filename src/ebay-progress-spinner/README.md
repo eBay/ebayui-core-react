@@ -7,7 +7,7 @@
 
 ### Import JS
 ```jsx harmony
-import { EbayProgressSpinner } from '@ebay/ebayui-core-react/ebay-progress-spinner'
+import { EbayProgressSpinner } from '@ebay/ui-core-react/ebay-progress-spinner'
 ```
 
 ### Import styles from Skin

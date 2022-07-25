@@ -7,7 +7,7 @@
 ## Use
 
 ```jsx harmony
-import { EbayInlineNotice, EbayNoticeContent } from '@ebay/ebayui-core-react'
+import { EbayInlineNotice, EbayNoticeContent } from '@ebay/ui-core-react'
 
 <EbayInlineNotice status="confirmation" aria-label="Confirmation">
     <EbayNoticeContent>
@@ -22,7 +22,7 @@ import { EbayInlineNotice, EbayNoticeContent } from '@ebay/ebayui-core-react'
 or for smaller bundle size:
 
 ```jsx harmony
-import { EbayInlineNotice, EbayNoticeContent } from '@ebay/ebayui-core-react/ebay-inline-notice'
+import { EbayInlineNotice, EbayNoticeContent } from '@ebay/ui-core-react/ebay-inline-notice'
 ```
 
 ### Import following styles from SKIN

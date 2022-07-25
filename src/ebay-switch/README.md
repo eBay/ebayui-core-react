@@ -5,7 +5,7 @@
 
 ## Import JS
 ```jsx harmony
-import { EbaySwitch } from '@ebay/ebayui-core-react/ebay-switch';
+import { EbaySwitch } from '@ebay/ui-core-react/ebay-switch';
 ```
 ## Import following styles from SKIN
 ```jsx harmony
@@ -13,7 +13,7 @@ import '@ebay/skin/switch';
 ```
 ## Usage
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 ```jsx harmony
 <span className="field">

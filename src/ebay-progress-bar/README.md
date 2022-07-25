@@ -8,7 +8,7 @@ The progress bar gives an immediate, real-time visualisation of the current task
 
 ### Import JS
 ```jsx harmony
-import { EbayProgressSpinner } from '@ebay/ebayui-core-react/ebay-progress-bar'
+import { EbayProgressSpinner } from '@ebay/ui-core-react/ebay-progress-bar'
 ```
 
 ### Import styles from Skin

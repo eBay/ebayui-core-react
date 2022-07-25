@@ -13,7 +13,7 @@ import {
     EbayInfotipContent,
     EbayInfotipHeading,
     EbayInfotipCloseButton,
-} from '@ebay/ebayui-core-react/ebay-infotip'
+} from '@ebay/ui-core-react/ebay-infotip'
 ```
 
 ## Import following styles from SKIN
@@ -31,7 +31,7 @@ import '@ebay/skin/icon-button.css'
 ## Usage
 
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ```jsx harmony

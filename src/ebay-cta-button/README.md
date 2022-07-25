@@ -7,7 +7,7 @@
 
 ### Import JS
 ```jsx harmony
-import { EbayCtaButton } from '@ebay/ebayui-core-react/ebay-cta-button'
+import { EbayCtaButton } from '@ebay/ui-core-react/ebay-cta-button'
 ```
 
 ### Import following styles from SKIN
