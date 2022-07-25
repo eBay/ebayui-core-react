@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@babel/register": "^7.0.0",
-    "@ebay/skin": "14.1.0-0",
+    "@ebay/skin": "^14",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@storybook/addon-a11y": "^6.5.6",
     "@storybook/addon-essentials": "^6.5.6",
