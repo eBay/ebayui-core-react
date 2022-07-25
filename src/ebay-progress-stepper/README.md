@@ -7,13 +7,13 @@
 ## Usage
 
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ## Import JS
 
 ```jsx harmony
-import { EbayProgressStepper, EbayProgressStep as Step } from '@ebay/ebayui-core-react/ebay-progress-stepper'
+import { EbayProgressStepper, EbayProgressStep as Step } from '@ebay/ui-core-react/ebay-progress-stepper'
 ```
 
 ### Import styles from Skin

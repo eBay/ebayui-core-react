@@ -5,7 +5,7 @@
 
 ## Import JS
 ```jsx harmony
-import { EbayListboxButton, EbayListboxButtonOption } from '@ebay/ebayui-core-react/ebay-listbox-button';
+import { EbayListboxButton, EbayListboxButtonOption } from '@ebay/ui-core-react/ebay-listbox-button';
 ```
 ## Import following styles from SKIN
 ```jsx harmony
@@ -13,7 +13,7 @@ import '@ebay/skin/listbox-button';
 ```
 ## Usage
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 ```jsx harmony
  <EbayListboxButton defaultValue="BB" onSelect={action(`onSelect triggered`)} fluid borderless>

@@ -3,7 +3,7 @@ The component will include the actual SVG markup in the HTML and then reference 
 
 ## Usage
 ```jsx
-import { EbayIcon } from '@ebay/ebayui-core-react/ebay-icon'
+import { EbayIcon } from '@ebay/ui-core-react/ebay-icon'
 import '@ebay/skin/icon'
 
 <EbayIcon name="arrowLeft" />

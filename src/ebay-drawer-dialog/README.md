@@ -4,7 +4,7 @@
 
 ### Import JS
 ```jsx harmony
-import { EbayDrawerDialog } from '@ebay/ebayui-core-react/ebay-drawer-dialog'
+import { EbayDrawerDialog } from '@ebay/ui-core-react/ebay-drawer-dialog'
 ```
 ### Import following styles from SKIN
 ```jsx harmony

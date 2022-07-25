@@ -5,12 +5,12 @@
 
 ## Install
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ## Usage
 ```jsx harmony
-import { EbayMenu, EbayMenuItem as Item } from '@ebay/ebayui-core-react/ebay-menu';
+import { EbayMenu, EbayMenuItem as Item } from '@ebay/ui-core-react/ebay-menu';
 import '@ebay/skin/menu';
 
 <EbayMenu>
@@ -43,7 +43,7 @@ Name | Type | Required | Description
 Example:
 
 ```jsx
-import { EbayMenu, EbayMenuItem as Item, EbayMenuSeparator as Separator } from '@ebay/ebayui-core-react/ebay-menu';
+import { EbayMenu, EbayMenuItem as Item, EbayMenuSeparator as Separator } from '@ebay/ui-core-react/ebay-menu';
 
 <EbayMenu>
     <Item>item 1</Item>

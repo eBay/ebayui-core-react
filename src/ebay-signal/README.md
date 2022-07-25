@@ -8,11 +8,11 @@ Signals are data-backed recommendations to help customers make more informed dec
 
 ## Usage
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 ### Import JS
 ```jsx harmony
-import { EbaySignal } from '@ebay/ebayui-core-react/ebay-signal';
+import { EbaySignal } from '@ebay/ui-core-react/ebay-signal';
 ```
 ## Import styles from Skin
 ```jsx harmony

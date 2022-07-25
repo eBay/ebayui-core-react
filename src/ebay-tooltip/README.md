@@ -7,7 +7,7 @@
 ## Import JS
 
 ```jsx harmony
-import { EbayTooltip, EbayTooltipHost, EbayTooltipContent } from '@ebay/ebayui-core-react/ebay-tooltip'
+import { EbayTooltip, EbayTooltipHost, EbayTooltipContent } from '@ebay/ui-core-react/ebay-tooltip'
 ```
 
 ### Import following styles from SKIN
@@ -23,7 +23,7 @@ import "@ebay/skin/tooltip.css"
 ## Usage
 
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ```jsx harmony

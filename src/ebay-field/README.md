@@ -5,7 +5,7 @@
 
 ## Import JS
 ```jsx harmony
-import { EbayField, EbayLabel, fieldLayoutType, EbayFieldDescription, fieldDescriptionType, fieldDescriptionPosition } from '@ebay/ebayui-core-react/ebay-field';
+import { EbayField, EbayLabel, fieldLayoutType, EbayFieldDescription, fieldDescriptionType, fieldDescriptionPosition } from '@ebay/ui-core-react/ebay-field';
 ```
 ## Import following styles from SKIN
 ```jsx harmony
@@ -17,7 +17,7 @@ import '@ebay/skin/field.css'
 ```
 ## Usage
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 ```jsx harmony
  <EbayField layout={fieldLayoutType.BLOCK}>

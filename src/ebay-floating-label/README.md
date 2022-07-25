@@ -9,7 +9,7 @@ Use `EbayTextbox` or `EbaySelect` with the `floatingLabel` attribute instead
 ## Import JS
 
 ```jsx harmony
-import { EbayFloatingLabel } from '@ebay/ebayui-core-react/ebay-floating-label'
+import { EbayFloatingLabel } from '@ebay/ui-core-react/ebay-floating-label'
 ```
 
 ## Import following styles from SKIN
@@ -27,7 +27,7 @@ import "@ebay/skin/floating-label.css";
 ## Usage
 
 ```
-yarn add @ebay/ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ```jsx harmony
