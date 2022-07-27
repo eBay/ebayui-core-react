@@ -1143,9 +1143,9 @@
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
 "@ebay/skin@^14":
-  version "14.0.5"
-  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-14.0.5.tgz#430a3e4646f887c60465d4630c85e479053d139d"
-  integrity sha512-3Z8DRmFoJV8vpqpoEv5+Lasv/zypH7zK0b+UVyNoJa7ekOW9J1aK4lWxo6k0k3WF+gOkZUL/0+8rzHnQY57z5w==
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/@ebay/skin/-/skin-14.1.0.tgz#e78bca09513ddd9f4205638cf6092787e5b97616"
+  integrity sha512-GlKd0qqkrXrLUOkOQH7fZqyovRZ/cVWybiD6a01xZ5Rh9akMcHvXWaVD7NCMoB4u39n52/5+Cj5lO3PWTQFBFg==
 
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"

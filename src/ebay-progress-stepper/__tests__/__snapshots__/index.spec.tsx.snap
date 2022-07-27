@@ -190,10 +190,18 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
-            aria-label="active"
-            role="img"
-          />
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-current"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-current"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -327,10 +335,18 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
-            aria-label="active"
-            role="img"
-          />
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-current"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-current"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -423,12 +439,18 @@ exports[`Storyshots ebay-progress-stepper Custom numbers (deprecated) 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
-            aria-label="4"
-            role="img"
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-current"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            4
-          </span>
+            <use
+              xlinkHref="#icon-stepper-current"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -548,10 +570,18 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
-            aria-label="active"
-            role="img"
-          />
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-current"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-current"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -903,10 +933,18 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
-            aria-label="active"
-            role="img"
-          />
+          <svg
+            aria-hidden={true}
+            className="icon icon--stepper-current"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-current"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"

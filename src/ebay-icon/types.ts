@@ -3,7 +3,10 @@
 export type Icon =
     'add' |
     'addSmall' |
+    'archive' |
+    'archiveSmall' |
     'arrowLeft' |
+    'arrowLeftMedium' |
     'arrowLeftSmall' |
     'arrowMove' |
     'arrowMoveSmall' |
@@ -25,6 +28,7 @@ export type Icon =
     'bank' |
     'bankLarge' |
     'bids' |
+    'bidsLarge' |
     'breadcrumb' |
     'calendar' |
     'calendarLarge' |
@@ -37,6 +41,8 @@ export type Icon =
     'cartLarge' |
     'cartSmall' |
     'categories' |
+    'certifiedRecycle' |
+    'certifiedRecycleSmall' |
     'chatLarge' |
     'checkboxChecked' |
     'checkboxCheckedLarge' |
@@ -53,8 +59,10 @@ export type Icon =
     'chevronDownExtraSmall' |
     'chevronDownSmall' |
     'chevronLeft' |
+    'chevronLeftExtraSmall' |
     'chevronLeftSmall' |
     'chevronRight' |
+    'chevronRightExtraSmall' |
     'chevronRightSmall' |
     'chevronUp' |
     'chevronUpBold' |
@@ -76,10 +84,12 @@ export type Icon =
     'creditCardSmall' |
     'cta' |
     'customize' |
+    'customizeSmall' |
     'deals' |
     'delete' |
     'deleteSmall' |
     'download' |
+    'downloadSmall' |
     'dropdown' |
     'edit' |
     'editSmall' |
@@ -90,6 +100,7 @@ export type Icon =
     'eventLarge' |
     'fastNFree' |
     'fastNFreeSmall' |
+    'filter' |
     'filterGallery' |
     'filterGallerySmall' |
     'filterList' |
@@ -97,36 +108,57 @@ export type Icon =
     'filterSingle' |
     'filterSingleSelected' |
     'filterSingleSmall' |
+    'filterSmall' |
     'fingerprintLarge' |
     'flag' |
+    'flagSmall' |
+    'folder' |
+    'folderSmall' |
     'following' |
     'followingSmall' |
     'gift' |
     'giftLarge' |
+    'giftSmall' |
     'help' |
     'helpSmall' |
     'hideSecret' |
+    'hideSecretSmall' |
     'history' |
     'home' |
+    'inbox' |
+    'inboxSmall' |
     'information' |
     'informationFilled' |
     'informationFilledSmall' |
     'informationSmall' |
+    'key' |
     'largeBox' |
     'largeCase' |
     'lightbulb' |
+    'lightbulbSmall' |
+    'liveEye' |
+    'liveEyeSmall' |
     'location' |
     'locationLarge' |
     'locked' |
     'lockedSmall' |
+    'mailMove' |
+    'mailMoveSmall' |
+    'mailOpen' |
+    'mailOpenSmall' |
+    'mailUnread' |
+    'mailUnreadSmall' |
     'mediumBox' |
     'menu' |
     'messages' |
     'messagesLarge' |
+    'messagesSmall' |
     'mic' |
     'micSmall' |
     'mobile' |
     'mobileSignal' |
+    'moneyBackGuaranteeUs' |
+    'moneyBackGuaranteeUsSmall' |
     'notification' |
     'overflow' |
     'overflowSmall' |
@@ -145,6 +177,9 @@ export type Icon =
     'photoFlipCamera' |
     'photoGallery' |
     'photoGalleryMore' |
+    'photoGallerySmall' |
+    'photoImage' |
+    'photoImageSmall' |
     'photoRotate' |
     'photoSelectAll' |
     'photoSelectNone' |
@@ -156,6 +191,18 @@ export type Icon =
     'playSmall' |
     'print' |
     'profile' |
+    'programBadgeAuthenticityGuaranteed' |
+    'programBadgeClickToCall' |
+    'programBadgeEbayPlus' |
+    'programBadgeEscrow' |
+    'programBadgeFreeWarranty' |
+    'programBadgeMoneyBackGuaranteeChf' |
+    'programBadgeMoneyBackGuaranteeEu' |
+    'programBadgeMoneyBackGuaranteeUk' |
+    'programBadgeMoneyBackGuaranteeUs' |
+    'programBadgeMoneyBackGuaranteeZl' |
+    'programBadgeTopRatedSeller' |
+    'programBadgeVault' |
     'purchases' |
     'purchasesLarge' |
     'radioChecked' |
@@ -166,19 +213,27 @@ export type Icon =
     'redLaserSmall' |
     'refresh' |
     'remove' |
+    'reply' |
+    'replySmall' |
     'reportFlag' |
     'reportFlagSmall' |
+    'return' |
+    'returnSmall' |
     'save' |
     'saveBold' |
     'saveSelected' |
     'saveSelectedSmall' |
     'saveSmall' |
+    'scan' |
+    'scanSmall' |
     'search' |
+    'searchActive' |
     'searchBold' |
     'searchLarge' |
     'searchSmall' |
     'securityKey' |
     'selling' |
+    'sellingMedium' |
     'send' |
     'settings' |
     'settingsSmall' |
@@ -186,12 +241,14 @@ export type Icon =
     'shareSmall' |
     'shoeBox' |
     'showSecret' |
-    'signOut' |
+    'showSecretSmall' |
+    'smallBox' |
     'smallBox' |
     'smallCase' |
     'smallLetter' |
     'socialDiscord' |
     'socialFacebook' |
+    'socialInstagram' |
     'socialLink' |
     'socialLinkedin' |
     'socialMessenger' |
@@ -199,6 +256,9 @@ export type Icon =
     'socialReddit' |
     'socialTwitter' |
     'socialWhatsapp' |
+    'sortDownSmall' |
+    'sortSmall' |
+    'sortUpSmall' |
     'spinner' |
     'spinnerLarge' |
     'starDynamic' |
@@ -212,6 +272,7 @@ export type Icon =
     'starUndefinedSmall' |
     'stepperAttention' |
     'stepperConfirmation' |
+    'stepperCurrent' |
     'stepperInformation' |
     'store' |
     'storeLarge' |
@@ -237,6 +298,7 @@ export type Icon =
     'topSeller' |
     'truck' |
     'truckSmall' |
+    'undo' |
     'unlocked' |
     'unlockedSmall' |
     'userProfile' |
@@ -244,6 +306,12 @@ export type Icon =
     'vaultSmall' |
     'videoPause' |
     'videoPlay' |
+    'visa' |
+    'visaLarge' |
+    'visaSmall' |
+    'visaXsmall' |
     'watch' |
     'watchLarge' |
-    'window'
+    'window' |
+    'zoomIn' |
+    'zoomOut'
