@@ -43,7 +43,7 @@ jobs:
                 npmToken: ${{ secrets.NPM_TOKEN }}
 
     publish-storybook:
-        needs: analyze
+        needs: release
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
