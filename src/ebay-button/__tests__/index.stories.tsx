@@ -99,3 +99,11 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton priority="primary" bodyState="loading">Primary Button</EbayButton></p>
         </>
     ))
+    .add(`Open in new tab/window`, () => (
+        <EbayButton>
+            <EbayButtonCell>
+                <span>Open in new tab</span>
+                <EbayIcon name="window" />
+            </EbayButtonCell>
+        </EbayButton>
+    ))

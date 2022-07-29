@@ -119,6 +119,32 @@ exports[`Storyshots ebay-button Loading button 1`] = `
 </p>
 `;
 
+exports[`Storyshots ebay-button Open in new tab/window 1`] = `
+<button
+  class="btn btn--secondary"
+>
+  <span
+    class="btn__cell"
+  >
+    <span>
+      Open in new tab
+    </span>
+    <svg
+      aria-hidden="true"
+      class="icon icon--window"
+      focusable="false"
+      height="24px"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-window"
+      />
+    </svg>
+  </span>
+</button>
+`;
+
 exports[`Storyshots ebay-button Partially disabled Button 1`] = `
 <button
   aria-disabled="true"
