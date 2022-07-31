@@ -1,86 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-textbox Autofocused textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control"
-    placeholder="Should focus here"
-    type="text"
-    value=""
-  />
-</span>
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control"
+      placeholder="Should focus here"
+      type="text"
+      value=""
+    />
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Control value from outside 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control"
-    placeholder="Max 10 chars"
-    type="text"
-    value=""
-  />
-</span>
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control"
+      placeholder="Max 10 chars"
+      type="text"
+      value=""
+    />
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Default textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control"
-    type="text"
-    value="EbayTextbox"
-  />
-</span>
-`;
-
-exports[`Storyshots ebay-textbox Disabled textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control"
-    disabled=""
-    type="text"
-    value=""
-  />
-</span>
-`;
-
-exports[`Storyshots ebay-textbox Floating label 1`] = `
-<span
-  class="floating-label"
->
-  <label
-    class="floating-label__label"
-  >
-    Floating label
-  </label>
+<DocumentFragment>
   <span
     class="textbox"
   >
     <input
       class="textbox__control"
       type="text"
+      value="EbayTextbox"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-textbox Disabled textbox 1`] = `
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control"
+      disabled=""
+      type="text"
       value=""
     />
   </span>
-</span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-textbox Floating label 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Floating label
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Floating label invalid 1`] = `
-<span
-  class="floating-label"
->
-  <label
-    class="floating-label__label floating-label__label--invalid"
+<DocumentFragment>
+  <span
+    class="floating-label"
   >
-    Invalid Floating label
-  </label>
+    <label
+      class="floating-label__label floating-label__label--invalid"
+    >
+      Invalid Floating label
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        aria-invalid="true"
+        class="textbox__control"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-textbox Fluid textbox 1`] = `
+<DocumentFragment>
+  <div
+    class="textbox"
+  >
+    <input
+      class="textbox__control textbox__control--fluid"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-textbox Invalid textbox 1`] = `
+<DocumentFragment>
   <span
     class="textbox"
   >
@@ -91,216 +132,207 @@ exports[`Storyshots ebay-textbox Floating label invalid 1`] = `
       value=""
     />
   </span>
-</span>
-`;
-
-exports[`Storyshots ebay-textbox Fluid textbox 1`] = `
-<div
-  class="textbox"
->
-  <input
-    class="textbox__control textbox__control--fluid"
-    type="text"
-    value=""
-  />
-</div>
-`;
-
-exports[`Storyshots ebay-textbox Invalid textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    aria-invalid="true"
-    class="textbox__control"
-    type="text"
-    value=""
-  />
-</span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Large textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control textbox__control--large"
-    placeholder="placeholder text"
-    type="text"
-    value=""
-  />
-</span>
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control textbox__control--large"
+      placeholder="placeholder text"
+      type="text"
+      value=""
+    />
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Multiline invalid textbox 1`] = `
-<span
-  class="textbox"
->
-  <textarea
-    aria-invalid="true"
-    class="textbox__control"
-    type="text"
+<DocumentFragment>
+  <span
+    class="textbox"
   >
-    some default value
-  </textarea>
-</span>
+    <textarea
+      aria-invalid="true"
+      class="textbox__control"
+      type="text"
+    >
+      some default value
+    </textarea>
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Multiline textbox 1`] = `
-<span
-  class="textbox"
->
-  <textarea
-    class="textbox__control"
-    type="text"
+<DocumentFragment>
+  <span
+    class="textbox"
   >
-    some default value
+    <textarea
+      class="textbox__control"
+      type="text"
+    >
+      some default value
 next line
-  </textarea>
-</span>
+    </textarea>
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Password textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control"
-    type="password"
-    value=""
-  />
-</span>
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control"
+      type="password"
+      value=""
+    />
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Placeholder textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control"
-    placeholder="placeholder text"
-    type="text"
-    value=""
-  />
-</span>
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control"
+      placeholder="placeholder text"
+      type="text"
+      value=""
+    />
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Ref forwarding 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control"
-    type="text"
-    value=""
-  />
-</span>
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control"
+      type="text"
+      value=""
+    />
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox Underline textbox 1`] = `
-<span
-  class="textbox"
->
-  <input
-    class="textbox__control legacy-textbox-underline"
-    placeholder="Email address"
-    type="text"
-    value=""
-  />
-</span>
+<DocumentFragment>
+  <span
+    class="textbox"
+  >
+    <input
+      class="textbox__control legacy-textbox-underline"
+      placeholder="Email address"
+      type="text"
+      value=""
+    />
+  </span>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-textbox With icon 1`] = `
-<div>
-  <p>
-    <span
-      class="textbox"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon--messages"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-messages"
-        />
-      </svg>
-      <input
-        class="textbox__control"
-        placeholder="email"
-        type="text"
-        value=""
-      />
-    </span>
-  </p>
-  <p>
-    <span
-      class="textbox textbox--icon-end"
-    >
-      <input
-        class="textbox__control"
-        placeholder="username"
-        type="text"
-        value=""
-      />
-      <svg
-        aria-hidden="true"
-        class="icon icon--user-profile"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-user-profile"
-        />
-      </svg>
-    </span>
-  </p>
-  <p>
-    <span
-      class="textbox textbox--icon-end"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon--search"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-search"
-        />
-      </svg>
-      <input
-        class="textbox__control"
-        placeholder="search"
-        type="text"
-        value=""
-      />
-      <button
-        aria-label="Clear"
-        class="icon-btn icon-btn--transparent"
-        type="button"
+<DocumentFragment>
+  <div>
+    <p>
+      <span
+        class="textbox"
       >
         <svg
           aria-hidden="true"
-          class="icon icon--clear"
+          class="icon icon--messages"
           focusable="false"
           height="24px"
           width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-clear"
+            xlink:href="#icon-messages"
           />
         </svg>
-      </button>
-    </span>
-  </p>
-</div>
+        <input
+          class="textbox__control"
+          placeholder="email"
+          type="text"
+          value=""
+        />
+      </span>
+    </p>
+    <p>
+      <span
+        class="textbox textbox--icon-end"
+      >
+        <input
+          class="textbox__control"
+          placeholder="username"
+          type="text"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="icon icon--user-profile"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-user-profile"
+          />
+        </svg>
+      </span>
+    </p>
+    <p>
+      <span
+        class="textbox textbox--icon-end"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon icon--search"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-search"
+          />
+        </svg>
+        <input
+          class="textbox__control"
+          placeholder="search"
+          type="text"
+          value=""
+        />
+        <button
+          aria-label="Clear"
+          class="icon-btn icon-btn--transparent"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--clear"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-clear"
+            />
+          </svg>
+        </button>
+      </span>
+    </p>
+  </div>
+</DocumentFragment>
 `;

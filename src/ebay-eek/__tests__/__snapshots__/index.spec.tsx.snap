@@ -1,458 +1,899 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-eek A++ 1`] = `
-<div>
-  <div
-    aria-label="Energy Rating: A++. Range: A++ - E."
-    class="eek eek--rating-1"
-    role="figure"
-  >
+<DocumentFragment>
+  <div>
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: A++. Range: A++ - E."
+      class="eek eek--rating-1"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
+      <div
+        aria-hidden="true"
+        class="eek__container"
       >
         <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
           aria-hidden="true"
+          class="eek__rating"
         >
           A++
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A+. Range: A++ - E."
+      class="eek eek--rating-2"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
         >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
         <span
           aria-hidden="true"
+          class="eek__rating"
+        >
+          A+
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A. Range: A++ - E."
+      class="eek eek--rating-3"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: B. Range: A++ - E."
+      class="eek eek--rating-4"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          B
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: C. Range: A++ - E."
+      class="eek eek--rating-5"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          C
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: D. Range: A++ - E."
+      class="eek eek--rating-6"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          D
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: E. Range: A++ - E."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
         >
           E
         </span>
-      </span>
-      <span
+      </div>
+      <svg
         aria-hidden="true"
-        class="eek__rating"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        A++
-      </span>
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
   </div>
-  <div
-    aria-label="Energy Rating: A+. Range: A++ - E."
-    class="eek eek--rating-2"
-    role="figure"
-  >
+  <div>
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: A++. Range: A++ - G."
+      class="eek eek--rating-1"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
+      <div
+        aria-hidden="true"
+        class="eek__container"
       >
         <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
           aria-hidden="true"
+          class="eek__rating"
         >
           A++
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          E
-        </span>
-      </span>
-      <span
+      </div>
+      <svg
         aria-hidden="true"
-        class="eek__rating"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        A+
-      </span>
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: A. Range: A++ - E."
-    class="eek eek--rating-3"
-    role="figure"
-  >
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: A+. Range: A++ - G."
+      class="eek eek--rating-2"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A++
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          E
-        </span>
-      </span>
-      <span
+      <div
         aria-hidden="true"
-        class="eek__rating"
+        class="eek__container"
       >
-        A
-      </span>
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A+
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: B. Range: A++ - E."
-    class="eek eek--rating-4"
-    role="figure"
-  >
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: A. Range: A++ - G."
+      class="eek eek--rating-3"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A++
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          E
-        </span>
-      </span>
-      <span
+      <div
         aria-hidden="true"
-        class="eek__rating"
+        class="eek__container"
       >
-        B
-      </span>
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: C. Range: A++ - E."
-    class="eek eek--rating-5"
-    role="figure"
-  >
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: B. Range: A++ - G."
+      class="eek eek--rating-4"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A++
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          E
-        </span>
-      </span>
-      <span
+      <div
         aria-hidden="true"
-        class="eek__rating"
+        class="eek__container"
       >
-        C
-      </span>
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          B
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: D. Range: A++ - E."
-    class="eek eek--rating-6"
-    role="figure"
-  >
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: C. Range: A++ - G."
+      class="eek eek--rating-5"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A++
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          E
-        </span>
-      </span>
-      <span
+      <div
         aria-hidden="true"
-        class="eek__rating"
+        class="eek__container"
       >
-        D
-      </span>
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          C
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: E. Range: A++ - E."
-    class="eek eek--rating-7"
-    role="figure"
-  >
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: D. Range: A++ - G."
+      class="eek eek--rating-6"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
+      <div
+        aria-hidden="true"
+        class="eek__container"
       >
         <span
-          aria-hidden="true"
+          class="eek__rating-range"
         >
-          A++
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
         <span
           aria-hidden="true"
+          class="eek__rating"
+        >
+          D
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: E. Range: A++ - G."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
         >
           E
         </span>
-      </span>
-      <span
+      </div>
+      <svg
         aria-hidden="true"
-        class="eek__rating"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        E
-      </span>
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      aria-label="Energy Rating: F. Range: A++ - G."
+      class="eek eek--rating-7"
+      role="figure"
     >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          F
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: G. Range: A++ - G."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          G
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-eek Invalid Combinations 1`] = `
-<div
-  aria-label="Energy Rating: D. Range: B - G."
-  class="eek"
-  role="figure"
->
+<DocumentFragment>
   <div
-    aria-hidden="true"
-    class="eek__container"
-  >
-    <span
-      class="eek__rating-range"
-    >
-      <span
-        aria-hidden="true"
-      >
-        B
-      </span>
-      <svg
-        aria-hidden="true"
-        class="icon icon--eek-range-arrow"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-eek-range-arrow"
-        />
-      </svg>
-      <span
-        aria-hidden="true"
-      >
-        G
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      class="eek__rating"
-    >
-      D
-    </span>
-  </div>
-  <svg
-    aria-hidden="true"
-    class="icon icon--eek-arrow"
-    focusable="false"
-    height="28px"
-    width="11px"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <use
-      xlink:href="#icon-eek-arrow"
-    />
-  </svg>
-</div>
-`;
-
-exports[`Storyshots ebay-eek Regular A 1`] = `
-<div>
-  <div
-    aria-label="Energy Rating: A. Range: A - G."
-    class="eek eek--rating-1"
+    aria-label="Energy Rating: D. Range: B - G."
+    class="eek"
     role="figure"
   >
     <div
@@ -465,172 +906,7 @@ exports[`Storyshots ebay-eek Regular A 1`] = `
         <span
           aria-hidden="true"
         >
-          A
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          G
-        </span>
-      </span>
-      <span
-        aria-hidden="true"
-        class="eek__rating"
-      >
-        A
-      </span>
-    </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: B. Range: A - G."
-    class="eek eek--rating-2"
-    role="figure"
-  >
-    <div
-      aria-hidden="true"
-      class="eek__container"
-    >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          G
-        </span>
-      </span>
-      <span
-        aria-hidden="true"
-        class="eek__rating"
-      >
-        B
-      </span>
-    </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: C. Range: A - G."
-    class="eek eek--rating-3"
-    role="figure"
-  >
-    <div
-      aria-hidden="true"
-      class="eek__container"
-    >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          G
-        </span>
-      </span>
-      <span
-        aria-hidden="true"
-        class="eek__rating"
-      >
-        C
-      </span>
-    </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: D. Range: A - G."
-    class="eek eek--rating-4"
-    role="figure"
-  >
-    <div
-      aria-hidden="true"
-      class="eek__container"
-    >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A
+          B
         </span>
         <svg
           aria-hidden="true"
@@ -671,8 +947,8 @@ exports[`Storyshots ebay-eek Regular A 1`] = `
     </svg>
   </div>
   <div
-    aria-label="Energy Rating: E. Range: A - G."
-    class="eek eek--rating-5"
+    aria-label="Energy Rating: A+++. Range: A - G."
+    class="eek"
     role="figure"
   >
     <div
@@ -703,234 +979,6 @@ exports[`Storyshots ebay-eek Regular A 1`] = `
           aria-hidden="true"
         >
           G
-        </span>
-      </span>
-      <span
-        aria-hidden="true"
-        class="eek__rating"
-      >
-        E
-      </span>
-    </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: F. Range: A - G."
-    class="eek eek--rating-6"
-    role="figure"
-  >
-    <div
-      aria-hidden="true"
-      class="eek__container"
-    >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          G
-        </span>
-      </span>
-      <span
-        aria-hidden="true"
-        class="eek__rating"
-      >
-        F
-      </span>
-    </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: G. Range: A - G."
-    class="eek eek--rating-7"
-    role="figure"
-  >
-    <div
-      aria-hidden="true"
-      class="eek__container"
-    >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          G
-        </span>
-      </span>
-      <span
-        aria-hidden="true"
-        class="eek__rating"
-      >
-        G
-      </span>
-    </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`Storyshots ebay-eek Standard 1`] = `
-<div
-  aria-label="Energy Rating: C. Range: A+++ - E."
-  class="eek eek--rating-6"
-  role="figure"
->
-  <div
-    aria-hidden="true"
-    class="eek__container"
-  >
-    <span
-      class="eek__rating-range"
-    >
-      <span
-        aria-hidden="true"
-      >
-        A+++
-      </span>
-      <svg
-        aria-hidden="true"
-        class="icon icon--eek-range-arrow"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-eek-range-arrow"
-        />
-      </svg>
-      <span
-        aria-hidden="true"
-      >
-        E
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      class="eek__rating"
-    >
-      C
-    </span>
-  </div>
-  <svg
-    aria-hidden="true"
-    class="icon icon--eek-arrow"
-    focusable="false"
-    height="28px"
-    width="11px"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <use
-      xlink:href="#icon-eek-arrow"
-    />
-  </svg>
-</div>
-`;
-
-exports[`Storyshots ebay-eek Valid A+++ 1`] = `
-<div>
-  <div
-    aria-label="Energy Rating: A+++. Range: A+++ - D."
-    class="eek eek--rating-1"
-    role="figure"
-  >
-    <div
-      aria-hidden="true"
-      class="eek__container"
-    >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A+++
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          D
         </span>
       </span>
       <span
@@ -954,8 +1002,8 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
     </svg>
   </div>
   <div
-    aria-label="Energy Rating: A++. Range: A+++ - D."
-    class="eek eek--rating-2"
+    aria-label="Energy Rating: A++. Range: A++ - B."
+    class="eek"
     role="figure"
   >
     <div
@@ -968,7 +1016,7 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
         <span
           aria-hidden="true"
         >
-          A+++
+          A++
         </span>
         <svg
           aria-hidden="true"
@@ -985,7 +1033,7 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
         <span
           aria-hidden="true"
         >
-          D
+          B
         </span>
       </span>
       <span
@@ -1009,8 +1057,8 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
     </svg>
   </div>
   <div
-    aria-label="Energy Rating: A+. Range: A+++ - D."
-    class="eek eek--rating-3"
+    aria-label="Energy Rating: A++. Range: A+ - B."
+    class="eek"
     role="figure"
   >
     <div
@@ -1023,7 +1071,7 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
         <span
           aria-hidden="true"
         >
-          A+++
+          A+
         </span>
         <svg
           aria-hidden="true"
@@ -1040,14 +1088,14 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
         <span
           aria-hidden="true"
         >
-          D
+          B
         </span>
       </span>
       <span
         aria-hidden="true"
         class="eek__rating"
       >
-        A+
+        A++
       </span>
     </div>
     <svg
@@ -1063,118 +1111,405 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
       />
     </svg>
   </div>
-  <div
-    aria-label="Energy Rating: A. Range: A+++ - D."
-    class="eek eek--rating-4"
-    role="figure"
-  >
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-eek Regular A 1`] = `
+<DocumentFragment>
+  <div>
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: A. Range: A - G."
+      class="eek eek--rating-1"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
-      >
-        <span
-          aria-hidden="true"
-        >
-          A+++
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
-        <span
-          aria-hidden="true"
-        >
-          D
-        </span>
-      </span>
-      <span
+      <div
         aria-hidden="true"
-        class="eek__rating"
+        class="eek__container"
       >
-        A
-      </span>
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
-  </div>
-  <div
-    aria-label="Energy Rating: B. Range: A+++ - D."
-    class="eek eek--rating-5"
-    role="figure"
-  >
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: B. Range: A - G."
+      class="eek eek--rating-2"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
+      <div
+        aria-hidden="true"
+        class="eek__container"
       >
         <span
-          aria-hidden="true"
+          class="eek__rating-range"
         >
-          A+++
+          <span
+            aria-hidden="true"
+          >
+            A
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
         <span
           aria-hidden="true"
+          class="eek__rating"
+        >
+          B
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: C. Range: A - G."
+      class="eek eek--rating-3"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          C
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: D. Range: A - G."
+      class="eek eek--rating-4"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
         >
           D
         </span>
-      </span>
-      <span
+      </div>
+      <svg
         aria-hidden="true"
-        class="eek__rating"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        B
-      </span>
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      aria-label="Energy Rating: E. Range: A - G."
+      class="eek eek--rating-5"
+      role="figure"
     >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          E
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: F. Range: A - G."
+      class="eek eek--rating-6"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          F
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: G. Range: A - G."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          G
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
   </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-eek Standard 1`] = `
+<DocumentFragment>
   <div
-    aria-label="Energy Rating: C. Range: A+++ - D."
+    aria-label="Energy Rating: C. Range: A+++ - E."
     class="eek eek--rating-6"
     role="figure"
   >
@@ -1205,7 +1540,7 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
         <span
           aria-hidden="true"
         >
-          D
+          E
         </span>
       </span>
       <span
@@ -1228,60 +1563,1391 @@ exports[`Storyshots ebay-eek Valid A+++ 1`] = `
       />
     </svg>
   </div>
-  <div
-    aria-label="Energy Rating: D. Range: A+++ - D."
-    class="eek eek--rating-7"
-    role="figure"
-  >
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-eek Valid A+++ 1`] = `
+<DocumentFragment>
+  <div>
     <div
-      aria-hidden="true"
-      class="eek__container"
+      aria-label="Energy Rating: A+++. Range: A+++ - D."
+      class="eek eek--rating-1"
+      role="figure"
     >
-      <span
-        class="eek__rating-range"
+      <div
+        aria-hidden="true"
+        class="eek__container"
       >
         <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            D
+          </span>
+        </span>
+        <span
           aria-hidden="true"
+          class="eek__rating"
         >
           A+++
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--eek-range-arrow"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A++. Range: A+++ - D."
+      class="eek eek--rating-2"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
         >
-          <use
-            xlink:href="#icon-eek-range-arrow"
-          />
-        </svg>
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            D
+          </span>
+        </span>
         <span
           aria-hidden="true"
+          class="eek__rating"
+        >
+          A++
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A+. Range: A+++ - D."
+      class="eek eek--rating-3"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            D
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A+
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A. Range: A+++ - D."
+      class="eek eek--rating-4"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            D
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: B. Range: A+++ - D."
+      class="eek eek--rating-5"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            D
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          B
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: C. Range: A+++ - D."
+      class="eek eek--rating-6"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            D
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          C
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: D. Range: A+++ - D."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            D
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
         >
           D
         </span>
-      </span>
-      <span
+      </div>
+      <svg
         aria-hidden="true"
-        class="eek__rating"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        D
-      </span>
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
     </div>
-    <svg
-      aria-hidden="true"
-      class="icon icon--eek-arrow"
-      focusable="false"
-      height="28px"
-      width="11px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-eek-arrow"
-      />
-    </svg>
   </div>
-</div>
+  <div>
+    <div
+      aria-label="Energy Rating: A+++. Range: A+++ - E."
+      class="eek eek--rating-1"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A+++
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A++. Range: A+++ - E."
+      class="eek eek--rating-2"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A++
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A+. Range: A+++ - E."
+      class="eek eek--rating-3"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A+
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A. Range: A+++ - E."
+      class="eek eek--rating-4"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: B. Range: A+++ - E."
+      class="eek eek--rating-5"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          B
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: C. Range: A+++ - E."
+      class="eek eek--rating-6"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          C
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: D. Range: A+++ - E."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          D
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: E. Range: A+++ - E."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            E
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          E
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+  </div>
+  <div>
+    <div
+      aria-label="Energy Rating: A+++. Range: A+++ - G."
+      class="eek eek--rating-1"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A+++
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A++. Range: A+++ - G."
+      class="eek eek--rating-2"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A++
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A+. Range: A+++ - G."
+      class="eek eek--rating-3"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A+
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: A. Range: A+++ - G."
+      class="eek eek--rating-4"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          A
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: B. Range: A+++ - G."
+      class="eek eek--rating-5"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          B
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: C. Range: A+++ - G."
+      class="eek eek--rating-6"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          C
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: D. Range: A+++ - G."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          D
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: E. Range: A+++ - G."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          E
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: F. Range: A+++ - G."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          F
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+    <div
+      aria-label="Energy Rating: G. Range: A+++ - G."
+      class="eek eek--rating-7"
+      role="figure"
+    >
+      <div
+        aria-hidden="true"
+        class="eek__container"
+      >
+        <span
+          class="eek__rating-range"
+        >
+          <span
+            aria-hidden="true"
+          >
+            A+++
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--eek-range-arrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-eek-range-arrow"
+            />
+          </svg>
+          <span
+            aria-hidden="true"
+          >
+            G
+          </span>
+        </span>
+        <span
+          aria-hidden="true"
+          class="eek__rating"
+        >
+          G
+        </span>
+      </div>
+      <svg
+        aria-hidden="true"
+        class="icon icon--eek-arrow"
+        focusable="false"
+        height="28px"
+        width="11px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-eek-arrow"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
 `;
