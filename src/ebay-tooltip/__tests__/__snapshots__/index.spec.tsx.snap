@@ -1,138 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-tooltip Anchor host 1`] = `
-<div
-  style="width: 100%; text-align: center; margin-top: 100px;"
->
-  <span
-    class="tooltip"
-  >
-    <a
-      aria-expanded="false"
-      class="tooltip__host"
-      href="https://www.ebay.com"
-    >
-      View options
-    </a>
-    <span
-      class="tooltip__overlay"
-      role="tooltip"
-      style="transform: translateX(-50%); left: 50%;"
-    >
-      <span
-        class="tooltip__pointer tooltip__pointer--bottom"
-      />
-      <span
-        class="tooltip__mask"
-      >
-        <span
-          class="tooltip__cell"
-        >
-          <span
-            class="tooltip__content"
-          >
-            <p>
-              Use Access Key 'S' to display settings.
-            </p>
-          </span>
-        </span>
-      </span>
-    </span>
-  </span>
-</div>
-`;
-
-exports[`Storyshots ebay-tooltip Default tooltip 1`] = `
-<div
-  style="width: 100%; text-align: center; margin-top: 100px;"
->
-  <span
-    class="tooltip"
-  >
-    <button
-      aria-expanded="false"
-      class="btn tooltip__host btn--secondary"
-    >
-      Info
-    </button>
-    <span
-      class="tooltip__overlay"
-      role="tooltip"
-      style="transform: translateX(-50%); left: 50%;"
-    >
-      <span
-        class="tooltip__pointer tooltip__pointer--bottom"
-      />
-      <span
-        class="tooltip__mask"
-      >
-        <span
-          class="tooltip__cell"
-        >
-          <span
-            class="tooltip__content"
-          >
-            <p>
-              Content
-            </p>
-          </span>
-        </span>
-      </span>
-    </span>
-  </span>
-</div>
-`;
-
-exports[`Storyshots ebay-tooltip No hover 1`] = `
-<div
-  style="width: 100%; text-align: center; margin-top: 100px;"
->
-  <span
-    class="tooltip"
-  >
-    <span
-      class="textbox"
-    >
-      <input
-        aria-expanded="false"
-        class="textbox__control"
-        placeholder="Email address"
-        type="text"
-        value=""
-      />
-    </span>
-    <span
-      class="tooltip__overlay"
-      role="tooltip"
-      style="transform: translateX(-50%); left: 50%;"
-    >
-      <span
-        class="tooltip__pointer tooltip__pointer--bottom"
-      />
-      <span
-        class="tooltip__mask"
-      >
-        <span
-          class="tooltip__cell"
-        >
-          <span
-            class="tooltip__content"
-          >
-            <p>
-              Use Access Key 'S' to display settings.
-            </p>
-          </span>
-        </span>
-      </span>
-    </span>
-  </span>
-</div>
-`;
-
-exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
-<div>
+<DocumentFragment>
   <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
+    style="width: 100%; text-align: center; margin-top: 100px;"
   >
     <span
       class="tooltip"
@@ -142,241 +13,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         class="tooltip__host"
         href="https://www.ebay.com"
       >
-        top
-      </a>
-      <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="transform: translateX(-50%); left: 50%;"
-      >
-        <span
-          class="tooltip__pointer tooltip__pointer--top"
-        />
-        <span
-          class="tooltip__mask"
-        >
-          <span
-            class="tooltip__cell"
-          >
-            <span
-              class="tooltip__content"
-            >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
-            </span>
-          </span>
-        </span>
-      </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
-    >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        top-left
-      </a>
-      <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="left: -10px;"
-      >
-        <span
-          class="tooltip__pointer tooltip__pointer--top-left"
-        />
-        <span
-          class="tooltip__mask"
-        >
-          <span
-            class="tooltip__cell"
-          >
-            <span
-              class="tooltip__content"
-            >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
-            </span>
-          </span>
-        </span>
-      </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
-    >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        top-right
-      </a>
-      <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="right: -10px;"
-      >
-        <span
-          class="tooltip__pointer tooltip__pointer--top-right"
-        />
-        <span
-          class="tooltip__mask"
-        >
-          <span
-            class="tooltip__cell"
-          >
-            <span
-              class="tooltip__content"
-            >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
-            </span>
-          </span>
-        </span>
-      </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
-    >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        right
-      </a>
-      <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="transform: translateX(-16px) translateY(-50%); right: 100%; top: 0px;"
-      >
-        <span
-          class="tooltip__pointer tooltip__pointer--right"
-        />
-        <span
-          class="tooltip__mask"
-        >
-          <span
-            class="tooltip__cell"
-          >
-            <span
-              class="tooltip__content"
-            >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
-            </span>
-          </span>
-        </span>
-      </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
-    >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        right-bottom
-      </a>
-      <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="transform: translateX(-16px); right: 100%; bottom: -50%;"
-      >
-        <span
-          class="tooltip__pointer tooltip__pointer--right-bottom"
-        />
-        <span
-          class="tooltip__mask"
-        >
-          <span
-            class="tooltip__cell"
-          >
-            <span
-              class="tooltip__content"
-            >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
-            </span>
-          </span>
-        </span>
-      </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
-    >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        right-top
-      </a>
-      <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="transform: translateX(-16px); right: 100%; top: -100%;"
-      >
-        <span
-          class="tooltip__pointer tooltip__pointer--right-top"
-        />
-        <span
-          class="tooltip__mask"
-        >
-          <span
-            class="tooltip__cell"
-          >
-            <span
-              class="tooltip__content"
-            >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
-            </span>
-          </span>
-        </span>
-      </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
-    >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        bottom
+        View options
       </a>
       <span
         class="tooltip__overlay"
@@ -404,26 +41,78 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
       </span>
     </span>
   </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tooltip Default tooltip 1`] = `
+<DocumentFragment>
   <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
+    style="width: 100%; text-align: center; margin-top: 100px;"
   >
     <span
       class="tooltip"
     >
-      <a
+      <button
         aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
+        class="btn tooltip__host btn--secondary"
       >
-        bottom-left
-      </a>
+        Info
+      </button>
       <span
         class="tooltip__overlay"
         role="tooltip"
-        style="left: -10px;"
+        style="transform: translateX(-50%); left: 50%;"
       >
         <span
-          class="tooltip__pointer tooltip__pointer--bottom-left"
+          class="tooltip__pointer tooltip__pointer--bottom"
+        />
+        <span
+          class="tooltip__mask"
+        >
+          <span
+            class="tooltip__cell"
+          >
+            <span
+              class="tooltip__content"
+            >
+              <p>
+                Content
+              </p>
+            </span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tooltip No hover 1`] = `
+<DocumentFragment>
+  <div
+    style="width: 100%; text-align: center; margin-top: 100px;"
+  >
+    <span
+      class="tooltip"
+    >
+      <span
+        class="textbox"
+      >
+        <input
+          aria-expanded="false"
+          class="textbox__control"
+          placeholder="Email address"
+          type="text"
+          value=""
+        />
+      </span>
+      <span
+        class="tooltip__overlay"
+        role="tooltip"
+        style="transform: translateX(-50%); left: 50%;"
+      >
+        <span
+          class="tooltip__pointer tooltip__pointer--bottom"
         />
         <span
           class="tooltip__mask"
@@ -443,203 +132,524 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
       </span>
     </span>
   </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
     >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        bottom-right
-      </a>
       <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="right: -10px;"
+        class="tooltip"
       >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          top
+        </a>
         <span
-          class="tooltip__pointer tooltip__pointer--bottom-right"
-        />
-        <span
-          class="tooltip__mask"
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(-50%); left: 50%;"
         >
           <span
-            class="tooltip__cell"
+            class="tooltip__pointer tooltip__pointer--top"
+          />
+          <span
+            class="tooltip__mask"
           >
             <span
-              class="tooltip__content"
+              class="tooltip__cell"
             >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
             </span>
           </span>
         </span>
       </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
     >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        left
-      </a>
       <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="transform: translateX(16px) translateY(-50%); left: 100%; top: 0px;"
+        class="tooltip"
       >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          top-left
+        </a>
         <span
-          class="tooltip__pointer tooltip__pointer--left"
-        />
-        <span
-          class="tooltip__mask"
+          class="tooltip__overlay"
+          role="tooltip"
+          style="left: -10px;"
         >
           <span
-            class="tooltip__cell"
+            class="tooltip__pointer tooltip__pointer--top-left"
+          />
+          <span
+            class="tooltip__mask"
           >
             <span
-              class="tooltip__content"
+              class="tooltip__cell"
             >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
             </span>
           </span>
         </span>
       </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
     >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        left-bottom
-      </a>
       <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="transform: translateX(16px); left: 100%; bottom: -10px;"
+        class="tooltip"
       >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          top-right
+        </a>
         <span
-          class="tooltip__pointer tooltip__pointer--left-bottom"
-        />
-        <span
-          class="tooltip__mask"
+          class="tooltip__overlay"
+          role="tooltip"
+          style="right: -10px;"
         >
           <span
-            class="tooltip__cell"
+            class="tooltip__pointer tooltip__pointer--top-right"
+          />
+          <span
+            class="tooltip__mask"
           >
             <span
-              class="tooltip__content"
+              class="tooltip__cell"
             >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
             </span>
           </span>
         </span>
       </span>
-    </span>
-  </div>
-  <div
-    style="margin: 100px 0px; width: 100%; text-align: center;"
-  >
-    <span
-      class="tooltip"
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
     >
-      <a
-        aria-expanded="false"
-        class="tooltip__host"
-        href="https://www.ebay.com"
-      >
-        left-top
-      </a>
       <span
-        class="tooltip__overlay"
-        role="tooltip"
-        style="transform: translateX(16px); left: 100%; top: -100%;"
+        class="tooltip"
       >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          right
+        </a>
         <span
-          class="tooltip__pointer tooltip__pointer--left-top"
-        />
-        <span
-          class="tooltip__mask"
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(-16px) translateY(-50%); right: 100%; top: 0px;"
         >
           <span
-            class="tooltip__cell"
+            class="tooltip__pointer tooltip__pointer--right"
+          />
+          <span
+            class="tooltip__mask"
           >
             <span
-              class="tooltip__content"
+              class="tooltip__cell"
             >
-              <p>
-                Use Access Key 'S' to display settings.
-              </p>
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
             </span>
           </span>
         </span>
       </span>
-    </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          right-bottom
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(-16px); right: 100%; bottom: -50%;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--right-bottom"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          right-top
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(-16px); right: 100%; top: -100%;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--right-top"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          bottom
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(-50%); left: 50%;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--bottom"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          bottom-left
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="left: -10px;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--bottom-left"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          bottom-right
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="right: -10px;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--bottom-right"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          left
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(16px) translateY(-50%); left: 100%; top: 0px;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--left"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          left-bottom
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(16px); left: 100%; bottom: -10px;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--left-bottom"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="margin: 100px 0px; width: 100%; text-align: center;"
+    >
+      <span
+        class="tooltip"
+      >
+        <a
+          aria-expanded="false"
+          class="tooltip__host"
+          href="https://www.ebay.com"
+        >
+          left-top
+        </a>
+        <span
+          class="tooltip__overlay"
+          role="tooltip"
+          style="transform: translateX(16px); left: 100%; top: -100%;"
+        >
+          <span
+            class="tooltip__pointer tooltip__pointer--left-top"
+          />
+          <span
+            class="tooltip__mask"
+          >
+            <span
+              class="tooltip__cell"
+            >
+              <span
+                class="tooltip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-tooltip Pointer with custom location 1`] = `
-<div
-  style="width: 100%; text-align: center; margin-top: 100px;"
->
-  <span
-    class="tooltip"
+<DocumentFragment>
+  <div
+    style="width: 100%; text-align: center; margin-top: 100px;"
   >
-    <a
-      aria-expanded="false"
-      class="tooltip__host"
-      href="https://www.ebay.com"
-    >
-      View options
-    </a>
     <span
-      class="tooltip__overlay"
-      role="tooltip"
-      style="left: -16px; top: 40px;"
+      class="tooltip"
     >
+      <a
+        aria-expanded="false"
+        class="tooltip__host"
+        href="https://www.ebay.com"
+      >
+        View options
+      </a>
       <span
-        class="tooltip__pointer tooltip__pointer--top-left"
-      />
-      <span
-        class="tooltip__mask"
+        class="tooltip__overlay"
+        role="tooltip"
+        style="left: -16px; top: 40px;"
       >
         <span
-          class="tooltip__cell"
+          class="tooltip__pointer tooltip__pointer--top-left"
+        />
+        <span
+          class="tooltip__mask"
         >
           <span
-            class="tooltip__content"
+            class="tooltip__cell"
           >
-            <p>
-              Use Access Key 'S' to display settings.
-            </p>
+            <span
+              class="tooltip__content"
+            >
+              <p>
+                Use Access Key 'S' to display settings.
+              </p>
+            </span>
           </span>
         </span>
       </span>
     </span>
-  </span>
-</div>
+  </div>
+</DocumentFragment>
 `;

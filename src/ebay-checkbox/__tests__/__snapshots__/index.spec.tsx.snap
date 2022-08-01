@@ -1,381 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-checkbox Control value from outside 1`] = `
-<span
-  class="checkbox custom"
-  style="align-items: center;"
->
-  <input
-    aria-label="custom color checkbox example"
-    checked=""
-    class="checkbox__control"
-    id="checkbox-30"
-    type="checkbox"
-  />
-  <span
-    class="checkbox__icon"
-    hidden=""
-  >
-    <svg
-      aria-hidden="true"
-      class="checkbox__checked icon icon--checkbox-checked"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-checkbox-checked"
-      />
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="checkbox__unchecked icon icon--checkbox-unchecked"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-checkbox-unchecked"
-      />
-    </svg>
-  </span>
-</span>
-`;
-
-exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
-<p>
-  <span
-    class="checkbox"
-    style="align-items: center;"
-  >
-    <input
-      class="checkbox__control"
-      id="checkbox-11"
-      type="checkbox"
-      value="123"
-    />
-    <span
-      class="checkbox__icon"
-      hidden=""
-    >
-      <svg
-        aria-hidden="true"
-        class="checkbox__checked icon icon--checkbox-checked"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-checkbox-checked"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        class="checkbox__unchecked icon icon--checkbox-unchecked"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-checkbox-unchecked"
-        />
-      </svg>
-    </span>
-  </span>
-  <label
-    class="field__label field__label--end"
-    for="checkbox-11"
-  >
-    Default
-  </label>
-</p>
-`;
-
-exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
-<p>
-  <span
-    class="checkbox"
-    style="align-items: center;"
-  >
-    <input
-      class="checkbox__control"
-      disabled=""
-      id="checkbox-31"
-      type="checkbox"
-      value="123"
-    />
-    <span
-      class="checkbox__icon"
-      hidden=""
-    >
-      <svg
-        aria-hidden="true"
-        class="checkbox__checked icon icon--checkbox-checked"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-checkbox-checked"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        class="checkbox__unchecked icon icon--checkbox-unchecked"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-checkbox-unchecked"
-        />
-      </svg>
-    </span>
-  </span>
-  <label
-    class="field__label field__label--end"
-    for="checkbox-31"
-  >
-    Default disabled
-  </label>
-</p>
-`;
-
-exports[`Storyshots ebay-checkbox Grouped checkbox-buttons 1`] = `
-<fieldset>
-  <legend>
-    Choose an Option
-  </legend>
-  <span
-    class="field"
-  >
-    <span
-      class="checkbox"
-      style="align-items: center;"
-    >
-      <input
-        class="checkbox__control"
-        id="group-checkbox-1"
-        name="checkbox-group"
-        type="checkbox"
-        value="1"
-      />
-      <span
-        class="checkbox__icon"
-        hidden=""
-      >
-        <svg
-          aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-checkbox-checked"
-          />
-        </svg>
-        <svg
-          aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-checkbox-unchecked"
-          />
-        </svg>
-      </span>
-    </span>
-    <label
-      class="field__label field__label--end"
-      for="group-checkbox-1"
-    >
-      Option 1
-    </label>
-  </span>
-  <span
-    class="field"
-  >
-    <span
-      class="checkbox"
-      style="align-items: center;"
-    >
-      <input
-        class="checkbox__control"
-        id="group-checkbox-2"
-        name="checkbox-group"
-        type="checkbox"
-        value="2"
-      />
-      <span
-        class="checkbox__icon"
-        hidden=""
-      >
-        <svg
-          aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-checkbox-checked"
-          />
-        </svg>
-        <svg
-          aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-checkbox-unchecked"
-          />
-        </svg>
-      </span>
-    </span>
-    <label
-      class="field__label field__label--end"
-      for="group-checkbox-2"
-    >
-      Option 2
-    </label>
-  </span>
-  <span
-    class="field"
-  >
-    <span
-      class="checkbox"
-      style="align-items: center;"
-    >
-      <input
-        class="checkbox__control"
-        id="group-checkbox-3"
-        name="checkbox-group"
-        type="checkbox"
-        value="3"
-      />
-      <span
-        class="checkbox__icon"
-        hidden=""
-      >
-        <svg
-          aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-checkbox-checked"
-          />
-        </svg>
-        <svg
-          aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked"
-          focusable="false"
-          height="24px"
-          width="24px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-checkbox-unchecked"
-          />
-        </svg>
-      </span>
-    </span>
-    <label
-      class="field__label field__label--end"
-      for="group-checkbox-3"
-    >
-      Option 3
-    </label>
-  </span>
-</fieldset>
-`;
-
-exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
-<p>
-  <span
-    class="checkbox"
-    style="align-items: center;"
-  >
-    <input
-      checked=""
-      class="checkbox__control"
-      id="checkbox-21"
-      type="checkbox"
-      value="123"
-    />
-    <span
-      class="checkbox__icon"
-      hidden=""
-    >
-      <svg
-        aria-hidden="true"
-        class="checkbox__checked icon icon--checkbox-checked"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-checkbox-checked"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        class="checkbox__unchecked icon icon--checkbox-unchecked"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-checkbox-unchecked"
-        />
-      </svg>
-    </span>
-  </span>
-  <label
-    class="field__label field__label--end"
-    for="checkbox-21"
-  >
-    Default
-  </label>
-</p>
-`;
-
-exports[`Storyshots ebay-checkbox Styled checkbox-button 1`] = `
-<span
-  class="checkbox"
->
-  <style>
-    
-                .custom ~ label { color: green; }
-                .custom ~ .checkbox__icon svg { color: green !important; }
-            
-  </style>
+<DocumentFragment>
   <span
     class="checkbox custom"
     style="align-items: center;"
   >
     <input
       aria-label="custom color checkbox example"
+      checked=""
       class="checkbox__control"
       id="checkbox-30"
       type="checkbox"
@@ -414,7 +47,538 @@ exports[`Storyshots ebay-checkbox Styled checkbox-button 1`] = `
     class="field__label field__label--end"
     for="checkbox-30"
   >
-    Custom style
+    Gets disabled after 5 clicks
   </label>
-</span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="checkbox"
+      style="align-items: center;"
+    >
+      <input
+        class="checkbox__control"
+        id="checkbox-11"
+        type="checkbox"
+        value="123"
+      />
+      <span
+        class="checkbox__icon"
+        hidden=""
+      >
+        <svg
+          aria-hidden="true"
+          class="checkbox__checked icon icon--checkbox-checked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-checked"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-unchecked"
+          />
+        </svg>
+      </span>
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="checkbox-11"
+    >
+      Default
+    </label>
+  </p>
+  <p>
+    <span
+      class="checkbox checkbox--large"
+      style="align-items: center;"
+    >
+      <input
+        class="checkbox__control"
+        id="checkbox-12"
+        type="checkbox"
+        value="123"
+      />
+      <span
+        class="checkbox__icon"
+        hidden=""
+      >
+        <svg
+          aria-hidden="true"
+          class="checkbox__checked icon icon--checkbox-checked-large"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-checked-large"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-large"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-unchecked-large"
+          />
+        </svg>
+      </span>
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="checkbox-12"
+    >
+      Large
+    </label>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="checkbox"
+      style="align-items: center;"
+    >
+      <input
+        class="checkbox__control"
+        disabled=""
+        id="checkbox-31"
+        type="checkbox"
+        value="123"
+      />
+      <span
+        class="checkbox__icon"
+        hidden=""
+      >
+        <svg
+          aria-hidden="true"
+          class="checkbox__checked icon icon--checkbox-checked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-checked"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-unchecked"
+          />
+        </svg>
+      </span>
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="checkbox-31"
+    >
+      Default disabled
+    </label>
+  </p>
+  <p>
+    <span
+      class="checkbox checkbox--large"
+      style="align-items: center;"
+    >
+      <input
+        class="checkbox__control"
+        disabled=""
+        id="checkbox-32"
+        type="checkbox"
+        value="123"
+      />
+      <span
+        class="checkbox__icon"
+        hidden=""
+      >
+        <svg
+          aria-hidden="true"
+          class="checkbox__checked icon icon--checkbox-checked-large"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-checked-large"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-large"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-unchecked-large"
+          />
+        </svg>
+      </span>
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="checkbox-32"
+    >
+      Large disabled
+    </label>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-checkbox Grouped checkbox-buttons 1`] = `
+<DocumentFragment>
+  <fieldset>
+    <legend>
+      Choose an Option
+    </legend>
+    <span
+      class="field"
+    >
+      <span
+        class="checkbox"
+        style="align-items: center;"
+      >
+        <input
+          class="checkbox__control"
+          id="group-checkbox-1"
+          name="checkbox-group"
+          type="checkbox"
+          value="1"
+        />
+        <span
+          class="checkbox__icon"
+          hidden=""
+        >
+          <svg
+            aria-hidden="true"
+            class="checkbox__checked icon icon--checkbox-checked"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-checkbox-checked"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="checkbox__unchecked icon icon--checkbox-unchecked"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-checkbox-unchecked"
+            />
+          </svg>
+        </span>
+      </span>
+      <label
+        class="field__label field__label--end"
+        for="group-checkbox-1"
+      >
+        Option 1
+      </label>
+    </span>
+    <span
+      class="field"
+    >
+      <span
+        class="checkbox"
+        style="align-items: center;"
+      >
+        <input
+          class="checkbox__control"
+          id="group-checkbox-2"
+          name="checkbox-group"
+          type="checkbox"
+          value="2"
+        />
+        <span
+          class="checkbox__icon"
+          hidden=""
+        >
+          <svg
+            aria-hidden="true"
+            class="checkbox__checked icon icon--checkbox-checked"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-checkbox-checked"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="checkbox__unchecked icon icon--checkbox-unchecked"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-checkbox-unchecked"
+            />
+          </svg>
+        </span>
+      </span>
+      <label
+        class="field__label field__label--end"
+        for="group-checkbox-2"
+      >
+        Option 2
+      </label>
+    </span>
+    <span
+      class="field"
+    >
+      <span
+        class="checkbox"
+        style="align-items: center;"
+      >
+        <input
+          class="checkbox__control"
+          id="group-checkbox-3"
+          name="checkbox-group"
+          type="checkbox"
+          value="3"
+        />
+        <span
+          class="checkbox__icon"
+          hidden=""
+        >
+          <svg
+            aria-hidden="true"
+            class="checkbox__checked icon icon--checkbox-checked"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-checkbox-checked"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="checkbox__unchecked icon icon--checkbox-unchecked"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-checkbox-unchecked"
+            />
+          </svg>
+        </span>
+      </span>
+      <label
+        class="field__label field__label--end"
+        for="group-checkbox-3"
+      >
+        Option 3
+      </label>
+    </span>
+  </fieldset>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="checkbox"
+      style="align-items: center;"
+    >
+      <input
+        checked=""
+        class="checkbox__control"
+        id="checkbox-21"
+        type="checkbox"
+        value="123"
+      />
+      <span
+        class="checkbox__icon"
+        hidden=""
+      >
+        <svg
+          aria-hidden="true"
+          class="checkbox__checked icon icon--checkbox-checked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-checked"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-unchecked"
+          />
+        </svg>
+      </span>
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="checkbox-21"
+    >
+      Default
+    </label>
+  </p>
+  <p>
+    <span
+      class="checkbox checkbox--large"
+      style="align-items: center;"
+    >
+      <input
+        checked=""
+        class="checkbox__control"
+        id="checkbox-22"
+        type="checkbox"
+        value="123"
+      />
+      <span
+        class="checkbox__icon"
+        hidden=""
+      >
+        <svg
+          aria-hidden="true"
+          class="checkbox__checked icon icon--checkbox-checked-large"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-checked-large"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-large"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-unchecked-large"
+          />
+        </svg>
+      </span>
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="checkbox-22"
+    >
+      Large
+    </label>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-checkbox Styled checkbox-button 1`] = `
+<DocumentFragment>
+  <span
+    class="checkbox"
+  >
+    <style>
+      
+                .custom ~ label { color: green; }
+                .custom ~ .checkbox__icon svg { color: green !important; }
+            
+    </style>
+    <span
+      class="checkbox custom"
+      style="align-items: center;"
+    >
+      <input
+        aria-label="custom color checkbox example"
+        class="checkbox__control"
+        id="checkbox-30"
+        type="checkbox"
+      />
+      <span
+        class="checkbox__icon"
+        hidden=""
+      >
+        <svg
+          aria-hidden="true"
+          class="checkbox__checked icon icon--checkbox-checked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-checked"
+          />
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-checkbox-unchecked"
+          />
+        </svg>
+      </span>
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="checkbox-30"
+    >
+      Custom style
+    </label>
+  </span>
+</DocumentFragment>
 `;
