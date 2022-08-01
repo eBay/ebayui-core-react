@@ -32,8 +32,17 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton href="https://ebay.com">Secondary Link (Default)</EbayButton></p>
             <p><EbayButton priority="tertiary">Tertiary Button</EbayButton></p>
             <p><EbayButton priority="tertiary" href="https://ebay.com">Tertiary Link</EbayButton></p>
-            <p><EbayButton priority="delete">Delete Button</EbayButton></p>
             <p><EbayButton priority="none">Base Button</EbayButton></p>
+        </>
+    ))
+    .add(`Destructive variant`, () => (
+        <>
+            <p><EbayButton priority="primary" variant="destructive">Primary Button</EbayButton></p>
+            <p><EbayButton priority="primary" variant="destructive" href="https://ebay.com">Primary Link</EbayButton></p>
+            <p><EbayButton priority="secondary" variant="destructive">Secondary Button</EbayButton></p>
+            <p><EbayButton priority="secondary" variant="destructive" href="https://ebay.com">Secondary Link</EbayButton></p>
+            <p><EbayButton priority="tertiary" variant="destructive">Tertiary Button</EbayButton></p>
+            <p><EbayButton priority="tertiary" variant="destructive" href="https://ebay.com">Tertiary Link</EbayButton></p>
         </>
     ))
     .add(`Fluid`, () => (
@@ -54,7 +63,7 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton href="#" aria-label="Settings link">
                 <EbayIcon name="settings" />
             </EbayButton></p>
-            <p><EbayButton priority="delete" aria-label="Delete button">
+            <p><EbayButton priority="secondary" variant="destructive" aria-label="Delete button">
                 <EbayIcon name="delete" />
             </EbayButton></p>
             </>
@@ -63,7 +72,7 @@ storiesOf(`ebay-button`, module)
         <div style={{ background: 'rgba(66, 214, 205, 0.5)' }}>
             <p><EbayButton>Default Button</EbayButton></p>
             <p><EbayButton transparent>Transparent Button</EbayButton></p>
-            <p><EbayButton transparent priority="delete">Transparent Delete Button</EbayButton></p>
+            <p><EbayButton transparent priority="secondary" variant="destructive">Transparent Delete Button</EbayButton></p>
             <p><EbayButton href="https://ebay.com" transparent>Transparent Link</EbayButton></p>
         </div>
     ))

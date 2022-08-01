@@ -10,6 +10,16 @@ exports[`Storyshots ebay-button Default 1`] = `
 </p>
 `;
 
+exports[`Storyshots ebay-button Destructive variant 1`] = `
+<p>
+  <button
+    class="btn btn--primary btn--destructive"
+  >
+    Primary Button
+  </button>
+</p>
+`;
+
 exports[`Storyshots ebay-button Disabled 1`] = `
 <p>
   <button
@@ -168,7 +178,7 @@ exports[`Storyshots ebay-button Transparent 1`] = `
   </p>
   <p>
     <button
-      class="btn btn--delete btn--transparent"
+      class="btn btn--secondary btn--destructive btn--transparent"
     >
       Transparent Delete Button
     </button>

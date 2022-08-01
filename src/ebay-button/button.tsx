@@ -10,7 +10,7 @@ import React, {
 } from 'react'
 import classNames from 'classnames'
 import { withForwardRef } from '../common/component-utils/forwardRef'
-import { Priority, Size, BodyState } from './types'
+import { Priority, Size, BodyState, Variant } from './types'
 import { EbayIcon } from '../ebay-icon'
 import EbayButtonLoading from './button-loading'
 
@@ -20,6 +20,7 @@ export type EbayButtonProps = {
     truncate?: boolean;
     href?: string;
     priority?: Priority;
+    variant?: Variant;
     size?: Size;
     bodyState?: BodyState,
     transparent?: boolean;
@@ -37,6 +38,7 @@ function isIconOnly(children: ReactNode): boolean {
 
 const EbayButton:FC<Props> = ({
     priority = 'secondary',
+    variant = 'standard',
     size = 'default',
     bodyState,
     transparent = false,
@@ -54,7 +56,7 @@ const EbayButton:FC<Props> = ({
     const iconOnly = isIconOnly(children)
     const classPrefix = href ? 'fake-btn' : 'btn'
     const priorityStyles: { [key in Priority]: string } = {
-        delete: `${classPrefix}--delete`,
+        delete: '', // deprecated
         primary: `${classPrefix}--primary`,
         secondary: `${classPrefix}--secondary`,
         tertiary: `${classPrefix}--tertiary`,
@@ -64,16 +66,18 @@ const EbayButton:FC<Props> = ({
         large: `${classPrefix}--large`,
         default: ''
     }
+    const isDestructive = variant === 'destructive'
     const isLoading = bodyState === `loading`
     const className = classNames(
         classPrefix,
         extraClasses,
         priorityStyles[priority],
         sizeStyles[size],
-        { [`${classPrefix}--icon-only`]: iconOnly },
-        { [`${classPrefix}--transparent`]: transparent },
-        { [`${classPrefix}--fluid`]: fluid },
-        { [`${classPrefix}--truncated`]: truncate }
+        isDestructive && `${classPrefix}--destructive`,
+        iconOnly && `${classPrefix}--icon-only`,
+        transparent && `${classPrefix}--transparent`,
+        fluid && `${classPrefix}--fluid`,
+        truncate && `${classPrefix}--truncated`
     )
 
     const onKeyDown = (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {
