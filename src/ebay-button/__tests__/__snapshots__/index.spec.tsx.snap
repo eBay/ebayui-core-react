@@ -21,13 +21,53 @@ exports[`Storyshots ebay-button Default 1`] = `
 `;
 
 exports[`Storyshots ebay-button Destructive variant 1`] = `
-<p>
-  <button
-    class="btn btn--primary btn--destructive"
-  >
-    Primary Button
-  </button>
-</p>
+<DocumentFragment>
+  <p>
+    <button
+      class="btn btn--primary btn--destructive"
+    >
+      Primary Button
+    </button>
+  </p>
+  <p>
+    <a
+      class="fake-btn fake-btn--primary fake-btn--destructive"
+      href="https://ebay.com"
+    >
+      Primary Link
+    </a>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary btn--destructive"
+    >
+      Secondary Button
+    </button>
+  </p>
+  <p>
+    <a
+      class="fake-btn fake-btn--secondary fake-btn--destructive"
+      href="https://ebay.com"
+    >
+      Secondary Link
+    </a>
+  </p>
+  <p>
+    <button
+      class="btn btn--tertiary btn--destructive"
+    >
+      Tertiary Button
+    </button>
+  </p>
+  <p>
+    <a
+      class="fake-btn fake-btn--tertiary fake-btn--destructive"
+      href="https://ebay.com"
+    >
+      Tertiary Link
+    </a>
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-button Disabled 1`] = `
@@ -184,7 +224,7 @@ exports[`Storyshots ebay-button Icon Button 1`] = `
   <p>
     <button
       aria-label="Delete button"
-      class="btn btn--delete btn--icon-only"
+      class="btn btn--secondary btn--destructive btn--icon-only"
     >
       <svg
         aria-hidden="true"
@@ -297,7 +337,7 @@ exports[`Storyshots ebay-button Priority 1`] = `
   </p>
   <p>
     <button
-      class="btn btn--secondary btn--destructive btn--transparent"
+      class="btn btn--tertiary"
     >
       Tertiary Button
     </button>
@@ -309,13 +349,6 @@ exports[`Storyshots ebay-button Priority 1`] = `
     >
       Tertiary Link
     </a>
-  </p>
-  <p>
-    <button
-      class="btn btn--delete"
-    >
-      Delete Button
-    </button>
   </p>
   <p>
     <button
@@ -383,7 +416,7 @@ exports[`Storyshots ebay-button Transparent 1`] = `
     </p>
     <p>
       <button
-        class="btn btn--delete btn--transparent"
+        class="btn btn--secondary btn--destructive btn--transparent"
       >
         Transparent Delete Button
       </button>
