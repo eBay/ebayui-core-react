@@ -44,7 +44,8 @@ import '@ebay/skin/button.css'
 
 Name | Type | Stateful | Required | Description | Data
 --- | --- | --- | --- | --- | ---
-`priority` | String | No | No | `primary`, `secondary` (default), `tertiary`, `delete`, `none`
+`priority` | String | No | No | `primary`, `secondary` (default), `tertiary`, ~~`delete`~~ (deprecated, please use `variant="destructive"` ), `none`
+`variant` | String | Yes | No | `standard` (default), `detructive`
 `size` | String | No | No | `default` (default), `large`
 `bodyState` | String | No | No | `loading`
 `href` | String | No | No | for link that looks like a button
