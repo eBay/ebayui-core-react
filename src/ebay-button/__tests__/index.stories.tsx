@@ -63,7 +63,7 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton href="#" aria-label="Settings link">
                 <EbayIcon name="settings" />
             </EbayButton></p>
-            <p><EbayButton priority="secondary" variant="destructive" aria-label="Delete button">
+            <p><EbayButton priority="secondary" variant="destructive" aria-label="Destructive button">
                 <EbayIcon name="delete" />
             </EbayButton></p>
             </>
@@ -72,7 +72,7 @@ storiesOf(`ebay-button`, module)
         <div style={{ background: 'rgba(66, 214, 205, 0.5)' }}>
             <p><EbayButton>Default Button</EbayButton></p>
             <p><EbayButton transparent>Transparent Button</EbayButton></p>
-            <p><EbayButton transparent priority="secondary" variant="destructive">Transparent Delete Button</EbayButton></p>
+            <p><EbayButton transparent priority="secondary" variant="destructive">Transparent Destructive Button</EbayButton></p>
             <p><EbayButton href="https://ebay.com" transparent>Transparent Link</EbayButton></p>
         </div>
     ))

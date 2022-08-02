@@ -223,7 +223,7 @@ exports[`Storyshots ebay-button Icon Button 1`] = `
   </p>
   <p>
     <button
-      aria-label="Delete button"
+      aria-label="Destructive button"
       class="btn btn--secondary btn--destructive btn--icon-only"
     >
       <svg
@@ -418,7 +418,7 @@ exports[`Storyshots ebay-button Transparent 1`] = `
       <button
         class="btn btn--secondary btn--destructive btn--transparent"
       >
-        Transparent Delete Button
+        Transparent Destructive Button
       </button>
     </p>
     <p>
