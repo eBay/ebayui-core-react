@@ -1,12 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-expand-button Borderless 1`] = `
-<span
-  class="listbox-button"
->
+<DocumentFragment>
+  <span
+    class="listbox-button"
+  >
+    <button
+      aria-expanded="false"
+      class="expand-btn expand-btn--borderless"
+    >
+      <span
+        class="expand-btn__cell"
+      >
+        <span
+          class="expand-btn__text"
+        >
+          Borderless Button
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-expand-button Default 1`] = `
+<DocumentFragment>
   <button
     aria-expanded="false"
-    class="expand-btn expand-btn--borderless"
+    class="expand-btn"
   >
     <span
       class="expand-btn__cell"
@@ -14,7 +47,7 @@ exports[`Storyshots ebay-expand-button Borderless 1`] = `
       <span
         class="expand-btn__text"
       >
-        Borderless Button
+        Expand!
       </span>
       <svg
         aria-hidden="true"
@@ -30,109 +63,24 @@ exports[`Storyshots ebay-expand-button Borderless 1`] = `
       </svg>
     </span>
   </button>
-</span>
-`;
-
-exports[`Storyshots ebay-expand-button Default 1`] = `
-<button
-  aria-expanded="false"
-  class="expand-btn"
->
-  <span
-    class="expand-btn__cell"
-  >
-    <span
-      class="expand-btn__text"
-    >
-      Expand!
-    </span>
-    <svg
-      aria-hidden="true"
-      class="icon icon--dropdown"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-dropdown"
-      />
-    </svg>
-  </span>
-</button>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-expand-button Disabled 1`] = `
-<button
-  aria-expanded="false"
-  class="expand-btn"
-  disabled=""
->
-  <span
-    class="expand-btn__cell"
-  >
-    <span
-      class="expand-btn__text"
-    >
-      Can not touch
-    </span>
-    <svg
-      aria-hidden="true"
-      class="icon icon--dropdown"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-dropdown"
-      />
-    </svg>
-  </span>
-</button>
-`;
-
-exports[`Storyshots ebay-expand-button Html Label 1`] = `
-<button
-  aria-expanded="false"
-  class="expand-btn"
->
-  <span
-    class="expand-btn__cell"
-  >
-    <span
-      class="expand-btn__text"
-    >
-      <h3>
-        Header
-      </h3>
-    </span>
-    <svg
-      aria-hidden="true"
-      class="icon icon--dropdown"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use
-        xlink:href="#icon-dropdown"
-      />
-    </svg>
-  </span>
-</button>
-`;
-
-exports[`Storyshots ebay-expand-button No text 1`] = `
-<p>
+<DocumentFragment>
   <button
     aria-expanded="false"
-    aria-label="Menu"
-    class="expand-btn expand-btn--icon-only"
+    class="expand-btn"
+    disabled=""
   >
     <span
       class="expand-btn__cell"
     >
+      <span
+        class="expand-btn__text"
+      >
+        Can not touch
+      </span>
       <svg
         aria-hidden="true"
         class="icon icon--dropdown"
@@ -147,5 +95,111 @@ exports[`Storyshots ebay-expand-button No text 1`] = `
       </svg>
     </span>
   </button>
-</p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-expand-button Html Label 1`] = `
+<DocumentFragment>
+  <button
+    aria-expanded="false"
+    class="expand-btn"
+  >
+    <span
+      class="expand-btn__cell"
+    >
+      <span
+        class="expand-btn__text"
+      >
+        <h3>
+          Header
+        </h3>
+      </span>
+      <svg
+        aria-hidden="true"
+        class="icon icon--dropdown"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-expand-button No text 1`] = `
+<DocumentFragment>
+  <p>
+    <button
+      aria-expanded="false"
+      aria-label="Menu"
+      class="expand-btn expand-btn--icon-only"
+    >
+      <span
+        class="expand-btn__cell"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      aria-expanded="false"
+      aria-label="Menu"
+      class="expand-btn expand-btn--icon-only"
+    >
+      <span
+        class="expand-btn__cell"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon icon--menu"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-menu"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      aria-expanded="false"
+      aria-label="Menu"
+      class="icon-btn"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--overflow"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-overflow"
+        />
+      </svg>
+    </button>
+  </p>
+</DocumentFragment>
 `;

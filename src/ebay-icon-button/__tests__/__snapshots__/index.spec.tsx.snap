@@ -1,74 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-icon-button Default 1`] = `
-<p>
-  <button
-    class="icon-btn"
-    type="button"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon icon--menu"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
+<DocumentFragment>
+  <p>
+    <button
+      class="icon-btn"
+      type="button"
     >
-      <use
-        xlink:href="#icon-menu"
-      />
-    </svg>
-  </button>
-</p>
+      <svg
+        aria-hidden="true"
+        class="icon icon--menu"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-menu"
+        />
+      </svg>
+    </button>
+  </p>
+  <p>
+    <a
+      class="icon-link"
+      href="https://ebay.com"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--settings"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-settings"
+        />
+      </svg>
+    </a>
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-icon-button Transparent 1`] = `
-<p>
-  <button
-    class="icon-btn icon-btn--transparent"
-    type="button"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon icon--menu"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
+<DocumentFragment>
+  <p>
+    <button
+      class="icon-btn icon-btn--transparent"
+      type="button"
     >
-      <use
-        xlink:href="#icon-menu"
-      />
-    </svg>
-  </button>
-</p>
+      <svg
+        aria-hidden="true"
+        class="icon icon--menu"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-menu"
+        />
+      </svg>
+    </button>
+  </p>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-icon-button With Badges 1`] = `
-<p>
-  <button
-    class="icon-btn icon-btn--badged"
-    type="button"
-  >
-    <svg
-      aria-hidden="true"
-      class="icon icon--menu"
-      focusable="false"
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
+<DocumentFragment>
+  <p>
+    <button
+      class="icon-btn icon-btn--badged"
+      type="button"
     >
-      <use
-        xlink:href="#icon-menu"
-      />
-    </svg>
-    <span
-      aria-hidden="true"
-      aria-label="new feature available"
-      class="badge"
+      <svg
+        aria-hidden="true"
+        class="icon icon--menu"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-menu"
+        />
+      </svg>
+      <span
+        aria-hidden="true"
+        aria-label="new feature available"
+        class="badge"
+      >
+        1
+      </span>
+    </button>
+  </p>
+  <p>
+    <a
+      class="icon-link icon-link--badged"
+      href="https://ebay.com"
     >
-      1
-    </span>
-  </button>
-</p>
+      <svg
+        aria-hidden="true"
+        class="icon icon--cart"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-cart"
+        />
+      </svg>
+      <span
+        aria-hidden="true"
+        aria-label="3 items in your cart"
+        class="badge"
+      >
+        3
+      </span>
+    </a>
+  </p>
+  <p>
+    <a
+      class="icon-link icon-link--badged"
+      href="https://ebay.com"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--chat-large"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-chat-large"
+        />
+      </svg>
+      <span
+        aria-hidden="true"
+        aria-label="99 unread messages"
+        class="badge"
+      >
+        99
+      </span>
+    </a>
+  </p>
+</DocumentFragment>
 `;

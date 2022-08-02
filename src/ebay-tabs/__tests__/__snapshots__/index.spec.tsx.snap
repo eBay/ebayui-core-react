@@ -1,559 +1,669 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-tab Default Tabs 1`] = `
-<div
-  class="tabs"
->
+<DocumentFragment>
   <div
-    class="tabs__items"
-    role="tablist"
+    class="tabs"
   >
     <div
-      aria-controls="default-tabpanel-0"
-      aria-selected="true"
-      class="tabs__item"
-      id="default-tab-0"
-      role="tab"
-      tabindex="0"
+      class="tabs__items"
+      role="tablist"
     >
-      <span>
-        Tab 1
-      </span>
+      <div
+        aria-controls="default-tabpanel-0"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Tab 1
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 2
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-2"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-2"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 3
+        </span>
+      </div>
     </div>
     <div
-      aria-controls="default-tabpanel-1"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-1"
-      role="tab"
-      tabindex="-1"
+      class="tabs__content"
     >
-      <span>
-        Tab 2
-      </span>
-    </div>
-    <div
-      aria-controls="default-tabpanel-2"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-2"
-      role="tab"
-      tabindex="-1"
-    >
-      <span>
-        Tab 3
-      </span>
+      <div
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        id="default-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 1
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 2
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-2"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-2"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 3
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-  <div
-    class="tabs__content"
-  >
-    <div
-      aria-labelledby="default-tab-0"
-      class="tabs__panel"
-      id="default-tabpanel-0"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 1
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-1"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-1"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 2
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-2"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-2"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 3
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-tab Fake Tabs (links) 1`] = `
-<div
-  class="fake-tabs"
->
-  <ul
-    class="fake-tabs__items"
-  >
-    <li
-      class="fake-tabs__item fake-tabs__item--current"
-    >
-      <a
-        aria-current="page"
-        href="https://www.ebay.com/1"
-      >
-        Tab 1
-      </a>
-    </li>
-    <li
-      class="fake-tabs__item"
-    >
-      <a
-        href="https://www.ebay.com/2"
-      >
-        Tab 2
-      </a>
-    </li>
-    <li
-      class="fake-tabs__item"
-    >
-      <a
-        href="https://www.ebay.com/3"
-      >
-        Tab 3
-      </a>
-    </li>
-  </ul>
+<DocumentFragment>
   <div
-    class="fake-tabs__content"
+    class="fake-tabs"
   >
-    <div
-      class="fake-tabs__cell"
+    <ul
+      class="fake-tabs__items"
     >
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare, quam at lacinia pretium, lacus urna luctus nisi, eget molestie massa tortor id lacus. Aenean ac fringilla lacus. Fusce vel dui ex. Vivamus luctus egestas nulla, non hendrerit purus luctus at. Maecenas vel diam enim. Pellentesque quam neque, porttitor tincidunt vestibulum at, dapibus sit amet tortor.
-      </p>
+      <li
+        class="fake-tabs__item fake-tabs__item--current"
+      >
+        <a
+          aria-current="page"
+          href="https://www.ebay.com/1"
+        >
+          Tab 1
+        </a>
+      </li>
+      <li
+        class="fake-tabs__item"
+      >
+        <a
+          href="https://www.ebay.com/2"
+        >
+          Tab 2
+        </a>
+      </li>
+      <li
+        class="fake-tabs__item"
+      >
+        <a
+          href="https://www.ebay.com/3"
+        >
+          Tab 3
+        </a>
+      </li>
+    </ul>
+    <div
+      class="fake-tabs__content"
+    >
+      <div
+        class="fake-tabs__cell"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare, quam at lacinia pretium, lacus urna luctus nisi, eget molestie massa tortor id lacus. Aenean ac fringilla lacus. Fusce vel dui ex. Vivamus luctus egestas nulla, non hendrerit purus luctus at. Maecenas vel diam enim. Pellentesque quam neque, porttitor tincidunt vestibulum at, dapibus sit amet tortor.
+        </p>
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-tab Large Tabs 1`] = `
-<div
-  class="tabs"
->
+<DocumentFragment>
   <div
-    class="tabs__items tabs__items--large"
-    role="tablist"
+    class="tabs"
   >
     <div
-      aria-controls="default-tabpanel-0"
-      aria-selected="true"
-      class="tabs__item"
-      id="default-tab-0"
-      role="tab"
-      tabindex="0"
+      class="tabs__items tabs__items--large"
+      role="tablist"
     >
-      <span>
-        Large Tab 1
-      </span>
+      <div
+        aria-controls="default-tabpanel-0"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Large Tab 1
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Large Tab 2
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-2"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-2"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Large Tab 3
+        </span>
+      </div>
     </div>
     <div
-      aria-controls="default-tabpanel-1"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-1"
-      role="tab"
-      tabindex="-1"
+      class="tabs__content"
     >
-      <span>
-        Large Tab 2
-      </span>
-    </div>
-    <div
-      aria-controls="default-tabpanel-2"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-2"
-      role="tab"
-      tabindex="-1"
-    >
-      <span>
-        Large Tab 3
-      </span>
+      <div
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        id="default-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 1
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 2
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-2"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-2"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 3
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-  <div
-    class="tabs__content"
-  >
-    <div
-      aria-labelledby="default-tab-0"
-      class="tabs__panel"
-      id="default-tabpanel-0"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 1
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-1"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-1"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 2
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-2"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-2"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 3
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-tab Manually activated Tabs 1`] = `
-<div
-  class="tabs"
->
+<DocumentFragment>
   <div
-    class="tabs__items"
-    role="tablist"
+    class="tabs"
   >
     <div
-      aria-controls="default-tabpanel-0"
-      aria-selected="true"
-      class="tabs__item"
-      id="default-tab-0"
-      role="tab"
-      tabindex="0"
+      class="tabs__items"
+      role="tablist"
     >
-      <span>
-        Tab 1
-      </span>
+      <div
+        aria-controls="default-tabpanel-0"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Tab 1
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 2
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-2"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-2"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 3
+        </span>
+      </div>
     </div>
     <div
-      aria-controls="default-tabpanel-1"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-1"
-      role="tab"
-      tabindex="-1"
+      class="tabs__content"
     >
-      <span>
-        Tab 2
-      </span>
-    </div>
-    <div
-      aria-controls="default-tabpanel-2"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-2"
-      role="tab"
-      tabindex="-1"
-    >
-      <span>
-        Tab 3
-      </span>
+      <div
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        id="default-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 1
+          </h3>
+          <p>
+            These tabs are activated manually on Space/Enter key press
+          </p>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 2
+          </h3>
+          <p>
+            These tabs are activated manually on Space/Enter key press
+          </p>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-2"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-2"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <p>
+            These tabs are activated manually on Space/Enter key press
+          </p>
+          <h3>
+            Panel 3
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-  <div
-    class="tabs__content"
-  >
-    <div
-      aria-labelledby="default-tab-0"
-      class="tabs__panel"
-      id="default-tabpanel-0"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 1
-        </h3>
-        <p>
-          These tabs are activated manually on Space/Enter key press
-        </p>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-1"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-1"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 2
-        </h3>
-        <p>
-          These tabs are activated manually on Space/Enter key press
-        </p>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-2"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-2"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <p>
-          These tabs are activated manually on Space/Enter key press
-        </p>
-        <h3>
-          Panel 3
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-tab Pre-selected Tab 1`] = `
-<div
-  class="tabs"
->
+<DocumentFragment>
   <div
-    class="tabs__items"
-    role="tablist"
+    class="tabs"
   >
     <div
-      aria-controls="default-tabpanel-0"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-0"
-      role="tab"
-      tabindex="-1"
+      class="tabs__items"
+      role="tablist"
     >
-      <span>
-        Tab 1
-      </span>
+      <div
+        aria-controls="default-tabpanel-0"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 1
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 2
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-2"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-2"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Tab 3
+        </span>
+      </div>
     </div>
     <div
-      aria-controls="default-tabpanel-1"
-      aria-selected="false"
-      class="tabs__item"
-      id="default-tab-1"
-      role="tab"
-      tabindex="-1"
+      class="tabs__content"
     >
-      <span>
-        Tab 2
-      </span>
-    </div>
-    <div
-      aria-controls="default-tabpanel-2"
-      aria-selected="true"
-      class="tabs__item"
-      id="default-tab-2"
-      role="tab"
-      tabindex="0"
-    >
-      <span>
-        Tab 3
-      </span>
+      <div
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 1
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 2
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-2"
+        class="tabs__panel"
+        id="default-tabpanel-2"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 3
+          </h3>
+          <p>
+            Focus should go to 
+            <a
+              href="#"
+            >
+              this link
+            </a>
+             using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-  <div
-    class="tabs__content"
-  >
-    <div
-      aria-labelledby="default-tab-0"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-0"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 1
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 1\` (skipping \`Tab 2\` and \`Tab 3\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-1"
-      class="tabs__panel"
-      hidden=""
-      id="default-tabpanel-1"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 2
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 2\` (skipping \`Tab 3\` and \`Tab 1\`)
-        </p>
-      </div>
-    </div>
-    <div
-      aria-labelledby="default-tab-2"
-      class="tabs__panel"
-      id="default-tabpanel-2"
-      role="tabpanel"
-    >
-      <div
-        class="tabs__cell"
-      >
-        <h3>
-          Panel 3
-        </h3>
-        <p>
-          Focus should go to 
-          <a
-            href="#"
-          >
-            this link
-          </a>
-           using \`tab\`-key immediately after the \`Tab 3\` (skipping \`Tab 1\` and \`Tab 2\`)
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Storyshots ebay-tab Programmatically selected Tabs 1`] = `
-<button>
-  Select Tab 
-  1
-</button>
+<DocumentFragment>
+  <button>
+    Select Tab 1
+  </button>
+  <button>
+    Select Tab 2
+  </button>
+  <button>
+    Select Tab 3
+  </button>
+  <div
+    class="tabs"
+  >
+    <div
+      class="tabs__items"
+      role="tablist"
+    >
+      <div
+        aria-controls="default-tabpanel-0"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Tab 1
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 2
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-2"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-2"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 3
+        </span>
+      </div>
+    </div>
+    <div
+      class="tabs__content"
+    >
+      <div
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        id="default-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 1
+          </h3>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 2
+          </h3>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-2"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-2"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 3
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
