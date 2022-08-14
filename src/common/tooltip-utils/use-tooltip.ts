@@ -28,9 +28,7 @@ export const useTooltip = ({ onExpand, onCollapse, initialExpanded = false, host
             onCollapse()
         }
 
-        if (hostRef?.current) {
-            hostRef.current.focus()
-        }
+        hostRef?.current?.focus()
     }
 
     return {
