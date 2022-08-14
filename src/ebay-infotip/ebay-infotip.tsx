@@ -38,11 +38,12 @@ const EbayInfotip: FC<InfotipProps> = ({
     'aria-label': ariaLabel,
     className
 }) => {
+    const buttonRef = useRef()
     const {
         isExpanded,
         expandTooltip,
         collapseTooltip
-    } = useTooltip({ onCollapse, onExpand, initialExpanded })
+    } = useTooltip({ onCollapse, onExpand, initialExpanded, hostRef: buttonRef })
 
     const isModal = variant === 'modal'
     const containerRef = useRef()
@@ -72,6 +73,7 @@ const EbayInfotip: FC<InfotipProps> = ({
             ref={containerRef}>
             <TooltipHost>
                 {cloneElement(button, {
+                    ref: buttonRef,
                     onClick: toggleTooltip,
                     disabled,
                     variant,

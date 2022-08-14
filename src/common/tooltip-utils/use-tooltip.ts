@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useState, RefObject } from 'react'
 
 type UseTooltipArgs = {
     onExpand: () => void;
     onCollapse: () => void;
     initialExpanded?: boolean;
-}
+    hostRef?: RefObject<HTMLElement>;
+};
 
 type UseTooltip = {
     isExpanded: boolean;
     expandTooltip: () => void;
     collapseTooltip: () => void;
-}
+};
 
-export const useTooltip = ({ onExpand, onCollapse, initialExpanded = false }: UseTooltipArgs): UseTooltip => {
+export const useTooltip = ({ onExpand, onCollapse, initialExpanded = false, hostRef }: UseTooltipArgs): UseTooltip => {
     const [isExpanded, setIsExpanded] = useState(initialExpanded)
     const expandTooltip = () => {
         setIsExpanded(true)
@@ -25,6 +26,10 @@ export const useTooltip = ({ onExpand, onCollapse, initialExpanded = false }: Us
         setIsExpanded(false)
         if (onCollapse) {
             onCollapse()
+        }
+
+        if (hostRef?.current) {
+            hostRef.current.focus()
         }
     }
 
