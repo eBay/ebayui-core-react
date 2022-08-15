@@ -83,6 +83,26 @@ describe('<EbayInfotip>', () => {
 
             expect(wrapper.container.querySelector('.infotip__close[aria-label="Dismiss info"]')).toBeInTheDocument()
         })
+
+        it('should focus the button element', () => {
+            const { getByLabelText } = render(
+                <EbayInfotip a11yCloseText="Dismiss info" aria-label="info">
+                    <EbayInfotipContent>
+                        <p>Info content</p>
+                    </EbayInfotipContent>
+                </EbayInfotip>
+            )
+
+            const host = getByLabelText('info')
+
+            fireEvent.click(host)
+            expect(host).not.toHaveFocus()
+
+            const close = getByLabelText('Dismiss info')
+
+            fireEvent.click(close)
+            expect(host).toHaveFocus()
+        })
     })
 })
 
