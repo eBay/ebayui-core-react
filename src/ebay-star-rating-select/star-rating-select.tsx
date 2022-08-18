@@ -43,7 +43,7 @@ const EbayStarRatingSelect: FC<Props> = ({
             onKeyDown(e, i)
         }
     }
-    const handleChange = (i:number) => (e) => {
+    const handleClick = (i:number) => (e) => {
         if (!disabled && onChange) {
             setChecked(getValue(i))
             onChange(e, i)
@@ -74,8 +74,8 @@ const EbayStarRatingSelect: FC<Props> = ({
                         name={name}
                         value={i}
                         disabled={disabled}
-                        checked={checkedValue === i}
-                        onChange={handleChange(i)}
+                        defaultChecked={checkedValue === i}
+                        onClick={handleClick(i)}
                         onFocus={handleFocus(i)}
                         onKeyDown={handleKeyDown(i)} />
                     <span className="star-rating-select__radio-icon">
