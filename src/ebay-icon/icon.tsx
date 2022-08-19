@@ -12,6 +12,7 @@ export type A11yVariant = 'label';
 
 export type EbayIconProps = SVGProps<SVGSVGElement> & {
     className?: string;
+    type?: 'icon'| 'program-badge' | string
     name: Icon;
     noSkinClasses?: boolean;
     a11yText?: string;
@@ -21,6 +22,7 @@ export type EbayIconProps = SVGProps<SVGSVGElement> & {
 
 const EbayIcon: FC<EbayIconProps> = ({
     name,
+    type = 'icon',
     className: extraClass,
     noSkinClasses = false,
     a11yText,
@@ -44,10 +46,10 @@ const EbayIcon: FC<EbayIconProps> = ({
         'aria-hidden': true
     }
     const iconSize = `${getIconSize(name)}px`
+    const prefixSvg = type === 'icon' ? 'icon-' : ''
     const kebabName = kebabCased(name)
     const className = classNames(extraClass,
-        { 'icon': !noSkinClasses },
-        { [`icon--${kebabName}`]: !noSkinClasses }
+        { [getIconClass(type, kebabName)]: !noSkinClasses }
     )
 
     return (
@@ -62,7 +64,7 @@ const EbayIcon: FC<EbayIconProps> = ({
             {...a11yProps}
         >
             {a11yText && !noTitle && <title id={a11yTextId}>{a11yText}</title>}
-            <use xlinkHref={`#icon-${kebabName}`} />
+            <use xlinkHref={`#${prefixSvg}${kebabName}`} />
         </svg>
     )
 }
@@ -78,5 +80,11 @@ function getIconSize(iconName) {
 function kebabCased(str) {
     return str.replace(/([A-Z])/g, (s, c) => `-${c.toLowerCase()}`)
 }
-
+function getIconClass(type, name) {
+    if (type === 'icon') {
+        return `icon icon--${name}`
+    }
+    const dashedName = name.replace(type, `${type}-`)
+    return `${type} ${dashedName}`
+}
 export default withForwardRef(EbayIcon)
