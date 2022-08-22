@@ -87,6 +87,7 @@ class Tabs extends Component<TabsProps, State> {
 
     render(): ReactElement {
         const {
+            id,
             className,
             size = 'medium',
             children
@@ -99,6 +100,7 @@ class Tabs extends Component<TabsProps, State> {
             const itemProps = {
                 refCallback: ref => { this.headings[i] = ref },
                 index: i,
+                parentId: id,
                 selected: this.state.selectedIndex === i,
                 href,
                 children: content,
@@ -113,6 +115,7 @@ class Tabs extends Component<TabsProps, State> {
             const { children: content } = item.props
             const itemProps = {
                 index: i,
+                parentId: id,
                 selected: this.state.selectedIndex === i,
                 fake,
                 children: content
@@ -122,7 +125,7 @@ class Tabs extends Component<TabsProps, State> {
         })
 
         return fake ? (
-            <div className={classNames(className, 'fake-tabs')}>
+            <div id={id} className={classNames(className, 'fake-tabs')}>
                 <ul className={classNames('fake-tabs__items', { 'fake-tabs__items--large': large })}>
                     {tabHeadings}
                 </ul>
@@ -131,7 +134,7 @@ class Tabs extends Component<TabsProps, State> {
                 </div>
             </div>
         ) : (
-            <div className={classNames(className, 'tabs')}>
+            <div id={id} className={classNames(className, 'tabs')}>
                 <div className={classNames('tabs__items', { 'tabs__items--large': large })} role="tablist">
                     {tabHeadings}
                 </div>

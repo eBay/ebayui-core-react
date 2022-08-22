@@ -436,6 +436,223 @@ exports[`Storyshots ebay-tab Manually activated Tabs 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-tab Multiple Tabs 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="tabs"
+      id="tab-upper"
+    >
+      <div
+        class="tabs__items"
+        role="tablist"
+      >
+        <div
+          aria-controls="tab-upper-tabpanel-0"
+          aria-selected="true"
+          class="tabs__item"
+          id="tab-upper-tab-0"
+          role="tab"
+          tabindex="0"
+        >
+          <span>
+            Tab 1
+          </span>
+        </div>
+        <div
+          aria-controls="tab-upper-tabpanel-1"
+          aria-selected="false"
+          class="tabs__item"
+          id="tab-upper-tab-1"
+          role="tab"
+          tabindex="-1"
+        >
+          <span>
+            Tab 2
+          </span>
+        </div>
+      </div>
+      <div
+        class="tabs__content"
+      >
+        <div
+          aria-labelledby="default-tab-0"
+          class="tabs__panel"
+          id="tab-upper-tabpanel-0"
+          role="tabpanel"
+        >
+          <div
+            class="tabs__cell"
+          >
+            <h3>
+              Panel 1
+            </h3>
+            <p>
+              Panel 1 content. Here is a 
+              <a
+                href="#"
+              >
+                link
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+        <div
+          aria-labelledby="default-tab-1"
+          class="tabs__panel"
+          hidden=""
+          id="tab-upper-tabpanel-1"
+          role="tabpanel"
+        >
+          <div
+            class="tabs__cell"
+          >
+            <h3>
+              Panel 2
+            </h3>
+            <p>
+              Panel 2 content. Here is a 
+              <a
+                href="#"
+              >
+                link
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="margin-top: 64px;"
+  >
+    <div
+      class="tabs"
+      id="tab-lower"
+    >
+      <div
+        class="tabs__items"
+        role="tablist"
+      >
+        <div
+          aria-controls="tab-lower-tabpanel-0"
+          aria-selected="true"
+          class="tabs__item"
+          id="tab-lower-tab-0"
+          role="tab"
+          tabindex="0"
+        >
+          <span>
+            Tab A
+          </span>
+        </div>
+        <div
+          aria-controls="tab-lower-tabpanel-1"
+          aria-selected="false"
+          class="tabs__item"
+          id="tab-lower-tab-1"
+          role="tab"
+          tabindex="-1"
+        >
+          <span>
+            Tab B
+          </span>
+        </div>
+        <div
+          aria-controls="tab-lower-tabpanel-2"
+          aria-selected="false"
+          class="tabs__item"
+          id="tab-lower-tab-2"
+          role="tab"
+          tabindex="-1"
+        >
+          <span>
+            Tab C
+          </span>
+        </div>
+      </div>
+      <div
+        class="tabs__content"
+      >
+        <div
+          aria-labelledby="default-tab-0"
+          class="tabs__panel"
+          id="tab-lower-tabpanel-0"
+          role="tabpanel"
+        >
+          <div
+            class="tabs__cell"
+          >
+            <h3>
+              Panel A
+            </h3>
+            <p>
+              Panel A content. Here is a 
+              <a
+                href="#"
+              >
+                link
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+        <div
+          aria-labelledby="default-tab-1"
+          class="tabs__panel"
+          hidden=""
+          id="tab-lower-tabpanel-1"
+          role="tabpanel"
+        >
+          <div
+            class="tabs__cell"
+          >
+            <h3>
+              Panel B
+            </h3>
+            <p>
+              Panel B content. Here is a 
+              <a
+                href="#"
+              >
+                link
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+        <div
+          aria-labelledby="default-tab-2"
+          class="tabs__panel"
+          hidden=""
+          id="tab-lower-tabpanel-2"
+          role="tabpanel"
+        >
+          <div
+            class="tabs__cell"
+          >
+            <h3>
+              Panel C
+            </h3>
+            <p>
+              Panel C content. Here is a 
+              <a
+                href="#"
+              >
+                link
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-tab Pre-selected Tab 1`] = `
 <DocumentFragment>
   <div

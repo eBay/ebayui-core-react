@@ -4,12 +4,6 @@ import { action } from '../../../.storybook/action'
 
 import { EbayTabs, EbayTab as Tab, EbayTabPanel as Panel } from '../index'
 
-const disableInfo = {
-    info: {
-        disable: true // disable info addon cause it throws an error
-    }
-}
-
 storiesOf('ebay-tab', module)
     .add('Default Tabs', () => (<>
         <EbayTabs onTabSelect={action('tab selected')}>
@@ -35,7 +29,7 @@ storiesOf('ebay-tab', module)
                 </p>
             </Panel>
         </EbayTabs>
-    </>), disableInfo)
+    </>))
     .add('Pre-selected Tab', () => (<>
         <EbayTabs index={2}>
             <Tab>Tab 1</Tab>
@@ -60,7 +54,7 @@ storiesOf('ebay-tab', module)
                 </p>
             </Panel>
         </EbayTabs>
-    </>), disableInfo )
+    </>) )
     .add('Programmatically selected Tabs', () => {
         const Component = () => {
             const [selectedTab, selectTab] = useState(0)
@@ -79,7 +73,7 @@ storiesOf('ebay-tab', module)
         }
 
         return <><Component /></>
-    }, disableInfo )
+    } )
     .add('Fake Tabs (links)', () => (<>
         <EbayTabs>
             <Tab href="https://www.ebay.com/1">Tab 1</Tab>
@@ -93,7 +87,7 @@ storiesOf('ebay-tab', module)
                 </p>
             </Panel>
         </EbayTabs>
-    </>), disableInfo)
+    </>))
     .add('Manually activated Tabs', () => (<>
         <EbayTabs activation="manual">
             <Tab>Tab 1</Tab>
@@ -121,7 +115,7 @@ storiesOf('ebay-tab', module)
                 </p>
             </Panel>
         </EbayTabs>
-    </>), disableInfo)
+    </>))
     .add('Large Tabs', () => (<>
         <EbayTabs size="large">
             <Tab>Large Tab 1</Tab>
@@ -146,4 +140,39 @@ storiesOf('ebay-tab', module)
                 </p>
             </Panel>
         </EbayTabs>
-    </>), disableInfo)
+    </>))
+    .add('Multiple Tabs', () => (<>
+        <div>
+            <EbayTabs id="tab-upper">
+                <Tab>Tab 1</Tab>
+                <Tab>Tab 2</Tab>
+                <Panel>
+                    <h3>Panel 1</h3>
+                    <p>Panel 1 content. Here is a <a href="#">link</a>.</p>
+                </Panel>
+                <Panel>
+                    <h3>Panel 2</h3>
+                    <p>Panel 2 content. Here is a <a href="#">link</a>.</p>
+                </Panel>
+            </EbayTabs>
+        </div>
+        <div style={{marginTop: '64px'}}>
+            <EbayTabs id="tab-lower">
+                <Tab>Tab A</Tab>
+                <Tab>Tab B</Tab>
+                <Tab>Tab C</Tab>
+                <Panel>
+                    <h3>Panel A</h3>
+                    <p>Panel A content. Here is a <a href="#">link</a>.</p>
+                </Panel>
+                <Panel>
+                    <h3>Panel B</h3>
+                    <p>Panel B content. Here is a <a href="#">link</a>.</p>
+                </Panel>
+                <Panel>
+                    <h3>Panel C</h3>
+                    <p>Panel C content. Here is a <a href="#">link</a>.</p>
+                </Panel>
+            </EbayTabs>
+        </div>
+    </>))

@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 type TabProps = ComponentProps<'li'> & ComponentProps<'div'> & {
     index?: number;
+    parentId?: string;
     selected?: boolean;
     href?: string;
     onClick?: () => void;
@@ -13,6 +14,7 @@ type TabProps = ComponentProps<'li'> & ComponentProps<'div'> & {
 const Tab: FC<TabProps> = ({
     children,
     index,
+    parentId,
     selected,
     href,
     className,
@@ -31,10 +33,10 @@ const Tab: FC<TabProps> = ({
         <div
             {...rest}
             ref={refCallback}
-            aria-controls={`default-tabpanel-${index}`}
+            aria-controls={`${parentId || 'default'}-tabpanel-${index}`}
             aria-selected={selected}
             className={classNames(className, 'tabs__item')}
-            id={`default-tab-${index}`}
+            id={`${parentId || 'default'}-tab-${index}`}
             role="tab"
             tabIndex={selected ? 0 : -1}
             onClick={onClick}

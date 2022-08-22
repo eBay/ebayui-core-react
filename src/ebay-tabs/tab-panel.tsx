@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 type TabPanelProps = ComponentProps<'div'> & {
     index?: number;
+    parentId?: string;
     selected?: boolean;
     fake?: boolean;
 }
@@ -10,6 +11,7 @@ type TabPanelProps = ComponentProps<'div'> & {
 const TabPanel: FC<TabPanelProps> = ({
     children,
     index,
+    parentId,
     selected,
     fake,
     className,
@@ -24,7 +26,7 @@ const TabPanel: FC<TabPanelProps> = ({
             {...rest}
             aria-labelledby={`default-tab-${index}`}
             className={classNames(className, 'tabs__panel')}
-            id={`default-tabpanel-${index}`}
+            id={`${parentId || 'default'}-tabpanel-${index}`}
             role="tabpanel"
             hidden={!selected}
         >
