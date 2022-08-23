@@ -8,7 +8,7 @@ export default {
     argTypes: {
         value: {
             control: { type: 'select' },
-            options: ['0', '1', '1-5', '2', '2-5', '3', '3-5', '4', '4-5', '5'],
+            options: ['0', '0-5', '1', '1-5', '2', '2-5', '3', '3-5', '4', '4-5', '5'],
             description:
                 'Only for <ebay-star-rating/>. 1 - 5, depending on how many starts are selected. If 0 or null defaults to no stars selected. Can use 2-5 for 2 and a half stars',
         },

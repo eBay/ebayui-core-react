@@ -24,7 +24,8 @@ import '@ebay/skin/star-rating.css'
 ```
 
 ```jsx harmony
-<EbayStarRating aria-label="Star Rating" value={1}>
+<EbayStarRating aria-label="Star Rating" value={1}/>
+<EbayStarRating aria-label="Star Rating" value="0-5"/>
 ```
 
 ## Attributes
