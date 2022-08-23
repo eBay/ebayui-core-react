@@ -65,7 +65,7 @@ const EbayStarRatingSelect: FC<Props> = ({
             {range(1, 5).map((i) => (
                 <span className="star-rating-select__radio" key={i}>
                     <input
-                        aria-label={a11yStarText && a11yStarText[i - 1]}
+                        aria-label={a11yStarText?.[i - 1]}
                         className={classNames(
                             'star-rating-select__control',
                             { 'star-rating-select__control--filled': i <= checkedValue })

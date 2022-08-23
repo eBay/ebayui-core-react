@@ -58,9 +58,11 @@ export default {
 };
 
 export const Isolated = (args) => (<EbayStarRatingSelect {...IsolatedDefaultProps} {...args} />)
+Isolated.args = IsolatedDefaultProps
 export const Fieldset = (args) => (
     <fieldset>
         <legend>Rate Product</legend>
         <EbayStarRatingSelect {...FieldsetDefaultProps} {...args} />
     </fieldset>
 )
+Fieldset.args = FieldsetDefaultProps
