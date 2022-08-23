@@ -9,7 +9,7 @@ storiesOf(`ebay-icon`, module)
             {icons.map((icon, i) =>
                 <tr key={i}>
                     <td>{icon}</td>
-                    <td key={icon}><EbayIcon name={icon} /></td>
+                    <td key={icon}><EbayIcon name={icon} type={icon.includes('programBadge') ? 'program-badge':undefined} /></td>
                 </tr>
             )}
         </table>

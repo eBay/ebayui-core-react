@@ -3621,14 +3621,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-authenticity-guaranteed"
+            class="program-badge program-badge--authenticity-guaranteed"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-authenticity-guaranteed"
+              xlink:href="#program-badge-authenticity-guaranteed"
             />
           </svg>
         </td>
@@ -3640,14 +3640,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-click-to-call"
+            class="program-badge program-badge--click-to-call"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-click-to-call"
+              xlink:href="#program-badge-click-to-call"
             />
           </svg>
         </td>
@@ -3659,14 +3659,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-ebay-plus"
+            class="program-badge program-badge--ebay-plus"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-ebay-plus"
+              xlink:href="#program-badge-ebay-plus"
             />
           </svg>
         </td>
@@ -3678,14 +3678,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-escrow"
+            class="program-badge program-badge--escrow"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-escrow"
+              xlink:href="#program-badge-escrow"
             />
           </svg>
         </td>
@@ -3697,14 +3697,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-free-warranty"
+            class="program-badge program-badge--free-warranty"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-free-warranty"
+              xlink:href="#program-badge-free-warranty"
             />
           </svg>
         </td>
@@ -3716,14 +3716,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-money-back-guarantee-chf"
+            class="program-badge program-badge--money-back-guarantee-chf"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-money-back-guarantee-chf"
+              xlink:href="#program-badge-money-back-guarantee-chf"
             />
           </svg>
         </td>
@@ -3735,14 +3735,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-money-back-guarantee-eu"
+            class="program-badge program-badge--money-back-guarantee-eu"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-money-back-guarantee-eu"
+              xlink:href="#program-badge-money-back-guarantee-eu"
             />
           </svg>
         </td>
@@ -3754,14 +3754,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-money-back-guarantee-uk"
+            class="program-badge program-badge--money-back-guarantee-uk"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-money-back-guarantee-uk"
+              xlink:href="#program-badge-money-back-guarantee-uk"
             />
           </svg>
         </td>
@@ -3773,14 +3773,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-money-back-guarantee-us"
+            class="program-badge program-badge--money-back-guarantee-us"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-money-back-guarantee-us"
+              xlink:href="#program-badge-money-back-guarantee-us"
             />
           </svg>
         </td>
@@ -3792,14 +3792,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-money-back-guarantee-zl"
+            class="program-badge program-badge--money-back-guarantee-zl"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-money-back-guarantee-zl"
+              xlink:href="#program-badge-money-back-guarantee-zl"
             />
           </svg>
         </td>
@@ -3811,14 +3811,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-top-rated-seller"
+            class="program-badge program-badge--top-rated-seller"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-top-rated-seller"
+              xlink:href="#program-badge-top-rated-seller"
             />
           </svg>
         </td>
@@ -3830,14 +3830,14 @@ exports[`Storyshots ebay-icon all icons 1`] = `
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--program-badge-vault"
+            class="program-badge program-badge--vault"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-program-badge-vault"
+              xlink:href="#program-badge-vault"
             />
           </svg>
         </td>
