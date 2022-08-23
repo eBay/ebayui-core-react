@@ -14,7 +14,7 @@ export const Isolated = (props) => (<EbayStarRatingSelect {...IsolatedDefaultPro
 export const FieldsetDefaultProps = {
     disabled: false,
     a11yStarText: ['1 star', '2 stars', '3 stars', '4 stars', '5 stars'],
-    value: 0,
+    value: "0",
     name :'star-rating',
 }
 

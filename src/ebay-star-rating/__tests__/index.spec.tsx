@@ -17,14 +17,14 @@ describe('star-rating-select', () => {
     });
 
     it('renders with 0 selected', async () => {
-        await htmlSnap(<EbayStarRating value={0} a11yText="star rating"/> );
+        await htmlSnap(<EbayStarRating value="0" a11yText="star rating"/> );
     });
 
     it('renders with 2 selected', async () => {
-        await htmlSnap(<EbayStarRating value={2} a11yText="star rating"/>);
+        await htmlSnap(<EbayStarRating value="2" a11yText="star rating"/>);
     });
 
     it('renders with 5 selected', async () => {
-        await htmlSnap(<EbayStarRating value={5}/>);
+        await htmlSnap(<EbayStarRating value="5"/>);
     });
 });
