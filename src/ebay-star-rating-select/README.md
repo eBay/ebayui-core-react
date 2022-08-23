@@ -1,7 +1,7 @@
 # ebay-star-rating-select
 use (rating from 0-5)
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-star-rating-select)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-star-rating-select--isolated)
 
 ## Usage
 ```
