@@ -2,8 +2,8 @@ import React from 'react'
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import { Isolated,Fieldset } from './mocks'
 
-const htmlSnap =(ui: React.ReactElement): void => {
-    const { asFragment } = render(ui);
+const htmlSnap = async (ui: React.ReactElement): Promise<void> => {
+    const { asFragment } = await render(ui);
     expect(asFragment()).toMatchSnapshot();
 }
 

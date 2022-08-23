@@ -2,10 +2,11 @@ import React from 'react'
 import { render } from '@testing-library/react';
 import { EbayStarRating } from '../'
 
-const htmlSnap =(ui: React.ReactElement): void => {
-    const { asFragment } = render(ui);
+const htmlSnap = async (ui: React.ReactElement): Promise<void> => {
+    const { asFragment } = await render(ui);
     expect(asFragment()).toMatchSnapshot();
 }
+
 describe('star-rating-select', () => {
     it('renders defaults', async () => {
         await htmlSnap(<EbayStarRating value="3-5" />);
