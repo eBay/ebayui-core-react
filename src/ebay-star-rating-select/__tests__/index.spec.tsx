@@ -43,12 +43,8 @@ describe('star-rating-select', () => {
         });
 
         it('then it emits the event', () => {
-            const changeEvents = onChangeSpy.mock.calls;
-            expect(changeEvents.length).toBe(1);
-
-            const eventArgs = changeEvents[0];
-            expect(eventArgs.length).toBe(2);
-            expect(eventArgs[1]).toBe(2);
+            expect(onChangeSpy).toBeCalledTimes(1);
+            expect(onChangeSpy).toBeCalledWith(expect.anything(), 2);
         });
 
         describe('when star is clicked', () => {
@@ -57,12 +53,8 @@ describe('star-rating-select', () => {
             });
 
             it('then it emits the event', () => {
-                const changeEvents = onChangeSpy.mock.calls;
-                expect(changeEvents.length).toBe(2);
-
-                const eventArgs = changeEvents[1];
-                expect(eventArgs.length).toBe(2);
-                expect(eventArgs[1]).toBe(4);
+                expect(onChangeSpy).toBeCalledTimes(2);
+                expect(onChangeSpy).toBeCalledWith(expect.anything(), 4);
             });
         });
     });
@@ -79,8 +71,7 @@ describe('star-rating-select', () => {
             });
 
             it("then it doesn't emit the event", () => {
-                const changeEvents = onChangeSpy.mock.calls;
-                expect(changeEvents.length).toBe(0);
+                expect(onChangeSpy).toBeCalledTimes(0);
             });
         });
     });
@@ -93,11 +84,8 @@ describe('star-rating-select', () => {
         });
 
         it('then it emits the event', () => {
-            const events = onFocusSpy.mock.calls;
-            expect(events.length).toBe(1);
-
-            const [[eventArg,value]] = events;
-            expect(value).toBe(2);
+            expect(onFocusSpy).toBeCalledTimes(1);
+            expect(onFocusSpy).toBeCalledWith(expect.anything(), 2);
         });
     });
 
@@ -109,10 +97,8 @@ describe('star-rating-select', () => {
         });
 
         it('then it emits the event', () => {
-            const events = onKeyDownSpy.mock.calls;
-            expect(events.length).toBe(1);
-            const [[eventArg,value]] = events;
-            expect(value).toBe(5);
+            expect(onKeyDownSpy).toBeCalledTimes(1);
+            expect(onKeyDownSpy).toBeCalledWith(expect.anything(), 5);
         });
     });
 });
