@@ -5,7 +5,7 @@ import { range } from '../common/range'
 
 type Props = ComponentProps<'div'> & {
     a11yText?: string;
-    value?: number | string;
+    value?: string;
 }
 
 const EbayStarRating: FC<Props> = ({
