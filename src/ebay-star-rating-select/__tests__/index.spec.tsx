@@ -42,7 +42,7 @@ describe('star-rating-select', () => {
             await fireEvent.click(component.getByLabelText('2 stars'));
         });
 
-        it('then it emits the event', () => {
+        it('should emit the onChange event with 2', () => {
             expect(onChangeSpy).toBeCalledTimes(1);
             expect(onChangeSpy).toBeCalledWith(expect.anything(), 2);
         });
@@ -52,7 +52,7 @@ describe('star-rating-select', () => {
                 await fireEvent.click(component.getByLabelText('4 stars'));
             });
 
-            it('then it emits the event', () => {
+            it('should emit the onChange event with 4', () => {
                 expect(onChangeSpy).toBeCalledTimes(2);
                 expect(onChangeSpy).toBeCalledWith(expect.anything(), 4);
             });
@@ -70,7 +70,7 @@ describe('star-rating-select', () => {
                 await fireEvent.click(component.getByLabelText('2 stars'));
             });
 
-            it("then it doesn't emit the event", () => {
+            it("should not emit the change event", () => {
                 expect(onChangeSpy).toBeCalledTimes(0);
             });
         });
@@ -83,7 +83,7 @@ describe('star-rating-select', () => {
             await fireEvent.focus(component.getByLabelText('2 stars'));
         });
 
-        it('then it emits the event', () => {
+        it('should emit the focus event', () => {
             expect(onFocusSpy).toBeCalledTimes(1);
             expect(onFocusSpy).toBeCalledWith(expect.anything(), 2);
         });
@@ -96,7 +96,7 @@ describe('star-rating-select', () => {
             await fireEvent.keyDown(component.getByLabelText('5 stars'));
         });
 
-        it('then it emits the event', () => {
+        it('should emit the onKeyDown event', () => {
             expect(onKeyDownSpy).toBeCalledTimes(1);
             expect(onKeyDownSpy).toBeCalledWith(expect.anything(), 5);
         });
