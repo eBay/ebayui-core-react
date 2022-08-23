@@ -7,7 +7,7 @@ type Props = ComponentProps<'div'> & {
     a11yText?: string;
     value?: string;
 }
-
+const stars = range(1, 5)
 const EbayStarRating: FC<Props> = ({
     value,
     a11yText,
@@ -21,7 +21,7 @@ const EbayStarRating: FC<Props> = ({
         data-stars={value}
         {...rest}
     >
-        {range(1, 5).map((i) => (<EbayIcon key={i} className="star-rating__icon" name="starDynamic" />))}
+        {stars.map((i) => (<EbayIcon key={i} className="star-rating__icon" name="starDynamic" />))}
     </div>
 )
 

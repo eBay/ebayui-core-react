@@ -14,6 +14,7 @@ type Props = ComponentProps<'div'> & {
     onChange?: (event: ChangeEvent<HTMLInputElement>, value: string | number) => void;
     onFocus?: (event: ChangeEvent<HTMLInputElement>, value: string | number) => void;
 }
+const stars = range(1, 5)
 const getValue = (val) => {
     let value = parseInt(val, 0) || 0
     if (value > 5) {
@@ -62,7 +63,7 @@ const EbayStarRatingSelect: FC<Props> = ({
             className={classNames('star-rating-select', className)}
             {...rest}
         >
-            {range(1, 5).map((i) => (
+            {stars.map((i) => (
                 <span className="star-rating-select__radio" key={i}>
                     <input
                         aria-label={a11yStarText?.[i - 1]}
