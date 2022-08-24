@@ -33,4 +33,4 @@ import '@ebay/skin/star-rating.css'
 Name | Type | Stateful | Description
 --- | --- | --- | ---
 | `a11yText`       | String  | No       | Yes      | text for non-decorative inline icon; icon is assumed to be decorative if this is not passed                  |
-| `value`           | String  | No       | Yes      | For `<ebay-star-rating/>` only, assigns the amount of stars to be filled. Can be 2-5 for 2 and a half stars. |
+| `value`           | String  | No       | Yes      | The amount of stars to be filled. Can be "2-5" for 2 and a half stars. |
