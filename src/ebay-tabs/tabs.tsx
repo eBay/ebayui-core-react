@@ -42,7 +42,6 @@ class Tabs extends Component<TabsProps, State> {
     componentDidUpdate(prevProps: TabsProps): void {
         if (this.props.index !== prevProps.index) {
             this.onTabSelect(this.props.index)
-            this.headings[this.state.focusedIndex]?.focus()
         }
     }
 
