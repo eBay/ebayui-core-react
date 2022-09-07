@@ -1,5 +1,4 @@
 import React, { Children, ReactElement } from 'react'
-import FocusLock from 'react-focus-lock'
 import { RemoveScroll } from 'react-remove-scroll'
 import { DialogBase, DialogBaseProps } from './components/dialogBase'
 import { EbayDialogCloseButton, EbayDialogFooter, EbayDialogHeader } from './index'
@@ -35,11 +34,9 @@ export const DialogBaseWithState = ({
     )
 
     const renderOverLay = () => shouldRenderModal ? (
-        <FocusLock returnFocus={{ preventScroll: false }}>
-            <RemoveScroll enabled={open}>
-                {dialogBase}
-            </RemoveScroll>
-        </FocusLock>
+        <RemoveScroll enabled={open}>
+            {dialogBase}
+        </RemoveScroll>
     ) : dialogBase
 
     return animated || open ? renderOverLay() : null

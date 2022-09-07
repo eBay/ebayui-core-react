@@ -49,7 +49,6 @@
     "classnames": "^2.2.6",
     "makeup-keyboard-trap": "^0.4.1",
     "makeup-screenreader-trap": "^0.4.1",
-    "react-focus-lock": "^2.9.1",
     "react-remove-scroll": "^2.2.0"
   },
   "devDependencies": {
