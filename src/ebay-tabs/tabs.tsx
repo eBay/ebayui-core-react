@@ -71,8 +71,8 @@ const Tabs: FC<TabsProps> = ({
         headings[focusedIndex]?.focus()
     }, [focusedIndex])
 
-    const fake = filterBy(children, ({ type, props }) => type === Tab && props.href).length > 0
-    const large = size === 'large'
+    const isFake = filterBy(children, ({ type, props }) => type === Tab && props.href).length > 0
+    const isLarge = size === 'large'
 
     const tabHeadings = filterByType(children, Tab).map((item, i) => {
         const { href, children: content } = item.props
@@ -96,16 +96,16 @@ const Tabs: FC<TabsProps> = ({
             index: i,
             parentId: id,
             selected: selectedIndex === i,
-            fake,
+            fake: isFake,
             children: content
         }
 
         return cloneElement(item, itemProps)
     })
 
-    return fake ? (
+    return isFake ? (
         <div id={id} className={classNames(className, 'fake-tabs')}>
-            <ul className={classNames('fake-tabs__items', { 'fake-tabs__items--large': large })}>
+            <ul className={classNames('fake-tabs__items', { 'fake-tabs__items--large': isLarge })}>
                 {tabHeadings}
             </ul>
             <div className="fake-tabs__content">
@@ -114,7 +114,7 @@ const Tabs: FC<TabsProps> = ({
         </div>
     ) : (
         <div id={id} className={classNames(className, 'tabs')}>
-            <div className={classNames('tabs__items', { 'tabs__items--large': large })} role="tablist">
+            <div className={classNames('tabs__items', { 'tabs__items--large': isLarge })} role="tablist">
                 {tabHeadings}
             </div>
             <div className="tabs__content">
