@@ -176,3 +176,25 @@ storiesOf('ebay-tab', module)
             </EbayTabs>
         </div>
     </>))
+    .add('Tabs with inputs', () => {
+        const Component = () => {
+            const [name, setName] = useState('John Doe')
+
+            return (
+                <EbayTabs>
+                    <Tab>Tab 1</Tab>
+                    <Tab>Tab 2</Tab>
+                    <Tab>Tab 3</Tab>
+                    <Panel>
+                        <label htmlFor='name'>Name </label>
+                        <input id='name' onChange={(e) => setName(e.target.value)} type='text' placeholder='john doe' value={name} />
+                        <p>My name is {name}</p>
+                    </Panel>
+                    <Panel><h3>Panel 2</h3></Panel>
+                    <Panel><h3>Panel 3</h3></Panel>
+                </EbayTabs>
+            )
+        }
+
+        return <><Component /></>
+    })
