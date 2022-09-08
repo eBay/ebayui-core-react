@@ -3,13 +3,13 @@ import { render, fireEvent } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayTabs, EbayTab, EbayTabPanel } from '../index'
 
-const spy = jest.fn()
 
 describe('<EbayTabs>', () => {
     describe('on tab click', () => {
-        let wrapper
+        let wrapper, spy
 
         beforeEach(() => {
+            spy = jest.fn()
             wrapper = render(
                 <EbayTabs onTabSelect={spy}>
                     <EbayTab key="0">tab1</EbayTab>,
