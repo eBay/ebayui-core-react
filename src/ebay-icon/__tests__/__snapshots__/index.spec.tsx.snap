@@ -32,8 +32,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--add-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -70,8 +70,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--archive-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -127,8 +127,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--arrow-left-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -165,8 +165,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--arrow-move-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -222,8 +222,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--arrow-right-extra-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -260,8 +260,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--arrow-right-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -317,8 +317,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--attention-filled-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -336,8 +336,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--attention-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -488,8 +488,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--bank-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -526,8 +526,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--bids-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -583,8 +583,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--calendar-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -602,8 +602,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--calendar-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -640,8 +640,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--camera-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -716,8 +716,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--cart-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -735,8 +735,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--cart-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -792,8 +792,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--certified-recycle-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -811,8 +811,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chat-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -849,8 +849,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--checkbox-checked-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -887,8 +887,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--checkbox-mixed-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -925,8 +925,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--checkbox-square-checked-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -963,8 +963,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--checkbox-square-unchecked-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1001,8 +1001,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--checkbox-unchecked-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1058,8 +1058,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-down-extra-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1077,8 +1077,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-down-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1115,8 +1115,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-left-extra-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1134,8 +1134,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-left-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1172,8 +1172,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-right-extra-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1191,8 +1191,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-right-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1248,8 +1248,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-up-extra-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1267,8 +1267,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--chevron-up-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1324,8 +1324,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--clear-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1362,8 +1362,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--clock-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1400,8 +1400,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--close-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1457,8 +1457,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--confirmation-filled-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1476,8 +1476,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--confirmation-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1514,8 +1514,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--credit-card-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1533,8 +1533,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--credit-card-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1590,8 +1590,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--customize-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1647,8 +1647,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--delete-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1685,8 +1685,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--download-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1742,8 +1742,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--edit-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1837,8 +1837,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--event-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1875,8 +1875,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--fast-n-free-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1932,8 +1932,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--filter-gallery-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1970,8 +1970,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--filter-list-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2027,8 +2027,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--filter-single-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2046,8 +2046,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--filter-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2065,8 +2065,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--fingerprint-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2103,8 +2103,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--flag-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2141,8 +2141,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--folder-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2179,8 +2179,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--following-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2217,8 +2217,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--gift-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2236,8 +2236,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--gift-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2274,8 +2274,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--help-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2312,8 +2312,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--hide-secret-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2388,8 +2388,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--inbox-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2445,8 +2445,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--information-filled-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2464,8 +2464,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2559,8 +2559,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--lightbulb-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2597,8 +2597,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--live-eye-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2635,8 +2635,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--location-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2673,8 +2673,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--locked-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2711,8 +2711,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--mail-move-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2749,8 +2749,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--mail-open-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2787,8 +2787,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--mail-unread-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2863,8 +2863,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--messages-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2882,8 +2882,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--messages-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2920,8 +2920,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--mic-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -2996,8 +2996,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--money-back-guarantee-us-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3053,8 +3053,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--overflow-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3167,8 +3167,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--pause-filled-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3186,8 +3186,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--pause-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3205,8 +3205,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--pause-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3357,8 +3357,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--photo-gallery-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3395,8 +3395,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--photo-image-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3528,8 +3528,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--play-filled-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3547,8 +3547,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--play-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3566,8 +3566,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--play-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3870,8 +3870,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--purchases-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3908,8 +3908,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--radio-checked-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3946,8 +3946,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--radio-unchecked-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -3984,8 +3984,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--red-laser-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4060,8 +4060,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--reply-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4098,8 +4098,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--report-flag-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4136,8 +4136,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--return-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4212,8 +4212,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--save-selected-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4231,8 +4231,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--save-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4269,8 +4269,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--scan-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4345,8 +4345,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--search-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4364,8 +4364,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--search-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4478,8 +4478,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--settings-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4516,8 +4516,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--share-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4573,8 +4573,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--show-secret-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4858,8 +4858,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--sort-down-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4877,8 +4877,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--sort-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4896,8 +4896,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--sort-up-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4934,8 +4934,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--spinner-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -4991,8 +4991,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--star-empty-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5029,8 +5029,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--star-full-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5067,8 +5067,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--star-half-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5105,8 +5105,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--star-undefined-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5219,8 +5219,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--store-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5390,8 +5390,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--text-messaging-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5447,8 +5447,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--thumbs-down-selected-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5466,8 +5466,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--thumbs-down-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5523,8 +5523,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--thumbs-up-selected-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5542,8 +5542,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--thumbs-up-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5580,8 +5580,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--tick-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5637,8 +5637,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--truck-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5694,8 +5694,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--unlocked-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5751,8 +5751,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--vault-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5827,8 +5827,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--visa-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5846,8 +5846,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--visa-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -5903,8 +5903,8 @@ exports[`Storyshots ebay-icon all icons 1`] = `
             aria-hidden="true"
             class="icon icon--watch-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
