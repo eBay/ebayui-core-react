@@ -130,8 +130,8 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
         aria-hidden="true"
         class="icon icon--chat-large"
         focusable="false"
-        height="24px"
-        width="24px"
+        height="64px"
+        width="64px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use

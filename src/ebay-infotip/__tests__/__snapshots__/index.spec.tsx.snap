@@ -22,8 +22,8 @@ exports[`Storyshots ebay-infotip Custom button content (With render prop) 1`] = 
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -186,8 +186,8 @@ exports[`Storyshots ebay-infotip Default 1`] = `
           aria-hidden="true"
           class="icon icon--information-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -266,8 +266,8 @@ exports[`Storyshots ebay-infotip Disabled 1`] = `
           aria-hidden="true"
           class="icon icon--information-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -345,8 +345,8 @@ exports[`Storyshots ebay-infotip Expanded by default 1`] = `
           aria-hidden="true"
           class="icon icon--information-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -429,8 +429,8 @@ exports[`Storyshots ebay-infotip In paragraph 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -510,8 +510,8 @@ exports[`Storyshots ebay-infotip Modal 1`] = `
           aria-hidden="true"
           class="icon icon--information-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -546,8 +546,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -621,8 +621,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -696,8 +696,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -771,8 +771,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -846,8 +846,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -921,8 +921,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -996,8 +996,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1071,8 +1071,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1146,8 +1146,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1221,8 +1221,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1296,8 +1296,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1371,8 +1371,8 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
             aria-hidden="true"
             class="icon icon--information-small"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="16px"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -1451,8 +1451,8 @@ exports[`Storyshots ebay-infotip Pointer with custom location 1`] = `
           aria-hidden="true"
           class="icon icon--information-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use

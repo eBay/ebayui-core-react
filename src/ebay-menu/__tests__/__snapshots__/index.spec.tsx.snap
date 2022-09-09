@@ -24,8 +24,8 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -47,8 +47,8 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -71,8 +71,8 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -108,8 +108,8 @@ exports[`Storyshots ebay-menu Default 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -131,8 +131,8 @@ exports[`Storyshots ebay-menu Default 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -154,8 +154,8 @@ exports[`Storyshots ebay-menu Default 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -192,8 +192,8 @@ exports[`Storyshots ebay-menu Radio 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -216,8 +216,8 @@ exports[`Storyshots ebay-menu Radio 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -240,8 +240,8 @@ exports[`Storyshots ebay-menu Radio 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -284,8 +284,8 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -314,8 +314,8 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -337,8 +337,8 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -374,8 +374,8 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -398,8 +398,8 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -421,8 +421,8 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -471,8 +471,8 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -508,8 +508,8 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -545,8 +545,8 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -582,8 +582,8 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -605,8 +605,8 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -633,8 +633,8 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -656,8 +656,8 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -679,8 +679,8 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
           aria-hidden="true"
           class="icon icon--tick-small"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="16px"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use

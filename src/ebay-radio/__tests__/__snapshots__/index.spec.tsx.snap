@@ -69,8 +69,8 @@ exports[`Storyshots ebay-radio Default 1`] = `
           aria-hidden="true"
           class="radio__checked icon icon--radio-checked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -81,8 +81,8 @@ exports[`Storyshots ebay-radio Default 1`] = `
           aria-hidden="true"
           class="radio__unchecked icon icon--radio-unchecked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -493,8 +493,8 @@ exports[`Storyshots ebay-radio Using custom label html 1`] = `
           aria-hidden="true"
           class="radio__checked icon icon--radio-checked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -505,8 +505,8 @@ exports[`Storyshots ebay-radio Using custom label html 1`] = `
           aria-hidden="true"
           class="radio__unchecked icon icon--radio-unchecked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use

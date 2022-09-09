@@ -121,8 +121,8 @@ exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
           aria-hidden="true"
           class="checkbox__checked icon icon--checkbox-checked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -133,8 +133,8 @@ exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
           aria-hidden="true"
           class="checkbox__unchecked icon icon--checkbox-unchecked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -224,8 +224,8 @@ exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
           aria-hidden="true"
           class="checkbox__checked icon icon--checkbox-checked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -236,8 +236,8 @@ exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
           aria-hidden="true"
           class="checkbox__unchecked icon icon--checkbox-unchecked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -490,8 +490,8 @@ exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
           aria-hidden="true"
           class="checkbox__checked icon icon--checkbox-checked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -502,8 +502,8 @@ exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
           aria-hidden="true"
           class="checkbox__unchecked icon icon--checkbox-unchecked-large"
           focusable="false"
-          height="24px"
-          width="24px"
+          height="64px"
+          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use

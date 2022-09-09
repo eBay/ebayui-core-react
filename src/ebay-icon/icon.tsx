@@ -4,8 +4,10 @@ import { withForwardRef } from '../common/component-utils'
 import { randomId } from '../common/random-id'
 import { Icon } from './types'
 
-const SMALL_ICON_SIZE = 16
-const LARGE_ICON_SIZE = 64
+const iconPixelSizes: Record<string, number> = {
+    small: 16,
+    large: 64
+}
 const DEFAULT_ICON_SIZE = 24
 
 export type A11yVariant = 'label';
@@ -36,18 +38,18 @@ const EbayIcon: FC<EbayIconProps> = ({
         setRandomId(randomId())
     }, [])
 
-    const noTitle = a11yVariant === 'label'
+    const withAriaLabel = a11yVariant === 'label'
     const a11yTextId = a11yText && `icon-title-${rId}`
     const a11yProps = a11yText ? {
-        'aria-labelledby': noTitle ? undefined : a11yTextId,
-        'aria-label': noTitle ? a11yText : undefined,
+        'aria-labelledby': withAriaLabel ? undefined : a11yTextId,
+        'aria-label': withAriaLabel ? a11yText : undefined,
         role: 'img'
     } : {
         'aria-hidden': true
     }
-    const iconSize = `${getIconSize(name)}px`
     const prefixSvg = type === 'icon' ? 'icon-' : ''
     const kebabName = kebabCased(name)
+    const iconSize = `${getIconPixelSize(kebabName)}px`
     const className = classNames(extraClass,
         { [getIconClass(type, kebabName)]: !noSkinClasses }
     )
@@ -63,23 +65,21 @@ const EbayIcon: FC<EbayIconProps> = ({
             ref={forwardedRef}
             {...a11yProps}
         >
-            {a11yText && !noTitle && <title id={a11yTextId}>{a11yText}</title>}
+            {a11yText && !withAriaLabel && <title id={a11yTextId}>{a11yText}</title>}
             <use xlinkHref={`#${prefixSvg}${kebabName}`} />
         </svg>
     )
 }
 
-function getIconSize(iconName) {
+function getIconPixelSize(iconName: string) {
     const sizeCandidate = iconName.split('-').slice(-1)[0]
-    return {
-        small: SMALL_ICON_SIZE,
-        large: LARGE_ICON_SIZE
-    }[sizeCandidate] || DEFAULT_ICON_SIZE
+    return iconPixelSizes[sizeCandidate] || DEFAULT_ICON_SIZE
 }
 
-function kebabCased(str) {
+function kebabCased(str: string) {
     return str.replace(/([A-Z])/g, (s, c) => `-${c.toLowerCase()}`)
 }
+
 function getIconClass(type, name) {
     if (type === 'icon') {
         return `icon icon--${name}`
@@ -87,4 +87,5 @@ function getIconClass(type, name) {
     const dashedName = name.replace(type, `${type}-`)
     return `${type} ${dashedName}`
 }
+
 export default withForwardRef(EbayIcon)
