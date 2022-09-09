@@ -884,3 +884,112 @@ exports[`Storyshots ebay-tab Programmatically selected Tabs 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Storyshots ebay-tab Tabs with inputs 1`] = `
+<DocumentFragment>
+  <div
+    class="tabs"
+  >
+    <div
+      class="tabs__items"
+      role="tablist"
+    >
+      <div
+        aria-controls="default-tabpanel-0"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Tab 1
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 2
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-2"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-2"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 3
+        </span>
+      </div>
+    </div>
+    <div
+      class="tabs__content"
+    >
+      <div
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        id="default-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <label
+            for="name"
+          >
+            Name 
+          </label>
+          <input
+            id="name"
+            placeholder="john doe"
+            type="text"
+            value="John Doe"
+          />
+          <p>
+            My name is John Doe
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 2
+          </h3>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-2"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-2"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 3
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
