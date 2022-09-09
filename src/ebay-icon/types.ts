@@ -243,7 +243,6 @@ export type Icon =
     'showSecret' |
     'showSecretSmall' |
     'smallBox' |
-    'smallBox' |
     'smallCase' |
     'smallLetter' |
     'socialDiscord' |
