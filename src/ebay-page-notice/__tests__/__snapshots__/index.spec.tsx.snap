@@ -13,15 +13,15 @@ exports[`Storyshots ebay-page-notice Attention message 1`] = `
     >
       <svg
         aria-label="Attention"
-        class="icon icon--attention-filled"
+        class="icon icon--attention-filled-small"
         focusable="false"
-        height="24px"
+        height="16px"
         role="img"
-        width="24px"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention-filled"
+          xlink:href="#icon-attention-filled-small"
         />
       </svg>
     </div>
@@ -71,15 +71,15 @@ exports[`Storyshots ebay-page-notice Confirmation message 1`] = `
     >
       <svg
         aria-label="Success"
-        class="icon icon--confirmation-filled"
+        class="icon icon--confirmation-filled-small"
         focusable="false"
-        height="24px"
+        height="16px"
         role="img"
-        width="24px"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-confirmation-filled"
+          xlink:href="#icon-confirmation-filled-small"
         />
       </svg>
     </div>
@@ -116,15 +116,15 @@ exports[`Storyshots ebay-page-notice Information message 1`] = `
     >
       <svg
         aria-label="Information"
-        class="icon icon--information-filled"
+        class="icon icon--information-filled-small"
         focusable="false"
-        height="24px"
+        height="16px"
         role="img"
-        width="24px"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-information-filled"
+          xlink:href="#icon-information-filled-small"
         />
       </svg>
     </div>
@@ -161,15 +161,15 @@ exports[`Storyshots ebay-page-notice Message with footer 1`] = `
     >
       <svg
         aria-label="Congratulations"
-        class="icon icon--confirmation-filled"
+        class="icon icon--confirmation-filled-small"
         focusable="false"
-        height="24px"
+        height="16px"
         role="img"
-        width="24px"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-confirmation-filled"
+          xlink:href="#icon-confirmation-filled-small"
         />
       </svg>
     </div>

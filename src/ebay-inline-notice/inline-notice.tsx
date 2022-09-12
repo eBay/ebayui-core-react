@@ -45,7 +45,7 @@ const EbayInlineNotice: FC<Props> = ({
         <div className={classNames(className, `inline-notice ${!isGeneral ? `inline-notice--${status}` : ``}`)}>
             {!isGeneral ? (
                 <span className="inline-notice__header">
-                    <EbayIcon name={`${status}-filled` as Icon} a11yText={ariaLabel} a11yVariant="label" />
+                    <EbayIcon name={`${status}FilledSmall` as Icon} a11yText={ariaLabel} a11yVariant="label" />
                 </span>
             ) : null}
             <NoticeContent
