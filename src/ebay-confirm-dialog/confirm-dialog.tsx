@@ -7,8 +7,8 @@ const classPrefix = 'confirm-dialog'
 
 export interface Props<T = any> extends DialogBaseProps<T> {
     open?: boolean;
-    confirmText?: string;
-    rejectText?: string;
+    confirmText: string;
+    rejectText: string;
     onOpen?: () => void;
     onReject?: () => void;
     onConfirm?: () => void;
@@ -40,28 +40,24 @@ const EbayConfirmDialog: FC<Props> = ({
             onCloseBtnClick={onReject}
         >
             {rest.children}
-            {
-                (confirmText || rejectText) &&
-                <EbayDialogFooter>
-                    <EbayButton
-                        onClick={onReject}
-                        className="confirm-dialog__reject"
-                    >
-                        {rejectText}
-                    </EbayButton>
-                    <EbayButton
-                        ref={confirmBtnRef}
-                        priority="primary"
-                        onClick={onConfirm}
-                        id={confirmId}
-                        aria-describedby={mainId}
-                        className="confirm-dialog__confirm"
-                    >
-                        {confirmText}
-                    </EbayButton>
-                </EbayDialogFooter>
-            }
-
+            <EbayDialogFooter>
+                <EbayButton
+                    onClick={onReject}
+                    className="confirm-dialog__reject"
+                >
+                    {rejectText}
+                </EbayButton>
+                <EbayButton
+                    ref={confirmBtnRef}
+                    priority="primary"
+                    onClick={onConfirm}
+                    id={confirmId}
+                    aria-describedby={mainId}
+                    className="confirm-dialog__confirm"
+                >
+                    {confirmText}
+                </EbayButton>
+            </EbayDialogFooter>
         </DialogBaseWithState>
     )
 }
