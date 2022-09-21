@@ -404,3 +404,18 @@ exports[`Storyshots ebay-lightbox-dialog With Animation 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Storyshots ebay-lightbox-dialog With No Background Click 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      class="btn btn--secondary"
+    >
+      Open Dialog
+    </button>
+    <p>
+      Some outside content...
+    </p>
+  </div>
+</DocumentFragment>
+`;

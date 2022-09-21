@@ -22,10 +22,10 @@ const EbayLightboxDialog: FC<Props> = ({
     ...rest
 }) => (
     <DialogBaseWithState
+        buttonPosition="right"
         {...rest}
         a11yCloseText={a11yCloseText}
         classPrefix={classPrefix}
-        buttonPosition="right"
         onCloseBtnClick={onClose}
         onBackgroundClick={onClose}
         className={classNames(rest.className, `${classPrefix}--mask-fade`)}
