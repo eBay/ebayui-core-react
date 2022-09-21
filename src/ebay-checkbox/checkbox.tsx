@@ -5,7 +5,7 @@ import { EbayLabel, EbayLabelProps } from '../ebay-field'
 import { findComponent } from '../common/component-utils'
 
 type Size = 'default' | 'large'
-type InputProps = Omit<ComponentProps<'input'>, 'size'>
+type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange'>
 type EbayCheckboxProps = {
     size?: Size;
     onChange?: (e: ChangeEvent<HTMLInputElement>, value: string | number, checked: boolean) => void;
