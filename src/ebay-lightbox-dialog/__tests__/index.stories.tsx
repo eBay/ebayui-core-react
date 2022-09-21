@@ -124,5 +124,26 @@ export const _WithAnimation = () => {
         </div>
     );
 };
+export const _WithNoBackgroundClick = () => {
+    const [open, setOpen] = useState(false);
+    const close = () => setOpen(false);
+    return (
+        <div>
+            <button className="btn btn--secondary" onClick={() => setOpen(!open)}>
+                Open Dialog
+            </button>
+            <p>Some outside content...</p>
+            <EbayLightboxDialog open={open} onClose={close} buttonPosition="hidden">
+                <EbayDialogHeader>Heading</EbayDialogHeader>
+                {textParagraph}
+                <p><a href="http://www.ebay.com">www.ebay.com</a></p>
+                <EbayDialogFooter>
+                    <EbayButton priority="primary" onClick={close}>OK</EbayButton>
+                    <EbayButton onClick={close}>Cancel</EbayButton>
+                </EbayDialogFooter>
+            </EbayLightboxDialog>
+        </div>
+    );
+};
 
 export default story;
