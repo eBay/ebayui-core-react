@@ -7,6 +7,7 @@ import { EbayIcon } from '@ebay/ui-core-react/ebay-icon'
 import '@ebay/skin/icon'
 
 <EbayIcon name="arrowLeft" />
+<EbayIcon name="programBadgeEbayPlus" type="program-badge" />
 ```
 
 ### Notes

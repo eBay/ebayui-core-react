@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-icon all icons 1`] = `
+exports[`Storyshots ebay-icon All Icons 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -3616,234 +3616,6 @@ exports[`Storyshots ebay-icon all icons 1`] = `
       </tr>
       <tr>
         <td>
-          programBadgeAuthenticityGuaranteed
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--authenticity-guaranteed"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-authenticity-guaranteed"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeClickToCall
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--click-to-call"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-click-to-call"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeEbayPlus
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--ebay-plus"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-ebay-plus"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeEscrow
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--escrow"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-escrow"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeFreeWarranty
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--free-warranty"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-free-warranty"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeMoneyBackGuaranteeChf
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--money-back-guarantee-chf"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-money-back-guarantee-chf"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeMoneyBackGuaranteeEu
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--money-back-guarantee-eu"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-money-back-guarantee-eu"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeMoneyBackGuaranteeUk
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--money-back-guarantee-uk"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-money-back-guarantee-uk"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeMoneyBackGuaranteeUs
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--money-back-guarantee-us"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-money-back-guarantee-us"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeMoneyBackGuaranteeZl
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--money-back-guarantee-zl"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-money-back-guarantee-zl"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeTopRatedSeller
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--top-rated-seller"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-top-rated-seller"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          programBadgeVault
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="program-badge program-badge--vault"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#program-badge-vault"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
           purchases
         </td>
         <td>
@@ -4579,25 +4351,6 @@ exports[`Storyshots ebay-icon all icons 1`] = `
           >
             <use
               xlink:href="#icon-show-secret-small"
-            />
-          </svg>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          smallBox
-        </td>
-        <td>
-          <svg
-            aria-hidden="true"
-            class="icon icon--small-box"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlink:href="#icon-small-box"
             />
           </svg>
         </td>
@@ -5975,7 +5728,244 @@ exports[`Storyshots ebay-icon all icons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon custom color 1`] = `
+exports[`Storyshots ebay-icon All program-badge Icons 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          programBadgeAuthenticityGuaranteed
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--authenticity-guaranteed"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-authenticity-guaranteed"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeClickToCall
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--click-to-call"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-click-to-call"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeEbayPlus
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--ebay-plus"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-ebay-plus"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeEscrow
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--escrow"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-escrow"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeFreeWarranty
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--free-warranty"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-free-warranty"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeMoneyBackGuaranteeChf
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--money-back-guarantee-chf"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-money-back-guarantee-chf"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeMoneyBackGuaranteeEu
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--money-back-guarantee-eu"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-money-back-guarantee-eu"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeMoneyBackGuaranteeUk
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--money-back-guarantee-uk"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-money-back-guarantee-uk"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeMoneyBackGuaranteeUs
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--money-back-guarantee-us"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-money-back-guarantee-us"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeMoneyBackGuaranteeZl
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--money-back-guarantee-zl"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-money-back-guarantee-zl"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeTopRatedSeller
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--top-rated-seller"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-top-rated-seller"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          programBadgeVault
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="program-badge program-badge--vault"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#program-badge-vault"
+            />
+          </svg>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-icon Custom Color 1`] = `
 <DocumentFragment>
   <div>
     <style>
@@ -6047,7 +6037,7 @@ exports[`Storyshots ebay-icon custom color 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon custom initial size 1`] = `
+exports[`Storyshots ebay-icon Custom Initial Size 1`] = `
 <DocumentFragment>
   <div>
     <p>
@@ -6090,7 +6080,7 @@ exports[`Storyshots ebay-icon custom initial size 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon non-decorative 1`] = `
+exports[`Storyshots ebay-icon Non Decorative 1`] = `
 <DocumentFragment>
   <div>
     <svg
