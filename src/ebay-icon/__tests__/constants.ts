@@ -245,7 +245,6 @@ export const icons: Icon[] = [
     'showSecret',
     'showSecretSmall',
     'smallBox',
-    'smallBox',
     'smallCase',
     'smallLetter',
     'socialDiscord',
