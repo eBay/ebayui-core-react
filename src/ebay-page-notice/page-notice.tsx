@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
-import EbayIcon from '../ebay-icon/icon'
+import { EbayIcon, Icon } from '../ebay-icon'
 
 type Props = React.HTMLProps<HTMLElement> & {
     status?: 'general' | 'attention' | 'confirmation' | 'information',
@@ -30,7 +30,7 @@ const EbayPageNotice: FC<Props> = ({
             {status !== `general` ? (
                 <div className="page-notice__header" id={`${status}-status`}>
                     <EbayIcon
-                        name={`${status}-filled` as any}
+                        name={`${status}FilledSmall` as Icon}
                         a11yText={ariaLabel}
                         a11yVariant="label"
                     />

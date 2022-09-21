@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from 'react'
 import cx from 'classnames'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import NoticeContent from '../common/notice-utils/notice-content'
-import EbayIcon from '../ebay-icon/icon'
+import { EbayIcon, Icon } from '../ebay-icon'
 
 type Props = React.HTMLProps<HTMLElement> & {
     status?: 'general' | 'none' | 'attention' | 'confirmation' | 'information';
@@ -37,7 +37,7 @@ const EbaySectionNotice: FC<Props> = ({
             aria-roledescription={ariaRoleDescription}>
             {hasStatus && (
                 <div className="section-notice__header" id={`section-notice-${status}`}>
-                    <EbayIcon name={`${status}-filled` as any} a11yText={ariaLabel} a11yVariant="label" />
+                    <EbayIcon name={`${status}FilledSmall` as Icon} a11yText={ariaLabel} a11yVariant="label" />
                 </div>
             )}
             <NoticeContent {...content.props} type="section" />
