@@ -1,7 +1,6 @@
 export { EbayButton, EbayButtonCell, Size, Priority, EbayButtonProps } from './ebay-button'
 export { EbayCtaButton } from './ebay-cta-button'
 export { EbayEek, EbayEekProps } from './ebay-eek'
-export { EbayExpandButton } from './ebay-expand-button'
 export { EbayIconButton, EbayIconButtonProps } from './ebay-icon-button'
 export { EbayMenu, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriority } from './ebay-menu'
 export { EbayInlineNotice, NoticeStatus } from './ebay-inline-notice'
