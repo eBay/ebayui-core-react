@@ -9,6 +9,7 @@ type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange'>
 type EbayCheckboxProps = {
     size?: Size;
     onChange?: (e: ChangeEvent<HTMLInputElement>, value: string | number, checked: boolean) => void;
+    inputRef?: React.LegacyRef<HTMLInputElement>;
 }
 
 const isControlled = checked => typeof checked !== 'undefined'
@@ -22,6 +23,7 @@ const EbayCheckbox: FC<InputProps & EbayCheckboxProps> = ({
     defaultChecked = false,
     onChange = () => {},
     children,
+    inputRef,
     ...rest
 }) => {
     const [isChecked, setChecked] = useState(defaultChecked)
@@ -52,6 +54,7 @@ const EbayCheckbox: FC<InputProps & EbayCheckboxProps> = ({
                     type="checkbox"
                     checked={isControlled(checked) ? checked : isChecked}
                     onChange={handleChange}
+                    ref={inputRef}
                 />
                 <span className="checkbox__icon" hidden>
                     {iconChecked}{iconUnChecked}
