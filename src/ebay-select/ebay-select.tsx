@@ -8,7 +8,7 @@ import { useFloatingLabel } from '../ebay-floating-label/hooks'
 const isControlled = value => typeof value !== 'undefined'
 
 type SelectValue = string | ReadonlyArray<string> | number;
-export type EbaySelectProps = ComponentProps<'select'> & {
+export type EbaySelectProps = Omit<ComponentProps<'select'>, 'onChange'> & {
     borderless?: boolean;
     defaultValue?: SelectValue;
     onChange?: (e: ChangeEvent<HTMLSelectElement>, selectedIndex: number, newValue: SelectValue) => void;
