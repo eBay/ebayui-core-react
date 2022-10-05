@@ -75,10 +75,9 @@ describe('<EbayPageNotice>', () => {
         })
 
         it( 'should hide the notice when the user focuses the dismiss button and presses space', async () => {
-            const user = userEvent.setup();
             expect( wrapper.getByRole('region': {name:'Information'}) ).toBeVisible();
             await dismissButton.focus();
-            await user.keyboard(" "); // Press space
+            userEvent.type( dismissButton, " " );
             expect( wrapper.queryByRole('region': {name:'Information'}) ).toBeNull();
             expect( dismissMock ).toHaveBeenCalledWith(true);
         })
