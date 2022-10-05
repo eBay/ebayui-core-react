@@ -11,12 +11,9 @@ import {
 } from '../../index'
 
 storiesOf('ebay-section-title', module)
-    .add('Size', () => (
+    .add('Default', () => (
         <>
-            <EbaySectionTitle size="small">Small Section Title</EbaySectionTitle>
             <EbaySectionTitle>Default Section Title</EbaySectionTitle>
-            <EbaySectionTitle size="large">Large Section Title</EbaySectionTitle>
-            <EbaySectionTitle size="giant">Giant Section Title</EbaySectionTitle>
         </>
     ))
     .add('With Subtitle', () => (<>

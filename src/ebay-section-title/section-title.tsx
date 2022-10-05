@@ -9,23 +9,19 @@ import {
 } from './index'
 import Cta from './cta'
 
-export type EbaySectionTitleProps = Omit<HTMLProps<HTMLDivElement>, 'title'|'size'> & {
-size?: 'small' | 'large' | 'giant';
-href?: string;
-ctaText?: ReactNode;
+export type EbaySectionTitleProps = Omit<HTMLProps<HTMLDivElement>, 'title'> & {
+    href?: string;
+    ctaText?: ReactNode;
 }
 
 const EbaySectionTitle: FC<EbaySectionTitleProps> = ({
     href,
     ctaText,
-    size,
     className,
     children,
     ...rest
 }) => {
-    const sectionTitleClass = classNames(className, 'section-title', {
-        [`section-title--${size}`]: size
-    })
+    const sectionTitleClass = classNames(className, 'section-title')
     const title = findComponent(children, EbaySectionTitleTitle)
     const subtitle = findComponent(children, EbaySectionTitleSubtitle)
     const info = findComponent(children, EbaySectionTitleInfo)

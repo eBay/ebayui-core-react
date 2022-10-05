@@ -1,60 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-section-title Size 1`] = `
-Array [
+exports[`Storyshots ebay-section-title Default 1`] = `
+<div
+  className="section-title"
+>
   <div
-    className="section-title section-title--small"
+    className="section-title__title-container"
   >
-    <div
-      className="section-title__title-container"
+    <h2
+      className="section-title__title"
     >
-      <h2
-        className="section-title__title"
-      >
-        Small Section Title
-      </h2>
-    </div>
-  </div>,
-  <div
-    className="section-title"
-  >
-    <div
-      className="section-title__title-container"
-    >
-      <h2
-        className="section-title__title"
-      >
-        Default Section Title
-      </h2>
-    </div>
-  </div>,
-  <div
-    className="section-title section-title--large"
-  >
-    <div
-      className="section-title__title-container"
-    >
-      <h2
-        className="section-title__title"
-      >
-        Large Section Title
-      </h2>
-    </div>
-  </div>,
-  <div
-    className="section-title section-title--giant"
-  >
-    <div
-      className="section-title__title-container"
-    >
-      <h2
-        className="section-title__title"
-      >
-        Giant Section Title
-      </h2>
-    </div>
-  </div>,
-]
+      Default Section Title
+    </h2>
+  </div>
+</div>
 `;
 
 exports[`Storyshots ebay-section-title With CTA 1`] = `
