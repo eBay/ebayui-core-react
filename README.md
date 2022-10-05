@@ -24,7 +24,6 @@ eBayUI React components
 * [ ] `ebay-details`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
 * [x] [ebay-eek](src/ebay-eek)
-* [x] [ebay-expand-button](src/ebay-expand-button)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-menu` (in progress...)
 * [ ] `ebay-fake-menu-button` (in progress...)
