@@ -29,7 +29,7 @@ const EbayPageNotice: FC<Props> = ({
     const handleDismissedClicked = () => {
         setDismissed(true)
         if (onDismissed) {
-            onDismissed(dismissed)
+            onDismissed(true)
         }
     }
 
