@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react';
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbaySelect, EbaySelectOption, EbayButton } from '../../index'
@@ -92,7 +92,9 @@ storiesOf(`ebay-select`, module)
     .add(`Controlled component`, () => {
         const TestControlledComponent = () => {
             const [selectedValue, setSelectedValue] = useState('UK')
-            const handleChange = (e) => setSelectedValue(e.target.value)
+            const handleChange = (e: ChangeEvent<HTMLSelectElement>, selectedIndex: number, newValue: string) => {
+                setSelectedValue(newValue)
+            }
 
             return (
                 <div style={{ width: `500px` }}>
