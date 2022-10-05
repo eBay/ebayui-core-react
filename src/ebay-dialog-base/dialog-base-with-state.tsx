@@ -7,7 +7,7 @@ export const DialogBaseWithState = ({
     isModal,
     open,
     children,
-    animated,
+    animated = true,
     ...rest
 }: DialogBaseProps<HTMLElement>): ReactElement => {
     const shouldRenderModal = isModal !== false
