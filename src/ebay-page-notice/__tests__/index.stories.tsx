@@ -1,7 +1,6 @@
 import React  from 'react'
 import { storiesOf } from '@storybook/react'
-import { EbayPageNotice, EbayNoticeContent, EbayPageNoticeTitle, EbayPageNoticeFooter } from '..'
-import {EbayButton} from '../../ebay-button'
+import { EbayPageNotice, EbayNoticeContent, EbayPageNoticeTitle, EbayPageNoticeFooter, EbayPageNoticeCTA } from '..'
 
 storiesOf(`ebay-page-notice`, module)
 
@@ -54,5 +53,28 @@ storiesOf(`ebay-page-notice`, module)
             <EbayPageNoticeFooter>
                 <a href="https://ebay.com">Action</a>
             </EbayPageNoticeFooter>
+        </EbayPageNotice>
+    </>))
+
+    .add(`Dismissible notice`, () => (<>
+        <EbayPageNotice status="information" aria-label="Information" a11yDismissText="Close">
+            <EbayNoticeContent>
+                <p>
+                    <strong>Good news!</strong>&nbsp;
+                    You get free shipping on your next pair of shoes! <a href="#">Learn more</a>.
+                </p>
+            </EbayNoticeContent>
+        </EbayPageNotice>
+    </>))
+
+    .add(`Dismissible message with CTA`, () => (<>
+        <EbayPageNotice status="information" aria-label="Congratulations" a11yDismissText="Close">
+            <EbayNoticeContent>
+                <EbayPageNoticeTitle>Your order&apos;s in!</EbayPageNoticeTitle>
+                <p>We&apos;ll email updates to jonsnow@gmail.com. You should get it by Thu, Sept 22.</p>
+            </EbayNoticeContent>
+            <EbayPageNoticeCTA>
+                <a href="https://ebay.com">Action</a>
+            </EbayPageNoticeCTA>
         </EbayPageNotice>
     </>))

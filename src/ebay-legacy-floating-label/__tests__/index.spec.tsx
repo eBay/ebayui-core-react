@@ -6,13 +6,14 @@ import { initStoryshots } from '../../../config/jest/storyshots'
 
 describe('<EbayLegacyFloatingLabel>', () => {
     describe('on input change', () => {
-        it('should fire an event', () => {
+        it('should fire an event', async () => {
             const spy = jest.fn()
             const { getByLabelText } = render(
                 <EbayLegacyFloatingLabel id="input" onChange={spy} label="look ma, I float" />
             )
             const input = getByLabelText('look ma, I float')
-            userEvent.type(input, '123')
+            input.focus();
+            await userEvent.type(input, '123')
 
             expect(spy).toBeCalled()
         })

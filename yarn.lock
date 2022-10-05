@@ -1142,10 +1142,10 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@ebay/skin@^14":
-  version "14.2.1"
-  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-14.2.1.tgz#b7d2e5a2ddc6a48351ea9281648baa98f8efc3ff"
-  integrity sha512-/DTGB50bwxQELR+kvjy+sMK0ED3p571DMqdYZcaFoCd3QrYe3pcR+nSfSgFx9cSHR91ijOKTBQ9KvUykM4tgOQ==
+"@ebay/skin@^15":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-15.0.0.tgz#948610616825d4955d59618167a50cd4d696fd7e"
+  integrity sha512-O6gJ66ZHzU+qq1FUoOPANe1hh612UgiHdClxX/kh64HJqKPuSN+Zot1DtQIawZn+w5F34yGtszlQS7Lt43THww==
 
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"
@@ -2590,12 +2590,10 @@
     "@testing-library/dom" "^8.0.0"
     "@types/react-dom" "<18.0.0"
 
-"@testing-library/user-event@^12":
-  version "12.8.3"
-  resolved "https://registry.npmjs.org/@testing-library/user-event/-/user-event-12.8.3.tgz#1aa3ed4b9f79340a1e1836bc7f57c501e838704a"
-  integrity sha512-IR0iWbFkgd56Bu5ZI/ej8yQwrkCv8Qydx6RzwbKz9faXazR/+5tvYKsZQgyXJiwgpcva127YO6JcWy7YlCfofQ==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
+"@testing-library/user-event@^14":
+  version "14.4.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.3.tgz#af975e367743fa91989cd666666aec31a8f50591"
+  integrity sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==
 
 "@types/aria-query@^4.2.0":
   version "4.2.2"
