@@ -267,7 +267,7 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         aria-checked="false"
         aria-hidden="true"
         aria-label="item 1 (5 unread items)"
-        class="menu__item"
+        class="menu__item menu__item--badged"
         role="menuitem"
         tabindex="0"
       >
@@ -297,7 +297,7 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         aria-checked="false"
         aria-hidden="true"
         aria-label="item 2 (23 unread items)"
-        class="menu__item"
+        class="menu__item menu__item--badged"
         role="menuitem"
         tabindex="0"
       >
