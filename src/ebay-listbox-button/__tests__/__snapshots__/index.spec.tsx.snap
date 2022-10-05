@@ -7,17 +7,17 @@ exports[`Storyshots ebay-listbox-button Borderless 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="expand-btn expand-btn--borderless"
+    className="btn btn--form btn--borderless"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 2
       </span>
@@ -60,17 +60,17 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="expand-btn"
+    className="btn btn--form"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 1
       </span>
@@ -122,17 +122,17 @@ Array [
       aria-expanded={false}
       aria-haspopup="listbox"
       aria-labelledby="listbox-button__label expand-btn-text"
-      className="expand-btn"
+      className="btn btn--form"
       onClick={[Function]}
       onKeyUp={[Function]}
       onMouseDown={[Function]}
       type="button"
     >
       <span
-        className="expand-btn__cell"
+        className="btn__cell"
       >
         <span
-          className="expand-btn__text"
+          className="btn__text"
           id="expand-btn-text"
         >
           Option 2
@@ -177,17 +177,17 @@ exports[`Storyshots ebay-listbox-button Default 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="expand-btn"
+    className="btn btn--form"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 2
       </span>
@@ -230,7 +230,7 @@ exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="expand-btn"
+    className="btn btn--form"
     disabled={true}
     onClick={[Function]}
     onKeyUp={[Function]}
@@ -238,10 +238,10 @@ exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 2
       </span>
@@ -284,22 +284,22 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="expand-btn expand-btn--floating-label"
+    className="btn btn--form btn--floating-label"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__floating-label"
+        className="btn__floating-label"
       >
         Select
       </span>
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 1
       </span>
@@ -342,17 +342,17 @@ exports[`Storyshots ebay-listbox-button Fluid 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="expand-btn"
+    className="btn btn--form"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 2
       </span>
@@ -396,17 +396,17 @@ exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
     aria-expanded={false}
     aria-haspopup="listbox"
     aria-invalid="true"
-    className="expand-btn"
+    className="btn btn--form"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 2
       </span>
@@ -450,17 +450,17 @@ exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
     <button
       aria-expanded={false}
       aria-haspopup="listbox"
-      className="expand-btn"
+      className="btn btn--form"
       onClick={[Function]}
       onKeyUp={[Function]}
       onMouseDown={[Function]}
       type="button"
     >
       <span
-        className="expand-btn__cell"
+        className="btn__cell"
       >
         <span
-          className="expand-btn__text"
+          className="btn__text"
         >
           California
         </span>
@@ -528,17 +528,17 @@ exports[`Storyshots ebay-listbox-button Too many options 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="expand-btn"
+    className="btn btn--form"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
     type="button"
   >
     <span
-      className="expand-btn__cell"
+      className="btn__cell"
     >
       <span
-        className="expand-btn__text"
+        className="btn__text"
       >
         Option 2
       </span>
