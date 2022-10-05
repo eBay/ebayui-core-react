@@ -12,6 +12,7 @@ import {
     EbayNoticeContent,
     EbayPageNoticeTitle,
     EbayPageNoticeFooter,
+    EbayPageNoticeCTA
 } from '@ebay/ui-core-react/ebay-page-notice'
 ```
 
@@ -46,3 +47,4 @@ import "@ebay/skin/page-notice";
 | `status`     | String ( `"general"`,`"attention"`, `"confirmation"`, or `"information"`) | No       | Determines the style and type of notice to be displayed                                                                                     | `"general"` |
 | `aria-label` | String                                                                        | No       | The description of the notice itself for screen readers. Check out [this issue](https://github.com/eBay/skin/issues/1001) for more context. | -             |
 | `children`   | React Node                                                                    | No       | The content to be displayed within the notice                                                                                               | -             |
+| `a11yDismissText` | String                                                                   | No       | Determines if the notice will have a dismiss button.  Acts as the aria-label for the dismiss button. Should not be used with a footer.      | -             |
