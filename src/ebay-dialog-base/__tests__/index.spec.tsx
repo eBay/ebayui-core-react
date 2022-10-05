@@ -31,7 +31,13 @@ describe('DialogBase', () => {
     });
 
     it('given a closed dialog should return null', () => {
-        const wrapper = render(<DialogBaseWithState classPrefix="drawer-dialog" className="custom-class" />);
+        const wrapper = render(
+            <DialogBaseWithState
+                animated={false}
+                classPrefix="drawer-dialog"
+                className="custom-class"
+            />
+        );
         expect(wrapper.container.childElementCount).toBe(0);
     });
 
