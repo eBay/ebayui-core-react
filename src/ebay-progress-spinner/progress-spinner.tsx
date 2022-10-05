@@ -2,7 +2,7 @@ import React, { ComponentProps, FC } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 
-export type SpinnerSize = 'small' | 'large'
+export type SpinnerSize = 'default' | 'small' | 'large'
 
 type EbayProgressSpinnerProps = {
     size?: SpinnerSize;
@@ -12,12 +12,13 @@ type EbayProgressSpinnerProps = {
 type SpanProps = Omit<ComponentProps<'span'>, 'size'>;
 
 const sizeClass: { [key in SpinnerSize]: string } = {
-    'small': '',
+    'default': '',
+    'small': 'progress-spinner--small',
     'large': 'progress-spinner--large'
 }
 
 const EbayProgressSpinner: FC<SpanProps & EbayProgressSpinnerProps> = ({
-    size = 'SMALL',
+    size = 'default',
     'aria-label': ariaLabel = 'Busy',
     className,
     ...rest
