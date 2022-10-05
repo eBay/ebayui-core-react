@@ -260,19 +260,21 @@ export type Icon =
     'sortUpSmall' |
     'spinner' |
     'spinnerLarge' |
+    'spinnerSmall' |
     'starDynamic' |
-    'starEmpty' |
+    'starEmptyLarge' |
     'starEmptySmall' |
-    'starFull' |
+    'starFilledLarge' |
+    'starFilledSmall' |
     'starFullSmall' |
-    'starHalf' |
+    'starHalfLarge' |
     'starHalfSmall' |
     'starUndefined' |
     'starUndefinedSmall' |
     'stepperAttention' |
     'stepperConfirmation' |
     'stepperCurrent' |
-    'stepperInformation' |
+    'stepperUpcoming' |
     'store' |
     'storeLarge' |
     'suitcase' |
