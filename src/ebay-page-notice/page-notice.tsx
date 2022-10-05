@@ -58,7 +58,7 @@ const EbayPageNotice: FC<Props> = ({
                                 aria-label={a11yDismissText}
                                 className="fake-link page-notice__dismiss"
                                 onClick={handleDismissedClicked}>
-                                <EbayIcon name="close-small" />
+                                <EbayIcon name={'close-small' as Icon} />
                             </button>
                         </div>
                     )}
