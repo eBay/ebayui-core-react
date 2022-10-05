@@ -4699,6 +4699,25 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
+          spinnerSmall
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--spinner-small"
+            focusable="false"
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-spinner-small"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
           starDynamic
         </td>
         <td>
@@ -4718,19 +4737,19 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
-          starEmpty
+          starEmptyLarge
         </td>
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--star-empty"
+            class="icon icon--star-empty-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-star-empty"
+              xlink:href="#icon-star-empty-large"
             />
           </svg>
         </td>
@@ -4756,19 +4775,38 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
-          starFull
+          starFilledLarge
         </td>
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--star-full"
+            class="icon icon--star-filled-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-star-full"
+              xlink:href="#icon-star-filled-large"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          starFilledSmall
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--star-filled-small"
+            focusable="false"
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-star-filled-small"
             />
           </svg>
         </td>
@@ -4794,19 +4832,19 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
-          starHalf
+          starHalfLarge
         </td>
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--star-half"
+            class="icon icon--star-half-large"
             focusable="false"
-            height="24px"
-            width="24px"
+            height="64px"
+            width="64px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-star-half"
+              xlink:href="#icon-star-half-large"
             />
           </svg>
         </td>
@@ -4927,19 +4965,19 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
-          stepperInformation
+          stepperUpcoming
         </td>
         <td>
           <svg
             aria-hidden="true"
-            class="icon icon--stepper-information"
+            class="icon icon--stepper-upcoming"
             focusable="false"
             height="24px"
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-stepper-information"
+              xlink:href="#icon-stepper-upcoming"
             />
           </svg>
         </td>

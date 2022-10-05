@@ -1,4 +1,4 @@
-import React, { useState, useRef, ReactElement } from 'react'
+import React, { useState, useRef, ReactElement, ChangeEvent } from 'react';
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayCheckbox, EbayLabel } from '../../index'
@@ -97,9 +97,9 @@ storiesOf(`ebay-checkbox`, module)
             const [isChecked, setChecked] = useState(true)
             const [isDisabled, setDisabled] = useState(false)
             const counter = useRef(0)
-            const handleOnChange = (e) => {
+            const handleOnChange = (e: ChangeEvent<HTMLInputElement>, value: string | number, checked: boolean) => {
                 if (counter.current < 4) {
-                    setChecked(e.target.checked)
+                    setChecked(checked)
                 } else {
                     setDisabled(true)
                 }
