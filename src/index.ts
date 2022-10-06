@@ -44,6 +44,6 @@ export {
     fieldLayoutType, fieldDescriptionType, fieldDescriptionPosition
 } from './ebay-field'
 export {
-    EbayProgressStepper, EbayProgressStep, EbayProgressTitle, StepperDirection, StepType, StepState
+    EbayProgressStepper, EbayProgressStep, EbayProgressTitle, StepperDirection, StepState
 } from './ebay-progress-stepper'
 export { EbayListboxButton, EbayListboxButtonOption } from './ebay-listbox-button'
