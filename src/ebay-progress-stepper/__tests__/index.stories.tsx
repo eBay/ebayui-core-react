@@ -20,7 +20,7 @@ storiesOf(`ebay-progress-stepper`, module)
             </EbayProgressStepper>
         </div>
     ))
-    .add(`Upcoming`, () => (
+    .add(`Default state: upcoming`, () => (
         <div style={{ padding: 50 }}>
             <EbayProgressStepper defaultState="upcoming">
                 <Step>
@@ -42,7 +42,7 @@ storiesOf(`ebay-progress-stepper`, module)
             </EbayProgressStepper>
         </div>
     ))
-    .add(`Complete`, () => (
+    .add(`Default state: complete`, () => (
         <div style={{ padding: 50 }}>
             <EbayProgressStepper defaultState="complete">
                 <Step>Started</Step>
@@ -52,24 +52,13 @@ storiesOf(`ebay-progress-stepper`, module)
             </EbayProgressStepper>
         </div>
     ))
-    .add(`Icons`, () => (
+    .add(`Blocked`, () => (
         <div style={{ padding: 50 }}>
             <EbayProgressStepper>
-                <Step>
-                    <Title>Paid</Title>
-                    July 3rd
-                </Step>
-                <Step type="information">
-                    <Title>Shipping Information</Title>
-                    July 4th
-                </Step>
-                <Step current type="attention">
-                    <Title>Transit Problem</Title>
-                    July 5th
-                </Step>
-                <Step>
-                    <Title>Delivered</Title>
-                </Step>
+                <Step>Started</Step>
+                <Step>Shipped</Step>
+                <Step state="blocked" current>Blocked</Step>
+                <Step>Delivered</Step>
             </EbayProgressStepper>
         </div>
     ))
@@ -77,23 +66,14 @@ storiesOf(`ebay-progress-stepper`, module)
         <div style={{ padding: 50 }}>
             <EbayProgressStepper>
                 <Step>
-                    <Title as='h2'>Huge</Title>
+                    <Title as='h1'>H1</Title>
                 </Step>
                 <Step current>
-                    <Title as='h2'>Huge</Title>
+                    <Title as='small'>Small</Title>
                 </Step>
                 <Step>
-                    <Title as='h2'>Huge</Title>
+                    <Title as='h2'>H2</Title>
                 </Step>
-            </EbayProgressStepper>
-        </div>
-    ))
-    .add(`Custom numbers (deprecated)`, () => (
-        <div style={{ padding: 50, '--progress-stepper-badge-current-color': '#3665f3' }}>
-            <EbayProgressStepper>
-                <Step number={3}>Three</Step>
-                <Step number={4} current>Four</Step>
-                <Step number={5}>Five</Step>
             </EbayProgressStepper>
         </div>
     ))
@@ -128,7 +108,7 @@ storiesOf(`ebay-progress-stepper`, module)
             const defaultState = (): StepState => {
                 if (currentNumber < MIN) return 'upcoming'
                 if (currentNumber > MAX) return 'complete'
-                return 'active'
+                return 'complete'
             }
 
             return (
@@ -144,7 +124,7 @@ storiesOf(`ebay-progress-stepper`, module)
                         }}>Back</EbayButton>
                         &nbsp;
                         <EbayButton onClick={() => {
-                            setCurrentNumber(Math.min(MAX + 1, currentNumber + 1))
+                            setCurrentNumber(Math.min(MAX, currentNumber + 1))
                         }}>Forward</EbayButton>
                     </p>
                 </div>

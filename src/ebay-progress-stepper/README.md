@@ -43,7 +43,7 @@ customize the layout (`className` or `style`)
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
 `direction` | String | No | No | Either `column` or `row` (default). Will display stepper as a vertical column or horizontal row.
-`defaultState` | String | Yes | No | Either `complete`, `upcoming` or `active` (default). Defines the default state for all steps.
+`defaultState` | String | Yes | No | Either `complete`, `upcoming` or `blocked` (default). Defines the default state for all steps.
 
 ### EbayProgressStep
 
@@ -54,8 +54,6 @@ This component is used to render each step. It renders an icon, a title and a te
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
 `current` | Boolean | No | No | The current step. Only first step that has this property will be considered current. All steps before will be rendered as complete, and all after will render as upcoming. If not present on any step, then will render based on `defaultState` property
-`type` | String | No | No | Either `attention`, `information`, or `complete`. This takes prescedence over current. Will render the current step with the given icon and color
-`number` | Number | No | No | Renders the current step with the given number. Overrides the default number counting for this step
 
 ### EbayProgressTitle
 

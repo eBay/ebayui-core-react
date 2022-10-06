@@ -1,5 +1,3 @@
 export type StepperDirection = 'column' | 'row';
 
-export type StepType = 'complete' | 'information' | 'attention';
-
-export type StepState = 'complete' | 'upcoming' | 'active';
+export type StepState = 'complete' | 'blocked' | 'upcoming';
