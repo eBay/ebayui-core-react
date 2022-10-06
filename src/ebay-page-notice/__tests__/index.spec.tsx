@@ -1,7 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbayNoticeContent, EbayPageNotice, EbayPageNoticeTitle } from '../';
+import userEvent from '@testing-library/user-event'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -43,6 +44,42 @@ describe('<EbayPageNotice>', () => {
                 render(<EbayPageNotice />)
             }).toThrowError(`EbayPageNotice: Please use a EbayNoticeContent that defines the content of the notice`);
             (console.error as jest.Mock).mockRestore()
+        })
+    })
+
+    describe('when allyDismissText is provided...', () => {
+        let wrapper;
+        let dismissButton;
+        const dismissMock = jest.fn();
+
+        beforeEach( async () => {
+            wrapper = render(
+                <EbayPageNotice status="information" aria-label="Information" a11yDismissText="Close" onDismiss={dismissMock}>
+                    <EbayNoticeContent>
+                        <p>Content</p>
+                    </EbayNoticeContent>
+                </EbayPageNotice>
+            )
+            dismissButton = await wrapper.getByRole('button', {name:'Close'});
+        })
+
+        it( 'should add a close button with the provided label.', () => {
+            expect( dismissButton ).not.toBeNull();
+        })
+
+        it( 'should hide the notice when the dismiss button is clicked.', async () => {
+            expect( wrapper.getByRole('region': {name:'Information'}) ).toBeVisible();
+            await dismissButton.click();
+            expect( wrapper.queryByRole('region': {name:'Information'}) ).toBeNull();
+            expect( dismissMock ).toHaveBeenCalled();
+        })
+
+        it( 'should hide the notice when the user focuses the dismiss button and presses space', async () => {
+            expect( wrapper.getByRole('region': {name:'Information'}) ).toBeVisible();
+            await dismissButton.focus();
+            userEvent.type( dismissButton, " " );
+            expect( wrapper.queryByRole('region': {name:'Information'}) ).toBeNull();
+            expect( dismissMock ).toHaveBeenCalled();
         })
     })
 })

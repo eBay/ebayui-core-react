@@ -13,7 +13,7 @@ describe('<EbayCheckbox>', () => {
                 <EbayCheckbox aria-label="checkbox" onChange={spy} />
             )
             const input = getByLabelText('checkbox')
-            userEvent.click(input)
+            userEvent.click(input);
             expect(spy).toBeCalled()
         })
     })
