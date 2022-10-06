@@ -17,7 +17,7 @@ exports[`Storyshots ebay-lightbox-dialog Always Opened 1`] = `
         aria-hidden="false"
         aria-labelledby="dialog-title-abc123"
         arial-modal="true"
-        class="lightbox-dialog lightbox-dialog--mask-fade"
+        class="lightbox-dialog lightbox-dialog--mask-fade lightbox-dialog--show-init"
         role="dialog"
       >
         <div
@@ -103,6 +103,75 @@ exports[`Storyshots ebay-lightbox-dialog Default 1`] = `
     <p>
       Some outside content...
     </p>
+    <div>
+      <div
+        aria-labelledby="dialog-title-abc123"
+        arial-modal="true"
+        class="lightbox-dialog lightbox-dialog--mask-fade"
+        hidden=""
+        role="dialog"
+      >
+        <div
+          class="lightbox-dialog__window lightbox-dialog__window--fade"
+        >
+          <div
+            class="lightbox-dialog__header"
+          >
+            <h2
+              id="dialog-title-abc123"
+            >
+              Heading
+            </h2>
+            <button
+              aria-label="Close Dialog"
+              class="icon-btn lightbox-dialog__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close"
+                focusable="false"
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="lightbox-dialog__main"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              <a
+                href="http://www.ebay.com"
+              >
+                www.ebay.com
+              </a>
+            </p>
+          </div>
+          <div
+            class="lightbox-dialog__footer"
+          >
+            <button
+              class="btn btn--primary"
+            >
+              OK
+            </button>
+            <button
+              class="btn btn--secondary"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -115,6 +184,127 @@ exports[`Storyshots ebay-lightbox-dialog Disable Dialog Close 1`] = `
     >
       Show Dialog
     </button>
+    <div>
+      <div
+        aria-labelledby="dialog-title-abc123"
+        arial-modal="true"
+        class="lightbox-dialog lightbox-dialog--mask-fade"
+        hidden=""
+        role="dialog"
+      >
+        <div
+          class="lightbox-dialog__window lightbox-dialog__window--fade"
+        >
+          <div
+            class="lightbox-dialog__header"
+          >
+            <h2
+              id="dialog-title-abc123"
+            >
+              Heading
+            </h2>
+            <button
+              aria-label="Close Dialog"
+              class="icon-btn lightbox-dialog__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close"
+                focusable="false"
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="lightbox-dialog__main"
+          >
+            <p>
+              Unselect the following checkbox to prevent user to close the dialog
+            </p>
+            <span
+              class="checkbox"
+              style="align-items: center;"
+            >
+              <input
+                checked=""
+                class="checkbox__control"
+                id="checkbox-closeable"
+                type="checkbox"
+              />
+              <span
+                class="checkbox__icon"
+                hidden=""
+              >
+                <svg
+                  aria-hidden="true"
+                  class="checkbox__checked icon icon--checkbox-checked"
+                  focusable="false"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-checkbox-checked"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="checkbox__unchecked icon icon--checkbox-unchecked"
+                  focusable="false"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-checkbox-unchecked"
+                  />
+                </svg>
+              </span>
+            </span>
+            <label
+              class="field__label field__label--end"
+              for="checkbox-closeable"
+            >
+              Enable closing dialog
+            </label>
+            <p>
+              Normally, the dialog can be closed by either:
+            </p>
+            <ul>
+              <li>
+                clicking [X] icon on top of the dialog
+              </li>
+              <li>
+                clicking OK button
+              </li>
+              <li>
+                clicking the overlay or area outside the dialog
+              </li>
+              <li>
+                Press Esc key on keyboard
+              </li>
+            </ul>
+            <p />
+          </div>
+          <div
+            class="lightbox-dialog__footer"
+          >
+            <button
+              class="btn btn--secondary"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -136,7 +326,7 @@ exports[`Storyshots ebay-lightbox-dialog Mini Dialog 1`] = `
         aria-hidden="false"
         aria-labelledby="dialog-title-abc123"
         arial-modal="true"
-        class="lightbox-dialog lightbox-dialog--mask-fade"
+        class="lightbox-dialog lightbox-dialog--mask-fade lightbox-dialog--show-init"
         role="dialog"
       >
         <div
@@ -219,7 +409,7 @@ exports[`Storyshots ebay-lightbox-dialog Scrolling Content 1`] = `
         aria-hidden="false"
         aria-labelledby="dialog-title-abc123"
         arial-modal="true"
-        class="lightbox-dialog lightbox-dialog--mask-fade"
+        class="lightbox-dialog lightbox-dialog--mask-fade lightbox-dialog--show-init"
         role="dialog"
       >
         <div
@@ -416,6 +606,57 @@ exports[`Storyshots ebay-lightbox-dialog With No Background Click 1`] = `
     <p>
       Some outside content...
     </p>
+    <div>
+      <div
+        aria-labelledby="dialog-title-abc123"
+        arial-modal="true"
+        class="lightbox-dialog lightbox-dialog--mask-fade"
+        hidden=""
+        role="dialog"
+      >
+        <div
+          class="lightbox-dialog__window lightbox-dialog__window--fade"
+        >
+          <div
+            class="lightbox-dialog__header"
+          >
+            <h2
+              id="dialog-title-abc123"
+            >
+              Heading
+            </h2>
+          </div>
+          <div
+            class="lightbox-dialog__main"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              <a
+                href="http://www.ebay.com"
+              >
+                www.ebay.com
+              </a>
+            </p>
+          </div>
+          <div
+            class="lightbox-dialog__footer"
+          >
+            <button
+              class="btn btn--primary"
+            >
+              OK
+            </button>
+            <button
+              class="btn btn--secondary"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;

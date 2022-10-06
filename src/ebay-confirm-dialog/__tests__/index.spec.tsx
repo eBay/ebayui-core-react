@@ -15,10 +15,12 @@ describe('<EbayConfirmDialog>', () => {
     beforeEach(() => {
         wrapper = render(
             <EbayConfirmDialog
+                animated={false}
                 confirmText="Confirm"
                 rejectText="Reject"
                 open
-                onReject={closeDrawerHandler}>
+                onReject={closeDrawerHandler}
+            >
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

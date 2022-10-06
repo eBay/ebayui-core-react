@@ -12,8 +12,10 @@ describe('<EbayLightboxDialog>', () => {
     beforeEach(() => {
         render(
             <EbayLightboxDialog
+                animated={false}
                 open
-                onClose={closeDrawerHandler}>
+                onClose={closeDrawerHandler}
+            >
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
