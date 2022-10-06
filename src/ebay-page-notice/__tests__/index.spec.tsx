@@ -54,7 +54,7 @@ describe('<EbayPageNotice>', () => {
 
         beforeEach( async () => {
             wrapper = render(
-                <EbayPageNotice status="information" aria-label="Information" a11yDismissText="Close" onDismissed={dismissMock}>
+                <EbayPageNotice status="information" aria-label="Information" a11yDismissText="Close" onDismiss={dismissMock}>
                     <EbayNoticeContent>
                         <p>Content</p>
                     </EbayNoticeContent>
@@ -71,7 +71,7 @@ describe('<EbayPageNotice>', () => {
             expect( wrapper.getByRole('region': {name:'Information'}) ).toBeVisible();
             await dismissButton.click();
             expect( wrapper.queryByRole('region': {name:'Information'}) ).toBeNull();
-            expect( dismissMock ).toHaveBeenCalledWith(true);
+            expect( dismissMock ).toHaveBeenCalled();
         })
 
         it( 'should hide the notice when the user focuses the dismiss button and presses space', async () => {
@@ -79,7 +79,7 @@ describe('<EbayPageNotice>', () => {
             await dismissButton.focus();
             userEvent.type( dismissButton, " " );
             expect( wrapper.queryByRole('region': {name:'Information'}) ).toBeNull();
-            expect( dismissMock ).toHaveBeenCalledWith(true);
+            expect( dismissMock ).toHaveBeenCalled();
         })
     })
 })
