@@ -13,8 +13,8 @@ storiesOf(`ebay-page-notice`, module)
     .add(`Confirmation message`, () => (<>
         <EbayPageNotice status="confirmation" aria-label="Success">
             <EbayNoticeContent>
+                <EbayPageNoticeTitle>Congrats!</EbayPageNoticeTitle>
                 <p>
-                    <strong>Congrats!</strong>&nbsp;
                     You just listed <a href="#">Spam and Eggs From the Cows Perspective</a> (paperback).
                 </p>
             </EbayNoticeContent>
@@ -24,8 +24,8 @@ storiesOf(`ebay-page-notice`, module)
     .add(`Information message`, () => (<>
         <EbayPageNotice status="information" aria-label="Information">
             <EbayNoticeContent>
+                <EbayPageNoticeTitle>Good news!</EbayPageNoticeTitle>
                 <p>
-                    <strong>Good news!</strong>&nbsp;
                     You get free shipping on your next pair of shoes! <a href="#">Learn more</a>.
                 </p>
             </EbayNoticeContent>
@@ -35,8 +35,8 @@ storiesOf(`ebay-page-notice`, module)
     .add(`Attention message`, () => (<>
         <EbayPageNotice status="attention" aria-label="Attention">
             <EbayNoticeContent>
+                <EbayPageNoticeTitle>Error</EbayPageNoticeTitle>
                 <p>
-                    <strong>Error.</strong>&nbsp;
                     Please take another look at the following:<br />
                     <a href="#">Card number</a>, <a href="#">Expiration date</a> &amp; <a href="#">Security code</a>.
                 </p>
@@ -59,8 +59,8 @@ storiesOf(`ebay-page-notice`, module)
     .add(`Dismissible notice`, () => (<>
         <EbayPageNotice status="information" aria-label="Information" a11yDismissText="Close">
             <EbayNoticeContent>
+                <EbayPageNoticeTitle>Good news!</EbayPageNoticeTitle>
                 <p>
-                    <strong>Good news!</strong>&nbsp;
                     You get free shipping on your next pair of shoes! <a href="#">Learn more</a>.
                 </p>
             </EbayNoticeContent>
