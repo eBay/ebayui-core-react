@@ -31,7 +31,6 @@ export { EbayLightboxDialog } from './ebay-lightbox-dialog'
 export { EbayPanelDialog } from './ebay-panel-dialog'
 export { EbayTextbox, EbayTextboxPrefixIcon, EbayTextboxPostfixIcon, EbayTextboxProps } from './ebay-textbox'
 export { EbaySelect, EbaySelectOption } from './ebay-select'
-export { EbayFloatingLabel } from './ebay-floating-label'
 export { EbayTooltip, EbayTooltipContent, EbayTooltipHost, PointerDirection, Tooltip } from './ebay-tooltip'
 export { EbayInfotip, EbayInfotipHost, EbayInfotipContent, EbayInfotipHeading, Variant } from './ebay-infotip'
 export {
