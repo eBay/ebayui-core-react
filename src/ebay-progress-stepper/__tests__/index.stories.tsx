@@ -57,7 +57,7 @@ storiesOf(`ebay-progress-stepper`, module)
             <EbayProgressStepper>
                 <Step>Started</Step>
                 <Step>Shipped</Step>
-                <Step state="blocked" current>Blocked</Step>
+                <Step state="attention" current>Blocked</Step>
                 <Step>Delivered</Step>
             </EbayProgressStepper>
         </div>
@@ -120,7 +120,7 @@ storiesOf(`ebay-progress-stepper`, module)
                     </EbayProgressStepper>
                     <p>
                         <EbayButton onClick={() => {
-                            setCurrentNumber(Math.max(MIN - 1, currentNumber - 1))
+                            setCurrentNumber(Math.max(MIN, currentNumber - 1))
                         }}>Back</EbayButton>
                         &nbsp;
                         <EbayButton onClick={() => {

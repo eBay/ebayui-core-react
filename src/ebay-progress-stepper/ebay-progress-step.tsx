@@ -13,7 +13,7 @@ export type EbayProgressStepProps = {
 
 const typeIcons: { [key in StepState]: Icon } = {
     complete: 'stepperConfirmation',
-    blocked: 'stepperAttention',
+    attention: 'stepperAttention',
     upcoming: 'stepperUpcoming'
 }
 
@@ -30,7 +30,7 @@ const EbayProgressStep: FC<EbayProgressStepProps> = ({
     const stepClassNames = classNames(
         className,
         'progress-stepper__item',
-        { 'progress-stepper__item--attention': state === 'blocked' }
+        { 'progress-stepper__item--attention': state === 'attention' }
     )
     const icon = typeIcons[state]
     const ariaLabel = current ? 'current' : state

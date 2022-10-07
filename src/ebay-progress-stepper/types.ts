@@ -1,3 +1,3 @@
 export type StepperDirection = 'column' | 'row';
 
-export type StepState = 'complete' | 'blocked' | 'upcoming';
+export type StepState = 'complete' | 'upcoming' | 'attention';
