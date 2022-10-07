@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React  from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbaySectionNotice, EbayButton, EbayNoticeContent } from '../../index'
@@ -26,8 +26,8 @@ storiesOf(`ebay-section-notice`, module)
                 </p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
-                <EbayButton onClick={action('Action Button Clicked')} className="btn--transparent">
-                    Button
+                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
+                    Do something
                 </EbayButton>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
@@ -39,8 +39,8 @@ storiesOf(`ebay-section-notice`, module)
                 <p>This successfully finished <a href="http://www.ebay.com">next page</a></p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
-                <EbayButton onClick={action('Action Button Clicked')} className="btn--transparent">
-                    Button
+                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
+                    Dismiss
                 </EbayButton>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
@@ -55,8 +55,8 @@ storiesOf(`ebay-section-notice`, module)
                 </p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
-                <EbayButton onClick={action('Action Button Clicked')} className="btn--transparent">
-                    Button
+                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
+                    Dismiss
                 </EbayButton>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
@@ -73,6 +73,11 @@ storiesOf(`ebay-section-notice`, module)
                     <a href="http://www.ebay.com">Security code</a>.
                 </p>
             </EbayNoticeContent>
+            <EbaySectionNoticeFooter>
+                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
+                    Show more
+                </EbayButton>
+            </EbaySectionNoticeFooter>
         </EbaySectionNotice>
     </>))
 
@@ -88,7 +93,7 @@ storiesOf(`ebay-section-notice`, module)
         </EbaySectionNotice>
     </>))
 
-    .add(`Section with footer`, () => (<>
+    .add(`Section with link`, () => (<>
         <EbaySectionNotice>
             <EbayNoticeContent>
                 <EbaySectionNoticeTitle>Title</EbaySectionNoticeTitle>
@@ -98,8 +103,7 @@ storiesOf(`ebay-section-notice`, module)
                 </p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
-                <EbayButton href="https://www.ebay.com">Action</EbayButton>
+                <a href="https://www.ebay.com">Go see details</a>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
     </>))
-
