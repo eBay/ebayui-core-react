@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import EbaySelectOption from './ebay-select-option'
 import { EbayIcon } from '../ebay-icon'
 import { filterByType } from '../common/component-utils'
-import { useFloatingLabel } from '../ebay-floating-label/hooks'
+import { useFloatingLabel } from '../common/floating-label-utils/hooks'
 
 const isControlled = value => typeof value !== 'undefined'
 

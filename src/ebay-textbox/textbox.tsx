@@ -2,7 +2,7 @@ import React, { ChangeEvent, cloneElement, ComponentProps, FC, FocusEvent, Ref, 
 import classNames from 'classnames'
 import { findComponent, withForwardRef } from '../common/component-utils'
 import { EbayTextboxPostfixIcon, EbayTextboxPrefixIcon, Size } from './index'
-import { useFloatingLabel } from '../ebay-floating-label/hooks'
+import { useFloatingLabel } from '../common/floating-label-utils/hooks'
 
 const isControlled = value => typeof value !== 'undefined'
 
