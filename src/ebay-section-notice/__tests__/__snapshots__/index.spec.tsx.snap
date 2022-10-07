@@ -54,6 +54,15 @@ exports[`Storyshots ebay-section-notice Attention message 1`] = `
         .
       </p>
     </div>
+    <div
+      class="section-notice__footer"
+    >
+      <button
+        class="btn fake-link btn--secondary"
+      >
+        Show more
+      </button>
+    </div>
   </section>
 </DocumentFragment>
 `;
@@ -99,9 +108,9 @@ exports[`Storyshots ebay-section-notice Confirmation message 1`] = `
       class="section-notice__footer"
     >
       <button
-        class="btn btn--transparent btn--secondary"
+        class="btn fake-link btn--secondary"
       >
-        Button
+        Dismiss
       </button>
     </div>
   </section>
@@ -132,9 +141,9 @@ exports[`Storyshots ebay-section-notice Default message (with action) 1`] = `
       class="section-notice__footer"
     >
       <button
-        class="btn btn--transparent btn--secondary"
+        class="btn fake-link btn--secondary"
       >
-        Button
+        Do something
       </button>
     </div>
   </section>
@@ -210,16 +219,16 @@ exports[`Storyshots ebay-section-notice Information message 1`] = `
       class="section-notice__footer"
     >
       <button
-        class="btn btn--transparent btn--secondary"
+        class="btn fake-link btn--secondary"
       >
-        Button
+        Dismiss
       </button>
     </div>
   </section>
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-section-notice Section with footer 1`] = `
+exports[`Storyshots ebay-section-notice Section with link 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"
@@ -248,10 +257,9 @@ exports[`Storyshots ebay-section-notice Section with footer 1`] = `
       class="section-notice__footer"
     >
       <a
-        class="fake-btn fake-btn--secondary"
         href="https://www.ebay.com"
       >
-        Action
+        Go see details
       </a>
     </div>
   </section>
