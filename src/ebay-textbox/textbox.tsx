@@ -12,7 +12,6 @@ export type EbayTextboxProps = {
     fluid?: boolean;
     invalid?: boolean;
     multiline?: boolean;
-    underline?: boolean;
     defaultValue?: string;
     inputSize?: Size;
     onFocus?: (e?: FocusEvent<HTMLTextAreaElement & HTMLInputElement>, value?: string) => void;
@@ -28,7 +27,6 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
     invalid,
     fluid,
     multiline,
-    underline /* DEPRECATED */,
     onChange = () => {},
     onFocus = () => {},
     onBlur = () => {},
@@ -96,7 +94,6 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
 
     const inputClassName = classNames('textbox__control', {
         'textbox__control--fluid': fluid,
-        'legacy-textbox-underline': underline,
         'textbox__control--large': inputSize === 'large'
     })
     const wrapperClassName = classNames('textbox', {

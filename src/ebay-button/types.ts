@@ -1,4 +1,4 @@
-export type Priority = 'primary' | 'secondary' | 'tertiary' | 'delete' | 'none'
+export type Priority = 'primary' | 'secondary' | 'tertiary' | 'none'
 
 export type Variant = 'standard' | 'destructive'
 

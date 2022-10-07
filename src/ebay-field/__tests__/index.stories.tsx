@@ -6,10 +6,7 @@ import {
     EbayTextbox,
     EbayField,
     EbayLabel,
-    EbayFieldDescription,
-    fieldLayoutType,
-    fieldDescriptionType,
-    fieldDescriptionPosition
+    EbayFieldDescription
 } from '../../index'
 
 storiesOf(`ebay-field`, module)
@@ -32,15 +29,15 @@ storiesOf(`ebay-field`, module)
     ))
     .add(`Block`, () => (
         <div>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel stacked>Label 1</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" />
             </EbayField>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel stacked>Label 1</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" />
             </EbayField>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel stacked>Label 1</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" />
             </EbayField>
@@ -56,7 +53,7 @@ storiesOf(`ebay-field`, module)
                 <EbayLabel>Label 2</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" />
             </EbayField>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel>Label 3</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" />
             </EbayField>
@@ -88,31 +85,29 @@ storiesOf(`ebay-field`, module)
     ))
     .add(`with description`, () => (
         <div>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel stacked htmlFor="field1">Label 1</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" id="field1" />
                 <EbayFieldDescription>Some description Text</EbayFieldDescription>
             </EbayField>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel stacked>Label 2</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" />
-                <EbayFieldDescription type={fieldDescriptionType.CONFIRMATION}>
+                <EbayFieldDescription type="confirmation">
                     Some description Text
                 </EbayFieldDescription>
             </EbayField>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel stacked>Label 3</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" invalid />
-                <EbayFieldDescription type={fieldDescriptionType.ATTENTION}>
+                <EbayFieldDescription type="attention">
                     Some description Text
                 </EbayFieldDescription>
             </EbayField>
-            <EbayField layout={fieldLayoutType.BLOCK}>
+            <EbayField layout="block">
                 <EbayLabel stacked htmlFor="field4">Label 4</EbayLabel>
                 <EbayTextbox placeholder="placeholder text" id="field4" />
-                <EbayFieldDescription
-                    type={fieldDescriptionType.CONFIRMATION}
-                    position={fieldDescriptionPosition.BELOW_FIELD}>
+                <EbayFieldDescription type="confirmation" position="below">
                     Some description Text
                 </EbayFieldDescription>
             </EbayField>

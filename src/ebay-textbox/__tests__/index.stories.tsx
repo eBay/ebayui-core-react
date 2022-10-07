@@ -34,9 +34,6 @@ storiesOf('ebay-textbox', module)
     .add('Multiline invalid textbox', () => (<>
         <EbayTextbox multiline invalid defaultValue="some default value" />
     </>))
-    .add('Underline textbox', () => (<>
-        <EbayTextbox underline placeholder="Email address" />
-    </>))
     .add('Autofocused textbox', () => (<>
         <EbayTextbox autoFocus placeholder="Should focus here" />
     </>))

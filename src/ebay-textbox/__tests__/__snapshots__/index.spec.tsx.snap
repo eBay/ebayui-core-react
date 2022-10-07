@@ -225,21 +225,6 @@ exports[`Storyshots ebay-textbox Ref forwarding 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-textbox Underline textbox 1`] = `
-<DocumentFragment>
-  <span
-    class="textbox"
-  >
-    <input
-      class="textbox__control legacy-textbox-underline"
-      placeholder="Email address"
-      type="text"
-      value=""
-    />
-  </span>
-</DocumentFragment>
-`;
-
 exports[`Storyshots ebay-textbox With icon 1`] = `
 <DocumentFragment>
   <div>
