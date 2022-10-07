@@ -1,60 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-section-title Size 1`] = `
-Array [
+exports[`Storyshots ebay-section-title Default 1`] = `
+<div
+  className="section-title"
+>
   <div
-    className="section-title section-title--small"
+    className="section-title__title-container"
   >
-    <div
-      className="section-title__title-container"
+    <h2
+      className="section-title__title"
     >
-      <h2
-        className="section-title__title"
-      >
-        Small Section Title
-      </h2>
-    </div>
-  </div>,
-  <div
-    className="section-title"
-  >
-    <div
-      className="section-title__title-container"
-    >
-      <h2
-        className="section-title__title"
-      >
-        Default Section Title
-      </h2>
-    </div>
-  </div>,
-  <div
-    className="section-title section-title--large"
-  >
-    <div
-      className="section-title__title-container"
-    >
-      <h2
-        className="section-title__title"
-      >
-        Large Section Title
-      </h2>
-    </div>
-  </div>,
-  <div
-    className="section-title section-title--giant"
-  >
-    <div
-      className="section-title__title-container"
-    >
-      <h2
-        className="section-title__title"
-      >
-        Giant Section Title
-      </h2>
-    </div>
-  </div>,
-]
+      Default Section Title
+    </h2>
+  </div>
+</div>
 `;
 
 exports[`Storyshots ebay-section-title With CTA 1`] = `
@@ -76,28 +35,6 @@ Array [
         Plus, guaranteed best prices.
       </span>
     </div>
-    <div
-      className="section-title__cta section-title__cta--no-text"
-    >
-      <a
-        aria-hidden="true"
-        href="https://www.ebay.com"
-        tabIndex={-1}
-      >
-        <svg
-          aria-hidden={true}
-          className="section-title__cta-icon"
-          focusable={false}
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlinkHref="#icon-arrow-right-bold"
-          />
-        </svg>
-      </a>
-    </div>
   </div>,
   <div
     className="section-title"
@@ -116,33 +53,12 @@ Array [
         Plus, guaranteed best prices.
       </span>
     </div>
-    <div
+    <a
       className="section-title__cta"
+      href="https://www.ebay.com"
     >
-      <a
-        aria-hidden="true"
-        href="https://www.ebay.com"
-        tabIndex={-1}
-      >
-        <span
-          className="section-title__cta-text"
-        >
-          See All
-        </span>
-        <svg
-          aria-hidden={true}
-          className="section-title__cta-icon"
-          focusable={false}
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlinkHref="#icon-arrow-right-bold"
-          />
-        </svg>
-      </a>
-    </div>
+      See All
+    </a>
   </div>,
 ]
 `;
