@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../../index'
+import { EbayButton, EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../../index';
 
 storiesOf('ebay-textbox', module)
     .add('Default textbox', () => (<>
@@ -92,3 +92,38 @@ storiesOf('ebay-textbox', module)
             floatingLabel="Invalid Floating label"
         />
     ))
+    .add('Floating label with autofocus', () => (<>
+        <EbayTextbox floatingLabel="Autofocused field" autoFocus /> <EbayTextbox floatingLabel="Regular field"/>
+    </>))
+    .add('Floating label with placeholder, controlled', () => {
+        const Component = () => {
+            const [value, setValue] = useState('')
+
+            const handleOnChange = e => {
+                const newValue = e.target.value
+                setValue(newValue.toLowerCase())
+            }
+
+            return (
+                <>
+                    <p>
+                        <EbayTextbox
+                            floatingLabel="Will convert to lowercase"
+                            placeholder="Enter some UPPERCASE"
+                            onChange={handleOnChange}
+                            value={value}
+                            size={30}
+                        />
+                    </p>
+                    <p>
+                        <EbayButton onClick={() => { setValue('changed text') }}>Change text</EbayButton>
+                    </p>
+                    <p>
+                        <EbayButton onClick={() => { setValue('') }}>Clear</EbayButton>
+                    </p>
+                </>
+            )
+        }
+
+        return <><Component/></>
+    })
