@@ -4,6 +4,8 @@ import { snapshotWithOptions } from '@storybook/addon-storyshots'
 import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbayPagination, EbayPaginationItem as Item } from '../index'
 
+jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+
 jest.mock('react-dom', () => {
   const original = jest.requireActual('react-dom');
   return {

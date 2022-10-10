@@ -3,6 +3,8 @@ import { render, fireEvent, RenderResult } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../../index'
 
+jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+
 const renderComponent = (props?: any) => render(
     <EbayInfotip {...props}>
         <EbayInfotipHeading>Title</EbayInfotipHeading>

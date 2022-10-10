@@ -23,7 +23,7 @@ exports[`Storyshots ebay-alert-dialog Default 1`] = `
         aria-hidden="false"
         aria-labelledby="dialog-title-abc123"
         arial-modal="true"
-        class="alert-dialog alert-dialog--mask-fade"
+        class="alert-dialog alert-dialog--mask-fade alert-dialog--show-init"
         role="alertdialog"
       >
         <div
