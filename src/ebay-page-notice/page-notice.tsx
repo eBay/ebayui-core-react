@@ -6,7 +6,7 @@ import { EbayIcon, Icon } from '../ebay-icon'
 type Props = React.HTMLProps<HTMLElement> & {
     status?: 'general' | 'attention' | 'confirmation' | 'information',
     'aria-label'?: string,
-    a11yDismissText: string,
+    a11yDismissText?: string,
     onDismiss?: Dispatch<MouseEvent>
 };
 
