@@ -12,7 +12,7 @@ type ProgressStepperProps = {
 
 const EbayProgressStepper: FC<ProgressStepperProps> = ({
     direction = 'row',
-    defaultState = 'complete',
+    defaultState = 'active',
     children,
     className,
     ...rest

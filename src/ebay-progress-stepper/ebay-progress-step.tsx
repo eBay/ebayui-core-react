@@ -14,7 +14,8 @@ export type EbayProgressStepProps = {
 const typeIcons: { [key in StepState]: Icon } = {
     complete: 'stepperConfirmation',
     attention: 'stepperAttention',
-    upcoming: 'stepperUpcoming'
+    upcoming: 'stepperUpcoming',
+    active: 'stepperConfirmation'
 }
 
 const EbayProgressStep: FC<EbayProgressStepProps> = ({

@@ -43,7 +43,7 @@ customize the layout (`className` or `style`)
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
 `direction` | String | No | No | Either `column` or `row` (default). Will display stepper as a vertical column or horizontal row.
-`defaultState` | String | Yes | No | Either `complete`, `upcoming` or `blocked` (default). Defines the default state for all steps.
+`defaultState` | String | Yes | No | `complete`: all items will be in `complete` state by default, `upcoming`:all items will be in `upcoming` state, `attention`: current item will be shown as blocked. Otherwise, default state (`active`) will change items based on the current item (defaults to first step if not set).
 
 ### EbayProgressStep
 
