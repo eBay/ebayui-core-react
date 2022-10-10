@@ -1,6 +1,6 @@
 import React, { Children, cloneElement, FC, Fragment, ReactElement, ReactNode } from 'react'
 import classNames from 'classnames'
-import { StepperDirection, StepState, StepType } from './types'
+import { StepperDirection, StepState } from './types'
 import { EbayProgressStepProps } from './ebay-progress-step'
 
 type ProgressStepperProps = {
@@ -17,8 +17,8 @@ const EbayProgressStepper: FC<ProgressStepperProps> = ({
     className,
     ...rest
 }) => {
-    const childrenArray = Children.toArray(children)
-    const currentIndex = childrenArray.findIndex((child: ReactElement) => child.props.current)
+    const childrenArray = Children.toArray(children) as ReactElement[]
+    const currentIndex = currentIndexByDefaultState(childrenArray, defaultState)
 
     return (
         <div
@@ -29,38 +29,40 @@ const EbayProgressStepper: FC<ProgressStepperProps> = ({
         >
             <div
                 role="list"
-                className={classNames('progress-stepper__items', {
-                    'progress-stepper__items--upcoming': defaultState === 'upcoming'
-                })}
+                className="progress-stepper__items"
             >
-                {childrenArray.map((child: ReactElement, index) => {
-                    const currentState = stepState(index, currentIndex)
-                    const stepTypes: { [keys in StepState]: StepType } = {
-                        complete: 'complete',
-                        active: currentState === 'complete' ? 'complete' : undefined,
-                        upcoming: undefined
-                    }
-
-                    return (
-                        <Fragment key={index}>
-                            {index > 0 && <hr className="progress-stepper__separator" role="presentation" />}
-                            {cloneElement<EbayProgressStepProps>(child, {
-                                type: stepTypes[defaultState],
-                                state: currentState,
-                                ...child.props
-                            })}
-                        </Fragment>
-                    )
-                })}
+                {childrenArray.map((child: ReactElement, index) => (
+                    <Fragment key={index}>
+                        {index > 0 && <hr className="progress-stepper__separator" role="presentation" />}
+                        {cloneElement<EbayProgressStepProps>(child, {
+                            state: stepState(index, currentIndex),
+                            ...child.props,
+                            current: currentIndex === index
+                        })}
+                    </Fragment>
+                ))}
             </div>
         </div>
     )
 }
 
+function currentIndexByDefaultState(steps: ReactElement[], defaultState: StepState): number {
+    const foundCurrentIndex = steps.findIndex(child => child.props.current)
+
+    if (foundCurrentIndex === -1) {
+        // eslint-disable-next-line default-case
+        switch (defaultState) {
+            case 'complete': return steps.length - 1
+            case 'upcoming': return 0
+        }
+    }
+
+    return foundCurrentIndex
+}
+
 function stepState(stepIndex, currentIndex): StepState {
-    if (stepIndex < currentIndex) return 'complete'
+    if (stepIndex <= currentIndex) return 'complete'
     if (stepIndex > currentIndex) return 'upcoming'
-    return 'active'
 }
 
 export default EbayProgressStepper
