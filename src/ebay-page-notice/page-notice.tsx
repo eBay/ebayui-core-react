@@ -1,19 +1,24 @@
-import React, { FC, ReactElement } from 'react'
+import React, { Dispatch, FC, MouseEvent, ReactElement, useState } from 'react'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import { EbayIcon, Icon } from '../ebay-icon'
 
 type Props = React.HTMLProps<HTMLElement> & {
     status?: 'general' | 'attention' | 'confirmation' | 'information',
-    'aria-label'?: string;
+    'aria-label'?: string,
+    a11yDismissText?: string,
+    onDismiss?: Dispatch<MouseEvent>
 };
 
 const EbayPageNotice: FC<Props> = ({
     status = 'general',
     children,
+    onDismiss,
+    a11yDismissText,
     'aria-label': ariaLabel,
     ...rest
 }) => {
+    const [dismissed, setDismissed] = useState(false)
     const childrenArray = React.Children.toArray(children)
     const content = childrenArray.find((child: ReactElement) => child.type === EbayNoticeContent) as ReactElement
 
@@ -21,7 +26,14 @@ const EbayPageNotice: FC<Props> = ({
         throw new Error(`EbayPageNotice: Please use a EbayNoticeContent that defines the content of the notice`)
     }
 
-    return (
+    const handleDismissedClicked = (event: MouseEvent) => {
+        setDismissed(true)
+        if (onDismiss) {
+            onDismiss(event)
+        }
+    }
+
+    return dismissed ? null : (
         <section
             {...rest}
             aria-labelledby={`${status}-status`}
@@ -38,6 +50,16 @@ const EbayPageNotice: FC<Props> = ({
             ) : null}
             <NoticeContent {...content.props} type="page" />
             {children}
+            {a11yDismissText && (
+                <div className="page-notice__footer">
+                    <button
+                        aria-label={a11yDismissText}
+                        className="fake-link page-notice__dismiss"
+                        onClick={handleDismissedClicked}>
+                        <EbayIcon name={'close-small' as Icon} />
+                    </button>
+                </div>
+            )}
         </section>
     )
 }
