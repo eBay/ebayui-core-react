@@ -193,7 +193,6 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="left: -10px;"
         >
           <span
             class="tooltip__pointer tooltip__pointer--top-left"
@@ -232,7 +231,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="right: -10px;"
+          style="right: -7px;"
         >
           <span
             class="tooltip__pointer tooltip__pointer--top-right"
@@ -271,7 +270,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: translateX(-16px) translateY(-50%); right: 100%; top: 0px;"
+          style="transform: translateX(-16px) translateY(-50%); right: 100%; top: -4px;"
         >
           <span
             class="tooltip__pointer tooltip__pointer--right"
@@ -427,7 +426,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="left: -10px;"
+          style="left: -7px;"
         >
           <span
             class="tooltip__pointer tooltip__pointer--bottom-left"
@@ -466,7 +465,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="right: -10px;"
+          style="right: -7px;"
         >
           <span
             class="tooltip__pointer tooltip__pointer--bottom-right"
@@ -505,7 +504,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: translateX(16px) translateY(-50%); left: 100%; top: 0px;"
+          style="transform: translateX(16px) translateY(-50%); left: 100%; top: -5px;"
         >
           <span
             class="tooltip__pointer tooltip__pointer--left"
@@ -544,7 +543,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: translateX(16px); left: 100%; bottom: -10px;"
+          style="transform: translateX(16px); left: 100%; bottom: -7px;"
         >
           <span
             class="tooltip__pointer tooltip__pointer--left-bottom"
@@ -628,7 +627,7 @@ exports[`Storyshots ebay-tooltip Pointer with custom location 1`] = `
       <span
         class="tooltip__overlay"
         role="tooltip"
-        style="left: -16px; top: 40px;"
+        style="top: 40px; left: -16px;"
       >
         <span
           class="tooltip__pointer tooltip__pointer--top-left"

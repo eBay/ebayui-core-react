@@ -7,7 +7,7 @@ export const POINTER_STYLES: { [key in PointerDirection]: any } = {
         transform: 'translateX(16px) translateY(-50%)',
         left: '100%',
         right: 'auto',
-        top: 0,
+        top: '-5px',
         bottom: 'auto'
     },
 
@@ -24,14 +24,14 @@ export const POINTER_STYLES: { [key in PointerDirection]: any } = {
         left: '100%',
         right: 'auto',
         top: 'auto',
-        bottom: '-10px'
+        bottom: '-7px'
     },
 
     'right': {
         transform: 'translateX(-16px) translateY(-50%)',
         left: 'auto',
         right: '100%',
-        top: 0,
+        top: '-4px',
         bottom: 'auto'
     },
 
@@ -55,33 +55,28 @@ export const POINTER_STYLES: { [key in PointerDirection]: any } = {
         transform: 'translateX(-50%)',
         left: '50%',
         right: 'auto',
-        top: 'calc(100% + 16px)',
+        top: 'auto',
         bottom: 'auto'
     },
 
-    'top-left': {
-        left: '-10px',
-        right: 'auto',
-        top: 'calc(100% + 16px)',
-        bottom: 'auto'
-    },
+    'top-left': {},
 
     'top-right': {
         left: 'auto',
-        right: '-10px',
-        top: 'calc(100% + 16px)',
+        right: '-7px',
+        top: 'auto',
         bottom: 'auto'
     },
 
     'bottom-right': {
         left: 'auto',
-        right: '-10px',
+        right: '-7px',
         top: 'auto',
         bottom: 'calc(100% + 12px)'
     },
 
     'bottom-left': {
-        left: '-10px',
+        left: '-7px',
         right: 'auto',
         top: 'auto',
         bottom: 'calc(100% + 12px)'
