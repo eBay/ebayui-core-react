@@ -29,7 +29,6 @@ import '@ebay/skin/tabs.css';
 Name | Type | Stateful | Description
 --- | --- | --- | ---
 `index` |Number | Yes | 0-based index of selected tab heading and panel
-`fake` | Boolean | No | Whether to use link behavior for tab headings (DEPRECATED, works automatically)
 `activation` | Enum | Yes | whether to use automatic or manual activation when navigating by keyboard, can be `auto` (default) or `manual`
 `size` | Enum | No | Whether to opt into larger font-size for tab headings, can be `medium` (default) or `large`
 

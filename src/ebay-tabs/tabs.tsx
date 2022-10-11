@@ -8,9 +8,6 @@ import classNames from 'classnames'
 
 type TabsProps = ComponentProps<'div'> & {
     index?: number;
-    /** @deprecated Kept for backward-compatibility with eBayUI */
-    // eslint-disable-next-line react/no-unused-prop-types
-    fake?: boolean;
     size?: Size;
     activation?: Activation;
     onTabSelect?: (index: number) => void;

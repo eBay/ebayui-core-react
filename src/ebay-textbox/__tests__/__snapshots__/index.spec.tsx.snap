@@ -106,6 +106,89 @@ exports[`Storyshots ebay-textbox Floating label invalid 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-textbox Floating label with autofocus 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label floating-label__label--animate"
+    >
+      Autofocused field
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+   
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Regular field
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-textbox Floating label with placeholder, controlled 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="floating-label"
+    >
+      <label
+        class="floating-label__label"
+      >
+        Will convert to lowercase
+      </label>
+      <span
+        class="textbox"
+      >
+        <input
+          class="textbox__control"
+          placeholder="Enter some UPPERCASE"
+          size="30"
+          type="text"
+          value=""
+        />
+      </span>
+    </span>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary"
+    >
+      Change text
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary"
+    >
+      Clear
+    </button>
+  </p>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-textbox Fluid textbox 1`] = `
 <DocumentFragment>
   <div
@@ -218,21 +301,6 @@ exports[`Storyshots ebay-textbox Ref forwarding 1`] = `
   >
     <input
       class="textbox__control"
-      type="text"
-      value=""
-    />
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Storyshots ebay-textbox Underline textbox 1`] = `
-<DocumentFragment>
-  <span
-    class="textbox"
-  >
-    <input
-      class="textbox__control legacy-textbox-underline"
-      placeholder="Email address"
       type="text"
       value=""
     />
