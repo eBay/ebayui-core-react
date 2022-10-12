@@ -28,11 +28,13 @@ exports[`Storyshots ebay-page-notice Attention message 1`] = `
     <div
       class="page-notice__main"
     >
+      <h2
+        class="page-notice__title"
+      >
+        Error.
+      </h2>
       <p>
-        <strong>
-          Error.
-        </strong>
-          Please take another look at the following:
+        Please take another look at the following:
         <br />
         <a
           href="#"
@@ -86,11 +88,13 @@ exports[`Storyshots ebay-page-notice Confirmation message 1`] = `
     <div
       class="page-notice__main"
     >
+      <h2
+        class="page-notice__title"
+      >
+        Congrats!
+      </h2>
       <p>
-        <strong>
-          Congrats!
-        </strong>
-          You just listed 
+        You just listed 
         <a
           href="#"
         >
@@ -202,11 +206,13 @@ exports[`Storyshots ebay-page-notice Dismissible notice 1`] = `
     <div
       class="page-notice__main"
     >
+      <h2
+        class="page-notice__title"
+      >
+        Good news!
+      </h2>
       <p>
-        <strong>
-          Good news!
-        </strong>
-          You get free shipping on your next pair of shoes! 
+        You get free shipping on your next pair of shoes! 
         <a
           href="#"
         >
@@ -268,11 +274,13 @@ exports[`Storyshots ebay-page-notice Information message 1`] = `
     <div
       class="page-notice__main"
     >
+      <h2
+        class="page-notice__title"
+      >
+        Good news!
+      </h2>
       <p>
-        <strong>
-          Good news!
-        </strong>
-          You get free shipping on your next pair of shoes! 
+        You get free shipping on your next pair of shoes! 
         <a
           href="#"
         >
