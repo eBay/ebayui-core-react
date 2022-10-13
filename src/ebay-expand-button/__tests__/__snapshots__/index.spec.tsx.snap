@@ -7,13 +7,13 @@ exports[`Storyshots ebay-expand-button Borderless 1`] = `
   >
     <button
       aria-expanded="false"
-      class="expand-btn expand-btn--borderless"
+      class="btn btn--borderless"
     >
       <span
         class="expand-btn__cell"
       >
         <span
-          class="expand-btn__text"
+          class="btn__text"
         >
           Borderless Button
         </span>
@@ -39,13 +39,13 @@ exports[`Storyshots ebay-expand-button Default 1`] = `
 <DocumentFragment>
   <button
     aria-expanded="false"
-    class="expand-btn"
+    class="btn"
   >
     <span
       class="expand-btn__cell"
     >
       <span
-        class="expand-btn__text"
+        class="btn__text"
       >
         Expand!
       </span>
@@ -70,14 +70,14 @@ exports[`Storyshots ebay-expand-button Disabled 1`] = `
 <DocumentFragment>
   <button
     aria-expanded="false"
-    class="expand-btn"
+    class="btn"
     disabled=""
   >
     <span
       class="expand-btn__cell"
     >
       <span
-        class="expand-btn__text"
+        class="btn__text"
       >
         Can not touch
       </span>
@@ -102,13 +102,13 @@ exports[`Storyshots ebay-expand-button Html Label 1`] = `
 <DocumentFragment>
   <button
     aria-expanded="false"
-    class="expand-btn"
+    class="btn"
   >
     <span
       class="expand-btn__cell"
     >
       <span
-        class="expand-btn__text"
+        class="btn__text"
       >
         <h3>
           Header
@@ -137,7 +137,7 @@ exports[`Storyshots ebay-expand-button No text 1`] = `
     <button
       aria-expanded="false"
       aria-label="Menu"
-      class="expand-btn expand-btn--icon-only"
+      class="btn btn--icon-only"
     >
       <span
         class="expand-btn__cell"
@@ -161,7 +161,7 @@ exports[`Storyshots ebay-expand-button No text 1`] = `
     <button
       aria-expanded="false"
       aria-label="Menu"
-      class="expand-btn expand-btn--icon-only"
+      class="btn btn--icon-only"
     >
       <span
         class="expand-btn__cell"

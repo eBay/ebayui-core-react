@@ -24,9 +24,9 @@ const EbayExpandButton: FC<ExpandButtonProps> = ({
 }) => {
     const [expanded, setExpanded] = useState(false)
     const hasChildren = !!Children.count(children)
-    const buttonClasses = classnames('expand-btn', className,
-        { 'expand-btn--icon-only': !hasChildren },
-        { 'expand-btn--borderless': borderless }
+    const buttonClasses = classnames('btn', className,
+        { 'btn--icon-only': !hasChildren },
+        { 'btn--borderless': borderless }
     )
 
     const handleClick = e => {
@@ -50,7 +50,7 @@ const EbayExpandButton: FC<ExpandButtonProps> = ({
             {borderless && !hasChildren ?
                 <EbayIcon name={icon} /> :
                 <EbayButtonCell type="expand">
-                    {hasChildren && <span className="expand-btn__text">{children}</span>}
+                    {hasChildren && <span className="btn__text">{children}</span>}
                     <EbayIcon name={icon} />
                 </EbayButtonCell>
             }
