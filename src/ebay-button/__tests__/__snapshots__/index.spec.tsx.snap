@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots ebay-button Borderless button 1`] = `
+<DocumentFragment>
+  <p>
+    <button
+      class="btn btn--borderless"
+    >
+      Borderless button
+    </button>
+  </p>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-button Default 1`] = `
 <DocumentFragment>
   <p>
@@ -98,6 +110,93 @@ exports[`Storyshots ebay-button Disabled 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-button Expand button 1`] = `
+<DocumentFragment>
+  <p>
+    <button
+      class="btn btn--primary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          class="btn__text"
+        >
+          Expand button
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      aria-expanded="true"
+      class="btn btn--primary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          class="btn__text"
+        >
+          Expanded button
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--borderless"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          class="btn__text"
+        >
+          Expanded button
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-button Flexible Button 1`] = `
 <DocumentFragment>
   <button
@@ -157,6 +256,18 @@ exports[`Storyshots ebay-button Fluid 1`] = `
     >
       Link
     </a>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-button Form button 1`] = `
+<DocumentFragment>
+  <p>
+    <button
+      class="btn btn--form"
+    >
+      Form button
+    </button>
   </p>
 </DocumentFragment>
 `;
