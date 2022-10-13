@@ -9,7 +9,7 @@ import React, {
     RefObject
 } from 'react'
 import classNames from 'classnames'
-import { withForwardRef } from '../common/component-utils/forwardRef'
+import { withForwardRef } from '../common/component-utils'
 import { Priority, Size, BodyState, Variant } from './types'
 import { EbayIcon } from '../ebay-icon'
 import EbayButtonLoading from './button-loading'
@@ -56,7 +56,6 @@ const EbayButton:FC<Props> = ({
     const iconOnly = isIconOnly(children)
     const classPrefix = href ? 'fake-btn' : 'btn'
     const priorityStyles: { [key in Priority]: string } = {
-        delete: '', // deprecated
         primary: `${classPrefix}--primary`,
         secondary: `${classPrefix}--secondary`,
         tertiary: `${classPrefix}--tertiary`,

@@ -23,6 +23,7 @@ const EbayMenuItem: FC<MenuItemProps> = ({
     ...rest
 }) => {
     const ref = useRef(null)
+    const hasBadge = badgeNumber !== undefined
 
     useEffect(() => {
         if (ref.current && focused) {
@@ -34,16 +35,16 @@ const EbayMenuItem: FC<MenuItemProps> = ({
         <div
             {...rest}
             ref={ref}
-            className={classNames(className, 'menu__item')}
+            className={classNames(className, 'menu__item', hasBadge && 'menu__item--badged')}
             role="menuitem"
             aria-checked={checked}
             aria-disabled={disabled}
-            aria-hidden={badgeNumber !== undefined}
+            aria-hidden={hasBadge}
             tabIndex={focused ? 0 : tabIndex}
         >
             <span>
                 {children}
-                {badgeNumber !== undefined && <EbayBadge type="menu" number={badgeNumber} />}
+                {hasBadge && <EbayBadge type="menu" number={badgeNumber} />}
             </span>
             <EbayIcon name="tickSmall" />
         </div>

@@ -6,7 +6,6 @@ const classPrefix = 'fullscreen-dialog'
 
 export interface Props<T = any> extends DialogBaseProps<T> {
   open?: boolean;
-  sliding?: boolean /* DEPRECATED */;
   onOpen?: () => void;
   onClose?: () => void;
 }
@@ -18,7 +17,6 @@ const EbayFullscreenDialog: FC<Props> = ({
     a11yCloseText = 'Close Dialog',
     className,
     animated,
-    sliding,
     ...rest
 }) => (
     <DialogBaseWithState
@@ -27,7 +25,7 @@ const EbayFullscreenDialog: FC<Props> = ({
         buttonPosition="left"
         onCloseBtnClick={onClose}
         transitionElement="window"
-        animated={sliding || animated}
+        animated={animated}
         className={classNames(className, `${classPrefix}--mask-fade-slow`)}
         windowClass={classNames(`${classPrefix}__window`, `${classPrefix}__window--slide`)}
         open={open}

@@ -8,7 +8,7 @@ eBayUI React components
 
 * [Node.js](https://nodejs.org/en/) (v16.14+)
 * [React](https://reactjs.org/) (v16.8+)
-* [eBay Skin](https://ebay.github.io/skin/) (v14)
+* [eBay Skin](https://ebay.github.io/skin/) (v15)
 
 ### eBayUI Components
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
@@ -24,12 +24,10 @@ eBayUI React components
 * [ ] `ebay-details`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
 * [x] [ebay-eek](src/ebay-eek)
-* [x] [ebay-expand-button](src/ebay-expand-button)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-menu` (in progress...)
 * [ ] `ebay-fake-menu-button` (in progress...)
 * [ ] `ebay-fake-tabs`
-* [x] [ebay-floating-label](src/ebay-floating-label)
 * [x] [ebay-field](src/ebay-field)
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
@@ -37,7 +35,6 @@ eBayUI React components
 * [x] [ebay-icon](src/ebay-icon)
 * [x] [ebay-infotip](src/ebay-infotip)
 * [x] [ebay-inline-notice](src/ebay-inline-notice)
-* [x] [ebay-legacy-floating-label](src/ebay-legacy-floating-label)
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
 * [x] [ebay-listbox-button](src/ebay-listbox-button)
 * [x] [ebay-menu] (src/ebay-menu)

@@ -29,5 +29,5 @@ import '@ebay/skin/progress-spinner.css';
 
 Name | Type | Stateful | Required | Description | Data
 --- | --- | --- | --- | --- | ---
-`size` | String | No | No | `small` (default), `large`
+`size` | String | No | No | `default` (default), `small`, `large`
 `aria-label` | String | No | No | custom aria label instead of `Busy`

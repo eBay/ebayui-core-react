@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-progress-stepper Complete 1`] = `
+exports[`Storyshots ebay-progress-stepper Blocked 1`] = `
 <div
   style={
     Object {
@@ -16,7 +16,7 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
       role="list"
     >
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -24,6 +24,7 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -46,7 +47,7 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
         role="presentation"
       />
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -54,6 +55,7 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -76,7 +78,8 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
         role="presentation"
       />
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        aria-current="step"
+        className="progress-stepper__item progress-stepper__item--attention"
         role="listitem"
       >
         <div
@@ -84,21 +87,22 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="icon icon--stepper-confirmation"
+            aria-label="current"
+            className="icon icon--stepper-attention"
             focusable={false}
             height="24"
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-stepper-confirmation"
+              xlinkHref="#icon-stepper-attention"
             />
           </svg>
         </div>
         <div
           className="progress-stepper__text"
         >
-          Transit
+          Blocked
         </div>
       </div>
       <hr
@@ -106,7 +110,7 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
         role="presentation"
       />
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -114,14 +118,15 @@ exports[`Storyshots ebay-progress-stepper Complete 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="icon icon--stepper-confirmation"
+            aria-label="upcoming"
+            className="icon icon--stepper-upcoming"
             focusable={false}
             height="24"
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-stepper-confirmation"
+              xlinkHref="#icon-stepper-upcoming"
             />
           </svg>
         </div>
@@ -152,7 +157,7 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
       role="list"
     >
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -160,6 +165,7 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -184,7 +190,7 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
       />
       <div
         aria-current="step"
-        className="progress-stepper__item progress-stepper__item--current"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -192,14 +198,15 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="icon icon--stepper-current"
+            aria-label="current"
+            className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-stepper-current"
+              xlinkHref="#icon-stepper-confirmation"
             />
           </svg>
         </div>
@@ -221,10 +228,19 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
+          <svg
+            aria-hidden={true}
             aria-label="upcoming"
-            role="img"
-          />
+            className="icon icon--stepper-upcoming"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-upcoming"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -244,10 +260,19 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
+          <svg
+            aria-hidden={true}
             aria-label="upcoming"
-            role="img"
-          />
+            className="icon icon--stepper-upcoming"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-upcoming"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -296,7 +321,7 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
       role="list"
     >
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -304,6 +329,7 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -318,9 +344,9 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
         <div
           className="progress-stepper__text"
         >
-          <h2>
-            Huge
-          </h2>
+          <h1>
+            H1
+          </h1>
         </div>
       </div>
       <hr
@@ -329,7 +355,7 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
       />
       <div
         aria-current="step"
-        className="progress-stepper__item progress-stepper__item--current"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -337,23 +363,24 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="icon icon--stepper-current"
+            aria-label="current"
+            className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-stepper-current"
+              xlinkHref="#icon-stepper-confirmation"
             />
           </svg>
         </div>
         <div
           className="progress-stepper__text"
         >
-          <h2>
-            Huge
-          </h2>
+          <small>
+            Small
+          </small>
         </div>
       </div>
       <hr
@@ -367,119 +394,26 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
+          <svg
+            aria-hidden={true}
             aria-label="upcoming"
-            role="img"
-          />
+            className="icon icon--stepper-upcoming"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-upcoming"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
         >
           <h2>
-            Huge
+            H2
           </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots ebay-progress-stepper Custom numbers (deprecated) 1`] = `
-<div
-  style={
-    Object {
-      "--progress-stepper-badge-current-color": "#3665f3",
-      "padding": 50,
-    }
-  }
->
-  <div
-    className="progress-stepper"
-  >
-    <div
-      className="progress-stepper__items"
-      role="list"
-    >
-      <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
-        role="listitem"
-      >
-        <div
-          className="progress-stepper__icon"
-        >
-          <svg
-            aria-hidden={true}
-            className="icon icon--stepper-confirmation"
-            focusable={false}
-            height="24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlinkHref="#icon-stepper-confirmation"
-            />
-          </svg>
-        </div>
-        <div
-          className="progress-stepper__text"
-        >
-          Three
-        </div>
-      </div>
-      <hr
-        className="progress-stepper__separator"
-        role="presentation"
-      />
-      <div
-        aria-current="step"
-        className="progress-stepper__item progress-stepper__item--current"
-        role="listitem"
-      >
-        <div
-          className="progress-stepper__icon"
-        >
-          <svg
-            aria-hidden={true}
-            className="icon icon--stepper-current"
-            focusable={false}
-            height="24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlinkHref="#icon-stepper-current"
-            />
-          </svg>
-        </div>
-        <div
-          className="progress-stepper__text"
-        >
-          Four
-        </div>
-      </div>
-      <hr
-        className="progress-stepper__separator"
-        role="presentation"
-      />
-      <div
-        className="progress-stepper__item"
-        role="listitem"
-      >
-        <div
-          className="progress-stepper__icon"
-        >
-          <span
-            aria-label="5"
-            role="img"
-          >
-            5
-          </span>
-        </div>
-        <div
-          className="progress-stepper__text"
-        >
-          Five
         </div>
       </div>
     </div>
@@ -503,7 +437,7 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
       role="list"
     >
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -511,6 +445,7 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -533,7 +468,7 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
         role="presentation"
       />
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -541,6 +476,7 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -564,7 +500,7 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
       />
       <div
         aria-current="step"
-        className="progress-stepper__item progress-stepper__item--current"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -572,14 +508,15 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="icon icon--stepper-current"
+            aria-label="current"
+            className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-stepper-current"
+              xlinkHref="#icon-stepper-confirmation"
             />
           </svg>
         </div>
@@ -600,10 +537,19 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
+          <svg
+            aria-hidden={true}
             aria-label="upcoming"
-            role="img"
-          />
+            className="icon icon--stepper-upcoming"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-upcoming"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -616,7 +562,7 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-progress-stepper Icons 1`] = `
+exports[`Storyshots ebay-progress-stepper Default state: complete 1`] = `
 <div
   style={
     Object {
@@ -632,7 +578,7 @@ exports[`Storyshots ebay-progress-stepper Icons 1`] = `
       role="list"
     >
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -640,6 +586,149 @@ exports[`Storyshots ebay-progress-stepper Icons 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Started
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            aria-label="complete"
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Shipped
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            aria-label="complete"
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Transit
+        </div>
+      </div>
+      <hr
+        className="progress-stepper__separator"
+        role="presentation"
+      />
+      <div
+        aria-current="step"
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            aria-label="current"
+            className="icon icon--stepper-confirmation"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-confirmation"
+            />
+          </svg>
+        </div>
+        <div
+          className="progress-stepper__text"
+        >
+          Delivered
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ebay-progress-stepper Default state: upcoming 1`] = `
+<div
+  style={
+    Object {
+      "padding": 50,
+    }
+  }
+>
+  <div
+    className="progress-stepper"
+  >
+    <div
+      className="progress-stepper__items"
+      role="list"
+    >
+      <div
+        aria-current="step"
+        className="progress-stepper__item"
+        role="listitem"
+      >
+        <div
+          className="progress-stepper__icon"
+        >
+          <svg
+            aria-hidden={true}
+            aria-label="current"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -665,7 +754,7 @@ exports[`Storyshots ebay-progress-stepper Icons 1`] = `
         role="presentation"
       />
       <div
-        className="progress-stepper__item progress-stepper__item--information"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -673,140 +762,17 @@ exports[`Storyshots ebay-progress-stepper Icons 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="icon icon--information-filled"
+            aria-label="upcoming"
+            className="icon icon--stepper-upcoming"
             focusable={false}
             height="24"
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-information-filled"
+              xlinkHref="#icon-stepper-upcoming"
             />
           </svg>
-        </div>
-        <div
-          className="progress-stepper__text"
-        >
-          <h4>
-            Shipping Information
-          </h4>
-          July 4th
-        </div>
-      </div>
-      <hr
-        className="progress-stepper__separator"
-        role="presentation"
-      />
-      <div
-        aria-current="step"
-        className="progress-stepper__item progress-stepper__item--attention progress-stepper__item--current"
-        role="listitem"
-      >
-        <div
-          className="progress-stepper__icon"
-        >
-          <svg
-            aria-hidden={true}
-            className="icon icon--attention-filled"
-            focusable={false}
-            height="24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <use
-              xlinkHref="#icon-attention-filled"
-            />
-          </svg>
-        </div>
-        <div
-          className="progress-stepper__text"
-        >
-          <h4>
-            Transit Problem
-          </h4>
-          July 5th
-        </div>
-      </div>
-      <hr
-        className="progress-stepper__separator"
-        role="presentation"
-      />
-      <div
-        className="progress-stepper__item"
-        role="listitem"
-      >
-        <div
-          className="progress-stepper__icon"
-        >
-          <span
-            aria-label="upcoming"
-            role="img"
-          />
-        </div>
-        <div
-          className="progress-stepper__text"
-        >
-          <h4>
-            Delivered
-          </h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots ebay-progress-stepper Upcoming 1`] = `
-<div
-  style={
-    Object {
-      "padding": 50,
-    }
-  }
->
-  <div
-    className="progress-stepper"
-  >
-    <div
-      className="progress-stepper__items progress-stepper__items--upcoming"
-      role="list"
-    >
-      <div
-        className="progress-stepper__item"
-        role="listitem"
-      >
-        <div
-          className="progress-stepper__icon"
-        >
-          <span
-            aria-label="upcoming"
-            role="img"
-          />
-        </div>
-        <div
-          className="progress-stepper__text"
-        >
-          <h4>
-            Paid
-          </h4>
-          July 3rd
-        </div>
-      </div>
-      <hr
-        className="progress-stepper__separator"
-        role="presentation"
-      />
-      <div
-        className="progress-stepper__item"
-        role="listitem"
-      >
-        <div
-          className="progress-stepper__icon"
-        >
-          <span
-            aria-label="upcoming"
-            role="img"
-          />
         </div>
         <div
           className="progress-stepper__text"
@@ -828,10 +794,19 @@ exports[`Storyshots ebay-progress-stepper Upcoming 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
+          <svg
+            aria-hidden={true}
             aria-label="upcoming"
-            role="img"
-          />
+            className="icon icon--stepper-upcoming"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-upcoming"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -853,10 +828,19 @@ exports[`Storyshots ebay-progress-stepper Upcoming 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
+          <svg
+            aria-hidden={true}
             aria-label="upcoming"
-            role="img"
-          />
+            className="icon icon--stepper-upcoming"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-upcoming"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"
@@ -888,7 +872,7 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
       role="list"
     >
       <div
-        className="progress-stepper__item progress-stepper__item--confirmation"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -896,6 +880,7 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
         >
           <svg
             aria-hidden={true}
+            aria-label="complete"
             className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
@@ -927,7 +912,7 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
       />
       <div
         aria-current="step"
-        className="progress-stepper__item progress-stepper__item--current"
+        className="progress-stepper__item"
         role="listitem"
       >
         <div
@@ -935,14 +920,15 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
         >
           <svg
             aria-hidden={true}
-            className="icon icon--stepper-current"
+            aria-label="current"
+            className="icon icon--stepper-confirmation"
             focusable={false}
             height="24"
             width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-stepper-current"
+              xlinkHref="#icon-stepper-confirmation"
             />
           </svg>
         </div>
@@ -968,10 +954,19 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
         <div
           className="progress-stepper__icon"
         >
-          <span
+          <svg
+            aria-hidden={true}
             aria-label="upcoming"
-            role="img"
-          />
+            className="icon icon--stepper-upcoming"
+            focusable={false}
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-stepper-upcoming"
+            />
+          </svg>
         </div>
         <div
           className="progress-stepper__text"

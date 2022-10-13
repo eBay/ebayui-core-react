@@ -1,7 +1,6 @@
 export { EbayButton, EbayButtonCell, Size, Priority, EbayButtonProps } from './ebay-button'
 export { EbayCtaButton } from './ebay-cta-button'
 export { EbayEek, EbayEekProps } from './ebay-eek'
-export { EbayExpandButton } from './ebay-expand-button'
 export { EbayIconButton, EbayIconButtonProps } from './ebay-icon-button'
 export { EbayMenu, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriority } from './ebay-menu'
 export { EbayInlineNotice, NoticeStatus } from './ebay-inline-notice'
@@ -32,19 +31,13 @@ export { EbayLightboxDialog } from './ebay-lightbox-dialog'
 export { EbayPanelDialog } from './ebay-panel-dialog'
 export { EbayTextbox, EbayTextboxPrefixIcon, EbayTextboxPostfixIcon, EbayTextboxProps } from './ebay-textbox'
 export { EbaySelect, EbaySelectOption } from './ebay-select'
-export { EbayFloatingLabel } from './ebay-floating-label'
-export {
-    EbayTooltip, EbayTooltipContent, EbayTooltipHost, PointerDirection, Tooltip,
-    POINTER_TYPES, TOOLTIP_TYPES
-} from './ebay-tooltip'
-export { EbayInfotip, EbayInfotipHost, EbayInfotipContent, EbayInfotipHeading, Variant, variants } from './ebay-infotip'
-export { EbayLegacyFloatingLabel } from './ebay-legacy-floating-label'
+export { EbayTooltip, EbayTooltipContent, EbayTooltipHost, PointerDirection, Tooltip } from './ebay-tooltip'
+export { EbayInfotip, EbayInfotipHost, EbayInfotipContent, EbayInfotipHeading, Variant } from './ebay-infotip'
 export {
     EbayField, EbayLabel, EbayFieldDescription,
-    FieldLayoutType, FieldDescriptionType, FieldDescriptionPosition, LabelPosition,
-    fieldLayoutType, fieldDescriptionType, fieldDescriptionPosition
+    FieldLayoutType, FieldDescriptionType, FieldDescriptionPosition, LabelPosition
 } from './ebay-field'
 export {
-    EbayProgressStepper, EbayProgressStep, EbayProgressTitle, StepperDirection, StepType, StepState
+    EbayProgressStepper, EbayProgressStep, EbayProgressTitle, StepperDirection, StepState
 } from './ebay-progress-stepper'
 export { EbayListboxButton, EbayListboxButtonOption } from './ebay-listbox-button'

@@ -196,9 +196,9 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 : optionsByIndexRef.current.set(index, optionNode)
         }))
     const wrapperClassName = classNames('listbox-button', className, { 'listbox-button--fluid': fluid })
-    const buttonClassName = classNames('expand-btn', {
-        'expand-btn--borderless': borderless,
-        'expand-btn--floating-label': floatingLabel
+    const buttonClassName = classNames('btn btn--form', {
+        'btn--borderless': borderless,
+        'btn--floating-label': floatingLabel
     })
     const expandBtnTextId = prefixId && 'expand-btn-text'
 
@@ -217,13 +217,13 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 onKeyUp={onButtonKeyup}
                 ref={buttonRef}
             >
-                <span className="expand-btn__cell">
+                <span className="btn__cell">
                     {floatingLabel ? (
-                        <span className="expand-btn__floating-label">
+                        <span className="btn__floating-label">
                             {floatingLabel}
                         </span>
                     ) : null}
-                    <span className="expand-btn__text" id={expandBtnTextId}>{selectedOption.props.children}</span>
+                    <span className="btn__text" id={expandBtnTextId}>{selectedOption.props.children}</span>
                     <EbayIcon name="dropdown" />
                 </span>
             </button>
