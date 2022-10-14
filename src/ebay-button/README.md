@@ -45,14 +45,16 @@ import '@ebay/skin/button.css'
 Name | Type | Stateful | Required | Description | Data
 --- | --- | --- | --- | --- | ---
 `priority` | String | No | No | `primary`, `secondary` (default), `tertiary`, `none`
-`variant` | String | Yes | No | `standard` (default), `destructive`
-`size` | String | No | No | `default` (default), `large`
-`bodyState` | String | No | No | `loading`
+`variant` | String | Yes | No | `standard` (default), `destructive`, `form`
+`size` | String | No | No | `regular` (default), `large`
+`bodyState` | String | No | No | `loading`, `expand`
 `href` | String | No | No | for link that looks like a button
 `fluid` | Boolean | No | No | takes the whole width of the parent element
 `disabled` | Boolean | Yes | No
 `partiallyDisabled` | Boolean | No | No | sets aria disabled but not disabled attribute
 `transparent` | Boolean | Yes | No | for transparent background
 `truncate` | Boolean | No | No | will truncate the text of the button onto a single line, and adds an ellipsis, when the button's text overflows
+`borderless` | Boolean | No | No | Use the borderless modifier to remove the border from the expandable button.
+`fixedHeight` | Boolean | No | No | Fixes the height based on `size`.
 `onClick` | Function | - | No | click or action key pressed (`Space` / `Enter`)
 `onEscape` | Function | - | No | `Esc`-key pressed

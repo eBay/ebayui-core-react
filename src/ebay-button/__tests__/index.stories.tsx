@@ -125,3 +125,9 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton borderless>Borderless button</EbayButton></p>
         </>
     ))
+    .add(`Fixed height`, () => (
+        <>
+            <p><EbayButton fixedHeight>Fixed height button</EbayButton></p>
+            <p><EbayButton fixedHeight size="large">Fixed height large button</EbayButton></p>
+        </>
+    ))

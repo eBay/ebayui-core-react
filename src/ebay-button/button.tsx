@@ -30,6 +30,7 @@ export type EbayButtonProps = {
     onEscape?: (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     borderless?: boolean;
+    fixedHeight?: boolean;
 }
 
 type Props = ComponentProps<'button'> & ComponentProps<'a'> & EbayButtonProps;
@@ -42,7 +43,7 @@ function isIconOnly(children: ReactNode): boolean {
 const EbayButton:FC<Props> = ({
     priority = 'secondary',
     variant = 'standard',
-    size = 'default',
+    size = 'regular',
     bodyState,
     transparent = false,
     fluid = false,
@@ -55,6 +56,7 @@ const EbayButton:FC<Props> = ({
     className: extraClasses,
     forwardedRef,
     borderless,
+    fixedHeight,
     ...rest
 }) => {
     const iconOnly = isIconOnly(children)
@@ -67,6 +69,7 @@ const EbayButton:FC<Props> = ({
     }
     const sizeStyles: { [key in Size]: string } = {
         large: `${classPrefix}--large`,
+        regular: '',
         default: ''
     }
     const isDestructive = variant === 'destructive'
@@ -84,7 +87,8 @@ const EbayButton:FC<Props> = ({
         transparent && `${classPrefix}--transparent`,
         fluid && `${classPrefix}--fluid`,
         truncate && `${classPrefix}--truncated`,
-        borderless && `${classPrefix}--borderless`
+        borderless && `${classPrefix}--borderless`,
+        fixedHeight && (sizeStyles[size] ? `${sizeStyles[size]}-${fixedHeight}` : `${classPrefix}--fixed-height`)
     )
 
     const onKeyDown = (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {

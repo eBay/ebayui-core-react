@@ -197,6 +197,25 @@ exports[`Storyshots ebay-button Expand button 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-button Fixed height 1`] = `
+<DocumentFragment>
+  <p>
+    <button
+      class="btn btn--secondary btn--fixed-height"
+    >
+      Fixed height button
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary btn--large btn--large-true"
+    >
+      Fixed height large button
+    </button>
+  </p>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-button Flexible Button 1`] = `
 <DocumentFragment>
   <button
