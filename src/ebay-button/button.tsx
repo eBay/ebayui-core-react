@@ -13,6 +13,8 @@ import { withForwardRef } from '../common/component-utils'
 import { Priority, Size, BodyState, Variant } from './types'
 import { EbayIcon } from '../ebay-icon'
 import EbayButtonLoading from './button-loading'
+import EbayButtonCell from './button-cell'
+import EbayButtonText from './button-text'
 
 export type EbayButtonProps = {
     fluid?: boolean;
@@ -27,6 +29,8 @@ export type EbayButtonProps = {
     onClick?: (e: MouseEvent) => void;
     onEscape?: (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
+    borderless?: boolean;
+    fixedHeight?: boolean;
 }
 
 type Props = ComponentProps<'button'> & ComponentProps<'a'> & EbayButtonProps;
@@ -39,7 +43,7 @@ function isIconOnly(children: ReactNode): boolean {
 const EbayButton:FC<Props> = ({
     priority = 'secondary',
     variant = 'standard',
-    size = 'default',
+    size = 'regular',
     bodyState,
     transparent = false,
     fluid = false,
@@ -51,6 +55,8 @@ const EbayButton:FC<Props> = ({
     href,
     className: extraClasses,
     forwardedRef,
+    borderless,
+    fixedHeight,
     ...rest
 }) => {
     const iconOnly = isIconOnly(children)
@@ -63,20 +69,26 @@ const EbayButton:FC<Props> = ({
     }
     const sizeStyles: { [key in Size]: string } = {
         large: `${classPrefix}--large`,
+        regular: '',
         default: ''
     }
     const isDestructive = variant === 'destructive'
-    const isLoading = bodyState === `loading`
+    const isForm = variant === 'form'
+    const isLoading = bodyState === 'loading'
+    const isExpand = bodyState === 'expand'
     const className = classNames(
         classPrefix,
         extraClasses,
-        priorityStyles[priority],
+        priorityStyles[isForm || borderless ? 'none' : priority],
         sizeStyles[size],
         isDestructive && `${classPrefix}--destructive`,
+        isForm && `${classPrefix}--form`,
         iconOnly && `${classPrefix}--icon-only`,
         transparent && `${classPrefix}--transparent`,
         fluid && `${classPrefix}--fluid`,
-        truncate && `${classPrefix}--truncated`
+        truncate && `${classPrefix}--truncated`,
+        borderless && `${classPrefix}--borderless`,
+        fixedHeight && (sizeStyles[size] ? `${sizeStyles[size]}-${fixedHeight}` : `${classPrefix}--fixed-height`)
     )
 
     const onKeyDown = (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {
@@ -85,7 +97,19 @@ const EbayButton:FC<Props> = ({
         }
     }
 
-    const bodyContent = isLoading ? <EbayButtonLoading /> : children
+    let bodyContent = children
+    if (isLoading) {
+        bodyContent = <EbayButtonLoading />
+    } else if (isExpand) {
+        bodyContent = (
+            <EbayButtonCell>
+                <EbayButtonText>
+                    {children}
+                </EbayButtonText>
+                <EbayIcon name="dropdown" />
+            </EbayButtonCell>
+        )
+    }
     const ariaLive = isLoading ? `polite` : null
 
     return href ? (

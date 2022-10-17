@@ -108,3 +108,26 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton priority="primary" bodyState="loading">Primary Button</EbayButton></p>
         </>
     ))
+    .add(`Expand button`, () => (
+        <>
+            <p><EbayButton priority="primary" bodyState="expand">Expand button</EbayButton></p>
+            <p><EbayButton priority="primary" bodyState="expand" aria-expanded="true">Expanded button</EbayButton></p>
+            <p><EbayButton priority="primary" bodyState="expand" borderless>Expanded button</EbayButton></p>
+        </>
+    ))
+    .add(`Form button`, () => (
+        <>
+            <p><EbayButton variant="form">Form button</EbayButton></p>
+        </>
+    ))
+    .add(`Borderless button`, () => (
+        <>
+            <p><EbayButton borderless>Borderless button</EbayButton></p>
+        </>
+    ))
+    .add(`Fixed height`, () => (
+        <>
+            <p><EbayButton fixedHeight>Fixed height button</EbayButton></p>
+            <p><EbayButton fixedHeight size="large">Fixed height large button</EbayButton></p>
+        </>
+    ))
