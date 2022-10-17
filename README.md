@@ -11,6 +11,7 @@ eBayUI React components
 * [eBay Skin](https://ebay.github.io/skin/) (v15)
 
 ### eBayUI Components
+* [ ] `ebay-3d-viewer`
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-badge](src/ebay-badge)
@@ -19,12 +20,13 @@ eBayUI React components
 * [ ] `ebay-carousel` (in progress...)
 * [x] [ebay-checkbox](src/ebay-checkbox)
 * [ ] `ebay-combobox`
-* [ ] `ebay-combobox-readonly`
+* [ ] `ebay-confirm-dialog`
 * [x] [ebay-cta-button](src/ebay-cta-button)
 * [ ] `ebay-details`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
+* [ ] `eebay-fake-link`
 * [ ] `ebay-fake-menu` (in progress...)
 * [ ] `ebay-fake-menu-button` (in progress...)
 * [ ] `ebay-fake-tabs`
@@ -32,16 +34,19 @@ eBayUI React components
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
+* [ ] `ebay-icon-button`
 * [x] [ebay-icon](src/ebay-icon)
 * [x] [ebay-infotip](src/ebay-infotip)
 * [x] [ebay-inline-notice](src/ebay-inline-notice)
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
 * [x] [ebay-listbox-button](src/ebay-listbox-button)
+* [ ] `ebay-listbox`
 * [x] [ebay-menu] (src/ebay-menu)
 * [ ] `ebay-menu-button` (in progress...)
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
+* [ ] `ebay-program-badge`
 * [x] [ebay-progress-bar](src/ebay-progress-bar)
 * [x] [ebay-progress-spinner](src/ebay-progress-spinner)
 * [x] [ebay-progress-stepper](src/ebay-progress-stepper)
@@ -50,17 +55,18 @@ eBayUI React components
 * [x] [ebay-section-notice](src/ebay-section-notice)
 * [x] [ebay-select](src/ebay-select)
 * [ ] `ebay-snackbar-dialog`
+* [ ] `ebay-split-button`
+* [ ] `ebay-star-rating`
+* [ ] `ebay-star-rating-select`
 * [x] [ebay-switch](src/ebay-switch)
 * [x] [ebay-signal](src/ebay-signal)
-* [x] [ebay-tab](src/ebay-tabs)
+* [x] [ebay-tabs](src/ebay-tabs)
 * [x] [ebay-textbox](src/ebay-textbox)
 * [x] [ebay-toast-dialog](src/ebay-toast-dialog)
 * [x] [ebay-tooltip](src/ebay-tooltip)
 * [ ] `ebay-tourtip`
+* [ ] `ebay-tri-state-checkbox`
 * [ ] `ebay-video`
-* [ ] `ebay-window-notice`
-
-[Progress overview](https://github.com/eBay/ebayui-core-react/projects/1)
 
 ## Getting Started
 
@@ -173,7 +179,14 @@ One way to comply those guidelines is to implement your new component as similia
 
 ## Changelog
 
+`@ebay/ui-core-react`
+### version 2.x (Skin 15)
+
+`@ebay/ebayui-core-react`
+### version 10.x (Skin 14)
 ### version 9.x (skin 13)
+
+`ebayui-core-react`
 ### version 8.x (skin 12)
 ### version 6.x (skin 10)
 ### version 5.x (removed less, changed imports to minimize bundle size)
