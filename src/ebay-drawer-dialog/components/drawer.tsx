@@ -85,6 +85,7 @@ const EbayDrawerDialog: FC<EbayDrawerProps<any>> = ({
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            type="button"
         />
     )
 

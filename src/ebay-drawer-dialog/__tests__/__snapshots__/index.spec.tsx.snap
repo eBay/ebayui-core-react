@@ -21,6 +21,7 @@ exports[`Storyshots ebay-drawer-dialog Custom Focus 1`] = `
         <button
           aria-label="Maximize Drawer"
           class="drawer-dialog__handle"
+          type="button"
         />
         <div
           class="drawer-dialog__header"
@@ -96,6 +97,7 @@ exports[`Storyshots ebay-drawer-dialog Default 1`] = `
         <button
           aria-label="Maximize Drawer"
           class="drawer-dialog__handle"
+          type="button"
         />
         <div
           class="drawer-dialog__header"
@@ -462,6 +464,7 @@ exports[`Storyshots ebay-drawer-dialog Lots Of Content 1`] = `
         <button
           aria-label="Maximize Drawer"
           class="drawer-dialog__handle"
+          type="button"
         />
         <div
           class="drawer-dialog__header"
@@ -837,6 +840,7 @@ exports[`Storyshots ebay-drawer-dialog Opened 1`] = `
         <button
           aria-label="Maximize Drawer"
           class="drawer-dialog__handle"
+          type="button"
         />
         <div
           class="drawer-dialog__header"
@@ -913,6 +917,7 @@ exports[`Storyshots ebay-drawer-dialog With Animation 1`] = `
         <button
           aria-label="Maximize Drawer"
           class="drawer-dialog__handle"
+          type="button"
         />
         <div
           class="drawer-dialog__header"
