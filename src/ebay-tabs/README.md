@@ -5,19 +5,19 @@
 
 ## Import JS
 ```jsx harmony
-import { EbayTab, EbayTabHeading, EbayTabPanel } from '@ebay/ui-core-react/ebay-tabs'
+import { EbayTabs, EbayTab, EbayTabPanel } from '@ebay/ui-core-react/ebay-tabs'
 ```
 ## Import following styles from SKIN
 ```jsx harmony
-import '@ebay/skin/tabs.css';
+import '@ebay/skin/tabs';
 ```
 
 ## Usage
 ```jsx harmony
 <EbayTabs>
-    <EbayTabHeading>Tab 1</EbayTabHeading>
-    <EbayTabHeading>Tab 2</EbayTabHeading>
-    <EbayTabHeading>Tab 3</EbayTabHeading>
+    <EbayTab>Tab 1</EbayTab>
+    <EbayTab>Tab 2</EbayTab>
+    <EbayTab>Tab 3</EbayTab>
     <EbayTabPanel>Panel 1</EbayTabPanel>
     <EbayTabPanel>Panel 2</EbayTabPanel>
     <EbayTabPanel>Panel 3</EbayTabPanel>
@@ -38,21 +38,19 @@ Event | Data | Description
 --- | --- | ---
 `onTabSelect` | `{ index }` |
 
-## EbayTabHeading
-
-### EbayTabHeading Usage
+## EbayTab
 
 ```jsx harmony
-<EbayTabHeading>Tab 1</EbayTabHeading>
+<EbayTab>Tab 1</EbayTab>
 ```
 
-## EbayTabHeading Attributes
+### EbayTab Props
 
 Name | Type | Stateful | Description
 --- | --- | --- | ---
 `href` | String | No | For use with `fake` tab component (links instead of real tabs)
 
-## EbayTabPanel usage
+## EbayTabPanel
 ```jsx harmony
 <EbayTabPanel>Panel 1</EbayTabPanel>
 ```
