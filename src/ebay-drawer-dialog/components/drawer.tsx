@@ -1,4 +1,4 @@
-import React, { Children, FC, ReactElement, RefObject, Touch, TouchEvent, useState } from 'react'
+import React, { Children, FC, ReactElement, RefObject, Touch, TouchEvent, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { DialogBaseProps, DialogBaseWithState, EbayDialogHeader } from '../../ebay-dialog-base'
 
@@ -20,7 +20,7 @@ export interface EbayDrawerProps<T> extends DialogBaseProps<T> {
 }
 
 const EbayDrawerDialog: FC<EbayDrawerProps<any>> = ({
-    expanded: defaultExpanded = false,
+    expanded: controlledExpanded = false,
     noHandle,
     onClose = () => {},
     onCollapsed = () => {},
@@ -31,7 +31,11 @@ const EbayDrawerDialog: FC<EbayDrawerProps<any>> = ({
     ...rest
 }) => {
     let touches: Partial<Touch>[] = []
-    const [expanded, setExpanded] = useState(defaultExpanded)
+    const [expanded, setExpanded] = useState(controlledExpanded)
+
+    useEffect(() => {
+        setExpanded(controlledExpanded)
+    }, [controlledExpanded])
 
     const setExpandedState = (expand: boolean) => {
         setExpanded(expand)
