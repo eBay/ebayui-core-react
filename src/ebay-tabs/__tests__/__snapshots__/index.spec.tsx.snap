@@ -1,6 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-tab Default Tabs 1`] = `
+exports[`Storyshots ebay-tabs Bottom Tabs on Long Page 1`] = `
+<DocumentFragment>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <p
+    style="margin: 10em 0px;"
+  >
+    Scroll down for more content...
+  </p>
+  <div
+    class="tabs"
+  >
+    <div
+      class="tabs__items"
+      role="tablist"
+    >
+      <div
+        aria-controls="default-tabpanel-0"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
+        tabindex="0"
+      >
+        <span>
+          Tab 1
+        </span>
+      </div>
+      <div
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <span>
+          Tab 2
+        </span>
+      </div>
+    </div>
+    <div
+      class="tabs__content"
+    >
+      <div
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        id="default-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 1
+          </h3>
+          <p>
+            Panel 1 content.
+          </p>
+        </div>
+      </div>
+      <div
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
+      >
+        <div
+          class="tabs__cell"
+        >
+          <h3>
+            Panel 2
+          </h3>
+          <p>
+            Panel 2 content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tabs Default Tabs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -125,7 +242,7 @@ exports[`Storyshots ebay-tab Default Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tab Fake Tabs (links) 1`] = `
+exports[`Storyshots ebay-tabs Fake Tabs (links) 1`] = `
 <DocumentFragment>
   <div
     class="fake-tabs"
@@ -177,7 +294,7 @@ exports[`Storyshots ebay-tab Fake Tabs (links) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tab Large Tabs 1`] = `
+exports[`Storyshots ebay-tabs Large Tabs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -302,7 +419,7 @@ exports[`Storyshots ebay-tab Large Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tab Manually activated Tabs 1`] = `
+exports[`Storyshots ebay-tabs Manually activated Tabs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -436,7 +553,7 @@ exports[`Storyshots ebay-tab Manually activated Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tab Multiple Tabs 1`] = `
+exports[`Storyshots ebay-tabs Multiple Tabs 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -653,7 +770,7 @@ exports[`Storyshots ebay-tab Multiple Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tab Pre-selected Tab 1`] = `
+exports[`Storyshots ebay-tabs Pre-selected Tab 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -778,7 +895,7 @@ exports[`Storyshots ebay-tab Pre-selected Tab 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tab Programmatically selected Tabs 1`] = `
+exports[`Storyshots ebay-tabs Programmatically selected Tabs 1`] = `
 <DocumentFragment>
   <button>
     Select Tab 1
@@ -885,7 +1002,7 @@ exports[`Storyshots ebay-tab Programmatically selected Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tab Tabs with inputs 1`] = `
+exports[`Storyshots ebay-tabs Tabs with inputs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"

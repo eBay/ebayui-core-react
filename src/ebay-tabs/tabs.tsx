@@ -1,10 +1,11 @@
 import React, { cloneElement, ComponentProps, FC, useEffect, useState } from 'react'
+import classNames from 'classnames'
+
 import { handleActionKeydown, handleLeftRightArrowsKeydown } from '../common/event-utils'
 import Tab from './tab'
 import TabPanel from './tab-panel'
 import { Activation, Size } from './types'
 import { filterBy, filterByType } from '../common/component-utils'
-import classNames from 'classnames'
 
 type TabsProps = ComponentProps<'div'> & {
     index?: number;
@@ -30,7 +31,6 @@ const Tabs: FC<TabsProps> = ({
     const onSelect = (i: number): void => {
         onTabSelect(i)
         setSelectedIndex(i)
-        setFocusedIndex(i)
     }
 
     /**
@@ -51,8 +51,10 @@ const Tabs: FC<TabsProps> = ({
 
             const len = filterByType(children, Tab).length
             const direction = ['Left', 'ArrowLeft'].includes(ev.key) ? -1 : 1
-            const nextIndex = (focusedIndex + len + direction) % len
+            const currentIndex = focusedIndex === undefined ? selectedIndex : focusedIndex
+            const nextIndex = (currentIndex + len + direction) % len
             setFocusedIndex(nextIndex)
+            headings[nextIndex]?.focus()
 
             if (activation !== 'manual') {
                 onSelect(nextIndex)
@@ -64,28 +66,23 @@ const Tabs: FC<TabsProps> = ({
         onSelect(index)
     }, [index])
 
-    useEffect(() => {
-        headings[focusedIndex]?.focus()
-    }, [focusedIndex])
-
     const isFake = filterBy(children, ({ type, props }) => type === Tab && props.href).length > 0
     const isLarge = size === 'large'
 
-    const tabHeadings = filterByType(children, Tab).map((item, i) => {
-        const { href, children: content } = item.props
-        const itemProps = {
+    const tabHeadings = filterByType(children, Tab).map((item, i) =>
+        cloneElement(item, {
+            ...item.props,
             refCallback: ref => { headings[i] = ref },
             index: i,
             parentId: id,
             selected: selectedIndex === i,
-            href,
-            children: content,
-            onClick: () => { onSelect(i) },
+            focused: focusedIndex === i,
+            onClick: () => {
+                onSelect(i)
+                setFocusedIndex(i)
+            },
             onKeyDown: e => { onKeyDown(e, i) }
-        }
-
-        return cloneElement(item, itemProps)
-    })
+        }))
 
     const tabPanels = filterByType(children, TabPanel).map((item, i) => {
         const { children: content } = item.props

@@ -4,7 +4,7 @@ import { action } from '../../../.storybook/action'
 
 import { EbayTabs, EbayTab as Tab, EbayTabPanel as Panel } from '../index'
 
-storiesOf('ebay-tab', module)
+storiesOf('ebay-tabs', module)
     .add('Default Tabs', () => (<>
         <EbayTabs onTabSelect={action('tab selected')}>
             <Tab>Tab 1</Tab>
@@ -198,3 +198,25 @@ storiesOf('ebay-tab', module)
 
         return <><Component /></>
     })
+    .add('Bottom Tabs on Long Page', () => (<>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <p style={{ margin: '10em 0' }}>Scroll down for more content...</p>
+        <EbayTabs>
+            <Tab>Tab 1</Tab>
+            <Tab>Tab 2</Tab>
+            <Panel>
+                <h3>Panel 1</h3>
+                <p>Panel 1 content.</p>
+            </Panel>
+            <Panel>
+                <h3>Panel 2</h3>
+                <p>Panel 2 content.</p>
+            </Panel>
+        </EbayTabs>
+    </>))
