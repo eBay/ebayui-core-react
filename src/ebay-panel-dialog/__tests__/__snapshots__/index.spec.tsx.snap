@@ -44,6 +44,7 @@ exports[`Storyshots ebay-panel-dialog Always Opened 1`] = `
               Heading
             </h2>
             <button
+              aria-label="Close panel"
               class="icon-btn panel-dialog__close"
               type="button"
             >

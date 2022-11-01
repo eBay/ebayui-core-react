@@ -14,7 +14,6 @@ export interface Props<T = any> extends DialogBaseProps<T> {
 }
 
 const EbayLightboxDialog: FC<Props> = ({
-    a11yCloseText = 'Close Dialog',
     open,
     mode,
     onClose = () => {},
@@ -24,7 +23,6 @@ const EbayLightboxDialog: FC<Props> = ({
     <DialogBaseWithState
         buttonPosition="right"
         {...rest}
-        a11yCloseText={a11yCloseText}
         classPrefix={classPrefix}
         onCloseBtnClick={onClose}
         onBackgroundClick={onClose}

@@ -38,6 +38,7 @@ exports[`Storyshots ebay-fullscreen-dialog Always Opened 1`] = `
             class="fullscreen-dialog__header"
           >
             <button
+              aria-label="Close dialog"
               class="icon-btn fullscreen-dialog__close"
               type="button"
             >

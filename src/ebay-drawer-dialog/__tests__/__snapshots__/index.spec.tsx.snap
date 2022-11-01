@@ -849,6 +849,7 @@ exports[`Storyshots ebay-drawer-dialog Opened 1`] = `
             id="dialog-title-abc123"
           />
           <button
+            aria-label="Close drawer"
             class="icon-btn drawer-dialog__close"
             type="button"
           >
