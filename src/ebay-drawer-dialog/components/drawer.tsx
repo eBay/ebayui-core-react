@@ -10,9 +10,8 @@ export interface EbayDrawerProps<T> extends DialogBaseProps<T> {
     open?: boolean;
     noHandle?: boolean;
     focus?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
-    a11yCloseText?: string;
-    a11yMinimizeText?: string;
-    a11yMaximizeText?: string;
+    a11yMinimizeText: string;
+    a11yMaximizeText: string;
     onShow?: () => void;
     onClose?: () => void;
     onExpanded?: () => void;
@@ -25,8 +24,8 @@ const EbayDrawerDialog: FC<EbayDrawerProps<any>> = ({
     onClose = () => {},
     onCollapsed = () => {},
     onExpanded = () => {},
-    a11yMaximizeText = 'Maximize Drawer',
-    a11yMinimizeText = 'Minimize Drawer',
+    a11yMaximizeText,
+    a11yMinimizeText,
     children,
     ...rest
 }) => {

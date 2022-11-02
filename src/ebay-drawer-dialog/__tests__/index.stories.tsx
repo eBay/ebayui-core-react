@@ -29,7 +29,7 @@ export const _Default = () => {
 };
 
 export const _Opened = () => (<>
-    <EbayDrawerDialog open onClose={action('Close button clicked.')}>
+    <EbayDrawerDialog open onClose={action('Close button clicked.')} a11yCloseText="Close drawer">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse

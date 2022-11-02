@@ -14,7 +14,6 @@ const EbayFullscreenDialog: FC<Props> = ({
     open,
     onClose = () => {},
     onOpen = () => {},
-    a11yCloseText = 'Close Dialog',
     className,
     animated,
     ...rest

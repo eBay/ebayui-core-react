@@ -33,7 +33,7 @@ export const _Default = () => {
 export const _AlwaysOpened = () => (
     <div>
         <p>Some outside content...</p>
-        <EbayPanelDialog open>
+        <EbayPanelDialog open a11yCloseText="Close panel">
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
             <p><a href="http://www.ebay.com">www.ebay.com</a></p>
