@@ -1,14 +1,15 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps, FC, RefCallback } from 'react'
 import classNames from 'classnames'
 
 type TabProps = ComponentProps<'li'> & ComponentProps<'div'> & {
     index?: number;
     parentId?: string;
     selected?: boolean;
+    focused?: boolean;
     href?: string;
     onClick?: () => void;
     onKeyDown?: () => void;
-    refCallback?: () => void;
+    refCallback?: RefCallback<HTMLElement>;
 }
 
 const Tab: FC<TabProps> = ({
@@ -16,6 +17,7 @@ const Tab: FC<TabProps> = ({
     index,
     parentId,
     selected,
+    focused,
     href,
     className,
     refCallback,
@@ -38,7 +40,7 @@ const Tab: FC<TabProps> = ({
             className={classNames(className, 'tabs__item')}
             id={`${parentId || 'default'}-tab-${index}`}
             role="tab"
-            tabIndex={selected ? 0 : -1}
+            tabIndex={focused ? 0 : -1}
             onClick={onClick}
             onKeyDown={onKeyDown}
         >
