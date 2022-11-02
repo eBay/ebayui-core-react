@@ -5,7 +5,7 @@
 
 ## Import JS
 ```jsx harmony
-import { EbayFakeTabs, EbayFakeTab, EbayFakeTabContent } from '@ebay/ui-core-react/ebay-fake-tabs'
+import { EbayFakeTabs, EbayFakeTab } from '@ebay/ui-core-react/ebay-fake-tabs'
 ```
 ## Import following styles from SKIN
 ```jsx harmony
