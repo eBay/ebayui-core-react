@@ -26,10 +26,10 @@ eBayUI React components
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
-* [ ] `eebay-fake-link`
+* [ ] `ebay-fake-link`
 * [ ] `ebay-fake-menu` (in progress...)
 * [ ] `ebay-fake-menu-button` (in progress...)
-* [ ] `ebay-fake-tabs`
+* [x] [ebay-fake-tabs] (src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
