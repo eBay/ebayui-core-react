@@ -9,7 +9,7 @@ const stateColors = {
 };
 
 (async () => {
-    const [ _, __, title, url, state, merged, draft, review ] = process.argv;
+    const [ _, __, title, url, state, merged, draft, review, assigned ] = process.argv;
     const creds = process.env.GKEY;
 
     const prState = finalState(state, merged, draft, review);
@@ -23,6 +23,7 @@ const stateColors = {
     row.updateCell('Topic', title);
     row.updateCell('Status', prState, stateColor ? { textFormat: { foregroundColor: stateColor } } : {});
     row.updateCell('Link1', `=HYPERLINK("${url}", "GitHub PR")`);
+    row.updateCell('Assigned', assigned);
 
     await row.saveUpdatedCells();
 })()

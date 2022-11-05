@@ -5,29 +5,26 @@ inputs:
     issueTitle:
         description: issue title
         required: false
-    issueUrl:
-        description: issue URL
-        required: false
     prTitle:
         description: PR title
         required: false
-    prUrl:
-        description: PR URL
+    url:
+        description: URL
         required: false
-    prState:
+    state:
         description: PR state
         required: false
-    prMerged:
+    isMerged:
         description: is PR merged
         required: false
-    prDraft:
+    isDraft:
         description: is PR a draft
         required: false
-    prReview:
+    review:
         description: PR review
         required: false
-    prAssigned:
-        description: users PR assigned to
+    assigned:
+        description: assigned user name
         required: false
     googleSheetsKey:
         description: Google Sheets Key
@@ -43,10 +40,10 @@ runs:
           shell: sh
           env:
               GKEY: ${{ inputs.googleSheetsKey }}
-          run: node ./scripts/gsheet-issue "${{ inputs.issueTitle }}" "${{ inputs.issueUrl }}"
+          run: node ./scripts/gsheet-issue "${{ inputs.issueTitle }}" "${{ inputs.url }}"
 
         - if: inputs.prTitle != ''
           shell: sh
           env:
               GKEY: ${{ inputs.googleSheetsKey }}
-          run: node ./scripts/gsheet-pr "${{ inputs.prTitle }}" "${{ inputs.prUrl }}" "${{ inputs.prState }}" "${{ inputs.prMerged }}" "${{ inputs.prDraft }}" "${{ inputs.prReview }}" "${{ inputs.prAssigned }}"
+          run: node ./scripts/gsheet-pr "${{ inputs.prTitle }}" "${{ inputs.url }}" "${{ inputs.state }}" "${{ inputs.isMerged }}" "${{ inputs.isDraft }}" "${{ inputs.review }}" "${{ inputs.assigned }}"
