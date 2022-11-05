@@ -15,5 +15,5 @@ jobs:
               with:
                 issueTitle: ${{ github.event.issue.title }}
                 url: ${{ github.event.issue.html_url }}
-                assigned: ${{ github.event.issue.assignee.name }}
+                assigned: ${{ github.event.issue.assignee.login }}
                 googleSheetsKey: ${{ secrets.GOOGLE_SHEETS_KEY }}

@@ -26,5 +26,5 @@ jobs:
                 isMerged: ${{ github.event.pull_request.merged }}
                 isDraft: ${{ github.event.pull_request.draft }}
                 review: ${{ github.event.pull_request_review.state }}
-                assigned: ${{ github.event.pull_request.assignee.name }}
+                assigned: ${{ join(github.event.pull_request.assignees.*.login, ', ') }}
                 googleSheetsKey: ${{ secrets.GOOGLE_SHEETS_KEY }}
