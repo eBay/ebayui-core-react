@@ -1,0 +1,49 @@
+name: "Action: Export to GSheets"
+description: 'Composite export to google sheets action'
+
+inputs:
+    issueTitle:
+        description: issue title
+        required: false
+    issueUrl:
+        description: issue URL
+        required: false
+    prTitle:
+        description: PR title
+        required: false
+    prUrl:
+        description: PR URL
+        required: false
+    prState:
+        description: PR state
+        required: false
+    prMerged:
+        description: is PR merged
+        required: false
+    prDraft:
+        description: is PR a draft
+        required: false
+    prReview:
+        description: PR review
+        required: false
+    googleSheetsKey:
+        description: Google Sheets Key
+        required: true
+
+runs:
+    using: "composite"
+    steps:
+        - shell: sh
+          run: yarn add -D google-spreadsheet
+
+        - if: inputs.issueTitle != ''
+          shell: sh
+          env:
+              GKEY: ${{ inputs.googleSheetsKey }}
+          run: node ./scripts/gsheet-issue ${{ inputs.issueTitle }} ${{ inputs.issueUrl }}
+
+        - if: inputs.prTitle != ''
+          shell: sh
+          env:
+              GKEY: ${{ inputs.googleSheetsKey }}
+          run: node ./scripts/gsheet-pr ${{ inputs.prTitle }} ${{ inputs.prUrl }} ${{ inputs.prState }} ${{ inputs.prMerged }} ${{ inputs.prDraft }} ${{ inputs.prReview }}
