@@ -1,4 +1,4 @@
-name: PR-update
+name: PR state update
 
 on:
     pull_request:
