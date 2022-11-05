@@ -40,10 +40,10 @@ runs:
           shell: sh
           env:
               GKEY: ${{ inputs.googleSheetsKey }}
-          run: node ./scripts/gsheet-issue ${{ inputs.issueTitle }} ${{ inputs.issueUrl }}
+          run: node ./scripts/gsheet-issue "${{ inputs.issueTitle }}" "${{ inputs.issueUrl }}"
 
         - if: inputs.prTitle != ''
           shell: sh
           env:
               GKEY: ${{ inputs.googleSheetsKey }}
-          run: node ./scripts/gsheet-pr ${{ inputs.prTitle }} ${{ inputs.prUrl }} ${{ inputs.prState }} ${{ inputs.prMerged }} ${{ inputs.prDraft }} ${{ inputs.prReview }}
+          run: node ./scripts/gsheet-pr "${{ inputs.prTitle }}" "${{ inputs.prUrl }}" "${{ inputs.prState }}" "${{ inputs.prMerged }}" "${{ inputs.prDraft }}" "${{ inputs.prReview }}"

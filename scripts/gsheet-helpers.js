@@ -38,7 +38,6 @@ async function Row(doc, title) {
     const sheet = doc.sheetsByIndex[0];
     await sheet.loadCells();
     await sheet.loadHeaderRow();
-    console.log(sheet.headerValues)
 
     const rows = await sheet.getRows();
     const row = rows.find(({ Topic }) => Topic === title);
@@ -60,7 +59,6 @@ async function Row(doc, title) {
     };
 
     row.getCell = header => {
-        console.log('get cell', index+1, headerIndex(header))
         return sheet.getCell(index+1, headerIndex(header));
     };
 
