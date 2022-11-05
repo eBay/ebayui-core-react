@@ -15,11 +15,11 @@ const COLOR_DONE = {
     "blue": 102/255,
     "alpha": 1
 };
-//'#666666';
+//'#999';
 const COLOR_DISABLED = {
-    "red": 106/255,
-    "green": 106/255,
-    "blue": 106/255,
+    "red": 153/255,
+    "green": 153/255,
+    "blue": 153/255,
     "alpha": 1
 };
 
