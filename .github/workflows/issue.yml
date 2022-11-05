@@ -1,4 +1,4 @@
-name: Issue
+name: New issue
 
 on:
   issues:
@@ -14,5 +14,6 @@ jobs:
             - uses: ./.github/actions/export
               with:
                 issueTitle: ${{ github.event.issue.title }}
-                issueUrl: ${{ github.event.issue.html_url }}
+                url: ${{ github.event.issue.html_url }}
+                assigned: ${{ github.event.issue.assignee.login }}
                 googleSheetsKey: ${{ secrets.GOOGLE_SHEETS_KEY }}

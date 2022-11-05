@@ -1,4 +1,4 @@
-const { Doc, Row, COLOR_ATTENTION, COLOR_DONE, COLOR_DISABLED } = require('./gsheet-helpers');
+const { Doc, Row, COLOR_ATTENTION, COLOR_DONE, COLOR_DISABLED, devName } = require('./gsheet-helpers');
 
 const stateColors = {
     open: COLOR_ATTENTION,
@@ -9,7 +9,7 @@ const stateColors = {
 };
 
 (async () => {
-    const [ _, __, title, url, state, merged, draft, review ] = process.argv;
+    const [ _, __, title, url, state, merged, draft, review, assigned ] = process.argv;
     const creds = process.env.GKEY;
 
     const prState = finalState(state, merged, draft, review);
@@ -23,14 +23,15 @@ const stateColors = {
     row.updateCell('Topic', title);
     row.updateCell('Status', prState, stateColor ? { textFormat: { foregroundColor: stateColor } } : {});
     row.updateCell('Link1', `=HYPERLINK("${url}", "GitHub PR")`);
+    row.updateCell('Assigned', assigned.split(', ').map(login => devName[login] || login).join(', '));
 
     await row.saveUpdatedCells();
 })()
 
 function finalState(state, merged, draft, review) {
-    if (merged) return 'merged';
+    if (merged === 'true') return 'merged';
     if (state === 'closed') return 'closed';
-    if (draft) return 'draft';
-    if (review) return 'review';
+    if (draft === 'true') return 'draft';
+    if (review !== '') return 'review';
     return state;
 }
