@@ -28,9 +28,9 @@ const stateColors = {
 })()
 
 function finalState(state, merged, draft, review) {
-    if (merged) return 'merged';
+    if (merged === 'true') return 'merged';
     if (state === 'closed') return 'closed';
-    if (draft) return 'draft';
-    if (review) return 'review';
+    if (draft === 'true') return 'draft';
+    if (review !== '') return 'review';
     return state;
 }
