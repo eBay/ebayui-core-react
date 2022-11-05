@@ -1,4 +1,4 @@
-const { Doc, Row, COLOR_ATTENTION } = require('./gsheet-helpers');
+const { Doc, Row, COLOR_ATTENTION, devName } = require('./gsheet-helpers');
 
 (async () => {
     const [ _, __, title, url, assigned ] = process.argv;
@@ -12,7 +12,7 @@ const { Doc, Row, COLOR_ATTENTION } = require('./gsheet-helpers');
     row.updateCell('Topic', title);
     row.updateCell('Status', 'New!', { textFormat: { foregroundColor: COLOR_ATTENTION } });
     row.updateCell('Link1', `=HYPERLINK("${url}", "GitHub Issue")`);
-    row.updateCell('Assigned', assigned);
+    row.updateCell('Assigned', devName[assigned] || assigned);
 
     await row.saveUpdatedCells();
 })()

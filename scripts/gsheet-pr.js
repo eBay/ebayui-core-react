@@ -1,4 +1,4 @@
-const { Doc, Row, COLOR_ATTENTION, COLOR_DONE, COLOR_DISABLED } = require('./gsheet-helpers');
+const { Doc, Row, COLOR_ATTENTION, COLOR_DONE, COLOR_DISABLED, devName } = require('./gsheet-helpers');
 
 const stateColors = {
     open: COLOR_ATTENTION,
@@ -23,7 +23,7 @@ const stateColors = {
     row.updateCell('Topic', title);
     row.updateCell('Status', prState, stateColor ? { textFormat: { foregroundColor: stateColor } } : {});
     row.updateCell('Link1', `=HYPERLINK("${url}", "GitHub PR")`);
-    row.updateCell('Assigned', assigned);
+    row.updateCell('Assigned', assigned.split(', ').map(login => devName[login] || login).join(', '));
 
     await row.saveUpdatedCells();
 })()
