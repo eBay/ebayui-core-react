@@ -13,6 +13,6 @@ jobs:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/export
               with:
-                - issueTitle: ${{ github.event.issue.title }}
-                - issueUrl: ${{ github.event.issue.html_url }}
-                - googleSheetsKey: ${{ secrets.GOOGLE_SHEETS_KEY }}
+                issueTitle: ${{ github.event.issue.title }}
+                issueUrl: ${{ github.event.issue.html_url }}
+                googleSheetsKey: ${{ secrets.GOOGLE_SHEETS_KEY }}
