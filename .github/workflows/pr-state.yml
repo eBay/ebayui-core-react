@@ -26,4 +26,5 @@ jobs:
                 prMerged: ${{ github.event.pull_request.merged }}
                 prDraft: ${{ github.event.pull_request.draft }}
                 prReview: ${{ github.event.pull_request_review.state }}
+                prAssigned: ${{ join(github.event.pull_request.assignees.*.name, ', ') }}
                 googleSheetsKey: ${{ secrets.GOOGLE_SHEETS_KEY }}
