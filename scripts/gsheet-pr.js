@@ -1,4 +1,4 @@
-const { Doc, Row, COLOR_ATTENTION, COLOR_DONE, COLOR_DISABLED, devName } = require('./gsheet-helpers');
+const { Doc, Rows, COLOR_ATTENTION, COLOR_DONE, COLOR_DISABLED, devName } = require('./gsheet-helpers');
 
 const stateColors = {
     open: COLOR_ATTENTION,
@@ -16,14 +16,24 @@ const stateColors = {
     const stateColor = stateColors[prState];
 
     const doc = await Doc(creds);
-    const componentsRow = await Row(doc, 'Components');
+    const rows = await Rows(doc);
 
-    const row = await componentsRow.appendRow();
+    let row = await rows.findRow({ Topic: title, Link1: url, Link2: url });
+    if (!row) {
+        const componentsRow = await rows.findRow({ Topic: 'Components' });
+        if (!componentsRow) return;
+        row = await componentsRow.appendRow();
+    }
 
-    row.updateCell('Topic', title);
-    row.updateCell('Status', prState, stateColor ? { textFormat: { foregroundColor: stateColor } } : {});
-    row.updateCell('Link1', `=HYPERLINK("${url}", "GitHub PR")`);
-    row.updateCell('Assigned', assigned.split(', ').map(login => devName[login] || login).join(', '));
+    row.update({
+        Topic: { value: title },
+        Status: {
+            value: prState,
+            textFormat: stateColor ? { foregroundColor: stateColor } : {}
+        },
+        Link1: { value: `=HYPERLINK("${url}", "GitHub PR")` },
+        Assigned: { value: assigned.split(', ').map(login => devName[login] || login).join(', ') }
+    });
 
     await row.saveUpdatedCells();
 })()

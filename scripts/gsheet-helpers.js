@@ -11,7 +11,7 @@ async function Doc(creds) {
     return doc;
 }
 
-async function Row(doc, title) {
+async function Rows(doc) {
     console.log('Open', doc.title);
 
     const sheet = doc.sheetsByIndex[0];
@@ -19,11 +19,18 @@ async function Row(doc, title) {
     await sheet.loadHeaderRow();
 
     const rows = await sheet.getRows();
-    const row = rows.find(({ Topic }) => Topic === title);
-    if (!row) {
-        console.error(`'${title}' topic not found!`)
-        return;
-    }
+
+    rows.findRow = (cell = {}) => {
+        const row = rows.find(row =>
+            sheet.headerValues.find(title =>
+                Object.entries(cell).some(([ct, cv]) => title === ct && row[title] === cv)));
+        return row ? Row(sheet, row) : Promise.resolve();
+    };
+
+    return rows;
+}
+
+async function Row(sheet, row) {
     const index = row.rowNumber-1;
 
     row.index = index;
@@ -34,31 +41,30 @@ async function Row(doc, title) {
             endIndex: index + 2
         }, false);
 
-        return row;
+        const rows = await sheet.getRows();
+        return Row(sheet, rows[index]);
     };
 
-    row.getCell = header => {
+    row.getCell = header => sheet.getCell(index, headerIndex(header));
 
-        return sheet.getCell(index+1, headerIndex(header));
-    };
-    row.updateCell = (name, value, props={}) => {
-
+    row.updateCell = (name, props={}) => {
         const cell = row.getCell(name);
-        cell.value = value;
         Object.entries(props).forEach(([k, v]) => {
             cell[k] = v;
         })
         return cell;
     }
-    const headerIndex = header => {
 
+    row.update = props => Object.entries(props).forEach(([ title, cellProps ]) => row.updateCell(title, cellProps));
+
+    const headerIndex = header => {
         const index = sheet.headerValues.indexOf(header);
         return index === -1 ? undefined : index;
     };
+
     row.saveUpdatedCells = () => sheet.saveUpdatedCells();
 
     return row;
-
 }
 
 //'#e06666'
@@ -96,6 +102,7 @@ const devName = {
 
 module.exports = {
     Doc,
+    Rows,
     Row,
     COLOR_DONE,
     COLOR_ATTENTION,
