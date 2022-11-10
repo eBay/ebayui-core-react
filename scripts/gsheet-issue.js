@@ -5,6 +5,9 @@ const { Doc, Rows, COLOR_ATTENTION, devName } = require('./gsheet-helpers');
     const creds = process.env.GKEY;
 
     const doc = await Doc(creds);
+    if (!doc) return;
+
+
     const rows = await Rows(doc);
     const componentsRow = await rows.findRow({ Topic: 'Components' });
     const row = await componentsRow.appendRow();

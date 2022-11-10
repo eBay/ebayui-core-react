@@ -16,6 +16,8 @@ const stateColors = {
     const stateColor = stateColors[prState];
 
     const doc = await Doc(creds);
+    if (!doc) return;
+
     const rows = await Rows(doc);
 
     let row = await rows.findRow({ Topic: title, Link1: url, Link2: url });

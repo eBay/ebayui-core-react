@@ -3,12 +3,16 @@ const { GoogleSpreadsheet } = require("google-spreadsheet");
 const SHEET_ID = '1yrqQ1gB80OobCr_Bd_FTaMNbaZ9lwfyy9QnNexvroAY';
 
 async function Doc(creds) {
-    const doc = new GoogleSpreadsheet(SHEET_ID);
+    try {
+        const doc = new GoogleSpreadsheet(SHEET_ID);
 
-    await doc.useServiceAccountAuth(JSON.parse(creds));
-    await doc.loadInfo();
+        await doc.useServiceAccountAuth(JSON.parse(creds));
+        await doc.loadInfo();
 
-    return doc;
+        return doc;
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 async function Rows(doc) {
