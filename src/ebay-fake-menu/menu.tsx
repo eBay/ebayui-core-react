@@ -42,7 +42,7 @@ const EbayFakeMenu: FC<Props> = ({
                     }: EbayFakeMenuItemProps = child.props
 
                     return (
-                        <li>
+                        <li key={i}>
                             {cloneElement(child, {
                                 ...itemRest,
                                 focused: i === focusedIndex,
