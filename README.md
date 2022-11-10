@@ -29,7 +29,7 @@ eBayUI React components
 * [ ] `eebay-fake-link`
 * [ ] `ebay-fake-menu` (in progress...)
 * [ ] `ebay-fake-menu-button` (in progress...)
-* [ ] `ebay-fake-tabs`
+* [ ] `ebay-fake-tabs` (in progress...)
 * [x] [ebay-field](src/ebay-field)
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
@@ -180,6 +180,7 @@ One way to comply those guidelines is to implement your new component as similia
 ## Changelog
 
 `@ebay/ui-core-react`
+### version 3.x (Skin 15, some breaking changes in dialog components)
 ### version 2.x (Skin 15)
 
 `@ebay/ebayui-core-react`
