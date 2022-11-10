@@ -23,7 +23,7 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
     text = '',
     ...rest
 }) => {
-    const [ expanded, setExpanded ] = useState(false)
+    const [expanded, setExpanded] = useState(false)
     const [menuId, setMenuId] = useState<string|undefined>()
 
     const label = findComponent(children, EbayMenuButtonLabel) || text
@@ -33,7 +33,7 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
     useEffect(() => {
         if (expanded === true) onExpand()
         if (expanded === false) onCollapse()
-    }, [ expanded ])
+    }, [expanded])
 
     useEffect(() => {
         setMenuId(randomId())

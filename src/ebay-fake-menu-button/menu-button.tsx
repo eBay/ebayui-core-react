@@ -33,7 +33,7 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
     useEffect(() => {
         if (expanded === true) onExpand()
         if (expanded === false) onCollapse()
-    }, [ expanded ])
+    }, [expanded])
 
     useEffect(() => {
         setMenuId(randomId())
