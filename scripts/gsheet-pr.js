@@ -16,6 +16,8 @@ const stateColors = {
     const stateColor = stateColors[prState];
 
     const doc = await Doc(creds);
+    if (!doc) return;
+
     const componentsRow = await Row(doc, 'Components');
 
     const row = await componentsRow.appendRow();
