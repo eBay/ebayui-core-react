@@ -2,7 +2,6 @@ import React, {
     Children, cloneElement, useEffect, useState,
     ComponentProps, FC, ReactElement
 } from 'react'
-import classNames from 'classnames'
 import useRovingIndex from '../common/event-utils/use-roving-index'
 import { usePrevious } from '../common/component-utils/usePrevious'
 import { handleActionKeydown } from '../common/event-utils'
