@@ -65,6 +65,7 @@
             "named": "never",
             "asyncArrow": "always"
         }],
+        "array-bracket-spacing": "off",
         "template-curly-spacing": ["error", "never"],
         "no-extra-parens": ["error", "all", {
             "nestedBinaryExpressions": false,

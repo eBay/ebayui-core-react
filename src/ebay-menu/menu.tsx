@@ -26,7 +26,7 @@ const EbayMenu: FC<Props> = ({
     type,
     priority = 'secondary',
     checked,
-    className,
+    className = 'menu',
     onKeyDown = () => {},
     onChange = () => {},
     onSelect = () => {},
@@ -44,7 +44,7 @@ const EbayMenu: FC<Props> = ({
                 return index === i ? value : defaultValue
             }))
     }
-    const selectIndex = (index: number) => {
+    const selectIndex = (index: number): void => {
         switch (type) {
             case 'radio':
                 return updateIndex(index, true, true)
@@ -87,7 +87,7 @@ const EbayMenu: FC<Props> = ({
     }, [checkedIndexes])
 
     return (
-        <span {...rest} className={classNames(className, 'menu')}>
+        <span {...rest} className={className}>
             <div className="menu__items" role="menu">
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
