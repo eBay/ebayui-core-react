@@ -1,0 +1,30 @@
+name: PR state update
+
+on:
+    pull_request:
+        types:
+          - opened
+          - reopened
+          - closed
+          - ready_for_review
+          - converted_to_draft
+    pull_request_review:
+        types:
+            - submitted
+
+jobs:
+    export:
+        name: Export
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: ./.github/actions/export
+              with:
+                prTitle: ${{ github.event.pull_request.title }}
+                url: ${{ github.event.pull_request.html_url }}
+                state: ${{ github.event.pull_request.state }}
+                isMerged: ${{ github.event.pull_request.merged }}
+                isDraft: ${{ github.event.pull_request.draft }}
+                review: ${{ github.event.pull_request_review.state }}
+                assigned: ${{ join(github.event.pull_request.assignees.*.login, ', ') }}
+                googleSheetsKey: ${{ secrets.GOOGLE_SHEETS_KEY }}

@@ -25,7 +25,6 @@ jobs:
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/analyze
 
-
     publish-storybook:
         needs: analyze
         name: Publish Storybook
