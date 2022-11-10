@@ -10,9 +10,10 @@ export function excludeComponent(nodes: ReactNode = [], componentType: FC): Reac
     return elements.filter(({ type }) => type !== componentType)
 }
 
-export function filterByType(nodes: ReactNode = [], componentType: FC, fn?: () => void): ReactElement[] {
+export function filterByType(nodes: ReactNode = [], componentType: FC | FC[], fn?: () => void): ReactElement[] {
     const elements = Children.toArray(nodes) as ReactElement[]
-    return elements.filter(({ type }) => type === componentType)
+    const types = [componentType].flat()
+    return elements.filter(({ type }) => types.includes(type as any))
 }
 
 export function filterBy(nodes: ReactNode = [], predicate: (el: ReactElement) => boolean): ReactElement[] {

@@ -1,0 +1,410 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-fake-menu Default 1`] = `
+<span
+  className="fake-menu"
+  onClick={[Function]}
+>
+  <ul
+    className="fake-menu__items"
+    tabIndex={-1}
+  >
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 1 that has very long text
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 2
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 3
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu With Checkbox 1`] = `
+<span
+  className="fake-menu"
+>
+  <ul
+    className="fake-menu__items"
+    tabIndex={-1}
+  >
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Current page
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          page 2
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          page 3
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu With Disabled Item 1`] = `
+<span
+  className="fake-menu"
+>
+  <ul
+    className="fake-menu__items"
+    tabIndex={-1}
+  >
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          item 1 that has very long text
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 2
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 3
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu With Separator 1`] = `
+<span
+  className="fake-menu"
+>
+  <ul
+    className="fake-menu__items"
+    tabIndex={-1}
+  >
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          item 1 that has very long text
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 2
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <hr
+        checked={false}
+        className="fake-menu__separator"
+        focused={false}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="separator"
+      />
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 3
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 4
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        className="fake-menu__item"
+        href="#"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span>
+          Item 5
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </a>
+    </li>
+  </ul>
+</span>
+`;

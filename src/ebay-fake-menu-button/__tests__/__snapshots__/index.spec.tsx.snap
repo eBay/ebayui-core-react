@@ -1,0 +1,713 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-fake-menu-button Borderless 1`] = `
+<span
+  className="fake-menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn fake-menu-button__button btn--borderless"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        eBay Menu without borders!
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <span
+    className="fake-menu-button__menu"
+  >
+    <span
+      className="menu"
+    >
+      <div
+        className="menu__items"
+        role="menu"
+      >
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 1
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 2
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 3
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+      </div>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu-button Default 1`] = `
+<span
+  className="fake-menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn fake-menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        eBay Menu
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <span
+    className="fake-menu-button__menu"
+  >
+    <span
+      className="menu"
+    >
+      <div
+        className="menu__items"
+        role="menu"
+      >
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            eBay US
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.de"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            eBay DE
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.co.uk"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            eBay UK
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+      </div>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu-button With Custom Label 1`] = `
+<span
+  className="fake-menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn fake-menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        <span
+          style={
+            Object {
+              "background": "url(https://ir.ebaystatic.com/pictures/aw/pics/cmp/ds3/sprds3_21.png)",
+              "display": "inline-block",
+              "height": "20px",
+              "marginRight": "8px",
+              "verticalAlign": "middle",
+              "width": "26px",
+            }
+          }
+        />
+         Fun with flags!
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <span
+    className="fake-menu-button__menu"
+  >
+    <span
+      className="menu"
+    >
+      <div
+        className="menu__items"
+        role="menu"
+      >
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 1
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 2
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 3
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+      </div>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu-button With Separator 1`] = `
+<span
+  className="fake-menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn fake-menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        Complex menu
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <span
+    className="fake-menu-button__menu"
+  >
+    <span
+      className="menu"
+    >
+      <div
+        className="menu__items"
+        role="menu"
+      >
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 1
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 2
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <hr
+          checked={false}
+          className="menu-button__separator"
+          focused={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="separator"
+          tabIndex={0}
+        />
+        <a
+          className="fake-menu__item"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 3 (disabled)
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 4
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 5
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <hr
+          checked={false}
+          className="menu-button__separator"
+          focused={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="separator"
+          tabIndex={0}
+        />
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            Log in
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+      </div>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu-button Without Text 1`] = `
+<span
+  className="fake-menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-label="eBay Menu without text"
+    aria-live={null}
+    className="btn fake-menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      />
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <span
+    className="fake-menu-button__menu"
+  >
+    <span
+      className="menu"
+    >
+      <div
+        className="menu__items"
+        role="menu"
+      >
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 1
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 2
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+        <a
+          className="fake-menu__item"
+          href="http://ebay.com"
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          tabIndex={0}
+        >
+          <span>
+            item 3
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--tick-small"
+            focusable={false}
+            height="16px"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-tick-small"
+            />
+          </svg>
+        </a>
+      </div>
+    </span>
+  </span>
+</span>
+`;
