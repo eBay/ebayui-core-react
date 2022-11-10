@@ -180,6 +180,7 @@ One way to comply those guidelines is to implement your new component as similia
 ## Changelog
 
 `@ebay/ui-core-react`
+### version 3.x (Skin 15, some breaking changes in dialog components)
 ### version 2.x (Skin 15)
 
 `@ebay/ebayui-core-react`
