@@ -35,7 +35,7 @@ exports[`Storyshots ebay-menu-button Borderless 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"
@@ -159,7 +159,7 @@ exports[`Storyshots ebay-menu-button Default 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"
@@ -283,7 +283,7 @@ exports[`Storyshots ebay-menu-button Fixed Width 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu menu-button__menu--fix-width"
+    className="menu-button__menu menu-button__menu--fix-width menu"
   >
     <div
       className="menu__items"
@@ -407,7 +407,7 @@ exports[`Storyshots ebay-menu-button Multi-Select Menu Button 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"
@@ -536,7 +536,7 @@ exports[`Storyshots ebay-menu-button Reverse (Menu grows to the left) 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu menu-button__menu--reverse"
+    className="menu-button__menu menu-button__menu--reverse menu"
   >
     <div
       className="menu__items"
@@ -660,7 +660,7 @@ exports[`Storyshots ebay-menu-button Single-Select Menu Button 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"
@@ -775,7 +775,7 @@ exports[`Storyshots ebay-menu-button Variant: Overflow (Icon Button) 1`] = `
     </svg>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"
@@ -911,7 +911,7 @@ exports[`Storyshots ebay-menu-button With Custom Label 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"
@@ -1035,7 +1035,7 @@ exports[`Storyshots ebay-menu-button With Separator 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"
@@ -1256,7 +1256,7 @@ exports[`Storyshots ebay-menu-button Without Text 1`] = `
     </span>
   </button>
   <span
-    className="menu-button__menu"
+    className="menu-button__menu menu"
   >
     <div
       className="menu__items"

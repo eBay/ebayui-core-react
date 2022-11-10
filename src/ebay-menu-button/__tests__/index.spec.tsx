@@ -12,7 +12,6 @@ describe('<EbayMenuButton>', () => {
         let spy
         beforeEach(() => {
             spy = jest.fn()
-            spy.mockReset()
         })
         it('should fire onExpand event', () => {
             const wrapper = render(

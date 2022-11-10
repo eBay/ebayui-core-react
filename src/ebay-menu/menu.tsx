@@ -2,6 +2,7 @@ import React, {
     Children, cloneElement, useEffect, useState,
     ComponentProps, FC, ReactElement
 } from 'react'
+import classNames from 'classnames'
 import useRovingIndex from '../common/event-utils/use-roving-index'
 import { usePrevious } from '../common/component-utils/usePrevious'
 import { handleActionKeydown } from '../common/event-utils'
@@ -25,7 +26,7 @@ const EbayMenu: FC<Props> = ({
     type,
     priority = 'secondary',
     checked,
-    className = 'menu',
+    className,
     onKeyDown = () => {},
     onChange = () => {},
     onSelect = () => {},
@@ -43,7 +44,7 @@ const EbayMenu: FC<Props> = ({
                 return index === i ? value : defaultValue
             }))
     }
-    const selectIndex = (index: number): void => {
+    const selectIndex = (index: number) => {
         switch (type) {
             case 'radio':
                 return updateIndex(index, true, true)
@@ -86,7 +87,7 @@ const EbayMenu: FC<Props> = ({
     }, [checkedIndexes])
 
     return (
-        <span {...rest} className={className}>
+        <span {...rest} className={classNames(className, 'menu')}>
             <div className="menu__items" role="menu">
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
