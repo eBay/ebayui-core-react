@@ -29,7 +29,7 @@ eBayUI React components
 * [ ] `eebay-fake-link`
 * [ ] `ebay-fake-menu` (in progress...)
 * [ ] `ebay-fake-menu-button` (in progress...)
-* [ ] `ebay-fake-tabs`
+* [ ] `ebay-fake-tabs` (in progress...)
 * [x] [ebay-field](src/ebay-field)
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
