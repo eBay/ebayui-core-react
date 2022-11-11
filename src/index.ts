@@ -3,6 +3,7 @@ export { EbayCtaButton } from './ebay-cta-button'
 export { EbayEek, EbayEekProps } from './ebay-eek'
 export { EbayIconButton, EbayIconButtonProps } from './ebay-icon-button'
 export { EbayMenu, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriority } from './ebay-menu'
+export { EbayFakeMenu, EbayFakeMenuItem, EbayFakeMenuSeparator, EbayFakeMenuItemProps } from './ebay-fake-menu'
 export { EbayInlineNotice, NoticeStatus } from './ebay-inline-notice'
 export { EbaySectionNotice, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from './ebay-section-notice'
 export {
