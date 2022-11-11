@@ -12,7 +12,6 @@ describe('<EbayFakeMenuButton>', () => {
         let spy
         beforeEach(() => {
             spy = jest.fn()
-            spy.mockReset()
         })
         it('should fire onExpand event', () => {
             const wrapper = render(
@@ -20,19 +19,34 @@ describe('<EbayFakeMenuButton>', () => {
                     <EbayFakeMenuButtonItem />
                 </EbayFakeMenuButton>
             )
-            fireEvent.click(wrapper.container.querySelector('button'))
+            fireEvent.click(wrapper.getByRole('button'))
 
             expect(spy).toBeCalled()
         })
-        it('should fire onCollapse event', () => {
+    })
+    describe('on opened menu', () => {
+        let spy, button, menu
+        beforeEach(() => {
+            spy = jest.fn()
             const wrapper = render(
                 <EbayFakeMenuButton onCollapse={spy}>
                     <EbayFakeMenuButtonItem />
                 </EbayFakeMenuButton>
             )
-            const button = wrapper.container.querySelector('button')
+            button = wrapper.getByRole('button')
+            menu = wrapper.getByRole('list')
             fireEvent.click(button)
+        })
+
+        it('should close on button click', () => {
             fireEvent.click(button)
+
+            expect(spy).toBeCalled()
+        })
+
+        it('should close on Esc press', () => {
+            fireEvent.click(button)
+            fireEvent.keyDown(menu, { key: 'Esc' })
 
             expect(spy).toBeCalled()
         })
