@@ -23,7 +23,7 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
     text = '',
     ...rest
 }) => {
-    const [expanded, setExpanded] = useState(false)
+    const [expanded, setExpanded] = useState<boolean|undefined>()
     const [menuId, setMenuId] = useState<string|undefined>()
     const firstItemRef = useRef<HTMLAnchorElement>()
 
