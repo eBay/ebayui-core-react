@@ -33,8 +33,25 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
     const menuItems = filterByType(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
 
     useEffect(() => {
-        if (expanded === true) onExpand()
-        if (expanded === false) onCollapse()
+        const handleBackgroundClick = (e: React.MouseEvent) => {
+            if (ref.current && !ref.current.contains(e.currentTarget)) {
+                setExpanded(false)
+            }
+        }
+
+        if (expanded) {
+            onExpand()
+            // On React 18 useEffect hooks runs synchronous instead of asynchronous as React 17 or prior
+            // causing the event listener to be attached to the document at the same time that the dialog
+            // opens. Adding a timeout so the event is attached after the click event that opened the modal
+            // is finished.
+            setTimeout(() => {
+                document.addEventListener('click', handleBackgroundClick as any, false)
+            })
+        } else if (expanded === false) {
+            onCollapse()
+        }
+        return () => document.removeEventListener('click', handleBackgroundClick as any, false)
     }, [expanded])
 
     useEffect(() => {

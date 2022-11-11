@@ -462,6 +462,7 @@ exports[`Storyshots ebay-fake-menu-button With Separator 1`] = `
       </li>
       <li>
         <hr
+          autoFocus={false}
           className="menu-button__separator"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -542,6 +543,7 @@ exports[`Storyshots ebay-fake-menu-button With Separator 1`] = `
       </li>
       <li>
         <hr
+          autoFocus={false}
           className="menu-button__separator"
           onClick={[Function]}
           onKeyDown={[Function]}
