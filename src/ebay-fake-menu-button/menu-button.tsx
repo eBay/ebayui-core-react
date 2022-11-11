@@ -1,9 +1,11 @@
 import React, { cloneElement, FC, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
+
 import { filterByType, findComponent } from '../common/component-utils'
 import { randomId } from '../common/random-id'
 import { EbayButton, EbayButtonProps, EbayFakeMenu, EbayFakeMenuItemProps } from '..'
 import { EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator } from '.'
+import { handleEscapeKeydown } from '../common/event-utils'
 
 export type MenuButtonProps = {
     a11yText?: string;
@@ -25,7 +27,7 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
 }) => {
     const [expanded, setExpanded] = useState<boolean|undefined>()
     const [menuId, setMenuId] = useState<string|undefined>()
-    const firstItemRef = useRef<HTMLAnchorElement>()
+    const ref = useRef<HTMLButtonElement>()
 
     const label = findComponent(children, EbayFakeMenuButtonLabel) || text
     const menuItems = filterByType(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
@@ -39,10 +41,17 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
         setMenuId(randomId())
     }, [])
 
+    const handleMenuKeydown = e => {
+        handleEscapeKeydown(e, () => {
+            setExpanded(false)
+            ref.current?.focus()
+        })
+    }
 
     return (
         <span {...rest} className={classnames('fake-menu-button', className)}>
             <EbayButton
+                ref={ref as any}
                 aria-controls={menuId}
                 aria-expanded={!!expanded}
                 aria-haspopup
@@ -55,12 +64,17 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
                 {label || text || null}
             </EbayButton>
 
-            <EbayFakeMenu className="fake-menu-button__menu" id={menuId} tabIndex={-1}>
+            <EbayFakeMenu
+                className="fake-menu-button__menu"
+                id={menuId}
+                tabIndex={-1}
+                onKeyDown={handleMenuKeydown}
+            >
                 {menuItems.map((item, i) =>
                     cloneElement<EbayFakeMenuItemProps>(item, {
                         ...item.props,
                         key: i,
-                        itemRef: i ? undefined : firstItemRef
+                        autoFocus: i === 0
                     })
                 )}
             </EbayFakeMenu>
