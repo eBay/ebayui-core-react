@@ -27,7 +27,7 @@ eBayUI React components
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
-* [ ] `ebay-fake-menu` (in progress...)
+* [x] [ebay-fake-menu] (src/ebay-fake-menu)
 * [ ] `ebay-fake-menu-button` (in progress...)
 * [x] [ebay-fake-tabs] (src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
