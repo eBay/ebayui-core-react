@@ -48,7 +48,7 @@ describe('<EbayFakeMenu>', () => {
 
             fireEvent.click(wrapper.container.querySelectorAll('.fake-menu__item')[1])
 
-            expect(onSelectSpy.mock.calls[0][1]).toEqual(1)
+            expect(onSelectSpy).toBeCalledWith(expect.anything(), 1)
         })
     })
 })
