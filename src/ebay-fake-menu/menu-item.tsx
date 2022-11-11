@@ -1,11 +1,11 @@
-import React, { ComponentProps, FC, useEffect } from 'react'
+import React, { ComponentProps, FC, MutableRefObject, useEffect } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../index'
 
 export type EbayFakeMenuItemProps = Omit<ComponentProps<'a'>, 'onKeyDown'> & {
     current?: boolean;
     disabled?: boolean;
-    itemRef?: any;
+    itemRef?: MutableRefObject<HTMLAnchorElement>;
 }
 
 const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
