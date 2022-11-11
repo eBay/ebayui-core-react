@@ -46,6 +46,11 @@ exports[`Storyshots ebay-fake-menu-button Borderless 1`] = `
         <a
           className="fake-menu__item"
           href="http://ebay.com"
+          itemRef={
+            Object {
+              "current": undefined,
+            }
+          }
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -165,6 +170,11 @@ exports[`Storyshots ebay-fake-menu-button Default 1`] = `
         <a
           className="fake-menu__item"
           href="http://ebay.com"
+          itemRef={
+            Object {
+              "current": undefined,
+            }
+          }
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -296,6 +306,11 @@ exports[`Storyshots ebay-fake-menu-button With Custom Label 1`] = `
         <a
           className="fake-menu__item"
           href="http://ebay.com"
+          itemRef={
+            Object {
+              "current": undefined,
+            }
+          }
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -415,6 +430,11 @@ exports[`Storyshots ebay-fake-menu-button With Separator 1`] = `
         <a
           className="fake-menu__item"
           href="http://ebay.com"
+          itemRef={
+            Object {
+              "current": undefined,
+            }
+          }
           onClick={[Function]}
           onKeyDown={[Function]}
         >
@@ -622,6 +642,11 @@ exports[`Storyshots ebay-fake-menu-button Without Text 1`] = `
         <a
           className="fake-menu__item"
           href="http://ebay.com"
+          itemRef={
+            Object {
+              "current": undefined,
+            }
+          }
           onClick={[Function]}
           onKeyDown={[Function]}
         >
