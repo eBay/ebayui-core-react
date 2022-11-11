@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React  from 'react'
 import { fireEvent, render } from '@testing-library/react';
 import initStoryshots from '@storybook/addon-storyshots'
 import { EbayFakeMenu, EbayFakeMenuItem } from '../index'
@@ -53,7 +53,7 @@ describe('<EbayFakeMenu>', () => {
     })
 
     describe('on appear', () => {
-        it('should not focus on first item given no ref', () => {
+        it('should not autofocus', () => {
             const wrapper = render(
                 <EbayFakeMenu>
                     <EbayFakeMenuItem href="#" />
@@ -64,11 +64,10 @@ describe('<EbayFakeMenu>', () => {
 
             expect(firstMenuItem).not.toHaveFocus()
         })
-        it('should focus on first item given ref', () => {
-            const ref: any = createRef()
+        it('should autofocus on first item', () => {
             const wrapper = render(
                 <EbayFakeMenu>
-                    <EbayFakeMenuItem href="#" itemRef={ref} />
+                    <EbayFakeMenuItem href="#" autoFocus />
                     <EbayFakeMenuItem href="#" />
                 </EbayFakeMenu>
             )
