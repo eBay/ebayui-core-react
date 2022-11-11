@@ -18,6 +18,8 @@ describe('<EbayFakeMenu>', () => {
             )
 
             fireEvent.click(wrapper.container.querySelectorAll('.fake-menu__item')[0])
+
+            expect(onClickSpy).toBeCalled()            
         })
     })
     describe('on key down', () => {
