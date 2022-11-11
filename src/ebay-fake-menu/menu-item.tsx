@@ -1,31 +1,33 @@
-import React, { ComponentProps, FC, MutableRefObject, useEffect } from 'react'
+import React, { ComponentProps, FC, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../index'
 
 export type EbayFakeMenuItemProps = Omit<ComponentProps<'a'>, 'onKeyDown'> & {
     current?: boolean;
     disabled?: boolean;
-    itemRef?: MutableRefObject<HTMLAnchorElement>;
+    autoFocus?: boolean;
 }
 
 const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
     className,
     current,
     disabled,
-    itemRef,
+    autoFocus,
     children,
     ...rest
 }) => {
+    const ref = useRef<HTMLAnchorElement>()
+
     useEffect(() => {
-        if (itemRef) {
-            itemRef.current?.focus()
+        if (autoFocus) {
+            ref.current?.focus()
         }
     })
 
     return (
         <a
             {...rest}
-            ref={itemRef}
+            ref={ref}
             className={classNames(className, 'fake-menu__item')}
             aria-disabled={disabled ? 'true' : undefined}
         >
