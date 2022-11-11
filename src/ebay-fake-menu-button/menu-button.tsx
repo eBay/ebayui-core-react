@@ -1,8 +1,8 @@
-import React, { cloneElement, FC, useEffect, useState } from 'react'
+import React, { cloneElement, FC, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
 import { filterByType, findComponent } from '../common/component-utils'
 import { randomId } from '../common/random-id'
-import { EbayButton, EbayButtonProps, EbayFakeMenu } from '..'
+import { EbayButton, EbayButtonProps, EbayFakeMenu, EbayFakeMenuItemProps } from '..'
 import { EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator } from '.'
 
 export type MenuButtonProps = {
@@ -25,10 +25,10 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
 }) => {
     const [expanded, setExpanded] = useState(false)
     const [menuId, setMenuId] = useState<string|undefined>()
+    const firstItemRef = useRef<HTMLAnchorElement>()
 
     const label = findComponent(children, EbayFakeMenuButtonLabel) || text
     const menuItems = filterByType(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
-    const wrapperClasses = classnames('fake-menu-button', className)
 
     useEffect(() => {
         if (expanded === true) onExpand()
@@ -39,8 +39,9 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
         setMenuId(randomId())
     }, [])
 
+
     return (
-        <span {...rest} className={wrapperClasses}>
+        <span {...rest} className={classnames('fake-menu-button', className)}>
             <EbayButton
                 aria-controls={menuId}
                 aria-expanded={!!expanded}
@@ -54,11 +55,12 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
                 {label || text || null}
             </EbayButton>
 
-            <EbayFakeMenu className="fake-menu-button__menu" id={menuId}>
+            <EbayFakeMenu className="fake-menu-button__menu" id={menuId} tabIndex={-1}>
                 {menuItems.map((item, i) =>
-                    cloneElement(item, {
+                    cloneElement<EbayFakeMenuItemProps>(item, {
                         ...item.props,
-                        key: i
+                        key: i,
+                        itemRef: i ? undefined : firstItemRef
                     })
                 )}
             </EbayFakeMenu>

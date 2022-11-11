@@ -36,6 +36,7 @@ exports[`Storyshots ebay-fake-menu-button Borderless 1`] = `
   </button>
   <div
     className="fake-menu-button__menu fake-menu"
+    tabIndex={-1}
   >
     <ul
       className="fake-menu__items"
@@ -154,6 +155,7 @@ exports[`Storyshots ebay-fake-menu-button Default 1`] = `
   </button>
   <div
     className="fake-menu-button__menu fake-menu"
+    tabIndex={-1}
   >
     <ul
       className="fake-menu__items"
@@ -284,6 +286,7 @@ exports[`Storyshots ebay-fake-menu-button With Custom Label 1`] = `
   </button>
   <div
     className="fake-menu-button__menu fake-menu"
+    tabIndex={-1}
   >
     <ul
       className="fake-menu__items"
@@ -402,6 +405,7 @@ exports[`Storyshots ebay-fake-menu-button With Separator 1`] = `
   </button>
   <div
     className="fake-menu-button__menu fake-menu"
+    tabIndex={-1}
   >
     <ul
       className="fake-menu__items"
@@ -608,6 +612,7 @@ exports[`Storyshots ebay-fake-menu-button Without Text 1`] = `
   </button>
   <div
     className="fake-menu-button__menu fake-menu"
+    tabIndex={-1}
   >
     <ul
       className="fake-menu__items"
