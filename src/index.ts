@@ -4,9 +4,6 @@ export { EbayEek, EbayEekProps } from './ebay-eek'
 export { EbayIconButton, EbayIconButtonProps } from './ebay-icon-button'
 export { EbayMenu, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriority } from './ebay-menu'
 export { EbayFakeMenu, EbayFakeMenuItem, EbayFakeMenuSeparator, EbayFakeMenuItemProps } from './ebay-fake-menu'
-export {
-    EbayFakeMenuButton, EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator, EbayFakeMenuButtonLabel
-} from './ebay-fake-menu-button'
 export { EbayInlineNotice, NoticeStatus } from './ebay-inline-notice'
 export { EbaySectionNotice, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from './ebay-section-notice'
 export {
@@ -26,6 +23,7 @@ export { EbayCheckbox } from './ebay-checkbox'
 export { EbayBreadcrumbs, EbayBreadcrumbItem } from './ebay-breadcrumbs'
 export { EbayPagination, EbayPaginationItem, PaginationVariant } from './ebay-pagination'
 export { EbayTabs, EbayTab, EbayTabPanel, Size as TabSize, Activation } from './ebay-tabs'
+export { EbayFakeTabs, EbayFakeTab } from './ebay-fake-tabs'
 export { EbaySvg } from './ebay-svg'
 export { EbayIcon, Icon, EbayIconProps, A11yVariant } from './ebay-icon'
 export { EbayDialogHeader, EbayDialogFooter, EbayDialogCloseButton } from './ebay-dialog-base'

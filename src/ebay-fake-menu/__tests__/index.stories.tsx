@@ -20,21 +20,29 @@ storiesOf('ebay-fake-menu', module)
                 action('click')('ITEM click event prevented')
                 event.preventDefault()
             }}>Item 1 that has very long text</Item>
-            <Item href="#">Item 2</Item>
+            <Item href="#" current>Current page</Item>
             <Item href="#">Item 3</Item>
         </EbayFakeMenu>
     </>))
-    .add('With Checkbox', () => (<>
+    .add('Without tick icon', () => (<>
         <EbayFakeMenu
+            itemMatchesUrl={false}
+            onClick={(event) => {
+                action('click')('MENU click event prevented')
+                event.preventDefault()
+            }}
             onKeyDown={action('key down')}
             onSelect={(event) => {
                 action('select')('event prevented')
                 event.preventDefault()
             }}
         >
-            <Item href="#" checked>Current page</Item>
-            <Item href="#">page 2</Item>
-            <Item href="#">page 3</Item>
+            <Item href="#" onClick={(event) => {
+                action('click')('ITEM click event prevented')
+                event.preventDefault()
+            }}>Item 1 that has very long text</Item>
+            <Item href="#" current>Current page</Item>
+            <Item href="#">Item 3</Item>
         </EbayFakeMenu>
     </>))
     .add('With Separator', () => (<>
@@ -50,7 +58,7 @@ storiesOf('ebay-fake-menu', module)
     .add('With Disabled Item', () => (<>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
-            <Item>Item 2</Item>
+            <Item disabled>Item 2</Item>
             <Item href="#">Item 3</Item>
         </EbayFakeMenu>
     </>))
