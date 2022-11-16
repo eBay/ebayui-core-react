@@ -189,6 +189,29 @@ exports[`Storyshots ebay-textbox Floating label with placeholder, controlled 1`]
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-textbox Floating label with value 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Floating label
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control"
+        type="text"
+        value="Default value"
+      />
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-textbox Fluid textbox 1`] = `
 <DocumentFragment>
   <div

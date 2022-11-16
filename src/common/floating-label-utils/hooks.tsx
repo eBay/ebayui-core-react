@@ -78,7 +78,7 @@ export function useFloatingLabel({
 } : FloatingLabelHookProps): FloatingLabelHookReturn {
     const _internalInputRef = useRef(null)
     const inputRef = () => ref || _internalInputRef
-    const [isFloating, setFloating] = useState(true)
+    const [isFloating, setFloating] = useState(Boolean(inputValue))
     const [shouldAnimate, setAnimate] = useState(false)
     const [isFocused, setFocused] = useState(false)
     const selectFirstOptionText = useRef(``)
