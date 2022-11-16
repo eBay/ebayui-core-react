@@ -56,7 +56,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
         disabled: rest.disabled,
         label: floatingLabel,
         inputSize,
-        inputValue: controlledValue,
+        inputValue: controlledValue || value,
         placeholder,
         invalid
     })
@@ -77,7 +77,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
         }
     }, [])
 
-    const onChangeHandler = e => {
+    const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement & HTMLInputElement>) => {
         const newValue = e.target.value
         if (!isControlled(controlledValue)) {
             setValue(newValue)

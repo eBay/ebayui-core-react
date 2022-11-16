@@ -85,6 +85,13 @@ storiesOf('ebay-textbox', module)
             floatingLabel="Floating label"
         />
     ))
+    .add('Floating label with value', () => (
+        <EbayTextbox
+            onChange={action('textbox-changed')}
+            floatingLabel="Floating label"
+            defaultValue="Default value"
+        />
+    ))
     .add('Floating label invalid', () => (
         <EbayTextbox
             invalid
