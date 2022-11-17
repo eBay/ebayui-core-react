@@ -1,4 +1,5 @@
 import { Children, FC, ReactElement, ReactNode } from 'react'
+import './array.polyfill.flat' // for Mobile Safari 11
 
 export function findComponent(nodes: ReactNode = [], componentType: FC): ReactElement | undefined {
     const elements = Children.toArray(nodes) as ReactElement[]
@@ -10,7 +11,7 @@ export function excludeComponent(nodes: ReactNode = [], componentType: FC): Reac
     return elements.filter(({ type }) => type !== componentType)
 }
 
-export function filterByType(nodes: ReactNode = [], componentType: FC | FC[], fn?: () => void): ReactElement[] {
+export function filterByType(nodes: ReactNode = [], componentType: FC | FC[]): ReactElement[] {
     const elements = Children.toArray(nodes) as ReactElement[]
     const types = [componentType].flat()
     return elements.filter(({ type }) => types.includes(type as any))

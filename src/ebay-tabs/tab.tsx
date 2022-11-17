@@ -6,6 +6,9 @@ type TabProps = ComponentProps<'li'> & ComponentProps<'div'> & {
     parentId?: string;
     selected?: boolean;
     focused?: boolean;
+    /**
+     * @deprecated Use EbayFakeTabs instead
+     */
     href?: string;
     onClick?: () => void;
     onKeyDown?: () => void;
@@ -18,6 +21,9 @@ const Tab: FC<TabProps> = ({
     parentId,
     selected,
     focused,
+    /**
+     * @deprecated Use EbayFakeTabs instead
+     */
     href,
     className,
     refCallback,
