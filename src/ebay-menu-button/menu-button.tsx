@@ -2,22 +2,20 @@ import React, { cloneElement, FC, useEffect, useState } from 'react'
 import classnames from 'classnames'
 import { filterByType, findComponent } from '../common/component-utils'
 import { randomId } from '../common/random-id'
-import { EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator } from '.'
+import { EbayMenuButtonIcon, EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator } from '.'
 import {
     EbayButton,
     EbayButtonProps,
     EbayIconButton,
     EbayMenu,
-    EbayMenuType,
-    Icon
+    EbayMenuType
 } from '..'
 
-export type EbayMenuButtonVariant = 'overflow' | 'default'
+export type EbayMenuButtonVariant = 'overflow' | 'form' | 'button'
 export type EbayMenuButtonProps = {
     a11yText?: string;
     className?: string;
     fixWidth?: boolean;
-    icon?: Icon;
     onCollapse?: () => void;
     onExpand?: () => void;
     reverse?: boolean;
@@ -26,13 +24,11 @@ export type EbayMenuButtonProps = {
     variant?: EbayMenuButtonVariant;
 }
 
-const EbayMenuButton: FC<Omit<EbayButtonProps, 'type'> & EbayMenuButtonProps> = ({
+const EbayMenuButton: FC<Omit<EbayButtonProps, 'type' | 'variant'> & EbayMenuButtonProps> = ({
     type,
-    variant = 'default',
+    variant = 'button',
     className,
     text = '',
-    icon = 'overflow',
-    borderless,
     fixWidth,
     reverse,
     a11yText,
@@ -44,7 +40,8 @@ const EbayMenuButton: FC<Omit<EbayButtonProps, 'type'> & EbayMenuButtonProps> = 
     const [expanded, setExpanded] = useState(false)
     const [menuId, setMenuId] = useState<string|undefined>()
 
-    const label = findComponent(children, EbayMenuButtonLabel) || text
+    const label = findComponent(children, EbayMenuButtonLabel) || <span>{text}</span> || null
+    const icon = findComponent(children, EbayMenuButtonIcon)
     const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
     const wrapperClasses = classnames('menu-button', className)
     const menuClasses = classnames('menu-button__menu', {
@@ -67,28 +64,27 @@ const EbayMenuButton: FC<Omit<EbayButtonProps, 'type'> & EbayMenuButtonProps> = 
         'aria-haspopup': true,
         'aria-label': a11yText,
         'aria-controls': menuId,
-        borderless: borderless,
-        onClick: () => setExpanded(!expanded)
+        onClick: () => setExpanded(!expanded),
+        ...rest
     }
+
     return (
-        <span {...rest} className={wrapperClasses}>
+        <span className={wrapperClasses}>
             {variant === 'overflow' ?
-                <EbayIconButton icon={icon} {...buttonProps}>
-                    {label || text || null}
-                </EbayIconButton> :
-                <EbayButton bodyState="expand" {...buttonProps}>
-                    {label || text || null}
-                </EbayButton>
+                <EbayIconButton icon="overflow" {...buttonProps} /> :
+                <EbayButton bodyState="expand" {...buttonProps}>{icon}{label}</EbayButton>
             }
-            <EbayMenu type={type} className={menuClasses} id={menuId}>
-                {menuItems.map((item, i) =>
-                    cloneElement(item, {
-                        ...item.props,
-                        className: classnames(item.props.className, 'menu-button__item'),
-                        key: i
-                    })
-                )}
-            </EbayMenu>
+            {expanded &&
+                <EbayMenu type={type} className={menuClasses} id={menuId}>
+                    {menuItems.map((item, i) =>
+                        cloneElement(item, {
+                            ...item.props,
+                            className: classnames(item.props.className, 'menu-button__item'),
+                            key: i
+                        })
+                    )}
+                </EbayMenu>
+            }
         </span>
     )
 }

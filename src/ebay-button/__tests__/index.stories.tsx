@@ -52,18 +52,35 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton fluid href="https://www.ebay.com">Link</EbayButton></p>
         </>
     ))
-    .add(`Icon Button`, () => (
+    .add(`With icon`, () => (
         <>
-            <p><EbayButton priority="primary" aria-label="Menu button">
+            <p>Form button:<br/><EbayButton aria-label="Menu button">
+                <EbayIcon name="menu" />
+                <span>Button with icon</span>
+            </EbayButton></p>
+            <p>Form fake-button (link):<br/><EbayButton href="#" variant="form" aria-label="Settings link">
+                <EbayIcon name="settings" />
+                <span>Button with icon</span>
+            </EbayButton></p>
+            <p>Delete button:<br/><EbayButton variant="destructive" aria-label="Destructive button">
+                <EbayIcon name="delete" />
+                <span>Button with icon</span>
+            </EbayButton></p>
+            <p>Expand button:<br/><EbayButton bodyState="expand" aria-label="Destructive button">
+                <EbayIcon name="settings" />
+                <span>Expand button</span>
+            </EbayButton></p>
+            </>
+    ))
+    .add(`Icon Only`, () => (
+        <>
+            <p>Form button:<br/><EbayButton variant="form" aria-label="Menu button">
                 <EbayIcon name="menu" />
             </EbayButton></p>
-            <p><EbayButton aria-label="Settings button">
+            <p>Form fake-button (link):<br/><EbayButton href="#" variant="form" aria-label="Settings link">
                 <EbayIcon name="settings" />
             </EbayButton></p>
-            <p><EbayButton href="#" aria-label="Settings link">
-                <EbayIcon name="settings" />
-            </EbayButton></p>
-            <p><EbayButton priority="secondary" variant="destructive" aria-label="Destructive button">
+            <p>Delete button:<br/><EbayButton variant="destructive" aria-label="Destructive button">
                 <EbayIcon name="delete" />
             </EbayButton></p>
             </>
@@ -92,7 +109,7 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton href="https://ebay.com" truncate>Hello, I am a link! this is a long text</EbayButton></p>
         </div>
     ))
-    .add(`Flexible Button`, () => (
+    .add(`Flex Button`, () => (
         <EbayButton priority="primary" fluid>
             <EbayButtonCell style={{ justifyContent: 'space-between' }}>
                 <span>Select</span>
@@ -105,7 +122,11 @@ storiesOf(`ebay-button`, module)
     ))
     .add(`Loading button`, () => (
         <>
-            <p><EbayButton priority="primary" bodyState="loading">Primary Button</EbayButton></p>
+            <p><EbayButton bodyState="loading" /></p>
+            <p><EbayButton priority="primary" bodyState="loading" /></p>
+            <p><EbayButton priority="tertiary" bodyState="loading" /></p>
+            <p><EbayButton variant="form" bodyState="loading" /></p>
+            <p><EbayButton variant="destructive" bodyState="loading" /></p>
         </>
     ))
     .add(`Expand button`, () => (

@@ -4,13 +4,22 @@ import { action } from '../../../.storybook/action'
 import {
     EbayMenuButton,
     EbayMenuButtonItem as Item,
+    EbayMenuButtonIcon,
     EbayMenuButtonSeparator as Separator,
-    EbayMenuButtonLabel
+    EbayMenuButtonLabel,
 } from '..'
 
 storiesOf('ebay-menu-button', module)
     .add('Default', () => (<>
         <EbayMenuButton text="eBay Menu">
+            <Item>item 1 that has very long text</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+    </>))
+    .add('With icon', () => (<>
+        <EbayMenuButton text="Settings">
+            <EbayMenuButtonIcon name="settings" />
             <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -32,15 +41,15 @@ storiesOf('ebay-menu-button', module)
             <Item onClick={action('Open login popup!')}>Log in</Item>
         </EbayMenuButton>
     </>))
-    .add('Without Text', () => (<>
-        <EbayMenuButton a11yText="eBay Menu without text">
+    .add('Variant: Overflow', () => (<>
+        <EbayMenuButton variant="overflow" a11y-text="Menu">
             <Item>item 1</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Variant: Overflow (Icon Button)', () => (<>
-        <EbayMenuButton variant="overflow" a11y-text="Menu">
+    .add('Priority: Primary', () => (<>
+        <EbayMenuButton priority="primary" text="Primary" a11y-text="Menu">
             <Item>item 1</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -74,13 +83,13 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Reverse (Menu grows to the left)', () => (<>
-        <EbayMenuButton text="Menu grows to the left" reverse style={{ marginLeft: '100px' }}>
+    .add('Reverse (Menu grows to the left)', () => (<div style={{ marginLeft: '100px' }}>
+        <EbayMenuButton text="Menu grows to the left" reverse>
             <Item>item 1 that has very very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
         </EbayMenuButton>
-    </>))
+    </div>))
     .add('With Custom Label', () => (<>
         <EbayMenuButton>
             <EbayMenuButtonLabel>
