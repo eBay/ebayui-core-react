@@ -21,8 +21,8 @@ export type EbayMenuButtonProps = {
     onExpand?: () => void;
     onChange?: () => void;
     onSelect?: () => void;
-    // todo: implement the following props
     expanded?: boolean;
+    // todo: implement the following props
     checked?: number;
     noToggleIcon?: boolean;
     collapseOnSelect?: boolean;
@@ -42,6 +42,7 @@ const EbayMenuButton: FC<Props> = ({
     text = '',
     fixWidth,
     reverse,
+    expanded: defaultExpanded = false,
     a11yText,
     onExpand = () => {},
     onCollapse = () => {},
@@ -50,7 +51,7 @@ const EbayMenuButton: FC<Props> = ({
     children,
     ...rest
 }) => {
-    const [expanded, setExpanded] = useState(false)
+    const [expanded, setExpanded] = useState(defaultExpanded)
     const [menuId, setMenuId] = useState<string | undefined>()
     const ref = useRef<HTMLButtonElement>()
 

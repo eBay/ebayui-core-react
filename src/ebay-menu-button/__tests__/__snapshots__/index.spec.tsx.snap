@@ -118,6 +118,132 @@ exports[`Storyshots ebay-menu-button Disabled 1`] = `
 </span>
 `;
 
+exports[`Storyshots ebay-menu-button Expanded 1`] = `
+<span
+  className="menu-button"
+>
+  <button
+    aria-expanded={true}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        <span>
+          eBay Menu
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+  <span
+    className="menu-button__menu menu"
+  >
+    <div
+      className="menu__items"
+      role="menu"
+    >
+      <div
+        aria-checked={false}
+        aria-hidden={false}
+        className="menu-button__item menu__item"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="menuitem"
+        tabIndex={0}
+      >
+        <span>
+          item 1 that has very long text
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked={false}
+        aria-hidden={false}
+        className="menu-button__item menu__item"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="menuitem"
+        tabIndex={-1}
+      >
+        <span>
+          item 2
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked={false}
+        aria-hidden={false}
+        className="menu-button__item menu__item"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="menuitem"
+        tabIndex={-1}
+      >
+        <span>
+          item 3
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--tick-small"
+          focusable={false}
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-tick-small"
+          />
+        </svg>
+      </div>
+    </div>
+  </span>
+</span>
+`;
+
 exports[`Storyshots ebay-menu-button Fixed Width 1`] = `
 <span
   className="menu-button"

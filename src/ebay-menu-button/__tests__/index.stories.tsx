@@ -17,6 +17,13 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
+    .add('Expanded', () => (<>
+        <EbayMenuButton expanded text="eBay Menu">
+            <Item>item 1 that has very long text</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+    </>))
     .add('Disabled', () => (<>
         <EbayMenuButton text="eBay Menu" disabled>
             <Item>item 1 that has very long text</Item>
