@@ -13,8 +13,7 @@ import { withForwardRef } from '../common/component-utils'
 import { Priority, Size, BodyState, Variant } from './types'
 import { EbayIcon } from '../ebay-icon'
 import EbayButtonLoading from './button-loading'
-import EbayButtonCell from './button-cell'
-import EbayButtonText from './button-text'
+import EbayButtonExpand from './button-expand'
 
 export type EbayButtonProps = {
     fluid?: boolean;
@@ -75,7 +74,6 @@ const EbayButton:FC<Props> = ({
     const isDestructive = variant === 'destructive'
     const isForm = variant === 'form'
     const isLoading = bodyState === 'loading'
-    const isExpand = bodyState === 'expand'
     const className = classNames(
         classPrefix,
         extraClasses,
@@ -83,7 +81,7 @@ const EbayButton:FC<Props> = ({
         sizeStyles[size],
         isDestructive && `${classPrefix}--destructive`,
         isForm && `${classPrefix}--form`,
-        iconOnly && `${classPrefix}--icon-only`,
+        iconOnly && `${classPrefix}--slim`,
         transparent && `${classPrefix}--transparent`,
         fluid && `${classPrefix}--fluid`,
         truncate && `${classPrefix}--truncated`,
@@ -97,19 +95,11 @@ const EbayButton:FC<Props> = ({
         }
     }
 
-    let bodyContent = children
-    if (isLoading) {
-        bodyContent = <EbayButtonLoading />
-    } else if (isExpand) {
-        bodyContent = (
-            <EbayButtonCell>
-                <EbayButtonText>
-                    {children}
-                </EbayButtonText>
-                <EbayIcon name="dropdown" />
-            </EbayButtonCell>
-        )
-    }
+    const bodyContent = {
+        loading: <EbayButtonLoading />,
+        expand: <EbayButtonExpand>{children}</EbayButtonExpand>
+    }[bodyState] || children
+
     const ariaLive = isLoading ? `polite` : null
 
     return href ? (
