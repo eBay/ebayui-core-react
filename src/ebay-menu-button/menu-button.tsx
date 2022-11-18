@@ -1,12 +1,13 @@
 import React, { cloneElement, ComponentProps, FC, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
 import { filterByType, findComponent } from '../common/component-utils'
+import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
+
 import {
     EbayMenuButtonIcon, EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, EbayMenuButtonVariant
 } from '.'
 import { EbayButton, EbayButtonProps, EbayIconButton, EbayMenu, EbayMenuType } from '..'
-import { handleEscapeKeydown } from '../common/event-utils'
 
 export type EbayMenuButtonProps = {
     a11yText?: string;
@@ -18,9 +19,9 @@ export type EbayMenuButtonProps = {
     variant?: EbayMenuButtonVariant;
     onCollapse?: () => void;
     onExpand?: () => void;
-    // todo: implement the following props
     onChange?: () => void;
     onSelect?: () => void;
+    // todo: implement the following props
     expanded?: boolean;
     checked?: number;
     noToggleIcon?: boolean;
@@ -30,7 +31,7 @@ export type EbayMenuButtonProps = {
 }
 
 type Props = Omit<EbayButtonProps, 'type' | 'variant'> &
-    ComponentProps<'button'> &
+    Omit<ComponentProps<'button'>, 'type'> &
     ComponentProps<'a'> &
     EbayMenuButtonProps
 
@@ -44,8 +45,8 @@ const EbayMenuButton: FC<Props> = ({
     a11yText,
     onExpand = () => {},
     onCollapse = () => {},
-    // onChange = () => {},
-    // onSelect = () => {},
+    onChange = () => {},
+    onSelect = () => {},
     children,
     ...rest
 }) => {
@@ -119,6 +120,8 @@ const EbayMenuButton: FC<Props> = ({
                     id={menuId}
                     autofocus
                     onKeyDown={handleMenuKeydown}
+                    onChange={onChange}
+                    onSelect={onSelect}
                 >
                     {menuItems.map((item, i) =>
                         cloneElement(item, {
