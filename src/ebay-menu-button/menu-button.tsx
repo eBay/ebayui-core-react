@@ -22,9 +22,9 @@ export type EbayMenuButtonProps = {
     onChange?: () => void;
     onSelect?: () => void;
     expanded?: boolean;
+    noToggleIcon?: boolean;
     // todo: implement the following props
     checked?: number;
-    noToggleIcon?: boolean;
     collapseOnSelect?: boolean;
     prefixId?: string;
     prefixLabel?: string;
@@ -43,6 +43,7 @@ const EbayMenuButton: FC<Props> = ({
     fixWidth,
     reverse,
     expanded: defaultExpanded = false,
+    noToggleIcon,
     a11yText,
     onExpand = () => {},
     onCollapse = () => {},
@@ -112,7 +113,7 @@ const EbayMenuButton: FC<Props> = ({
         <span className={wrapperClasses}>
             {variant === 'overflow' ?
                 <EbayIconButton icon="overflow" {...buttonProps} /> :
-                <EbayButton bodyState="expand" {...buttonProps}>{icon}{label}</EbayButton>
+                <EbayButton bodyState={noToggleIcon ? undefined : 'expand'} {...buttonProps}>{icon}{label}</EbayButton>
             }
             {expanded &&
                 <EbayMenu

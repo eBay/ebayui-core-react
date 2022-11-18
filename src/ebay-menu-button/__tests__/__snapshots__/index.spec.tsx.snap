@@ -614,3 +614,22 @@ exports[`Storyshots ebay-menu-button With icon 1`] = `
   </button>
 </span>
 `;
+
+exports[`Storyshots ebay-menu-button Without toggle icon 1`] = `
+<span
+  className="menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span>
+      Menu
+    </span>
+  </button>
+</span>
+`;

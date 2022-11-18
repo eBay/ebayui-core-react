@@ -31,6 +31,9 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
+    //
+    // Custom button stories
+    //
     .add('With icon', () => (<>
         <EbayMenuButton text="Settings">
             <EbayMenuButtonIcon name="settings" />
@@ -39,20 +42,11 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('With Separator', () => (<>
-        <EbayMenuButton
-            text="Complex menu"
-            onExpand={action('Menu expanded!')}
-            onCollapse={action('Menu collapsed!')}
-        >
-            <Item>item 1</Item>
+    .add('Without toggle icon', () => (<>
+        <EbayMenuButton noToggleIcon text="Menu">
+            <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
-            <Separator/>
             <Item>item 3</Item>
-            <Item>item 4</Item>
-            <Item>item 5</Item>
-            <Separator/>
-            <Item onClick={action('Open login popup!')}>Log in</Item>
         </EbayMenuButton>
     </>))
     .add('Variant: Overflow', () => (<>
@@ -69,20 +63,6 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Single-Select Menu Button', () => (<>
-        <EbayMenuButton text="Sort order" type="radio">
-            <Item>Date</Item>
-            <Item checked>Price</Item>
-            <Item>Relevance</Item>
-        </EbayMenuButton>
-    </>))
-    .add('Multi-Select Menu Button', () => (<>
-        <EbayMenuButton text="Filter" type="checkbox">
-            <Item checked>Snickers</Item>
-            <Item>T-Shirts</Item>
-            <Item checked>Pants</Item>
-        </EbayMenuButton>
-    </>))
     .add('Borderless', () => (<>
         <EbayMenuButton text="eBay Menu without borders!" borderless>
             <Item>item 1</Item>
@@ -90,20 +70,6 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Fixed Width', () => (<>
-        <EbayMenuButton text="Menu has a button width" fixWidth>
-            <Item>item 1 that has very long text</Item>
-            <Item>item 2</Item>
-            <Item>item 3</Item>
-        </EbayMenuButton>
-    </>))
-    .add('Reverse (Menu grows to the left)', () => (<div style={{ marginLeft: '100px' }}>
-        <EbayMenuButton text="Menu grows to the left" reverse>
-            <Item>item 1 that has very very long text</Item>
-            <Item>item 2</Item>
-            <Item>item 3</Item>
-        </EbayMenuButton>
-    </div>))
     .add('With Custom Label', () => (<>
         <EbayMenuButton>
             <EbayMenuButtonLabel>
@@ -121,3 +87,50 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
+    //
+    // Custom menu stories
+    //
+    .add('With Separator', () => (<>
+        <EbayMenuButton
+            text="Complex menu"
+            onExpand={action('Menu expanded!')}
+            onCollapse={action('Menu collapsed!')}
+        >
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Separator/>
+            <Item>item 3</Item>
+            <Item>item 4</Item>
+            <Item>item 5</Item>
+            <Separator/>
+            <Item onClick={action('Open login popup!')}>Log in</Item>
+        </EbayMenuButton>
+    </>))
+    .add('Single-Select Menu Button', () => (<>
+        <EbayMenuButton text="Sort order" type="radio">
+            <Item>Date</Item>
+            <Item checked>Price</Item>
+            <Item>Relevance</Item>
+        </EbayMenuButton>
+    </>))
+    .add('Multi-Select Menu Button', () => (<>
+        <EbayMenuButton text="Filter" type="checkbox">
+            <Item checked>Snickers</Item>
+            <Item>T-Shirts</Item>
+            <Item checked>Pants</Item>
+        </EbayMenuButton>
+    </>))
+    .add('Fixed Width', () => (<>
+        <EbayMenuButton text="Menu has a button width" fixWidth>
+            <Item>item 1 that has very long text</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+    </>))
+    .add('Reverse (Menu grows to the left)', () => (<div style={{ marginLeft: '100px' }}>
+        <EbayMenuButton text="Menu grows to the left" reverse>
+            <Item>item 1 that has very very long text</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+    </div>))
