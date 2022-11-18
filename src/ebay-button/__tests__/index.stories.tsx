@@ -104,9 +104,10 @@ storiesOf(`ebay-button`, module)
         <EbayButton priority="primary" partiallyDisabled>Hello, I am a button!</EbayButton>
     ))
     .add(`Truncated`, () => (
-        <div style={{ maxWidth: '200px' }}>
-            <p><EbayButton truncate>Hello, I am a button! this is a long text</EbayButton></p>
-            <p><EbayButton href="https://ebay.com" truncate>Hello, I am a link! this is a long text</EbayButton></p>
+        <div>
+            <p><EbayButton truncate style={{ maxWidth: '200px' }}>Hello, I am a button! this is a long text</EbayButton></p>
+            <p><EbayButton size="large" truncate style={{ maxWidth: '200px' }}>Hello, I am a BIG button! this is a long text</EbayButton></p>
+            <p><EbayButton href="https://ebay.com" truncate style={{ maxWidth: '200px' }}>Hello, I am a link! this is a long text</EbayButton></p>
         </div>
     ))
     .add(`Flex Button`, () => (

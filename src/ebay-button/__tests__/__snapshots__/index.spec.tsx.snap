@@ -216,7 +216,7 @@ exports[`Storyshots ebay-button Fixed height 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-button Flexible Button 1`] = `
+exports[`Storyshots ebay-button Flex Button 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--primary btn--fluid"
@@ -291,12 +291,14 @@ exports[`Storyshots ebay-button Form button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-button Icon Button 1`] = `
+exports[`Storyshots ebay-button Icon Only 1`] = `
 <DocumentFragment>
   <p>
+    Form button:
+    <br />
     <button
       aria-label="Menu button"
-      class="btn btn--primary btn--icon-only"
+      class="btn btn--form btn--slim"
     >
       <svg
         aria-hidden="true"
@@ -313,28 +315,11 @@ exports[`Storyshots ebay-button Icon Button 1`] = `
     </button>
   </p>
   <p>
-    <button
-      aria-label="Settings button"
-      class="btn btn--secondary btn--icon-only"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon--settings"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-settings"
-        />
-      </svg>
-    </button>
-  </p>
-  <p>
+    Form fake-button (link):
+    <br />
     <a
       aria-label="Settings link"
-      class="fake-btn fake-btn--secondary fake-btn--icon-only"
+      class="fake-btn fake-btn--form fake-btn--slim"
       href="#"
     >
       <svg
@@ -352,9 +337,11 @@ exports[`Storyshots ebay-button Icon Button 1`] = `
     </a>
   </p>
   <p>
+    Delete button:
+    <br />
     <button
       aria-label="Destructive button"
-      class="btn btn--secondary btn--destructive btn--icon-only"
+      class="btn btn--secondary btn--destructive btn--slim"
     >
       <svg
         aria-hidden="true"
@@ -378,7 +365,123 @@ exports[`Storyshots ebay-button Loading button 1`] = `
   <p>
     <button
       aria-live="polite"
+      class="btn btn--secondary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          aria-label="Busy"
+          class="progress-spinner"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--spinner"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-spinner"
+            />
+          </svg>
+        </span>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      aria-live="polite"
       class="btn btn--primary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          aria-label="Busy"
+          class="progress-spinner"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--spinner"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-spinner"
+            />
+          </svg>
+        </span>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      aria-live="polite"
+      class="btn btn--tertiary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          aria-label="Busy"
+          class="progress-spinner"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--spinner"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-spinner"
+            />
+          </svg>
+        </span>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      aria-live="polite"
+      class="btn btn--form"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          aria-label="Busy"
+          class="progress-spinner"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--spinner"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-spinner"
+            />
+          </svg>
+        </span>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      aria-live="polite"
+      class="btn btn--secondary btn--destructive"
     >
       <span
         class="btn__cell"
@@ -565,24 +668,154 @@ exports[`Storyshots ebay-button Transparent 1`] = `
 
 exports[`Storyshots ebay-button Truncated 1`] = `
 <DocumentFragment>
-  <div
-    style="max-width: 200px;"
-  >
+  <div>
     <p>
       <button
         class="btn btn--secondary btn--truncated"
+        style="max-width: 200px;"
       >
         Hello, I am a button! this is a long text
+      </button>
+    </p>
+    <p>
+      <button
+        class="btn btn--secondary btn--large btn--truncated"
+        style="max-width: 200px;"
+      >
+        Hello, I am a BIG button! this is a long text
       </button>
     </p>
     <p>
       <a
         class="fake-btn fake-btn--secondary fake-btn--truncated"
         href="https://ebay.com"
+        style="max-width: 200px;"
       >
         Hello, I am a link! this is a long text
       </a>
     </p>
   </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-button With icon 1`] = `
+<DocumentFragment>
+  <p>
+    Form button:
+    <br />
+    <button
+      aria-label="Menu button"
+      class="btn btn--secondary"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--menu"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-menu"
+        />
+      </svg>
+      <span>
+        Button with icon
+      </span>
+    </button>
+  </p>
+  <p>
+    Form fake-button (link):
+    <br />
+    <a
+      aria-label="Settings link"
+      class="fake-btn fake-btn--form"
+      href="#"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--settings"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-settings"
+        />
+      </svg>
+      <span>
+        Button with icon
+      </span>
+    </a>
+  </p>
+  <p>
+    Delete button:
+    <br />
+    <button
+      aria-label="Destructive button"
+      class="btn btn--secondary btn--destructive"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--delete"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-delete"
+        />
+      </svg>
+      <span>
+        Button with icon
+      </span>
+    </button>
+  </p>
+  <p>
+    Expand button:
+    <br />
+    <button
+      aria-label="Destructive button"
+      class="btn btn--secondary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          class="btn__text"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--settings"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-settings"
+            />
+          </svg>
+          <span>
+            Expand button
+          </span>
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
 </DocumentFragment>
 `;

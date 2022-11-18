@@ -10,11 +10,12 @@ import { MenuItemProps } from './menu-item'
 import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
 
 type SpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
-type Callback = (i: number, checked: boolean) => void
+type Callback = (i: number, checked: boolean, e?: KeyboardEvent) => void
 type Props = SpanProps & {
     type?: EbayMenuType;
     priority?: EbayMenuPriority;
     checked?: number;
+    autofocus?: boolean;
     onKeyDown?: Callback;
     onSelect?: Callback;
     onChange?: Callback;
@@ -27,6 +28,7 @@ const EbayMenu: FC<Props> = ({
     priority = 'secondary',
     checked,
     className,
+    autofocus,
     onKeyDown = () => {},
     onChange = () => {},
     onSelect = () => {},
@@ -34,7 +36,7 @@ const EbayMenu: FC<Props> = ({
     ...rest
 }) => {
     const childrenArray = Children.toArray(children)
-    const [focusedIndex, setFocusedIndex] = useRovingIndex(children, EbayMenuItem)
+    const [focusedIndex, setFocusedIndex] = useRovingIndex(children, EbayMenuItem, autofocus === true ? 0 : undefined)
     const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(childrenArray.map(() => false))
 
     const updateIndex = (index: number, value: boolean, resetOthers = false) => {
@@ -114,7 +116,7 @@ const EbayMenu: FC<Props> = ({
                             handleActionKeydown(e, () => {
                                 selectIndex(i)
                             })
-                            onKeyDown(i, checkedIndexes[i])
+                            onKeyDown(i, checkedIndexes[i], e)
                         }
                     } as MenuItemProps)
                 })}

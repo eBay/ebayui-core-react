@@ -32,7 +32,7 @@ describe('<EbayMenu>', () => {
             )
             fireEvent.keyDown(wrapper.container.querySelector('.menu__item'))
 
-            expect(onKeyDownSpy).toBeCalledWith(0, false)
+            expect(onKeyDownSpy).toBeCalledWith(0, false, expect.anything())
         })
     })
     describe('on radio item select', () => {

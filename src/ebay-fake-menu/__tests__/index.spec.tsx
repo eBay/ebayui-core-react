@@ -33,7 +33,7 @@ describe('<EbayFakeMenu>', () => {
 
             fireEvent.keyDown(wrapper.container.querySelectorAll('.fake-menu__item')[0])
 
-            expect(onKeyDownSpy.mock.calls[0][1]).toEqual(0)
+            expect(onKeyDownSpy).toBeCalledWith(0, expect.anything())
         })
     })
     describe('on item select', () => {
@@ -48,7 +48,7 @@ describe('<EbayFakeMenu>', () => {
 
             fireEvent.click(wrapper.container.querySelectorAll('.fake-menu__item')[1])
 
-            expect(onSelectSpy).toBeCalledWith(expect.anything(), 1)
+            expect(onSelectSpy).toBeCalledWith(1)
         })
     })
 

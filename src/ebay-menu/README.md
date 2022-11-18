@@ -26,7 +26,7 @@ Name | Type | Required | Description
 --- | --- | --- | ---
 `type` | String | No | Can be `radio`/`checkbox`
 `checked` | Number | No | when used with `radio` type will check the item with the corresponding index
-`onKeydown` | Function | No | arguments: (index: number, checked: boolean)
+`onKeydown` | Function | No | arguments: (index: number, checked: boolean, event)
 `onChange` | Function | No | arguments: (index: number, checked: boolean) for type `radio`/`checkbox`
 `onSelect` | Function | No | arguments: (index: number, checked: boolean), not for use with type `radio`/`checkbox`
 
