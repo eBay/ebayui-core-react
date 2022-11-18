@@ -1,11 +1,9 @@
-import React, {
-    Children, cloneElement, useEffect, useState,
-    ComponentProps, FC, ReactElement
-} from 'react'
+import React, { Children, cloneElement, useEffect, useState, ComponentProps, FC, ReactElement, Ref } from 'react'
 import classNames from 'classnames'
 import useRovingIndex from '../common/event-utils/use-roving-index'
 import { usePrevious } from '../common/component-utils/usePrevious'
 import { handleActionKeydown } from '../common/event-utils'
+import { withForwardRef } from '../common/component-utils'
 import { MenuItemProps } from './menu-item'
 import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
 
@@ -19,6 +17,7 @@ type Props = SpanProps & {
     onKeyDown?: Callback;
     onSelect?: Callback;
     onChange?: Callback;
+    forwardedRef?: Ref<HTMLDivElement>;
 }
 
 const changedIndex = (arr1: boolean[], arr2: boolean[]): number => arr1.findIndex((x, i) => arr2[i] !== x)
@@ -32,6 +31,7 @@ const EbayMenu: FC<Props> = ({
     onKeyDown = () => {},
     onChange = () => {},
     onSelect = () => {},
+    forwardedRef,
     children,
     ...rest
 }) => {
@@ -59,12 +59,13 @@ const EbayMenu: FC<Props> = ({
 
     useEffect(() => {
         if (type === 'radio') {
-            if (checked !== undefined) {
+            if (checked === undefined) {
+                const checkedIndex = childrenArray.findIndex((child: ReactElement) => child.props.checked)
+                if (checkedIndex > -1) {
+                    selectIndex(checkedIndex)
+                }
+            } else {
                 selectIndex(checked)
-            }
-            const checkedIndex = childrenArray.findIndex((child: ReactElement) => child.props.checked)
-            if (checkedIndex > -1) {
-                selectIndex(checkedIndex)
             }
         } else if (type === 'checkbox') {
             setCheckedIndexes(childrenArray.map((child: ReactElement) => child.props.checked))
@@ -90,7 +91,7 @@ const EbayMenu: FC<Props> = ({
 
     return (
         <span {...rest} className={classNames(className, 'menu')}>
-            <div className="menu__items" role="menu">
+            <div className="menu__items" role="menu" ref={forwardedRef}>
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
                         onClick = () => {},
@@ -125,4 +126,4 @@ const EbayMenu: FC<Props> = ({
     )
 }
 
-export default EbayMenu
+export default withForwardRef(EbayMenu)

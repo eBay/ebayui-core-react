@@ -5,7 +5,11 @@ import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
 
 import {
-    EbayMenuButtonIcon, EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, EbayMenuButtonVariant
+    EbayMenuButtonIcon,
+    EbayMenuButtonItem,
+    EbayMenuButtonLabel,
+    EbayMenuButtonSeparator,
+    EbayMenuButtonVariant
 } from '.'
 import { EbayButton, EbayButtonProps, EbayIconButton, EbayMenu, EbayMenuType } from '..'
 
@@ -19,13 +23,13 @@ export type EbayMenuButtonProps = {
     variant?: EbayMenuButtonVariant;
     onCollapse?: () => void;
     onExpand?: () => void;
-    onChange?: () => void;
+    onChange?: (i: number, indexes: boolean | boolean[]) => void;
     onSelect?: () => void;
     expanded?: boolean;
     noToggleIcon?: boolean;
-    // todo: implement the following props
     checked?: number;
     collapseOnSelect?: boolean;
+    // todo: implement the following props
     prefixId?: string;
     prefixLabel?: string;
 }
@@ -44,6 +48,8 @@ const EbayMenuButton: FC<Props> = ({
     reverse,
     expanded: defaultExpanded = false,
     noToggleIcon,
+    checked,
+    collapseOnSelect,
     a11yText,
     onExpand = () => {},
     onCollapse = () => {},
@@ -54,11 +60,14 @@ const EbayMenuButton: FC<Props> = ({
 }) => {
     const [expanded, setExpanded] = useState(defaultExpanded)
     const [menuId, setMenuId] = useState<string | undefined>()
-    const ref = useRef<HTMLButtonElement>()
+    const buttonRef = useRef(null)
+    const menuRef = useRef()
+
+    const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
+    const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(menuItems.map(() => false))
 
     const label = findComponent(children, EbayMenuButtonLabel) || <span>{text}</span> || null
     const icon = findComponent(children, EbayMenuButtonIcon)
-    const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
     const wrapperClasses = classnames('menu-button', className)
     const menuClasses = classnames('menu-button__menu', {
         'menu-button__menu--fix-width': fixWidth,
@@ -67,7 +76,9 @@ const EbayMenuButton: FC<Props> = ({
 
     useEffect(() => {
         const handleBackgroundClick = (e: React.MouseEvent) => {
-            if (ref.current && !ref.current.contains(e.currentTarget)) {
+            const menuEl = menuRef.current as HTMLDivElement
+            const menuClicked = menuEl && menuEl.contains(e.target as Node)
+            if (collapseOnSelect || !menuClicked) {
                 setExpanded(false)
             }
         }
@@ -94,12 +105,12 @@ const EbayMenuButton: FC<Props> = ({
     const handleMenuKeydown = (_, __, e) => {
         handleEscapeKeydown(e, () => {
             setExpanded(false)
-            ref.current?.focus()
+            buttonRef.current?.focus()
         })
     }
 
     const buttonProps = {
-        ref: ref as any,
+        ref: buttonRef as any,
         className: 'menu-button__button',
         'aria-expanded': !!expanded,
         'aria-haspopup': true,
@@ -109,20 +120,40 @@ const EbayMenuButton: FC<Props> = ({
         ...rest
     }
 
+    const handleOnChange = (i: number, indexes: boolean[] | boolean) => {
+        if (type === 'radio') {
+            const newCheckedIndexes = checkedIndexes.map((checkedIndex, ii) => ii === i)
+            setCheckedIndexes(newCheckedIndexes)
+        }
+        onChange(i, indexes)
+    }
+
+    const checkedIndex = () => {
+        const index = checkedIndexes.findIndex(Boolean)
+        return index > -1 ? index : checked
+    }
+
     return (
         <span className={wrapperClasses}>
             {variant === 'overflow' ?
                 <EbayIconButton icon="overflow" {...buttonProps} /> :
-                <EbayButton bodyState={noToggleIcon ? undefined : 'expand'} {...buttonProps}>{icon}{label}</EbayButton>
+                <EbayButton
+                    bodyState={noToggleIcon ? undefined : 'expand'}
+                    {...buttonProps}
+                >
+                    {icon}{label}
+                </EbayButton>
             }
             {expanded &&
                 <EbayMenu
+                    ref={menuRef}
                     type={type}
                     className={menuClasses}
                     id={menuId}
                     autofocus
+                    checked={checkedIndex()}
                     onKeyDown={handleMenuKeydown}
-                    onChange={onChange}
+                    onChange={handleOnChange}
                     onSelect={onSelect}
                 >
                     {menuItems.map((item, i) =>

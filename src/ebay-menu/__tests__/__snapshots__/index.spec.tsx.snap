@@ -170,6 +170,9 @@ exports[`Storyshots ebay-menu Default 1`] = `
 
 exports[`Storyshots ebay-menu Radio 1`] = `
 <DocumentFragment>
+  <h3>
+    EbayMenu.checked=1
+  </h3>
   <span
     class="menu"
   >
@@ -178,12 +181,34 @@ exports[`Storyshots ebay-menu Radio 1`] = `
       role="menu"
     >
       <div
+        aria-checked="false"
+        aria-hidden="false"
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span>
+          item 0
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-small"
+          focusable="false"
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-small"
+          />
+        </svg>
+      </div>
+      <div
         aria-checked="true"
         aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
-        value="item 1"
       >
         <span>
           item 1
@@ -207,10 +232,44 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         class="menu__item"
         role="menuitem"
         tabindex="0"
-        value="item 2"
       >
         <span>
           item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-small"
+          focusable="false"
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-small"
+          />
+        </svg>
+      </div>
+    </div>
+  </span>
+  <h3>
+    EbayMenuItem[0].checked=true
+  </h3>
+  <span
+    class="menu"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        aria-checked="true"
+        aria-hidden="false"
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span>
+          item 0
         </span>
         <svg
           aria-hidden="true"
@@ -231,10 +290,113 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         class="menu__item"
         role="menuitem"
         tabindex="0"
-        value="item 3"
       >
         <span>
-          item 3
+          item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-small"
+          focusable="false"
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-small"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked="false"
+        aria-hidden="false"
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span>
+          item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-small"
+          focusable="false"
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-small"
+          />
+        </svg>
+      </div>
+    </div>
+  </span>
+  <h3>
+    EbayMenu.checked=1, EbayMenuItem[0].checked=true
+  </h3>
+  <span
+    class="menu"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        aria-checked="false"
+        aria-hidden="false"
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span>
+          item 0
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-small"
+          focusable="false"
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-small"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked="true"
+        aria-hidden="false"
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span>
+          item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-small"
+          focusable="false"
+          height="16px"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-small"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked="false"
+        aria-hidden="false"
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span>
+          item 2
         </span>
         <svg
           aria-hidden="true"

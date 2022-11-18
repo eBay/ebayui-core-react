@@ -16,15 +16,43 @@ storiesOf('ebay-menu', module)
         </EbayMenu>
     </>))
     .add('Radio', () => (<>
+        <h3>EbayMenu.checked=1</h3>
+        <EbayMenu
+            type="radio"
+            checked={1}
+            onKeyDown={action('key down')}
+            onChange={action('change')}
+            onSelect={action('select')}
+        >
+            <Item>item 0</Item>
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+        </EbayMenu>
+
+        <h3>EbayMenuItem[0].checked=true</h3>
         <EbayMenu
             type="radio"
             onKeyDown={action('key down')}
             onChange={action('change')}
             onSelect={action('select')}
         >
-            <Item value="item 1" checked>item 1</Item>
-            <Item value="item 2">item 2</Item>
-            <Item value="item 3">item 3</Item>
+            <Item checked>item 0</Item>
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+        </EbayMenu>
+
+
+        <h3>EbayMenu.checked=1, EbayMenuItem[0].checked=true</h3>
+        <EbayMenu
+            type="radio"
+            checked={1}
+            onKeyDown={action('key down')}
+            onChange={action('change')}
+            onSelect={action('select')}
+        >
+            <Item checked>item 0</Item>
+            <Item>item 1</Item>
+            <Item>item 2</Item>
         </EbayMenu>
     </>))
     .add('Checkbox', () => (<>

@@ -409,7 +409,46 @@ exports[`Storyshots ebay-menu-button Reverse (Menu grows to the left) 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-menu-button Single-Select Menu Button 1`] = `
+exports[`Storyshots ebay-menu-button Single-Select Menu Button (collapse on click) 1`] = `
+<span
+  className="menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        <span>
+          Sort order: Price
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
+</span>
+`;
+
+exports[`Storyshots ebay-menu-button Single-Select Menu Button (item.checked) 1`] = `
 <span
   className="menu-button"
 >
@@ -446,6 +485,84 @@ exports[`Storyshots ebay-menu-button Single-Select Menu Button 1`] = `
     </span>
   </button>
 </span>
+`;
+
+exports[`Storyshots ebay-menu-button Single-Select Menu Button (menu.checked) 1`] = `
+Array [
+  <span
+    className="menu-button"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-live={null}
+      className="btn menu-button__button btn--secondary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      <span
+        className="btn__cell"
+      >
+        <span
+          className="btn__text"
+        >
+          <span>
+            Topic: Phones
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </span>,
+  " ",
+  <span
+    className="menu-button"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-live={null}
+      className="btn menu-button__button btn--secondary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      <span
+        className="btn__cell"
+      >
+        <span
+          className="btn__text"
+        >
+          <span>
+            Sort order: Relevance
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </span>,
+]
 `;
 
 exports[`Storyshots ebay-menu-button Variant: Overflow 1`] = `

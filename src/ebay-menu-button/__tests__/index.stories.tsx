@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import {
@@ -106,13 +106,56 @@ storiesOf('ebay-menu-button', module)
             <Item onClick={action('Open login popup!')}>Log in</Item>
         </EbayMenuButton>
     </>))
-    .add('Single-Select Menu Button', () => (<>
+    .add('Single-Select Menu Button (item.checked)', () => (<>
         <EbayMenuButton text="Sort order" type="radio">
             <Item>Date</Item>
             <Item checked>Price</Item>
             <Item>Relevance</Item>
         </EbayMenuButton>
     </>))
+    .add('Single-Select Menu Button (collapse on click)', () => {
+        const defaultSortIndex = 1
+        const sortItems = ['Date', 'Price', 'Relevance']
+        const [checkedSort, setCheckedSort] = useState(defaultSortIndex)
+
+        return <EbayMenuButton
+            text={`Sort order: ${sortItems[checkedSort]}`}
+            type="radio"
+            collapseOnSelect
+            checked={defaultSortIndex}
+            onChange={(i) => setCheckedSort(i)}
+        >
+            {sortItems.map((item, i) => <Item key={i}>{item}</Item>)}
+        </EbayMenuButton>
+    })
+    .add('Single-Select Menu Button (menu.checked)', () => {
+        const defaultSortIndex = 2
+        const defaultTopicIndex = 1
+        const sortItems = ['Date', 'Price', 'Relevance']
+        const topicItems = ['Cars', 'Phones', 'Computers']
+        const [checkedSort, setCheckedSort] = useState(defaultSortIndex)
+        const [checkedTopic, setCheckedTopic] = useState(defaultTopicIndex)
+
+        return (<>
+            <EbayMenuButton
+                text={`Topic: ${topicItems[checkedTopic]}`}
+                type="radio"
+                checked={defaultTopicIndex}
+                onChange={(i) => setCheckedTopic(i)}
+            >
+                {topicItems.map((item, i) => <Item key={i}>{item}</Item>)}
+            </EbayMenuButton>
+            &nbsp;
+            <EbayMenuButton
+                text={`Sort order: ${sortItems[checkedSort]}`}
+                type="radio"
+                checked={defaultSortIndex}
+                onChange={(i) => setCheckedSort(i)}
+            >
+                {sortItems.map((item, i) => <Item key={i}>{item}</Item>)}
+            </EbayMenuButton>
+        </>)
+    })
     .add('Multi-Select Menu Button', () => (<>
         <EbayMenuButton text="Filter" type="checkbox">
             <Item checked>Snickers</Item>
@@ -134,3 +177,4 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </div>))
+
