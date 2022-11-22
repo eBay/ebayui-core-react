@@ -4,6 +4,7 @@ exports[`Storyshots ebay-icon-button Default 1`] = `
 <DocumentFragment>
   <p>
     <button
+      aria-label="menu"
       class="icon-btn"
       type="button"
     >
@@ -23,6 +24,7 @@ exports[`Storyshots ebay-icon-button Default 1`] = `
   </p>
   <p>
     <a
+      aria-label="settings"
       class="icon-link"
       href="https://ebay.com"
     >
@@ -47,6 +49,7 @@ exports[`Storyshots ebay-icon-button Transparent 1`] = `
 <DocumentFragment>
   <p>
     <button
+      aria-label="menu"
       class="icon-btn icon-btn--transparent"
       type="button"
     >
@@ -71,6 +74,7 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
 <DocumentFragment>
   <p>
     <button
+      aria-label="menu"
       class="icon-btn icon-btn--badged"
       type="button"
     >
@@ -97,6 +101,7 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
   </p>
   <p>
     <a
+      aria-label="cart"
       class="icon-link icon-link--badged"
       href="https://ebay.com"
     >
@@ -123,6 +128,7 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
   </p>
   <p>
     <a
+      aria-label="chat"
       class="icon-link icon-link--badged"
       href="https://ebay.com"
     >
