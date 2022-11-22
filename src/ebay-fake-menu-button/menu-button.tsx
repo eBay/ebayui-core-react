@@ -77,6 +77,7 @@ const EbayMenuButton: FC<EbayButtonProps & MenuButtonProps> = ({
                 borderless={borderless}
                 className="fake-menu-button__button"
                 onClick={() => setExpanded(!expanded)}
+                {...rest}
             >
                 {label || text || null}
             </EbayButton>

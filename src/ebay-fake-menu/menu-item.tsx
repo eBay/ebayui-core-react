@@ -6,6 +6,7 @@ export type EbayFakeMenuItemProps = Omit<ComponentProps<'a'>, 'onKeyDown'> & {
     current?: boolean;
     disabled?: boolean;
     autoFocus?: boolean;
+    showTickSmall?: boolean;
 }
 
 const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
@@ -14,6 +15,7 @@ const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
     disabled,
     autoFocus,
     children,
+    showTickSmall = true,
     ...rest
 }) => {
     const ref = useRef<HTMLAnchorElement>()
@@ -34,7 +36,7 @@ const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
             <span>
                 {children}
             </span>
-            <EbayIcon name="tickSmall" />
+            {showTickSmall && <EbayIcon name="tickSmall" />}
         </a>
     )
 }

@@ -19,7 +19,8 @@
         "baseUrl": "./",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "sourceMap": true,
     },
     "exclude": [
         "lib",

@@ -30,6 +30,7 @@ export type EbayButtonProps = {
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     borderless?: boolean;
     fixedHeight?: boolean;
+    showDropdown?: boolean;
 }
 
 type Props = ComponentProps<'button'> & ComponentProps<'a'> & EbayButtonProps;
@@ -56,6 +57,7 @@ const EbayButton:FC<Props> = ({
     forwardedRef,
     borderless,
     fixedHeight,
+    showDropdown = true,
     ...rest
 }) => {
     const iconOnly = isIconOnly(children)
@@ -97,7 +99,7 @@ const EbayButton:FC<Props> = ({
 
     const bodyContent = {
         loading: <EbayButtonLoading />,
-        expand: <EbayButtonExpand>{children}</EbayButtonExpand>
+        expand: <EbayButtonExpand showDropdown={showDropdown}>{children}</EbayButtonExpand>
     }[bodyState] || children
 
     const ariaLive = isLoading ? `polite` : null

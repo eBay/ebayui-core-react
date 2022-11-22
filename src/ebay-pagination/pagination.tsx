@@ -2,6 +2,10 @@ import React, {
     Children, ComponentProps, FC, ReactElement,
     cloneElement, useEffect, useRef, useState, createRef
 } from 'react'
+import {
+    EbayFakeMenuButton,
+    EbayFakeMenuButtonItem as Item
+} from '../ebay-fake-menu-button'
 import classNames from 'classnames'
 import { debounce } from '../common/debounce'
 import { calcPageState, getMaxWidth } from './helpers'
@@ -84,18 +88,34 @@ const EbayPagination: FC<PaginationProps> = ({
     const createChildItems = (itemType: PaginationItemType): ReactElement[] => {
         let pageIndex = 0
 
+        const items: ReactElement[] = []
+
         return Children.map(children, (item: ReactElement, index) => {
             const { type = 'page', current, disabled, href, children: text } = item.props
+            const isDot = page[index] === 'dots'
+            const key = `${id}-item-${index}`
+
             const newProps = {
                 type, current, disabled, href,
-                children: page[index] === 'dots' ? '…' : text,
+                children: isDot ? '…' : text,
                 pageIndex: type === 'page' ? pageIndex++ : undefined,
-                key: `${id}-item-${index}`,
+                key,
                 hide: page[index] === 'hidden',
                 onPrevious, onNext, onSelect, a11yPreviousText, a11yNextText,
                 ref: childPageRefs.current[index]
             }
-
+            if (newProps.hide && itemType === 'page') {
+                items.push(<Item key={key} href={href} showTickSmall={false}>{text}</Item>)
+            }
+            if (itemType === 'page' && isDot) {
+                return (
+                    <li>
+                        <EbayFakeMenuButton className="pagination__item" text="…" borderless showDropdown={false}>
+                            {items}
+                        </EbayFakeMenuButton>
+                    </li>
+                )
+            }
             return itemType === type ? cloneElement(item, newProps) : null
         })
     }
