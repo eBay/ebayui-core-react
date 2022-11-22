@@ -60,6 +60,8 @@ const EbayPagination: FC<PaginationProps> = ({
     }
 
     const [page, setPage] = useState<ItemState[]>([])
+    const [pageRange, setPageRange] = useState<any>({})
+
     const updatePages = () => {
         const selectedPageIndex = childPageRefs.current.findIndex(pageRef =>
             pageRef.current?.getAttribute('aria-current') === 'page'
@@ -71,7 +73,16 @@ const EbayPagination: FC<PaginationProps> = ({
             totalPages,
             variant
         )
+        const range = [...pageState]
+        const firstDotIndex = range.indexOf('dots'), lastDotIndex = range.lastIndexOf('dots')
+        const firstDotRange = [3, 2 + range.indexOf('visible', firstDotIndex) - firstDotIndex]
+        const secondDotRange = [lastDotIndex + 1, totalPages - 1]
+
         setPage(['hidden', ...pageState])
+        setPageRange({
+            firstDotRange,
+            secondDotRange
+        })
     }
 
     useEffect(() => {
@@ -87,31 +98,42 @@ const EbayPagination: FC<PaginationProps> = ({
 
     const createChildItems = (itemType: PaginationItemType): ReactElement[] => {
         let pageIndex = 0
-
-        const items: ReactElement[] = []
+        const [firstDotFrom, firstDotTo] = pageRange.firstDotRange || []
+        const [secondDotFrom, secondDotTo] = pageRange.secondDotRange || []
+        const firstDotItems : ReactElement[] = []
+        const secondDotItems : ReactElement[] = []
 
         return Children.map(children, (item: ReactElement, index) => {
             const { type = 'page', current, disabled, href, children: text } = item.props
             const isDot = page[index] === 'dots'
             const key = `${id}-item-${index}`
-
+            const hide = page[index] === 'hidden'
             const newProps = {
                 type, current, disabled, href,
                 children: isDot ? '…' : text,
                 pageIndex: type === 'page' ? pageIndex++ : undefined,
                 key,
-                hide: page[index] === 'hidden',
+                hide,
                 onPrevious, onNext, onSelect, a11yPreviousText, a11yNextText,
                 ref: childPageRefs.current[index]
             }
-            if (newProps.hide && itemType === 'page') {
-                items.push(<Item key={key} href={href} showTickSmall={false}>{text}</Item>)
+            // include hidden numbers & number of (...)itself
+            if ((hide || isDot) && itemType === 'page') {
+                const itemComponent = (
+                    <Item key={key} href={href} showTickSmall={false} onClick={updatePages}>{text}</Item>
+                )
+                if (index <= firstDotTo && index >= firstDotFrom) {
+                    firstDotItems.push(itemComponent)
+                } else if (index <= secondDotTo && index >= secondDotFrom) {
+                    secondDotItems.push(itemComponent)
+                }
             }
+
             if (itemType === 'page' && isDot) {
                 return (
-                    <li>
+                    <li key={key}>
                         <EbayFakeMenuButton className="pagination__item" text="…" borderless showDropdown={false}>
-                            {items}
+                            {index === 3 ? firstDotItems : secondDotItems}
                         </EbayFakeMenuButton>
                     </li>
                 )

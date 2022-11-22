@@ -1,19 +1,23 @@
-import { MAX_PAGES, MIN_PAGES } from './const'
+import { MAX_PAGES, MIN_PAGES, SHOW_LAST, OVERFLOW } from './const'
 import { ItemState, PaginationVariant } from './types'
 
 export function pageNumbersAround(
     totalPages: number,
     selectedPage: number,
     maxVisiblePages: number = totalPages,
-    withDots = false
+    variant: PaginationVariant
 ): ItemState[] {
+    const withDots = [SHOW_LAST, OVERFLOW].includes(variant)
+    const hasLeadingDots = variant === OVERFLOW
     const visibleItems = Math.min(maxVisiblePages, totalPages)
     const startIndexWithoutDots = Math.max(0, selectedPage - Math.ceil((visibleItems - 1) / 2))
     const startIndexWithDots = visibleItems < 4 ? selectedPage :
         Math.max(0, selectedPage - Math.floor((visibleItems - 1) / 2))
     const endIndex = (withDots ? startIndexWithDots : startIndexWithoutDots) + visibleItems
     const closeToEnd = endIndex >= totalPages
+    const closeToFront = selectedPage < 4
 
+    // middle show item[1] (...) and item[item.length - 1] (...)
     const visibleRangeWithDots = (start: number, end: number) => {
         const items = visibleRange(totalPages, start, end)
 
@@ -21,6 +25,11 @@ export function pageNumbersAround(
             items[end - 2] = 'dots'
             items[end - 1] = 'hidden'
             items[totalPages - 1] = 'visible'
+            if (hasLeadingDots) {
+                items[0] = 'visible'
+                items[1] = 'visible'
+                items[2] = closeToFront ? 'visible' : 'dots'
+            }
         } else if (visibleItems > 1) {
             items[end - 1] = 'dots'
         }
@@ -29,7 +38,9 @@ export function pageNumbersAround(
     }
 
     if (closeToEnd) {
-        return visibleRange(totalPages, totalPages - visibleItems)
+        return withDots ?
+            visibleRangeWithDots(startIndexWithDots, endIndex) :
+            visibleRange(totalPages, totalPages - visibleItems)
     }
 
     return withDots ?
@@ -43,13 +54,10 @@ export function calcPageState(
     totalPages: number,
     variant: PaginationVariant = 'show-range'
 ): ItemState[] {
-    if (selectedPage === -1) {
-        return []
-    }
+    const adjustedNumPages = variant === OVERFLOW ? MAX_PAGES :
+        clamp(Math.min(totalPages, visiblePages), MIN_PAGES, MAX_PAGES)
 
-    const adjustedNumPages = clamp(Math.min(totalPages, visiblePages), MIN_PAGES, MAX_PAGES)
-
-    return pageNumbersAround(totalPages, selectedPage - 1, adjustedNumPages, variant === 'show-last')
+    return pageNumbersAround(totalPages, selectedPage - 1, adjustedNumPages, variant)
 }
 
 function clamp(n: number, min: number, max: number): number {
