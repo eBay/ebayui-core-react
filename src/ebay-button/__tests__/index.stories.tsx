@@ -147,6 +147,22 @@ storiesOf(`ebay-button`, module)
                 <EbayButton variant="form" bodyState="expand" aria-expanded={true}/>
             </p>
             <p><EbayButton priority="primary" bodyState="expand" borderless>Borderless expand button</EbayButton></p>
+        </>
+    ))
+    .add(`Split button`, () => (
+        <>
+            <p>
+                <EbayButton priority="primary" split="start">Primary split start button</EbayButton>
+                <EbayButton priority="primary" split="end">Primary split end button</EbayButton>
+            </p>
+            <p>
+                <EbayButton split="start">Split start button</EbayButton>
+                <EbayButton split="end">Split end button</EbayButton>
+            </p>
+            <p>
+                <EbayButton priority="tertiary" split="start">Tertiary split start button</EbayButton>
+                <EbayButton priority="tertiary" split="end">Tertiary split end button</EbayButton>
+            </p>
             <p>
                 <EbayButton priority="primary" split="start">Primary Split button</EbayButton>
                 <EbayButton priority="primary" bodyState="expand" split="end" />
@@ -158,8 +174,7 @@ storiesOf(`ebay-button`, module)
             <p>
                 <EbayButton priority="tertiary" split="start">Tertiary split button</EbayButton>
                 <EbayButton priority="tertiary" bodyState="expand" split="end" />
-            </p>
-        </>
+            </p>        </>
     ))
     .add(`Form button`, () => (
         <>

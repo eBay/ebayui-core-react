@@ -4,13 +4,15 @@ import EbayButtonText from './button-text'
 import { EbayIcon } from '../ebay-icon'
 
 const EbayButtonExpand: FC = ({ children }) =>
-    !children ? <EbayIcon name="dropdown" /> : (
+    children ? (
         <EbayButtonCell>
             <EbayButtonText>
                 {children}
             </EbayButtonText>
             <EbayIcon name="dropdown" />
         </EbayButtonCell>
+    ) : (
+        <EbayIcon name="dropdown" />
     )
 
 export default EbayButtonExpand
