@@ -5,13 +5,12 @@ import { usePrevious } from '../common/component-utils/usePrevious'
 import { handleActionKeydown } from '../common/event-utils'
 import { withForwardRef } from '../common/component-utils'
 import { MenuItemProps } from './menu-item'
-import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
+import { EbayMenuItem, EbayMenuType } from './index'
 
 type SpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
 type Callback = (i: number, checked: boolean, e?: KeyboardEvent) => void
-type Props = SpanProps & {
+export type EbayMenuProps = SpanProps & {
     type?: EbayMenuType;
-    priority?: EbayMenuPriority;
     checked?: number;
     autofocus?: boolean;
     onKeyDown?: Callback;
@@ -22,9 +21,8 @@ type Props = SpanProps & {
 
 const changedIndex = (arr1: boolean[], arr2: boolean[]): number => arr1.findIndex((x, i) => arr2[i] !== x)
 
-const EbayMenu: FC<Props> = ({
+const EbayMenu: FC<EbayMenuProps> = ({
     type,
-    priority = 'secondary',
     checked,
     className,
     autofocus,

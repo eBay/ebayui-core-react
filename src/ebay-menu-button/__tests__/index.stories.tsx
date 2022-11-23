@@ -7,7 +7,7 @@ import {
     EbayMenuButtonIcon,
     EbayMenuButtonSeparator as Separator,
     EbayMenuButtonLabel,
-} from '..'
+} from '../..'
 
 storiesOf('ebay-menu-button', module)
     .add('Default', () => (<>

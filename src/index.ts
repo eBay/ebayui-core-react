@@ -2,8 +2,12 @@ export { EbayButton, EbayButtonCell, Size, Priority, EbayButtonProps } from './e
 export { EbayCtaButton } from './ebay-cta-button'
 export { EbayEek, EbayEekProps } from './ebay-eek'
 export { EbayIconButton, EbayIconButtonProps } from './ebay-icon-button'
-export { EbayMenu, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriority } from './ebay-menu'
-export { EbayMenuButton, EbayMenuButtonLabel, EbayMenuButtonProps, EbayMenuButtonVariant } from './ebay-menu-button'
+export { EbaySplitButton, EbaySplitButtonProps } from './ebay-split-button'
+export { EbayMenu, EbayMenuProps, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriority } from './ebay-menu'
+export {
+    EbayMenuButton, EbayMenuButtonProps,
+    EbayMenuButtonItem, EbayMenuButtonIcon, EbayMenuButtonSeparator, EbayMenuButtonLabel, EbayMenuButtonVariant
+} from './ebay-menu-button'
 export { EbayFakeMenu, EbayFakeMenuItem, EbayFakeMenuSeparator, EbayFakeMenuItemProps } from './ebay-fake-menu'
 export {
     EbayFakeMenuButton, EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator
