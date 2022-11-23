@@ -51,10 +51,12 @@ Name | Type | Stateful | Required | Description | Data
 `href` | String | No | No | for link that looks like a button
 `fluid` | Boolean | No | No | takes the whole width of the parent element
 `disabled` | Boolean | Yes | No
-`partiallyDisabled` | Boolean | No | No | sets aria disabled but not disabled attribute
+`partiallyDisabled` | Boolean | No | No | sets `aria-disabled` but not `disabled` prop
 `transparent` | Boolean | Yes | No | transparent background color (overrides `priority` prop)
 `truncate` | Boolean | No | No | will truncate the text of the button onto a single line, and adds an ellipsis, when the button's text overflows
 `borderless` | Boolean | No | No | shows button without border
 `fixedHeight` | Boolean | No | No | fixes the height based on `size`
 `onClick` | Function | - | No | click or action key pressed (`Space` / `Enter`)
 `onEscape` | Function | - | No | `Esc`-key pressed
+`onFocus` | Function | - | No | triggered on focus
+`onBlur` | Function | - | No | triggered on blur
