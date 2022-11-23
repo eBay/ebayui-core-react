@@ -67,6 +67,7 @@ storiesOf(`ebay-infotip`, module)
     .add(`Modal`, () => (
         <div style={{ width: '100%', margin: 100 }}>
             <EbayInfotip variant="modal" a11yCloseText="Close" aria-label="Infotip">
+                <EbayInfotipHeading>Title</EbayInfotipHeading>
                 <EbayInfotipContent>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </EbayInfotipContent>
