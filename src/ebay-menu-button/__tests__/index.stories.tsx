@@ -56,12 +56,59 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Priority: Primary', () => (<>
-        <EbayMenuButton priority="primary" text="Primary" a11y-text="Menu">
-            <Item>item 1</Item>
-            <Item>item 2</Item>
-            <Item>item 3</Item>
-        </EbayMenuButton>
+    .add('Priority', () => (<>
+        <p>
+            <EbayMenuButton priority="primary" text="Primary" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </p>
+        <p>
+            <EbayMenuButton priority="tertiary" text="Tertiary" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </p>
+    </>))
+    .add('Split', () => (<>
+        <p>
+            <EbayMenuButton priority="primary" split="start" text="Left" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+            <EbayMenuButton priority="primary" split="end" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </p>
+        <p>
+            <EbayMenuButton split="start" text="Left" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+            <EbayMenuButton split="end" text="Right" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </p>
+        <p>
+            <EbayMenuButton priority="tertiary" split="start" text="Left" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+            <EbayMenuButton priority="tertiary" split="end" text="Right" a11y-text="Menu">
+                <Item>item 1</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </p>
     </>))
     .add('Borderless', () => (<>
         <EbayMenuButton text="eBay Menu without borders!" borderless>

@@ -3,13 +3,14 @@ import EbayButtonCell from './button-cell'
 import EbayButtonText from './button-text'
 import { EbayIcon } from '../ebay-icon'
 
-const EbayButtonExpand: FC = ({ children }) => (
-    <EbayButtonCell>
-        <EbayButtonText>
-            {children}
-        </EbayButtonText>
-        <EbayIcon name="dropdown" />
-    </EbayButtonCell>
-)
+const EbayButtonExpand: FC = ({ children }) =>
+    !children ? <EbayIcon name="dropdown" /> : (
+        <EbayButtonCell>
+            <EbayButtonText>
+                {children}
+            </EbayButtonText>
+            <EbayIcon name="dropdown" />
+        </EbayButtonCell>
+    )
 
 export default EbayButtonExpand

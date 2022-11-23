@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-split-button Default 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--primary btn--split-start"
+      >
+        Primary Split
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="bee9"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--primary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--split-start"
+      >
+        Split Button
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="028e"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="btn menu-button__button btn--secondary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--tertiary btn--split-start"
+      >
+        Tertiary
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="0e66"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Expand"
+          class="btn menu-button__button btn--tertiary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Disabled 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--split-start"
+        disabled=""
+      >
+        Disabled Split Button
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="0dc9"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--secondary btn--split-end"
+          disabled=""
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Size 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--primary btn--large btn--split-start"
+      >
+        Primary Split
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="eb8f"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--primary btn--large btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--large btn--split-start"
+      >
+        Split Button
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="cf45"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="btn menu-button__button btn--secondary btn--large btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--tertiary btn--large btn--split-start"
+      >
+        Tertiary
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="9969"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Expand"
+          class="btn menu-button__button btn--tertiary btn--large btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Transparent 1`] = `
+<DocumentFragment>
+  <div
+    style="background: lightcyan; padding: 1em;"
+  >
+    <p>
+      <span
+        class="split-button"
+      >
+        <button
+          class="btn btn--secondary btn--split-start btn--transparent"
+        >
+          Transparent split button
+        </button>
+        <span
+          class="menu-button"
+        >
+          <button
+            aria-controls="b71d"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="Show options"
+            class="btn menu-button__button btn--secondary btn--split-end btn--transparent"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </button>
+        </span>
+      </span>
+    </p>
+    <p>
+      <span
+        class="split-button"
+      >
+        <button
+          class="btn btn--tertiary btn--split-start btn--transparent"
+        >
+          Transparent tertiary split button
+        </button>
+        <span
+          class="menu-button"
+        >
+          <button
+            aria-controls="e932"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="Show options"
+            class="btn menu-button__button btn--tertiary btn--split-end btn--transparent"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </button>
+        </span>
+      </span>
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Truncated 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--primary btn--split-start btn--truncated"
+        style="max-width: 200px;"
+      >
+        Primary Split Button with truncated text label
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="67ed"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--primary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--split-start btn--truncated"
+        style="max-width: 200px;"
+      >
+        Split Button with truncated text label
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="5f42"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="btn menu-button__button btn--secondary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--dropdown"
+            focusable="false"
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-dropdown"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+</DocumentFragment>
+`;

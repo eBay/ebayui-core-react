@@ -5,3 +5,5 @@ export type Variant = 'standard' | 'destructive' | 'form'
 export type Size = 'default' /* DEPRECATED */ | 'regular' | 'large'
 
 export type BodyState = 'loading' | 'expand'
+
+export type Split = 'start' | 'end';

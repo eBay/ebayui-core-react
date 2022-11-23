@@ -43,7 +43,7 @@ const EbayMenuButton: FC<Props> = ({
     type,
     variant = 'button',
     className,
-    text = '',
+    text,
     fixWidth,
     reverse,
     expanded: defaultExpanded = false,
@@ -66,7 +66,7 @@ const EbayMenuButton: FC<Props> = ({
     const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
     const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(menuItems.map(() => false))
 
-    const label = findComponent(children, EbayMenuButtonLabel) || <span>{text}</span> || null
+    const label = findComponent(children, EbayMenuButtonLabel) || (text && <span>{text}</span>) || null
     const icon = findComponent(children, EbayMenuButtonIcon)
     const wrapperClasses = classnames('menu-button', className)
     const menuClasses = classnames('menu-button__menu', {
@@ -141,7 +141,7 @@ const EbayMenuButton: FC<Props> = ({
                     bodyState={noToggleIcon ? undefined : 'expand'}
                     {...buttonProps}
                 >
-                    {icon}{label}
+                    {icon || label ? <>{icon}{label}</> : null}
                 </EbayButton>
             }
             {expanded &&

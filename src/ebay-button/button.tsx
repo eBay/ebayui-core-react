@@ -10,7 +10,7 @@ import React, {
 } from 'react'
 import classNames from 'classnames'
 import { withForwardRef } from '../common/component-utils'
-import { Priority, Size, BodyState, Variant } from './types'
+import { Priority, Size, BodyState, Variant, Split } from './types'
 import { EbayIcon } from '../ebay-icon'
 import EbayButtonLoading from './button-loading'
 import EbayButtonExpand from './button-expand'
@@ -24,6 +24,7 @@ export type EbayButtonProps = {
     variant?: Variant;
     size?: Size;
     bodyState?: BodyState,
+    split?: Split;
     transparent?: boolean;
     onClick?: (e: MouseEvent) => void;
     onEscape?: (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
@@ -34,16 +35,12 @@ export type EbayButtonProps = {
 
 type Props = ComponentProps<'button'> & ComponentProps<'a'> & EbayButtonProps;
 
-function isIconOnly(children: ReactNode): boolean {
-    const childrenArray = Children.toArray(children) as ReactElement[]
-    return childrenArray.length === 1 && childrenArray[0].type === EbayIcon
-}
-
 const EbayButton:FC<Props> = ({
     priority = 'secondary',
     variant = 'standard',
     size = 'regular',
     bodyState,
+    split,
     transparent = false,
     fluid = false,
     disabled,
@@ -58,7 +55,6 @@ const EbayButton:FC<Props> = ({
     fixedHeight,
     ...rest
 }) => {
-    const iconOnly = isIconOnly(children)
     const classPrefix = href ? 'fake-btn' : 'btn'
     const priorityStyles: { [key in Priority]: string } = {
         primary: `${classPrefix}--primary`,
@@ -71,17 +67,24 @@ const EbayButton:FC<Props> = ({
         regular: '',
         default: ''
     }
+    const splitStyles: { [key in Split]: string } = {
+        start: `${classPrefix}--split-start`,
+        end: `${classPrefix}--split-end`
+    }
     const isDestructive = variant === 'destructive'
     const isForm = variant === 'form'
     const isLoading = bodyState === 'loading'
+    const isExpand = bodyState === 'expand'
+    const isSlim = isForm && (isIconOnly(children) || (isExpand && !children))
     const className = classNames(
         classPrefix,
         extraClasses,
         priorityStyles[isForm || borderless ? 'none' : priority],
         sizeStyles[size],
+        splitStyles[split],
         isDestructive && `${classPrefix}--destructive`,
         isForm && `${classPrefix}--form`,
-        iconOnly && `${classPrefix}--slim`,
+        isSlim && `${classPrefix}--slim`,
         transparent && `${classPrefix}--transparent`,
         fluid && `${classPrefix}--fluid`,
         truncate && `${classPrefix}--truncated`,
@@ -95,11 +98,7 @@ const EbayButton:FC<Props> = ({
         }
     }
 
-    const bodyContent = {
-        loading: <EbayButtonLoading />,
-        expand: <EbayButtonExpand>{children}</EbayButtonExpand>
-    }[bodyState] || children
-
+    const bodyContent = getBodyContent(children, { isLoading, isExpand })
     const ariaLive = isLoading ? `polite` : null
 
     return href ? (
@@ -126,6 +125,27 @@ const EbayButton:FC<Props> = ({
             {bodyContent}
         </button>
     )
+}
+
+type bodyContentOptions = {
+    isLoading: boolean;
+    isExpand: boolean;
+}
+
+function getBodyContent(children:ReactNode, { isLoading, isExpand }: bodyContentOptions) {
+    switch (true) {
+        case isLoading:
+            return <EbayButtonLoading />
+        case isExpand:
+            return <EbayButtonExpand>{children}</EbayButtonExpand>
+        default:
+            return children
+    }
+}
+
+function isIconOnly(children: ReactNode): boolean {
+    const childrenArray = Children.toArray(children) as ReactElement[]
+    return childrenArray.length === 1 && childrenArray[0].type === EbayIcon
 }
 
 export default withForwardRef(EbayButton)

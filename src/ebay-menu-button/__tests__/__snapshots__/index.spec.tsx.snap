@@ -322,44 +322,87 @@ exports[`Storyshots ebay-menu-button Multi-Select Menu Button 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-menu-button Priority: Primary 1`] = `
-<span
-  className="menu-button"
->
-  <button
-    a11y-text="Menu"
-    aria-expanded={false}
-    aria-haspopup={true}
-    aria-live={null}
-    className="btn menu-button__button btn--primary"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-  >
+exports[`Storyshots ebay-menu-button Priority 1`] = `
+Array [
+  <p>
     <span
-      className="btn__cell"
+      className="menu-button"
     >
-      <span
-        className="btn__text"
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--primary"
+        onClick={[Function]}
+        onKeyDown={[Function]}
       >
-        <span>
-          Primary
+        <span
+          className="btn__cell"
+        >
+          <span
+            className="btn__text"
+          >
+            <span>
+              Primary
+            </span>
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--dropdown"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-dropdown"
+            />
+          </svg>
         </span>
-      </span>
-      <svg
-        aria-hidden={true}
-        className="icon icon--dropdown"
-        focusable={false}
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlinkHref="#icon-dropdown"
-        />
-      </svg>
+      </button>
     </span>
-  </button>
-</span>
+  </p>,
+  <p>
+    <span
+      className="menu-button"
+    >
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--tertiary"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span
+          className="btn__cell"
+        >
+          <span
+            className="btn__text"
+          >
+            <span>
+              Tertiary
+            </span>
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--dropdown"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-dropdown"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+  </p>,
+]
 `;
 
 exports[`Storyshots ebay-menu-button Reverse (Menu grows to the left) 1`] = `
@@ -562,6 +605,228 @@ Array [
       </span>
     </button>
   </span>,
+]
+`;
+
+exports[`Storyshots ebay-menu-button Split 1`] = `
+Array [
+  <p>
+    <span
+      className="menu-button"
+    >
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--primary btn--split-start"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span
+          className="btn__cell"
+        >
+          <span
+            className="btn__text"
+          >
+            <span>
+              Left
+            </span>
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--dropdown"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-dropdown"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+    <span
+      className="menu-button"
+    >
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--primary btn--split-end"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </button>
+    </span>
+  </p>,
+  <p>
+    <span
+      className="menu-button"
+    >
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--secondary btn--split-start"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span
+          className="btn__cell"
+        >
+          <span
+            className="btn__text"
+          >
+            <span>
+              Left
+            </span>
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--dropdown"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-dropdown"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+    <span
+      className="menu-button"
+    >
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--secondary btn--split-end"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span
+          className="btn__cell"
+        >
+          <span
+            className="btn__text"
+          >
+            <span>
+              Right
+            </span>
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--dropdown"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-dropdown"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+  </p>,
+  <p>
+    <span
+      className="menu-button"
+    >
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--tertiary btn--split-start"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span
+          className="btn__cell"
+        >
+          <span
+            className="btn__text"
+          >
+            <span>
+              Left
+            </span>
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--dropdown"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-dropdown"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+    <span
+      className="menu-button"
+    >
+      <button
+        a11y-text="Menu"
+        aria-expanded={false}
+        aria-haspopup={true}
+        aria-live={null}
+        className="btn menu-button__button btn--tertiary btn--split-end"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        <span
+          className="btn__cell"
+        >
+          <span
+            className="btn__text"
+          >
+            <span>
+              Right
+            </span>
+          </span>
+          <svg
+            aria-hidden={true}
+            className="icon icon--dropdown"
+            focusable={false}
+            height="24px"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlinkHref="#icon-dropdown"
+            />
+          </svg>
+        </span>
+      </button>
+    </span>
+  </p>,
 ]
 `;
 
