@@ -138,7 +138,7 @@ exports[`Storyshots ebay-button Expand button 1`] = `
         </svg>
       </span>
     </button>
-
+     
     <button
       aria-expanded="true"
       class="btn btn--primary"
@@ -246,7 +246,7 @@ exports[`Storyshots ebay-button Expand button 1`] = `
         </svg>
       </span>
     </button>
-
+     
     <button
       class="btn btn--form btn--slim"
     >
@@ -263,7 +263,7 @@ exports[`Storyshots ebay-button Expand button 1`] = `
         />
       </svg>
     </button>
-
+     
     <button
       aria-expanded="true"
       class="btn btn--form btn--slim"
@@ -307,75 +307,6 @@ exports[`Storyshots ebay-button Expand button 1`] = `
           />
         </svg>
       </span>
-    </button>
-  </p>
-  <p>
-    <button
-      class="btn btn--primary btn--split-start"
-    >
-      Primary Split button
-    </button>
-    <button
-      class="btn btn--primary btn--split-end"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon--dropdown"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-dropdown"
-        />
-      </svg>
-    </button>
-  </p>
-  <p>
-    <button
-      class="btn btn--secondary btn--split-start"
-    >
-      Split button
-    </button>
-    <button
-      class="btn btn--secondary btn--split-end"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon--dropdown"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-dropdown"
-        />
-      </svg>
-    </button>
-  </p>
-  <p>
-    <button
-      class="btn btn--tertiary btn--split-start"
-    >
-      Tertiary split button
-    </button>
-    <button
-      class="btn btn--tertiary btn--split-end"
-    >
-      <svg
-        aria-hidden="true"
-        class="icon icon--dropdown"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-dropdown"
-        />
-      </svg>
     </button>
   </p>
 </DocumentFragment>
