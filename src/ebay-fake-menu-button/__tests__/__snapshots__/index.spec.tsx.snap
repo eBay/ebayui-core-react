@@ -592,25 +592,18 @@ exports[`Storyshots ebay-fake-menu-button Without Text 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
   >
-    <span
-      className="btn__cell"
+    <svg
+      aria-hidden={true}
+      className="icon icon--dropdown"
+      focusable={false}
+      height="24px"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <span
-        className="btn__text"
+      <use
+        xlinkHref="#icon-dropdown"
       />
-      <svg
-        aria-hidden={true}
-        className="icon icon--dropdown"
-        focusable={false}
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlinkHref="#icon-dropdown"
-        />
-      </svg>
-    </span>
+    </svg>
   </button>
   <div
     className="fake-menu-button__menu fake-menu"
