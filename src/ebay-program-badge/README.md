@@ -1,21 +1,20 @@
-# ebay-icon
+# ebay-program-badge
 The component will include the actual SVG markup in the HTML and then reference the chosen icon.
 
 ## Usage
 ```jsx
-import { EbayIcon } from '@ebay/ui-core-react/ebay-icon'
-import '@ebay/skin/icon'
+import { EbayProgramBadge } from '@ebay/ui-core-react/ebay-program-badge'
+import '@ebay/skin/program-badge'
 
-<EbayIcon name="arrowLeft" />
+<EbayProgramBadge name="ebayPlus" />
 ```
 
 ### Notes
 Make sure you use `<EbaySvg />` in your code (ideally on server side only), so that actual SVG icons exist inside HTML.
 
 ## Attributes
-
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
-`name` | String | No | Yes | name of the icon from [Skin](./types.ts), transparent versions of colored icons has `-transparent` suffix
-`noSkinClasses` | Boolean | No | No | Used for special cases where `icon` classes from Skin should not be applied
+`name` | String | No | Yes | name of the icon from [Skin](./types.ts)
+`noSkinClasses` | Boolean | No | No | Used for special cases where `program-badge*` classes from Skin should not be applied
 `a11yText` | String | No | Yes | text for non-decorative inline icon; icon is assumed to be decorative if this is not passed

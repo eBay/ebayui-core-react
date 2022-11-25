@@ -5766,7 +5766,122 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon All program-badge Icons 1`] = `
+exports[`Storyshots ebay-icon Custom Color 1`] = `
+<DocumentFragment>
+  <div>
+    <style>
+      .demo3 {color: blue;}
+    </style>
+    <p>
+      default 
+      <svg
+        aria-hidden="true"
+        class="icon icon--notification"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-notification"
+        />
+      </svg>
+    </p>
+    <p>
+      with className 
+      <svg
+        aria-hidden="true"
+        class="demo3 icon icon--notification"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-notification"
+        />
+      </svg>
+    </p>
+    <p>
+      with style 
+      <svg
+        aria-hidden="true"
+        class="icon icon--notification"
+        focusable="false"
+        height="24px"
+        style="color: green;"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-notification"
+        />
+      </svg>
+    </p>
+    <p>
+      with style 
+      <svg
+        aria-hidden="true"
+        class="icon icon--attention-filled"
+        focusable="false"
+        height="24px"
+        style="color: purple;"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-attention-filled"
+        />
+      </svg>
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-icon Custom Initial Size 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      This defines the size of the icon before the styles are loaded or when they fail to load.
+    </p>
+    <style>
+      svg.icon--cta { height: unset; width: unset; }
+    </style>
+    <p>
+      width/height = 8px 
+      <svg
+        aria-hidden="true"
+        class="icon icon--cta"
+        focusable="false"
+        height="8"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-cta"
+        />
+      </svg>
+    </p>
+    <p>
+      width/height = 32px 
+      <svg
+        aria-hidden="true"
+        class="icon icon--cta"
+        focusable="false"
+        height="32"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-cta"
+        />
+      </svg>
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-icon Deprecated Program Badge Icons 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -6000,121 +6115,6 @@ exports[`Storyshots ebay-icon All program-badge Icons 1`] = `
       </tr>
     </tbody>
   </table>
-</DocumentFragment>
-`;
-
-exports[`Storyshots ebay-icon Custom Color 1`] = `
-<DocumentFragment>
-  <div>
-    <style>
-      .demo3 {color: blue;}
-    </style>
-    <p>
-      default 
-      <svg
-        aria-hidden="true"
-        class="icon icon--notification"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-notification"
-        />
-      </svg>
-    </p>
-    <p>
-      with className 
-      <svg
-        aria-hidden="true"
-        class="demo3 icon icon--notification"
-        focusable="false"
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-notification"
-        />
-      </svg>
-    </p>
-    <p>
-      with style 
-      <svg
-        aria-hidden="true"
-        class="icon icon--notification"
-        focusable="false"
-        height="24px"
-        style="color: green;"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-notification"
-        />
-      </svg>
-    </p>
-    <p>
-      with style 
-      <svg
-        aria-hidden="true"
-        class="icon icon--attention-filled"
-        focusable="false"
-        height="24px"
-        style="color: purple;"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-attention-filled"
-        />
-      </svg>
-    </p>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Storyshots ebay-icon Custom Initial Size 1`] = `
-<DocumentFragment>
-  <div>
-    <p>
-      This defines the size of the icon before the styles are loaded or when they fail to load.
-    </p>
-    <style>
-      svg.icon--cta { height: unset; width: unset; }
-    </style>
-    <p>
-      width/height = 8px 
-      <svg
-        aria-hidden="true"
-        class="icon icon--cta"
-        focusable="false"
-        height="8"
-        width="8"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-cta"
-        />
-      </svg>
-    </p>
-    <p>
-      width/height = 32px 
-      <svg
-        aria-hidden="true"
-        class="icon icon--cta"
-        focusable="false"
-        height="32"
-        width="32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use
-          xlink:href="#icon-cta"
-        />
-      </svg>
-    </p>
-  </div>
 </DocumentFragment>
 `;
 
