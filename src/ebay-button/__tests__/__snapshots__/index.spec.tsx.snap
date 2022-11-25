@@ -122,7 +122,7 @@ exports[`Storyshots ebay-button Expand button 1`] = `
         <span
           class="btn__text"
         >
-          Expand button
+          Primary expand button
         </span>
         <svg
           aria-hidden="true"
@@ -138,8 +138,7 @@ exports[`Storyshots ebay-button Expand button 1`] = `
         </svg>
       </span>
     </button>
-  </p>
-  <p>
+     
     <button
       aria-expanded="true"
       class="btn btn--primary"
@@ -169,6 +168,122 @@ exports[`Storyshots ebay-button Expand button 1`] = `
   </p>
   <p>
     <button
+      class="btn btn--secondary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          class="btn__text"
+        >
+          Expand button
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--tertiary"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          class="btn__text"
+        >
+          Tertiary expand button
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--form"
+    >
+      <span
+        class="btn__cell"
+      >
+        <span
+          class="btn__text"
+        >
+          Form expand button
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+     
+    <button
+      class="btn btn--form btn--slim"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--dropdown"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-dropdown"
+        />
+      </svg>
+    </button>
+     
+    <button
+      aria-expanded="true"
+      class="btn btn--form btn--slim"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--dropdown"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-dropdown"
+        />
+      </svg>
+    </button>
+  </p>
+  <p>
+    <button
       class="btn btn--borderless"
     >
       <span
@@ -177,7 +292,7 @@ exports[`Storyshots ebay-button Expand button 1`] = `
         <span
           class="btn__text"
         >
-          Expanded button
+          Borderless expand button
         </span>
         <svg
           aria-hidden="true"
@@ -341,7 +456,7 @@ exports[`Storyshots ebay-button Icon Only 1`] = `
     <br />
     <button
       aria-label="Destructive button"
-      class="btn btn--secondary btn--destructive btn--slim"
+      class="btn btn--secondary btn--destructive"
     >
       <svg
         aria-hidden="true"
@@ -625,6 +740,117 @@ exports[`Storyshots ebay-button Size 1`] = `
       Default Size Link
     </a>
   </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-button Split button 1`] = `
+<DocumentFragment>
+  <p>
+    <button
+      class="btn btn--primary btn--split-start"
+    >
+      Primary split start button
+    </button>
+    <button
+      class="btn btn--primary btn--split-end"
+    >
+      Primary split end button
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary btn--split-start"
+    >
+      Split start button
+    </button>
+    <button
+      class="btn btn--secondary btn--split-end"
+    >
+      Split end button
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--tertiary btn--split-start"
+    >
+      Tertiary split start button
+    </button>
+    <button
+      class="btn btn--tertiary btn--split-end"
+    >
+      Tertiary split end button
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--primary btn--split-start"
+    >
+      Primary Split button
+    </button>
+    <button
+      class="btn btn--primary btn--split-end"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--dropdown"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-dropdown"
+        />
+      </svg>
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--secondary btn--split-start"
+    >
+      Split button
+    </button>
+    <button
+      class="btn btn--secondary btn--split-end"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--dropdown"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-dropdown"
+        />
+      </svg>
+    </button>
+  </p>
+  <p>
+    <button
+      class="btn btn--tertiary btn--split-start"
+    >
+      Tertiary split button
+    </button>
+    <button
+      class="btn btn--tertiary btn--split-end"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--dropdown"
+        focusable="false"
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-dropdown"
+        />
+      </svg>
+    </button>
+  </p>
+          
 </DocumentFragment>
 `;
 
