@@ -25,9 +25,22 @@ describe('<EbayFakeMenuButton>', () => {
 
             expect(spy).toBeCalled()
         })
+        it('should fire onCollapse event', () => {
+            const wrapper = render(
+                <EbayFakeMenuButton onCollapse={spy}>
+                    <EbayFakeMenuButton />
+                </EbayFakeMenuButton>
+            )
+
+            const button = wrapper.container.querySelector('button')
+            fireEvent.click(button)
+            fireEvent.click(button)
+
+            expect(spy).toBeCalled()
+        })
     })
     describe('on opened menu', () => {
-        let spy, button, menu
+        let spy, button
         beforeEach(() => {
             spy = jest.fn()
             const wrapper = render(
@@ -36,7 +49,6 @@ describe('<EbayFakeMenuButton>', () => {
                 </EbayFakeMenuButton>
             )
             button = wrapper.getByRole('button')
-            menu = wrapper.getByRole('list')
             fireEvent.click(button)
         })
 
