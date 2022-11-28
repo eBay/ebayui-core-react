@@ -136,7 +136,7 @@ storiesOf('ebay-pagination', module)
                 >
                     <Item type="previous" disabled={activeIndex === 0} />
                     {Array.from(Array(numOfItems).keys()).map(i => (
-                        <Item key={`item-${i}`} current={i === activeIndex}>{i + 1}</Item>
+                        <Item key={`item-${i}`} href="" current={i === activeIndex}>{i + 1}</Item>
                     ))}
                     <Item type="next" disabled={activeIndex >= (numOfItems - 1)} />
                 </EbayPagination>

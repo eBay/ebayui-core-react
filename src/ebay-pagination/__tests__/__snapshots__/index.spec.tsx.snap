@@ -1291,6 +1291,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
       <button
         aria-current="page"
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         1
@@ -1301,6 +1302,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         2
@@ -1311,6 +1313,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         3
@@ -1321,6 +1324,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         4
@@ -1331,6 +1335,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         5
@@ -1341,6 +1346,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         6
@@ -1351,6 +1357,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         7
@@ -1361,6 +1368,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         8
@@ -1371,6 +1379,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         9
@@ -1381,6 +1390,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         10
@@ -1391,6 +1401,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         11
@@ -1401,6 +1412,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         12
@@ -1411,6 +1423,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         13
@@ -1421,6 +1434,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         14
@@ -1431,6 +1445,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         15
@@ -1441,6 +1456,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         16
@@ -1451,6 +1467,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         17
@@ -1461,6 +1478,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         18
@@ -1471,6 +1489,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         19
@@ -1481,6 +1500,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         20
@@ -1491,6 +1511,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         21
@@ -1501,6 +1522,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         22
@@ -1511,6 +1533,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         23
@@ -1521,6 +1544,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         24
@@ -1531,6 +1555,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         25
@@ -1541,6 +1566,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         26
@@ -1551,6 +1577,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         27
@@ -1561,6 +1588,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         28
@@ -1571,6 +1599,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         29
@@ -1581,6 +1610,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         30
@@ -1591,6 +1621,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         31
@@ -1601,6 +1632,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         32
@@ -1611,6 +1643,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         33
@@ -1621,6 +1654,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         34
@@ -1631,6 +1665,7 @@ exports[`Storyshots ebay-pagination Variant \`overflow\` (interactive) 1`] = `
     >
       <button
         className="pagination__item"
+        href=""
         onClick={[Function]}
       >
         35
