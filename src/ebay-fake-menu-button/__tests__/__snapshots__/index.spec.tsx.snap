@@ -236,9 +236,9 @@ exports[`Storyshots ebay-fake-menu-button Priority: Primary 1`] = `
   className="fake-menu-button"
 >
   <button
-    a11y-text="Menu"
     aria-expanded={false}
     aria-haspopup={true}
+    aria-label="Menu"
     aria-live={null}
     className="btn fake-menu-button__button btn--primary"
     onClick={[Function]}
@@ -274,9 +274,9 @@ exports[`Storyshots ebay-fake-menu-button Variant: Overflow 1`] = `
   className="fake-menu-button"
 >
   <button
-    a11y-text="Menu"
     aria-expanded={false}
     aria-haspopup={true}
+    aria-label="Menu"
     className="fake-menu-button__button icon-btn"
     onClick={[Function]}
     type="button"

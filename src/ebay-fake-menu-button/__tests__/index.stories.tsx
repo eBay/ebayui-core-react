@@ -50,14 +50,14 @@ storiesOf('ebay-fake-menu-button', module)
         </EbayFakeMenuButton>
     </>))
     .add('Variant: Overflow', () => (<>
-        <EbayFakeMenuButton variant="overflow" a11y-text="Menu">
+        <EbayFakeMenuButton variant="overflow" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
         </EbayFakeMenuButton>
     </>))
     .add('Priority: Primary', () => (<>
-        <EbayFakeMenuButton priority="primary" text="Primary" a11y-text="Menu">
+        <EbayFakeMenuButton priority="primary" text="Primary" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
