@@ -47,8 +47,8 @@ const EbayMenuButton: FC<Props> = ({
     const [menuId, setMenuId] = useState<string|undefined>()
     const ref = useRef<HTMLButtonElement>()
 
-    const label = findComponent(children, EbayFakeMenuButtonLabel) || text
     const icon = findComponent(children, EbayFakeMenuButtonIcon)
+    const label = findComponent(children, EbayFakeMenuButtonLabel) || (icon ? <span>{text}</span> : text)
     const menuItems = filterByType(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
 
     useEffect(() => {
@@ -105,6 +105,7 @@ const EbayMenuButton: FC<Props> = ({
             {variant === 'overflow' ?
                 <EbayIconButton icon="overflow" {...buttonProps} /> :
                 <EbayButton
+                    variant={variant === 'form' ? 'form' : undefined}
                     bodyState={noToggleIcon ? undefined : 'expand'}
                     {...buttonProps}
                 >

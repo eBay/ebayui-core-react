@@ -49,22 +49,35 @@ storiesOf('ebay-fake-menu-button', module)
             <Item href="http://ebay.com">item 3</Item>
         </EbayFakeMenuButton>
     </>))
-    .add('Variant: Overflow', () => (<>
+    .add('Variants', () => (<>
+        <h3>Button</h3>
+        <EbayFakeMenuButton variant="button" text="Button" a11yText="Menu inside the form">
+            <Item href="http://ebay.com">item 1</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+
+        <h3>Form</h3>
+        <EbayFakeMenuButton variant="form" text="Form" a11yText="Menu inside the form">
+            <Item href="http://ebay.com">item 1</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+
+        <h3>Overflow</h3>
         <EbayFakeMenuButton variant="overflow" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
         </EbayFakeMenuButton>
     </>))
-    .add('Priority: Primary', () => (<>
-        <EbayFakeMenuButton priority="primary" text="Primary" a11yText="Menu">
+    .add('Priorities', () => (<>
+        <EbayFakeMenuButton variant="button" priority="primary" text="Primary" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
         </EbayFakeMenuButton>
-    </>))
-    .add('Without Text', () => (<>
-        <EbayFakeMenuButton a11yText="eBay Menu without text">
+        <EbayFakeMenuButton variant="button" priority="tertiary" text="Tertiary" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
