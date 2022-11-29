@@ -11,6 +11,7 @@ type Props = React.HTMLProps<HTMLElement> & {
 };
 
 const EbayPageNotice: FC<Props> = ({
+    id,
     status = 'general',
     children,
     onDismiss,
@@ -36,11 +37,11 @@ const EbayPageNotice: FC<Props> = ({
     return dismissed ? null : (
         <section
             {...rest}
-            aria-labelledby={`${status}-status`}
+            aria-labelledby={id || `${status}-status`}
             className={`page-notice ${status !== `general` ? `page-notice--${status}` : ``}`}
             role="region">
             {status !== `general` ? (
-                <div className="page-notice__header" id={`${status}-status`}>
+                <div className="page-notice__header" id={id || `${status}-status`}>
                     <EbayIcon
                         name={`${status}FilledSmall` as Icon}
                         a11yText={ariaLabel}
