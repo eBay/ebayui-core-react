@@ -44,7 +44,6 @@ const EbayPagination: FC<PaginationProps> = ({
     const childPageRefs = useRef([])
     childPageRefs.current = Children.map(children, createRef)
     const totalPages = filterBy(children, ({ props }) => props.type === undefined || props.type === 'page').length
-
     const itemWidthRef = useRef<number>(0)
     const arrowWidthRef = useRef<number>(0)
     const getNumOfVisiblePageItems = () => {
@@ -60,8 +59,7 @@ const EbayPagination: FC<PaginationProps> = ({
     }
 
     const [page, setPage] = useState<ItemState[]>([])
-    const [pageRange, setPageRange] = useState<any>({})
-
+    const [selectedIndex, setSelectedIndex] = useState<number>(0)
     const updatePages = () => {
         const selectedPageIndex = childPageRefs.current.findIndex(pageRef =>
             pageRef.current?.getAttribute('aria-current') === 'page'
@@ -73,16 +71,8 @@ const EbayPagination: FC<PaginationProps> = ({
             totalPages,
             variant
         )
-        const range = [...pageState]
-        const firstDotIndex = range.indexOf('dots'), lastDotIndex = range.lastIndexOf('dots')
-        const firstDotRange = [3, 2 + range.indexOf('visible', firstDotIndex) - firstDotIndex]
-        const secondDotRange = [lastDotIndex + 1, totalPages - 1]
-
+        setSelectedIndex(selectedPageIndex)
         setPage(['hidden', ...pageState])
-        setPageRange({
-            firstDotRange,
-            secondDotRange
-        })
     }
 
     useEffect(() => {
@@ -98,10 +88,11 @@ const EbayPagination: FC<PaginationProps> = ({
 
     const createChildItems = (itemType: PaginationItemType): ReactElement[] => {
         let pageIndex = 0
-        const [firstDotFrom, firstDotTo] = pageRange.firstDotRange || []
-        const [secondDotFrom, secondDotTo] = pageRange.secondDotRange || []
         const firstDotItems : ReactElement[] = []
         const secondDotItems : ReactElement[] = []
+        const allDotItems : ReactElement[] = []
+        const firstDot = page.indexOf('dots')
+        const lastDot = page.lastIndexOf('dots')
 
         return Children.map(children, (item: ReactElement, index) => {
             const { type = 'page', current, disabled, href, children: text } = item.props
@@ -118,23 +109,31 @@ const EbayPagination: FC<PaginationProps> = ({
                 ref: childPageRefs.current[index]
             }
             // include hidden numbers & number of (...)itself
-            if ((hide || isDot) && itemType === 'page') {
+            if ((hide || isDot) && type === 'page') {
                 const itemComponent = (
                     <Item key={key} href={href} showTickSmall={false} onClick={updatePages}>{text}</Item>
                 )
-                if (index <= firstDotTo && index >= firstDotFrom) {
+                if (firstDot === lastDot) {
+                    allDotItems.push(itemComponent)
+                }
+                if (selectedIndex - 2 > firstDot && index < selectedIndex) {
                     firstDotItems.push(itemComponent)
-                } else if (index <= secondDotTo && index >= secondDotFrom) {
+                }
+                if (selectedIndex + 2 < lastDot && index > selectedIndex) {
                     secondDotItems.push(itemComponent)
                 }
             }
-
             if (itemType === 'page' && isDot) {
                 return (
                     <li key={key}>
-                        <EbayFakeMenuButton className="pagination__item" text="…" borderless showDropdown={false}>
-                            {index === 3 ? firstDotItems : secondDotItems}
-                        </EbayFakeMenuButton>
+                        <span className="pagination__item" role="separator">
+                            <EbayFakeMenuButton text="..." borderless showDropdown={false} aria-label="Menu">
+                                {/* eslint-disable-next-line no-nested-ternary */}
+                                { firstDot === lastDot ? allDotItems :
+                                    index === 2 ? firstDotItems : secondDotItems
+                                }
+                            </EbayFakeMenuButton>
+                        </span>
                     </li>
                 )
             }

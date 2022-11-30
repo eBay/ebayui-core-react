@@ -1,4 +1,4 @@
-import { MAX_PAGES, MIN_PAGES, SHOW_LAST, OVERFLOW } from './const'
+import { MAX_PAGES, MIN_PAGES, SHOW_LAST, OVERFLOW, TRAILING_SPACE_WITH_DOT, LEADING_SPACE_WITH_DOT } from './const'
 import { ItemState, PaginationVariant } from './types'
 
 export function pageNumbersAround(
@@ -15,9 +15,8 @@ export function pageNumbersAround(
         Math.max(0, selectedPage - Math.floor((visibleItems - 1) / 2))
     const endIndex = (withDots ? startIndexWithDots : startIndexWithoutDots) + visibleItems
     const closeToEnd = endIndex >= totalPages
-    const closeToFront = selectedPage < 4
+    const closeToFront = selectedPage <= 4
 
-    // middle show item[1] (...) and item[item.length - 1] (...)
     const visibleRangeWithDots = (start: number, end: number) => {
         const items = visibleRange(totalPages, start, end)
 
@@ -25,11 +24,6 @@ export function pageNumbersAround(
             items[end - 2] = 'dots'
             items[end - 1] = 'hidden'
             items[totalPages - 1] = 'visible'
-            if (hasLeadingDots) {
-                items[0] = 'visible'
-                items[1] = 'visible'
-                items[2] = closeToFront ? 'visible' : 'dots'
-            }
         } else if (visibleItems > 1) {
             items[end - 1] = 'dots'
         }
@@ -37,14 +31,35 @@ export function pageNumbersAround(
         return items
     }
 
-    if (closeToEnd) {
-        return withDots ?
-            visibleRangeWithDots(startIndexWithDots, endIndex) :
-            visibleRange(totalPages, totalPages - visibleItems)
+    // middle show item[1] (...) and item[item.length - 1] (...)
+    const visibleRangeWithOverflowDots = (start: number, end: number) => {
+        // Following Dot
+        if (closeToFront) {
+            return visibleRangeWithDots(0, end)
+        // Leading Dot
+        } else if (closeToEnd) {
+            const items = visibleRange(totalPages, totalPages - TRAILING_SPACE_WITH_DOT, totalPages)
+            items[0] = 'visible'
+            items[1] = 'dots'
+            return items
+        }
+        // Middle case with Leading & Following Dots
+        const items = visibleRange(totalPages,
+            selectedPage - LEADING_SPACE_WITH_DOT,
+            selectedPage + LEADING_SPACE_WITH_DOT + 1
+        )
+        items[0] = 'visible'
+        items[1] = closeToFront ? 'visible' : 'dots'
+        items[totalPages - 2] = 'dots'
+        items[totalPages - 1] = 'visible'
+        return items
     }
 
+    // eslint-disable-next-line no-nested-ternary
     return withDots ?
-        visibleRangeWithDots(startIndexWithDots, endIndex) :
+        hasLeadingDots ?
+            visibleRangeWithOverflowDots(startIndexWithDots, endIndex) :
+            visibleRangeWithDots(startIndexWithDots, endIndex) :
         visibleRange(totalPages, startIndexWithoutDots, endIndex)
 }
 
