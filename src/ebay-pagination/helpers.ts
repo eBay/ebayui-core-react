@@ -5,7 +5,7 @@ export function pageNumbersAround(
     totalPages: number,
     selectedPage: number,
     maxVisiblePages: number = totalPages,
-    variant: PaginationVariant
+    variant: PaginationVariant = null
 ): ItemState[] {
     const withDots = [SHOW_LAST, OVERFLOW].includes(variant)
     const hasLeadingDots = variant === OVERFLOW
