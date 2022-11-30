@@ -32,7 +32,7 @@ describe('<EbayFakeMenuButton>', () => {
                 </EbayFakeMenuButton>
             )
 
-            const button = wrapper.container.querySelector('button')
+            const button = wrapper.getByRole('button')
             fireEvent.click(button)
             fireEvent.click(button)
 

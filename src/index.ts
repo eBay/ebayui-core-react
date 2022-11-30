@@ -6,7 +6,7 @@ export { EbayMenu, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriori
 export { EbayFakeMenu, EbayFakeMenuItem, EbayFakeMenuSeparator, EbayFakeMenuItemProps } from './ebay-fake-menu'
 export {
     EbayFakeMenuButton, EbayFakeMenuButtonProps,
-    EbayFakeMenuButtonItem, EbayFakeMenuButtonIcon, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator
+    EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator
 } from './ebay-fake-menu-button'
 export { EbayInlineNotice, NoticeStatus } from './ebay-inline-notice'
 export { EbaySectionNotice, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from './ebay-section-notice'

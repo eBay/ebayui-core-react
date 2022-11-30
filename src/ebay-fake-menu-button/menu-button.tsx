@@ -4,8 +4,8 @@ import classnames from 'classnames'
 import { filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
-import { EbayButton, EbayButtonProps, EbayFakeMenu, EbayFakeMenuItemProps, EbayIconButton } from '..'
-import { EbayFakeMenuButtonIcon, EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator } from '.'
+import { EbayButton, EbayButtonProps, EbayFakeMenu, EbayFakeMenuItemProps, EbayIcon, EbayIconButton } from '..'
+import { EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator } from '.'
 
 export type EbayFakeMenuButtonVariant = 'overflow' | 'form' | 'button'
 
@@ -47,7 +47,7 @@ const EbayMenuButton: FC<Props> = ({
     const [menuId, setMenuId] = useState<string|undefined>()
     const ref = useRef<HTMLButtonElement>()
 
-    const icon = findComponent(children, EbayFakeMenuButtonIcon)
+    const icon = findComponent(children, EbayIcon)
     const label = findComponent(children, EbayFakeMenuButtonLabel) || (icon ? <span>{text}</span> : text)
     const menuItems = filterByType(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
 

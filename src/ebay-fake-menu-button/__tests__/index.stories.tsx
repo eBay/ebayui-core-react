@@ -6,8 +6,8 @@ import {
     EbayFakeMenuButtonItem as Item,
     EbayFakeMenuButtonSeparator as Separator,
     EbayFakeMenuButtonLabel,
-    EbayFakeMenuButtonIcon
-} from '..'
+    EbayIcon
+} from '../../index'
 
 storiesOf('ebay-fake-menu-button', module)
     .add('Default', () => (<>
@@ -36,7 +36,7 @@ storiesOf('ebay-fake-menu-button', module)
     //
     .add('With icon', () => (<>
         <EbayFakeMenuButton text="Settings">
-            <EbayFakeMenuButtonIcon name="settings" />
+            <EbayIcon name="settings" />
             <Item href="http://ebay.com">item 1 that has very long text</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
