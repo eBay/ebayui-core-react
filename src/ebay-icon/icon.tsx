@@ -14,7 +14,10 @@ export type A11yVariant = 'label';
 
 export type EbayIconProps = SVGProps<SVGSVGElement> & {
     className?: string;
-    type?: 'icon'| 'program-badge' | string
+    /**
+     * @deprecated Use <EbayProgramBadge /> instead of type='program-badge'
+     */
+    type?: 'icon' | 'program-badge' | string
     name: Icon;
     noSkinClasses?: boolean;
     a11yText?: string;
