@@ -3,7 +3,12 @@ import EbayButtonCell from './button-cell'
 import EbayButtonText from './button-text'
 import { EbayIcon } from '../ebay-icon'
 
-const EbayButtonExpand: FC = ({ children, showDropdown = true } : { children: ReactNode, showDropdown: boolean }) =>
+type Props = {
+    children: ReactNode;
+    showDropdown?: boolean;
+}
+
+const EbayButtonExpand: FC<Props> = ({ children, showDropdown }) =>
     children ? (
         <EbayButtonCell>
             <EbayButtonText>
