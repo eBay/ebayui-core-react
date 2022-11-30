@@ -126,3 +126,17 @@ storiesOf('ebay-fake-menu-button', module)
             <Item href="http://ebay.com" onClick={action('Open login popup!')}>Log in</Item>
         </EbayFakeMenuButton>
     </>))
+    .add('Fixed Width', () => (<>
+        <EbayFakeMenuButton text="Menu has a button width" fixWidth>
+            <Item href="http://ebay.com">item 1 that has very very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </>))
+    .add('Reverse (Menu grows to the left)', () => (<div style={{ marginLeft: '100px' }}>
+        <EbayFakeMenuButton text="Menu grows to the left" reverse>
+            <Item href="http://ebay.com">item 1 that has very very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </div>))

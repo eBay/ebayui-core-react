@@ -156,7 +156,7 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
     >
       <li>
         <a
-          className="fake-menu__item"
+          className="fake-menu-button__item fake-menu__item"
           href="http://ebay.com"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -180,7 +180,7 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
       </li>
       <li>
         <a
-          className="fake-menu__item"
+          className="fake-menu-button__item fake-menu__item"
           href="http://ebay.com"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -204,7 +204,7 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
       </li>
       <li>
         <a
-          className="fake-menu__item"
+          className="fake-menu-button__item fake-menu__item"
           href="http://ebay.com"
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -228,6 +228,43 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
       </li>
     </ul>
   </div>
+</span>
+`;
+
+exports[`Storyshots ebay-fake-menu-button Fixed Width 1`] = `
+<span
+  className="fake-menu-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup={true}
+    aria-live={null}
+    className="btn fake-menu-button__button btn--secondary"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        Menu has a button width
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--dropdown"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-dropdown"
+        />
+      </svg>
+    </span>
+  </button>
 </span>
 `;
 
@@ -304,6 +341,51 @@ Array [
     </button>
   </span>,
 ]
+`;
+
+exports[`Storyshots ebay-fake-menu-button Reverse (Menu grows to the left) 1`] = `
+<div
+  style={
+    Object {
+      "marginLeft": "100px",
+    }
+  }
+>
+  <span
+    className="fake-menu-button"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-live={null}
+      className="btn fake-menu-button__button btn--secondary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      <span
+        className="btn__cell"
+      >
+        <span
+          className="btn__text"
+        >
+          Menu grows to the left
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </span>
+</div>
 `;
 
 exports[`Storyshots ebay-fake-menu-button Variants 1`] = `

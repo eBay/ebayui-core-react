@@ -122,6 +122,7 @@ const EbayMenuButton: FC<Props> = ({
                     {menuItems.map((item, i) =>
                         cloneElement<EbayFakeMenuItemProps>(item, {
                             ...item.props,
+                            className: classnames(item.props.className, 'fake-menu-button__item'),
                             key: i,
                             autoFocus: i === 0
                         })
