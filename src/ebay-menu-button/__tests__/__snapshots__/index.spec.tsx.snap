@@ -156,6 +156,7 @@ exports[`Storyshots ebay-menu-button Expanded 1`] = `
   </button>
   <span
     className="menu-button__menu menu"
+    tabIndex={-1}
   >
     <div
       className="menu__items"
@@ -322,44 +323,83 @@ exports[`Storyshots ebay-menu-button Multi-Select Menu Button 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-menu-button Priority: Primary 1`] = `
-<span
-  className="menu-button"
->
-  <button
-    a11y-text="Menu"
-    aria-expanded={false}
-    aria-haspopup={true}
-    aria-live={null}
-    className="btn menu-button__button btn--primary"
-    onClick={[Function]}
-    onKeyDown={[Function]}
+exports[`Storyshots ebay-menu-button Priorities 1`] = `
+Array [
+  <span
+    className="menu-button"
   >
-    <span
-      className="btn__cell"
+    <button
+      a11y-text="Menu"
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-live={null}
+      className="btn menu-button__button btn--primary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
     >
       <span
-        className="btn__text"
+        className="btn__cell"
       >
-        <span>
-          Primary
+        <span
+          className="btn__text"
+        >
+          <span>
+            Primary
+          </span>
         </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
       </span>
-      <svg
-        aria-hidden={true}
-        className="icon icon--dropdown"
-        focusable={false}
-        height="24px"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
+    </button>
+  </span>,
+  <span
+    className="menu-button"
+  >
+    <button
+      a11y-text="Menu"
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-live={null}
+      className="btn menu-button__button btn--tertiary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      <span
+        className="btn__cell"
       >
-        <use
-          xlinkHref="#icon-dropdown"
-        />
-      </svg>
-    </span>
-  </button>
-</span>
+        <span
+          className="btn__text"
+        >
+          <span>
+            Tertiary
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </span>,
+]
 `;
 
 exports[`Storyshots ebay-menu-button Reverse (Menu grows to the left) 1`] = `
@@ -565,32 +605,117 @@ Array [
 ]
 `;
 
-exports[`Storyshots ebay-menu-button Variant: Overflow 1`] = `
-<span
-  className="menu-button"
->
-  <button
-    a11y-text="Menu"
-    aria-expanded={false}
-    aria-haspopup={true}
-    className="menu-button__button icon-btn"
-    onClick={[Function]}
-    type="button"
+exports[`Storyshots ebay-menu-button Variants 1`] = `
+Array [
+  <h3>
+    Button
+  </h3>,
+  <span
+    className="menu-button"
   >
-    <svg
-      aria-hidden={true}
-      className="icon icon--overflow"
-      focusable={false}
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-label="Menu inside the form"
+      aria-live={null}
+      className="btn menu-button__button btn--secondary"
+      onClick={[Function]}
+      onKeyDown={[Function]}
     >
-      <use
-        xlinkHref="#icon-overflow"
-      />
-    </svg>
-  </button>
-</span>
+      <span
+        className="btn__cell"
+      >
+        <span
+          className="btn__text"
+        >
+          <span>
+            Button
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </span>,
+  <h3>
+    Form
+  </h3>,
+  <span
+    className="menu-button"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-label="Menu inside the form"
+      aria-live={null}
+      className="btn menu-button__button btn--form"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      <span
+        className="btn__cell"
+      >
+        <span
+          className="btn__text"
+        >
+          <span>
+            Form
+          </span>
+        </span>
+        <svg
+          aria-hidden={true}
+          className="icon icon--dropdown"
+          focusable={false}
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlinkHref="#icon-dropdown"
+          />
+        </svg>
+      </span>
+    </button>
+  </span>,
+  <h3>
+    Overflow
+  </h3>,
+  <span
+    className="menu-button"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup={true}
+      aria-label="Menu"
+      className="menu-button__button icon-btn"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        aria-hidden={true}
+        className="icon icon--overflow"
+        focusable={false}
+        height="24px"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-overflow"
+        />
+      </svg>
+    </button>
+  </span>,
+]
 `;
 
 exports[`Storyshots ebay-menu-button With Custom Label 1`] = `

@@ -4,10 +4,10 @@ import { action } from '../../../.storybook/action'
 import {
     EbayMenuButton,
     EbayMenuButtonItem as Item,
-    EbayMenuButtonIcon,
+    EbayIcon,
     EbayMenuButtonSeparator as Separator,
-    EbayMenuButtonLabel,
-} from '..'
+    EbayMenuButtonLabel
+} from '../../index'
 
 storiesOf('ebay-menu-button', module)
     .add('Default', () => (<>
@@ -36,7 +36,7 @@ storiesOf('ebay-menu-button', module)
     //
     .add('With icon', () => (<>
         <EbayMenuButton text="Settings">
-            <EbayMenuButtonIcon name="settings" />
+            <EbayIcon name="settings" />
             <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -49,15 +49,35 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Variant: Overflow', () => (<>
-        <EbayMenuButton variant="overflow" a11y-text="Menu">
+    .add('Variants', () => (<>
+        <h3>Button</h3>
+        <EbayMenuButton variant="button" text="Button" a11yText="Menu inside the form">
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+
+        <h3>Form</h3>
+        <EbayMenuButton variant="form" text="Form" a11yText="Menu inside the form">
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+
+        <h3>Overflow</h3>
+        <EbayMenuButton variant="overflow" a11yText="Menu">
             <Item>item 1</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Priority: Primary', () => (<>
+    .add('Priorities', () => (<>
         <EbayMenuButton priority="primary" text="Primary" a11y-text="Menu">
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+        <EbayMenuButton priority="tertiary" text="Tertiary" a11y-text="Menu">
             <Item>item 1</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>

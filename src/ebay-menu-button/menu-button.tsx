@@ -4,14 +4,8 @@ import { filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
 
-import {
-    EbayMenuButtonIcon,
-    EbayMenuButtonItem,
-    EbayMenuButtonLabel,
-    EbayMenuButtonSeparator,
-    EbayMenuButtonVariant
-} from '.'
-import { EbayButton, EbayButtonProps, EbayIconButton, EbayMenu, EbayMenuType } from '..'
+import { EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, EbayMenuButtonVariant } from '.'
+import { EbayButton, EbayButtonProps, EbayIcon, EbayIconButton, EbayMenu, EbayMenuType } from '..'
 
 export type EbayMenuButtonProps = {
     a11yText?: string;
@@ -67,7 +61,7 @@ const EbayMenuButton: FC<Props> = ({
     const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(menuItems.map(() => false))
 
     const label = findComponent(children, EbayMenuButtonLabel) || <span>{text}</span> || null
-    const icon = findComponent(children, EbayMenuButtonIcon)
+    const icon = findComponent(children, EbayIcon)
     const wrapperClasses = classnames('menu-button', className)
     const menuClasses = classnames('menu-button__menu', {
         'menu-button__menu--fix-width': fixWidth,
@@ -138,6 +132,7 @@ const EbayMenuButton: FC<Props> = ({
             {variant === 'overflow' ?
                 <EbayIconButton icon="overflow" {...buttonProps} /> :
                 <EbayButton
+                    variant={variant === 'form' ? 'form' : undefined}
                     bodyState={noToggleIcon ? undefined : 'expand'}
                     {...buttonProps}
                 >
@@ -149,6 +144,7 @@ const EbayMenuButton: FC<Props> = ({
                     ref={menuRef}
                     type={type}
                     className={menuClasses}
+                    tabIndex={-1}
                     id={menuId}
                     autofocus
                     checked={checkedIndex()}
