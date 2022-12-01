@@ -131,7 +131,6 @@ const EbayPagination: FC<PaginationProps> = ({
                                 a11yText="Menu"
                                 borderless
                                 variant="overflow"
-                                showDropdown={false}
                                 noToggleIcon
                             >
                                 {/* eslint-disable-next-line no-nested-ternary */}
