@@ -18,7 +18,7 @@ describe('pageNumbersAround()', () => {
         expect(pageNumbersAround(3, 1, 2)).toEqual(['visible', 'visible', 'hidden'])
         expect(pageNumbersAround(3, 2, 2)).toEqual(['hidden', 'visible', 'visible'])
     })
-    it.only('on total=3 should return 3/3 items', () => {
+    it('on total=3 should return 3/3 items', () => {
         expect(pageNumbersAround(3, 0, 3)).toEqual(['visible', 'visible', 'visible'])
         expect(pageNumbersAround(3, 1, 3)).toEqual(['visible', 'visible', 'visible'])
         expect(pageNumbersAround(3, 2, 3)).toEqual(['visible', 'visible', 'visible'])

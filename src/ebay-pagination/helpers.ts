@@ -72,6 +72,10 @@ export function calcPageState(
     totalPages: number,
     variant: PaginationVariant = 'show-range'
 ): ItemState[] {
+    if (selectedPage === -1) {
+        return []
+    }
+
     const adjustedNumPages = variant === OVERFLOW ? MAX_PAGES :
         clamp(Math.min(totalPages, visiblePages), MIN_PAGES, MAX_PAGES)
 
