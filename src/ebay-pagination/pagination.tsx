@@ -127,7 +127,13 @@ const EbayPagination: FC<PaginationProps> = ({
                 return (
                     <li key={key}>
                         <span className="pagination__item" role="separator">
-                            <EbayFakeMenuButton text="..." borderless showDropdown={false} aria-label="Menu">
+                            <EbayFakeMenuButton
+                                a11yText="Menu"
+                                borderless
+                                variant="overflow"
+                                showDropdown={false}
+                                noToggleIcon
+                            >
                                 {/* eslint-disable-next-line no-nested-ternary */}
                                 { firstDot === lastDot ? allDotItems :
                                     index === 2 ? firstDotItems : secondDotItems

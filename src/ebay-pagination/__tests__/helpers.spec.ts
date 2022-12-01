@@ -18,7 +18,7 @@ describe('pageNumbersAround()', () => {
         expect(pageNumbersAround(3, 1, 2)).toEqual(['visible', 'visible', 'hidden'])
         expect(pageNumbersAround(3, 2, 2)).toEqual(['hidden', 'visible', 'visible'])
     })
-    it('on total=3 should return 3/3 items', () => {
+    it.only('on total=3 should return 3/3 items', () => {
         expect(pageNumbersAround(3, 0, 3)).toEqual(['visible', 'visible', 'visible'])
         expect(pageNumbersAround(3, 1, 3)).toEqual(['visible', 'visible', 'visible'])
         expect(pageNumbersAround(3, 2, 3)).toEqual(['visible', 'visible', 'visible'])
@@ -38,7 +38,7 @@ function pageNumbersAroundWithDots(
     selectedItem: number,
     maxVisibleItems: number = totalItems
 ): ItemState[] {
-    return pageNumbersAround(totalItems, selectedItem, maxVisibleItems, true)
+    return pageNumbersAround(totalItems, selectedItem, maxVisibleItems, 'show-last')
 }
 
 describe('pageNumbersAroundWithDots()', () => {
