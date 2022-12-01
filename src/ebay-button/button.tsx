@@ -100,7 +100,7 @@ const EbayButton:FC<Props> = ({
         }
     }
 
-    const bodyContent = getBodyContent(children, { isLoading, isExpand, showDropdown })
+    const bodyContent = getBodyContent(children, { isLoading, isExpand })
     const ariaLive = isLoading ? `polite` : null
 
     return href ? (
@@ -132,15 +132,14 @@ const EbayButton:FC<Props> = ({
 type bodyContentOptions = {
     isLoading: boolean;
     isExpand: boolean;
-    showDropdown: boolean;
 }
 
-function getBodyContent(children:ReactNode, { isLoading, isExpand, showDropdown }: bodyContentOptions) {
+function getBodyContent(children:ReactNode, { isLoading, isExpand }: bodyContentOptions) {
     switch (true) {
         case isLoading:
             return <EbayButtonLoading />
         case isExpand:
-            return <EbayButtonExpand showDropdown={showDropdown}>{children}</EbayButtonExpand>
+            return <EbayButtonExpand>{children}</EbayButtonExpand>
         default:
             return children
     }

@@ -1,5 +1,6 @@
 import { pageNumbersAround } from '../helpers'
 import { ItemState } from '../types'
+import { MAX_PAGES, OVERFLOW } from '../const';
 
 describe('pageNumbersAround()', () => {
     it('on empty input should return 0/0 items', () => {
@@ -122,5 +123,49 @@ describe('pageNumbersAroundWithDots()', () => {
         expect(pageNumbersAroundWithDots(9, 0, 5)).toEqual(['visible', 'visible', 'visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
         expect(pageNumbersAroundWithDots(9, 5, 5)).toEqual(['hidden', 'hidden', 'hidden', 'visible', 'visible', 'visible', 'dots', 'hidden', 'visible'])
         expect(pageNumbersAroundWithDots(9, 9, 5)).toEqual(['hidden', 'hidden', 'hidden', 'hidden', 'visible', 'visible', 'visible', 'visible', 'visible'])
+    })
+})
+
+function pageNumbersAroundWithOverflowDots(
+    totalItems: number,
+    selectedItem: number,
+    maxVisibleItems: number = totalItems
+): ItemState[] {
+    const variant = OVERFLOW
+    return pageNumbersAround(totalItems, selectedItem, variant === OVERFLOW ? MAX_PAGES : maxVisibleItems, variant)
+}
+
+describe('pageNumbersAroundWithOverflowDots()', () => {
+    it('on empty input should return []', () => {
+        expect(pageNumbersAroundWithOverflowDots(0, 0)).toEqual([])
+    })
+    // variant={'overflow'} default to MAX_PAGES
+    it('on 1/1 should return [x]', () => {
+        expect(pageNumbersAroundWithOverflowDots(1, 0)).toEqual(['visible'])
+    })
+    it('on 2/2 should return [x,x]', () => {
+        expect(pageNumbersAroundWithOverflowDots(2, 0)).toEqual(['visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(2, 1)).toEqual(['visible', 'visible'])
+    })
+    it('on 3/3 should return [x,x,x]', () => {
+        expect(pageNumbersAroundWithOverflowDots(3, 0)).toEqual(['visible', 'visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(3, 1)).toEqual(['visible', 'visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(3, 2)).toEqual(['visible', 'visible', 'visible'])
+    })
+    it('on 2/2, 3/2 should return [x,x]', () => {
+        expect(pageNumbersAroundWithOverflowDots(2, 0)).toEqual(['visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(2, 1)).toEqual(['visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(2, 0)).toEqual(['visible', 'visible'])
+    })
+    it('on 9/9 should return [x,x,x,x,x,x,x,x]', () => {
+        expect(pageNumbersAroundWithOverflowDots(9, 0)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(9, 5)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(9, 9)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
+    })
+    it('on 15/15 should return [x,x,x,x,.....,(…),x], [x,x,x,x,.....,(…),x], [x,(...),x,x,x,x,(…),x], [x,(...),x,x,x,x,x,x]', () => {
+        expect(pageNumbersAroundWithOverflowDots(15, 0)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(15, 4)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(15, 8)).toEqual(['visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'visible', 'visible', 'visible', 'visible', 'visible', 'hidden', 'hidden', 'dots', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(15, 15)).toEqual(['visible', 'dots', 'hidden',  'hidden', 'hidden',  'hidden', 'hidden',  'hidden', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
     })
 })

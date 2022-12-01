@@ -7,8 +7,8 @@ export function pageNumbersAround(
     maxVisiblePages: number = totalPages,
     variant: PaginationVariant = null
 ): ItemState[] {
-    const withDots = [SHOW_LAST, OVERFLOW].includes(variant)
-    const hasLeadingDots = variant === OVERFLOW && withDots && totalPages > MAX_PAGES
+    const withDots = variant === SHOW_LAST || (variant === OVERFLOW && totalPages > MAX_PAGES)
+    const hasLeadingDots = variant === OVERFLOW && totalPages > MAX_PAGES
     const visibleItems = Math.min(maxVisiblePages, totalPages)
     const startIndexWithoutDots = Math.max(0, selectedPage - Math.ceil((visibleItems - 1) / 2))
     const startIndexWithDots = visibleItems < 4 ? selectedPage :
@@ -55,7 +55,7 @@ export function pageNumbersAround(
         return items
     }
 
-    if (closeToEnd && variant !== OVERFLOW) {
+    if (closeToEnd && totalPages <= MAX_PAGES) {
         return visibleRange(totalPages, totalPages - visibleItems)
     }
     // eslint-disable-next-line no-nested-ternary

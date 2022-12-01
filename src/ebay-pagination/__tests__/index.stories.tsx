@@ -143,7 +143,13 @@ storiesOf('ebay-pagination', module)
             )
         }
 
-        return <><InteractivePagination numOfItems={35} /></>
+        return <>
+            <InteractivePagination numOfItems={5} />
+            <InteractivePagination numOfItems={9} />
+            <InteractivePagination numOfItems={10} />
+            <InteractivePagination numOfItems={15} />
+            <InteractivePagination numOfItems={35} />
+        </>
     })
     .add('Fluid', () => (
         <>
