@@ -31,7 +31,6 @@ export type EbayButtonProps = {
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     borderless?: boolean;
     fixedHeight?: boolean;
-    showDropdown?: boolean;
 }
 
 type Props = ComponentProps<'button'> & ComponentProps<'a'> & EbayButtonProps;
@@ -54,7 +53,6 @@ const EbayButton:FC<Props> = ({
     forwardedRef,
     borderless,
     fixedHeight,
-    showDropdown = true,
     ...rest
 }) => {
     const classPrefix = href ? 'fake-btn' : 'btn'
