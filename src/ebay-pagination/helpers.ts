@@ -58,12 +58,14 @@ export function pageNumbersAround(
     if (closeToEnd && totalPages <= MAX_PAGES) {
         return visibleRange(totalPages, totalPages - visibleItems)
     }
-    // eslint-disable-next-line no-nested-ternary
-    return withDots ?
-        hasLeadingDots ?
+
+    if (withDots) {
+        return hasLeadingDots ?
             visibleRangeWithOverflowDots(startIndexWithDots, endIndex) :
-            visibleRangeWithDots(startIndexWithDots, endIndex) :
-        visibleRange(totalPages, startIndexWithoutDots, endIndex)
+            visibleRangeWithDots(startIndexWithDots, endIndex)
+    }
+
+    return visibleRange(totalPages, startIndexWithoutDots, endIndex)
 }
 
 export function calcPageState(
