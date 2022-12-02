@@ -12,6 +12,7 @@ import { calcPageState, getMaxWidth } from './helpers'
 import { filterBy } from '../common/component-utils'
 import { PaginationItemType } from './pagination-item'
 import { ItemState, PaginationVariant } from './types'
+import { OVERFLOW } from './const'
 
 type PaginationCallback = (e?: Event, value?: string) => void;
 type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
@@ -123,7 +124,11 @@ const EbayPagination: FC<PaginationProps> = ({
                     secondDotItems.push(itemComponent)
                 }
             }
-            if (itemType === 'page' && isDot) {
+            if (itemType === 'page' && isDot && variant === OVERFLOW) {
+                let childComponent = allDotItems
+                if (firstDot !== lastDot) {
+                    childComponent = index === 2 ? firstDotItems : secondDotItems
+                }
                 return (
                     <li key={key}>
                         <span className="pagination__item" role="separator">
@@ -133,10 +138,7 @@ const EbayPagination: FC<PaginationProps> = ({
                                 variant="overflow"
                                 noToggleIcon
                             >
-                                {/* eslint-disable-next-line no-nested-ternary */}
-                                { firstDot === lastDot ? allDotItems :
-                                    index === 2 ? firstDotItems : secondDotItems
-                                }
+                                {childComponent}
                             </EbayFakeMenuButton>
                         </span>
                     </li>
