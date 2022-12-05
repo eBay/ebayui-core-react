@@ -61,8 +61,9 @@ const EbayPagination: FC<PaginationProps> = ({
 
     const [page, setPage] = useState<ItemState[]>([])
     const [selectedIndex, setSelectedIndex] = useState<number>(0)
-    const updatePages = () => {
-        const selectedPageIndex = childPageRefs.current.findIndex(pageRef =>
+    // selectedPageIndexFromDotMenu: override pageIndex on pagination with dot menu value
+    const updatePages = (selectedPageIndexFromDotMenu?: number) => {
+        const selectedPageIndex = selectedPageIndexFromDotMenu || childPageRefs.current.findIndex(pageRef =>
             pageRef.current?.getAttribute('aria-current') === 'page'
         )
         const visiblePageItems = getNumOfVisiblePageItems()
@@ -123,6 +124,7 @@ const EbayPagination: FC<PaginationProps> = ({
                                 }
                                 const currentTarget = event.currentTarget as HTMLElement
                                 onSelect(event, currentTarget?.innerText, pageIndex)
+                                updatePages(Number(currentTarget?.innerText))
                             }
                         }
                     >
