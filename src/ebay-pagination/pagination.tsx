@@ -112,7 +112,22 @@ const EbayPagination: FC<PaginationProps> = ({
             // include hidden numbers & number of (...)itself
             if ((hide || isDot) && type === 'page') {
                 const itemComponent = (
-                    <Item key={key} href={href} showTickSmall={false} onClick={updatePages}>{text}</Item>
+                    <Item
+                        key={key}
+                        href={href}
+                        showTickSmall={false}
+                        onClick={
+                            (event: React.MouseEvent<HTMLAnchorElement> & Event) => {
+                                if (!href) {
+                                    event.preventDefault()
+                                }
+                                const currentTarget = event.currentTarget as HTMLElement
+                                onSelect(event, currentTarget?.innerText, pageIndex)
+                            }
+                        }
+                    >
+                        {text}
+                    </Item>
                 )
                 if (firstDot === lastDot) {
                     allDotItems.push(itemComponent)
