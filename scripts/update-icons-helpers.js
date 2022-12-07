@@ -13,15 +13,17 @@ function parseSVG(skinIconsFile) {
 
 function getIconKeys(icons = []) {
     const symbolIds = icons.map(symbol => symbol.attributes.id)
-    const iconsWithoutStarRatings = symbolIds.filter(symbolId => {
-        // NOTE: this will filter out star-ratings which should be handled by EbayStarRating
-        // TODO: split program0badge from icon
-        return symbolId.startsWith('icon-') || symbolId.startsWith('program-badge-')
-    })
-    return iconsWithoutStarRatings.map(symbolId => {
-        const name = symbolId.replace(/^icon-/, '')
-        return camelCased(name)
-    }).sort()
+
+    return {
+        iconKeys: symbolIds
+            .filter(symbolId => symbolId.startsWith('icon-') || symbolId.startsWith('program-badge-'))
+            .map(symbolId => camelCased(symbolId.replace(/^icon-/, '')))
+            .sort(),
+        programKeys: symbolIds
+            .filter(symbolId => symbolId.startsWith('program-badge-'))
+            .map(symbolId => camelCased(symbolId.replace(/^program-badge-/, '')))
+            .sort()
+    }
 }
 
 function saveIconType(keys, typesFile) {

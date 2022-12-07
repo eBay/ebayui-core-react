@@ -1,4 +1,4 @@
-import React, { FC, Ref, SVGProps, useState, useEffect } from 'react'
+import React, { FC, Ref, SVGProps, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { withForwardRef } from '../common/component-utils'
 import { randomId } from '../common/random-id'
@@ -14,7 +14,10 @@ export type A11yVariant = 'label';
 
 export type EbayIconProps = SVGProps<SVGSVGElement> & {
     className?: string;
-    type?: 'icon'| 'program-badge' | string
+    /**
+     * @deprecated Use <EbayProgramBadge /> instead of type='program-badge'
+     */
+    type?: 'icon' | 'program-badge' | string
     name: Icon;
     noSkinClasses?: boolean;
     a11yText?: string;
@@ -47,11 +50,10 @@ const EbayIcon: FC<EbayIconProps> = ({
     } : {
         'aria-hidden': true
     }
-    const prefixSvg = type === 'icon' ? 'icon-' : ''
-    const kebabName = kebabCased(name)
+    const kebabName = kebabCased(withoutProgramBadgePrefix(name))
     const iconSize = `${getIconPixelSize(kebabName)}px`
     const className = classNames(extraClass,
-        { [getIconClass(type, kebabName)]: !noSkinClasses }
+        { [`${type} ${type}--${kebabName}`]: !noSkinClasses }
     )
 
     return (
@@ -66,7 +68,7 @@ const EbayIcon: FC<EbayIconProps> = ({
             {...a11yProps}
         >
             {a11yText && !withAriaLabel && <title id={a11yTextId}>{a11yText}</title>}
-            <use xlinkHref={`#${prefixSvg}${kebabName}`} />
+            <use xlinkHref={`#${type}-${kebabName}`} />
         </svg>
     )
 }
@@ -76,16 +78,12 @@ function getIconPixelSize(iconName: string) {
     return iconPixelSizes[sizeCandidate] || DEFAULT_ICON_SIZE
 }
 
+function withoutProgramBadgePrefix(name: string) {
+    // Deprecated, remove this function in v4.x
+    return name.replace(/programBadge([A-Z])/, (s, c) => c.toLowerCase())
+}
 function kebabCased(str: string) {
     return str.replace(/([A-Z])/g, (s, c) => `-${c.toLowerCase()}`)
-}
-
-function getIconClass(type, name) {
-    if (type === 'icon') {
-        return `icon icon--${name}`
-    }
-    const dashedName = name.replace(type, `${type}-`)
-    return `${type} ${dashedName}`
 }
 
 export default withForwardRef(EbayIcon)

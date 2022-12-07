@@ -1,7 +1,8 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps, FC, RefObject } from 'react'
 import classNames from 'classnames'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { EbayBadge } from '../ebay-badge'
+import { withForwardRef } from '../common/component-utils'
 
 export type EbayIconButtonProps = {
     href?: string;
@@ -9,6 +10,7 @@ export type EbayIconButtonProps = {
     badgeNumber?: number;
     badgeAriaLabel?: string;
     transparent?: boolean;
+    forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
 }
 
 type HTMLButtonProps = ComponentProps<'button'>;
@@ -22,6 +24,7 @@ const EbayIconButton:FC<Props> = ({
     badgeAriaLabel,
     transparent,
     className: extraClasses,
+    forwardedRef,
     ...rest
 }) => {
     const classPrefix = href ? 'icon-link' : 'icon-btn'
@@ -42,6 +45,7 @@ const EbayIconButton:FC<Props> = ({
 
     return href ? (
         <a
+            ref={forwardedRef}
             className={className}
             href={href}
             {...rest}
@@ -50,6 +54,7 @@ const EbayIconButton:FC<Props> = ({
         </a>
     ) : (
         <button
+            ref={forwardedRef}
             type="button"
             className={className}
             {...rest}
@@ -59,4 +64,4 @@ const EbayIconButton:FC<Props> = ({
     )
 }
 
-export default EbayIconButton
+export default withForwardRef(EbayIconButton)

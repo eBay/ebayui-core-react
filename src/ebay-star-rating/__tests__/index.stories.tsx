@@ -18,4 +18,13 @@ export default {
     },
 };
 
-export const DynamicStars = (args) => (<EbayStarRating {...args} />)
+export const Stars = () => (<>
+    <EbayStarRating a11yText="star-rating" />
+    <EbayStarRating value="3-5" a11yText="star-rating" />
+    <EbayStarRating value="5" a11yText="star-rating" />
+</>)
+
+export const StarsWithControls = (args) => (<>
+    <h2>Change stars using `Controls` addon</h2>
+    <EbayStarRating {...args} a11yText="star-rating" />
+</>)
