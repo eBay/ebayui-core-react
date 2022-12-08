@@ -12,7 +12,6 @@ import { calcPageState, getMaxWidth } from './helpers'
 import { filterBy } from '../common/component-utils'
 import { PaginationItemType } from './pagination-item'
 import { ItemState, PaginationVariant } from './types'
-import { OVERFLOW } from './const'
 
 type PaginationCallback = (e?: Event, value?: string) => void;
 type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
@@ -140,7 +139,7 @@ const EbayPagination: FC<PaginationProps> = ({
                     secondDotItems.push(itemComponent)
                 }
             }
-            if (itemType === 'page' && isDot && variant === OVERFLOW) {
+            if (itemType === 'page' && isDot && variant === 'overflow') {
                 let childComponent = allDotItems
                 if (firstDot !== lastDot) {
                     childComponent = index === 2 ? firstDotItems : secondDotItems
