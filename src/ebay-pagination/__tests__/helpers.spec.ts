@@ -1,6 +1,6 @@
 import { pageNumbersAround } from '../helpers'
 import { ItemState } from '../types'
-import { MAX_PAGES } from '../const';
+import { MAX_PAGES, OVERFLOW } from '../const';
 
 describe('pageNumbersAround()', () => {
     it('on empty input should return 0/0 items', () => {
@@ -163,7 +163,7 @@ describe('pageNumbersAroundWithOverflowDots()', () => {
         expect(pageNumbersAroundWithOverflowDots(9, 9)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
     })
     it('on 15/15 should return [x,x,x,x,.....,(…),x], [x,x,x,x,.....,(…),x], [x,(...),x,x,x,x,(…),x], [x,(...),x,x,x,x,x,x]', () => {
-        expect(pageNumbersAroundWithOverflowDots(15, 0)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visble', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(15, 0)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
         expect(pageNumbersAroundWithOverflowDots(15, 4)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
         expect(pageNumbersAroundWithOverflowDots(15, 8)).toEqual(['visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'visible', 'visible', 'visible', 'visible', 'visible', 'hidden', 'hidden', 'dots', 'visible'])
         expect(pageNumbersAroundWithOverflowDots(15, 15)).toEqual(['visible', 'dots', 'hidden',  'hidden', 'hidden',  'hidden', 'hidden',  'hidden', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
