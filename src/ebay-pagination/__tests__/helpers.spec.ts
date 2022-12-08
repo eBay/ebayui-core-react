@@ -1,6 +1,6 @@
 import { pageNumbersAround } from '../helpers'
 import { ItemState } from '../types'
-import { MAX_PAGES, OVERFLOW } from '../const';
+import { MAX_PAGES } from '../const';
 
 describe('pageNumbersAround()', () => {
     it('on empty input should return 0/0 items', () => {

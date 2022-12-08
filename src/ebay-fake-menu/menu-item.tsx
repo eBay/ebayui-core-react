@@ -6,7 +6,6 @@ export type EbayFakeMenuItemProps = Omit<ComponentProps<'a'>, 'onKeyDown'> & {
     current?: boolean;
     disabled?: boolean;
     autoFocus?: boolean;
-    onClick?: (e: Event) => void;
 }
 
 const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
