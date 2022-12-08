@@ -116,7 +116,6 @@ const EbayPagination: FC<PaginationProps> = ({
                     <Item
                         key={key}
                         href={href}
-                        showTickSmall={false}
                         onClick={
                             (event: React.MouseEvent<HTMLAnchorElement> & Event) => {
                                 if (!href) {
