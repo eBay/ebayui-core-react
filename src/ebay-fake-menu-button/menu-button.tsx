@@ -19,7 +19,6 @@ export type EbayFakeMenuButtonProps = {
     className?: string;
     onCollapse?: () => void;
     onExpand?: () => void;
-    onClick?: () => void;
     text?: string;
     // todo: implement the following props
     type?: 'radio' | 'checkbox';
