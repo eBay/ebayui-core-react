@@ -2,7 +2,7 @@ import React, { cloneElement, createElement, CSSProperties, FC, useRef, ReactNod
 import classNames from 'classnames'
 import { findComponent } from '../common/component-utils'
 import { Tooltip, TooltipHost, TooltipContent, PointerDirection, useTooltip } from '../common/tooltip-utils'
-import { EbayLightboxDialog } from '../ebay-lightbox-dialog'
+import { EbayDrawerDialog } from '../ebay-drawer-dialog'
 import { EbayDialogHeader } from '../ebay-dialog-base'
 import EbayInfotipHost from './ebay-infotip-host'
 import { Icon } from '../ebay-icon'
@@ -84,7 +84,7 @@ const EbayInfotip: FC<InfotipProps> = ({
                 })}
             </TooltipHost>
             {isModal ? (
-                <EbayLightboxDialog
+                <EbayDrawerDialog
                     {...contentProps}
                     open={isExpanded}
                     onClose={collapseTooltip}
@@ -92,9 +92,9 @@ const EbayInfotip: FC<InfotipProps> = ({
                     a11yCloseText={a11yCloseText}
                     className="dialog--mini__overlay"
                 >
-                    <EbayDialogHeader />
+                    <EbayDialogHeader>{heading}</EbayDialogHeader>
                     {contentChildren}
-                </EbayLightboxDialog>
+                </EbayDrawerDialog>
             ) : (
                 <TooltipContent
                     {...contentProps}

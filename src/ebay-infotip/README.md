@@ -12,7 +12,6 @@ import {
     EbayInfotipHost,
     EbayInfotipContent,
     EbayInfotipHeading,
-    EbayInfotipCloseButton,
 } from '@ebay/ui-core-react/ebay-infotip'
 ```
 
@@ -36,10 +35,9 @@ yarn add @ebay/ui-core-react
 
 ```jsx harmony
 <EbayInfotip>
+    <EbayInfotipHeading>Heading</EbayInfotipHeading>
     <EbayInfotipContent>
-        <EbayInfotipHeading>Heading</EbayInfotipHeading>
         <p>Here's a tip to help you be successful at your task.</p>
-        <EbayInfotipCloseButton aria-label="Dismiss info" />
     </EbayInfotipContent>
 </EbayInfotip>
 ```

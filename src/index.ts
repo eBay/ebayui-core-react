@@ -5,7 +5,8 @@ export { EbayIconButton, EbayIconButtonProps } from './ebay-icon-button'
 export { EbayMenu, EbayMenuItem, EbayMenuSeparator, EbayMenuType, EbayMenuPriority } from './ebay-menu'
 export { EbayFakeMenu, EbayFakeMenuItem, EbayFakeMenuSeparator, EbayFakeMenuItemProps } from './ebay-fake-menu'
 export {
-    EbayFakeMenuButton, EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator
+    EbayFakeMenuButton, EbayFakeMenuButtonProps,
+    EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator
 } from './ebay-fake-menu-button'
 export { EbayInlineNotice, NoticeStatus } from './ebay-inline-notice'
 export { EbaySectionNotice, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from './ebay-section-notice'
@@ -29,6 +30,7 @@ export { EbayTabs, EbayTab, EbayTabPanel, Size as TabSize, Activation } from './
 export { EbayFakeTabs, EbayFakeTab } from './ebay-fake-tabs'
 export { EbaySvg } from './ebay-svg'
 export { EbayIcon, Icon, EbayIconProps, A11yVariant } from './ebay-icon'
+export { EbayProgramBadge, ProgramBadge, EbayProgramBadgeProps } from './ebay-program-badge'
 export { EbayDialogHeader, EbayDialogFooter, EbayDialogCloseButton } from './ebay-dialog-base'
 export { EbayDrawerDialog } from './ebay-drawer-dialog'
 export { EbayFullscreenDialog } from './ebay-fullscreen-dialog'

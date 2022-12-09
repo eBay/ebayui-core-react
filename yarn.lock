@@ -1143,9 +1143,9 @@
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
 "@ebay/skin@^15":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-15.0.0.tgz#948610616825d4955d59618167a50cd4d696fd7e"
-  integrity sha512-O6gJ66ZHzU+qq1FUoOPANe1hh612UgiHdClxX/kh64HJqKPuSN+Zot1DtQIawZn+w5F34yGtszlQS7Lt43THww==
+  version "15.2.2"
+  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-15.2.2.tgz#e241f43673b316dad5c8a2b29b606e4ba5a744ef"
+  integrity sha512-U519ydp+hLCXH8EX2v+3wsSDmqANMdw0lMq7cdU7sZZwUmalymq6MdAxFme+ZPRiXual30RdNSJzDznl4PV8Bg==
 
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"
@@ -5173,9 +5173,9 @@ decamelize@^1.1.2, decamelize@^1.2.0:
   integrity sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha512-hjf+xovcEn31w/EUYdTXQh/8smFL/dzYjohQGEIgjyNavaJfBY2p5F527Bo1VPATxv0VYTUC2bOcXvqFwk78Og==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 dedent@^0.7.0:
   version "0.7.0"

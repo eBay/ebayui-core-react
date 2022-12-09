@@ -1,6 +1,6 @@
 {
   "name": "@ebay/ui-core-react",
-  "version": "3.3.3",
+  "version": "3.8.0",
   "description": "Skin components build off React",
   "main": "index.js",
   "types": "index.d.ts",
@@ -41,7 +41,7 @@
   "author": "tmanyanov@ebay.com",
   "license": "ISC",
   "peerDependencies": {
-    "@ebay/skin": "^15.0.0",
+    "@ebay/skin": "^15.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
