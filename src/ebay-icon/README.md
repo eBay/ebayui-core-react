@@ -7,7 +7,6 @@ import { EbayIcon } from '@ebay/ui-core-react/ebay-icon'
 import '@ebay/skin/icon'
 
 <EbayIcon name="arrowLeft" />
-<EbayIcon name="programBadgeEbayPlus" type="program-badge" />
 ```
 
 ### Notes
@@ -17,7 +16,7 @@ Make sure you use `<EbaySvg />` in your code (ideally on server side only), so t
 
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
-`name` | String | No | Yes | name of the icon from [Skin](./icon.tsx), transparent versions of colored icons has `-transparent` suffix
+`name` | String | No | Yes | name of the icon from [Skin](./types.ts), transparent versions of colored icons has `-transparent` suffix
 `noSkinClasses` | Boolean | No | No | Used for special cases where `icon` classes from Skin should not be applied
 `a11yText` | String | No | Yes | text for non-decorative inline icon; icon is assumed to be decorative if this is not passed
-`type` | String | No | no | 'icon' or 'program-badge'  default 'icon'
+`type` | String | No | no | 'icon' or 'program-badge'  default 'icon' (DEPRECATED, use <EbayProgramBadge /> instead)

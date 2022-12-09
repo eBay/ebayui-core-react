@@ -40,12 +40,16 @@ import '@ebay/skin/menu-button';
 Name | Type | Required | Description
 --- | --- | --- | ---
 `text` | String | No | Button label text
-`icon` | String | No | Name of an <EbayIcon> to show to the left of the text (Not yet implemented)
 `a11y-text` | String | Only without a text label | A11y text for the button
+`noToggleIcon` | Boolean  | No | whether to hide the chevron toggle icon
+`expanded` | Boolean  | No | whether content is expanded
 `type` | String | No | Not yet implemented
-`priority` | String | No | Can be `PRIMARY` or `SECONDARY` (default) (Not yet implemented)
+`variant` | String | No | will change the button style: `overflow`, `form` or `button`
+`priority` | String | No | button priority, only used when `variant` is `button`
+`reverse` | Boolean  | No | expand menu flyout to the left
+`fixWidth` | Boolean  | No | Constrain items container width to button width
 `borderless` | Boolean | No | Whether button has borders
-`checked` (radio) | Number | No | Not yet implemented
+`size` | String   | No | button size: `large` or `regular` (default)
 `onExpand` | Function | No | Triggered on menu expand
 `onCollapse` | Function | No | Triggered on menu collapse
 `onChange` | Function | No | Not yet implemented

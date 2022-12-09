@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import { EbayIcon, Icon } from '../../index'
+import { EbayIcon } from '../../index'
 import { icons } from './constants'
 
 export default {
@@ -8,43 +8,37 @@ export default {
     title: 'ebay-icon'
 } as Meta;
 
-// split icons based on its types (pure icon or program badge)
-let programBadges: Icon[] = []
-let iconsWithoutProgramBadges: Icon[] = []
-icons.forEach(iconName => {
-    if (iconName.startsWith('programBadge')) {
-        programBadges.push(iconName)
-    } else {
-        iconsWithoutProgramBadges.push(iconName)
-    }
-})
-
 export const AllIcons = () => (
     <table>
-        {iconsWithoutProgramBadges.map((icon, i) =>
-            <tr key={i}>
-                <td>{icon}</td>
-                <td key={icon}>
-                    <EbayIcon name={icon} />
-                </td>
-            </tr>
-        )}
+        {icons
+            .filter(icon => !icon.startsWith('programBadge'))
+            .map((icon, i) =>
+                <tr key={i}>
+                    <td>{icon}</td>
+                    <td key={icon}>
+                        <EbayIcon name={icon} />
+                    </td>
+                </tr>
+            )
+        }
     </table>
 )
 
-export const ProgramBadgeIcons = () => (
+export const DeprecatedProgramBadgeIcons = () => (
     <table>
-        {programBadges.map((icon, i) =>
-            <tr key={i}>
-                <td>{icon}</td>
-                <td key={icon}>
-                    <EbayIcon name={icon} type="program-badge" />
-                </td>
-            </tr>
-        )}
+        {icons
+            .filter(icon => icon.startsWith('programBadge'))
+            .map((icon, i) =>
+                <tr key={i}>
+                    <td>{icon}</td>
+                    <td key={icon}>
+                        <EbayIcon type="program-badge" name={icon} />
+                    </td>
+                </tr>
+            )
+        }
     </table>
 )
-ProgramBadgeIcons.storyName = 'All program-badge Icons'
 
 export const CustomColor = () => (
     <div>
