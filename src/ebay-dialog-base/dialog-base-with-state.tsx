@@ -1,7 +1,7 @@
 import React, { Children, ReactElement } from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
 import { DialogBase, DialogBaseProps } from './components/dialogBase'
-import { EbayDialogCloseButton, EbayDialogFooter, EbayDialogHeader } from './index'
+import { EbayDialogCloseButton, EbayDialogFooter, EbayDialogHeader, EbayDialogActions } from './index'
 
 export const DialogBaseWithState = ({
     isModal,
@@ -15,9 +15,10 @@ export const DialogBaseWithState = ({
     const childrenArray = Children.toArray(children) as ReactElement[]
     const header = childrenArray.find((child: ReactElement) => child.type === EbayDialogHeader)
     const footer = childrenArray.find((child: ReactElement) => child.type === EbayDialogFooter)
+    const actions = childrenArray.find((child: ReactElement) => child.type === EbayDialogActions)
     const closeButton = childrenArray.find((child: ReactElement) => child.type === EbayDialogCloseButton)
     const content = childrenArray.filter((child: ReactElement) =>
-        ![EbayDialogHeader, EbayDialogFooter, EbayDialogCloseButton].some(c => c === child.type))
+        ![EbayDialogHeader, EbayDialogFooter, EbayDialogCloseButton, EbayDialogActions].some(c => c === child.type))
 
     const dialogBase = (
         <DialogBase
@@ -26,6 +27,7 @@ export const DialogBaseWithState = ({
             isModal={shouldRenderModal}
             header={header}
             footer={footer}
+            actions={actions}
             closeButton={closeButton}
             animated={animated}
         >
