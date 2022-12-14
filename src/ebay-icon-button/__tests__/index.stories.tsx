@@ -6,8 +6,8 @@ import { EbayIconButton } from '../../index'
 storiesOf(`ebay-icon-button`, module)
     .add(`Default`, () => (
         <>
-            <p><EbayIconButton onClick={action(`clicked`)} icon="menu" aria-label="menu" /></p>
-            <p><EbayIconButton href="https://ebay.com" icon="settings" aria-label="settings" /></p>
+            <p><EbayIconButton onClick={action(`clicked`)} icon="menu" aria-label="Menu" /></p>
+            <p><EbayIconButton href="https://ebay.com" icon="settings" aria-label="Settings" /></p>
         </>
     ))
     .add(`With Badges`, () => (
@@ -15,7 +15,7 @@ storiesOf(`ebay-icon-button`, module)
             <p>
                 <EbayIconButton
                     icon="menu"
-                    aria-label="menu"
+                    aria-label="Menu"
                     badgeNumber={1}
                     badgeAriaLabel="new feature available"
                 />
@@ -24,24 +24,22 @@ storiesOf(`ebay-icon-button`, module)
                 <EbayIconButton
                     href="https://ebay.com"
                     icon="cart"
-                    aria-label="cart"
                     badgeNumber={3}
                     badgeAriaLabel="3 items in your cart"
-                />
-            </p>
+                aria-label="Cart"
+            /></p>
             <p>
                 <EbayIconButton
                     href="https://ebay.com"
                     icon="chatLarge"
-                    aria-label="chat"
                     badgeNumber={99}
                     badgeAriaLabel="99 unread messages"
-                />
-            </p>
+                aria-label="Chat"
+            /></p>
         </>
     ))
     .add(`Transparent`, () => (
         <>
-            <p><EbayIconButton onClick={action(`clicked`)} icon="menu" transparent aria-label="menu" /></p>
+            <p><EbayIconButton onClick={action(`clicked`)} icon="menu" transparent aria-label="Menu" /></p>
         </>
     ))
