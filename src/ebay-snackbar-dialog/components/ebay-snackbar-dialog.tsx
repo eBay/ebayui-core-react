@@ -113,6 +113,7 @@ export const EbaySnackbarDialog = ({
             a11yCloseText=""
             buttonPosition="hidden"
             className={classNames(className, 'snackbar-dialog--transition')}
+            windowClass={layout === 'column' && 'snackbar-dialog__window--column'}
             onFocus={handleFocus}
             onBlur={handleBlur}
             onMouseEnter={handleMouseEnter}

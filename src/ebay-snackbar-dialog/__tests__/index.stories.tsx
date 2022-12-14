@@ -37,4 +37,20 @@ storiesOf('ebay-snackbar-dialog', module)
 
         return <><TestComponent /></>
     })
+    .add('With column layout', () => {
+        const TestComponent = () => {
+            const [open, setOpen] = useState(false)
 
+            return (
+                <>
+                    <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
+                    <EbaySnackbarDialog open={open} onClose={() => setOpen(false)} layout="column">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
+                    </EbaySnackbarDialog>
+                </>
+            )
+        }
+
+        return <><TestComponent /></>
+    })
