@@ -10,6 +10,12 @@ storiesOf(`ebay-page-notice`, module)
         </EbayPageNotice>
     </>))
 
+    .add(`Simple usage with id`, () => (<>
+        <EbayPageNotice status="confirmation" aria-label="Success" id="main-page-notice">
+            <EbayNoticeContent>text message</EbayNoticeContent>
+        </EbayPageNotice>
+    </>))
+
     .add(`Confirmation message`, () => (<>
         <EbayPageNotice status="confirmation" aria-label="Success">
             <EbayNoticeContent>
