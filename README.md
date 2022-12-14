@@ -27,9 +27,9 @@ eBayUI React components
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
-* [x] [ebay-fake-menu] (src/ebay-fake-menu)
-* [x] [ebay-fake-menu-button] (src/ebay-fake-menu-button)
-* [x] [ebay-fake-tabs] (src/ebay-fake-tabs)
+* [x] [ebay-fake-menu](src/ebay-fake-menu)
+* [x] [ebay-fake-menu-button](src/ebay-fake-menu-button)
+* [x] [ebay-fake-tabs](src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
@@ -41,7 +41,7 @@ eBayUI React components
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
 * [x] [ebay-listbox-button](src/ebay-listbox-button)
 * [ ] `ebay-listbox`
-* [x] [ebay-menu] (src/ebay-menu)
+* [x] [ebay-menu](src/ebay-menu)
 * [ ] `ebay-menu-button` (in progress...)
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
