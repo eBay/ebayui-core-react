@@ -1,4 +1,5 @@
 # EbayIconButton
+This is a circular button with an icon only.
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-icon-button--default)
@@ -21,6 +22,10 @@ import '@ebay/skin/icon-button.css'
 ```
 
 ### Icon button
+```jsx harmony
+<EbayIconButton icon="settings" aria-label="settings" />
+```
+with badge:
 ```jsx harmony
 <EbayIconButton icon="menu" badgeNumber={1} badgeAriaLabel="new feature available" />
 ```

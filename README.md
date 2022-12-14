@@ -34,7 +34,7 @@ eBayUI React components
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
-* [ ] `ebay-icon-button`
+* [x] [ebay-icon-button](src/ebay-icon-button)
 * [x] [ebay-icon](src/ebay-icon)
 * [x] [ebay-infotip](src/ebay-infotip)
 * [x] [ebay-inline-notice](src/ebay-inline-notice)
