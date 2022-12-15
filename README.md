@@ -54,7 +54,7 @@ eBayUI React components
 * [x] [ebay-section-title](src/ebay-section-title)
 * [x] [ebay-section-notice](src/ebay-section-notice)
 * [x] [ebay-select](src/ebay-select)
-* [ ] `ebay-snackbar-dialog`
+* [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
 * [ ] `ebay-split-button`
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
