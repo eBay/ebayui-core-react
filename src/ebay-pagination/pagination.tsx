@@ -100,13 +100,15 @@ const EbayPagination: FC<PaginationProps> = ({
             const isDot = page[index] === 'dots'
             const key = `${id}-item-${index}`
             const hide = page[index] === 'hidden'
+            const disableSelect = isDot && variant === 'show-last'
             const newProps = {
                 type, current, disabled, href,
                 children: isDot ? '…' : text,
                 pageIndex: type === 'page' ? pageIndex++ : undefined,
+                onSelect: disableSelect ? undefined : onSelect,
                 key,
                 hide,
-                onPrevious, onNext, onSelect, a11yPreviousText, a11yNextText,
+                onPrevious, onNext, a11yPreviousText, a11yNextText,
                 ref: childPageRefs.current[index]
             }
             // include hidden numbers & number of (...)itself
