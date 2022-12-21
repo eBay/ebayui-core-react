@@ -11,7 +11,14 @@ import {
 
 storiesOf('ebay-menu-button', module)
     .add('Default', () => (<>
-        <EbayMenuButton text="eBay Menu">
+        <EbayMenuButton
+            text="eBay Menu"
+            onKeyDown={action('key down')}
+            onClick={action('click button')}
+            onSelect={action('select')}
+            onExpand={action('expand')}
+            onCollapse={action('collapse')}
+        >
             <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -143,7 +150,7 @@ storiesOf('ebay-menu-button', module)
             type="radio"
             collapseOnSelect
             checked={defaultSortIndex}
-            onChange={(i) => setCheckedSort(i)}
+            onChange={(e, { index }) => setCheckedSort(index)}
         >
             {sortItems.map((item, i) => <Item key={i}>{item}</Item>)}
         </EbayMenuButton>
@@ -161,7 +168,7 @@ storiesOf('ebay-menu-button', module)
                 text={`Topic: ${topicItems[checkedTopic]}`}
                 type="radio"
                 checked={defaultTopicIndex}
-                onChange={(i) => setCheckedTopic(i)}
+                onChange={(e, { index }) => setCheckedTopic(index)}
             >
                 {topicItems.map((item, i) => <Item key={i}>{item}</Item>)}
             </EbayMenuButton>
@@ -170,7 +177,7 @@ storiesOf('ebay-menu-button', module)
                 text={`Sort order: ${sortItems[checkedSort]}`}
                 type="radio"
                 checked={defaultSortIndex}
-                onChange={(i) => setCheckedSort(i)}
+                onChange={(e, { index }) => setCheckedSort(index)}
             >
                 {sortItems.map((item, i) => <Item key={i}>{item}</Item>)}
             </EbayMenuButton>

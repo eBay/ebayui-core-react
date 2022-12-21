@@ -62,7 +62,7 @@ Name | Type     | Required | Description
 
 Name | Type | Required | Description
 --- | --- | --- | ---
-`value` | String | No | for type `radio`, `checkbox`: the value to use with callbacks for `checked[]`
+`value` | String | No | for type `radio`, `checkbox`: the value to use with callbacks for `checkedValues[]`
 `checked` | Boolean | No | for type `radio`, `checkbox`: whether or not the item is checked
 `disabled` | Boolean | No | makes the menu item disabled
 `badgeNumber` | Number | No | used as the number to be placed in the badge
