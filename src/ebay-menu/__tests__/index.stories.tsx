@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react';
 import { action } from '../../../.storybook/action'
 import { EbayMenu, EbayMenuItem as Item, EbayMenuSeparator as Separator } from '../index'
-import { EbayIcon } from '../..'
+import { EbayIcon, EbayTab, EbayTabPanel, EbayTabs } from '../..'
 
 storiesOf('ebay-menu', module)
     .add('Default', () => (<>
@@ -16,16 +16,51 @@ storiesOf('ebay-menu', module)
         </EbayMenu>
     </>))
     .add('Radio', () => (<>
-        <EbayMenu
-            type="radio"
-            onKeyDown={action('key down')}
-            onChange={action('change')}
-            onSelect={action('select')}
-        >
-            <Item value="item 1" checked>item 1</Item>
-            <Item value="item 2">item 2</Item>
-            <Item value="item 3">item 3</Item>
-        </EbayMenu>
+        <EbayTabs>
+            <EbayTab>Menu.checked</EbayTab>
+            <EbayTabPanel>
+                <EbayMenu
+                    type="radio"
+                    checked={1}
+                    onKeyDown={action('key down')}
+                    onChange={action('change')}
+                    onSelect={action('select')}
+                >
+                    <Item>item 0</Item>
+                    <Item>Prechecked on menu level</Item>
+                    <Item>item 2</Item>
+                </EbayMenu>
+            </EbayTabPanel>
+
+            <EbayTab>Item.checked</EbayTab>
+            <EbayTabPanel>
+                <EbayMenu
+                    type="radio"
+                    onKeyDown={action('key down')}
+                    onChange={action('change')}
+                    onSelect={action('select')}
+                >
+                    <Item checked>Prechecked on item level</Item>
+                    <Item>item 1</Item>
+                    <Item>item 2</Item>
+                </EbayMenu>
+            </EbayTabPanel>
+
+            <EbayTab>Menu.checked+Item.checked</EbayTab>
+            <EbayTabPanel>
+                <EbayMenu
+                    type="radio"
+                    checked={1}
+                    onKeyDown={action('key down')}
+                    onChange={action('change')}
+                    onSelect={action('select')}
+                >
+                    <Item checked>Prechecked on item level</Item>
+                    <Item>Prechecked on menu level</Item>
+                    <Item>item 2</Item>
+                </EbayMenu>
+            </EbayTabPanel>
+        </EbayTabs>
     </>))
     .add('Checkbox', () => (<>
         <EbayMenu

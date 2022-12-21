@@ -1,98 +1,145 @@
 import React, {
-    Children, cloneElement, useEffect, useState,
-    ComponentProps, FC, ReactElement
+    Children,
+    cloneElement,
+    FC,
+    KeyboardEvent,
+    MouseEvent,
+    ReactElement,
+    useEffect,
+    useState
 } from 'react'
 import classNames from 'classnames'
 import useRovingIndex from '../common/event-utils/use-roving-index'
-import { usePrevious } from '../common/component-utils/usePrevious'
-import { handleActionKeydown } from '../common/event-utils'
-import { MenuItemProps } from './menu-item'
-import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
+import { isActionKey } from '../common/event-utils'
+import { withForwardRef } from '../common/component-utils'
+import { EbayMenuItem, MenuItemProps, EbayMenuProps } from './index'
+import { Key } from '../common/event-utils/types'
 
-type SpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
-type Callback = (i: number, checked: boolean) => void
-type Props = SpanProps & {
-    type?: EbayMenuType;
-    priority?: EbayMenuPriority;
-    checked?: number;
-    onKeyDown?: Callback;
-    onSelect?: Callback;
-    onChange?: Callback;
-}
-
-const changedIndex = (arr1: boolean[], arr2: boolean[]): number => arr1.findIndex((x, i) => arr2[i] !== x)
-
-const EbayMenu: FC<Props> = ({
+const EbayMenu: FC<EbayMenuProps> = ({
     type,
     priority = 'secondary',
     checked,
     className,
+    autofocus,
+    onClick = () => {},
     onKeyDown = () => {},
     onChange = () => {},
     onSelect = () => {},
+    forwardedRef,
     children,
     ...rest
 }) => {
-    const childrenArray = Children.toArray(children)
-    const [focusedIndex, setFocusedIndex] = useRovingIndex(children, EbayMenuItem)
+    const childrenArray = Children.toArray(children) as ReactElement[]
+    const [focusedIndex, setFocusedIndex] = useRovingIndex(children, EbayMenuItem, autofocus === true ? 0 : undefined)
     const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(childrenArray.map(() => false))
 
-    const updateIndex = (index: number, value: boolean, resetOthers = false) => {
-        setCheckedIndexes(prevCheckedIndexes =>
-            prevCheckedIndexes.map((indexChecked, i) => {
-                const defaultValue = resetOthers ? false : indexChecked
-                return index === i ? value : defaultValue
-            }))
+    const valuesFromChecked = (indexes: boolean[]): string[] =>
+        childrenArray.reduce((values, item, i) =>
+            indexes[i] ? [...values, item.props.value] : values, [])
+
+    const indexesFromChecked = (indexes: boolean[]): number[] =>
+        indexes.reduce((all, value, i) => value ? [...all, i] : all, [])
+
+    const eventProps = (index: number, indexes: boolean[]) => ({
+        index,
+        checked: indexesFromChecked(indexes)
+    })
+    const checkboxEventProps = (index: number, indexes: boolean[]) => ({
+        ...eventProps(index, indexes),
+        indexes: indexesFromChecked(indexes),
+        checkedValues: valuesFromChecked(indexes)
+    })
+
+    const updateIndex = (index: number, value: boolean, resetOthers = false): boolean[] | void => {
+        let anyChanges = false
+        const newValues = checkedIndexes.map((indexChecked, i) => {
+            const defaultValue = resetOthers ? false : indexChecked
+            if (index === i) {
+                if (indexChecked !== value) {
+                    anyChanges = true
+                }
+                return value
+            }
+            return defaultValue
+        })
+        if (anyChanges) {
+            setCheckedIndexes(newValues)
+            return newValues
+        }
     }
-    const selectIndex = (index: number) => {
+    const selectIndex = (index: number): boolean[] | void => {
         switch (type) {
             case 'radio':
                 return updateIndex(index, true, true)
             case 'checkbox':
-                return updateIndex(index, !checkedIndexes[index])
+                return updateIndex(index, !checkedIndexes[index], false)
             default:
-                return
+                return checkedIndexes.map((_, i) => i === index)
         }
     }
 
     useEffect(() => {
         if (type === 'radio') {
-            if (checked !== undefined) {
+            if (checked === undefined) {
+                const checkedIndex = childrenArray.findIndex(child => child.props.checked)
+                if (checkedIndex > -1) {
+                    selectIndex(checkedIndex)
+                }
+            } else {
                 selectIndex(checked)
             }
-            const checkedIndex = childrenArray.findIndex((child: ReactElement) => child.props.checked)
-            if (checkedIndex > -1) {
-                selectIndex(checkedIndex)
-            }
         } else if (type === 'checkbox') {
-            setCheckedIndexes(childrenArray.map((child: ReactElement) => child.props.checked))
+            setCheckedIndexes(childrenArray.map(child => Boolean(child.props.checked)))
         }
     }, [])
 
-    const prevCheckedIndexes = usePrevious(checkedIndexes)
-    useEffect(() => {
-        if (type === 'radio') {
-            const checkedIndex = checkedIndexes.findIndex(Boolean)
-            if (checkedIndex > -1) {
-                onChange(checkedIndex, true)
-                onSelect(checkedIndex, true)
-            }
-        } else if (type === 'checkbox') {
-            if (prevCheckedIndexes) {
-                const index = changedIndex(prevCheckedIndexes, checkedIndexes)
-                onChange(index, checkedIndexes[index])
-                onSelect(index, checkedIndexes[index])
+    const handleChange = (
+        e: MouseEvent<HTMLElement> | KeyboardEvent<HTMLElement>,
+        index: number,
+        newValues: boolean[]
+    ) => {
+        switch (type) {
+            case 'radio':
+            case 'checkbox':
+                return onChange(e, checkboxEventProps(index, newValues))
+            default:
+                return onSelect(e, eventProps(index, newValues))
+        }
+    }
+
+    const handleKeyDown = (e: KeyboardEvent<HTMLElement>, index: number) => {
+        let newValues
+        if (isActionKey(e.key as Key)) {
+            newValues = selectIndex(index)
+            if (newValues) {
+                handleChange(e, index, newValues)
             }
         }
-    }, [checkedIndexes])
+        switch (type) {
+            case 'radio':
+            case 'checkbox':
+                return onKeyDown(e, checkboxEventProps(index, newValues || checkedIndexes))
+            default:
+                return onKeyDown(e, eventProps(index, newValues || checkedIndexes))
+        }
+    }
+
+    const handleClick = (e: MouseEvent<HTMLElement>, index: number) => {
+        setFocusedIndex(index)
+        const newValues = selectIndex(index)
+        if (newValues) {
+            handleChange(e, index, newValues)
+        }
+    }
 
     return (
         <span {...rest} className={classNames(className, 'menu')}>
-            <div className="menu__items" role="menu">
+            <div className="menu__items" role="menu" ref={forwardedRef}>
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
-                        onClick = () => {},
-                        onFocus = () => {},
+                        onFocus: onItemFocus = () => {},
+                        onClick: onItemClick = () => {},
+                        onKeyDown: onItemKeyDown = () => {},
                         ...itemRest
                     }: MenuItemProps = child.props
 
@@ -103,18 +150,16 @@ const EbayMenu: FC<Props> = ({
                         checked: checkedIndexes[i],
                         onFocus: e => {
                             setFocusedIndex(i)
-                            onFocus(e)
+                            onItemFocus(e)
                         },
                         onClick: e => {
-                            setFocusedIndex(i)
-                            selectIndex(i)
+                            handleClick(e, i)
+                            onItemClick(e)
                             onClick(e)
                         },
                         onKeyDown: e => {
-                            handleActionKeydown(e, () => {
-                                selectIndex(i)
-                            })
-                            onKeyDown(i, checkedIndexes[i])
+                            handleKeyDown(e, i)
+                            onItemKeyDown(e)
                         }
                     } as MenuItemProps)
                 })}
@@ -123,4 +168,4 @@ const EbayMenu: FC<Props> = ({
     )
 }
 
-export default EbayMenu
+export default withForwardRef(EbayMenu)
