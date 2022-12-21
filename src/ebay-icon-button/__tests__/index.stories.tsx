@@ -12,19 +12,28 @@ storiesOf(`ebay-icon-button`, module)
     ))
     .add(`With Badges`, () => (
         <>
-            <p><EbayIconButton icon="menu" badgeNumber={1} badgeAriaLabel="new feature available" aria-label="Menu" /></p>
-            <p><EbayIconButton
-                href="https://ebay.com"
-                icon="cart"
-                badgeNumber={3}
-                badgeAriaLabel="3 items in your cart"
+            <p>
+                <EbayIconButton
+                    icon="menu"
+                    aria-label="Menu"
+                    badgeNumber={1}
+                    badgeAriaLabel="new feature available"
+                />
+            </p>
+            <p>
+                <EbayIconButton
+                    href="https://ebay.com"
+                    icon="cart"
+                    badgeNumber={3}
+                    badgeAriaLabel="3 items in your cart"
                 aria-label="Cart"
             /></p>
-            <p><EbayIconButton
-                href="https://ebay.com"
-                icon="chatLarge"
-                badgeNumber={99}
-                badgeAriaLabel="99 unread messages"
+            <p>
+                <EbayIconButton
+                    href="https://ebay.com"
+                    icon="chatLarge"
+                    badgeNumber={99}
+                    badgeAriaLabel="99 unread messages"
                 aria-label="Chat"
             /></p>
         </>

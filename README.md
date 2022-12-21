@@ -27,22 +27,22 @@ eBayUI React components
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
-* [x] [ebay-fake-menu] (src/ebay-fake-menu)
-* [x] [ebay-fake-menu-button] (src/ebay-fake-menu-button)
-* [x] [ebay-fake-tabs] (src/ebay-fake-tabs)
+* [x] [ebay-fake-menu](src/ebay-fake-menu)
+* [x] [ebay-fake-menu-button](src/ebay-fake-menu-button)
+* [x] [ebay-fake-tabs](src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
-* [ ] `ebay-icon-button`
+* [x] [ebay-icon-button](src/ebay-icon-button)
 * [x] [ebay-icon](src/ebay-icon)
 * [x] [ebay-infotip](src/ebay-infotip)
 * [x] [ebay-inline-notice](src/ebay-inline-notice)
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
 * [x] [ebay-listbox-button](src/ebay-listbox-button)
 * [ ] `ebay-listbox`
-* [x] [ebay-menu] (src/ebay-menu)
-* [x] [ebay-menu-button] (src/ebay-menu-button)
+* [x] [ebay-menu](src/ebay-menu)
+* [x] [ebay-menu-button](src/ebay-menu-button)
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
@@ -54,7 +54,7 @@ eBayUI React components
 * [x] [ebay-section-title](src/ebay-section-title)
 * [x] [ebay-section-notice](src/ebay-section-notice)
 * [x] [ebay-select](src/ebay-select)
-* [ ] `ebay-snackbar-dialog`
+* [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
 * [ ] `ebay-split-button`
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)

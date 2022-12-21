@@ -48,6 +48,7 @@ export { EbayTextbox, EbayTextboxPrefixIcon, EbayTextboxPostfixIcon, EbayTextbox
 export { EbaySelect, EbaySelectOption } from './ebay-select'
 export { EbayTooltip, EbayTooltipContent, EbayTooltipHost, PointerDirection, Tooltip } from './ebay-tooltip'
 export { EbayInfotip, EbayInfotipHost, EbayInfotipContent, EbayInfotipHeading, Variant } from './ebay-infotip'
+export { EbaySnackbarDialog, EbaySnackbarDialogAction, EbaySnackbarDialogProps } from './ebay-snackbar-dialog'
 export {
     EbayField, EbayLabel, EbayFieldDescription,
     FieldLayoutType, FieldDescriptionType, FieldDescriptionPosition, LabelPosition

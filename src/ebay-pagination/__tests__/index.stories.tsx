@@ -119,6 +119,45 @@ storiesOf('ebay-pagination', module)
 
         return <><InteractivePagination numOfItems={15} /></>
     })
+    .add('Variant `overflow` (interactive)', () => {
+        const InteractivePagination = ({ numOfItems }) => {
+            const [activeIndex, setActiveIndex] = useState(0)
+            const handlePrev = () => setActiveIndex(Math.max(activeIndex - 1, 0))
+            const handleNext = () => setActiveIndex(Math.min(activeIndex + 1, numOfItems))
+            const handleSelect = (_, value) => setActiveIndex(parseInt(value, 10) - 1)
+
+            return (
+                <EbayPagination
+                    a11yCurrentText={`Results Pagination - Page ${activeIndex + 1}`}
+                    onPrevious={handlePrev}
+                    onNext={handleNext}
+                    onSelect={handleSelect as any}
+                    variant="overflow"
+                >
+                    <Item type="previous" disabled={activeIndex === 0} />
+                    {Array.from(Array(numOfItems).keys()).map(i => (
+                        <Item key={`item-${i}`} href="" current={i === activeIndex}>{i + 1}</Item>
+                    ))}
+                    <Item type="next" disabled={activeIndex >= (numOfItems - 1)} />
+                </EbayPagination>
+            )
+        }
+
+        return <>
+            <div>
+                <InteractivePagination numOfItems={5} />
+            </div>
+            <div>
+                <InteractivePagination numOfItems={9} />
+            </div>
+            <div>
+                <InteractivePagination numOfItems={10} />
+            </div>
+            <div>
+                <InteractivePagination numOfItems={15} />
+            </div>
+        </>
+    })
     .add('Fluid', () => (
         <>
             <h2>Default fluid</h2>

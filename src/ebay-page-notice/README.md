@@ -49,3 +49,5 @@ import "@ebay/skin/page-notice";
 | `children`   | React Node                                                                    | No       | The content to be displayed within the notice                                                                                               | -             |
 | `a11yDismissText` | String                                                                   | No       | Determines if the notice will have a dismiss button.  Acts as the aria-label for the dismiss button. Should not be used with a footer.      | -             |
 | `onDismissed` | Dispatch<boolean>                                                            | No       | Handler for any extra functionality for after a notice is dismissed.                                                                        | -             |
+
+Note: When using multiple PageNotice components with an aria-label, make sure to set a unique `id` attribute for each one or you'll run into accessibility issues.
