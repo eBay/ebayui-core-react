@@ -34,6 +34,7 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         </svg>
       </div>
       <div
+        aria-checked="false"
         aria-hidden="false"
         class="menu__item"
         role="menuitem"
@@ -170,249 +171,324 @@ exports[`Storyshots ebay-menu Default 1`] = `
 
 exports[`Storyshots ebay-menu Radio 1`] = `
 <DocumentFragment>
-  <h3>
-    EbayMenu.checked=1
-  </h3>
-  <span
-    class="menu"
+  <div
+    class="tabs"
   >
     <div
-      class="menu__items"
-      role="menu"
+      class="tabs__items"
+      role="tablist"
     >
       <div
-        aria-checked="false"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
+        aria-controls="default-tabpanel-0"
+        aria-selected="true"
+        class="tabs__item"
+        id="default-tab-0"
+        role="tab"
         tabindex="0"
       >
         <span>
-          item 0
+          Menu.checked
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
       </div>
       <div
-        aria-checked="true"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
+        aria-controls="default-tabpanel-1"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-1"
+        role="tab"
+        tabindex="-1"
       >
         <span>
-          item 1
+          Item.checked
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
+        aria-controls="default-tabpanel-2"
+        aria-selected="false"
+        class="tabs__item"
+        id="default-tab-2"
+        role="tab"
+        tabindex="-1"
       >
         <span>
-          item 2
+          Menu.checked+Item.checked
         </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
       </div>
     </div>
-  </span>
-  <h3>
-    EbayMenuItem[0].checked=true
-  </h3>
-  <span
-    class="menu"
-  >
     <div
-      class="menu__items"
-      role="menu"
+      class="tabs__content"
     >
       <div
-        aria-checked="true"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
+        aria-labelledby="default-tab-0"
+        class="tabs__panel"
+        id="default-tabpanel-0"
+        role="tabpanel"
       >
-        <span>
-          item 0
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="tabs__cell"
         >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
+          <span
+            class="menu"
+          >
+            <div
+              class="menu__items"
+              role="menu"
+            >
+              <div
+                aria-checked="false"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  item 0
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+              <div
+                aria-checked="true"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  Prechecked on menu level
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+              <div
+                aria-checked="false"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  item 2
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
+        aria-labelledby="default-tab-1"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-1"
+        role="tabpanel"
       >
-        <span>
-          item 1
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="tabs__cell"
         >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
+          <span
+            class="menu"
+          >
+            <div
+              class="menu__items"
+              role="menu"
+            >
+              <div
+                aria-checked="true"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  Prechecked on item level
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+              <div
+                aria-checked="false"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  item 1
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+              <div
+                aria-checked="false"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  item 2
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
+        aria-labelledby="default-tab-2"
+        class="tabs__panel"
+        hidden=""
+        id="default-tabpanel-2"
+        role="tabpanel"
       >
-        <span>
-          item 2
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="tabs__cell"
         >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
+          <span
+            class="menu"
+          >
+            <div
+              class="menu__items"
+              role="menu"
+            >
+              <div
+                aria-checked="false"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  Prechecked on item level
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+              <div
+                aria-checked="true"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  Prechecked on menu level
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+              <div
+                aria-checked="false"
+                aria-hidden="false"
+                class="menu__item"
+                role="menuitem"
+                tabindex="0"
+              >
+                <span>
+                  item 2
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--tick-small"
+                  focusable="false"
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-tick-small"
+                  />
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
       </div>
     </div>
-  </span>
-  <h3>
-    EbayMenu.checked=1, EbayMenuItem[0].checked=true
-  </h3>
-  <span
-    class="menu"
-  >
-    <div
-      class="menu__items"
-      role="menu"
-    >
-      <div
-        aria-checked="false"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
-      >
-        <span>
-          item 0
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
-      </div>
-      <div
-        aria-checked="true"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
-      >
-        <span>
-          item 1
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
-      </div>
-      <div
-        aria-checked="false"
-        aria-hidden="false"
-        class="menu__item"
-        role="menuitem"
-        tabindex="0"
-      >
-        <span>
-          item 2
-        </span>
-        <svg
-          aria-hidden="true"
-          class="icon icon--tick-small"
-          focusable="false"
-          height="16px"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-tick-small"
-          />
-        </svg>
-      </div>
-    </div>
-  </span>
+  </div>
 </DocumentFragment>
 `;
 

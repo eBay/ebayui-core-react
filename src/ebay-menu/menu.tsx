@@ -13,6 +13,7 @@ import useRovingIndex from '../common/event-utils/use-roving-index'
 import { isActionKey } from '../common/event-utils'
 import { withForwardRef } from '../common/component-utils'
 import { EbayMenuItem, MenuItemProps, EbayMenuProps } from './index'
+import { Key } from '../common/event-utils/types'
 
 const EbayMenu: FC<EbayMenuProps> = ({
     type,
@@ -106,20 +107,28 @@ const EbayMenu: FC<EbayMenuProps> = ({
         }
     }
 
-    const handleKeyDown = (e, i) => {
+    const handleKeyDown = (e: KeyboardEvent<HTMLElement>, index: number) => {
         let newValues
-        if (isActionKey(e.key)) {
-            newValues = selectIndex(i)
+        if (isActionKey(e.key as Key)) {
+            newValues = selectIndex(index)
             if (newValues) {
-                handleChange(e, i, newValues)
+                handleChange(e, index, newValues)
             }
         }
         switch (type) {
             case 'radio':
             case 'checkbox':
-                return onKeyDown(e, checkboxEventProps(i, newValues || checkedIndexes))
+                return onKeyDown(e, checkboxEventProps(index, newValues || checkedIndexes))
             default:
-                return onKeyDown(e, eventProps(i, newValues || checkedIndexes))
+                return onKeyDown(e, eventProps(index, newValues || checkedIndexes))
+        }
+    }
+
+    const handleClick = (e: MouseEvent<HTMLElement>, index: number) => {
+        setFocusedIndex(index)
+        const newValues = selectIndex(index)
+        if (newValues) {
+            handleChange(e, index, newValues)
         }
     }
 
@@ -144,12 +153,9 @@ const EbayMenu: FC<EbayMenuProps> = ({
                             onItemFocus(e)
                         },
                         onClick: e => {
-                            setFocusedIndex(i)
-                            const newValues = selectIndex(i)
-                            if (newValues) {
-                                handleChange(e, i, newValues)
-                            }
+                            handleClick(e, i)
                             onItemClick(e)
+                            onClick(e)
                         },
                         onKeyDown: e => {
                             handleKeyDown(e, i)
