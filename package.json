@@ -1,6 +1,6 @@
 {
   "name": "@ebay/ui-core-react",
-  "version": "3.9.2",
+  "version": "3.9.3",
   "description": "Skin components build off React",
   "main": "index.js",
   "types": "index.d.ts",
