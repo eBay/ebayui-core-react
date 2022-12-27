@@ -3,7 +3,7 @@ import { EbayIcon } from '../ebay-icon'
 import { withForwardRef } from '../common/component-utils'
 import classNames from 'classnames'
 
-export type PaginationItemType = 'previous' | 'next' | 'page'
+export type PaginationItemType = 'previous' | 'next' | 'page' | 'separator'
 type HtmlProps = Omit<ComponentProps<'button'>, 'type'> & ComponentProps<'a'> & ComponentProps<'li'>
 export type PaginationItemProps = HtmlProps & {
     pageIndex?: number;
@@ -90,6 +90,17 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
                 >
                     <EbayIcon name="paginationNext" />
                 </ButtonOrAnchor >
+            )
+        case 'separator':
+            return (
+                <span
+                    key={key}
+                    style={style}
+                    className="pagination__item"
+                    ref={forwardedRef}
+                    role="separator">
+                    {children}
+                </span>
             )
         default:
             return (
