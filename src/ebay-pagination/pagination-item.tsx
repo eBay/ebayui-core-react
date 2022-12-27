@@ -4,7 +4,7 @@ import { withForwardRef } from '../common/component-utils'
 import classNames from 'classnames'
 
 export type PaginationItemType = 'previous' | 'next' | 'page' | 'separator'
-type HtmlProps = Omit<ComponentProps<'button'>, 'type' | 'role'> & ComponentProps<'a'> & ComponentProps<'li'>
+type HtmlProps = Omit<ComponentProps<'button'>, 'type'> & ComponentProps<'a'> & ComponentProps<'li'>
 export type PaginationItemProps = HtmlProps & {
     pageIndex?: number;
     key?: Key;
