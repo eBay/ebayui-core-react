@@ -12,6 +12,7 @@ import { calcPageState, getMaxWidth } from './helpers'
 import { filterBy } from '../common/component-utils'
 import { PaginationItemType } from './pagination-item'
 import { ItemState, PaginationVariant } from './types'
+import { EbayIcon } from '../ebay-icon'
 
 type PaginationCallback = (e?: Event, value?: string) => void;
 type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
@@ -100,9 +101,11 @@ const EbayPagination: FC<PaginationProps> = ({
             const isDot = page[index] === 'dots'
             const key = `${id}-item-${index}`
             const hide = page[index] === 'hidden'
+            const isSeparator = isDot && type === 'page'
             const newProps = {
-                type, current, disabled, href,
-                children: isDot ? '…' : text,
+                current, disabled, href,
+                type: isSeparator ? 'separator' : type,
+                children: isDot ? <EbayIcon name="overflow" height="18px" focusable={false} /> : text,
                 pageIndex: type === 'page' ? pageIndex++ : undefined,
                 key,
                 hide,
