@@ -3,14 +3,12 @@ import { EbayIcon } from '../ebay-icon'
 import { withForwardRef } from '../common/component-utils'
 import classNames from 'classnames'
 
-export type PaginationItemType = 'previous' | 'next' | 'page'
-export type RoleItemType = 'separator'
+export type PaginationItemType = 'previous' | 'next' | 'page' | 'separator'
 type HtmlProps = Omit<ComponentProps<'button'>, 'type' | 'role'> & ComponentProps<'a'> & ComponentProps<'li'>
 export type PaginationItemProps = HtmlProps & {
     pageIndex?: number;
     key?: Key;
     type?: PaginationItemType;
-    role?: RoleItemType;
     current?: boolean;
     disabled?: boolean;
     href?: string;
@@ -31,7 +29,6 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
     current,
     disabled,
     type = 'page',
-    role,
     href,
     hide,
     children,
@@ -61,21 +58,8 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
         }
     }
     const isAnchor = !!href
-    const isSeparator = role === 'separator'
     const ButtonOrAnchor = isAnchor ? 'a' : 'button'
     const iconClassName = isAnchor ? 'icon-link' : 'icon-btn'
-    if (isSeparator) {
-        return (
-            <span
-                key={key}
-                style={style}
-                className="pagination__item"
-                ref={forwardedRef}
-                role="separator">
-                {children}
-            </span>
-        )
-    }
     switch (type) {
         case 'previous':
             return (
@@ -106,6 +90,17 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
                 >
                     <EbayIcon name="paginationNext" />
                 </ButtonOrAnchor >
+            )
+        case 'separator':
+            return (
+                <span
+                    key={key}
+                    style={style}
+                    className="pagination__item"
+                    ref={forwardedRef}
+                    role="separator">
+                    {children}
+                </span>
             )
         default:
             return (

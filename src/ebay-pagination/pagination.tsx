@@ -101,11 +101,12 @@ const EbayPagination: FC<PaginationProps> = ({
             const isDot = page[index] === 'dots'
             const key = `${id}-item-${index}`
             const hide = page[index] === 'hidden'
+            const isSeparator = isDot && type === 'page'
             const newProps = {
-                type, current, disabled, href,
+                current, disabled, href,
+                type: isSeparator ? 'separator' : type,
                 children: isDot ? <EbayIcon name="overflow" height="18px" focusable={false} /> : text,
                 pageIndex: type === 'page' ? pageIndex++ : undefined,
-                role: isDot ? 'separator' : undefined,
                 key,
                 hide,
                 onPrevious, onNext, onSelect, a11yPreviousText, a11yNextText,
