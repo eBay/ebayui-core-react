@@ -108,7 +108,7 @@ const EbayPagination: FC<PaginationProps> = ({
                 role: isDot ? 'separator' : undefined,
                 key,
                 hide,
-                onPrevious, onSelect, onNext, a11yPreviousText, a11yNextText,
+                onPrevious, onNext, onSelect, a11yPreviousText, a11yNextText,
                 ref: childPageRefs.current[index]
             }
             // include hidden numbers & number of (...)itself
