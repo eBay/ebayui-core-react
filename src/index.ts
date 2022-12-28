@@ -49,3 +49,4 @@ export {
     EbayProgressStepper, EbayProgressStep, EbayProgressTitle, StepperDirection, StepState
 } from './ebay-progress-stepper'
 export { EbayListboxButton, EbayListboxButtonOption } from './ebay-listbox-button'
+export { EbayVideo, EbayVideoProps, EbayVideoSource } from './ebay-video'
