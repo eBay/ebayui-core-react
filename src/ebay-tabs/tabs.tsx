@@ -1,4 +1,4 @@
-import React, { cloneElement, ComponentProps, FC, useEffect, useState } from 'react'
+import React, { cloneElement, ComponentProps, FC, KeyboardEvent, useEffect, useState } from 'react'
 import classNames from 'classnames'
 
 import { handleActionKeydown, handleLeftRightArrowsKeydown } from '../common/event-utils'

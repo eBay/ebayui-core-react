@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { EbayBadge } from '../ebay-badge'
 import { EbayIcon } from '../ebay-icon'
 
-export type MenuItemProps = Omit<ComponentProps<'div'>, 'onKeyDown'> & {
+export type MenuItemProps = ComponentProps<'div'> & {
     focused?: boolean;
     tabIndex?: number;
     checked?: boolean;
