@@ -10,6 +10,7 @@ export type MenuItemProps = Omit<ComponentProps<'div'>, 'onKeyDown'> & {
     value?: string;
     disabled?: boolean;
     badgeNumber?: number;
+    badgeAriaLabel?: string;
 }
 
 const EbayMenuItem: FC<MenuItemProps> = ({
@@ -19,6 +20,7 @@ const EbayMenuItem: FC<MenuItemProps> = ({
     tabIndex,
     disabled,
     badgeNumber,
+    badgeAriaLabel,
     children,
     ...rest
 }) => {
@@ -33,16 +35,16 @@ const EbayMenuItem: FC<MenuItemProps> = ({
 
     return (
         <div
+            aria-label={badgeAriaLabel}
             {...rest}
             ref={ref}
             className={classNames(className, 'menu__item', hasBadge && 'menu__item--badged')}
             role="menuitem"
-            aria-checked={checked}
+            aria-checked={checked || undefined}
             aria-disabled={disabled}
-            aria-hidden={hasBadge}
             tabIndex={focused ? 0 : tabIndex}
         >
-            <span>
+            <span aria-hidden={hasBadge}>
                 {children}
                 {hasBadge && <EbayBadge type="menu" number={badgeNumber} />}
             </span>
