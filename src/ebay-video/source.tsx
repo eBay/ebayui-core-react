@@ -1,14 +1,7 @@
 import React, { ComponentProps, FC } from 'react'
 
-export type EbayVideoProps = ComponentProps<HTMLDivElement> & {
+export type EbayVideoSourceProps = ComponentProps<'source'>;
 
-};
-
-const EbayVideoSource: FC<EbayVideoProps> = ({
-    ...rest
-}) => {
-    // todo: implement it
-    return ()
-}
+const EbayVideoSource: FC<EbayVideoSourceProps> = ({ ...rest }) => <source {...rest} />
 
 export default EbayVideoSource

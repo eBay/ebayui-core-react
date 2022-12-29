@@ -9,6 +9,7 @@ yarn add @ebay/ui-core-react shaka-player
 ```
 ```jsx
 import { EbayVideo } from '@ebay/ui-core-react/ebay-video'
+import '@ebay/skin/video'
 
 <EbayVideo
     width="600"
@@ -23,5 +24,11 @@ import { EbayVideo } from '@ebay/ui-core-react/ebay-video'
 ## Props
 
 Name | Type | Stateful | Required | Description
+width | Number | | No |
+height | Number | | No |
+sources | String[] | | No |
+thumbnail | String | | No | The url path for the video thumbnail
+action | String | | No | 'play' or 'pause': Will programatically perform the given action
+
 --- | --- | --- | --- | ---
 
