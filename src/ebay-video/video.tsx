@@ -1,6 +1,6 @@
-import React, { ComponentProps, FC, ReactEventHandler, SyntheticEvent, useEffect, useRef, useState } from 'react'
+import React, { ComponentProps, FC, SyntheticEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
-import shaka from 'shaka-player/dist/shaka-player.ui.debug'
+import shaka from 'shaka-player/dist/shaka-player.ui'
 import 'shaka-player/dist/controls.css'
 
 import { filterByType } from '../common/component-utils'
@@ -8,6 +8,7 @@ import { EbayIcon, EbayProgressSpinner } from '../index'
 import { VideoAction, VideoPlayView } from './types'
 import EbayVideoSource from './source'
 import { defaultVideoConfig, ERROR_ANOTHER_LOAD, ERROR_NO_PLAYER } from './const'
+import { getElements } from './elements'
 
 export type EbayVideoProps = ComponentProps<'div'> & {
     width?: number;
@@ -28,7 +29,7 @@ export type EbayVideoProps = ComponentProps<'div'> & {
     onLoadError?: (err: any) => void;
     onPlay?: (e: SyntheticEvent, { player: any }) => void;
     onVolumeChange?: (e: SyntheticEvent, { volume: number, muted: boolean }) => void;
-    onReport?: ReactEventHandler;
+    onReport?: () => void;
 };
 
 // todo: listen to window resize
@@ -51,7 +52,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
     },
     onPlay = () => {
     },
-    // onReport = () => {},
+    onReport = () => {},
     children,
     ...rest
 }) => {
@@ -108,33 +109,36 @@ const EbayVideo: FC<EbayVideoProps> = ({
     useEffect(() => {
         const video = videoRef.current
         const container = containerRef.current
-
         if (!video || !container) return
 
         video.volume = volume
+
         playerRef.current = new shaka.Player(video)
-
-        if (playerRef.current) {
-            uiRef.current = new shaka.ui.Overlay(
-                playerRef.current,
-                container,
-                video,
-                reportText
-            )
-            uiRef.current.configure({
-                addBigPlayButton: true,
-                controlPanelElements: [],
-                addSeekBar: false
-            })
-        }
-
-        loadSource()
-        hideSpinner(container)
+        if (!playerRef.current) return
 
         playerRef.current.addEventListener('error', handleError)
         playerRef.current.addEventListener('buffering', (e) => {
             setBuffering(e.buffering)
         })
+
+        uiRef.current = new shaka.ui.Overlay(
+            playerRef.current,
+            container,
+            video,
+            reportText
+        )
+        uiRef.current.configure({
+            addBigPlayButton: true,
+            controlPanelElements: [],
+            addSeekBar: false
+        })
+
+        const { Report, TextSelection } = getElements(onReport)
+        shaka.ui.Controls.registerElement('report', new Report.Factory(reportText))
+        shaka.ui.Controls.registerElement('captions', new TextSelection.Factory())
+
+        loadSource()
+        hideSpinner(container)
 
         return () => {
             playerRef.current.destroy()
@@ -227,7 +231,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
                 </div>
             </div>
             <div className={classNames('video-player__overlay', {
-                'video-player__overlay--hidden': loaded && !buffering
+                'video-player__overlay--hidden': loaded && (failed || !buffering)
             })}>
                 <EbayProgressSpinner size="large" aria-label={a11yLoadText} />
             </div>

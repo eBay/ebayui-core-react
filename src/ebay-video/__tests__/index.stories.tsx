@@ -28,7 +28,7 @@ export const Default = () => (
     </EbayVideo>
 )
 
-export const MP4Video = () => (
+export const SingleVideo = () => (
     <EbayVideo
         {...defaultProps}
         volumeSlider
@@ -56,6 +56,15 @@ export const MultipleVideos = () => (
 export const Fail = () => (
     <EbayVideo {...defaultProps}>
         <EbayVideoSource src="wrong" />
+    </EbayVideo>
+)
+
+export const FailInsidePlaylist = () => (
+    <EbayVideo {...defaultProps}>
+        <EbayVideoSource
+            src="http://videoservices.vip.qa.ebay.com/videos/v1/b645f08316c0a4e114537903ffffffad/playlist.mpd"
+            type="dash"
+        />
     </EbayVideo>
 )
 // todo: support textTracks
