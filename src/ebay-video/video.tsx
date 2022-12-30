@@ -4,29 +4,10 @@ import shaka from 'shaka-player/dist/shaka-player.ui.debug'
 import 'shaka-player/dist/controls.css'
 
 import { filterByType } from '../common/component-utils'
-import { EbayIcon } from '../ebay-icon'
-import { EbayProgressSpinner } from '../ebay-progress-spinner'
+import { EbayIcon, EbayProgressSpinner } from '../index'
 import { VideoAction, VideoPlayView } from './types'
 import EbayVideoSource from './source'
-
-// const MAX_RETRIES = 3
-// const DEFAULT_SPINNER_TIMEOUT = 2000
-const ERROR_ANOTHER_LOAD = 7000
-const ERROR_NO_PLAYER = 11
-const defaultVideoConfig = {
-    addBigPlayButton: false,
-    addSeekBar: true,
-    controlPanelElements: [
-        'play_pause',
-        'time_and_duration',
-        'spacer',
-        'mute',
-        'report',
-        'fullscreen',
-        'overflow_menu'
-    ],
-    overflowMenuButtons: ['captions']
-}
+import { defaultVideoConfig, ERROR_ANOTHER_LOAD, ERROR_NO_PLAYER } from './const'
 
 export type EbayVideoProps = ComponentProps<'div'> & {
     width?: number;
@@ -118,7 +99,8 @@ const EbayVideo: FC<EbayVideoProps> = ({
                         }
                     }
                 }
-            }).finally(() => {
+            })
+            .finally(() => {
                 setLoaded(true)
             })
     }
@@ -163,17 +145,14 @@ const EbayVideo: FC<EbayVideoProps> = ({
     const showControls = () => {
         if (!uiRef.current) return
 
-        const videoConfig = { ...defaultVideoConfig }
-        videoConfig.controlPanelElements = [...defaultVideoConfig.controlPanelElements]
-        if (volumeSlider) {
-            const insertAt =
-                videoConfig.controlPanelElements.length - 2 > 0
-                    ? videoConfig.controlPanelElements.length - 2
-                    : videoConfig.controlPanelElements.length
-            videoConfig.controlPanelElements.splice(insertAt, 0, 'volume')
-        }
+        const updatedControls = volumeSlider ? {
+            controlPanelElements: withVolumeControl(defaultVideoConfig.controlPanelElements)
+        } : {}
 
-        uiRef.current.configure(videoConfig)
+        uiRef.current.configure({
+            ...defaultVideoConfig,
+            ...updatedControls
+        })
         videoRef.current.controls = false
     }
 
@@ -254,6 +233,13 @@ const EbayVideo: FC<EbayVideoProps> = ({
             </div>
         </div>
     )
+}
+
+function withVolumeControl(controls: string[]): string[] {
+    const insertAt = controls.length - 2 > 0 ? controls.length - 2 : controls.length
+    const controlsWithVolume = [...controls]
+    controlsWithVolume.splice(insertAt, 0, 'volume')
+    return controlsWithVolume
 }
 
 function hideSpinner(container: HTMLDivElement) {
