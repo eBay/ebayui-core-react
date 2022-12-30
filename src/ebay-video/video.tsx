@@ -1,18 +1,16 @@
-import React, {
-    ComponentProps,
-    FC,
-    ReactEventHandler,
-    SyntheticEvent,
-    useEffect,
-    useRef,
-    useState
-} from 'react'
-import shaka from 'shaka-player/dist/shaka-player.ui'
-import { VideoAction, VideoPlayView, VideoSource } from './types'
-import 'shaka-player/dist/controls.css'
+import React, { ComponentProps, FC, ReactEventHandler, SyntheticEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
-import { EbayIcon } from '../ebay-icon'
+import shaka from 'shaka-player/dist/shaka-player.ui.debug'
+import 'shaka-player/dist/controls.css'
 
+import { filterByType } from '../common/component-utils'
+import { EbayIcon } from '../ebay-icon'
+import { EbayProgressSpinner } from '../ebay-progress-spinner'
+import { VideoAction, VideoPlayView } from './types'
+import EbayVideoSource from './source'
+
+// const MAX_RETRIES = 3
+// const DEFAULT_SPINNER_TIMEOUT = 2000
 const ERROR_ANOTHER_LOAD = 7000
 const ERROR_NO_PLAYER = 11
 const defaultVideoConfig = {
@@ -33,7 +31,6 @@ const defaultVideoConfig = {
 export type EbayVideoProps = ComponentProps<'div'> & {
     width?: number;
     height?: number;
-    sources?: VideoSource[];
     thumbnail?: string;
     action?: VideoAction;
     volume?: number;
@@ -58,43 +55,50 @@ export type EbayVideoProps = ComponentProps<'div'> & {
 const EbayVideo: FC<EbayVideoProps> = ({
     width,
     height,
-    sources,
     thumbnail,
     muted,
     playView = 'inline',
+    a11yLoadText,
+    a11yPlayText,
     reportText,
     volumeSlider,
     volume = 1,
     errorText,
-    onVolumeChange = () => {},
-    onLoadError = () => {},
-    onPlay = () => {},
+    onVolumeChange = () => {
+    },
+    onLoadError = () => {
+    },
+    onPlay = () => {
+    },
+    // onReport = () => {},
+    children,
     ...rest
 }) => {
-    const [loading, setLoading] = useState<boolean>()
     const [loaded, setLoaded] = useState<boolean>()
-    const [played, setPlayed] = useState<boolean>()
+    const [buffering, setBuffering] = useState<boolean>()
+    const [playing, setPlaying] = useState<boolean>()
     const [failed, setFailed] = useState<boolean>()
 
-    const containerRef = useRef(null)
+    const containerRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
-    const player = useRef(null)
+    const playerRef = useRef<any>(null)
     const uiRef = useRef(null)
 
+    const sources = filterByType(children, EbayVideoSource).map(({ props }) => props)
+
     const handleError = (err: any) => {
-        setLoaded(false)
+        setLoaded(true)
         setFailed(true)
         onLoadError(err)
     }
 
     const loadSource = (index = 0) => {
-        // eslint-disable-next-line no-extra-parens
-        setLoading(true)
-        player.current
-            ?.load(sources[index]?.src)
+        if (!sources.length || !playerRef.current) return
+
+        setLoaded(false)
+        playerRef.current
+            .load(sources[index]?.src)
             .then(() => {
-                // videoRef.current.volume = volume
-                setLoaded(true)
                 setFailed(false)
             })
             .catch(err => {
@@ -115,7 +119,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
                     }
                 }
             }).finally(() => {
-                setLoading(false)
+                setLoaded(true)
             })
     }
 
@@ -126,29 +130,34 @@ const EbayVideo: FC<EbayVideoProps> = ({
         if (!video || !container) return
 
         video.volume = volume
-        player.current = new shaka.Player(video)
+        playerRef.current = new shaka.Player(video)
 
-        if (player.current) {
-            const ui = new shaka.ui.Overlay(
-                player.current,
-                containerRef.current,
+        if (playerRef.current) {
+            uiRef.current = new shaka.ui.Overlay(
+                playerRef.current,
+                container,
                 video,
                 reportText
             )
-            ui.configure({
+            uiRef.current.configure({
                 addBigPlayButton: true,
                 controlPanelElements: [],
                 addSeekBar: false
             })
-
-            uiRef.current = ui
         }
 
         loadSource()
-        // Listen for error events.
-        // player.addEventListener('error', onErrorEvent)
+        hideSpinner(container)
 
-        // onError is executed if the asynchronous load fails.
+        playerRef.current.addEventListener('error', handleError)
+        playerRef.current.addEventListener('buffering', (e) => {
+            setBuffering(e.buffering)
+        })
+
+        return () => {
+            playerRef.current.destroy()
+            uiRef.current.destroy()
+        }
     }, [])
 
     const showControls = () => {
@@ -177,8 +186,8 @@ const EbayVideo: FC<EbayVideoProps> = ({
             videoRef.current.requestFullscreen()
         }
 
-        setPlayed(true)
-        onPlay(e, { player: player.current })
+        setPlaying(true)
+        onPlay(e, { player: playerRef.current })
     }
 
     const handleOnPlayClick = () => {
@@ -199,21 +208,24 @@ const EbayVideo: FC<EbayVideoProps> = ({
     return (
         <div
             style={{ width: `${width}px`, height: `${height}px` }}
-            className={classNames('video-player', { 'video-player--poster': !played })}
+            className={classNames('video-player', { 'video-player--poster': !playing })}
         >
-            {!played && loaded && !failed &&
+            {!playing && loaded && !failed && !buffering &&
                 <div className="shaka-play-button-container">
                     <button
                         onClick={handleOnPlayClick}
                         className="shaka-play-button"
-                        style={{ opacity: 1, zIndex: 999 }}>
+                        style={{ opacity: 1, zIndex: 999 }}
+                        aria-label={a11yPlayText}
+                    >
                         <EbayIcon name="videoPlay" />
                     </button>
                 </div>
             }
             <div
                 className="video-player__container"
-                ref={containerRef}>
+                ref={containerRef}
+            >
                 <video
                     ref={videoRef as any}
                     style={{ width: `${width}px`, height: `${height}px` }}
@@ -232,14 +244,23 @@ const EbayVideo: FC<EbayVideoProps> = ({
             <div className={classNames('video-player__overlay', { 'video-player__overlay--hidden': !failed })}>
                 <EbayIcon name="attention" />
                 <div className="video-player__overlay-text">
-                    {errorText || 'An error has occurred'}
+                    {errorText}
                 </div>
             </div>
-            <div className={classNames('video-player__overlay', { 'video-player__overlay--hidden': loaded })}>
-                <EbayIcon name="spinner" />
+            <div className={classNames('video-player__overlay', {
+                'video-player__overlay--hidden': loaded && !buffering
+            })}>
+                <EbayProgressSpinner size="large" aria-label={a11yLoadText} />
             </div>
         </div>
     )
+}
+
+function hideSpinner(container: HTMLDivElement) {
+    const shakaSpinner = container.querySelectorAll('.shaka-spinner')[0]
+    if (shakaSpinner) {
+        shakaSpinner.setAttribute('hidden', '')
+    }
 }
 
 export default EbayVideo
