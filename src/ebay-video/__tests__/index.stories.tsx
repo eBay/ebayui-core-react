@@ -19,7 +19,16 @@ const defaultProps = {
 export const Default = () => (
     <EbayVideo
         {...defaultProps}
+        volumeSlider
         sources={[{ src: 'https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd', type: 'dash' }]}
+    />
+)
+
+export const MP4Video = () => (
+    <EbayVideo
+        {...defaultProps}
+        volumeSlider
+        sources={[{ src: 'https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/video.mp4', type: 'dash' }]}
     />
 )
 

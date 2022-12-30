@@ -21,6 +21,20 @@ const MAX_RETRIES = 3
 const DEFAULT_SPINNER_TIMEOUT = 2000
 const ERROR_ANOTHER_LOAD = 7000
 const ERROR_NO_PLAYER = 11
+const defaultVideoConfig = {
+    addBigPlayButton: false,
+    addSeekBar: true,
+    controlPanelElements: [
+        'play_pause',
+        'time_and_duration',
+        'spacer',
+        'mute',
+        'report',
+        'fullscreen',
+        'overflow_menu'
+    ],
+    overflowMenuButtons: ['captions']
+}
 
 export type EbayVideoProps = ComponentProps<'div'> & {
     width?: number;
@@ -55,7 +69,11 @@ const EbayVideo: FC<EbayVideoProps> = ({
     muted,
     playView = 'inline',
     reportText,
+    volumeSlider,
+    volume,
+    onVolumeChange = () => {},
     onLoadError = () => {},
+    onPlay = () => {},
     ...rest
 }) => {
     const [loading, setLoading] = useState<boolean>()
@@ -73,12 +91,13 @@ const EbayVideo: FC<EbayVideoProps> = ({
         setFailed(true)
         onLoadError(err)
     }
+
     const loadSource = (index = 0) => {
         // eslint-disable-next-line no-extra-parens
+        setLoading(true)
         player.current
             ?.load(sources[index]?.src)
             .then(() => {
-                console.log('The video has now been loaded!')
                 setLoaded(true)
                 setFailed(false)
             })
@@ -99,6 +118,8 @@ const EbayVideo: FC<EbayVideoProps> = ({
                         }
                     }
                 }
+            }).finally(() => {
+                setLoading(false)
             })
     }
 
@@ -124,20 +145,6 @@ const EbayVideo: FC<EbayVideoProps> = ({
             })
 
             uiRef.current = ui
-
-            // Replace play icon
-            if (container) {
-                const playButton = container.querySelectorAll('.shaka-play-button')[0]
-                playButton.removeAttribute('icon')
-                ReactDOM.render(<EbayIcon name="videoPlay" />, playButton)
-
-                // const shakaSpinner = this.el.querySelector('.shaka-spinner')
-                // if (shakaSpinner) {
-                //     setTimeout(() => {
-                //         shakaSpinner.hidden = true
-                //     }, this.input.spinnerTimeout || DEFAULT_SPINNER_TIMEOUT)
-                // }
-            }
         }
 
         loadSource()
@@ -150,41 +157,73 @@ const EbayVideo: FC<EbayVideoProps> = ({
     const showControls = () => {
         if (!uiRef.current) return
 
-        const videoConfig = {
-            addBigPlayButton: false,
-            addSeekBar: true,
-            controlPanelElements: [
-                'play_pause',
-                'time_and_duration',
-                'spacer',
-                'mute',
-                'report',
-                'fullscreen',
-                'overflow_menu'
-            ],
-            overflowMenuButtons: ['captions']
+        const videoConfig = { ...defaultVideoConfig }
+        videoConfig.controlPanelElements = [...defaultVideoConfig.controlPanelElements]
+        if (volumeSlider) {
+            const insertAt =
+                videoConfig.controlPanelElements.length - 2 > 0
+                    ? videoConfig.controlPanelElements.length - 2
+                    : videoConfig.controlPanelElements.length
+            videoConfig.controlPanelElements.splice(insertAt, 0, 'volume')
         }
 
         uiRef.current.configure(videoConfig)
         videoRef.current.controls = false
     }
 
-    const handlePlaying = () => {
+    const handlePlaying = (e: SyntheticEvent<HTMLVideoElement, Event>) => {
         showControls()
+
+        if (playView === 'fullscreen') {
+            videoRef.current.requestFullscreen()
+        }
+
         setPlayed(true)
+        onPlay(e, { player: player.current })
+    }
+
+    const handleOnPlayClick = () => {
+        videoRef.current.play()
+    }
+
+    const handleVolumeChange = (e: SyntheticEvent<HTMLVideoElement, Event>) => {
+        const eventTarget = e.currentTarget
+        onVolumeChange(e, { volume: eventTarget.volume, muted: eventTarget.muted })
+    }
+
+    const handleOnPause = () => {
+        // On IOS, the controls force showing up if the video exist fullscreen while playing.
+        // This forces the controls to always hide
+        videoRef.current.controls = false
     }
 
     return (
-        <div className={classNames('video-player', { 'video-player--poster': !played })}>
+        <div
+            style={{ width: `${width}px`, height: `${height}px` }}
+            className={classNames('video-player', { 'video-player--poster': !played })}
+        >
+            {!played && loaded &&
+                <div className="shaka-play-button-container">
+                    <button
+                        onClick={handleOnPlayClick}
+                        className="shaka-play-button"
+                        style={{ opacity: 1, zIndex: 999 }}>
+                        <EbayIcon name="videoPlay" />
+                    </button>
+                </div>
+            }
             <div
                 className="video-player__container"
-                style={{ width: `${width}px`, height: `${height}px` }}
                 ref={containerRef}>
                 <video
                     ref={videoRef as any}
                     style={{ width: `${width}px`, height: `${height}px` }}
                     poster={thumbnail}
+                    volume={volume || 1}
+                    muted={muted || false}
                     onPlaying={handlePlaying}
+                    onPause={handleOnPause}
+                    onVolumeChange={handleVolumeChange}
                     {...rest}
                 >
                     {sources.map(source => {
@@ -193,7 +232,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
                 </video>
             </div>
             <div className={classNames('video-player__overlay', { 'video-player__overlay--hidden': loaded })}>
-                loading
+                <EbayIcon name="spinner" />
             </div>
         </div>
     )
