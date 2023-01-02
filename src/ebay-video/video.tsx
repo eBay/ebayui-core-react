@@ -10,7 +10,7 @@ import EbayVideoSource from './source'
 import { defaultVideoConfig, ERROR_ANOTHER_LOAD, ERROR_NO_PLAYER } from './const'
 import { customControls } from './controls'
 
-export type EbayVideoProps = ComponentProps<'div'> & {
+export type EbayVideoProps = ComponentProps<'video'> & {
     width?: number;
     height?: number;
     thumbnail?: string;
