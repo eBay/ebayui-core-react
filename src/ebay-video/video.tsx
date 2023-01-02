@@ -32,8 +32,6 @@ export type EbayVideoProps = ComponentProps<'div'> & {
     onReport?: () => void;
 };
 
-// todo: listen to window resize
-
 const EbayVideo: FC<EbayVideoProps> = ({
     width,
     height,
@@ -112,6 +110,8 @@ const EbayVideo: FC<EbayVideoProps> = ({
         if (!video || !container) return
 
         video.volume = volume
+
+        shaka.polyfill.installAll() // todo: check if we need that
 
         playerRef.current = new shaka.Player(video)
         if (!playerRef.current) return

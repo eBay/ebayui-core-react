@@ -11,9 +11,7 @@ const defaultProps = {
     a11yLoadText: "Loading",
     a11yPlayText: "Click to play",
     errorText: "An error has occurred",
-    reportText: "Report",
-    width: 600,
-    height: 400
+    reportText: "Report"
 }
 
 export const Default = () => (
@@ -76,4 +74,12 @@ export const Captions = () => (
             src="https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd"
         />
     </EbayVideo>
+)
+
+export const FlexibleContainer = () => (
+    <div style={{ width: '100%' }}>
+        <EbayVideo {...defaultProps}>
+            <EbayVideoSource src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd" type="dash" />
+        </EbayVideo>
+    </div>
 )
