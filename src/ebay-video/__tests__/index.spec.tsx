@@ -18,8 +18,10 @@ describe('<EbayVideo>' , () => {
         />
     </EbayVideo>))
 
-    it('shows video player', () => {
-        expect(document.getElementsByTagName('video')).not.toBeNull()
+    it('shows video player with poster', () => {
+        const video = document.getElementsByTagName('video')[0]
+        expect(video).not.toBeNull()
+        expect(video.poster).toBe("https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/iphone-thumbnail.jpg")
     })
 
     it('shows error message', () => {
