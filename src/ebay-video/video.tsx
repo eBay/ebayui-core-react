@@ -8,7 +8,7 @@ import { EbayIcon, EbayProgressSpinner } from '../index'
 import { VideoAction, VideoPlayView } from './types'
 import EbayVideoSource from './source'
 import { defaultVideoConfig, ERROR_ANOTHER_LOAD, ERROR_NO_PLAYER } from './const'
-import { getElements } from './elements'
+import { customControls } from './controls'
 
 export type EbayVideoProps = ComponentProps<'div'> & {
     width?: number;
@@ -133,17 +133,17 @@ const EbayVideo: FC<EbayVideoProps> = ({
             addSeekBar: false
         })
 
-        const { Report, TextSelection } = getElements(onReport)
+        const { Report, TextSelection } = customControls(onReport)
         shaka.ui.Controls.registerElement('report', new Report.Factory(reportText))
         shaka.ui.Controls.registerElement('captions', new TextSelection.Factory())
 
         loadSource()
         hideSpinner(container)
 
-        return () => {
-            playerRef.current.destroy()
-            uiRef.current.destroy()
-        }
+        // return () => {
+        //     playerRef.current.destroy()
+        //     uiRef.current.destroy()
+        // }
     }, [])
 
     const showControls = () => {

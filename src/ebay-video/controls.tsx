@@ -1,22 +1,15 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import ReactDOM from 'react-dom'
 import { ui } from 'shaka-player/dist/shaka-player.ui'
+import { ReportButton } from './reportButton'
 
-import { EbayIcon } from '../index'
-
-export function getElements(onReport = () => {}) {
+export function customControls(onReport = () => {}): { Report, TextSelection } {
     // Have to contain in order to not execute until shaka is downloaded
     const Report = class extends ui.Element {
         constructor(parent, controls, text) {
             super(parent, controls)
 
-            const reportButton = (
-                <button className="video-player__report-button" onClick={onReport}>
-                    <EbayIcon name="reportFlag" />{text}
-                </button>
-            )
-
-            ReactDOM.render(reportButton, this.parent)
+            appendChild(this.parent, <ReportButton onReport={onReport}>{text}</ReportButton>)
         }
     }
 
@@ -43,4 +36,11 @@ export function getElements(onReport = () => {}) {
     }
 
     return { Report, TextSelection }
+}
+
+function appendChild(container: HTMLElement, reactElement: ReactElement): void {
+    const tempEl: HTMLElement = document.createElement('div')
+    ReactDOM.render(reactElement, tempEl)
+
+    container.appendChild(tempEl.firstChild)
 }
