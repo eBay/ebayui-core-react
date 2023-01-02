@@ -36,6 +36,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
     width,
     height,
     thumbnail,
+    action,
     muted,
     playView = 'inline',
     a11yLoadText,
@@ -50,7 +51,8 @@ const EbayVideo: FC<EbayVideoProps> = ({
     },
     onPlay = () => {
     },
-    onReport = () => {},
+    onReport = () => {
+    },
     children,
     ...rest
 }) => {
@@ -145,6 +147,18 @@ const EbayVideo: FC<EbayVideoProps> = ({
         //     uiRef.current.destroy()
         // }
     }, [])
+
+    useEffect(() => {
+        switch (action) {
+            case 'play':
+                videoRef.current.play()
+                break
+            case 'pause':
+                videoRef.current.pause()
+                break
+            default:
+        }
+    }, [action])
 
     const showControls = () => {
         if (!uiRef.current) return

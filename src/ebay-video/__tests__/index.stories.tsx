@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Meta } from '@storybook/react'
-import { EbayVideo, EbayVideoSource } from '../../index'
+import { EbayButton, EbayVideo, EbayVideoSource } from '../../index'
+import { action } from '../../../.storybook/action'
 
 export default {
     component: EbayVideo,
@@ -83,3 +84,25 @@ export const FlexibleContainer = () => (
         </EbayVideo>
     </div>
 )
+
+export const Controlled = () => {
+    const [ playing, setPlaying ] = useState(undefined)
+    const [ muted, setMuted ] = useState(false)
+
+    return (
+        <>
+            <EbayButton onClick={() => setPlaying(!playing)}>{playing ? 'Pause' : 'Play'}</EbayButton> &nbsp;
+            <EbayButton onClick={() => setMuted(!muted)}>{muted ? 'Unmute' : 'Mute'}</EbayButton>
+            <EbayVideo
+                style={{ marginTop: '1em' }}
+                action={playing ? 'play' : playing === false ? 'pause' : undefined}
+                muted={muted}
+                onPlay={action('playing')}
+                onVolumeChange={action('volume changed')}
+                {...defaultProps}
+            >
+                <EbayVideoSource src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd" type="dash" />
+            </EbayVideo>
+        </>
+    )
+}
