@@ -67,4 +67,13 @@ export const FailInsidePlaylist = () => (
         />
     </EbayVideo>
 )
-// todo: support textTracks
+
+export const Captions = () => (
+    <EbayVideo
+        {...defaultProps}
+    >
+        <EbayVideoSource
+            src="https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd"
+        />
+    </EbayVideo>
+)
