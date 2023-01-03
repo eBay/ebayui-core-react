@@ -85,7 +85,7 @@ describe('<EbayMenu>', () => {
             )
         })
         it('should fire onClick, onChange event', async () => {
-            const [item1, item2] = screen.getAllByRole('menuitem')
+            const [item1, item2] = screen.getAllByRole('menuitemradio')
 
             expect(item1).toHaveAttribute('aria-checked', 'true')
             expect(item2).toHaveAttribute('aria-checked', 'false')
@@ -109,7 +109,7 @@ describe('<EbayMenu>', () => {
         })
 
         it('should fire onKeyDown event', async () => {
-            const [item1] = screen.getAllByRole('menuitem')
+            const [item1] = screen.getAllByRole('menuitemradio')
 
             await act(() => {
                 fireEvent.keyDown(item1, { key: 'Esc' })
@@ -126,7 +126,7 @@ describe('<EbayMenu>', () => {
         })
 
         it('should fire onKeyDown, onChange event', async () => {
-            const [item1, item2] = screen.getAllByRole('menuitem')
+            const [item1, item2] = screen.getAllByRole('menuitemradio')
 
             await act(() => {
                 fireEvent.keyDown(item2, { key: 'Enter' })
@@ -159,7 +159,7 @@ describe('<EbayMenu>', () => {
             )
         })
         it('should fire onClick, onChange event', async () => {
-            const [item1, item2] = screen.getAllByRole('menuitem')
+            const [item1, item2] = screen.getAllByRole('menuitemcheckbox')
 
             expect(item1).toHaveAttribute('aria-checked', 'true')
             expect(item2).toHaveAttribute('aria-checked', 'false')
@@ -200,7 +200,7 @@ describe('<EbayMenu>', () => {
         })
 
         it('should fire onKeyDown event', async () => {
-            const [item1] = screen.getAllByRole('menuitem')
+            const [item1] = screen.getAllByRole('menuitemcheckbox')
 
             await act(() => {
                 fireEvent.keyDown(item1, { key: 'Esc' })
@@ -217,7 +217,7 @@ describe('<EbayMenu>', () => {
         })
 
         it('should fire onKeyDown, onChange event', async () => {
-            const [item1, item2] = screen.getAllByRole('menuitem')
+            const [item1, item2] = screen.getAllByRole('menuitemcheckbox')
 
             await act(() => {
                 fireEvent.keyDown(item2, { key: ' ' })
