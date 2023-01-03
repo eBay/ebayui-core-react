@@ -11,13 +11,14 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
     >
       <div
         aria-checked="true"
-        aria-hidden="false"
         class="menu__item"
-        role="menuitem"
+        role="menuitemcheckbox"
         tabindex="0"
         value="item 1"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           item 1
         </span>
         <svg
@@ -35,13 +36,14 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
       </div>
       <div
         aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
-        role="menuitem"
+        role="menuitemcheckbox"
         tabindex="0"
         value="item 2"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           item 2
         </span>
         <svg
@@ -59,13 +61,14 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
       </div>
       <div
         aria-checked="true"
-        aria-hidden="false"
         class="menu__item"
-        role="menuitem"
+        role="menuitemcheckbox"
         tabindex="0"
         value="item 3"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           item 3
         </span>
         <svg
@@ -96,13 +99,13 @@ exports[`Storyshots ebay-menu Default 1`] = `
       role="menu"
     >
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 1 that has very long text
         </span>
         <svg
@@ -119,13 +122,13 @@ exports[`Storyshots ebay-menu Default 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 2
         </span>
         <svg
@@ -142,13 +145,13 @@ exports[`Storyshots ebay-menu Default 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 3
         </span>
         <svg
@@ -236,12 +239,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
             >
               <div
                 aria-checked="false"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   item 0
                 </span>
                 <svg
@@ -259,12 +263,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
               </div>
               <div
                 aria-checked="true"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   Prechecked on menu level
                 </span>
                 <svg
@@ -282,12 +287,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
               </div>
               <div
                 aria-checked="false"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   item 2
                 </span>
                 <svg
@@ -326,12 +332,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
             >
               <div
                 aria-checked="true"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   Prechecked on item level
                 </span>
                 <svg
@@ -349,12 +356,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
               </div>
               <div
                 aria-checked="false"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   item 1
                 </span>
                 <svg
@@ -372,12 +380,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
               </div>
               <div
                 aria-checked="false"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   item 2
                 </span>
                 <svg
@@ -416,12 +425,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
             >
               <div
                 aria-checked="false"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   Prechecked on item level
                 </span>
                 <svg
@@ -439,12 +449,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
               </div>
               <div
                 aria-checked="true"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   Prechecked on menu level
                 </span>
                 <svg
@@ -462,12 +473,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
               </div>
               <div
                 aria-checked="false"
-                aria-hidden="false"
                 class="menu__item"
-                role="menuitem"
+                role="menuitemradio"
                 tabindex="0"
               >
-                <span>
+                <span
+                  aria-hidden="false"
+                >
                   item 2
                 </span>
                 <svg
@@ -502,14 +514,14 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
       role="menu"
     >
       <div
-        aria-checked="false"
-        aria-hidden="true"
         aria-label="item 1 (5 unread items)"
         class="menu__item menu__item--badged"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="true"
+        >
           item 1
           <span
             aria-hidden="true"
@@ -532,14 +544,14 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="true"
         aria-label="item 2 (23 unread items)"
         class="menu__item menu__item--badged"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="true"
+        >
           item 2
           <span
             aria-hidden="true"
@@ -562,13 +574,13 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           item 3
         </span>
         <svg
@@ -599,13 +611,13 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
       role="menu"
     >
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           item 1 that has very long text
         </span>
         <svg
@@ -622,14 +634,14 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
         aria-disabled="true"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 2
         </span>
         <svg
@@ -646,13 +658,13 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 3
         </span>
         <svg
@@ -683,13 +695,13 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
       role="menu"
     >
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           <svg
             aria-hidden="true"
             class="icon icon--confirmation"
@@ -719,14 +731,14 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
         value="item 2"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           <svg
             aria-hidden="true"
             class="icon icon--attention"
@@ -756,14 +768,14 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
         value="item 3"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           <svg
             aria-hidden="true"
             class="icon icon--attention"
@@ -807,13 +819,13 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
       role="menu"
     >
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           item 1 that has very long text
         </span>
         <svg
@@ -830,13 +842,13 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 2
         </span>
         <svg
@@ -858,13 +870,13 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         tabindex="0"
       />
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 3
         </span>
         <svg
@@ -881,13 +893,13 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 4
         </span>
         <svg
@@ -904,13 +916,13 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </svg>
       </div>
       <div
-        aria-checked="false"
-        aria-hidden="false"
         class="menu__item"
         role="menuitem"
         tabindex="0"
       >
-        <span>
+        <span
+          aria-hidden="false"
+        >
           Item 5
         </span>
         <svg

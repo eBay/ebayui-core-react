@@ -2,23 +2,28 @@ import React, { ComponentProps, FC, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import { EbayBadge } from '../ebay-badge'
 import { EbayIcon } from '../ebay-icon'
+import { EbayMenuType } from './types'
 
-export type MenuItemProps = ComponentProps<'div'> & {
+export type MenuItemProps = Omit<ComponentProps<'div'>, 'onKeyDown'> & {
+    type?: EbayMenuType;
     focused?: boolean;
     tabIndex?: number;
     checked?: boolean;
     value?: string;
     disabled?: boolean;
     badgeNumber?: number;
+    badgeAriaLabel?: string;
 }
 
 const EbayMenuItem: FC<MenuItemProps> = ({
     className,
     checked,
+    type,
     focused = false,
     tabIndex,
     disabled,
     badgeNumber,
+    badgeAriaLabel,
     children,
     ...rest
 }) => {
@@ -31,24 +36,34 @@ const EbayMenuItem: FC<MenuItemProps> = ({
         }
     }, [ref, focused])
 
+    const checkable: EbayMenuType[] = ['radio', 'checkbox']
+
     return (
         <div
+            aria-label={badgeAriaLabel}
             {...rest}
             ref={ref}
             className={classNames(className, 'menu__item', hasBadge && 'menu__item--badged')}
-            role="menuitem"
-            aria-checked={checked}
+            role={roleFromType(type)}
+            aria-checked={checkable.includes(type) ? checked : undefined}
             aria-disabled={disabled}
-            aria-hidden={hasBadge}
             tabIndex={focused ? 0 : tabIndex}
         >
-            <span>
+            <span aria-hidden={hasBadge}>
                 {children}
                 {hasBadge && <EbayBadge type="menu" number={badgeNumber} />}
             </span>
             <EbayIcon name="tickSmall" />
         </div>
     )
+}
+
+function roleFromType(type: EbayMenuType) {
+    const roles: Record<EbayMenuType, string> = {
+        radio: 'menuitemradio',
+        checkbox: 'menuitemcheckbox'
+    }
+    return roles[type] || 'menuitem'
 }
 
 export default EbayMenuItem

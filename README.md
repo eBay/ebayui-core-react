@@ -66,7 +66,7 @@ eBayUI React components
 * [x] [ebay-tooltip](src/ebay-tooltip)
 * [ ] `ebay-tourtip`
 * [ ] `ebay-tri-state-checkbox`
-* [ ] `ebay-video`
+* [x] `ebay-video`
 
 ## Getting Started
 
