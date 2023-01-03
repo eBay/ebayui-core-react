@@ -44,7 +44,7 @@ const EbayMenuItem: FC<MenuItemProps> = ({
             aria-disabled={disabled}
             tabIndex={focused ? 0 : tabIndex}
         >
-            <span aria-hidden={hasBadge}>
+            <span aria-hidden={hasBadge || undefined}>
                 {children}
                 {hasBadge && <EbayBadge type="menu" number={badgeNumber} />}
             </span>

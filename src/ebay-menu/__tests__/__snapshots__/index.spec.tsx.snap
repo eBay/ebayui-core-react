@@ -16,9 +16,7 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         tabindex="0"
         value="item 1"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 1
         </span>
         <svg
@@ -40,9 +38,7 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         tabindex="0"
         value="item 2"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 2
         </span>
         <svg
@@ -65,9 +61,7 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         tabindex="0"
         value="item 3"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 3
         </span>
         <svg
@@ -102,9 +96,7 @@ exports[`Storyshots ebay-menu Default 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 1 that has very long text
         </span>
         <svg
@@ -125,9 +117,7 @@ exports[`Storyshots ebay-menu Default 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 2
         </span>
         <svg
@@ -148,9 +138,7 @@ exports[`Storyshots ebay-menu Default 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 3
         </span>
         <svg
@@ -187,9 +175,7 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         tabindex="0"
         value="item 1"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 1
         </span>
         <svg
@@ -211,9 +197,7 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         tabindex="0"
         value="item 2"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 2
         </span>
         <svg
@@ -235,9 +219,7 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         tabindex="0"
         value="item 3"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 3
         </span>
         <svg
@@ -332,9 +314,7 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 3
         </span>
         <svg
@@ -369,9 +349,7 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 1 that has very long text
         </span>
         <svg
@@ -393,9 +371,7 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 2
         </span>
         <svg
@@ -416,9 +392,7 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 3
         </span>
         <svg
@@ -453,9 +427,7 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           <svg
             aria-hidden="true"
             class="icon icon--confirmation"
@@ -490,9 +462,7 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         tabindex="0"
         value="item 2"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           <svg
             aria-hidden="true"
             class="icon icon--attention"
@@ -527,9 +497,7 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         tabindex="0"
         value="item 3"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           <svg
             aria-hidden="true"
             class="icon icon--attention"
@@ -577,9 +545,7 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           item 1 that has very long text
         </span>
         <svg
@@ -600,9 +566,7 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 2
         </span>
         <svg
@@ -628,9 +592,7 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 3
         </span>
         <svg
@@ -651,9 +613,7 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 4
         </span>
         <svg
@@ -674,9 +634,7 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         role="menuitem"
         tabindex="0"
       >
-        <span
-          aria-hidden="false"
-        >
+        <span>
           Item 5
         </span>
         <svg
