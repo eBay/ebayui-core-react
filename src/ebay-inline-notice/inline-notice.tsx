@@ -42,7 +42,9 @@ const EbayInlineNotice: FC<Props> = ({
     const isGeneral = status === `general`
 
     return (
-        <div className={classNames(className, `inline-notice ${!isGeneral ? `inline-notice--${status}` : ``}`)}>
+        <div
+            className={classNames(className, `inline-notice ${!isGeneral ? `inline-notice--${status}` : ``}`)}
+            role="region">
             {!isGeneral ? (
                 <span className="inline-notice__header">
                     <EbayIcon name={`${status}FilledSmall` as Icon} a11yText={ariaLabel} a11yVariant="label" />
