@@ -98,6 +98,7 @@ const EbayMenu: FC<Props> = ({
 
                     return cloneElement(child, {
                         ...itemRest,
+                        type,
                         focused: i === focusedIndex,
                         tabIndex: focusedIndex === undefined ? 0 : -1,
                         checked: checkedIndexes[i],

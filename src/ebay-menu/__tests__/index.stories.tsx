@@ -58,7 +58,7 @@ storiesOf('ebay-menu', module)
     </>))
     .add('With Badges', () => (<>
         <EbayMenu>
-            <Item badgeNumber={5} aria-label="item 1 (5 unread items)">item 1</Item>
+            <Item badgeNumber={5} badgeAriaLabel="item 1 (5 unread items)">item 1</Item>
             <Item badgeNumber={23} aria-label="item 2 (23 unread items)">item 2</Item>
             <Item>item 3</Item>
         </EbayMenu>
