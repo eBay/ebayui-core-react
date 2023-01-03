@@ -1,7 +1,6 @@
 # ebay-video
 Video player. Supports either MPD or M3U8 playlist formats.
-Natively uses `shaka` player under the hood. Loads it async after the video player is loaded on the page.
-For resizing, `ebay-video` supports fixed width or variable width. If no width is provided the video tag will resize based on the container size.
+Natively uses `shaka` player under the hood. For resizing, `ebay-video` supports fixed width or variable width. If no width is provided the video tag will resize based on the container size.
 
 ## Usage
 ```bash
@@ -21,13 +20,31 @@ import '@ebay/skin/video'
 </EbayVideo>
 ```
 
-## Props
+## EbayVideo Props
 
-Name | Type | Stateful | Required | Description
-width | Number | | No |
-height | Number | | No |
-thumbnail | String | | No | The url path for the video thumbnail
-action | String | | No | 'play' or 'pause': Will programatically perform the given action
+| Name         | Type     | Required | Description                                                                                                     |
+|--------------|----------|----------|-----------------------------------------------------------------------------------------------------------------|
+| width        | Number   | No       |                                                                                                                 |
+| height       | Number   | No       |                                                                                                                 |
+| thumbnail    | String   | No       | URL path for the video thumbnail                                                                                |
+| action       | String   | No       | `play` or `pause`: will programatically perform the given action                                                |
+| volume       | Number   | No       | sets sound volume                                                                                               |
+| volumeSlider | Boolean  | No       | keep or remove volume slider, default is `false`                                                                |
+| muted        | Boolean  | No       | mute or unmute video, default is `false`                                                                        |
+| playView     | String   | No       | `inline` or `fullscreen`. When player starts to play, will either play `inline` (default) or switch to `fullscreen` |
+| a11yLoadText | String   | Yes      | a11y text for the loading spinner                                                                               |
+| a11yPlayText | String   | Yes      | a11y text for the play button                                                                                   |
+| errorText    | String   | Yes      | content for error when an either the library or video cannot load                                               |
+| reportText   | String   | Yes      | text for report button                                                                                          |
+| onLoadError   | Callback | No       | triggered when there is a load error with video player or source, arguments: (Event)                            |
+| onPlay   | Callback | No       | triggered when playback starts, arguments: (Event, { player })                                                  |
+| onVolumeChange   | Callback | No       | triggered when volume is changed, arguments: (Event, { volume: number, muted: boolean })                        |
+| onReport   | Callback | No       | triggered when report button is clicked, no arguments                                                           |
 
---- | --- | --- | --- | ---
 
+## EbayVideoSource Props
+
+| Name | Type   | Required | Description                                                                                                     |
+|------|--------|----------|-----------------------------------------------------------------------------------------------------------------|
+| src  | String | Yes      | video/playlist URL
+| type | String | No       | playlist type, `hls` or `dash`
