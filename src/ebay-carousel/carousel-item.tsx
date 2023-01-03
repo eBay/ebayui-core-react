@@ -4,7 +4,6 @@ import classNames from 'classnames'
 type ListProps = Omit<ComponentProps<'li'>, 'onChange'>
 type CarouselItemProps = ListProps & {
     className?: string;
-    children?: ReactNode;
 };
 
 

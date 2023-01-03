@@ -7,6 +7,7 @@ type CarouselControlProps = {
     label?: string;
     hidden?: boolean;
     type: CarouselControlType;
+    onClick: (type: CarouselControlType) => void;
 }
 
 const icon: Record<CarouselControlType, Icon> = {
@@ -14,8 +15,11 @@ const icon: Record<CarouselControlType, Icon> = {
     next: 'carouselNext'
 }
 
-const CarouselControlButton: FC<CarouselControlProps> = ({ type, label, hidden }) => (
-    <button className={classNames('carousel__control', `carousel__control--${type}`)} aria-label={label}>
+const CarouselControlButton: FC<CarouselControlProps> = ({ type, label, hidden, onClick }) => (
+    <button
+        className={classNames('carousel__control', `carousel__control--${type}`)}
+        aria-label={label}
+        onClick={() => onClick(type)}>
         <EbayIcon
             className={classNames('icon', `icon--carousel-${type}`)}
             focusable={false}
