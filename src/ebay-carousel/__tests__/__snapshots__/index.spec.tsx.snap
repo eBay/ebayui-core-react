@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-fullscreen-dialog Always Opened 1`] = `
+<DocumentFragment>
+  <div
+    aria-hidden="false"
+  >
+    <p
+      aria-hidden="true"
+    >
+      Some outside content...
+    </p>
+    <div
+      aria-hidden="false"
+    >
+      <div
+        aria-hidden="false"
+        aria-labelledby="dialog-title-abc123"
+        arial-modal="true"
+        class="fullscreen-dialog fullscreen-dialog--mask-fade-slow fullscreen-dialog--show-init"
+        role="dialog"
+      >
+        <div
+          aria-hidden="true"
+          class="keyboard-trap-boundary"
+          tabindex="0"
+        />
+        <div
+          aria-hidden="false"
+          class="fullscreen-dialog__window fullscreen-dialog__window--slide keyboard-trap--active"
+        >
+          <div
+            aria-hidden="true"
+            class="keyboard-trap-boundary"
+            tabindex="0"
+          />
+          <div
+            class="fullscreen-dialog__header"
+          >
+            <button
+              aria-label="Close dialog"
+              class="icon-btn fullscreen-dialog__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close"
+                focusable="false"
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close"
+                />
+              </svg>
+            </button>
+            <h2
+              id="dialog-title-abc123"
+            >
+              Heading
+            </h2>
+          </div>
+          <div
+            class="fullscreen-dialog__main"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              <a
+                href="http://www.ebay.com"
+              >
+                www.ebay.com
+              </a>
+            </p>
+          </div>
+          <div
+            class="fullscreen-dialog__footer"
+          >
+            ©2021 eBay
+          </div>
+          <div
+            aria-hidden="true"
+            class="keyboard-trap-boundary"
+            tabindex="0"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          class="keyboard-trap-boundary"
+          tabindex="0"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-fullscreen-dialog Default 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      class="btn btn--secondary"
+    >
+      Open Dialog
+    </button>
+    <p>
+      Some outside content...
+    </p>
+    <div>
+      <div
+        aria-labelledby="dialog-title-abc123"
+        arial-modal="true"
+        class="fullscreen-dialog fullscreen-dialog--mask-fade-slow"
+        hidden=""
+        role="dialog"
+      >
+        <div
+          class="fullscreen-dialog__window fullscreen-dialog__window fullscreen-dialog__window--slide"
+        >
+          <div
+            class="fullscreen-dialog__header"
+          >
+            <button
+              class="icon-btn fullscreen-dialog__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close"
+                focusable="false"
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close"
+                />
+              </svg>
+            </button>
+            <h2
+              id="dialog-title-abc123"
+            >
+              Heading
+            </h2>
+          </div>
+          <div
+            class="fullscreen-dialog__main"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              <a
+                href="http://www.ebay.com"
+              >
+                www.ebay.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-fullscreen-dialog With Animation 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      class="btn btn--secondary"
+    >
+      Open Dialog
+    </button>
+    <p>
+      Some outside content...
+    </p>
+    <div>
+      <div
+        aria-labelledby="dialog-title-abc123"
+        arial-modal="true"
+        class="fullscreen-dialog fullscreen-dialog--mask-fade-slow"
+        hidden=""
+        role="dialog"
+      >
+        <div
+          class="fullscreen-dialog__window fullscreen-dialog__window fullscreen-dialog__window--slide"
+        >
+          <div
+            class="fullscreen-dialog__header"
+          >
+            <button
+              class="icon-btn fullscreen-dialog__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close"
+                focusable="false"
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close"
+                />
+              </svg>
+            </button>
+            <h2
+              id="dialog-title-abc123"
+            >
+              Heading
+            </h2>
+          </div>
+          <div
+            class="fullscreen-dialog__main"
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              <a
+                href="http://www.ebay.com"
+              >
+                www.ebay.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
