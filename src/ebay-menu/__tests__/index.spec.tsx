@@ -46,14 +46,14 @@ describe('<EbayMenu>', () => {
                 </EbayMenu>
             )
             expect(wrapper.container.querySelector('.menu__item')).toHaveAttribute('aria-checked', 'true')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).not.toHaveAttribute('aria-checked')
+            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'false')
 
             fireEvent.click(wrapper.container.querySelectorAll('.menu__item')[1])
 
             expect(onChangeSpy).toBeCalledWith(1, true)
             expect(onSelectSpy).toBeCalledWith(1, true)
 
-            expect(wrapper.container.querySelector('.menu__item')).not.toHaveAttribute('aria-checked')
+            expect(wrapper.container.querySelector('.menu__item')).toHaveAttribute('aria-checked', 'false')
             expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'true')
         })
     })
@@ -76,12 +76,12 @@ describe('<EbayMenu>', () => {
             expect(onSelectSpy).toBeCalledWith(1, false)
 
             expect(wrapper.container.querySelector('.menu__item')).not.toHaveAttribute('aria-checked')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).not.toHaveAttribute('aria-checked')
+            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'false')
 
             fireEvent.click(wrapper.container.querySelectorAll('.menu__item')[0])
 
             expect(wrapper.container.querySelector('.menu__item')).toHaveAttribute('aria-checked', 'true')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).not.toHaveAttribute('aria-checked')
+            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'false')
         })
     })
 })
