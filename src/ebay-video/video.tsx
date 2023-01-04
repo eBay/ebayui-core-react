@@ -29,8 +29,8 @@ export type EbayVideoProps = ComponentProps<'video'> & {
     a11yPlayText: string;
     errorText: string;
     reportText?: string;
-    onLoadError?: (err: any) => void;
-    onPlay?: (e: SyntheticEvent, { player: any }) => void;
+    onLoadError?: (err: Error) => void;
+    onPlay?: (e: SyntheticEvent, { player: Player }) => void;
     onVolumeChange?: (e: SyntheticEvent, { volume: number, muted: boolean }) => void;
     onReport?: () => void;
 };
@@ -67,12 +67,12 @@ const EbayVideo: FC<EbayVideoProps> = ({
 
     const containerRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
-    const playerRef = useRef<any>(null)
+    const playerRef = useRef<Player>(null)
     const uiRef = useRef(null)
 
     const sources = filterByType(children, EbayVideoSource).map(({ props }) => props)
 
-    const handleError = (err: any) => {
+    const handleError = (err: Error) => {
         setLoaded(true)
         setFailed(true)
         onLoadError(err)
@@ -234,12 +234,12 @@ const EbayVideo: FC<EbayVideoProps> = ({
                 ref={containerRef}
             >
                 <video
-                    ref={videoRef as any}
+                    ref={videoRef}
                     style={style}
                     poster={thumbnail}
                     muted={muted || false}
-                    onPlaying={handlePlaying as any}
-                    onPause={handleOnPause as any}
+                    onPlaying={handlePlaying}
+                    onPause={handleOnPause}
                     onVolumeChange={handleVolumeChange}
                     {...rest}
                 >
