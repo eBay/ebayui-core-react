@@ -11,8 +11,8 @@ export const defaultVideoConfig = {
         'spacer',
         'mute',
         'report',
-        'fullscreen',
-        'overflow_menu'
-    ],
-    overflowMenuButtons: ['captions']
+        'captions',
+        // 'quality',
+        'fullscreen'
+    ]
 }

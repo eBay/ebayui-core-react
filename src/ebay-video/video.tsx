@@ -18,14 +18,17 @@ export type EbayVideoProps = ComponentProps<'video'> & {
     volume?: number;
     muted?: boolean;
     volumeSlider?: boolean;
+    hideReportButton?: boolean;
     playView?: VideoPlayView;
+    // todo: implement CDN support
     cdnUrl?: string;
     cssUrl?: string;
     cdnVersion?: string;
+    //
     a11yLoadText: string;
     a11yPlayText: string;
     errorText: string;
-    reportText: string;
+    reportText?: string;
     onLoadError?: (err: any) => void;
     onPlay?: (e: SyntheticEvent, { player: any }) => void;
     onVolumeChange?: (e: SyntheticEvent, { volume: number, muted: boolean }) => void;
@@ -44,6 +47,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
     reportText,
     volumeSlider,
     volume = 1,
+    hideReportButton,
     errorText,
     onVolumeChange = () => {
     },
@@ -135,9 +139,10 @@ const EbayVideo: FC<EbayVideoProps> = ({
             addSeekBar: false
         })
 
-        const { Report, TextSelection } = customControls(onReport)
-        shaka.ui.Controls.registerElement('report', new Report.Factory(reportText))
-        shaka.ui.Controls.registerElement('captions', new TextSelection.Factory())
+        if (!hideReportButton) {
+            const { Report } = customControls(onReport)
+            shaka.ui.Controls.registerElement('report', new Report.Factory(reportText))
+        }
 
         loadSource()
         hideSpinner(container)
@@ -202,9 +207,14 @@ const EbayVideo: FC<EbayVideoProps> = ({
         videoRef.current.controls = false
     }
 
+    const style = {
+        width: width ? `${width}px` : undefined,
+        height: height ? `${height}px` : undefined
+    }
+
     return (
         <div
-            style={{ width: `${width}px`, height: `${height}px` }}
+            style={style}
             className={classNames('video-player', { 'video-player--poster': !playing })}
         >
             {!playing && loaded && !failed && !buffering &&
@@ -225,7 +235,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
             >
                 <video
                     ref={videoRef as any}
-                    style={{ width: `${width}px`, height: `${height}px` }}
+                    style={style}
                     poster={thumbnail}
                     muted={muted || false}
                     onPlaying={handlePlaying as any}
@@ -233,8 +243,8 @@ const EbayVideo: FC<EbayVideoProps> = ({
                     onVolumeChange={handleVolumeChange}
                     {...rest}
                 >
-                    {sources.map(source => {
-                        <source {...source} />
+                    {sources.map((source, i) => {
+                        <source key={i} {...source} />
                     })}
                 </video>
             </div>

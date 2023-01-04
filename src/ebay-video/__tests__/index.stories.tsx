@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Meta } from '@storybook/react'
-import { EbayButton, EbayVideo, EbayVideoSource } from '../../index'
+import { EbayButton, EbayVideo, EbayVideoProps, EbayVideoSource } from '../../index'
 import { action } from '../../../.storybook/action'
 
 export default {
@@ -8,11 +8,12 @@ export default {
     title: 'ebay-video'
 } as Meta;
 
-const defaultProps = {
+const defaultProps: EbayVideoProps = {
     a11yLoadText: "Loading",
     a11yPlayText: "Click to play",
     errorText: "An error has occurred",
-    reportText: "Report"
+    width: 600,
+    height: 400
 }
 
 export const Default = () => (
@@ -21,17 +22,12 @@ export const Default = () => (
         thumbnail="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/iphone-thumbnail.jpg"
         volumeSlider
     >
-        <EbayVideoSource
-            src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd" type="dash"
-        />
+        <EbayVideoSource src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd" type="dash" />
     </EbayVideo>
 )
 
 export const SingleVideo = () => (
-    <EbayVideo
-        {...defaultProps}
-        volumeSlider
-    >
+    <EbayVideo {...defaultProps}>
         <EbayVideoSource src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/video.mp4" />
     </EbayVideo>
 )
@@ -68,12 +64,33 @@ export const FailInsidePlaylist = () => (
 )
 
 export const Captions = () => (
+    <EbayVideo {...defaultProps}>
+        <EbayVideoSource src="https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd" />
+    </EbayVideo>
+)
+
+export const ReportText = () => (
     <EbayVideo
         {...defaultProps}
-    >
-        <EbayVideoSource
-            src="https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd"
-        />
+        reportText="Report"
+        onReport={action('report')}
+>
+        <EbayVideoSource src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd" type="dash" />
+
+    </EbayVideo>
+)
+
+export const NoReportButton = () => (
+    <EbayVideo {...defaultProps} hideReportButton>
+        <EbayVideoSource src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd" type="dash" />
+
+    </EbayVideo>
+)
+
+export const MutedAutoplay = () => (
+    <EbayVideo {...defaultProps} muted autoPlay>
+        <EbayVideoSource src="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/playlist.mpd" type="dash" />
+
     </EbayVideo>
 )
 
