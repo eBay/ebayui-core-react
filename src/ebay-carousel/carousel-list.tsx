@@ -14,67 +14,55 @@ import classNames from 'classnames'
 import { getReactChildren, isNativeScrolling, getRelativeRects, alterChildren, getOffset } from './helpers'
 import { scrollTransition } from './scroll-to-transition'
 import { withForwardRef } from '../common/component-utils'
+import { ListItemRef } from './types'
 
 type CarouselListProps = {
     gap?: number;
-    activeIndex: number;
     itemsPerSlide: number;
     slideWidth: number;
-    onSetActiveIndex: (index: number) => void;
+    offset: number;
     className?: string;
-    forwardedRef?: RefObject<HTMLUListElement>;
+    itemsRef?: RefObject<Array<ListItemRef | null>>;
     children: ReactNode;
 };
 
 
 const CarouselList: FC<CarouselListProps> = ({
     gap = 16,
-    activeIndex,
     itemsPerSlide,
     slideWidth,
+    offset,
     className,
-    onSetActiveIndex,
-    forwardedRef,
+    itemsRef,
     children }) => {
     const [translateLeft, setTranslateLeft] = React.useState(0)
+    const listRef = useRef()
 
     useEffect(() => {
         const size = Children.count(children)
 
-        if (!size || !forwardedRef.current?.children?.length) return
+        if (!size) return
 
-        const list = forwardedRef.current
-
-        // For native scroll
-        // // TODO: replace gap calculation. Hotfix logic.
-        const isLastSlide = activeIndex === size - 1
-        let scrollGap = -gap
-        if (isLastSlide) {
-            scrollGap = gap || 0
-        }
-
-        const currentOffsetEl: HTMLElement = list.children[activeIndex] as HTMLElement
+        const list = listRef.current
         const isNativeScroll = getComputedStyle(list).overflowX !== 'visible'
 
         if (isNativeScroll) {
-            const offset = getOffset(list.children, activeIndex, slideWidth)
             scrollTransition(list, offset, () => {})
         } else {
-            const offset = getOffset(list.children, activeIndex, slideWidth)
             setTranslateLeft(offset)
         }
-    }, [activeIndex])
+    }, [offset, listRef.current])
 
     return (
         <div className={classNames('carousel__viewport', 'carousel__viewport--mask', className)}>
             <ul
                 className="carousel__list"
-                ref={forwardedRef}
+                ref={listRef}
                 style={{ transform: `translate3d(${-translateLeft}px, 0, 0)` }}>
-                {alterChildren(children, forwardedRef.current?.children, activeIndex, itemsPerSlide, slideWidth, gap)}
+                {alterChildren(children, itemsRef, itemsPerSlide, slideWidth, offset, gap)}
             </ul>
         </div>
     )
 }
 
-export default withForwardRef(CarouselList)
+export default CarouselList

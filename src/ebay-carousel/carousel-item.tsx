@@ -1,19 +1,58 @@
-import React, { ComponentProps, FC, forwardRef, ReactNode, RefObject, useEffect, useRef, useState } from 'react'
+import React, {
+    ComponentProps,
+    FC,
+    forwardRef,
+    ReactNode,
+    Ref,
+    RefCallback,
+    RefObject,
+    useEffect, useImperativeHandle, useLayoutEffect,
+    useRef,
+    useState
+} from 'react'
 import classNames from 'classnames'
+import { withForwardRef } from '../common/component-utils'
+import { getRelativeRects } from './helpers'
+import { ListItemRef } from './types'
+import { LogLevel } from 'ts-loader/dist/logger'
 
 type ListProps = ComponentProps<'li'>
 type CarouselItemProps = ListProps & {
-    isFullyVisible?: boolean;
+    slideWidth?: number;
+    offset?: number;
     className?: string;
+    forwardedRef: RefObject<ListItemRef>
 };
 
 
-const CarouselItem: FC<CarouselItemProps> = ({ isFullyVisible, className, children, ...rest }) => {
+const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef, className, children, ...rest }) => {
+    const itemRef = useRef()
+    const [isVisible, setIsVisible] = useState(false)
 
-    console.log(isFullyVisible)
+    const itemsProp = () => {
+        const { left, right } = getRelativeRects(itemRef.current)
+        const fullyVisible = left === undefined ||
+            (left - offset >= -0.01 && right - offset <= slideWidth + 0.01)
+
+        return {
+            left,
+            right,
+            fullyVisible
+        }
+    }
+
+    useLayoutEffect(() => {
+        const { fullyVisible } = itemsProp()
+
+        setIsVisible(fullyVisible)
+    }, [itemRef.current, slideWidth, offset])
+
+    useImperativeHandle(forwardedRef, itemsProp, [itemRef.current, slideWidth, offset])
+
     return (
         <li
-            aria-hidden={!isFullyVisible}
+            ref={itemRef}
+            aria-hidden={!isVisible}
             className={classNames('carousel__snap-point', className)}
             {...rest}>
             {children}
@@ -21,4 +60,4 @@ const CarouselItem: FC<CarouselItemProps> = ({ isFullyVisible, className, childr
     )
 }
 
-export default CarouselItem
+export default withForwardRef(CarouselItem)

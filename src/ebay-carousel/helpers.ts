@@ -1,5 +1,6 @@
-import React, { Children, cloneElement, ReactElement, ReactNode, ReactNodeArray } from 'react'
-import { MovementDirection, RelativeRect } from './types'
+import React, { Children, cloneElement, ReactElement, ReactNode, ReactNodeArray, RefObject } from 'react'
+import { ListItemRef, MovementDirection, RelativeRect } from './types'
+import {LogLevel} from "ts-loader/dist/logger";
 
 export const getReactChildren = (children: ReactNode): ReactNodeArray => Children.toArray(children)
 
@@ -18,24 +19,23 @@ export function getRelativeRects(el: Element): RelativeRect {
 
 export const isNativeScrolling = (el: Element) => getComputedStyle(el).overflowX !== 'visible'
 
-export const getMaxOffset = (items: HTMLCollection, slideWidth: number) => {
+export const getMaxOffset = (items: ListItemRef[], slideWidth: number) => {
     if (!items?.length) {
         return 0
     }
 
     const lastEl = items[items.length - 1]
-    const { right } = getRelativeRects(lastEl)
-    return Math.max(right - slideWidth, 0) || 0
+    return Math.max(lastEl.right - slideWidth, 0) || 0
 }
 
-export const getOffset = (items: HTMLCollection, index: number, slideWidth: number) => {
-    if (!items?.length) {
+export const getOffset = (items: ListItemRef[], index: number, slideWidth: number) => {
+    if (!items.length) {
         return 0
     }
-    const el = items[index]
-    const { left } = getRelativeRects(el)
 
-    return Math.min(left, getMaxOffset(items, slideWidth)) || 0
+    console.log(items)
+
+    return Math.min(items[index].left, getMaxOffset(items, slideWidth)) || 0
 }
 
 export const calculateSlideOffset = (targetOffset: number, direction: MovementDirection, maxOffset: number): number => {
@@ -48,25 +48,16 @@ export const calculateSlideOffset = (targetOffset: number, direction: MovementDi
 
 export const alterChildren = (
     children: ReactNode,
-    items: HTMLCollection,
-    activeIndex: number,
-    itemsPerSlide: number,
-    slideWidth: number,
+    itemsRef: RefObject<Array<ListItemRef | null>>,
+    itemsPerSlide?: number,
+    slideWidth?: number,
+    offset?: number,
     gap?: number) => {
     const childrenArray = getReactChildren(children)
-    console.log(childrenArray)
 
     return childrenArray.map((item: ReactElement, index) => {
         const { style } = item.props
-        const el = items?.[index]
-        let isFullyVisible = true, itemWidth
-
-        if (el) {
-            const { left, right } = getRelativeRects(el)
-            const offset = getOffset(items, activeIndex, slideWidth)
-            isFullyVisible = left === undefined ||
-                (left - offset >= -0.01 && right - offset <= slideWidth + 0.01)
-        }
+        let itemWidth
 
         if (itemsPerSlide) {
             const itemsInSlide = itemsPerSlide + (itemsPerSlide % 1)
@@ -75,7 +66,11 @@ export const alterChildren = (
 
         return cloneElement(item, {
             ...item.props,
-            isFullyVisible,
+            slideWidth,
+            offset,
+            ref: el => {
+                itemsRef.current[index] = el
+            },
             style: {
                 ...style,
                 width: itemWidth || style.width,
@@ -147,7 +142,7 @@ function getTemplateData({ items, offsetOverride, activeIndex, setActiveIndex, p
  * @param {object} state The widget state.
  * @param {number} index the index to normalize.
  */
-function normalizeIndex({ items, itemsPerSlide }, index) {
+function normalizeIndex(index: number, items?: ListItemRef[], itemsPerSlide?: number) {
     if (index > 0) {
         let result = index
         result %= items.length || 1 // Ensure index is within bounds.
@@ -167,7 +162,7 @@ function normalizeIndex({ items, itemsPerSlide }, index) {
  * @param {number?} i the index to get the slide for.
  * @return {number}
  */
-export const getSlide = ({ index, itemsPerSlide }, nextIndex = index) => {
+export const getSlide = (activeIndex: number, itemsPerSlide?: number, nextIndex = activeIndex) => {
     if (!itemsPerSlide) {
         return
     }
@@ -177,7 +172,12 @@ export const getSlide = ({ index, itemsPerSlide }, nextIndex = index) => {
 
 const getDelta = (direction: MovementDirection) => direction === 'LEFT' ? -1 : 1
 
-export const getNextIndex = ({ activeIndex, items, slideWidth, itemsPerSlide }, direction) => {
+export const getNextIndex = (
+    direction: MovementDirection,
+    activeIndex: number,
+    items?: ListItemRef[],
+    slideWidth?: number,
+    itemsPerSlide?: number) => {
     let i = activeIndex
     let item
 
@@ -201,7 +201,7 @@ export const getNextIndex = ({ activeIndex, items, slideWidth, itemsPerSlide }, 
         }
     }
 
-    return normalizeIndex({ items, itemsPerSlide }, i)
+    return normalizeIndex(i, items, itemsPerSlide)
 }
 
 // export const slideToIndex = (index: number) => {
