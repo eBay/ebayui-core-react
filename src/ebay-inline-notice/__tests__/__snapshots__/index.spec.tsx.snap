@@ -4,6 +4,7 @@ exports[`Storyshots ebay-inline-notice Attention message 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice inline-notice--attention"
+    role="region"
   >
     <span
       class="inline-notice__header"
@@ -37,6 +38,7 @@ exports[`Storyshots ebay-inline-notice Confirmation message 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice inline-notice--confirmation"
+    role="region"
   >
     <span
       class="inline-notice__header"
@@ -78,6 +80,7 @@ exports[`Storyshots ebay-inline-notice Default 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice "
+    role="region"
   >
     <span
       class="inline-notice__main"
@@ -94,6 +97,7 @@ exports[`Storyshots ebay-inline-notice Information message 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice inline-notice--information"
+    role="region"
   >
     <span
       class="inline-notice__header"
@@ -132,6 +136,7 @@ exports[`Storyshots ebay-inline-notice Notice toggle 1`] = `
   </button>
   <div
     class="inline-notice inline-notice--confirmation"
+    role="region"
   >
     <span
       class="inline-notice__header"
