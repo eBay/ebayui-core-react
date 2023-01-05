@@ -1,44 +1,67 @@
-import React, { FC, ReactNode, Children, ReactElement, cloneElement, useEffect, useRef } from 'react'
+import React, {
+    FC,
+    ReactNode,
+    Children,
+    ReactElement,
+    cloneElement,
+    useEffect,
+    useRef,
+    useState,
+    forwardRef,
+    RefObject
+} from 'react'
 import classNames from 'classnames'
-import { applyGap, getReactChildren, isNativeScrolling } from './helpers'
+import { getReactChildren, isNativeScrolling, getRelativeRects, alterChildren, getOffset } from './helpers'
+import { scrollTransition } from './scroll-to-transition'
+import { withForwardRef } from '../common/component-utils'
 
 type CarouselListProps = {
     gap?: number;
     activeIndex: number;
+    itemsPerSlide: number;
+    slideWidth: number;
     onSetActiveIndex: (index: number) => void;
     className?: string;
+    forwardedRef?: RefObject<HTMLUListElement>;
+    children: ReactNode;
 };
 
 
-const CarouselList: FC<CarouselListProps> = ({ gap, activeIndex, className, onSetActiveIndex, children }) => {
+const CarouselList: FC<CarouselListProps> = ({
+    gap = 16,
+    activeIndex,
+    itemsPerSlide,
+    slideWidth,
+    className,
+    onSetActiveIndex,
+    forwardedRef,
+    children }) => {
     const [translateLeft, setTranslateLeft] = React.useState(0)
-    const listRef = useRef(null)
 
     useEffect(() => {
         const size = Children.count(children)
 
-        if (!size || !listRef.current) return
+        if (!size || !forwardedRef.current?.children?.length) return
 
-        const list = listRef.current
+        const list = forwardedRef.current
 
         // For native scroll
         // // TODO: replace gap calculation. Hotfix logic.
-        // const isFirstSlide = activeIndex === 0
-        // const isLastSlide = activeIndex === size - 1
-        // let scrollGap = -gap
-        // if (isLastSlide) {
-        //     scrollGap = gap || 0
-        // }
+        const isLastSlide = activeIndex === size - 1
+        let scrollGap = -gap
+        if (isLastSlide) {
+            scrollGap = gap || 0
+        }
 
         const currentOffsetEl: HTMLElement = list.children[activeIndex] as HTMLElement
-        const isNativeScroll = false
-
-        // console.log(currentOffsetEl.offsetLeft)
+        const isNativeScroll = getComputedStyle(list).overflowX !== 'visible'
 
         if (isNativeScroll) {
-            // Implement native scrolling
+            const offset = getOffset(list.children, activeIndex, slideWidth)
+            scrollTransition(list, offset, () => {})
         } else {
-            setTranslateLeft(currentOffsetEl.offsetLeft)
+            const offset = getOffset(list.children, activeIndex, slideWidth)
+            setTranslateLeft(offset)
         }
     }, [activeIndex])
 
@@ -46,12 +69,12 @@ const CarouselList: FC<CarouselListProps> = ({ gap, activeIndex, className, onSe
         <div className={classNames('carousel__viewport', 'carousel__viewport--mask', className)}>
             <ul
                 className="carousel__list"
-                ref={listRef}
+                ref={forwardedRef}
                 style={{ transform: `translate3d(${-translateLeft}px, 0, 0)` }}>
-                {gap ? applyGap(children, gap) : children}
+                {alterChildren(children, forwardedRef.current?.children, activeIndex, itemsPerSlide, slideWidth, gap)}
             </ul>
         </div>
     )
 }
 
-export default CarouselList
+export default withForwardRef(CarouselList)

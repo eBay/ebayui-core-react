@@ -23,7 +23,7 @@ const items = Array(10).fill(0).map((_, i) => (
 
 export const _Default = () => {
   return (
-    <EbayCarousel gap={16}>
+    <EbayCarousel gap={16} itemsPerSlide={3}>
         {items}
     </EbayCarousel>
   );

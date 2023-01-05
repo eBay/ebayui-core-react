@@ -1,9 +1,10 @@
-import React, { Children, ComponentProps, FC, useEffect, useState } from 'react'
+import React, { Children, ComponentProps, FC, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import CarouselControlButton from './carousel-control-button'
 import CarouselList from './carousel-list'
 import { CarouselControlType, MovementDirection } from './types'
-import { calculateSlideOffset, getMaxOffset } from './helpers'
+import { calculateSlideOffset, getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
+import {LogLevel} from "ts-loader/dist/logger";
 
 type CarouselProps = ComponentProps<'div'> & {
     className?: string;
@@ -29,7 +30,7 @@ type CarouselProps = ComponentProps<'div'> & {
 
 const EbayCarousel: FC<CarouselProps> = ({
     gap = 16,
-    itemsPerSlide = 1,
+    itemsPerSlide,
     ariaLabel,
     a11yPreviousText,
     a11yNextText,
@@ -39,12 +40,27 @@ const EbayCarousel: FC<CarouselProps> = ({
 }) => {
     const [activeIndex, setActiveIndex] = React.useState(0)
     const [itemsInSlide, setItemInSlide] = useState(0)
+    const [slideWidth, setSlideWidth] = useState(0)
+    const containerRef = useRef(null)
+    const listRef = useRef(null)
+    const items: HTMLCollection = listRef.current?.children
     const itemCount = Children.count(children)
+    const isSingleSlide = itemCount <= itemsPerSlide
+    const offset = getOffset(items, activeIndex, slideWidth)
+    const prevControlDisabled = isSingleSlide || offset === 0
+    const nextControlDisabled =
+        isSingleSlide || (offset === getMaxOffset(items, slideWidth))
 
     useEffect(() => {
         const roundedItemsPerSlide = Math.floor(itemsPerSlide)
         setItemInSlide(roundedItemsPerSlide)
     }, [itemsPerSlide])
+
+    useEffect(() => {
+        if (!containerRef.current) return
+        const { width: containerWidth } = containerRef.current.getBoundingClientRect()
+        setSlideWidth(containerWidth)
+    }, [containerRef])
 
     const goToIndex = (index: number, direction: MovementDirection) => {
         const maxOffset = itemCount - itemsInSlide
@@ -52,22 +68,41 @@ const EbayCarousel: FC<CarouselProps> = ({
         setActiveIndex(newIndex)
     }
 
-    const handleControlClick = (type: CarouselControlType) => {
-        if (type === 'prev') {
-            goToIndex(activeIndex - itemsInSlide, 'LEFT')
-        } else {
-            goToIndex(activeIndex + itemsInSlide, 'RIGHT')
-        }
+    const handleControlClick = (direction: MovementDirection) => {
+        const nextIndex = getNextIndex({ activeIndex, items, slideWidth, itemsPerSlide }, direction)
+        const slide = getSlide({ index: activeIndex, itemsPerSlide }, nextIndex)
+        console.log(nextIndex, slide)
+        setActiveIndex(nextIndex)
+        // setActiveIndex(nextIndex)
+        // if (direction === 'LEFT') {
+        //     goToIndex(activeIndex - itemsInSlide, 'LEFT')
+        // } else {
+        //     goToIndex(activeIndex + itemsInSlide, 'RIGHT')
+        // }
     }
 
     return (
         <div className={classNames('carousel', className)} {...rest}>
-            <div className="carousel__container">
-                <CarouselControlButton label={a11yPreviousText} type="prev" onClick={handleControlClick} />
-                <CarouselList gap={gap} activeIndex={activeIndex} onSetActiveIndex={setActiveIndex}>
+            <div ref={containerRef} className="carousel__container">
+                <CarouselControlButton
+                    label={a11yPreviousText}
+                    type="prev"
+                    disabled={prevControlDisabled}
+                    onClick={handleControlClick} />
+                <CarouselList
+                    ref={listRef}
+                    gap={gap}
+                    itemsPerSlide={itemsPerSlide}
+                    slideWidth={slideWidth}
+                    activeIndex={activeIndex}
+                    onSetActiveIndex={setActiveIndex}>
                     {children}
                 </CarouselList>
-                <CarouselControlButton type="next" label={a11yNextText} onClick={handleControlClick} />
+                <CarouselControlButton
+                    type="next"
+                    label={a11yNextText}
+                    disabled={nextControlDisabled}
+                    onClick={handleControlClick} />
             </div>
         </div>
     )
