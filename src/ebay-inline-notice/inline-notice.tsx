@@ -45,7 +45,7 @@ const EbayInlineNotice: FC<Props> = ({
     return (
         <div
             {...rest}
-            className={classNames(className, 'inline-notice', { ['inline-notice--${status}']: !isGeneral })}
+            className={classNames(className, 'inline-notice', { [`inline-notice--${status}`]: !isGeneral })}
         >
             {!isGeneral ? (
                 <span className="inline-notice__header">
