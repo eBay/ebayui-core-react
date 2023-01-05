@@ -129,3 +129,36 @@ export const getNextIndex = (
 
     return normalizeIndex(i, items, itemsPerSlide)
 }
+
+export const getClosestIndex = (
+    scrollLeft: number,
+    items: ListItemRef[],
+    slideWidth: number,
+    itemsPerSlide = 1,
+    gap?: number): number => {
+    let closest
+
+    if (scrollLeft >= getMaxOffset(items, slideWidth) - gap) {
+        closest = items.length - 1
+    } else {
+        // Find the closest item using a binary search on each carousel slide.
+        const totalItems = items.length
+        let low = 0
+        let high = Math.ceil(totalItems / itemsPerSlide) - 1
+
+        while (high - low > 1) {
+            const mid = Math.floor((low + high) / 2)
+            if (scrollLeft > items[mid * itemsPerSlide].left) {
+                low = mid
+            } else {
+                high = mid
+            }
+        }
+
+        const deltaLow = Math.abs(scrollLeft - items[low * itemsPerSlide].left)
+        const deltaHigh = Math.abs(scrollLeft - items[high * itemsPerSlide].left)
+        closest = normalizeIndex((deltaLow > deltaHigh ? high : low) * itemsPerSlide, items, itemsPerSlide)
+    }
+
+    return closest
+}

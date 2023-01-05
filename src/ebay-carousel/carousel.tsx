@@ -80,6 +80,8 @@ const EbayCarousel: FC<CarouselProps> = ({
                     offset={offset}
                     gap={gap}
                     itemsPerSlide={itemsPerSlide}
+                    activeIndex={activeIndex}
+                    onSetActiveIndex={setActiveIndex}
                     slideWidth={slideWidth}>
                     {children}
                 </CarouselList>
