@@ -2,18 +2,13 @@ import React, {
     FC,
     ReactNode,
     Children,
-    ReactElement,
-    cloneElement,
     useEffect,
     useRef,
-    useState,
-    forwardRef,
     RefObject
 } from 'react'
 import classNames from 'classnames'
-import { getReactChildren, isNativeScrolling, getRelativeRects, alterChildren, getOffset } from './helpers'
+import { isNativeScrolling, alterChildren } from './helpers'
 import { scrollTransition } from './scroll-to-transition'
-import { withForwardRef } from '../common/component-utils'
 import { ListItemRef } from './types'
 
 type CarouselListProps = {
@@ -44,7 +39,7 @@ const CarouselList: FC<CarouselListProps> = ({
         if (!size) return
 
         const list = listRef.current
-        const isNativeScroll = getComputedStyle(list).overflowX !== 'visible'
+        const isNativeScroll = isNativeScrolling(list)
 
         if (isNativeScroll) {
             scrollTransition(list, offset, () => {})

@@ -1,12 +1,9 @@
 import React, {
     ComponentProps,
     FC,
-    forwardRef,
-    ReactNode,
-    Ref,
-    RefCallback,
     RefObject,
-    useEffect, useImperativeHandle, useLayoutEffect,
+    useEffect,
+    useImperativeHandle,
     useRef,
     useState
 } from 'react'
@@ -14,7 +11,6 @@ import classNames from 'classnames'
 import { withForwardRef } from '../common/component-utils'
 import { getRelativeRects } from './helpers'
 import { ListItemRef } from './types'
-import { LogLevel } from 'ts-loader/dist/logger'
 
 type ListProps = ComponentProps<'li'>
 type CarouselItemProps = ListProps & {
@@ -41,7 +37,7 @@ const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef,
         }
     }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const { fullyVisible } = itemsProp()
 
         setIsVisible(fullyVisible)

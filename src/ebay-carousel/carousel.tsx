@@ -1,9 +1,9 @@
-import React, {Children, ComponentProps, FC, useEffect, useLayoutEffect, useRef, useState} from 'react'
+import React, { Children, ComponentProps, FC, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import CarouselControlButton from './carousel-control-button'
 import CarouselList from './carousel-list'
-import {CarouselControlType, ListItemRef, MovementDirection} from './types'
-import { calculateSlideOffset, getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
+import { ListItemRef, MovementDirection } from './types'
+import { getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
 
 type CarouselProps = ComponentProps<'div'> & {
     className?: string;
@@ -40,15 +40,13 @@ const EbayCarousel: FC<CarouselProps> = ({
     const [activeIndex, setActiveIndex] = React.useState(0)
     const [slideWidth, setSlideWidth] = useState(0)
     const [offset, setOffset] = useState(0)
-    const containerRef = useRef(null)
+    const containerRef = useRef<HTMLDivElement | null>(null)
     const itemsRef = useRef<Array<ListItemRef | null>>([])
     const itemCount = Children.count(children)
     const isSingleSlide = itemCount <= itemsPerSlide
     const prevControlDisabled = isSingleSlide || offset === 0
     const nextControlDisabled =
         isSingleSlide || (offset === getMaxOffset(itemsRef.current, slideWidth))
-
-    console.log(offset)
 
     useEffect(() => {
         setOffset(getOffset(itemsRef.current, activeIndex, slideWidth))
@@ -66,7 +64,6 @@ const EbayCarousel: FC<CarouselProps> = ({
     const handleControlClick = (direction: MovementDirection) => {
         const nextIndex = getNextIndex(direction, activeIndex, itemsRef.current, slideWidth, itemsPerSlide)
         const slide = getSlide(activeIndex, itemsPerSlide, nextIndex)
-        console.log(nextIndex)
         setActiveIndex(nextIndex)
     }
 
