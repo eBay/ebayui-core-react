@@ -11,11 +11,11 @@ const renderComponent = (props?: any) => render(
         <EbayTourtipHeading type='tourtip'>Title</EbayTourtipHeading>
         <EbayTourtipContent>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <EbayTourtipFooter footerIndex='1 / 3'>
-                <button className="fake-link">Back</button>
-                <button className="btn btn--primary">Next</button>
-            </EbayTourtipFooter>
         </EbayTourtipContent>
+        <EbayTourtipFooter index='1 / 3'>
+            <button className="fake-link">Back</button>
+            <button className="btn btn--primary">Next</button>
+        </EbayTourtipFooter>
     </EbayTourtip>
 )
 
@@ -74,11 +74,11 @@ describe('<EbayTourtip>', () => {
                 <EbayTourtipHeading type='tourtip'>Title</EbayTourtipHeading>
                 <EbayTourtipContent>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <EbayTourtipFooter footerIndex='1 / 3'>
-                        <button className="fake-link">Back</button>
-                        <button className="btn btn--primary">Next</button>
-                    </EbayTourtipFooter>
                 </EbayTourtipContent>
+                <EbayTourtipFooter index='1 / 3'>
+                    <button className="fake-link">Back</button>
+                    <button className="btn btn--primary">Next</button>
+                </EbayTourtipFooter>
             </EbayTourtip>)
             }).toThrowError(`EbayTourtip: Please use a EbayTourtipHost that defines the host of the tourtip`);
             (console.error as jest.Mock).mockRestore()

@@ -72,13 +72,10 @@ Name | Required | Description
 | Name              | Type     | Stateful | Required | Description                                                                                                                                                  |
 | ----------------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `aria-label`      | String   | No       | Yes      | A descriptive label of what the tourtip button represents (e.g. "Important information"). Will overwrite `ariaLabel` prop from the `EbayTourtip`
-| `forwardedRef`      | Object   | No       | Yes      | A reference to the host element to be focused when component collapses
 
 
 ## EbayTourtipFooter Attributes
 
 | Name              | Type     | Stateful | Required | Description                                                                                                                                                  |
 | ----------------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `type`      | String   | No       | Yes      | defines the type of the element. `tooltip`, `tourtip`, `infotip`
-| `displayPagination`      | Boolean   | No       | No      | Boolean that controls the Pagination of the component
-| `footerIndex`      | String   | No       | No      | Text to be presented as the footer index, presented in format `currentIndex / totalEntries`, e.g. `1 / 3`
+| `index`      | String   | No       | Yes      | index text to be displayed in the footer. e.g. `1 / 3`

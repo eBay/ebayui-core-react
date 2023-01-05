@@ -63,11 +63,11 @@ storiesOf(`ebay-tourtip`, module)
                 </EbayTourtipHost>
                 <EbayTourtipContent>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <EbayTourtipFooter footerIndex='1 / 3'>
-                        <button className="fake-link">Back</button>
-                        <button className="btn btn--primary">Next</button>
-                    </EbayTourtipFooter>
                 </EbayTourtipContent>
+                <EbayTourtipFooter index='1 / 3'>
+                    <button className="fake-link">Back</button>
+                    <button className="btn btn--primary">Next</button>
+                </EbayTourtipFooter>
             </EbayTourtip>
         </div>
     )).add(`Footer and heading tourtip`, () => (
@@ -79,11 +79,11 @@ storiesOf(`ebay-tourtip`, module)
                 <EbayTourtipHeading type='tourtip'>Title</EbayTourtipHeading>
                 <EbayTourtipContent>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <EbayTourtipFooter footerIndex='1 / 3'>
-                        <button className="fake-link">Back</button>
-                        <button className="btn btn--primary">Next</button>
-                    </EbayTourtipFooter>
                 </EbayTourtipContent>
+                <EbayTourtipFooter index='1 / 3'>
+                    <button className="fake-link">Back</button>
+                    <button className="btn btn--primary">Next</button>
+                </EbayTourtipFooter>
             </EbayTourtip>
         </div>
     ))

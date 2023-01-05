@@ -1,14 +1,19 @@
-import { FC, ComponentProps } from 'react'
+import React, { FC, ComponentProps } from 'react'
 
-/**
- * This Component is used only for finding it as a child of EbayTooltip
- * and pass the properties to TooltipHost
-*/
 type TourtipFooterProps = ComponentProps<'div'> & {
-    type?: string;
-    displayPagination?: boolean;
-    footerIndex?: string;
+    index?: string;
 }
-const EbayTourtipFooter: FC<TourtipFooterProps> = () => null
+const EbayTourtipFooter: FC<TourtipFooterProps> = ({ index, children }) =>
+    (
+        <>
+            {index !== undefined && (
+                <span className="tourtip__index">
+                    {index}
+                </span>
+            )}
+            {children}
+        </>
+    )
+
 
 export default EbayTourtipFooter

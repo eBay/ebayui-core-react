@@ -94,6 +94,7 @@ exports[`Storyshots ebay-tourtip Footer and heading tourtip 1`] = `
             >
               <h2
                 class="tourtip__heading"
+                type="tourtip"
               >
                 Title
               </h2>

@@ -14,7 +14,6 @@ import EbayTourtipHost from './ebay-tourtip-host'
 import EbayTourtipFooter from './ebay-tourtip-footer'
 import EbayTourtipHeading from './ebay-tourtip-heading'
 
-// @todo: this type is weird, we should improve it
 type TourtipProps = Omit<TooltipProps, 'ref'> & {
     a11yCloseText: string;
     pointer?: PointerDirection;
@@ -36,24 +35,23 @@ const EbayTourtip:FC<TourtipProps> = ({
     pointer,
     ...rest
 }) => {
-    const buttonRef = useRef()
+    const hostRef = useRef()
     const {
         isExpanded,
         collapseTooltip
-    } = useTooltip({ onExpand, onCollapse, initialExpanded: true, hostRef: buttonRef })
+    } = useTooltip({ onExpand, onCollapse, initialExpanded: true, hostRef })
     const containerRef = useRef()
     const content = findComponent(children, EbayTourtipContent)
     if (!content) {
         throw new Error(`EbayTourtip: Please use a EbayTourtipContent that defines the content of the tourtip`)
     }
     const { children: contentChildren, contentProps } = content.props
-    const footer = findComponent(contentChildren, EbayTourtipFooter)
     const host = findComponent(children, EbayTourtipHost)
     if (!host) {
         throw new Error(`EbayTourtip: Please use a EbayTourtipHost that defines the host of the tourtip`)
     }
     const heading = findComponent(children, EbayTourtipHeading)
-
+    const footer = findComponent(children, EbayTourtipFooter)
 
     return (
         <Tooltip
@@ -65,7 +63,7 @@ const EbayTourtip:FC<TourtipProps> = ({
         >
             <TooltipHost
                 {...host.props}
-                forwardedRef={buttonRef}
+                forwardedRef={hostRef}
                 ariaLabel={ariaLabel}
                 ariaExpanded={isExpanded} />
             <TooltipContent
@@ -80,8 +78,8 @@ const EbayTourtip:FC<TourtipProps> = ({
                 {heading}
                 {contentChildren}
                 {footer && (
-                    <TooltipFooter displayPagination {...footer.props}>
-                        {footer.props.children}
+                    <TooltipFooter type="tourtip">
+                        {footer}
                     </TooltipFooter>
                 )}
             </TooltipContent>

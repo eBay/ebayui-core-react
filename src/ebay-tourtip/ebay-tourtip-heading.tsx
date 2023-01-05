@@ -1,16 +1,23 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { FC, HTMLProps } from 'react'
 import classNames from 'classnames'
 
-type Props = ComponentProps<'h2'> & {
-    type?: string
+type Props = HTMLProps<HTMLHeadingElement> & {
+    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    className?: string;
 }
 
-const EbayTooltipHeading: FC<Props> = ({
+const EbayTourtipHeading: FC<Props> = ({
+    as,
+    children,
     className,
-    type = 'infotip',
     ...props
-}) => (
-    <h2 {...props} className={classNames(`${type}__heading`, className)} />
-)
+}) => {
+    const HeadingTag = as || 'h2'
+    return (
+        <HeadingTag {...props} className={classNames(`tourtip__heading`, className)}>
+            {children}
+        </HeadingTag>
+    )
+}
 
-export default EbayTooltipHeading
+export default EbayTourtipHeading
