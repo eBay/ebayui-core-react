@@ -6,7 +6,7 @@ import { findComponent } from '../common/component-utils'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { NoticeStatus } from './types'
 
-type Props = {
+type Props = React.HTMLProps<HTMLDivElement> & {
     status?: NoticeStatus;
     onNoticeShow?: () => void;
     'aria-label': string;
@@ -21,7 +21,8 @@ const EbayInlineNotice: FC<Props> = ({
     children,
     hidden = false,
     'aria-label': ariaLabel,
-    onNoticeShow = () => {}
+    onNoticeShow = () => {},
+    ...rest
 }) => {
     useEffect(() => {
         if (!hidden) {
@@ -43,6 +44,7 @@ const EbayInlineNotice: FC<Props> = ({
 
     return (
         <div
+            {...rest}
             className={classNames(className, `inline-notice ${!isGeneral ? `inline-notice--${status}` : ``}`)}
             role="region">
             {!isGeneral ? (
