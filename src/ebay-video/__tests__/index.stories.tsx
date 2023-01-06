@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Meta } from '@storybook/react'
+import 'shaka-player/dist/controls.css'
+
 import { EbayButton, EbayVideo, EbayVideoProps, EbayVideoSource } from '../../index'
 import { action } from '../../../.storybook/action'
 

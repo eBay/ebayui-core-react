@@ -1,7 +1,6 @@
 import React, { ComponentProps, FC, SyntheticEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import shaka from 'shaka-player/dist/shaka-player.ui'
-import 'shaka-player/dist/controls.css'
 
 import { filterByType } from '../common/component-utils'
 import { EbayIcon, EbayProgressSpinner } from '../index'
