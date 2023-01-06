@@ -1,9 +1,21 @@
 import React from 'react'
 import {EbayCarousel, EbayItem} from "../index";
+import {ComponentMeta } from "@storybook/react";
 
-const story: any = {
+const story: ComponentMeta<typeof EbayCarousel> = {
   component: EbayCarousel,
-  title:'ebay-carousel'
+  title:'ebay-carousel',
+    argTypes: {
+      itemsPerSlide: {
+          control: { type: 'number' },
+          description: 'automatically fit a number of items for each carousel slide and enable slide controls. If set to a whole number, will default to x.1 where x is the whole number set.'
+      },
+      index: {
+          control: { type: 'number' },
+          name: 'index',
+          description: '0-based index position'
+      }
+    }
 };
 
 const items = Array(10).fill(0).map((_, i) => (
@@ -27,6 +39,14 @@ export const _Default = () => {
         {items}
     </EbayCarousel>
   );
+};
+
+export const ItemsPerSlide = (args) => {
+    return (
+        <EbayCarousel gap={16} itemsPerSlide={3} {...args}>
+            {items}
+        </EbayCarousel>
+    );
 };
 
 

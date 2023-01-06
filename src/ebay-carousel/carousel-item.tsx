@@ -17,7 +17,7 @@ type CarouselItemProps = ListProps & {
     slideWidth?: number;
     offset?: number;
     className?: string;
-    forwardedRef: RefObject<ListItemRef>
+    forwardedRef?: RefObject<ListItemRef>
 };
 
 

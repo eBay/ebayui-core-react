@@ -14,21 +14,21 @@ type CarouselProps = ComponentProps<'div'> & {
     a11yPreviousText?: string;
     a11yNextText?: string;
     ariaLabel?: string;
-    onCarouselUpdate: () => void;
-    onNext: () => void;
-    onPrevious: () => void;
-    onScroll: () => void;
-    onPlay: (event: React.SyntheticEvent) => void
-    onPause: (event: React.SyntheticEvent) => void
+    onCarouselUpdate?: () => void;
+    onNext?: () => void;
+    onPrevious?: () => void;
+    onScroll?: () => void;
+    onPlay?: (event: React.SyntheticEvent) => void
+    onPause?: (event: React.SyntheticEvent) => void
 };
 
 // TO-DO:
-// Scroll through slides using prev,next buttons
 // Image slides
 // Auto play
 
 const EbayCarousel: FC<CarouselProps> = ({
     gap = 16,
+    index = 0,
     itemsPerSlide,
     ariaLabel,
     a11yPreviousText,
@@ -37,7 +37,7 @@ const EbayCarousel: FC<CarouselProps> = ({
     children,
     ...rest
 }) => {
-    const [activeIndex, setActiveIndex] = React.useState(0)
+    const [activeIndex, setActiveIndex] = React.useState(index)
     const [slideWidth, setSlideWidth] = useState(0)
     const [offset, setOffset] = useState(0)
     const containerRef = useRef<HTMLDivElement | null>(null)
@@ -51,6 +51,12 @@ const EbayCarousel: FC<CarouselProps> = ({
     useEffect(() => {
         setOffset(getOffset(itemsRef.current, activeIndex, slideWidth))
     }, [itemsRef.current, activeIndex, slideWidth])
+
+    useEffect(() => {
+        if (index && index >= 0 && index <= itemCount - 1) {
+            setActiveIndex(index)
+        }
+    }, [index])
 
     useEffect(() => {
         itemsRef.current = itemsRef.current.splice(0, itemCount)
