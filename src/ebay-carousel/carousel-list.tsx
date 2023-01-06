@@ -14,6 +14,7 @@ type CarouselListProps = {
     slideWidth: number;
     offset: number;
     activeIndex: number;
+    nextControlDisabled?: boolean;
     className?: string;
     itemsRef?: RefObject<Array<ListItemRef | null>>;
     children: ReactNode;
@@ -29,6 +30,7 @@ const CarouselList: FC<CarouselListProps> = ({
     slideWidth,
     offset,
     activeIndex,
+    nextControlDisabled,
     className,
     itemsRef,
     children,
@@ -84,7 +86,9 @@ const CarouselList: FC<CarouselListProps> = ({
     }
 
     return (
-        <div className={classNames('carousel__viewport', 'carousel__viewport--mask', className)}>
+        <div className={classNames('carousel__viewport', {
+            'carousel__viewport--mask': !nextControlDisabled
+        }, className)}>
             <ul
                 className="carousel__list"
                 ref={listRef}

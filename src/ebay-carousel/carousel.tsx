@@ -103,6 +103,7 @@ const EbayCarousel: FC<CarouselProps> = ({
                     offset={offset}
                     gap={gap}
                     itemsPerSlide={itemsPerSlide}
+                    nextControlDisabled={nextControlDisabled}
                     activeIndex={activeIndex}
                     onScroll={onScroll}
                     onSetActiveIndex={setActiveIndex}
