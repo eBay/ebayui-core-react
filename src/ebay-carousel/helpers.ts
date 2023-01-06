@@ -45,7 +45,7 @@ export const alterChildren = (
     const childrenArray = getReactChildren(children)
 
     return childrenArray.map((item: ReactElement, index) => {
-        const { style } = item.props
+        const { style = {} } = item.props
         let itemWidth
 
         if (itemsPerSlide) {

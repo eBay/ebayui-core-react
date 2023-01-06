@@ -2,7 +2,6 @@ import React, {
     ComponentProps,
     FC,
     RefObject,
-    useEffect,
     useImperativeHandle,
     useRef,
     useState
@@ -24,25 +23,19 @@ const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef,
     const itemRef = useRef()
     const [isVisible, setIsVisible] = useState(false)
 
-    const itemsProp = () => {
+    useImperativeHandle(forwardedRef, () => {
         const { left, right } = getRelativeRects(itemRef.current)
         const fullyVisible = left === undefined ||
             (left - offset >= -0.01 && right - offset <= slideWidth + 0.01)
+
+        setIsVisible(fullyVisible)
 
         return {
             left,
             right,
             fullyVisible
         }
-    }
-
-    useEffect(() => {
-        const { fullyVisible } = itemsProp()
-
-        setIsVisible(fullyVisible)
     }, [itemRef.current, slideWidth, offset])
-
-    useImperativeHandle(forwardedRef, itemsProp, [itemRef.current, slideWidth, offset])
 
     return (
         <li
