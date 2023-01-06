@@ -6,12 +6,21 @@ const story: ComponentMeta<typeof EbayCarousel> = {
   component: EbayCarousel,
   title:'ebay-carousel',
     argTypes: {
+        gap: {
+            control: { type: 'number' },
+            type: { name: "number", required: false },
+            defaultValue: 16,
+            name: 'gap',
+            description: 'override the margin between carousel items in pixels\n'
+        },
       itemsPerSlide: {
           control: { type: 'number' },
+          type: { name: "number", required: false },
           description: 'automatically fit a number of items for each carousel slide and enable slide controls. If set to a whole number, will default to x.1 where x is the whole number set.'
       },
       index: {
           control: { type: 'number' },
+          type: { name: "number", required: false },
           name: 'index',
           description: '0-based index position'
       }
@@ -33,21 +42,26 @@ const items = Array(10).fill(0).map((_, i) => (
     </EbayItem>
 ))
 
-export const _Default = () => {
+export const Continuous = (args) => {
   return (
-    <EbayCarousel gap={16}>
+    <EbayCarousel {...args}>
         {items}
     </EbayCarousel>
   );
 };
 
-export const ItemsPerSlide = (args) => {
+const _ItemsPerSlide = (args) => {
     return (
-        <EbayCarousel gap={16} itemsPerSlide={3} {...args}>
+        <EbayCarousel gap={16} {...args}>
             {items}
         </EbayCarousel>
     );
 };
+
+export const ItemsPerSlide = _ItemsPerSlide.bind({})
+ItemsPerSlide.args = {
+    itemsPerSlide: 3
+}
 
 
 export default story;
