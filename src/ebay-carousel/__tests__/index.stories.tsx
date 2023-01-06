@@ -23,8 +23,12 @@ const story: ComponentMeta<typeof EbayCarousel> = {
           type: { name: "number", required: false },
           name: 'index',
           description: '0-based index position'
-      }
-    }
+      },
+      onSlide: { action: 'onSlide'},
+        onPrevious: { action: 'onPrevious'},
+        onNext: { action: 'onNext'},
+        onScroll: { action: 'onScroll'}
+    },
 };
 
 const items = Array(10).fill(0).map((_, i) => (

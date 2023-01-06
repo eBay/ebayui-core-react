@@ -7,7 +7,6 @@ import React, {
     useRef,
     useState
 } from 'react'
-import classNames from 'classnames'
 import { withForwardRef } from '../common/component-utils'
 import { getRelativeRects } from './helpers'
 import { ListItemRef } from './types'
@@ -21,7 +20,7 @@ type CarouselItemProps = ListProps & {
 };
 
 
-const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef, className, children, ...rest }) => {
+const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef, children, ...rest }) => {
     const itemRef = useRef()
     const [isVisible, setIsVisible] = useState(false)
 
@@ -49,7 +48,6 @@ const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef,
         <li
             ref={itemRef}
             aria-hidden={!isVisible}
-            className={classNames('carousel__snap-point', className)}
             {...rest}>
             {children}
         </li>

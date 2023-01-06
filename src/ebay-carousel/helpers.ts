@@ -52,6 +52,7 @@ export const alterChildren = (
             const itemsInSlide = itemsPerSlide + (itemsPerSlide % 1)
             itemWidth = `calc(${100 / itemsInSlide}% - ${((itemsInSlide - 1) * gap) / itemsInSlide}px)`
         }
+        const isStartOfSlide = itemsPerSlide ? index % itemsPerSlide === 0 : true
 
         return cloneElement(item, {
             ...item.props,
@@ -60,6 +61,7 @@ export const alterChildren = (
             ref: el => {
                 itemsRef.current[index] = el
             },
+            className: isStartOfSlide ? 'carousel__snap-point' : item.props.className,
             style: {
                 ...style,
                 width: itemWidth || style.width,

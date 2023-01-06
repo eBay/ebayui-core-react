@@ -17,6 +17,7 @@ type CarouselProps = ComponentProps<'div'> & {
     onNext?: (event: React.SyntheticEvent) => void;
     onPrevious?: (event: React.SyntheticEvent) => void;
     onScroll?: ({ index }) => void;
+    onSlide?: ({ slide }) => void;
     onPlay?: (event: React.SyntheticEvent) => void
     onPause?: (event: React.SyntheticEvent) => void
 };
@@ -28,13 +29,14 @@ type CarouselProps = ComponentProps<'div'> & {
 const EbayCarousel: FC<CarouselProps> = ({
     gap = 16,
     index = 0,
-    itemsPerSlide,
+    itemsPerSlide: _itemsPerSlide,
     ariaLabel,
     a11yPreviousText,
     a11yNextText,
     onScroll = () => {},
     onNext = () => {},
     onPrevious = () => {},
+    onSlide = () => {},
     className,
     children,
     ...rest
@@ -45,10 +47,17 @@ const EbayCarousel: FC<CarouselProps> = ({
     const containerRef = useRef<HTMLDivElement | null>(null)
     const itemsRef = useRef<Array<ListItemRef | null>>([])
     const itemCount = Children.count(children)
+    const itemsPerSlide = Math.floor(_itemsPerSlide) || undefined
     const isSingleSlide = itemCount <= itemsPerSlide
     const prevControlDisabled = isSingleSlide || offset === 0
     const nextControlDisabled =
         isSingleSlide || (offset === getMaxOffset(itemsRef.current, slideWidth))
+    const mergeClasses = classNames(className,
+        {
+            'carousel--slides': itemsPerSlide,
+            'carousel--peek': itemsPerSlide % 1 === 0
+        }
+    )
 
     useEffect(() => {
         setOffset(getOffset(itemsRef.current, activeIndex, slideWidth))
@@ -78,10 +87,11 @@ const EbayCarousel: FC<CarouselProps> = ({
         } else {
             onNext(event)
         }
+        onSlide({ slide })
     }
 
     return (
-        <div className={classNames('carousel', className)} aria-label={ariaLabel} {...rest}>
+        <div className={classNames('carousel', mergeClasses)} aria-label={ariaLabel} {...rest}>
             <div ref={containerRef} className="carousel__container">
                 <CarouselControlButton
                     label={a11yPreviousText}
