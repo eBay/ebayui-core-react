@@ -18,6 +18,7 @@ type CarouselListProps = {
     itemsRef?: RefObject<Array<ListItemRef | null>>;
     children: ReactNode;
     onSetActiveIndex: (index: number) => void
+    onScroll?: ({ index }) => void;
 };
 
 let scrollTimeout = null
@@ -31,7 +32,8 @@ const CarouselList: FC<CarouselListProps> = ({
     className,
     itemsRef,
     children,
-    onSetActiveIndex
+    onSetActiveIndex,
+    onScroll
 }) => {
     const [translateLeft, setTranslateLeft] = useState(0)
     const [skipScrolling, setSkipScrolling] = useState(false)
@@ -66,6 +68,7 @@ const CarouselList: FC<CarouselListProps> = ({
         if (closest !== activeIndex) {
             setSkipScrolling(true)
             onSetActiveIndex(closest)
+            onScroll({ index: closest })
         }
     }, [listRef.current, itemsRef.current, slideWidth, activeIndex, onSetActiveIndex])
 

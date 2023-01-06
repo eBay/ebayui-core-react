@@ -1,6 +1,5 @@
-import React, { Children, cloneElement, ReactElement, ReactNode, ReactNodeArray, RefObject } from 'react'
+import { Children, cloneElement, ReactElement, ReactNode, ReactNodeArray, RefObject } from 'react'
 import { ListItemRef, MovementDirection, RelativeRect } from './types'
-import { LogLevel } from 'ts-loader/dist/logger'
 
 export const getReactChildren = (children: ReactNode): ReactNodeArray => Children.toArray(children)
 

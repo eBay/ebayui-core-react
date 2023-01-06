@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC, SyntheticEvent } from 'react'
 import classNames from 'classnames'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { CarouselControlType, MovementDirection } from './types'
@@ -8,7 +8,7 @@ type CarouselControlProps = {
     hidden?: boolean;
     type: CarouselControlType;
     disabled?: boolean;
-    onClick: (direction: MovementDirection) => void;
+    onClick: (direction: MovementDirection) => (event: SyntheticEvent<HTMLButtonElement>) => void;
 }
 
 const icon: Record<CarouselControlType, Icon> = {
@@ -22,7 +22,7 @@ const CarouselControlButton: FC<CarouselControlProps> = ({ type, label, hidden, 
         aria-label={label}
         aria-disabled={disabled}
         disabled={disabled}
-        onClick={() => onClick(type === 'prev' ? 'LEFT' : 'RIGHT')}>
+        onClick={onClick(type === 'prev' ? 'LEFT' : 'RIGHT')}>
         <EbayIcon
             className={classNames('icon', `icon--carousel-${type}`)}
             focusable={false}

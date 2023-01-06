@@ -3,31 +3,31 @@
 ## Usage
 
 ```react
-<EbayFullscreenDialog open a11yClosetext = "Close">
-    <EbayDialogHeader>Heading</EbayDialogHeader>
-    <p>Body content</p>
-    <EbayDialogFooter>Heading</EbayDialogHeader>
-</EbayFullscreenDialog>
+<EbayCarousel>
+    <CarouselItem>
+        Item 1
+    </CarouselItem>
+</EbayCarousel>
 ```
 
 ## Attributes
 
-Name | Type | Stateful | Required | Description
---- | --- | --- | --- | ---
-`open` | Boolean | Yes | No | Whether dialog is open.
-`focus` | String | No | No | An id for an element which will receive focus when the drawer opens (defaults to close button).
-`a11yCloseText` | String | No | Yes | A11y text for close button and mask.
-`animated` | Boolean | Yes | No | Renders the dialog with an animation. Note that the dialog will always be present in the DOM
+Name | Type    | Stateful | Required | Description
+--- |---------|----------| --- | ---
+`gap` | Number  | Yes      | No | margin between carousel items in pixels.
+`index` | Number  | Yes      | No | 0 - based index position. It sets the current slide to be displayed
+`itemsPerSlide` | Number  | Yes      | No | number of items for each carousel slide and enable slide controls. If set to a whole number, will default to x.1 where x is the whole number set.
+`a11yPreviousText` | String  | No       | Yes | A11y text for previous button and mask.
+`a11yNextText` | String  | No       | Yes | A11y text for next button and mask.
+`ariaLabel` | String  | No       | Yes | a11y label text for the carousel.
 
 ## Events
 
-Event | Data | Description
---- | --- | ---
-`onOpen` |  | Trigggered when dialog is opened
-`onClose` |  | Triggered when dialog is closed
+Event | Data  | Description
+--- |-------| ---
+`onNext` | Event | Trigggered when next slide button is clicked
+`onPrevious` | Event | Triggered when previous slide button is clicked
+`onScroll` | Event | Triggered when scrolling slides
 
-## EbayDialogHeader
-Will render a header content for fullscreen dialog. Will always render the header element even if this is not present
-
-## EbayDialogFooter
-Will render the footer content for fullscreen dialog. If not present then will not have any footer.
+## CarouselItem
+Will render slides content

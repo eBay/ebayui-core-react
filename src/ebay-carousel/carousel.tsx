@@ -1,4 +1,4 @@
-import React, { Children, ComponentProps, FC, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { Children, ComponentProps, FC, SyntheticEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import CarouselControlButton from './carousel-control-button'
 import CarouselList from './carousel-list'
@@ -14,10 +14,9 @@ type CarouselProps = ComponentProps<'div'> & {
     a11yPreviousText?: string;
     a11yNextText?: string;
     ariaLabel?: string;
-    onCarouselUpdate?: () => void;
-    onNext?: () => void;
-    onPrevious?: () => void;
-    onScroll?: () => void;
+    onNext?: (event: React.SyntheticEvent) => void;
+    onPrevious?: (event: React.SyntheticEvent) => void;
+    onScroll?: ({ index }) => void;
     onPlay?: (event: React.SyntheticEvent) => void
     onPause?: (event: React.SyntheticEvent) => void
 };
@@ -33,6 +32,9 @@ const EbayCarousel: FC<CarouselProps> = ({
     ariaLabel,
     a11yPreviousText,
     a11yNextText,
+    onScroll = () => {},
+    onNext = () => {},
+    onPrevious = () => {},
     className,
     children,
     ...rest
@@ -67,14 +69,19 @@ const EbayCarousel: FC<CarouselProps> = ({
         setSlideWidth(containerWidth)
     }, [containerRef.current])
 
-    const handleControlClick = (direction: MovementDirection) => {
+    const handleControlClick = (direction: MovementDirection) => (event: SyntheticEvent<HTMLButtonElement>) => {
         const nextIndex = getNextIndex(direction, activeIndex, itemsRef.current, slideWidth, itemsPerSlide)
         const slide = getSlide(activeIndex, itemsPerSlide, nextIndex)
         setActiveIndex(nextIndex)
+        if (direction === 'LEFT') {
+            onPrevious(event)
+        } else {
+            onNext(event)
+        }
     }
 
     return (
-        <div className={classNames('carousel', className)} {...rest}>
+        <div className={classNames('carousel', className)} aria-label={ariaLabel} {...rest}>
             <div ref={containerRef} className="carousel__container">
                 <CarouselControlButton
                     label={a11yPreviousText}
@@ -87,6 +94,7 @@ const EbayCarousel: FC<CarouselProps> = ({
                     gap={gap}
                     itemsPerSlide={itemsPerSlide}
                     activeIndex={activeIndex}
+                    onScroll={onScroll}
                     onSetActiveIndex={setActiveIndex}
                     slideWidth={slideWidth}>
                     {children}
