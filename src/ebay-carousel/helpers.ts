@@ -16,9 +16,9 @@ export function getRelativeRects(el: Element): RelativeRect {
     }
 }
 
-export const isNativeScrolling = (el: Element) => getComputedStyle(el).overflowX !== 'visible'
+export const isNativeScrolling = (el: Element): boolean => getComputedStyle(el).overflowX !== 'visible'
 
-export const getMaxOffset = (items: ListItemRef[], slideWidth: number) => {
+export const getMaxOffset = (items: ListItemRef[], slideWidth: number): number => {
     if (!items.length) {
         return 0
     }
@@ -27,7 +27,7 @@ export const getMaxOffset = (items: ListItemRef[], slideWidth: number) => {
     return Math.max(lastEl.right - slideWidth, 0) || 0
 }
 
-export const getOffset = (items: ListItemRef[], index: number, slideWidth: number) => {
+export const getOffset = (items: ListItemRef[], index: number, slideWidth: number): number => {
     if (!items.length) {
         return 0
     }
@@ -41,7 +41,7 @@ export const alterChildren = (
     itemsPerSlide?: number,
     slideWidth?: number,
     offset?: number,
-    gap?: number) => {
+    gap?: number): ReactElement[] => {
     const childrenArray = getReactChildren(children)
 
     return childrenArray.map((item: ReactElement, index) => {
@@ -73,7 +73,7 @@ export const alterChildren = (
 /**
  * Ensures that an index is valid.
  */
-const normalizeIndex = (index: number, items?: ListItemRef[], itemsPerSlide?: number) => {
+const normalizeIndex = (index: number, items?: ListItemRef[], itemsPerSlide?: number): number => {
     if (index > 0) {
         let result = index
         result %= items.length || 1 // Ensure index is within bounds.
@@ -89,7 +89,7 @@ const normalizeIndex = (index: number, items?: ListItemRef[], itemsPerSlide?: nu
  * Gets the slide for a given index.
  * Defaults to the current index if none provided.
  */
-export const getSlide = (activeIndex: number, itemsPerSlide?: number, nextIndex = activeIndex) => {
+export const getSlide = (activeIndex: number, itemsPerSlide?: number, nextIndex = activeIndex): undefined | number => {
     if (!itemsPerSlide) {
         return
     }
@@ -97,14 +97,14 @@ export const getSlide = (activeIndex: number, itemsPerSlide?: number, nextIndex 
     return Math.ceil(nextIndex / itemsPerSlide)
 }
 
-const getDelta = (direction: MovementDirection) => direction === 'LEFT' ? -1 : 1
+const getDelta = (direction: MovementDirection): number => direction === 'LEFT' ? -1 : 1
 
 export const getNextIndex = (
     direction: MovementDirection,
     activeIndex: number,
     items?: ListItemRef[],
     slideWidth?: number,
-    itemsPerSlide?: number) => {
+    itemsPerSlide?: number): number => {
     let i = activeIndex
     let item
 

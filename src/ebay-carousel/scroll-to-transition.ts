@@ -9,7 +9,8 @@
  * @fn {(offset: number)=>{}} fn The function to call after scrolling completes.
  * @return {function} A function to cancel the scroll listener.
  */
-const onScrollEnd = (el: HTMLElement, fn: (offset: number) => void) => {
+type ReturnFunctionType = () => void
+const onScrollEnd = (el: HTMLElement, fn: (offset: number) => void): ReturnFunctionType => {
     let timeout: any
     let frame: number
     let lastPos: number|undefined;
@@ -33,7 +34,7 @@ const onScrollEnd = (el: HTMLElement, fn: (offset: number) => void) => {
     }
 }
 
-const supportsScrollBehavior = typeof window !== 'undefined' && 'scrollBehavior' in document.body.style
+const supportsScrollBehavior: boolean = typeof window !== 'undefined' && 'scrollBehavior' in document.body.style
 
 /**
  * Utility to animate scroll position of an element using an `ease-out` curve over 250ms.
@@ -44,7 +45,7 @@ const supportsScrollBehavior = typeof window !== 'undefined' && 'scrollBehavior'
  * @param {function} fn A function that will be called after the transition completes.
  * @return {function} A function that cancels the transition.
  */
-export function scrollTransition(el: HTMLElement, to: number, fn: () => void) {
+export function scrollTransition(el: HTMLElement, to: number, fn: () => void): ReturnFunctionType {
     if (supportsScrollBehavior) {
         el.scrollTo({ left: to })
         return onScrollEnd(el, fn)
