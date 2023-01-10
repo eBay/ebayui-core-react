@@ -19,7 +19,6 @@ Name | Type    | Stateful | Required | Description
 `itemsPerSlide` | Number  | Yes      | No | number of items for each carousel slide and enable slide controls. If set to a whole number, will default to x.1 where x is the whole number set.
 `a11yPreviousText` | String  | No       | Yes | A11y text for previous button and mask.
 `a11yNextText` | String  | No       | Yes | A11y text for next button and mask.
-`ariaLabel` | String  | No       | Yes | a11y label text for the carousel.
 
 ## Events
 
@@ -28,6 +27,8 @@ Event | Data  | Description
 `onNext` | Event | Trigggered when next slide button is clicked
 `onPrevious` | Event | Triggered when previous slide button is clicked
 `onScroll` | Event | Triggered when scrolling slides
+`onSlide` | Event | new slide is navigated to (by controls or API)
+
 
 ## CarouselItem
 Will render slides content

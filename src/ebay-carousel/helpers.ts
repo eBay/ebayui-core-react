@@ -1,8 +1,6 @@
 import { Children, cloneElement, ReactElement, ReactNode, ReactNodeArray, RefObject } from 'react'
 import { ListItemRef, MovementDirection, RelativeRect } from './types'
 
-export const getReactChildren = (children: ReactNode): ReactNodeArray => Children.toArray(children)
-
 export function getRelativeRects(el: Element): RelativeRect {
     const parent = el.parentElement
     const currentLeft = parent
@@ -41,35 +39,31 @@ export const alterChildren = (
     itemsPerSlide?: number,
     slideWidth?: number,
     offset?: number,
-    gap?: number): ReactElement[] => {
-    const childrenArray = getReactChildren(children)
+    gap?: number): ReactElement[] => Children.map(children, (item: ReactElement, index) => {
+    const { style = {} } = item.props
+    let itemWidth
 
-    return childrenArray.map((item: ReactElement, index) => {
-        const { style = {} } = item.props
-        let itemWidth
+    if (itemsPerSlide) {
+        const itemsInSlide = itemsPerSlide + (itemsPerSlide % 1)
+        itemWidth = `calc(${100 / itemsInSlide}% - ${((itemsInSlide - 1) * gap) / itemsInSlide}px)`
+    }
+    const isStartOfSlide = itemsPerSlide ? index % itemsPerSlide === 0 : true
 
-        if (itemsPerSlide) {
-            const itemsInSlide = itemsPerSlide + (itemsPerSlide % 1)
-            itemWidth = `calc(${100 / itemsInSlide}% - ${((itemsInSlide - 1) * gap) / itemsInSlide}px)`
+    return cloneElement(item, {
+        ...item.props,
+        slideWidth,
+        offset,
+        ref: el => {
+            itemsRef.current[index] = el
+        },
+        className: isStartOfSlide ? 'carousel__snap-point' : item.props.className,
+        style: {
+            ...style,
+            width: itemWidth || style.width,
+            marginRight: gap && index !== Children.count(children) - 1 ? `${gap}px` : style.marginRight
         }
-        const isStartOfSlide = itemsPerSlide ? index % itemsPerSlide === 0 : true
-
-        return cloneElement(item, {
-            ...item.props,
-            slideWidth,
-            offset,
-            ref: el => {
-                itemsRef.current[index] = el
-            },
-            className: isStartOfSlide ? 'carousel__snap-point' : item.props.className,
-            style: {
-                ...style,
-                width: itemWidth || style.width,
-                marginRight: gap && index !== childrenArray.length - 1 ? `${gap}px` : style.marginRight
-            }
-        })
     })
-}
+})
 /**
  * Ensures that an index is valid.
  */

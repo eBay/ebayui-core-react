@@ -22,8 +22,6 @@ type CarouselListProps = {
     onScroll?: ({ index }) => void;
 };
 
-let scrollTimeout = null
-
 const CarouselList: FC<CarouselListProps> = ({
     gap = 16,
     itemsPerSlide,
@@ -41,11 +39,12 @@ const CarouselList: FC<CarouselListProps> = ({
     const [skipScrolling, setSkipScrolling] = useState(false)
     const [scrollTransitioning, setScrollTransitioning] = useState(false)
     const listRef = useRef<HTMLUListElement | null>(null)
+    const scrollTimeout = useRef(null)
 
     useEffect(() => {
         const size = Children.count(children)
 
-        if (!size) return
+        if (!size || !listRef.current) return
 
         if (skipScrolling) {
             setSkipScrolling(false)
@@ -62,7 +61,7 @@ const CarouselList: FC<CarouselListProps> = ({
         } else {
             setTranslateLeft(offset)
         }
-    }, [offset, listRef.current])
+    }, [offset])
 
     const handleFinishScrolling = useCallback(() => {
         const scrollLeft = listRef.current.scrollLeft
@@ -75,10 +74,10 @@ const CarouselList: FC<CarouselListProps> = ({
     }, [listRef.current, itemsRef.current, slideWidth, activeIndex, onSetActiveIndex])
 
     const handleScroll = () => {
-        if (scrollTimeout) {
-            clearTimeout(scrollTimeout)
+        if (scrollTimeout.current) {
+            clearTimeout(scrollTimeout.current)
         }
-        scrollTimeout = setTimeout(() => {
+        scrollTimeout.current = setTimeout(() => {
             if (!scrollTransitioning) {
                 handleFinishScrolling()
             }

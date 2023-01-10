@@ -1,16 +1,16 @@
 import React from 'react'
 import requireContext from 'node-require-context'
 import { initStoryshots } from '../../../config/jest/storyshots'
-import { CarouselItem, EbayCarousel } from "../index";
+import { EbayCarouselItem, EbayCarousel } from "../index";
 import { render, screen, cleanup } from "@testing-library/react";
 
 // NOTE: need to mock scrollTo since JSDOM does not support it
 jest.mock('../scroll-to-transition')
 
 const items = Array(8).fill(0).map((_, i) => (
-    <CarouselItem key={i}>
+    <EbayCarouselItem key={i}>
         Item Text {i + 1}
-    </CarouselItem>
+    </EbayCarouselItem>
 ))
 
 // Testing current slide or items per slides is not possible

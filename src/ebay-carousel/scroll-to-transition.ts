@@ -5,8 +5,8 @@
  * Checks on an interval to see if the element is scrolling.
  * When the scrolling has finished it then calls the function.
  *
- * @el {HTMLElement} el The element which scrolls.
- * @fn {(offset: number)=>{}} fn The function to call after scrolling completes.
+ * @param {HTMLElement} el The element which scrolls.
+ * @param {(offset: number)=>{}} fn The function to call after scrolling completes.
  * @return {function} A function to cancel the scroll listener.
  */
 type ReturnFunctionType = () => void
@@ -115,9 +115,9 @@ export function scrollTransition(el: HTMLElement, to: number, fn: () => void): R
  * Ease out timing function.
  * Based on https://gist.github.com/gre/1650294.
  *
- * @v {number} val - A number between 0 and 1.
+ * @param {number} val - A number between 0 and 1.
  * @return {number}
  */
-function easeInOut(v: number): number {
-    return v < 0.5 ? 2 * v * v : -1 + (4 - 2 * v) * v
+function easeInOut(val: number): number {
+    return val < 0.5 ? 2 * val * val : -1 + (4 - 2 * val) * val
 }

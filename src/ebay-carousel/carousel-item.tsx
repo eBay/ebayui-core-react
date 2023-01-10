@@ -19,11 +19,13 @@ type CarouselItemProps = ListProps & {
 };
 
 
-const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef, children, ...rest }) => {
+const EbayCarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef, children, ...rest }) => {
     const itemRef = useRef()
     const [isVisible, setIsVisible] = useState(false)
 
     useImperativeHandle(forwardedRef, () => {
+        if (!itemRef.current) return
+
         const { left, right } = getRelativeRects(itemRef.current)
         const fullyVisible = left === undefined ||
             (left - offset >= -0.01 && right - offset <= slideWidth + 0.01)
@@ -35,7 +37,7 @@ const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef,
             right,
             fullyVisible
         }
-    }, [itemRef.current, slideWidth, offset])
+    }, [slideWidth, offset])
 
     return (
         <li
@@ -47,4 +49,4 @@ const CarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwardedRef,
     )
 }
 
-export default withForwardRef(CarouselItem)
+export default withForwardRef(EbayCarouselItem)

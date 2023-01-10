@@ -4,6 +4,7 @@ import CarouselControlButton from './carousel-control-button'
 import CarouselList from './carousel-list'
 import { ListItemRef, MovementDirection } from './types'
 import { getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
+import { debounce } from '../common/debounce'
 
 type CarouselProps = ComponentProps<'div'> & {
     className?: string;
@@ -13,7 +14,6 @@ type CarouselProps = ComponentProps<'div'> & {
     itemsPerSlide?: number; // number of slides to be displayed
     a11yPreviousText?: string;
     a11yNextText?: string;
-    ariaLabel?: string;
     onNext?: (event: React.SyntheticEvent) => void;
     onPrevious?: (event: React.SyntheticEvent) => void;
     onScroll?: ({ index }) => void;
@@ -30,7 +30,6 @@ const EbayCarousel: FC<CarouselProps> = ({
     gap = 16,
     index = 0,
     itemsPerSlide: _itemsPerSlide,
-    ariaLabel,
     a11yPreviousText,
     a11yNextText,
     onScroll = () => {},
@@ -41,7 +40,7 @@ const EbayCarousel: FC<CarouselProps> = ({
     children,
     ...rest
 }) => {
-    const [activeIndex, setActiveIndex] = React.useState(index)
+    const [activeIndex, setActiveIndex] = useState(index)
     const [slideWidth, setSlideWidth] = useState(0)
     const [offset, setOffset] = useState(0)
     const containerRef = useRef<HTMLDivElement | null>(null)
@@ -52,19 +51,28 @@ const EbayCarousel: FC<CarouselProps> = ({
     const prevControlDisabled = isSingleSlide || offset === 0
     const nextControlDisabled =
         isSingleSlide || (offset === getMaxOffset(itemsRef.current, slideWidth))
-    const mergeClasses = classNames(className,
-        {
-            'carousel--slides': itemsPerSlide,
-            'carousel--peek': itemsPerSlide % 1 === 0
+
+    const handleResize = () => {
+        if (!containerRef.current) return
+
+        const { width: containerWidth } = containerRef.current.getBoundingClientRect()
+        setSlideWidth(containerWidth)
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', debounce(handleResize, 16))
+
+        return () => {
+            window.removeEventListener('resize', debounce(handleResize, 16))
         }
-    )
+    }, [])
 
     useEffect(() => {
         setOffset(getOffset(itemsRef.current, activeIndex, slideWidth))
-    }, [itemsRef.current, activeIndex, slideWidth])
+    }, [activeIndex, slideWidth])
 
     useEffect(() => {
-        if (index && index >= 0 && index <= itemCount - 1) {
+        if (index >= 0 && index <= itemCount - 1) {
             setActiveIndex(index)
         }
     }, [index])
@@ -91,7 +99,13 @@ const EbayCarousel: FC<CarouselProps> = ({
     }
 
     return (
-        <div className={classNames('carousel', mergeClasses)} aria-label={ariaLabel} {...rest}>
+        <div
+            className={classNames('carousel', className,
+                {
+                    'carousel--slides': itemsPerSlide,
+                    'carousel--peek': itemsPerSlide % 1 === 0
+                })}
+            {...rest}>
             <div ref={containerRef} className="carousel__container">
                 <CarouselControlButton
                     label={a11yPreviousText}

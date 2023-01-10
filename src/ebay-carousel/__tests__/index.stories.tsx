@@ -1,5 +1,5 @@
 import React from 'react'
-import {EbayCarousel, CarouselItem} from "../index";
+import {EbayCarousel, EbayCarouselItem} from "../index";
 import {ComponentMeta } from "@storybook/react";
 
 const story: ComponentMeta<typeof EbayCarousel> = {
@@ -32,7 +32,7 @@ const story: ComponentMeta<typeof EbayCarousel> = {
 };
 
 const items = Array(10).fill(0).map((_, i) => (
-    <CarouselItem style={{
+    <EbayCarouselItem style={{
         color: "#0a1c6b",
         background: "#c2f5ff",
         fontSize: "24px",
@@ -43,7 +43,7 @@ const items = Array(10).fill(0).map((_, i) => (
         textAlign: "center"
     }} className="demo-card" key={i}>
         Item {i + 1}
-    </CarouselItem>
+    </EbayCarouselItem>
 ))
 
 export const Continuous = (args) => {
