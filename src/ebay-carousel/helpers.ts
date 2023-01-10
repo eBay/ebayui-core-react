@@ -1,4 +1,4 @@
-import { Children, cloneElement, ReactElement, ReactNode, ReactNodeArray, RefObject } from 'react'
+import { Children, cloneElement, ReactElement, ReactNode, RefObject } from 'react'
 import { ListItemRef, MovementDirection, RelativeRect } from './types'
 
 export function getRelativeRects(el: Element): RelativeRect {
