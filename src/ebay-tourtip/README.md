@@ -39,11 +39,11 @@ yarn add @ebay/ui-core-react
     <EbayTourtipHeading type='tourtip'>Title</EbayTourtipHeading>
     <EbayTourtipContent>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <EbayTourtipFooter footerIndex='1 / 3'>
-            <button className="fake-link">Back</button>
-            <button className="btn btn--primary">Next</button>
-        </EbayTourtipFooter>
     </EbayTourtipContent>
+    <EbayTourtipFooter index='1 / 3'>
+        <button className="fake-link">Back</button>
+        <button className="btn btn--primary">Next</button>
+    </EbayTourtipFooter>
 </EbayTourtip>
 ```
 
@@ -64,7 +64,8 @@ yarn add @ebay/ui-core-react
 Name | Required | Description
 --- | --- | ---
 `EbayTourtipHost`    | Yes | The custom host-button (trigger) for the tourtip
-`EbayTourtipHeading` | No | The heading to be displayed in the tourtip
+`EbayTourtipHeading` | No | The heading to be displayed in the tourtip 
+`EbayTourtipFooter` | Yes | The footer to be displayed in the tourtip
 `EbayTourtipContent` | Yes | The content to be displayed in the tourtip
 
 ## EbayTourtipHost Attributes
@@ -78,4 +79,4 @@ Name | Required | Description
 
 | Name              | Type     | Stateful | Required | Description                                                                                                                                                  |
 | ----------------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `index`      | String   | No       | Yes      | index text to be displayed in the footer. e.g. `1 / 3`
+| `index`      | String   | No       | No      | defines the text to be displayed as index of the Tourtip if any. e.g `1 - 3` meaning Tourtip 1 of 3
