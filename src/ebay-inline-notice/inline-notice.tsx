@@ -6,7 +6,7 @@ import { findComponent } from '../common/component-utils'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { NoticeStatus } from './types'
 
-type Props = {
+type Props = React.ComponentProps<'div'> & {
     status?: NoticeStatus;
     onNoticeShow?: () => void;
     'aria-label': string;
@@ -21,7 +21,8 @@ const EbayInlineNotice: FC<Props> = ({
     children,
     hidden = false,
     'aria-label': ariaLabel,
-    onNoticeShow = () => {}
+    onNoticeShow = () => {},
+    ...rest
 }) => {
     useEffect(() => {
         if (!hidden) {
@@ -42,7 +43,10 @@ const EbayInlineNotice: FC<Props> = ({
     const isGeneral = status === `general`
 
     return (
-        <div className={classNames(className, `inline-notice ${!isGeneral ? `inline-notice--${status}` : ``}`)}>
+        <div
+            {...rest}
+            className={classNames(className, 'inline-notice', { [`inline-notice--${status}`]: !isGeneral })}
+        >
             {!isGeneral ? (
                 <span className="inline-notice__header">
                     <EbayIcon name={`${status}FilledSmall` as Icon} a11yText={ariaLabel} a11yVariant="label" />
