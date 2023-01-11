@@ -38,6 +38,7 @@ Name | Type | Required | Description
 `checked` | Boolean | No | for type `radio`, `checkbox`: whether or not the item is checked
 `disabled` | Boolean | No | makes the menu item disabled
 `badgeNumber` | Number | No | used as the number to be placed in the badge
+`badgeAriaLabel` | String | If `badgeNumber` provided | passed as the `aria-label` directly to the badge
 
 ## EbayMenuSeparator
 Example:
