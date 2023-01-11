@@ -3,7 +3,10 @@
  * and pass the properties to NoticeContent
  */
 import { FC } from 'react'
+import { NoticeContentProps } from '../../../common/notice-utils/notice-content'
 
-const EbayNoticeContent: FC = () => null
+type Props = Omit<NoticeContentProps, 'type'>
+
+const EbayNoticeContent: FC<Props> = () => null
 
 export default EbayNoticeContent
