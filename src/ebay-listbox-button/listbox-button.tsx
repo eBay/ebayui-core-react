@@ -61,6 +61,8 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const [expanded, setExpanded] = useState(false)
     // Additional flag to avoid multiple re-render when users tries to open and close
     const [optionsOpened, setOptionsOpened] = useState(false)
+    // variable tabIndex
+    const [listContainerTabIndex, setListContainerTabIndex] = useState(-1)
 
     useEffect(() => {
         setSelectedOption(selectedOptionFromValue)
@@ -80,6 +82,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         setSelectedIndex(index)
         setExpanded(false)
         setActiveDescendant(index)
+        setListContainerTabIndex(0)
         buttonRef.current.focus()
         onSelect(e, optionValue, index)
     }
@@ -126,12 +129,18 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         setSelectedOption(childrenArray[updatedIndex])
     }
 
-    const focusOptionsContainer = (focusOptions?: FocusOptions) =>
-        setTimeout(() => optionsContainerRef?.current?.focus(focusOptions), 0)
+    const focusOptionsContainer = (focusOptions?: FocusOptions) => {
+        setListContainerTabIndex(0)
+        return setTimeout(() => optionsContainerRef?.current?.focus(focusOptions), 0)
+    }
     const onButtonClick = () => {
         setExpanded(!expanded)
         setOptionsOpened(true)
         focusOptionsContainer({ preventScroll: true })
+        // setting the tabIndex attribute depending on the expanded state of the list, 0 when opened, -1 when closed
+        if (expanded) {
+            setListContainerTabIndex(-1)
+        }
     }
     const onButtonKeyup = (e: KeyboardEvent<HTMLButtonElement>) => {
         switch (e.key as Key) {
@@ -235,7 +244,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                     <div
                         className="listbox-button__options"
                         role="listbox"
-                        tabIndex={0}
+                        tabIndex={listContainerTabIndex}
                         ref={optionsContainerRef}
                         onKeyDown={(e) => onOptionContainerKeydown(e)}
                         // adding onMouseDown preventDefault b/c on IE the onClick event is not being fired on each
