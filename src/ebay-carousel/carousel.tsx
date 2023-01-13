@@ -2,7 +2,7 @@ import React, { Children, ComponentProps, FC, SyntheticEvent, useEffect, useRef,
 import classNames from 'classnames'
 import CarouselControlButton from './carousel-control-button'
 import CarouselList from './carousel-list'
-import { ListItemRef, MovementDirection } from './types'
+import { ListItemRef } from './types'
 import { getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
 import { debounce } from '../common/debounce'
 
@@ -86,7 +86,7 @@ const EbayCarousel: FC<CarouselProps> = ({
         setSlideWidth(containerWidth)
     }, [containerRef.current])
 
-    const handleControlClick = (direction: MovementDirection) => (event: SyntheticEvent<HTMLButtonElement>) => {
+    const handleControlClick = (event: SyntheticEvent<HTMLButtonElement>, { direction }) => {
         const nextIndex = getNextIndex(direction, activeIndex, itemsRef.current, slideWidth, itemsPerSlide)
         const slide = getSlide(activeIndex, itemsPerSlide, nextIndex)
         setActiveIndex(nextIndex)
