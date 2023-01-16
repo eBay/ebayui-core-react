@@ -1,9 +1,10 @@
 import React, { FC, CSSProperties, ReactNode } from 'react'
 import { EbayIcon } from '../../ebay-icon'
-import { findComponent } from '../component-utils'
+import { excludeComponent, findComponent } from '../component-utils'
 import { PointerDirection, TooltipType } from './types'
 import { DEFAULT_POINTER_DIRECTION, POINTER_STYLES } from './constants'
 import TooltipCloseButton from './tooltip-close-button'
+import TooltipFooter from './tooltip-footer'
 
 type TooltipContentProps = {
     id?: string;
@@ -27,6 +28,8 @@ const TooltipContent: FC<TooltipContentProps> = ({
     onClose
 }) => {
     const closeButton = findComponent(children, TooltipCloseButton)
+    const footer = findComponent(children, TooltipFooter)
+    const allChildrenExceptFooter = excludeComponent(children, TooltipFooter)
 
     return (
         <span
@@ -37,7 +40,7 @@ const TooltipContent: FC<TooltipContentProps> = ({
             <span className={`${type}__pointer ${type}__pointer--${pointer}`} />
             <span className={`${type}__mask`}>
                 <span className={`${type}__cell`}>
-                    <span className={`${type}__content`}>{children}</span>
+                    <span className={`${type}__content`}>{allChildrenExceptFooter}</span>
                     {showCloseButton ? (
                         <button
                             {...closeButton?.props}
@@ -49,6 +52,7 @@ const TooltipContent: FC<TooltipContentProps> = ({
                             <EbayIcon name="close" />
                         </button>
                     ) : null}
+                    {footer}
                 </span>
             </span>
         </span>
