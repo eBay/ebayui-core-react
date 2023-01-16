@@ -17,7 +17,7 @@ exports[`Storyshots ebay-tourtip Default tourtip 1`] = `
       <span
         class="tourtip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
       >
         <span
           class="tourtip__pointer tourtip__pointer--bottom"
@@ -78,7 +78,7 @@ exports[`Storyshots ebay-tourtip Footer and heading tourtip 1`] = `
       <span
         class="tourtip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
       >
         <span
           class="tourtip__pointer tourtip__pointer--bottom"
@@ -164,7 +164,7 @@ exports[`Storyshots ebay-tourtip Footer tourtip 1`] = `
       <span
         class="tourtip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
       >
         <span
           class="tourtip__pointer tourtip__pointer--bottom"
@@ -246,7 +246,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(-50%); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--top"
@@ -303,6 +303,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
+          style="transform: scale3d(1,1,1); left: -10px;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--top-left"
@@ -359,7 +360,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="right: -7px;"
+          style="transform: scale3d(1,1,1); right: -10px;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--top-right"
@@ -416,7 +417,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(-16px) translateY(-50%); right: 100%; top: -4px;"
+          style="transform: translateX(-16px) translateY(-50%) scale3d(1,1,1); right: 100%; top: -6px;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--right"
@@ -473,7 +474,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(-16px); right: 100%; bottom: -50%;"
+          style="transform: translateX(-16px) scale3d(1,1,1); right: 100%; bottom: -50%;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--right-bottom"
@@ -530,7 +531,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(-16px); right: 100%; top: -100%;"
+          style="transform: translateX(-16px) scale3d(1,1,1); right: 100%; top: -100%;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--right-top"
@@ -587,7 +588,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(-50%); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--bottom"
@@ -644,7 +645,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="left: -7px;"
+          style="transform: scale3d(1,1,1); left: -10px;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--bottom-left"
@@ -701,7 +702,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="right: -7px;"
+          style="transform: scale3d(1,1,1); right: -10px;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--bottom-right"
@@ -758,7 +759,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(16px) translateY(-50%); left: 100%; top: -5px;"
+          style="transform: translateX(16px) translateY(-50%) scale3d(1,1,1); left: 100%; top: -6px;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--left"
@@ -815,7 +816,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(16px); left: 100%; bottom: -7px;"
+          style="transform: translateX(16px) scale3d(1,1,1); left: 100%; bottom: -10px;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--left-bottom"
@@ -872,7 +873,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="tooltip"
-          style="transform: translateX(16px); left: 100%; top: -100%;"
+          style="transform: translateX(16px) scale3d(1,1,1); left: 100%; top: -100%;"
         >
           <span
             class="tourtip__pointer tourtip__pointer--left-top"
@@ -935,7 +936,7 @@ exports[`Storyshots ebay-tourtip Pointer with custom location 1`] = `
       <span
         class="tourtip__overlay"
         role="tooltip"
-        style="top: 40px; left: -16px;"
+        style="transform: scale3d(1,1,1); left: -16px; top: 40px;"
       >
         <span
           class="tourtip__pointer tourtip__pointer--top-left"
