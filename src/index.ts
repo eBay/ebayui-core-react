@@ -43,6 +43,7 @@ export { EbayPanelDialog } from './ebay-panel-dialog'
 export { EbayTextbox, EbayTextboxPrefixIcon, EbayTextboxPostfixIcon, EbayTextboxProps } from './ebay-textbox'
 export { EbaySelect, EbaySelectOption } from './ebay-select'
 export { EbayTooltip, EbayTooltipContent, EbayTooltipHost, PointerDirection, Tooltip } from './ebay-tooltip'
+export { EbayTourtip, EbayTourtipContent, EbayTourtipFooter, EbayTourtipHeading, EbayTourtipHost } from './ebay-tourtip'
 export { EbayInfotip, EbayInfotipHost, EbayInfotipContent, EbayInfotipHeading, Variant } from './ebay-infotip'
 export { EbaySnackbarDialog, EbaySnackbarDialogAction, EbaySnackbarDialogProps } from './ebay-snackbar-dialog'
 export {
