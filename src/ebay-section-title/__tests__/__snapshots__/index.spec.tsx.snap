@@ -110,7 +110,15 @@ exports[`Storyshots ebay-section-title With Info 1`] = `
       <span
         className="infotip__overlay"
         role="tooltip"
-        style={Object {}}
+        style={
+          Object {
+            "bottom": "auto",
+            "left": "-10px",
+            "right": "auto",
+            "top": "calc(100% + 2px)",
+            "transform": "scale3d(1,1,1)",
+          }
+        }
       >
         <span
           className="infotip__pointer infotip__pointer--top-left"
