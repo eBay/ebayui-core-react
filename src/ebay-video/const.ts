@@ -1,5 +1,3 @@
-// const MAX_RETRIES = 3
-// const DEFAULT_SPINNER_TIMEOUT = 2000
 export const ERROR_ANOTHER_LOAD = 7000
 export const ERROR_NO_PLAYER = 11
 export const defaultVideoConfig = {
@@ -12,7 +10,7 @@ export const defaultVideoConfig = {
         'mute',
         'report',
         'captions',
-        // 'quality',
+        // 'quality', // uncomment this to show a gear icon for video quality control
         'fullscreen'
     ]
 }
