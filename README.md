@@ -17,7 +17,7 @@ eBayUI React components
 * [x] [ebay-badge](src/ebay-badge)
 * [x] [ebay-breadcrumbs](src/ebay-breadcrumbs)
 * [x] [ebay-button](src/ebay-button)
-* [ ] `ebay-carousel` (in progress...)
+* [x] [ebay-carouse](src/ebay-carousel)
 * [x] [ebay-checkbox](src/ebay-checkbox)
 * [ ] `ebay-combobox`
 * [ ] `ebay-confirm-dialog`
