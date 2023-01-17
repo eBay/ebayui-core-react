@@ -80,7 +80,6 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         setSelectedIndex(index)
         setExpanded(false)
         setActiveDescendant(index)
-        setListContainerTabIndex(0)
         buttonRef.current.focus()
         onSelect(e, optionValue, index)
     }
