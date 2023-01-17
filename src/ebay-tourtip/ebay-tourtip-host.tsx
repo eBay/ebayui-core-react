@@ -3,9 +3,9 @@ import { TooltipHostProps } from '../common/tooltip-utils/tooltip-host'
 
 /**
  * This Component is used only for finding it as a child of EbayTooltip
- * and pass the properties to TooltipHost
+ * and pass the properties to TourtipHost
 */
 
-const EbayTooltipHost: FC<TooltipHostProps> = () => null
+const EbayTourtipHost: FC<TooltipHostProps> = () => null
 
-export default EbayTooltipHost
+export default EbayTourtipHost

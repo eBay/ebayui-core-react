@@ -1,13 +1,13 @@
 import React, { FC, ReactNode } from 'react'
 import cx from 'classnames'
 
-type Props = {
+export type NoticeContentProps = {
     type: 'inline' | 'section' | 'page';
     className?: string;
     children?: ReactNode;
 }
 
-const NoticeContent: FC<Props> = ({ className, type, children }) => {
+const NoticeContent: FC<NoticeContentProps> = ({ className, type, children }) => {
     const ContentTag = type === 'inline' ? 'span' : 'div'
     return (
         <ContentTag className={cx(className, `${type}-notice__main`)}>
