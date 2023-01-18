@@ -7,7 +7,7 @@ import {
     EbayProgressTitle as Title,
     EbayButton,
     StepState
-} from '../../index'
+} from '../index'
 
 storiesOf(`ebay-progress-stepper`, module)
     .add(`Default`, () => (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader } from '../..'
-import {EbayAlertDialog} from "../index";
+import { EbayAlertDialog } from '../index';
+import { EbayDialogHeader } from '../../ebay-dialog-base'
 
 const story: any = {
     component: EbayAlertDialog,
@@ -22,7 +22,7 @@ export const _Default = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayAlertDialog open={open} onConfirm={close} confirmText="Confirm">
+            <EbayAlertDialog open={open} onConfirm={close} confirmText="Confirm" a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>
@@ -40,7 +40,7 @@ export const _WithAnimation= () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayAlertDialog open={open} onConfirm={close} confirmText="Confirm" animated>
+            <EbayAlertDialog open={open} onConfirm={close} confirmText="Confirm" animated a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>

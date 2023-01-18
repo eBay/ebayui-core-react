@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayRadio, EbayButton, EbayLabel, EbayField } from '../../index'
+import { EbayRadio, EbayButton, EbayLabel, EbayField } from '../index'
 
 storiesOf(`ebay-radio`, module)
     .add(`Default`, () => (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader } from '../..'
-import {EbayConfirmDialog} from "../index";
+import { EbayConfirmDialog } from '../index';
+import { EbayDialogHeader } from '../../ebay-dialog-base'
 
 const story: any = {
     component: EbayConfirmDialog,
@@ -17,7 +17,14 @@ const close = () => setOpen(false);
             Open Dialog
         </button>
         <p>Some outside content...</p>
-        <EbayConfirmDialog open={open} onConfirm={close} onReject={close} confirmText="Cancel"  rejectText="Delete">
+        <EbayConfirmDialog
+            open={open}
+            onConfirm={close}
+            onReject={close}
+            confirmText="Cancel"
+            rejectText="Delete"
+            a11yCloseText="Close"
+        >
             <EbayDialogHeader>Delete Address?</EbayDialogHeader>
             <p>You will permanently lose this address.</p>
         </EbayConfirmDialog>
@@ -33,7 +40,15 @@ const close = () => setOpen(false);
             Open Dialog
         </button>
         <p>Some outside content...</p>
-        <EbayConfirmDialog open={open} onConfirm={close} onReject={close} confirmText="Cancel"  rejectText="Delete" animated>
+        <EbayConfirmDialog
+            open={open}
+            onConfirm={close}
+            onReject={close}
+            confirmText="Cancel"
+            rejectText="Delete"
+            animated
+            a11yCloseText="Close"
+        >
             <EbayDialogHeader>Delete Address?</EbayDialogHeader>
             <p>You will permanently lose this address.</p>
         </EbayConfirmDialog>

@@ -7,7 +7,7 @@ import {
     EbayField,
     EbayLabel,
     EbayFieldDescription
-} from '../../index'
+} from '../index'
 
 storiesOf(`ebay-field`, module)
 

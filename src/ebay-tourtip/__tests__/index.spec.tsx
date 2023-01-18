@@ -1,7 +1,9 @@
 import React from 'react'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
-import { EbayButton, EbayTourtip, EbayTourtipContent, EbayTourtipFooter, EbayTourtipHeading, EbayTourtipHost } from '../../index'
+import { EbayButton } from '../../ebay-button'
+import { EbayTourtip, EbayTourtipContent, EbayTourtipFooter, EbayTourtipHeading, EbayTourtipHost } from '../index'
+
 
 const renderComponent = (props?: any) => render(
     <EbayTourtip a11yCloseText='close' pointer='bottom' {...props}>

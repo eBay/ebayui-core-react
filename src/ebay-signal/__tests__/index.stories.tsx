@@ -1,9 +1,9 @@
-import React from "react";
-import { EbaySignal } from "../../index";
+import React from 'react';
+import { EbaySignal } from '../index';
 
 export default {
     component: EbaySignal,
-    title: "ebay-signal",
+    title: 'ebay-signal',
 };
 
 export const defaultCase = () => (<>

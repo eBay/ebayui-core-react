@@ -8,7 +8,7 @@ import {
     EbayInfotip,
     EbayInfotipContent,
     EbayInfotipHeading
-} from '../../index'
+} from '../index'
 
 storiesOf('ebay-section-title', module)
     .add('Default', () => (

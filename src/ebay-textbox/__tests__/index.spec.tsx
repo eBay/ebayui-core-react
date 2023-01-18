@@ -1,7 +1,7 @@
 import React from 'react'
-import { fireEvent, render, waitFor } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { initStoryshots } from '../../../config/jest/storyshots'
-import { EbayTextbox, EbayTextboxPostfixIcon } from '../../index'
+import { EbayTextbox, EbayTextboxPostfixIcon } from '../index'
 
 describe('<EbayTextbox>', () => {
     describe('on textbox change', () => {

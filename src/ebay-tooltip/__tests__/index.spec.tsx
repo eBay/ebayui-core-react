@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import { EbayTooltip, EbayTooltipContent, EbayTooltipHost } from '../../index'
+import { EbayTooltip, EbayTooltipContent, EbayTooltipHost } from '../index'
 import { initStoryshots } from '../../../config/jest/storyshots'
 
 jest.useFakeTimers()

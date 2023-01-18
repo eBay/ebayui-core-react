@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 
-import { EbayBreadcrumbs, EbayBreadcrumbItem } from '../../index'
+import { EbayBreadcrumbs, EbayBreadcrumbItem } from '../index'
 
 describe('<EbayBreadcrumbs>', () => {
     describe('on category click', () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { EbaySignal, SignalStatus } from '../../index'
+import { EbaySignal, SignalStatus } from '../index'
 import { render } from '@testing-library/react';
 
 describe('<EbaySignal>', () => {

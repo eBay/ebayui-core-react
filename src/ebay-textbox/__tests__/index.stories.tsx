@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayButton, EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../../index';
+import { EbayButton, EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../index';
 
 storiesOf('ebay-textbox', module)
     .add('Default textbox', () => (<>

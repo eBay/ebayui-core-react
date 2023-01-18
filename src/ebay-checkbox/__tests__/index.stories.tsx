@@ -1,7 +1,8 @@
-import React, { useState, useRef, ReactElement, ChangeEvent } from 'react';
+import React, { useState, useRef, ChangeEvent } from 'react';
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayCheckbox, EbayLabel } from '../../index'
+import { EbayLabel } from '../../ebay-field'
+import { EbayCheckbox } from '../index'
 
 storiesOf(`ebay-checkbox`, module)
     .add(`Default checkbox-button`, () => (
@@ -117,10 +118,7 @@ storiesOf(`ebay-checkbox`, module)
                     aria-label="custom color checkbox example"
                     id="checkbox-30"
                     disabled={isDisabled}
-                >{isDisabled ?
-                    <EbayLabel>Disabled</EbayLabel> :
-                    <EbayLabel>Gets disabled after {5 - counter.current} clicks</EbayLabel>
-                }</EbayCheckbox>
+                >{label}</EbayCheckbox>
             )
         }
         return <><Controller /></>

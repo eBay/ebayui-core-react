@@ -1,8 +1,9 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import requireContext from 'node-require-context';
-import { EbayDialogFooter, EbayDialogHeader, EbayLightboxDialog } from '../..'
 import { initStoryshots } from '../../../config/jest/storyshots'
+import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
+import { EbayLightboxDialog } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -15,6 +16,7 @@ describe('<EbayLightboxDialog>', () => {
                 animated={false}
                 open
                 onClose={closeDrawerHandler}
+                 a11yCloseText="Close"
             >
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 <p>

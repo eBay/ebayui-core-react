@@ -43,12 +43,7 @@ exports[`Storyshots ebay-checkbox Control value from outside 1`] = `
       </svg>
     </span>
   </span>
-  <label
-    class="field__label field__label--end"
-    for="checkbox-30"
-  >
-    Gets disabled after 5 clicks
-  </label>
+  Gets disabled after 5 clicks
 </DocumentFragment>
 `;
 

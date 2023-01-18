@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { EbayTourtip, EbayTourtipHeading , EbayTourtipContent, EbayTourtipHost, EbayButton, PointerDirection, EbayTourtipFooter } from '../../index'
+import { EbayButton } from '../../ebay-button'
+import { EbayTourtip, EbayTourtipHeading , EbayTourtipContent, EbayTourtipHost, PointerDirection, EbayTourtipFooter } from '../index'
 
 const allPointers: PointerDirection[] = [
     `top`, `top-left`, `top-right`,

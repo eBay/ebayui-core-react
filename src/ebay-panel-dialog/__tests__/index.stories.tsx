@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader, EbayDialogCloseButton, EbayPanelDialog } from '../..'
+import { EbayPanelDialog } from '../index'
+import { EbayDialogCloseButton, EbayDialogHeader } from '../../ebay-dialog-base'
 
 const story: any = {
     component: EbayPanelDialog,
@@ -21,7 +22,7 @@ export const _Default = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayPanelDialog open={open} onClose={close}>
+            <EbayPanelDialog open={open} onClose={close} a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>
@@ -44,7 +45,7 @@ export const _AlwaysOpened = () => (
 export const _FromRight = () => (
     <div>
         <p>Some outside content...</p>
-        <EbayPanelDialog position="end" open>
+        <EbayPanelDialog position="end" open a11yCloseText="Close">
             <EbayDialogHeader/>
             {textParagraph}
         </EbayPanelDialog>
@@ -54,7 +55,7 @@ export const _FromRight = () => (
 export const _CustomCloseButton = () => (
     <div>
         <p>Some outside content...</p>
-        <EbayPanelDialog open>
+        <EbayPanelDialog open a11yCloseText="Close">
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
             <EbayDialogCloseButton>X</EbayDialogCloseButton>
@@ -72,7 +73,7 @@ export const _WithAnimation = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayPanelDialog animated open={open} onClose={close}>
+            <EbayPanelDialog animated open={open} onClose={close} a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>
@@ -91,7 +92,7 @@ export const _WithAnimationFromRight = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayPanelDialog animated open={open} onClose={close} position="end">
+            <EbayPanelDialog animated open={open} onClose={close} position="end" a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>

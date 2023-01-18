@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayButton, EbayInlineNotice, EbayNoticeContent } from '../../index'
+import { EbayButton, EbayInlineNotice, EbayNoticeContent } from '../index'
 
 storiesOf(`ebay-inline-notice`, module)
 
