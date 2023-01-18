@@ -1,7 +1,6 @@
 import React, { ComponentProps, FC, SyntheticEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import shaka from 'shaka-player/dist/shaka-player.ui'
-import 'shaka-player/dist/controls.css'
 
 import { filterByType } from '../common/component-utils'
 import { EbayIcon, EbayProgressSpinner } from '../index'
@@ -18,16 +17,19 @@ export type EbayVideoProps = ComponentProps<'video'> & {
     volume?: number;
     muted?: boolean;
     volumeSlider?: boolean;
+    hideReportButton?: boolean;
     playView?: VideoPlayView;
+    // todo: implement CDN support
     cdnUrl?: string;
     cssUrl?: string;
     cdnVersion?: string;
+    //
     a11yLoadText: string;
     a11yPlayText: string;
     errorText: string;
-    reportText: string;
-    onLoadError?: (err: any) => void;
-    onPlay?: (e: SyntheticEvent, { player: any }) => void;
+    reportText?: string;
+    onLoadError?: (err: Error) => void;
+    onPlay?: (e: SyntheticEvent, { player: Player }) => void;
     onVolumeChange?: (e: SyntheticEvent, { volume: number, muted: boolean }) => void;
     onReport?: () => void;
 };
@@ -44,6 +46,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
     reportText,
     volumeSlider,
     volume = 1,
+    hideReportButton,
     errorText,
     onVolumeChange = () => {
     },
@@ -63,12 +66,12 @@ const EbayVideo: FC<EbayVideoProps> = ({
 
     const containerRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
-    const playerRef = useRef<any>(null)
+    const playerRef = useRef<Player>(null)
     const uiRef = useRef(null)
 
     const sources = filterByType(children, EbayVideoSource).map(({ props }) => props)
 
-    const handleError = (err: any) => {
+    const handleError = (err: Error) => {
         setLoaded(true)
         setFailed(true)
         onLoadError(err)
@@ -135,9 +138,10 @@ const EbayVideo: FC<EbayVideoProps> = ({
             addSeekBar: false
         })
 
-        const { Report, TextSelection } = customControls(onReport)
-        shaka.ui.Controls.registerElement('report', new Report.Factory(reportText))
-        shaka.ui.Controls.registerElement('captions', new TextSelection.Factory())
+        if (!hideReportButton) {
+            const { Report } = customControls(onReport)
+            shaka.ui.Controls.registerElement('report', new Report.Factory(reportText))
+        }
 
         loadSource()
         hideSpinner(container)
@@ -202,9 +206,14 @@ const EbayVideo: FC<EbayVideoProps> = ({
         videoRef.current.controls = false
     }
 
+    const style = {
+        width: width ? `${width}px` : undefined,
+        height: height ? `${height}px` : undefined
+    }
+
     return (
         <div
-            style={{ width: `${width}px`, height: `${height}px` }}
+            style={style}
             className={classNames('video-player', { 'video-player--poster': !playing })}
         >
             {!playing && loaded && !failed && !buffering &&
@@ -224,17 +233,17 @@ const EbayVideo: FC<EbayVideoProps> = ({
                 ref={containerRef}
             >
                 <video
-                    ref={videoRef as any}
-                    style={{ width: `${width}px`, height: `${height}px` }}
+                    ref={videoRef}
+                    style={style}
                     poster={thumbnail}
                     muted={muted || false}
-                    onPlaying={handlePlaying as any}
-                    onPause={handleOnPause as any}
+                    onPlaying={handlePlaying}
+                    onPause={handleOnPause}
                     onVolumeChange={handleVolumeChange}
                     {...rest}
                 >
-                    {sources.map(source => {
-                        <source {...source} />
+                    {sources.map((source, i) => {
+                        <source key={i} {...source} />
                     })}
                 </video>
             </div>
