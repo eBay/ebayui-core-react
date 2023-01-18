@@ -40,6 +40,7 @@ exports[`Storyshots ebay-infotip Custom button content (With render prop) 1`] = 
       <span
         class="infotip__overlay"
         role="tooltip"
+        style="transform: scale3d(1,1,1); left: -10px;"
       >
         <span
           class="infotip__pointer infotip__pointer--top-left"
@@ -118,7 +119,7 @@ exports[`Storyshots ebay-infotip Custom icon 1`] = `
       <span
         class="infotip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
       >
         <span
           class="infotip__pointer infotip__pointer--bottom"
@@ -197,7 +198,7 @@ exports[`Storyshots ebay-infotip Default 1`] = `
       <span
         class="infotip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
       >
         <span
           class="infotip__pointer infotip__pointer--bottom"
@@ -277,7 +278,7 @@ exports[`Storyshots ebay-infotip Disabled 1`] = `
       <span
         class="infotip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
       >
         <span
           class="infotip__pointer infotip__pointer--bottom"
@@ -356,6 +357,7 @@ exports[`Storyshots ebay-infotip Expanded by default 1`] = `
       <span
         class="infotip__overlay"
         role="tooltip"
+        style="transform: scale3d(1,1,1); left: -10px;"
       >
         <span
           class="infotip__pointer infotip__pointer--top-left"
@@ -439,7 +441,7 @@ exports[`Storyshots ebay-infotip In paragraph 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(-50%); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom"
@@ -613,7 +615,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(-50%); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
         >
           <span
             class="infotip__pointer infotip__pointer--top"
@@ -688,6 +690,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
+          style="transform: scale3d(1,1,1); left: -10px;"
         >
           <span
             class="infotip__pointer infotip__pointer--top-left"
@@ -762,7 +765,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="right: -7px;"
+          style="transform: scale3d(1,1,1); right: -10px;"
         >
           <span
             class="infotip__pointer infotip__pointer--top-right"
@@ -837,7 +840,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(-16px) translateY(-50%); right: 100%; top: -4px;"
+          style="transform: translateX(-16px) translateY(-50%) scale3d(1,1,1); right: 100%; top: -6px;"
         >
           <span
             class="infotip__pointer infotip__pointer--right"
@@ -912,7 +915,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(-16px); right: 100%; bottom: -50%;"
+          style="transform: translateX(-16px) scale3d(1,1,1); right: 100%; bottom: -50%;"
         >
           <span
             class="infotip__pointer infotip__pointer--right-bottom"
@@ -987,7 +990,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(-16px); right: 100%; top: -100%;"
+          style="transform: translateX(-16px) scale3d(1,1,1); right: 100%; top: -100%;"
         >
           <span
             class="infotip__pointer infotip__pointer--right-top"
@@ -1062,7 +1065,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(-50%); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom"
@@ -1137,7 +1140,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="left: -7px;"
+          style="transform: scale3d(1,1,1); left: -10px;"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom-left"
@@ -1212,7 +1215,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="right: -7px;"
+          style="transform: scale3d(1,1,1); right: -10px;"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom-right"
@@ -1287,7 +1290,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(16px) translateY(-50%); left: 100%; top: -5px;"
+          style="transform: translateX(16px) translateY(-50%) scale3d(1,1,1); left: 100%; top: -6px;"
         >
           <span
             class="infotip__pointer infotip__pointer--left"
@@ -1362,7 +1365,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(16px); left: 100%; bottom: -7px;"
+          style="transform: translateX(16px) scale3d(1,1,1); left: 100%; bottom: -10px;"
         >
           <span
             class="infotip__pointer infotip__pointer--left-bottom"
@@ -1437,7 +1440,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         <span
           class="infotip__overlay"
           role="tooltip"
-          style="transform: translateX(16px); left: 100%; top: -100%;"
+          style="transform: translateX(16px) scale3d(1,1,1); left: 100%; top: -100%;"
         >
           <span
             class="infotip__pointer infotip__pointer--left-top"
@@ -1517,7 +1520,7 @@ exports[`Storyshots ebay-infotip Pointer with custom location 1`] = `
       <span
         class="infotip__overlay"
         role="tooltip"
-        style="top: 40px; left: -16px;"
+        style="transform: scale3d(1,1,1); left: -16px; top: 40px;"
       >
         <span
           class="infotip__pointer infotip__pointer--top-left"
@@ -1584,6 +1587,7 @@ exports[`Storyshots ebay-infotip Text instead of icon 1`] = `
       <span
         class="infotip__overlay"
         role="tooltip"
+        style="transform: scale3d(1,1,1); left: -10px;"
       >
         <span
           class="infotip__pointer infotip__pointer--top-left"
