@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
 import initStoryshots from '@storybook/addon-storyshots'
-import { EbayMenuButton, EbayMenuButtonItem } from '..'
+import { EbayMenuButton, EbayMenuButtonItem } from '../index'
 
 initStoryshots({
     config: ({ configure }) => configure(() => require('./index.stories.tsx'), module)
@@ -69,7 +69,7 @@ describe('<EbayMenuButton>', () => {
 
             const button = wrapper.container.querySelector('button')
             fireEvent.click(button)
-            const item = screen.getAllByRole('menuitem')[1]
+            const item = screen.getAllByRole('menuitemradio')[1]
             fireEvent.click(item)
 
             const expectedEventProps = {
@@ -93,7 +93,7 @@ describe('<EbayMenuButton>', () => {
 
             const button = wrapper.container.querySelector('button')
             fireEvent.click(button)
-            const item = screen.getAllByRole('menuitem')[1]
+            const item = screen.getAllByRole('menuitemcheckbox')[1]
             fireEvent.click(item)
 
             const expectedEventProps = {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayIconButton } from '../../index'
+import { EbayIconButton } from '../index'
 
 storiesOf(`ebay-icon-button`, module)
     .add(`Default`, () => (

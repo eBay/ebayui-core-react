@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader, EbayDialogFooter, EbayLightboxDialog, EbayButton, EbayCheckbox, EbayLabel } from '../..'
+import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
+import { EbayButton } from '../../ebay-button'
+import { EbayCheckbox } from '../../ebay-checkbox'
+import { EbayLabel } from '../../ebay-field'
+import { EbayLightboxDialog } from '../index'
 
 const story: any = {
     component: EbayLightboxDialog,
@@ -21,7 +25,7 @@ export const _Default = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayLightboxDialog open={open} onClose={close}>
+            <EbayLightboxDialog open={open} onClose={close} a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>
@@ -47,7 +51,7 @@ export const _AlwaysOpened = () => (
 export const _ScrollingContent = () => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open>
+        <EbayLightboxDialog open a11yCloseText="Close">
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}{textParagraph}{textParagraph}{textParagraph}{textParagraph}
             {textParagraph}{textParagraph}{textParagraph}{textParagraph}{textParagraph}
@@ -59,7 +63,7 @@ export const _ScrollingContent = () => (
 export const _MiniDialog = () => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog mode="mini" open>
+        <EbayLightboxDialog mode="mini" open a11yCloseText="Close">
             <EbayDialogHeader/>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </EbayLightboxDialog>
@@ -79,7 +83,7 @@ export const _DisableDialogClose = () => {
         <div>
             <EbayButton onClick={() => setShowDialog(!showDialog)}>Show Dialog</EbayButton>
 
-            <EbayLightboxDialog open={showDialog} onClose={closeDialog}>
+            <EbayLightboxDialog open={showDialog} onClose={closeDialog} a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
 
                 <p>Unselect the following checkbox to prevent user to close the dialog</p>
@@ -113,7 +117,7 @@ export const _WithAnimation = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayLightboxDialog open={open} onClose={close} animated>
+            <EbayLightboxDialog open={open} onClose={close} animated a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>
@@ -133,7 +137,7 @@ export const _WithNoBackgroundClick = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayLightboxDialog open={open} onClose={close} buttonPosition="hidden">
+            <EbayLightboxDialog open={open} onClose={close} buttonPosition="hidden" a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>

@@ -6,7 +6,7 @@ import { DEFAULT_POINTER_DIRECTION, POINTER_STYLES } from './constants'
 import TooltipCloseButton from './tooltip-close-button'
 import TooltipFooter from './tooltip-footer'
 
-type TooltipContentProps = {
+export type TooltipContentProps = {
     id?: string;
     type?: TooltipType;
     style?: CSSProperties;

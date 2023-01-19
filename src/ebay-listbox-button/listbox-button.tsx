@@ -235,7 +235,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                     <div
                         className="listbox-button__options"
                         role="listbox"
-                        tabIndex={0}
+                        tabIndex={expanded ? 0 : -1}
                         ref={optionsContainerRef}
                         onKeyDown={(e) => onOptionContainerKeydown(e)}
                         // adding onMouseDown preventDefault b/c on IE the onClick event is not being fired on each

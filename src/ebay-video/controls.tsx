@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom'
 import { ui } from 'shaka-player/dist/shaka-player.ui'
 import { ReportButton } from './reportButton'
 
-export function customControls(onReport = () => {}): { Report, TextSelection } {
+export function customControls(onReport = () => {}): { Report } {
     // Have to contain in order to not execute until shaka is downloaded
     const Report = class extends ui.Element {
         constructor(parent, controls, text) {
             super(parent, controls)
 
-            appendChild(this.parent, <ReportButton onReport={onReport}>{text}</ReportButton>)
+            appendChild(parent, <ReportButton onReport={onReport}>{text}</ReportButton>)
         }
     }
 
@@ -25,17 +25,7 @@ export function customControls(onReport = () => {}): { Report, TextSelection } {
         }
     }
 
-    const TextSelection = ui.TextSelection
-
-    TextSelection.Factory = class {
-        /** @override */
-        // eslint-disable-next-line class-methods-use-this
-        create(rootElement, controls) {
-            return new ui.TextSelection(rootElement, controls)
-        }
-    }
-
-    return { Report, TextSelection }
+    return { Report }
 }
 
 function appendChild(container: HTMLElement, reactElement: ReactElement): void {

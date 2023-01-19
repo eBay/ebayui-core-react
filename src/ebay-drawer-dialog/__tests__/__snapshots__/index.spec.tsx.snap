@@ -19,6 +19,7 @@ exports[`Storyshots ebay-drawer-dialog Custom Focus 1`] = `
         class="drawer-dialog__window drawer-dialog__window drawer-dialog__window--slide"
       >
         <button
+          aria-label="Maximize"
           class="drawer-dialog__handle"
           type="button"
         />
@@ -29,6 +30,7 @@ exports[`Storyshots ebay-drawer-dialog Custom Focus 1`] = `
             id="dialog-title-abc123"
           />
           <button
+            aria-label="Close"
             class="icon-btn drawer-dialog__close"
             type="button"
           >
@@ -94,6 +96,7 @@ exports[`Storyshots ebay-drawer-dialog Default 1`] = `
         class="drawer-dialog__window drawer-dialog__window drawer-dialog__window--slide"
       >
         <button
+          aria-label="Maximize"
           class="drawer-dialog__handle"
           type="button"
         />
@@ -104,6 +107,7 @@ exports[`Storyshots ebay-drawer-dialog Default 1`] = `
             id="dialog-title-abc123"
           />
           <button
+            aria-label="Close"
             class="icon-btn drawer-dialog__close"
             type="button"
           >
@@ -460,6 +464,7 @@ exports[`Storyshots ebay-drawer-dialog Lots Of Content 1`] = `
         class="drawer-dialog__window drawer-dialog__window drawer-dialog__window--slide"
       >
         <button
+          aria-label="Maximize"
           class="drawer-dialog__handle"
           type="button"
         />
@@ -472,6 +477,7 @@ exports[`Storyshots ebay-drawer-dialog Lots Of Content 1`] = `
             Scrollable content
           </h2>
           <button
+            aria-label="Close"
             class="icon-btn drawer-dialog__close"
             type="button"
           >
@@ -835,6 +841,7 @@ exports[`Storyshots ebay-drawer-dialog Opened 1`] = `
           tabindex="0"
         />
         <button
+          aria-label="Maximize"
           class="drawer-dialog__handle"
           type="button"
         />
@@ -912,6 +919,7 @@ exports[`Storyshots ebay-drawer-dialog Trigger Expanded 1`] = `
         class="drawer-dialog__window drawer-dialog__window drawer-dialog__window--slide"
       >
         <button
+          aria-label="Maximize"
           class="drawer-dialog__handle"
           type="button"
         />
@@ -922,6 +930,7 @@ exports[`Storyshots ebay-drawer-dialog Trigger Expanded 1`] = `
             id="dialog-title-abc123"
           />
           <button
+            aria-label="Close"
             class="icon-btn drawer-dialog__close"
             type="button"
           >
@@ -992,6 +1001,7 @@ exports[`Storyshots ebay-drawer-dialog Without Handle 1`] = `
             id="dialog-title-abc123"
           />
           <button
+            aria-label="Close"
             class="icon-btn drawer-dialog__close"
             type="button"
           >

@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 
-import { EbayBreadcrumbs, EbayBreadcrumbItem as Item } from '../../index'
+import { EbayBreadcrumbs, EbayBreadcrumbItem as Item } from '../index'
 
 storiesOf('ebay-breadcrumb', module)
     .add('default', () => (<>

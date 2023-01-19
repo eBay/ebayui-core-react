@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
+import { EbayIcon } from '../../ebay-icon'
 import {
     EbayMenuButton,
     EbayMenuButtonItem as Item,
-    EbayIcon,
     EbayMenuButtonSeparator as Separator,
     EbayMenuButtonLabel
-} from '../../index'
+} from '../index'
 
 storiesOf('ebay-menu-button', module)
     .add('Default', () => (<>

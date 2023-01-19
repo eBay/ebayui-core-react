@@ -1,10 +1,10 @@
+import React from 'react'
 import requireContext from 'node-require-context'
+import { render, screen } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
-import {EbayVideo, EbayVideoSource} from "../index";
-import React from "react";
-import {render, screen} from '@testing-library/react';
+import { EbayVideo, EbayVideoSource } from '../index'
 
-describe('<EbayVideo>' , () => {
+describe('<EbayVideo>', () => {
     beforeEach(() => render(<EbayVideo
         thumbnail="https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/iphone-thumbnail.jpg"
         width={500}
@@ -21,11 +21,11 @@ describe('<EbayVideo>' , () => {
     it('shows video player with poster', () => {
         const video = document.getElementsByTagName('video')[0]
         expect(video).not.toBeNull()
-        expect(video.poster).toBe("https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/iphone-thumbnail.jpg")
+        expect(video.poster).toBe('https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/iphone-thumbnail.jpg')
     })
 
     it('shows error message', () => {
-        expect(screen.getByText("Error loading")).toBeInTheDocument()
+        expect(screen.getByText('Error loading')).toBeInTheDocument()
     })
 
     it('shows play button', () => {
@@ -39,7 +39,7 @@ describe('<EbayVideo>' , () => {
 
 initStoryshots({
     config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
+        const req = requireContext('./', false, /\.stories\.tsx$/)
         return configure(req, module)
     }
-});
+})

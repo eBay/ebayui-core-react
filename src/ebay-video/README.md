@@ -9,6 +9,7 @@ yarn add @ebay/ui-core-react shaka-player
 ```jsx
 import { EbayVideo } from '@ebay/ui-core-react/ebay-video'
 import '@ebay/skin/video'
+import 'shaka-player/dist/controls.css'
 
 <EbayVideo
     width="600"

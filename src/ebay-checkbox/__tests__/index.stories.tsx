@@ -1,7 +1,8 @@
-import React, { useState, useRef, ReactElement, ChangeEvent } from 'react';
+import React, { useState, useRef, ChangeEvent } from 'react';
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayCheckbox, EbayLabel } from '../../index'
+import { EbayLabel } from '../../ebay-field'
+import { EbayCheckbox } from '../index'
 
 storiesOf(`ebay-checkbox`, module)
     .add(`Default checkbox-button`, () => (
@@ -105,9 +106,6 @@ storiesOf(`ebay-checkbox`, module)
                 }
                 counter.current++
             }
-            const label = isDisabled ?
-                <>Disabled</> :
-                <>Gets disabled after {5 - counter.current} clicks</>
 
             return (
                 <EbayCheckbox

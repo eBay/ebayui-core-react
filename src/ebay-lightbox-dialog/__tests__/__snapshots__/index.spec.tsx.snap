@@ -123,6 +123,7 @@ exports[`Storyshots ebay-lightbox-dialog Default 1`] = `
               Heading
             </h2>
             <button
+              aria-label="Close"
               class="icon-btn lightbox-dialog__close"
               type="button"
             >
@@ -203,6 +204,7 @@ exports[`Storyshots ebay-lightbox-dialog Disable Dialog Close 1`] = `
               Heading
             </h2>
             <button
+              aria-label="Close"
               class="icon-btn lightbox-dialog__close"
               type="button"
             >
@@ -348,6 +350,7 @@ exports[`Storyshots ebay-lightbox-dialog Mini Dialog 1`] = `
               id="dialog-title-abc123"
             />
             <button
+              aria-label="Close"
               class="icon-btn lightbox-dialog__close"
               type="button"
             >
@@ -432,6 +435,7 @@ exports[`Storyshots ebay-lightbox-dialog Scrolling Content 1`] = `
               Heading
             </h2>
             <button
+              aria-label="Close"
               class="icon-btn lightbox-dialog__close"
               type="button"
             >
@@ -538,6 +542,7 @@ exports[`Storyshots ebay-lightbox-dialog With Animation 1`] = `
               Heading
             </h2>
             <button
+              aria-label="Close"
               class="icon-btn lightbox-dialog__close"
               type="button"
             >

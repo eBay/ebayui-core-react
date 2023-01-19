@@ -4,12 +4,11 @@ import { filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
 
-import { EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, EbayMenuButtonVariant } from '.'
-import {
-    EbayButton, EbayButtonProps,
-    EbayIcon, EbayIconButton,
-    EbayMenu, EbayMenuType, EbayMenuChangeEventHandler, EbayMenuSelectEventHandler
-} from '..'
+import { EbayMenu, EbayMenuChangeEventHandler, EbayMenuSelectEventHandler, EbayMenuType } from '../ebay-menu'
+import { EbayButton, EbayButtonProps } from '../ebay-button'
+import { EbayIconButton } from '../ebay-icon-button'
+import { EbayIcon } from '../ebay-icon'
+import { EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, EbayMenuButtonVariant } from './index'
 
 export type EbayMenuButtonProps = {
     a11yText?: string;
@@ -63,7 +62,7 @@ const EbayMenuButton: FC<Props> = ({
     const menuRef = useRef()
 
     const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
-    const defaultIndexes = menuItems.map((item, i) => Boolean(item.props.checked))
+    const defaultIndexes = menuItems.map((item) => Boolean(item.props.checked))
     const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(defaultIndexes)
 
     const label = findComponent(children, EbayMenuButtonLabel) || <span>{text}</span> || null
