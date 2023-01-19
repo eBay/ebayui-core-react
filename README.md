@@ -20,7 +20,7 @@ eBayUI React components
 * [x] [ebay-carousel](src/ebay-carousel)
 * [x] [ebay-checkbox](src/ebay-checkbox)
 * [ ] `ebay-combobox`
-* [ ] `ebay-confirm-dialog`
+* [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-cta-button](src/ebay-cta-button)
 * [ ] `ebay-details`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
@@ -54,12 +54,12 @@ eBayUI React components
 * [x] [ebay-section-title](src/ebay-section-title)
 * [x] [ebay-section-notice](src/ebay-section-notice)
 * [x] [ebay-select](src/ebay-select)
+* [x] [ebay-signal](src/ebay-signal)
 * [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
 * [ ] `ebay-split-button` (in progress...)
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
 * [x] [ebay-switch](src/ebay-switch)
-* [x] [ebay-signal](src/ebay-signal)
 * [x] [ebay-tabs](src/ebay-tabs)
 * [x] [ebay-textbox](src/ebay-textbox)
 * [x] [ebay-toast-dialog](src/ebay-toast-dialog)
