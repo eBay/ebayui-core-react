@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { initStoryshots } from '../../../config/jest/storyshots';
-import { EbayButton, EbayNoticeContent, EbaySectionNotice } from '../../index';
+import { EbayButton } from '../../ebay-button'
+import { EbayNoticeContent, EbaySectionNotice } from '../index';
 
 describe('<EbaySectionNotice>', () => {
     describe('when a button is added in the children of the main section notice', () => {

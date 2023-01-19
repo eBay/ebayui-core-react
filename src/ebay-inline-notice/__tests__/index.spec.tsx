@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { EbayInlineNotice, EbayNoticeContent } from '../../index'
+import { EbayInlineNotice, EbayNoticeContent } from '../index'
 import { initStoryshots } from '../../../config/jest/storyshots'
 
 describe('<EbayInlineNotice>', () => {

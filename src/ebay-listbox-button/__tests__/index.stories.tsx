@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 
-import { EbayListboxButton, EbayListboxButtonOption } from '../../index'
+import { EbayListboxButton, EbayListboxButtonOption } from '../index'
 import StateFullTest from './statefull-test'
 
 storiesOf(`ebay-listbox-button`, module)

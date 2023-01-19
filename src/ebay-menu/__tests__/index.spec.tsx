@@ -1,5 +1,6 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, screen } from '@testing-library/react'
+import { act } from '@testing-library/react-hooks'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayMenu, EbayMenuItem } from '../index'
 

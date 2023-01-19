@@ -1,7 +1,8 @@
 import React, { ChangeEvent, useState } from 'react';
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbaySelect, EbaySelectOption, EbayButton } from '../../index'
+import { EbayButton } from '../../ebay-button'
+import { EbaySelect, EbaySelectOption } from '../index'
 
 storiesOf(`ebay-select`, module)
     .add(`Basic`, () => (<>

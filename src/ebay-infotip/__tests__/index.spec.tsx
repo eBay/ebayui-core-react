@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
-import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../../index'
+import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
