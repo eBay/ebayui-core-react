@@ -1,13 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../../ebay-infotip'
 import {
     EbaySectionTitle,
     EbaySectionTitleTitle as Title,
     EbaySectionTitleSubtitle as Subtitle,
-    EbaySectionTitleInfo as Info,
-    EbayInfotip,
-    EbayInfotipContent,
-    EbayInfotipHeading
+    EbaySectionTitleInfo as Info
 } from '../index'
 
 storiesOf('ebay-section-title', module)

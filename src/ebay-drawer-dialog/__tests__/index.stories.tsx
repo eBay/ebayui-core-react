@@ -1,7 +1,8 @@
 import React, { createRef, useState } from 'react';
 import { EbayButton } from '../../ebay-button';
-import { EbayDrawerDialog, EbayDialogHeader, EbayDialogFooter } from '../index';
 import { action } from '../../../.storybook/action';
+import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
+import { EbayDrawerDialog } from '../index';
 
 const story: any = {
     component: EbayDrawerDialog,

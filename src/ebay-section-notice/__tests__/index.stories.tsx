@@ -1,8 +1,8 @@
 import React  from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbaySectionNotice, EbayButton, EbayNoticeContent } from '../index'
-import { EbaySectionNoticeTitle, EbaySectionNoticeFooter } from '..'
+import { EbayButton } from '../../ebay-button'
+import { EbaySectionNotice, EbayNoticeContent, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from '../index'
 
 storiesOf(`ebay-section-notice`, module)
 

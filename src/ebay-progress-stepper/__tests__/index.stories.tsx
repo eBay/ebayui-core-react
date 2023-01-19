@@ -1,11 +1,10 @@
 import React, { FC, useState } from 'react'
 import { storiesOf } from '@storybook/react'
-
+import { EbayButton } from '../../ebay-button'
 import {
     EbayProgressStepper,
     EbayProgressStep as Step,
     EbayProgressTitle as Title,
-    EbayButton,
     StepState
 } from '../index'
 

@@ -1,13 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import {
-    EbaySwitch,
-    EbayCheckbox,
-    EbayTextbox,
-    EbayField,
-    EbayLabel,
-    EbayFieldDescription
-} from '../index'
+import { EbayTextbox } from '../../ebay-textbox'
+import { EbaySwitch } from '../../ebay-switch'
+import { EbayCheckbox } from '../../ebay-checkbox'
+import { EbayField, EbayLabel, EbayFieldDescription } from '../index'
 
 storiesOf(`ebay-field`, module)
 

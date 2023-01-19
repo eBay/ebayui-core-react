@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react';
 import { action } from '../../../.storybook/action'
-import { EbayTab, EbayTabPanel, EbayTabs } from '../../ebay-tabs'
 import { EbayIcon } from '../../ebay-icon'
+import { EbayTab, EbayTabPanel, EbayTabs } from '../../ebay-tabs'
 import { EbayMenu, EbayMenuItem as Item, EbayMenuSeparator as Separator } from '../index'
 
 storiesOf('ebay-menu', module)

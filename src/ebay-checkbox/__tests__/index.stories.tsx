@@ -106,9 +106,6 @@ storiesOf(`ebay-checkbox`, module)
                 }
                 counter.current++
             }
-            const label = isDisabled ?
-                <>Disabled</> :
-                <>Gets disabled after {5 - counter.current} clicks</>
 
             return (
                 <EbayCheckbox
@@ -118,7 +115,10 @@ storiesOf(`ebay-checkbox`, module)
                     aria-label="custom color checkbox example"
                     id="checkbox-30"
                     disabled={isDisabled}
-                >{label}</EbayCheckbox>
+                >{isDisabled ?
+                    <EbayLabel>Disabled</EbayLabel> :
+                    <EbayLabel>Gets disabled after {5 - counter.current} clicks</EbayLabel>
+                }</EbayCheckbox>
             )
         }
         return <><Controller /></>
