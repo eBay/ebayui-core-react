@@ -10,7 +10,8 @@ export {
 } from './ebay-menu-button'
 export { EbayFakeMenu, EbayFakeMenuItem, EbayFakeMenuSeparator, EbayFakeMenuItemProps } from './ebay-fake-menu'
 export {
-    EbayFakeMenuButton, EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator
+    EbayFakeMenuButton, EbayFakeMenuButtonProps,
+    EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator
 } from './ebay-fake-menu-button'
 export { EbayInlineNotice, NoticeStatus } from './ebay-inline-notice'
 export { EbaySectionNotice, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from './ebay-section-notice'
@@ -34,6 +35,7 @@ export { EbayTabs, EbayTab, EbayTabPanel, Size as TabSize, Activation } from './
 export { EbayFakeTabs, EbayFakeTab } from './ebay-fake-tabs'
 export { EbaySvg } from './ebay-svg'
 export { EbayIcon, Icon, EbayIconProps, A11yVariant } from './ebay-icon'
+export { EbayProgramBadge, ProgramBadge, EbayProgramBadgeProps } from './ebay-program-badge'
 export { EbayDialogHeader, EbayDialogFooter, EbayDialogCloseButton } from './ebay-dialog-base'
 export { EbayDrawerDialog } from './ebay-drawer-dialog'
 export { EbayFullscreenDialog } from './ebay-fullscreen-dialog'
@@ -42,7 +44,9 @@ export { EbayPanelDialog } from './ebay-panel-dialog'
 export { EbayTextbox, EbayTextboxPrefixIcon, EbayTextboxPostfixIcon, EbayTextboxProps } from './ebay-textbox'
 export { EbaySelect, EbaySelectOption } from './ebay-select'
 export { EbayTooltip, EbayTooltipContent, EbayTooltipHost, PointerDirection, Tooltip } from './ebay-tooltip'
+export { EbayTourtip, EbayTourtipContent, EbayTourtipFooter, EbayTourtipHeading, EbayTourtipHost } from './ebay-tourtip'
 export { EbayInfotip, EbayInfotipHost, EbayInfotipContent, EbayInfotipHeading, Variant } from './ebay-infotip'
+export { EbaySnackbarDialog, EbaySnackbarDialogAction, EbaySnackbarDialogProps } from './ebay-snackbar-dialog'
 export {
     EbayField, EbayLabel, EbayFieldDescription,
     FieldLayoutType, FieldDescriptionType, FieldDescriptionPosition, LabelPosition
@@ -51,3 +55,4 @@ export {
     EbayProgressStepper, EbayProgressStep, EbayProgressTitle, StepperDirection, StepState
 } from './ebay-progress-stepper'
 export { EbayListboxButton, EbayListboxButtonOption } from './ebay-listbox-button'
+export { EbayVideo, EbayVideoProps, EbayVideoSource } from './ebay-video'

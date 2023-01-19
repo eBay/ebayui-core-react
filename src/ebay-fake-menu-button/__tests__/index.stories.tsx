@@ -5,8 +5,9 @@ import {
     EbayFakeMenuButton,
     EbayFakeMenuButtonItem as Item,
     EbayFakeMenuButtonSeparator as Separator,
-    EbayFakeMenuButtonLabel
-} from '..'
+    EbayFakeMenuButtonLabel,
+    EbayIcon
+} from '../../index'
 
 storiesOf('ebay-fake-menu-button', module)
     .add('Default', () => (<>
@@ -16,24 +17,67 @@ storiesOf('ebay-fake-menu-button', module)
             <Item href="http://ebay.co.uk">eBay UK</Item>
         </EbayFakeMenuButton>
     </>))
-    .add('With Separator', () => (<>
-        <EbayFakeMenuButton
-            text="Complex menu"
-            onExpand={action('Menu expanded!')}
-            onCollapse={action('Menu collapsed!')}
-        >
-            <Item href="http://ebay.com">Link 1</Item>
-            <Item href="http://ebay.com" current>Current link</Item>
-            <Separator/>
-            <Item disabled>Link 3 (disabled)</Item>
-            <Item href="http://ebay.com">Link 4</Item>
-            <Item href="http://ebay.com">Link 5</Item>
-            <Separator/>
-            <Item href="http://ebay.com" onClick={action('Open login popup!')}>Log in</Item>
+    .add('Expanded', () => (<>
+        <EbayFakeMenuButton expanded text="eBay Menu">
+            <Item href="http://ebay.com">item 1 that has very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
         </EbayFakeMenuButton>
     </>))
-    .add('Without Text', () => (<>
-        <EbayFakeMenuButton a11yText="eBay Menu without text">
+    .add('Disabled', () => (<>
+        <EbayFakeMenuButton text="eBay Menu" disabled>
+            <Item href="http://ebay.com">item 1 that has very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </>))
+    //
+    // Custom button stories
+    //
+    .add('With icon', () => (<>
+        <EbayFakeMenuButton text="Settings">
+            <EbayIcon name="settings" />
+            <Item href="http://ebay.com">item 1 that has very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </>))
+    .add('Without toggle icon', () => (<>
+        <EbayFakeMenuButton noToggleIcon text="Menu">
+            <Item href="http://ebay.com">item 1 that has very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </>))
+    .add('Variants', () => (<>
+        <h3>Button</h3>
+        <EbayFakeMenuButton variant="button" text="Button" a11yText="Menu inside the form">
+            <Item href="http://ebay.com">item 1</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+
+        <h3>Form</h3>
+        <EbayFakeMenuButton variant="form" text="Form" a11yText="Menu inside the form">
+            <Item href="http://ebay.com">item 1</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+
+        <h3>Overflow</h3>
+        <EbayFakeMenuButton variant="overflow" a11yText="Menu">
+            <Item href="http://ebay.com">item 1</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </>))
+    .add('Priorities', () => (<>
+        <EbayFakeMenuButton variant="button" priority="primary" text="Primary" a11yText="Menu">
+            <Item href="http://ebay.com">item 1</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+        <EbayFakeMenuButton variant="button" priority="tertiary" text="Tertiary" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
@@ -63,3 +107,36 @@ storiesOf('ebay-fake-menu-button', module)
             <Item href="http://ebay.com">item 3</Item>
         </EbayFakeMenuButton>
     </>))
+    //
+    // Custom menu stories
+    //
+    .add('With Separator', () => (<>
+        <EbayFakeMenuButton
+            text="Complex menu"
+            onExpand={action('Menu expanded!')}
+            onCollapse={action('Menu collapsed!')}
+        >
+            <Item href="http://ebay.com">Link 1</Item>
+            <Item href="http://ebay.com" current>Current link</Item>
+            <Separator/>
+            <Item disabled>Link 3 (disabled)</Item>
+            <Item href="http://ebay.com">Link 4</Item>
+            <Item href="http://ebay.com">Link 5</Item>
+            <Separator/>
+            <Item href="http://ebay.com" onClick={action('Open login popup!')}>Log in</Item>
+        </EbayFakeMenuButton>
+    </>))
+    .add('Fixed Width', () => (<>
+        <EbayFakeMenuButton text="Menu has a button width" fixWidth>
+            <Item href="http://ebay.com">item 1 that has very very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </>))
+    .add('Reverse (Menu grows to the left)', () => (<div style={{ marginLeft: '100px' }}>
+        <EbayFakeMenuButton text="Menu grows to the left" reverse>
+            <Item href="http://ebay.com">item 1 that has very very long text</Item>
+            <Item href="http://ebay.com">item 2</Item>
+            <Item href="http://ebay.com">item 3</Item>
+        </EbayFakeMenuButton>
+    </div>))

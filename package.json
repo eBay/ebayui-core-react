@@ -1,6 +1,6 @@
 {
   "name": "@ebay/ui-core-react",
-  "version": "3.4.1",
+  "version": "3.12.6",
   "description": "Skin components build off React",
   "main": "index.js",
   "types": "index.d.ts",
@@ -41,9 +41,10 @@
   "author": "tmanyanov@ebay.com",
   "license": "ISC",
   "peerDependencies": {
-    "@ebay/skin": "^15.0.0",
+    "@ebay/skin": "^15.2.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "shaka-player": "^4.3.2"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -92,6 +93,7 @@
     "react": "^16.0.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.0.0",
+    "shaka-player": "^4.3.2",
     "storybook-addon-jsx": "^7.3.14",
     "style-loader": "^2.0.0",
     "svgson": "^4.0.0",

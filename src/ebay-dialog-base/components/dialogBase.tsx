@@ -20,6 +20,7 @@ import { useDialogAnimation, TransitionElement } from './animation'
 export type WindowType = 'compact'
 type ClassPrefix = 'fullscreen-dialog' | 'lightbox-dialog' | 'panel-dialog'
     | 'drawer-dialog' | 'toast-dialog' | 'alert-dialog' | 'confirm-dialog'
+    | 'snackbar-dialog'
 type ButtonPosition = 'top' | 'right' | 'bottom' | 'left' | 'hidden'
 
 
@@ -31,6 +32,7 @@ export interface DialogBaseProps<T> extends HTMLProps<T> {
     windowType?: WindowType;
     header?: ReactElement;
     footer?: ReactElement;
+    actions?: ReactElement;
     isModal?: boolean;
     top?: ReactElement;
     buttonPosition?: ButtonPosition;
@@ -61,6 +63,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     a11yCloseText,
     onCloseBtnClick = () => {},
     footer,
+    actions,
     onScroll,
     open = false,
     onBackgroundClick = () => {},
@@ -195,6 +198,11 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
                 <div id={mainId} className={`${classPrefix}__main`} onScroll={onScroll}>
                     {children}
                 </div>
+                {actions ? (
+                    <div className={`${classPrefix}__actions`}>
+                        {actions}
+                    </div>
+                ) : null}
                 {footer || buttonPosition === 'bottom' ? (
                     <div className={`${classPrefix}__footer`}>
                         {footer}

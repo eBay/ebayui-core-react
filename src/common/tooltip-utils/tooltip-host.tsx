@@ -1,18 +1,21 @@
-import { Children, cloneElement, FC, ReactElement } from 'react'
+import { Children, cloneElement, FC, ReactElement, RefObject } from 'react'
 import classNames from 'classnames'
 
-type Props = {
+export type TooltipHostProps = {
     className?: string;
-    children: ReactElement;
+    children?: ReactElement;
+    forwardedRef?: RefObject<any>;
 }
 
-const TooltipHost: FC<Props> = ({
+const TooltipHost: FC<TooltipHostProps> = ({
     children,
     className,
+    forwardedRef,
     ...rest
 }) => {
     Children.only(children)
     return cloneElement(children, {
+        ref: forwardedRef,
         ...rest,
         className: classNames(className, children.props.className)
     })

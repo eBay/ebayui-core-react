@@ -358,3 +358,37 @@ exports[`Storyshots ebay-page-notice Simple usage 1`] = `
   </section>
 </DocumentFragment>
 `;
+
+exports[`Storyshots ebay-page-notice Simple usage with id 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="main-page-notice"
+    class="page-notice page-notice--confirmation"
+    role="region"
+  >
+    <div
+      class="page-notice__header"
+      id="main-page-notice"
+    >
+      <svg
+        aria-label="Success"
+        class="icon icon--confirmation-filled-small"
+        focusable="false"
+        height="16px"
+        role="img"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-confirmation-filled-small"
+        />
+      </svg>
+    </div>
+    <div
+      class="page-notice__main"
+    >
+      text message
+    </div>
+  </section>
+</DocumentFragment>
+`;

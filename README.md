@@ -17,24 +17,24 @@ eBayUI React components
 * [x] [ebay-badge](src/ebay-badge)
 * [x] [ebay-breadcrumbs](src/ebay-breadcrumbs)
 * [x] [ebay-button](src/ebay-button)
-* [ ] `ebay-carousel` (in progress...)
+* [x] [ebay-carousel](src/ebay-carousel)
 * [x] [ebay-checkbox](src/ebay-checkbox)
 * [ ] `ebay-combobox`
-* [ ] `ebay-confirm-dialog`
+* [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-cta-button](src/ebay-cta-button)
 * [ ] `ebay-details`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
-* [x] [ebay-fake-menu] (src/ebay-fake-menu)
-* [x] [ebay-fake-menu-button] (src/ebay-fake-menu-button)
-* [x] [ebay-fake-tabs] (src/ebay-fake-tabs)
+* [x] [ebay-fake-menu](src/ebay-fake-menu)
+* [x] [ebay-fake-menu-button](src/ebay-fake-menu-button)
+* [x] [ebay-fake-tabs](src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
 * [ ] `ebay-filter` (in progress...)
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
-* [ ] `ebay-icon-button`
+* [x] [ebay-icon-button](src/ebay-icon-button)
 * [x] [ebay-icon](src/ebay-icon)
 * [x] [ebay-infotip](src/ebay-infotip)
 * [x] [ebay-inline-notice](src/ebay-inline-notice)
@@ -46,7 +46,7 @@ eBayUI React components
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
-* [ ] `ebay-program-badge`
+* [x] [ebay-program-badge](src/ebay-program-badge)
 * [x] [ebay-progress-bar](src/ebay-progress-bar)
 * [x] [ebay-progress-spinner](src/ebay-progress-spinner)
 * [x] [ebay-progress-stepper](src/ebay-progress-stepper)
@@ -54,19 +54,19 @@ eBayUI React components
 * [x] [ebay-section-title](src/ebay-section-title)
 * [x] [ebay-section-notice](src/ebay-section-notice)
 * [x] [ebay-select](src/ebay-select)
-* [ ] `ebay-snackbar-dialog`
+* [x] [ebay-signal](src/ebay-signal)
+* [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
 * [x] [ebay-split-button](src/ebay-split-button)
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
 * [x] [ebay-switch](src/ebay-switch)
-* [x] [ebay-signal](src/ebay-signal)
 * [x] [ebay-tabs](src/ebay-tabs)
 * [x] [ebay-textbox](src/ebay-textbox)
 * [x] [ebay-toast-dialog](src/ebay-toast-dialog)
 * [x] [ebay-tooltip](src/ebay-tooltip)
-* [ ] `ebay-tourtip`
+* [x] [ebay-tourtip](src/ebay-tourtip)
 * [ ] `ebay-tri-state-checkbox`
-* [ ] `ebay-video`
+* [x] [ebay-video](src/ebay-video)
 
 ## Getting Started
 
