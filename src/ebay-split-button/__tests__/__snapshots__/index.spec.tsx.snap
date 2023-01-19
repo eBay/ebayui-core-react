@@ -15,7 +15,7 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="9b9f"
+          aria-controls="6512"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show save options"
@@ -59,7 +59,7 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="b49c"
+          aria-controls="ee06"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Menu"
@@ -103,7 +103,7 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="1875"
+          aria-controls="2fd6"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Expand"
@@ -153,7 +153,7 @@ exports[`Storyshots ebay-split-button Disabled 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="71af"
+          aria-controls="4bae"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show options"
@@ -203,7 +203,7 @@ exports[`Storyshots ebay-split-button Loading 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="d2f1"
+          aria-controls="888c"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show options"
@@ -252,7 +252,7 @@ exports[`Storyshots ebay-split-button Size 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="6b1e"
+          aria-controls="f928"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show options"
@@ -296,7 +296,7 @@ exports[`Storyshots ebay-split-button Size 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="18b5"
+          aria-controls="646a"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Menu"
@@ -340,7 +340,7 @@ exports[`Storyshots ebay-split-button Size 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="f3d2"
+          aria-controls="30eb"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Expand"
@@ -392,7 +392,7 @@ exports[`Storyshots ebay-split-button Transparent 1`] = `
           class="menu-button"
         >
           <button
-            aria-controls="3637"
+            aria-controls="8fb2"
             aria-expanded="false"
             aria-haspopup="true"
             aria-label="Show options"
@@ -436,7 +436,7 @@ exports[`Storyshots ebay-split-button Transparent 1`] = `
           class="menu-button"
         >
           <button
-            aria-controls="6bcc"
+            aria-controls="01c5"
             aria-expanded="false"
             aria-haspopup="true"
             aria-label="Show options"
@@ -487,7 +487,7 @@ exports[`Storyshots ebay-split-button Truncated 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="d582"
+          aria-controls="7d25"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show options"
@@ -532,7 +532,7 @@ exports[`Storyshots ebay-split-button Truncated 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="7ba3"
+          aria-controls="622b"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Menu"
