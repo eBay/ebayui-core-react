@@ -1,18 +1,16 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
 import initStoryshots from '@storybook/addon-storyshots'
-import { EbayMenuButton, EbayMenuButtonItem } from '..'
+import { EbayMenuButton, EbayMenuButtonItem } from '../index'
 
 initStoryshots({
     config: ({ configure }) => configure(() => require('./index.stories.tsx'), module)
 })
 
+const spy = jest.fn()
+
 describe('<EbayMenuButton>', () => {
     describe('on button click', () => {
-        let spy
-        beforeEach(() => {
-            spy = jest.fn()
-        })
         it('should fire onExpand event', () => {
             const wrapper = render(
                 <EbayMenuButton onExpand={spy}>
@@ -36,35 +34,76 @@ describe('<EbayMenuButton>', () => {
 
             expect(spy).toBeCalled()
         })
+    })
+
+    describe('on menu item click', () => {
+        it('should fire onSelect event', () => {
+            const wrapper = render(
+                <EbayMenuButton onSelect={spy}>
+                    <EbayMenuButtonItem value="first" />
+                    <EbayMenuButtonItem value="second" />
+                </EbayMenuButton>
+            )
+
+            const button = wrapper.container.querySelector('button')
+            fireEvent.click(button)
+            const item = screen.getAllByRole('menuitem')[1]
+            fireEvent.click(item)
+
+            const expectedEventProps = {
+                index: 1,
+                checked: [1]
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
+        })
+    })
+
+    describe('type="radio"', () => {
         it('should fire onChange event', () => {
             const wrapper = render(
                 <EbayMenuButton type="radio" onChange={spy}>
-                    <EbayMenuButtonItem />
-                    <EbayMenuButtonItem />
+                    <EbayMenuButtonItem value="first" />
+                    <EbayMenuButtonItem value="second" />
                 </EbayMenuButton>
             )
 
             const button = wrapper.container.querySelector('button')
             fireEvent.click(button)
-            const item = screen.getAllByRole('menuitem')[1]
+            const item = screen.getAllByRole('menuitemradio')[1]
             fireEvent.click(item)
 
-            expect(spy).toBeCalledWith(1, expect.anything())
+            const expectedEventProps = {
+                index: 1,
+                indexes: [1],
+                checked: [1],
+                checkedValues: ["second"],
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
-        it('should fire onSelect event', () => {
+    })
+
+    describe('type="checkbox"', () => {
+        it('should fire onChange event', () => {
             const wrapper = render(
                 <EbayMenuButton type="checkbox" onChange={spy}>
-                    <EbayMenuButtonItem />
-                    <EbayMenuButtonItem />
+                    <EbayMenuButtonItem value="first" />
+                    <EbayMenuButtonItem value="second" />
                 </EbayMenuButton>
             )
 
             const button = wrapper.container.querySelector('button')
             fireEvent.click(button)
-            const item = screen.getAllByRole('menuitem')[1]
+            const item = screen.getAllByRole('menuitemcheckbox')[1]
             fireEvent.click(item)
 
-            expect(spy).toBeCalledWith(1, expect.anything())
+            const expectedEventProps = {
+                index: 1,
+                indexes: [1],
+                checked: [1],
+                checkedValues: ["second"],
+            }
+
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 })

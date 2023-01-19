@@ -1,17 +1,24 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
+import { EbayIcon } from '../../ebay-icon'
 import {
     EbayMenuButton,
     EbayMenuButtonItem as Item,
-    EbayMenuButtonIcon,
     EbayMenuButtonSeparator as Separator,
-    EbayMenuButtonLabel,
-} from '../..'
+    EbayMenuButtonLabel
+} from '../index'
 
 storiesOf('ebay-menu-button', module)
     .add('Default', () => (<>
-        <EbayMenuButton text="eBay Menu">
+        <EbayMenuButton
+            text="eBay Menu"
+            onKeyDown={action('key down')}
+            onClick={action('click button')}
+            onSelect={action('select')}
+            onExpand={action('expand')}
+            onCollapse={action('collapse')}
+        >
             <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -36,7 +43,7 @@ storiesOf('ebay-menu-button', module)
     //
     .add('With icon', () => (<>
         <EbayMenuButton text="Settings">
-            <EbayMenuButtonIcon name="settings" />
+            <EbayIcon name="settings" />
             <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -49,66 +56,39 @@ storiesOf('ebay-menu-button', module)
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Variant: Overflow', () => (<>
-        <EbayMenuButton variant="overflow" a11y-text="Menu">
+    .add('Variants', () => (<>
+        <h3>Button</h3>
+        <EbayMenuButton variant="button" text="Button" a11yText="Menu inside the form">
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+
+        <h3>Form</h3>
+        <EbayMenuButton variant="form" text="Form" a11yText="Menu inside the form">
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+
+        <h3>Overflow</h3>
+        <EbayMenuButton variant="overflow" a11yText="Menu">
             <Item>item 1</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
         </EbayMenuButton>
     </>))
-    .add('Priority', () => (<>
-        <p>
-            <EbayMenuButton priority="primary" text="Primary" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-        </p>
-        <p>
-            <EbayMenuButton priority="tertiary" text="Tertiary" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-        </p>
-    </>))
-    .add('Split', () => (<>
-        <p>
-            <EbayMenuButton priority="primary" split="start" text="Left" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-            <EbayMenuButton priority="primary" split="end" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-        </p>
-        <p>
-            <EbayMenuButton split="start" text="Left" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-            <EbayMenuButton split="end" text="Right" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-        </p>
-        <p>
-            <EbayMenuButton priority="tertiary" split="start" text="Left" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-            <EbayMenuButton priority="tertiary" split="end" text="Right" a11y-text="Menu">
-                <Item>item 1</Item>
-                <Item>item 2</Item>
-                <Item>item 3</Item>
-            </EbayMenuButton>
-        </p>
+    .add('Priorities', () => (<>
+        <EbayMenuButton priority="primary" text="Primary" a11y-text="Menu">
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+        <EbayMenuButton priority="tertiary" text="Tertiary" a11y-text="Menu">
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
     </>))
     .add('Borderless', () => (<>
         <EbayMenuButton text="eBay Menu without borders!" borderless>
@@ -170,7 +150,7 @@ storiesOf('ebay-menu-button', module)
             type="radio"
             collapseOnSelect
             checked={defaultSortIndex}
-            onChange={(i) => setCheckedSort(i)}
+            onChange={(e, { index }) => setCheckedSort(index)}
         >
             {sortItems.map((item, i) => <Item key={i}>{item}</Item>)}
         </EbayMenuButton>
@@ -188,7 +168,7 @@ storiesOf('ebay-menu-button', module)
                 text={`Topic: ${topicItems[checkedTopic]}`}
                 type="radio"
                 checked={defaultTopicIndex}
-                onChange={(i) => setCheckedTopic(i)}
+                onChange={(e, { index }) => setCheckedTopic(index)}
             >
                 {topicItems.map((item, i) => <Item key={i}>{item}</Item>)}
             </EbayMenuButton>
@@ -197,7 +177,7 @@ storiesOf('ebay-menu-button', module)
                 text={`Sort order: ${sortItems[checkedSort]}`}
                 type="radio"
                 checked={defaultSortIndex}
-                onChange={(i) => setCheckedSort(i)}
+                onChange={(e, { index }) => setCheckedSort(index)}
             >
                 {sortItems.map((item, i) => <Item key={i}>{item}</Item>)}
             </EbayMenuButton>

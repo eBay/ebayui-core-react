@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { EbayCtaButton } from '../../index'
+import { EbayCtaButton } from '../index'
 
 storiesOf(`ebay-cta-button`, module)
     .add(`Default`, () => (

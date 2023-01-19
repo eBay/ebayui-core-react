@@ -6,7 +6,7 @@ import {
     EbayInfotipHeading,
     EbayInfotipHost,
     PointerDirection
-} from '../../index'
+} from '../index'
 
 const allPointers: PointerDirection[] = [
     `top`, `top-left`, `top-right`,

@@ -1,6 +1,6 @@
 import React from 'react'
-import {EbayCarousel, EbayCarouselItem} from "../index";
-import {ComponentMeta } from "@storybook/react";
+import { ComponentMeta } from '@storybook/react';
+import { EbayCarousel, EbayCarouselItem } from '../index';
 
 const story: ComponentMeta<typeof EbayCarousel> = {
   component: EbayCarousel,

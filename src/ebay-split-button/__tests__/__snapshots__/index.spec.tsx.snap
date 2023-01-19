@@ -15,24 +15,33 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="9682"
+          aria-controls="9b9f"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show save options"
           class="btn menu-button__button btn--primary btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -50,24 +59,33 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="7896"
+          aria-controls="b49c"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Menu"
           class="btn menu-button__button btn--secondary btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -85,24 +103,33 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="ce2f"
+          aria-controls="1875"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Expand"
           class="btn menu-button__button btn--tertiary btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -126,25 +153,83 @@ exports[`Storyshots ebay-split-button Disabled 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="7f63"
+          aria-controls="71af"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show options"
           class="btn menu-button__button btn--secondary btn--split-end"
           disabled=""
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
+        </button>
+      </span>
+    </span>
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Loading 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--split-start"
+      >
+        Load
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="d2f1"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--secondary btn--split-end"
+        >
+          <span
+            class="btn__cell"
+          >
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -161,30 +246,39 @@ exports[`Storyshots ebay-split-button Size 1`] = `
       <button
         class="btn btn--primary btn--large btn--split-start"
       >
-        Primary Split
+        Primary split button menu with checkboxes
       </button>
       <span
         class="menu-button"
       >
         <button
-          aria-controls="af22"
+          aria-controls="6b1e"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show options"
           class="btn menu-button__button btn--primary btn--large btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -196,30 +290,39 @@ exports[`Storyshots ebay-split-button Size 1`] = `
       <button
         class="btn btn--secondary btn--large btn--split-start"
       >
-        Split Button
+        Split button menu with radio
       </button>
       <span
         class="menu-button"
       >
         <button
-          aria-controls="2201"
+          aria-controls="18b5"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Menu"
           class="btn menu-button__button btn--secondary btn--large btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -237,24 +340,33 @@ exports[`Storyshots ebay-split-button Size 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="ec3b"
+          aria-controls="f3d2"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Expand"
           class="btn menu-button__button btn--tertiary btn--large btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -280,24 +392,33 @@ exports[`Storyshots ebay-split-button Transparent 1`] = `
           class="menu-button"
         >
           <button
-            aria-controls="eb0c"
+            aria-controls="3637"
             aria-expanded="false"
             aria-haspopup="true"
             aria-label="Show options"
             class="btn menu-button__button btn--secondary btn--split-end btn--transparent"
           >
-            <svg
-              aria-hidden="true"
-              class="icon icon--dropdown"
-              focusable="false"
-              height="24px"
-              width="24px"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="btn__cell"
             >
-              <use
-                xlink:href="#icon-dropdown"
-              />
-            </svg>
+              <span
+                class="btn__text"
+              >
+                <span />
+              </span>
+              <svg
+                aria-hidden="true"
+                class="icon icon--dropdown"
+                focusable="false"
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-dropdown"
+                />
+              </svg>
+            </span>
           </button>
         </span>
       </span>
@@ -315,24 +436,33 @@ exports[`Storyshots ebay-split-button Transparent 1`] = `
           class="menu-button"
         >
           <button
-            aria-controls="1885"
+            aria-controls="6bcc"
             aria-expanded="false"
             aria-haspopup="true"
             aria-label="Show options"
             class="btn menu-button__button btn--tertiary btn--split-end btn--transparent"
           >
-            <svg
-              aria-hidden="true"
-              class="icon icon--dropdown"
-              focusable="false"
-              height="24px"
-              width="24px"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="btn__cell"
             >
-              <use
-                xlink:href="#icon-dropdown"
-              />
-            </svg>
+              <span
+                class="btn__text"
+              >
+                <span />
+              </span>
+              <svg
+                aria-hidden="true"
+                class="icon icon--dropdown"
+                focusable="false"
+                height="24px"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-dropdown"
+                />
+              </svg>
+            </span>
           </button>
         </span>
       </span>
@@ -357,24 +487,33 @@ exports[`Storyshots ebay-split-button Truncated 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="c7a5"
+          aria-controls="d582"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Show options"
           class="btn menu-button__button btn--primary btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>
@@ -393,24 +532,33 @@ exports[`Storyshots ebay-split-button Truncated 1`] = `
         class="menu-button"
       >
         <button
-          aria-controls="8eed"
+          aria-controls="7ba3"
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Menu"
           class="btn menu-button__button btn--secondary btn--split-end"
         >
-          <svg
-            aria-hidden="true"
-            class="icon icon--dropdown"
-            focusable="false"
-            height="24px"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="btn__cell"
           >
-            <use
-              xlink:href="#icon-dropdown"
-            />
-          </svg>
+            <span
+              class="btn__text"
+            >
+              <span />
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--dropdown"
+              focusable="false"
+              height="24px"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-dropdown"
+              />
+            </svg>
+          </span>
         </button>
       </span>
     </span>

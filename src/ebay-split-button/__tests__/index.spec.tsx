@@ -1,8 +1,8 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react';
 import { initStoryshots } from '../../../config/jest/storyshots'
-import { EbaySplitButton } from '../index'
 import { EbayMenuButtonItem as Item } from '../../ebay-menu-button'
+import { EbaySplitButton } from '../index'
 
 initStoryshots({
     config: ({ configure }) =>
@@ -25,7 +25,7 @@ describe('<EbaySplitButton>', () => {
         it('should fire onEscape event', () => {
             const spy = jest.fn()
             const wrapper = render(splitButton({ onEscape: spy }))
-            fireEvent.click(wrapper.getAllByRole('button')[0])
+            fireEvent.keyDown(wrapper.getAllByRole('button')[0], { key: 'Escape' })
 
             expect(spy).toBeCalled()
         })

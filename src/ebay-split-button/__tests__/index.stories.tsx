@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbaySplitButton, EbayIcon, EbayMenuButtonItem as Item, EbayMenuButtonSeparator as Separator } from '../../index'
+import { EbayIcon } from '../../ebay-icon'
+import { EbayMenuButtonItem as Item, EbayMenuButtonSeparator as Separator } from '../../ebay-menu-button'
+import { EbaySplitButton } from '../index'
 
 storiesOf(`ebay-split-button`, module)
     .add(`Default`, () => (<>

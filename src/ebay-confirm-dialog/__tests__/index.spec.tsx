@@ -1,9 +1,9 @@
 import React from 'react'
 import requireContext from 'node-require-context'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
-import { EbayDialogHeader } from '../..'
-import { EbayConfirmDialog } from '../index';
 import { initStoryshots } from '../../../config/jest/storyshots';
+import { EbayDialogHeader } from '../../ebay-dialog-base'
+import { EbayConfirmDialog } from '../index';
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -20,6 +20,7 @@ describe('<EbayConfirmDialog>', () => {
                 rejectText="Reject"
                 open
                 onReject={closeDrawerHandler}
+                a11yCloseText="Close"
             >
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 <p>

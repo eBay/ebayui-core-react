@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import { EbaySwitch } from '../../index'
+import { EbaySwitch } from '../index'
 import { initStoryshots } from '../../../config/jest/storyshots'
 
 describe('<EbaySwitch>', () => {

@@ -137,6 +137,7 @@ exports[`Storyshots ebay-panel-dialog Custom Close Button 1`] = `
               Heading
             </h2>
             <button
+              aria-label="Close"
               class="icon-btn panel-dialog__close"
               type="button"
             >
@@ -199,6 +200,7 @@ exports[`Storyshots ebay-panel-dialog Default 1`] = `
               Heading
             </h2>
             <button
+              aria-label="Close"
               class="icon-btn panel-dialog__close"
               type="button"
             >
@@ -279,6 +281,7 @@ exports[`Storyshots ebay-panel-dialog From Right 1`] = `
               id="dialog-title-abc123"
             />
             <button
+              aria-label="Close"
               class="icon-btn panel-dialog__close"
               type="button"
             >
@@ -351,6 +354,7 @@ exports[`Storyshots ebay-panel-dialog With Animation 1`] = `
             Heading
           </h2>
           <button
+            aria-label="Close"
             class="icon-btn panel-dialog__close"
             type="button"
           >
@@ -419,6 +423,7 @@ exports[`Storyshots ebay-panel-dialog With Animation From Right 1`] = `
             Heading
           </h2>
           <button
+            aria-label="Close"
             class="icon-btn panel-dialog__close"
             type="button"
           >

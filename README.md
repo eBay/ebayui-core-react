@@ -41,8 +41,8 @@ eBayUI React components
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
 * [x] [ebay-listbox-button](src/ebay-listbox-button)
 * [ ] `ebay-listbox`
-* [x] [ebay-menu] (src/ebay-menu)
-* [x] [ebay-menu-button] (src/ebay-menu-button)
+* [x] [ebay-menu](src/ebay-menu)
+* [x] [ebay-menu-button](src/ebay-menu-button)
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
