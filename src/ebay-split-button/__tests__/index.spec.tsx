@@ -4,6 +4,8 @@ import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayMenuButtonItem as Item } from '../../ebay-menu-button'
 import { EbaySplitButton } from '../index'
 
+jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+
 initStoryshots({
     config: ({ configure }) =>
         configure(() => {
