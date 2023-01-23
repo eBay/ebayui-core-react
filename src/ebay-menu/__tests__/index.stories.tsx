@@ -24,8 +24,9 @@ storiesOf('ebay-menu', module)
                     type="radio"
                     checked={1}
                     onKeyDown={action('key down')}
-                    onChange={action('change')}
-                    onSelect={action('select')}
+                    // Test TS complier errors here:
+                    onChange={(e, { index, checked}) => action('change')(e, { index, checked })}
+                    onSelect={(e, { index, checked }) => action('select')(e, { index, checked })}
                 >
                     <Item>item 0</Item>
                     <Item>Prechecked on menu level</Item>
