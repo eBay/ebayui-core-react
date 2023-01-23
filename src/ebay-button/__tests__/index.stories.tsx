@@ -10,6 +10,9 @@ storiesOf(`ebay-button`, module)
             <p><EbayButton
                 onClick={action(`clicked`)}
                 onEscape={action('escape pressed')}
+                onFocus={action('focus')}
+                onBlur={action('blur')}
+                onKeyDown={action('key down')}
             >Hello, I am a button!</EbayButton></p>
             <p><EbayButton href="https://ebay.com">Hello, I am a link!</EbayButton></p>
         </>
