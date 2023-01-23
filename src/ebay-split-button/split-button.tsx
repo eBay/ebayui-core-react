@@ -7,14 +7,17 @@ import { EbayMenuProps } from '../ebay-menu'
 export type EbaySplitButtonProps = {
     a11yMenuText?: string;
     a11yButtonLoadingText?: string;
+    onCollapse?: () => void;
+    onExpand?: () => void;
 }
 
+type MenuEvents = 'onSelect' | 'onChange'
 type Props =
     EbaySplitButtonProps &
     Omit<EbayButtonProps, 'ref'> &
-    Omit<ComponentProps<'button'>, 'type'> &
-    ComponentProps<'a'> &
-    EbayMenuProps;
+    Omit<ComponentProps<'button'>, 'type' | MenuEvents> &
+    Omit<ComponentProps<'a'>, MenuEvents> &
+    Omit<EbayMenuProps, 'priority'>;
 
 const EbaySplitButton: FC<Props> = ({
     a11yMenuText,
@@ -22,6 +25,10 @@ const EbaySplitButton: FC<Props> = ({
     type,
     bodyState,
     a11yButtonLoadingText,
+    onCollapse,
+    onExpand,
+    onSelect,
+    onChange,
     ref,
     ...rest
 }) => {
@@ -46,7 +53,12 @@ const EbaySplitButton: FC<Props> = ({
                 size={rest.size}
                 type={type}
                 split="end"
+                reverse
                 a11yText={a11yMenuText}
+                onCollapse={onCollapse}
+                onExpand={onExpand}
+                onSelect={onSelect}
+                onChange={onChange}
             >
                 {menuItems}
             </EbayMenuButton>

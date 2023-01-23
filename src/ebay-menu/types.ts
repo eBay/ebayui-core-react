@@ -4,7 +4,7 @@ import { EbayEventHandler, EbayKeyboardEventHandler } from '../common/event-util
 export type EbayMenuType = 'radio' | 'checkbox'
 export type EbayMenuPriority = 'primary' | 'secondary' | 'none'
 
-type SpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
+type SpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange' | 'onSelect'>
 type SelectProps = {
     index: number;
     checked: number[];

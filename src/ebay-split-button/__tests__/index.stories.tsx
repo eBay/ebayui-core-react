@@ -5,17 +5,31 @@ import { EbayIcon } from '../../ebay-icon'
 import { EbayMenuButtonItem as Item, EbayMenuButtonSeparator as Separator } from '../../ebay-menu-button'
 import { EbaySplitButton } from '../index'
 
-storiesOf(`ebay-split-button`, module)
-    .add(`Default`, () => (<>
+storiesOf('ebay-split-button', module)
+    .add('Default', () => (<>
         <p>
-            <EbaySplitButton priority="primary" a11yMenuText="Show save options" onClick={action(`Saved`)}>
+            <EbaySplitButton
+                priority="primary"
+                a11yMenuText="Show save options"
+                onClick={action('click')}
+                // testing TS compilation here:
+                onKeyDown={(e) => action('key down')(e)}
+                onSelect={(e, { index, checked }) => action('select')(e, { index, checked })}
+                onChange={(e, { index, checked }) => action('change')(e, { index, checked })}
+                //
+                onEscape={action('escape')}
+                onFocus={action('focus')}
+                onBlur={action('blur')}
+                onCollapse={action('collapse')}
+                onExpand={action('expand')}
+            >
                 Save document
                 <Item>Save as...</Item>
                 <Item>Export</Item>
             </EbaySplitButton>
         </p>
         <p>
-            <EbaySplitButton a11yMenuText="Menu" onClick={action(`clicked`)}>
+            <EbaySplitButton a11yMenuText="Menu" onClick={action('clicked')}>
                 Split Button Menu with Separator
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
@@ -24,7 +38,7 @@ storiesOf(`ebay-split-button`, module)
             </EbaySplitButton>
         </p>
         <p>
-            <EbaySplitButton priority="tertiary" a11yMenuText="Expand" onClick={action(`clicked`)}>
+            <EbaySplitButton priority="tertiary" a11yMenuText="Expand" onClick={action('clicked')}>
                 Tertiary button menu with icons
                 <Item>
                     <EbayIcon name="confirmation" style={{ marginRight: '8px' }} /> Confirmed
@@ -38,16 +52,17 @@ storiesOf(`ebay-split-button`, module)
             </EbaySplitButton>
         </p>
     </>))
-    .add(`Size`, () => (<>
+    .add('Size', () => (<>
         <p>
             <EbaySplitButton
                 priority="primary"
                 size="large"
                 type="checkbox"
                 a11yMenuText="Show options"
-                onClick={action(`clicked`)}
+                onClick={action('clicked')}
+                onChange={action('change')}
             >
-                Primary split button menu with checkboxes
+                Primary multi-select
                 <Item>Item 1</Item>
                 <Item checked>Item 2</Item>
                 <Item>Item 3</Item>
@@ -59,16 +74,23 @@ storiesOf(`ebay-split-button`, module)
                 size="large"
                 type="radio"
                 a11yMenuText="Menu"
-                onClick={action(`clicked`)}
+                onClick={action('clicked')}
+                onChange={action('change')}
             >
-                Split button menu with radio
+                Single-select
                 <Item>Item 1</Item>
                 <Item checked>Item 2</Item>
                 <Item>Item 3</Item>
             </EbaySplitButton>
         </p>
         <p>
-            <EbaySplitButton size="large" priority="tertiary" a11yMenuText="Expand" onClick={action(`clicked`)}>
+            <EbaySplitButton
+                size="large"
+                priority="tertiary"
+                a11yMenuText="Expand"
+                onClick={action('clicked')}
+                onSelect={action('select')}
+            >
                 Tertiary
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
@@ -76,9 +98,9 @@ storiesOf(`ebay-split-button`, module)
             </EbaySplitButton>
         </p>
     </>))
-    .add(`Truncated`, () => (<>
+    .add('Truncated', () => (<>
         <p>
-            <EbaySplitButton priority="primary" style={{ maxWidth: '200px' }} truncate a11yMenuText="Show options" onClick={action(`clicked`)}>
+            <EbaySplitButton priority="primary" style={{ maxWidth: '200px' }} truncate a11yMenuText="Show options" onClick={action('clicked')}>
                 Primary Split Button with truncated text label
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
@@ -86,7 +108,7 @@ storiesOf(`ebay-split-button`, module)
             </EbaySplitButton>
         </p>
         <p>
-            <EbaySplitButton style={{ maxWidth: '200px' }} truncate a11yMenuText="Menu" onClick={action(`clicked`)}>
+            <EbaySplitButton style={{ maxWidth: '200px' }} truncate a11yMenuText="Menu" onClick={action('clicked')}>
                 Split Button with truncated text label
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
@@ -94,7 +116,7 @@ storiesOf(`ebay-split-button`, module)
             </EbaySplitButton>
         </p>
     </>))
-    .add(`Loading`, () => {
+    .add('Loading', () => {
         const [loading, setLoading] = useState(false)
 
         return (<>
@@ -104,17 +126,21 @@ storiesOf(`ebay-split-button`, module)
                     a11yMenuText="Show options"
                     a11yButtonLoadingText="Stand by or stop loading by using menu"
                     onClick={() => setLoading(true)}
+                    onSelect={(e, { index }) => {
+                        const value = [true, false][index]
+                        setLoading(value)
+                    }}
                 >
                     Load
-                    <Item disabled={loading} onClick={() => setLoading(true)}>Start loading</Item>
-                    <Item disabled={!loading} onClick={() => setLoading(false)}>Stop loading</Item>
+                    <Item disabled={loading}>Start loading</Item>
+                    <Item disabled={!loading}>Stop loading</Item>
                 </EbaySplitButton>
             </p>
         </>)
     })
-    .add(`Transparent`, () => (<div style={{ background: 'lightcyan', padding: '1em' }}>
+    .add('Transparent', () => (<div style={{ background: 'lightcyan', padding: '1em' }}>
         <p>
-            <EbaySplitButton transparent a11yMenuText="Show options" onClick={action(`clicked`)}>
+            <EbaySplitButton transparent a11yMenuText="Show options" onClick={action('clicked')}>
                 Transparent split button
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
@@ -122,7 +148,7 @@ storiesOf(`ebay-split-button`, module)
             </EbaySplitButton>
         </p>
         <p>
-            <EbaySplitButton priority="tertiary" transparent a11yMenuText="Show options" onClick={action(`clicked`)}>
+            <EbaySplitButton priority="tertiary" transparent a11yMenuText="Show options" onClick={action('clicked')}>
                 Transparent tertiary split button
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
@@ -130,9 +156,9 @@ storiesOf(`ebay-split-button`, module)
             </EbaySplitButton>
         </p>
     </div>))
-    .add(`Disabled`, () => (<>
+    .add('Disabled', () => (<>
         <p>
-            <EbaySplitButton disabled a11yMenuText="Show options" onClick={action(`clicked`)}>
+            <EbaySplitButton disabled a11yMenuText="Show options" onClick={action('clicked')}>
                 Disabled Split Button
             </EbaySplitButton>
         </p>

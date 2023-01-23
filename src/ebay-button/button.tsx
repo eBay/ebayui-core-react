@@ -46,6 +46,7 @@ const EbayButton:FC<Props> = ({
     disabled,
     partiallyDisabled,
     children,
+    onKeyDown = () => {},
     onEscape = () => {},
     truncate = false,
     href,
@@ -92,7 +93,8 @@ const EbayButton:FC<Props> = ({
         fixedHeight && (sizeStyles[size] ? `${sizeStyles[size]}-${fixedHeight}` : `${classPrefix}--fixed-height`)
     )
 
-    const onKeyDown = (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    const keyDownHandler = (e: KeyboardEvent<HTMLButtonElement & HTMLAnchorElement>) => {
+        onKeyDown(e)
         if (e.key === 'Escape' || e.key === 'Esc') {
             onEscape(e)
         }
@@ -106,7 +108,7 @@ const EbayButton:FC<Props> = ({
             className={className}
             href={disabled ? undefined : href}
             ref={forwardedRef}
-            onKeyDown={onKeyDown}
+            onKeyDown={keyDownHandler}
             aria-live={ariaLive}
             {...rest}
         >
@@ -119,7 +121,7 @@ const EbayButton:FC<Props> = ({
             aria-live={ariaLive}
             className={className}
             ref={forwardedRef}
-            onKeyDown={onKeyDown}
+            onKeyDown={keyDownHandler}
             {...rest}
         >
             {bodyContent}
