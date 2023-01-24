@@ -1,23 +1,8 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { FC } from 'react'
 import { filterBy, filterByType } from '../common/component-utils'
-import { EbayButton, EbayButtonProps } from '../ebay-button'
+import { EbayButton } from '../ebay-button'
 import { EbayMenuButton, EbayMenuButtonItem, EbayMenuButtonSeparator } from '../ebay-menu-button'
-import { EbayMenuProps } from '../ebay-menu'
-
-export type EbaySplitButtonProps = {
-    a11yMenuText?: string;
-    a11yButtonLoadingText?: string;
-    onCollapse?: () => void;
-    onExpand?: () => void;
-}
-
-type MenuEvents = 'onSelect' | 'onChange'
-type Props =
-    EbaySplitButtonProps &
-    Omit<EbayButtonProps, 'ref'> &
-    Omit<ComponentProps<'button'>, 'type' | MenuEvents> &
-    Omit<ComponentProps<'a'>, MenuEvents> &
-    Omit<EbayMenuProps, 'priority'>;
+import { Props } from './types'
 
 const EbaySplitButton: FC<Props> = ({
     a11yMenuText,

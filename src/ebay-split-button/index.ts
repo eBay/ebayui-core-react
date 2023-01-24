@@ -1,1 +1,2 @@
-export { default as EbaySplitButton, EbaySplitButtonProps } from './split-button'
+export { default as EbaySplitButton } from './split-button'
+export * from './types'
