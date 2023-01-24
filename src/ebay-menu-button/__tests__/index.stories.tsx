@@ -15,7 +15,7 @@ storiesOf('ebay-menu-button', module)
             text="eBay Menu"
             onKeyDown={action('key down')}
             onClick={action('click button')}
-            onSelect={action('select')}
+            onSelect={(e, { index, checked }) => action('select')(e, { index, checked })}
             onExpand={action('expand')}
             onCollapse={action('collapse')}
         >

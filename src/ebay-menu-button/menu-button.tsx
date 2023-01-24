@@ -31,9 +31,10 @@ export type EbayMenuButtonProps = {
     prefixLabel?: string;
 }
 
-type Props = Omit<EbayButtonProps, 'type' | 'variant'> &
-    Omit<ComponentProps<'button'>, 'type' | 'onChange'> &
-    Omit<ComponentProps<'a'>, 'onChange'> &
+type MenuEvents = 'onSelect' | 'onChange'
+type Props = Omit<EbayButtonProps, 'type' | 'variant' | 'onKeyDown'> &
+    Omit<ComponentProps<'button'>, 'type' | MenuEvents> &
+    Omit<ComponentProps<'a'>, MenuEvents> &
     EbayMenuButtonProps
 
 const EbayMenuButton: FC<Props> = ({
