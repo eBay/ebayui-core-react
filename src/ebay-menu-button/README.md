@@ -54,9 +54,8 @@ Name | Type     | Required | Description
 `prefixLabel` | String   | No |The label to add before each selected item on the button. Cannot be used with `prefix-id` (NOT YET IMPLEMENTED)
 `onExpand` | Function | No | Called when content is expanded
 `onCollapse` | Function | No | Called when content is collapsed
-`onKeydown` | Function | No | Arguments: (index: number, checked: boolean)
-`onChange` | Function | No | Arguments: (index: number, checked: boolean) for type `radio`/`checkbox`
-`onSelect` | Function | No | Arguments: (index: number, checked: boolean), not for use with type `radio`/`checkbox`
+`onSelect` | Function | No | props: (e: event, { index: number }), triggered on item clicked (not for type `radio`/`checkbox`)
+`onChange` | Function | No | props: (e: event, { index: number, checked: number[], checkedValues: string[]), triggered on item `checked` change, (for type `radio`/`checkbox` only)
 
 ## EbayMenuButtonItem Attributes
 
