@@ -1,8 +1,9 @@
 import React from 'react'
 import requireContext from 'node-require-context'
 import { render, fireEvent } from '@testing-library/react'
-import { EbayDialogCloseButton, EbayDialogHeader, EbayPanelDialog } from '../..'
 import { initStoryshots } from '../../../config/jest/storyshots'
+import { EbayDialogCloseButton, EbayDialogHeader } from '../../ebay-dialog-base'
+import { EbayPanelDialog } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 

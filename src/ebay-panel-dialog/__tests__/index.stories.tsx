@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader, EbayDialogCloseButton, EbayPanelDialog } from '../..'
+import { EbayPanelDialog } from '../index'
+import { EbayDialogCloseButton, EbayDialogHeader } from '../../ebay-dialog-base'
 
 const story: any = {
     component: EbayPanelDialog,

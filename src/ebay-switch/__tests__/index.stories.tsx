@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbaySwitch } from '../../index'
+import { EbaySwitch } from '../index'
 
 storiesOf(`ebay-switch`, module)
     .add(`Default switch-button`, () => (

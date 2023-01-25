@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader, EbayDialogFooter, EbayFullscreenDialog } from '../..'
+import { EbayFullscreenDialog } from '../index'
+import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
 
 const story: any = {
   component: EbayFullscreenDialog,

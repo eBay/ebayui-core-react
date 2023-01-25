@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { EbayListboxButton, EbayListboxButtonOption } from '../../index'
+import { EbayListboxButton, EbayListboxButtonOption } from '../index'
 
 
 const StateFullTest = () => {

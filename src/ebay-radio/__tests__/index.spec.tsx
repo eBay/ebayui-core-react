@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 import { initStoryshots } from '../../../config/jest/storyshots';
-import { EbayRadio } from '../../index';
+import { EbayRadio } from '../index';
 
 initStoryshots({
     config: ({ configure }) =>

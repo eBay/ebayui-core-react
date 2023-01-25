@@ -1,7 +1,7 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react';
 import { initStoryshots } from '../../../config/jest/storyshots';
-import { EbaySelect, EbaySelectOption } from '../../index'
+import { EbaySelect, EbaySelectOption } from '../index'
 
 initStoryshots({
     config: ({ configure }) =>

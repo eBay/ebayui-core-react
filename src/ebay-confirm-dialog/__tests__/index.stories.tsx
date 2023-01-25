@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader } from '../..'
-import {EbayConfirmDialog} from "../index";
+import { EbayConfirmDialog } from '../index';
+import { EbayDialogHeader } from '../../ebay-dialog-base'
 
 const story: any = {
     component: EbayConfirmDialog,

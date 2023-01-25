@@ -1,5 +1,5 @@
 import React from 'react'
-import { EbayBadge } from '../../index'
+import { EbayBadge } from '../index'
 import {render} from '@testing-library/react';
 
 describe('<EbayBadge>', () => {

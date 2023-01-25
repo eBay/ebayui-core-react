@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayButton, EbayButtonCell } from '../../index'
+import { EbayButton, EbayButtonCell } from '../index'
 import EbayIcon from '../../ebay-icon/icon';
 
 storiesOf(`ebay-button`, module)

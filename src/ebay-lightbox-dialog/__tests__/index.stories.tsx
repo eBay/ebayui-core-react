@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
-import { EbayDialogHeader, EbayDialogFooter, EbayLightboxDialog, EbayButton, EbayCheckbox, EbayLabel } from '../..'
+import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
+import { EbayButton } from '../../ebay-button'
+import { EbayCheckbox } from '../../ebay-checkbox'
+import { EbayLabel } from '../../ebay-field'
+import { EbayLightboxDialog } from '../index'
 
 const story: any = {
     component: EbayLightboxDialog,

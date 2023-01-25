@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import { EbayIcon } from '../../index'
+import { EbayIcon } from '../index'
 import { icons } from './constants'
 
 export default {
