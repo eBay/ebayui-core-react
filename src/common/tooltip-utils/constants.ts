@@ -1,9 +1,15 @@
-import { PointerDirection } from './types'
+import { PointerDirection, TooltipType } from './types'
 
 export const DEFAULT_POINTER_DIRECTION: PointerDirection = 'bottom'
 
+export const TYPE_ROLES: Record<TooltipType, string> = {
+    tooltip: 'tooltip',
+    tourtip: 'region',
+    infotip: ''
+}
+
 export const POINTER_STYLES: { [key in PointerDirection]: any } = {
-    'left': {
+    left: {
         transform: 'translateX(16px) translateY(-50%) scale3d(1,1,1)',
         left: '100%',
         right: 'auto',
@@ -24,7 +30,7 @@ export const POINTER_STYLES: { [key in PointerDirection]: any } = {
         top: 'auto',
         bottom: '-10px'
     },
-    'right': {
+    right: {
         transform: 'translateX(-16px) translateY(-50%) scale3d(1,1,1)',
         left: 'auto',
         right: '100%',
@@ -45,7 +51,7 @@ export const POINTER_STYLES: { [key in PointerDirection]: any } = {
         top: 'auto',
         bottom: '-50%'
     },
-    'top': {
+    top: {
         transform: 'translateX(-50%) scale3d(1,1,1)',
         left: '50%',
         right: 'auto',
@@ -80,7 +86,7 @@ export const POINTER_STYLES: { [key in PointerDirection]: any } = {
         top: 'auto',
         bottom: 'calc(100% + 12px)'
     },
-    'bottom': {
+    bottom: {
         transform: 'translateX(-50%) scale3d(1,1,1)',
         left: '50%',
         right: 'auto',
