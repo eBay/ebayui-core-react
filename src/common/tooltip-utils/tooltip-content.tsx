@@ -2,7 +2,7 @@ import React, { FC, CSSProperties, ReactNode } from 'react'
 import { EbayIcon } from '../../ebay-icon'
 import { excludeComponent, findComponent } from '../component-utils'
 import { PointerDirection, TooltipType } from './types'
-import { DEFAULT_POINTER_DIRECTION, POINTER_STYLES } from './constants'
+import { DEFAULT_POINTER_DIRECTION, POINTER_STYLES, TYPE_ROLES } from './constants'
 import TooltipCloseButton from './tooltip-close-button'
 import TooltipFooter from './tooltip-footer'
 
@@ -35,7 +35,7 @@ const TooltipContent: FC<TooltipContentProps> = ({
         <span
             className={`${type}__overlay`}
             id={id}
-            role="tooltip"
+            role={TYPE_ROLES[type] || null}
             style={{ ...POINTER_STYLES[pointer], ...style }}>
             <span className={`${type}__pointer ${type}__pointer--${pointer}`} />
             <span className={`${type}__mask`}>
