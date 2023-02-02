@@ -79,7 +79,7 @@ describe('<EbayPageNotice>', () => {
             await dismissButton.focus()
             userEvent.type(dismissButton, ' ')
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
-            expect( dismissMock ).toHaveBeenCalled()
+            expect(dismissMock).toHaveBeenCalled()
         })
     })
 })
