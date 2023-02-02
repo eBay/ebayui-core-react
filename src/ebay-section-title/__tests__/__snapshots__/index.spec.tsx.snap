@@ -109,7 +109,7 @@ exports[`Storyshots ebay-section-title With Info 1`] = `
       </button>
       <span
         className="infotip__overlay"
-        role="tooltip"
+        role={null}
         style={
           Object {
             "bottom": "auto",
