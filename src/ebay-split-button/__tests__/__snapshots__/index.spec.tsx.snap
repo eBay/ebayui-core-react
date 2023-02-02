@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots ebay-split-button Controls 1`] = `
+<DocumentFragment>
+  <span
+    class="split-button"
+  >
+    <button
+      class="btn btn--secondary btn--split-start"
+    >
+      Save document
+    </button>
+    <span
+      class="menu-button"
+    >
+      <button
+        aria-controls="abc123"
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-label="Show save options"
+        class="btn menu-button__button btn--secondary btn--split-end"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon icon--dropdown"
+          focusable="false"
+          height="24px"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-dropdown"
+          />
+        </svg>
+      </button>
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-split-button Default 1`] = `
 <DocumentFragment>
   <p>

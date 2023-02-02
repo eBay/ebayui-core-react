@@ -1,11 +1,42 @@
 import React, { useState } from 'react'
-import { storiesOf } from '@storybook/react'
+import { ComponentMeta, storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayIcon } from '../../ebay-icon'
 import { EbayMenuButtonItem as Item, EbayMenuButtonSeparator as Separator } from '../../ebay-menu-button'
 import { EbaySplitButton } from '../index'
+import { Priority } from '../../ebay-button'
 
+Item.displayName = 'Item'
+Item.toString = () => 'Item'
 storiesOf('ebay-split-button', module)
+    .add('Controls', (args) =>
+        <EbaySplitButton {...args}>
+            Save document
+            <Item>Save as...</Item>
+            <Item>Export</Item>
+        </EbaySplitButton>,
+        {
+            component: EbaySplitButton,
+            args: {
+                priority: 'secondary',
+                a11yMenuText: 'Show save options'
+            },
+            argTypes: {
+                priority: {
+                    options: ['primary', 'secondary', 'tertiary', 'none'] as Priority[],
+                    control: 'select'
+                },
+                onClick: { action: 'clicked' },
+                onKeyDown: { action: 'key down' },
+                onEscape: { action: 'Esc pressed' },
+                onFocus: { action: 'focused' },
+                onBlur: { action: 'blured' },
+                onCollapse: { action: 'collapsed' },
+                onExpand: { action: 'expanded' },
+                onSelect: { action: 'selected' }
+            }
+        } as ComponentMeta<typeof EbaySplitButton>
+    )
     .add('Default', () => (<>
         <p>
             <EbaySplitButton
