@@ -5,7 +5,7 @@
 
 ## Import JS
 ```jsx harmony
-import { EbayField, EbayLabel, fieldLayoutType, EbayFieldDescription, fieldDescriptionType, fieldDescriptionPosition } from '@ebay/ui-core-react/ebay-field';
+import { EbayField, EbayLabel, EbayFieldDescription } from '@ebay/ui-core-react/ebay-field';
 ```
 ## Import following styles from SKIN
 ```jsx harmony
@@ -20,12 +20,12 @@ import '@ebay/skin/field.css'
 yarn add @ebay/ui-core-react
 ```
 ```jsx harmony
- <EbayField layout={fieldLayoutType.BLOCK}>
+ <EbayField layout="block">
     <EbayLabel stacked htmlFor="field1">Label 1</EbayLabel>
     <EbayTextbox placeholder="placeholder text" id="field1" />
     <EbayFieldDescription
-        type={fieldDescriptionType.CONFIRMATION}
-        position={fieldDescriptionPosition.BELOW_FIELD}>
+        type="confirmation"
+        position="bellow">
             Some description Text
     </EbayFieldDescription>
 </EbayField>
@@ -35,7 +35,7 @@ yarn add @ebay/ui-core-react
 
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
-`layout` | String | No | No | `fieldLayoutType.BLOCK`, `fieldLayoutType.inline` (default)
+`layout` | String | No | No | `block`, `inline` (default)
 
 ## EbayLabel Attributes
 
@@ -49,5 +49,5 @@ Name | Type | Stateful | Required | Description
 
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
-`type` | String | No | No | `fieldDescriptionType.CONFIRMATION`, `fieldDescriptionType.DEFAULT`(Default), `fieldDescriptionType.ATTENTION`, `fieldDescriptionType.INFORMATION`
-`position` | String | No | No | `fieldDescriptionPosition.BELOW_FIELD` (Default), `fieldDescriptionPosition.INLINE`
+`type` | String | No | No | `confirmation`, `default`(Default), `attention`, `information`
+`position` | String | No | No | `bellow` (Default), `inline`, `above`
