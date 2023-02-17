@@ -991,23 +991,6 @@ exports[`Storyshots ebay-drawer-dialog Without Handle 1`] = `
           <h2
             id="dialog-title-abc123"
           />
-          <button
-            class="icon-btn drawer-dialog__close"
-            type="button"
-          >
-            <svg
-              aria-hidden="true"
-              class="icon icon--close"
-              focusable="false"
-              height="24px"
-              width="24px"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use
-                xlink:href="#icon-close"
-              />
-            </svg>
-          </button>
         </div>
         <div
           class="drawer-dialog__main"
