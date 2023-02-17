@@ -57,7 +57,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     mainId,
     top,
     header,
-    buttonPosition = 'left',
+    buttonPosition = 'right',
     children,
     ariaLabelledby,
     a11yCloseText,
