@@ -40,7 +40,7 @@ describe('<EbayDrawerDialog>', () => {
         expect(closeDrawerHandler).toBeCalled()
     })
 
-    it('should not render close button when noHandle is set', () => {
+    it('should not render close button when buttonPosition is set to hidden', () => {
         renderComponent({ buttonPosition: 'hidden' })
         const closeButton = wrapper.container.querySelector(`button.${classPrefix}__close`)
         expect(closeButton).toBeNull()
