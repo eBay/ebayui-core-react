@@ -17,7 +17,13 @@ const close = () => setOpen(false);
             Open Dialog
         </button>
         <p>Some outside content...</p>
-        <EbayConfirmDialog open={open} onConfirm={close} onReject={close} confirmText="Cancel"  rejectText="Delete">
+        <EbayConfirmDialog
+            open={open}
+            onConfirm={close}
+            onReject={close}
+            confirmText="Cancel"
+            rejectText="Delete"
+        >
             <EbayDialogHeader>Delete Address?</EbayDialogHeader>
             <p>You will permanently lose this address.</p>
         </EbayConfirmDialog>
