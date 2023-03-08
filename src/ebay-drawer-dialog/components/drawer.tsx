@@ -10,8 +10,8 @@ export interface EbayDrawerProps<T> extends DialogBaseProps<T> {
     open?: boolean;
     noHandle?: boolean;
     focus?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
-    a11yMinimizeText: string;
-    a11yMaximizeText: string;
+    a11yMinimizeText?: string;
+    a11yMaximizeText?: string;
     onShow?: () => void;
     onClose?: () => void;
     onExpanded?: () => void;
