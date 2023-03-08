@@ -61,6 +61,22 @@ export const _WithoutHandle = () => {
     );
 };
 
+export const _WithoutHandleAndCloseButton = () => {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <>
+            <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
+            <EbayDrawerDialog noHandle buttonPosition='hidden' open={open} onClose={() => setOpen(false)}>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                    <a href="http://www.ebay.com">www.ebay.com</a>
+                </p>
+            </EbayDrawerDialog>
+        </>
+    );
+};
+
 export const _LotsOfContent = () => {
     const [open, setOpen] = useState(false)
 

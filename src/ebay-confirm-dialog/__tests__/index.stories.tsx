@@ -23,7 +23,6 @@ const close = () => setOpen(false);
             onReject={close}
             confirmText="Cancel"
             rejectText="Delete"
-            a11yCloseText="Close"
         >
             <EbayDialogHeader>Delete Address?</EbayDialogHeader>
             <p>You will permanently lose this address.</p>

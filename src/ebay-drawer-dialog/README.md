@@ -23,25 +23,25 @@ import '@ebay/skin/drawer-dialog.css'
 
 ## Props
 
-Name | Type | Stateful | Required | Description
---- | --- | --- | --- | ---
-`expanded` | Boolean | No | No | Whether the drawer is expanded to full height or max 50%. Controlled.
-`open` | Boolean | Yes | No | Whether drawer is open. Controlled.
-`noHandle` | Boolean | Yes | No | Whether handle will be shown or not.
-`focus` | String | No | No | An id for an element which will receive focus when the drawer opens (defaults to close button).
-`a11yCloseText` | String | No | Yes | A11y text for close button and mask.
-`a11yMinimizeText` | String | No | Yes | A11y text for draggable handle when drawer is maximized and clicking handle will minimize the drawer.
-`a11yMaximizeText` | String | No | Yes | A11y text for draggable handle when drawer is minimized and clicking handle will maximize the drawer.
-`animated` | Boolean | Yes | No | Renders the dialog with an animation. Note that the dialog will always be present in the DOM
+| Name               | Type    | Stateful | Required | Description                                                                                                                                       |
+|--------------------|---------|----------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| `expanded`         | Boolean | No       | No       | Whether the drawer is expanded to full height or max 50%. Controlled.                                                                             |
+| `open`             | Boolean | Yes      | No       | Whether drawer is open. Controlled.                                                                                                               |
+| `noHandle`         | Boolean | Yes      | No       | Whether handle will be shown or not.                                                                                                              |
+| `focus`            | String  | No       | No       | An id for an element which will receive focus when the drawer opens (defaults to close button).                                                   |
+| `a11yCloseText`    | String  | No       | No*      | A11y text for close button and mask. Required only when close button exists.                                                                      |
+| `a11yMinimizeText` | String  | No       | No*      | A11y text for draggable handle when drawer is maximized and clicking handle will minimize the drawer. Required only when draggable handle exists. |
+| `a11yMaximizeText` | String  | No       | No*      | A11y text for draggable handle when drawer is minimized and clicking handle will maximize the drawer. Required only when draggable handle exists. |
+| `animated`         | Boolean | Yes      | No       | Renders the dialog with an animation. Note that the dialog will always be present in the DOM                                                      |
 
 ## Events
 
-Event | Data | Description
---- | --- | ---
-`onShow` |  | drawer opened
-`onClose` |  | drawer closed. Triggered also when user drags down on handle (touch only) when dialog is not expanded
-`onExpanded` |  | drawer expanded to full page height. Event is triggered on drag up of handle (touch only), clicks, or when user scrolls in content when dialog is not expanded
-`onCollapsed` |  | drawer collapsed back to max 50%. Event is triggered on drags do
+| Event         | Data | Description                                                                                                                                                    |
+|---------------|------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `onShow`      |      | drawer opened                                                                                                                                                  |
+| `onClose`     |      | drawer closed. Triggered also when user drags down on handle (touch only) when dialog is not expanded                                                          |
+| `onExpanded`  |      | drawer expanded to full page height. Event is triggered on drag up of handle (touch only), clicks, or when user scrolls in content when dialog is not expanded |
+| `onCollapsed` |      | drawer collapsed back to max 50%. Event is triggered on drags do                                                                                               |
 
 ## Child components
 
