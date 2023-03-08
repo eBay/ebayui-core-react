@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { KeyboardEvent } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 
@@ -10,7 +10,10 @@ storiesOf(`ebay-listbox-button`, module)
     .add(`Default`, () => (<>
         <EbayListboxButton
             value="BB"
-            onSelect={action(`onSelect triggered`)}
+            onSelect={
+                // checking TS defs here:
+                (e: MouseEvent | KeyboardEvent, value: any, index: number) => action(`onSelect triggered`)(e, value, index)
+            }
         >
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
