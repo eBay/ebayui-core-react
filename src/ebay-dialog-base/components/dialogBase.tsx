@@ -37,7 +37,7 @@ export interface DialogBaseProps<T> extends HTMLProps<T> {
     top?: ReactElement;
     buttonPosition?: ButtonPosition;
     ariaLabelledby?: string;
-    a11yCloseText: string;
+    a11yCloseText?: string;
     onCloseBtnClick?: MouseEventHandler;
     onBackgroundClick?: MouseEventHandler;
     mainId?: string;
@@ -57,7 +57,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     mainId,
     top,
     header,
-    buttonPosition = 'left',
+    buttonPosition = 'right',
     children,
     ariaLabelledby,
     a11yCloseText,

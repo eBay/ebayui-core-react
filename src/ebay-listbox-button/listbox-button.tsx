@@ -8,7 +8,7 @@ import { Key } from '../common/event-utils/types'
 import { filterByType } from '../common/component-utils'
 import EbayListboxButtonOption from './listbox-button-option'
 
-type EbayListboxButtonProps = ComponentProps<'input'> & {
+type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onSelect'> & {
     borderless?: boolean;
     fluid?: boolean;
     maxHeight?: string;
