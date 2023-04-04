@@ -46,7 +46,6 @@ eBayUI React components
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
-* [x] [ebay-program-badge](src/ebay-program-badge)
 * [x] [ebay-progress-bar](src/ebay-progress-bar)
 * [x] [ebay-progress-spinner](src/ebay-progress-spinner)
 * [x] [ebay-progress-stepper](src/ebay-progress-stepper)
