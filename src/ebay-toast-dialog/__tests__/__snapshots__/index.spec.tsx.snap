@@ -27,14 +27,12 @@ exports[`Storyshots ebay-toast-dialog AlwaysOpened 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--close"
+            class="icon icon--close-16"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-close"
+              xlink:href="#icon-close-16"
             />
           </svg>
         </button>
@@ -118,14 +116,12 @@ exports[`Storyshots ebay-toast-dialog Default 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--close"
+            class="icon icon--close-16"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-close"
+              xlink:href="#icon-close-16"
             />
           </svg>
         </button>
@@ -209,14 +205,12 @@ exports[`Storyshots ebay-toast-dialog WithAnimation 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--close"
+            class="icon icon--close-16"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-close"
+              xlink:href="#icon-close-16"
             />
           </svg>
         </button>

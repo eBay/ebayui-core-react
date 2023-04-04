@@ -25,14 +25,12 @@ exports[`Storyshots ebay-pagination Arrows disabled 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </a>
@@ -60,14 +58,12 @@ exports[`Storyshots ebay-pagination Arrows disabled 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </a>
@@ -99,14 +95,12 @@ exports[`Storyshots ebay-pagination Basic links 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </a>
@@ -222,14 +216,12 @@ exports[`Storyshots ebay-pagination Basic links 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </a>
@@ -260,14 +252,12 @@ exports[`Storyshots ebay-pagination Buttons 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </button>
@@ -373,14 +363,12 @@ exports[`Storyshots ebay-pagination Buttons 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </button>
@@ -414,14 +402,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -587,14 +573,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -625,14 +609,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -698,14 +680,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -742,14 +722,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-prev"
+        className="icon icon--arrow-left-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-prev"
+          xlinkHref="#icon-arrow-left-16"
         />
       </svg>
     </button>
@@ -895,14 +873,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-next"
+        className="icon icon--arrow-right-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-next"
+          xlinkHref="#icon-arrow-right-16"
         />
       </svg>
     </button>
@@ -933,14 +909,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-prev"
+        className="icon icon--arrow-left-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-prev"
+          xlinkHref="#icon-arrow-left-16"
         />
       </svg>
     </button>
@@ -1086,14 +1060,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-next"
+        className="icon icon--arrow-right-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-next"
+          xlinkHref="#icon-arrow-right-16"
         />
       </svg>
     </button>
@@ -1154,14 +1126,12 @@ Array [
             >
               <svg
                 aria-hidden={true}
-                className="icon icon--pagination-prev"
+                className="icon icon--arrow-left-16"
                 focusable={false}
-                height="24px"
-                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <use
-                  xlinkHref="#icon-pagination-prev"
+                  xlinkHref="#icon-arrow-left-16"
                 />
               </svg>
             </button>
@@ -1227,14 +1197,12 @@ Array [
             >
               <svg
                 aria-hidden={true}
-                className="icon icon--pagination-next"
+                className="icon icon--arrow-right-16"
                 focusable={false}
-                height="24px"
-                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <use
-                  xlinkHref="#icon-pagination-next"
+                  xlinkHref="#icon-arrow-right-16"
                 />
               </svg>
             </button>
@@ -1273,14 +1241,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1351,14 +1317,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1389,14 +1353,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1511,14 +1473,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1549,14 +1509,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1682,14 +1640,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1720,14 +1676,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1908,14 +1862,12 @@ Array [
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1949,14 +1901,12 @@ exports[`Storyshots ebay-pagination Variant \`showLast\` (interactive) 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </button>
@@ -2122,14 +2072,12 @@ exports[`Storyshots ebay-pagination Variant \`showLast\` (interactive) 1`] = `
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </button>

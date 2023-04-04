@@ -23,14 +23,12 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -47,14 +45,12 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -72,14 +68,12 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -109,14 +103,12 @@ exports[`Storyshots ebay-menu Default 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -132,14 +124,12 @@ exports[`Storyshots ebay-menu Default 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -155,14 +145,12 @@ exports[`Storyshots ebay-menu Default 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -194,14 +182,12 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -219,14 +205,12 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -244,14 +228,12 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -288,14 +270,12 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -318,14 +298,12 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -341,14 +319,12 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -378,14 +354,12 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -402,14 +376,12 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -425,14 +397,12 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -462,9 +432,7 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
             aria-hidden="true"
             class="icon icon--confirmation"
             focusable="false"
-            height="24px"
             style="margin-right: 8px;"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -475,14 +443,12 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -499,9 +465,7 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
             aria-hidden="true"
             class="icon icon--attention"
             focusable="false"
-            height="24px"
             style="margin-right: 8px;"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -512,14 +476,12 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -536,9 +498,7 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
             aria-hidden="true"
             class="icon icon--attention"
             focusable="false"
-            height="24px"
             style="margin-right: 8px;"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -549,14 +509,12 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -586,14 +544,12 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -609,14 +565,12 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -637,14 +591,12 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -660,14 +612,12 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>
@@ -683,14 +633,12 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--tick-small"
+          class="icon icon--tick-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-tick-small"
+            xlink:href="#icon-tick-16"
           />
         </svg>
       </div>

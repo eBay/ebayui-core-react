@@ -31,7 +31,7 @@ const BreadcrumbItem: FC<BreadcrumbItemProps> = ({
     return (
         <li>
             <Item {...itemAttr}>{children}</Item>
-            {!isLastItem && <EbayIcon name="breadcrumb" height="8" width="8" />}
+            {!isLastItem && <EbayIcon name="chevronRight12" height="8" width="8" />}
         </li>
     )
 }

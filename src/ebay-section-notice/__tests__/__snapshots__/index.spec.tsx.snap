@@ -16,8 +16,6 @@ exports[`Storyshots ebay-section-notice Attention message 1`] = `
         aria-hidden="true"
         class="icon icon--attention-filled-small"
         focusable="false"
-        height="16px"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -83,8 +81,6 @@ exports[`Storyshots ebay-section-notice Confirmation message 1`] = `
         aria-hidden="true"
         class="icon icon--confirmation-filled-small"
         focusable="false"
-        height="16px"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -190,8 +186,6 @@ exports[`Storyshots ebay-section-notice Information message 1`] = `
         aria-hidden="true"
         class="icon icon--information-filled-small"
         focusable="false"
-        height="16px"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use

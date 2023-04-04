@@ -10,8 +10,6 @@ exports[`star-rating-select renders basic fieldset 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -22,8 +20,6 @@ exports[`star-rating-select renders basic fieldset 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -34,8 +30,6 @@ exports[`star-rating-select renders basic fieldset 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -46,8 +40,6 @@ exports[`star-rating-select renders basic fieldset 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -58,8 +50,6 @@ exports[`star-rating-select renders basic fieldset 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -81,8 +71,6 @@ exports[`star-rating-select renders defaults 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -93,8 +81,6 @@ exports[`star-rating-select renders defaults 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -105,8 +91,6 @@ exports[`star-rating-select renders defaults 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -117,8 +101,6 @@ exports[`star-rating-select renders defaults 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -129,8 +111,6 @@ exports[`star-rating-select renders defaults 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -153,8 +133,6 @@ exports[`star-rating-select renders with 0 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -165,8 +143,6 @@ exports[`star-rating-select renders with 0 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -177,8 +153,6 @@ exports[`star-rating-select renders with 0 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -189,8 +163,6 @@ exports[`star-rating-select renders with 0 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -201,8 +173,6 @@ exports[`star-rating-select renders with 0 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -225,8 +195,6 @@ exports[`star-rating-select renders with 2 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -237,8 +205,6 @@ exports[`star-rating-select renders with 2 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -249,8 +215,6 @@ exports[`star-rating-select renders with 2 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -261,8 +225,6 @@ exports[`star-rating-select renders with 2 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -273,8 +235,6 @@ exports[`star-rating-select renders with 2 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -296,8 +256,6 @@ exports[`star-rating-select renders with 5 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -308,8 +266,6 @@ exports[`star-rating-select renders with 5 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -320,8 +276,6 @@ exports[`star-rating-select renders with 5 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -332,8 +286,6 @@ exports[`star-rating-select renders with 5 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
@@ -344,8 +296,6 @@ exports[`star-rating-select renders with 5 selected 1`] = `
       aria-hidden="true"
       class="star-rating__icon icon icon--star-dynamic"
       focusable="false"
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use

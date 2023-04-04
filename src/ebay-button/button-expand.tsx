@@ -9,10 +9,10 @@ const EbayButtonExpand: FC = ({ children }) =>
             <EbayButtonText>
                 {children}
             </EbayButtonText>
-            <EbayIcon name="dropdown" />
+            <EbayIcon name="chevronDown24" />
         </EbayButtonCell>
     ) : (
-        <EbayIcon name="dropdown" />
+        <EbayIcon name="chevronDown24" />
     )
 
 export default EbayButtonExpand

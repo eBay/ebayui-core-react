@@ -30,7 +30,6 @@ export { EbayTabs, EbayTab, EbayTabPanel, Size as TabSize, Activation } from './
 export { EbayFakeTabs, EbayFakeTab } from './ebay-fake-tabs'
 export { EbaySvg } from './ebay-svg'
 export { EbayIcon, Icon, EbayIconProps, A11yVariant } from './ebay-icon'
-export { EbayProgramBadge, ProgramBadge, EbayProgramBadgeProps } from './ebay-program-badge'
 export { EbayDialogHeader, EbayDialogFooter, EbayDialogCloseButton } from './ebay-dialog-base'
 export { EbayDrawerDialog } from './ebay-drawer-dialog'
 export { EbayFullscreenDialog } from './ebay-fullscreen-dialog'

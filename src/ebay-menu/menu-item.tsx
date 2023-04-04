@@ -53,7 +53,7 @@ const EbayMenuItem: FC<MenuItemProps> = ({
                 {children}
                 {hasBadge && <EbayBadge type="menu" number={badgeNumber} />}
             </span>
-            <EbayIcon name="tickSmall" />
+            <EbayIcon name="tick16" />
         </div>
     )
 }

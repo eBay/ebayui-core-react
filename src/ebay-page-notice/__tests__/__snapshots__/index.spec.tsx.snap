@@ -15,9 +15,7 @@ exports[`Storyshots ebay-page-notice Attention message 1`] = `
         aria-label="Attention"
         class="icon icon--attention-filled-small"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -75,9 +73,7 @@ exports[`Storyshots ebay-page-notice Confirmation message 1`] = `
         aria-label="Success"
         class="icon icon--confirmation-filled-small"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -122,9 +118,7 @@ exports[`Storyshots ebay-page-notice Dismissible message with CTA 1`] = `
         aria-label="Congratulations"
         class="icon icon--information-filled-small"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -164,8 +158,6 @@ exports[`Storyshots ebay-page-notice Dismissible message with CTA 1`] = `
           aria-hidden="true"
           class="icon icon--close-small"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -193,9 +185,7 @@ exports[`Storyshots ebay-page-notice Dismissible notice 1`] = `
         aria-label="Information"
         class="icon icon--information-filled-small"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -232,8 +222,6 @@ exports[`Storyshots ebay-page-notice Dismissible notice 1`] = `
           aria-hidden="true"
           class="icon icon--close-small"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -261,9 +249,7 @@ exports[`Storyshots ebay-page-notice Information message 1`] = `
         aria-label="Information"
         class="icon icon--information-filled-small"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -308,9 +294,7 @@ exports[`Storyshots ebay-page-notice Message with footer 1`] = `
         aria-label="Congratulations"
         class="icon icon--confirmation-filled-small"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -374,9 +358,7 @@ exports[`Storyshots ebay-page-notice Simple usage with id 1`] = `
         aria-label="Success"
         class="icon icon--confirmation-filled-small"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use

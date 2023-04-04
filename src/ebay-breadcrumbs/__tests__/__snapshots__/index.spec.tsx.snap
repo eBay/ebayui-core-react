@@ -20,14 +20,14 @@ exports[`Storyshots ebay-breadcrumb all buttons 1`] = `
         </button>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -37,14 +37,14 @@ exports[`Storyshots ebay-breadcrumb all buttons 1`] = `
         </button>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -54,14 +54,14 @@ exports[`Storyshots ebay-breadcrumb all buttons 1`] = `
         </button>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -99,14 +99,14 @@ exports[`Storyshots ebay-breadcrumb all links 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -118,14 +118,14 @@ exports[`Storyshots ebay-breadcrumb all links 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -137,14 +137,14 @@ exports[`Storyshots ebay-breadcrumb all links 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -187,14 +187,14 @@ exports[`Storyshots ebay-breadcrumb custom props 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -209,14 +209,14 @@ exports[`Storyshots ebay-breadcrumb custom props 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -231,14 +231,14 @@ exports[`Storyshots ebay-breadcrumb custom props 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -276,14 +276,14 @@ exports[`Storyshots ebay-breadcrumb default 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -295,14 +295,14 @@ exports[`Storyshots ebay-breadcrumb default 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
@@ -314,14 +314,14 @@ exports[`Storyshots ebay-breadcrumb default 1`] = `
         </a>
         <svg
           aria-hidden="true"
-          class="icon icon--breadcrumb"
+          class="icon icon--chevron-right-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-breadcrumb"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </li>
