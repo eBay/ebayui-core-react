@@ -8,7 +8,7 @@ eBayUI React components
 
 * [Node.js](https://nodejs.org/en/) (v16.14+)
 * [React](https://reactjs.org/) (v16.8+)
-* [eBay Skin](https://ebay.github.io/skin/) (v15)
+* [eBay Skin](https://ebay.github.io/skin/) (v16)
 
 ### eBayUI Components
 * [ ] `ebay-3d-viewer`
@@ -179,6 +179,7 @@ One way to comply those guidelines is to implement your new component as similia
 ## Changelog
 
 `@ebay/ui-core-react`
+### version 4.x (Skin 16, breaking changes in icon names)
 ### version 3.x (Skin 15, some breaking changes in dialog components)
 ### version 2.x (Skin 15)
 
