@@ -43,7 +43,7 @@ const EbayPageNotice: FC<Props> = ({
             {status !== `general` ? (
                 <div className="page-notice__header" id={id || `${status}-status`}>
                     <EbayIcon
-                        name={`${status}FilledSmall` as Icon}
+                        name={`${status}Filled16` as Icon}
                         a11yText={ariaLabel}
                         a11yVariant="label"
                     />
@@ -57,7 +57,7 @@ const EbayPageNotice: FC<Props> = ({
                         aria-label={a11yDismissText}
                         className="fake-link page-notice__dismiss"
                         onClick={handleDismissedClicked}>
-                        <EbayIcon name={'close-small' as Icon} />
+                        <EbayIcon name="close16" />
                     </button>
                 </div>
             )}
