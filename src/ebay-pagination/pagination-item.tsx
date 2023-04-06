@@ -73,7 +73,7 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
                     style={style}
                     onClick={handlePreviousPage}
                 >
-                    <EbayIcon name="paginationPrev" />
+                    <EbayIcon name="arrowLeft16" />
                 </ButtonOrAnchor >
             )
         case 'next':
@@ -88,7 +88,7 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
                     style={style}
                     onClick={handleNextPage}
                 >
-                    <EbayIcon name="paginationNext" />
+                    <EbayIcon name="arrowRight16" />
                 </ButtonOrAnchor >
             )
         case 'separator':

@@ -49,7 +49,7 @@ const TooltipContent: FC<TooltipContentProps> = ({
                             aria-label={a11yCloseText}
                             onClick={onClose}
                         >
-                            <EbayIcon name="close" />
+                            <EbayIcon name="close16" />
                         </button>
                     ) : null}
                     {footer}

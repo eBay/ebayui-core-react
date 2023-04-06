@@ -58,19 +58,19 @@ storiesOf(`ebay-button`, module)
     .add(`With icon`, () => (
         <>
             <p>Form button:<br/><EbayButton aria-label="Menu button">
-                <EbayIcon name="menu" />
+                <EbayIcon name="menu20" />
                 <span>Button with icon</span>
             </EbayButton></p>
             <p>Form fake-button (link):<br/><EbayButton href="#" variant="form" aria-label="Settings link">
-                <EbayIcon name="settings" />
+                <EbayIcon name="settings16" />
                 <span>Button with icon</span>
             </EbayButton></p>
             <p>Delete button:<br/><EbayButton variant="destructive" aria-label="Destructive button">
-                <EbayIcon name="delete" />
+                <EbayIcon name="delete16" />
                 <span>Button with icon</span>
             </EbayButton></p>
             <p>Expand button:<br/><EbayButton bodyState="expand" aria-label="Destructive button">
-                <EbayIcon name="settings" />
+                <EbayIcon name="settings16" />
                 <span>Expand button</span>
             </EbayButton></p>
             </>
@@ -78,13 +78,13 @@ storiesOf(`ebay-button`, module)
     .add(`Icon Only`, () => (
         <>
             <p>Form button:<br/><EbayButton variant="form" aria-label="Menu button">
-                <EbayIcon name="menu" />
+                <EbayIcon name="menu20" />
             </EbayButton></p>
             <p>Form fake-button (link):<br/><EbayButton href="#" variant="form" aria-label="Settings link">
-                <EbayIcon name="settings" />
+                <EbayIcon name="settings16" />
             </EbayButton></p>
             <p>Delete button:<br/><EbayButton variant="destructive" aria-label="Destructive button">
-                <EbayIcon name="delete" />
+                <EbayIcon name="delete16" />
             </EbayButton></p>
             </>
     ))
@@ -119,7 +119,7 @@ storiesOf(`ebay-button`, module)
                 <span>Select</span>
                 <span style={{ display: 'inline-flex' }}>
                     <span>Any</span>
-                    <EbayIcon name="chevronDown" />
+                    <EbayIcon name="chevronDown16" />
                 </span>
             </EbayButtonCell>
         </EbayButton>

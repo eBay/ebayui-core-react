@@ -15,14 +15,12 @@ exports[`Storyshots ebay-carousel Continuous 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-prev icon icon--carousel-prev"
+          class="icon icon--carousel-prev icon icon--chevron-left-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-carousel-prev"
+            xlink:href="#icon-chevron-left-24"
           />
         </svg>
       </button>
@@ -112,14 +110,12 @@ exports[`Storyshots ebay-carousel Continuous 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-next icon icon--carousel-next"
+          class="icon icon--carousel-next icon icon--chevron-right-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-carousel-next"
+            xlink:href="#icon-chevron-right-24"
           />
         </svg>
       </button>
@@ -143,14 +139,12 @@ exports[`Storyshots ebay-carousel Items Per Slide 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-prev icon icon--carousel-prev"
+          class="icon icon--carousel-prev icon icon--chevron-left-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-carousel-prev"
+            xlink:href="#icon-chevron-left-24"
           />
         </svg>
       </button>
@@ -240,14 +234,12 @@ exports[`Storyshots ebay-carousel Items Per Slide 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-next icon icon--carousel-next"
+          class="icon icon--carousel-next icon icon--chevron-right-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-carousel-next"
+            xlink:href="#icon-chevron-right-24"
           />
         </svg>
       </button>

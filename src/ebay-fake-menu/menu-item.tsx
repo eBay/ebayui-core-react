@@ -34,7 +34,7 @@ const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
             <span>
                 {children}
             </span>
-            <EbayIcon name="tickSmall" />
+            <EbayIcon name="tick16" />
         </a>
     )
 }

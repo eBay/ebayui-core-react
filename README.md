@@ -8,7 +8,7 @@ eBayUI React components
 
 * [Node.js](https://nodejs.org/en/) (v16.14+)
 * [React](https://reactjs.org/) (v16.8+)
-* [eBay Skin](https://ebay.github.io/skin/) (v15)
+* [eBay Skin](https://ebay.github.io/skin/) (v16)
 
 ### eBayUI Components
 * [ ] `ebay-3d-viewer`
@@ -46,7 +46,6 @@ eBayUI React components
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
-* [x] [ebay-program-badge](src/ebay-program-badge)
 * [x] [ebay-progress-bar](src/ebay-progress-bar)
 * [x] [ebay-progress-spinner](src/ebay-progress-spinner)
 * [x] [ebay-progress-stepper](src/ebay-progress-stepper)
@@ -180,6 +179,7 @@ One way to comply those guidelines is to implement your new component as similia
 ## Changelog
 
 `@ebay/ui-core-react`
+### version 4.x (Skin 16, breaking changes in icon names)
 ### version 3.x (Skin 15, some breaking changes in dialog components)
 ### version 2.x (Skin 15)
 

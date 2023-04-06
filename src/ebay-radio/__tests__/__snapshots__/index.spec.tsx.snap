@@ -19,26 +19,22 @@ exports[`Storyshots ebay-radio Default 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="radio__checked icon icon--radio-checked"
+          class="radio__checked icon icon--radio-checked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-checked"
+            xlink:href="#icon-radio-checked-18"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="radio__unchecked icon icon--radio-unchecked"
+          class="radio__unchecked icon icon--radio-unchecked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-unchecked"
+            xlink:href="#icon-radio-unchecked-18"
           />
         </svg>
       </span>
@@ -67,26 +63,22 @@ exports[`Storyshots ebay-radio Default 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="radio__checked icon icon--radio-checked-large"
+          class="radio__checked icon icon--radio-checked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-checked-large"
+            xlink:href="#icon-radio-checked-24"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="radio__unchecked icon icon--radio-unchecked-large"
+          class="radio__unchecked icon icon--radio-unchecked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-unchecked-large"
+            xlink:href="#icon-radio-unchecked-24"
           />
         </svg>
       </span>
@@ -119,26 +111,22 @@ exports[`Storyshots ebay-radio Disabled radio-button 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="radio__checked icon icon--radio-checked"
+        class="radio__checked icon icon--radio-checked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-radio-checked"
+          xlink:href="#icon-radio-checked-18"
         />
       </svg>
       <svg
         aria-hidden="true"
-        class="radio__unchecked icon icon--radio-unchecked"
+        class="radio__unchecked icon icon--radio-unchecked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-radio-unchecked"
+          xlink:href="#icon-radio-unchecked-18"
         />
       </svg>
     </span>
@@ -179,26 +167,22 @@ exports[`Storyshots ebay-radio Grouped radio-buttons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="radio__checked icon icon--radio-checked"
+            class="radio__checked icon icon--radio-checked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-radio-checked"
+              xlink:href="#icon-radio-checked-18"
             />
           </svg>
           <svg
             aria-hidden="true"
-            class="radio__unchecked icon icon--radio-unchecked"
+            class="radio__unchecked icon icon--radio-unchecked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-radio-unchecked"
+              xlink:href="#icon-radio-unchecked-18"
             />
           </svg>
         </span>
@@ -230,26 +214,22 @@ exports[`Storyshots ebay-radio Grouped radio-buttons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="radio__checked icon icon--radio-checked"
+            class="radio__checked icon icon--radio-checked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-radio-checked"
+              xlink:href="#icon-radio-checked-18"
             />
           </svg>
           <svg
             aria-hidden="true"
-            class="radio__unchecked icon icon--radio-unchecked"
+            class="radio__unchecked icon icon--radio-unchecked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-radio-unchecked"
+              xlink:href="#icon-radio-unchecked-18"
             />
           </svg>
         </span>
@@ -281,26 +261,22 @@ exports[`Storyshots ebay-radio Grouped radio-buttons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="radio__checked icon icon--radio-checked"
+            class="radio__checked icon icon--radio-checked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-radio-checked"
+              xlink:href="#icon-radio-checked-18"
             />
           </svg>
           <svg
             aria-hidden="true"
-            class="radio__unchecked icon icon--radio-unchecked"
+            class="radio__unchecked icon icon--radio-unchecked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-radio-unchecked"
+              xlink:href="#icon-radio-unchecked-18"
             />
           </svg>
         </span>
@@ -334,26 +310,22 @@ exports[`Storyshots ebay-radio Selected radio-button 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="radio__checked icon icon--radio-checked"
+        class="radio__checked icon icon--radio-checked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-radio-checked"
+          xlink:href="#icon-radio-checked-18"
         />
       </svg>
       <svg
         aria-hidden="true"
-        class="radio__unchecked icon icon--radio-unchecked"
+        class="radio__unchecked icon icon--radio-unchecked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-radio-unchecked"
+          xlink:href="#icon-radio-unchecked-18"
         />
       </svg>
     </span>
@@ -391,26 +363,22 @@ exports[`Storyshots ebay-radio Styled radio-button 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="radio__checked icon icon--radio-checked"
+        class="radio__checked icon icon--radio-checked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-radio-checked"
+          xlink:href="#icon-radio-checked-18"
         />
       </svg>
       <svg
         aria-hidden="true"
-        class="radio__unchecked icon icon--radio-unchecked"
+        class="radio__unchecked icon icon--radio-unchecked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-radio-unchecked"
+          xlink:href="#icon-radio-unchecked-18"
         />
       </svg>
     </span>
@@ -443,26 +411,22 @@ exports[`Storyshots ebay-radio Using custom label html 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="radio__checked icon icon--radio-checked"
+          class="radio__checked icon icon--radio-checked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-checked"
+            xlink:href="#icon-radio-checked-18"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="radio__unchecked icon icon--radio-unchecked"
+          class="radio__unchecked icon icon--radio-unchecked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-unchecked"
+            xlink:href="#icon-radio-unchecked-18"
           />
         </svg>
       </span>
@@ -491,26 +455,22 @@ exports[`Storyshots ebay-radio Using custom label html 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="radio__checked icon icon--radio-checked-large"
+          class="radio__checked icon icon--radio-checked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-checked-large"
+            xlink:href="#icon-radio-checked-24"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="radio__unchecked icon icon--radio-unchecked-large"
+          class="radio__unchecked icon icon--radio-unchecked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-radio-unchecked-large"
+            xlink:href="#icon-radio-unchecked-24"
           />
         </svg>
       </span>

@@ -224,7 +224,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                         </span>
                     ) : null}
                     <span className="btn__text" id={expandBtnTextId}>{selectedOption.props.children}</span>
-                    <EbayIcon name="dropdown" />
+                    <EbayIcon name="chevronDown16" />
                 </span>
             </button>
             {(expanded || optionsOpened) &&

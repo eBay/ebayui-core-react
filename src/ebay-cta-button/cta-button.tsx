@@ -31,7 +31,7 @@ const EbayCtaButton: FC<Props> = ({
         <a {...rest} className={className} ref={forwardedRef}>
             <EbayButtonCell type="cta">
                 <span>{children}</span>
-                <EbayIcon name="cta" width={8} height={8} />
+                <EbayIcon name="arrowRight24" />
             </EbayButtonCell>
         </a>
     )

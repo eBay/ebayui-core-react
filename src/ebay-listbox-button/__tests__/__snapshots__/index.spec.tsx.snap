@@ -23,14 +23,12 @@ exports[`Storyshots ebay-listbox-button Borderless 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -76,14 +74,12 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -139,14 +135,12 @@ Array [
         </span>
         <svg
           aria-hidden={true}
-          className="icon icon--dropdown"
+          className="icon icon--chevron-down-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-dropdown"
+            xlinkHref="#icon-chevron-down-16"
           />
         </svg>
       </span>
@@ -193,14 +187,12 @@ exports[`Storyshots ebay-listbox-button Default 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -247,14 +239,12 @@ exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -305,14 +295,12 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -358,14 +346,12 @@ exports[`Storyshots ebay-listbox-button Fluid 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -412,14 +398,12 @@ exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -466,14 +450,12 @@ exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
         </span>
         <svg
           aria-hidden={true}
-          className="icon icon--dropdown"
+          className="icon icon--chevron-down-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-dropdown"
+            xlinkHref="#icon-chevron-down-16"
           />
         </svg>
       </span>
@@ -544,14 +526,12 @@ exports[`Storyshots ebay-listbox-button Too many options 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--dropdown"
+        className="icon icon--chevron-down-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-dropdown"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>

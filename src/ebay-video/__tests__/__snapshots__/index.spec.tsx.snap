@@ -92,14 +92,12 @@ exports[`Storyshots ebay-video Captions 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -118,14 +116,12 @@ exports[`Storyshots ebay-video Captions 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -237,14 +233,12 @@ exports[`Storyshots ebay-video Controlled 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -263,14 +257,12 @@ exports[`Storyshots ebay-video Controlled 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -372,14 +364,12 @@ exports[`Storyshots ebay-video Default 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -398,14 +388,12 @@ exports[`Storyshots ebay-video Default 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -506,14 +494,12 @@ exports[`Storyshots ebay-video Fail 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -532,14 +518,12 @@ exports[`Storyshots ebay-video Fail 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -640,14 +624,12 @@ exports[`Storyshots ebay-video Fail Inside Playlist 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -666,14 +648,12 @@ exports[`Storyshots ebay-video Fail Inside Playlist 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -777,14 +757,12 @@ exports[`Storyshots ebay-video Flexible Container 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--attention"
+          class="icon icon--attention-64"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-attention"
+            xlink:href="#icon-attention-64"
           />
         </svg>
         <div
@@ -803,14 +781,12 @@ exports[`Storyshots ebay-video Flexible Container 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--spinner"
+            class="icon icon--spinner-24"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-spinner"
+              xlink:href="#icon-spinner-24"
             />
           </svg>
         </span>
@@ -913,14 +889,12 @@ exports[`Storyshots ebay-video Multiple Videos 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -939,14 +913,12 @@ exports[`Storyshots ebay-video Multiple Videos 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -1048,14 +1020,12 @@ exports[`Storyshots ebay-video Muted Autoplay 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -1074,14 +1044,12 @@ exports[`Storyshots ebay-video Muted Autoplay 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -1182,14 +1150,12 @@ exports[`Storyshots ebay-video No Report Button 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -1208,14 +1174,12 @@ exports[`Storyshots ebay-video No Report Button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -1316,14 +1280,12 @@ exports[`Storyshots ebay-video Report Text 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -1342,14 +1304,12 @@ exports[`Storyshots ebay-video Report Text 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
@@ -1450,14 +1410,12 @@ exports[`Storyshots ebay-video Single Video 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="icon icon--attention"
+        class="icon icon--attention-64"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention"
+          xlink:href="#icon-attention-64"
         />
       </svg>
       <div
@@ -1476,14 +1434,12 @@ exports[`Storyshots ebay-video Single Video 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--spinner"
+          class="icon icon--spinner-24"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-spinner"
+            xlink:href="#icon-spinner-24"
           />
         </svg>
       </span>
