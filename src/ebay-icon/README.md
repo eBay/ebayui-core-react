@@ -6,7 +6,7 @@ The component will include the actual SVG markup in the HTML and then reference 
 import { EbayIcon } from '@ebay/ui-core-react/ebay-icon'
 import '@ebay/skin/icon'
 
-<EbayIcon name="arrowLeft" />
+<EbayIcon name="arrowLeft16" />
 ```
 
 ### Notes

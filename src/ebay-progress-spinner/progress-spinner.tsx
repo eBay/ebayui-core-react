@@ -29,7 +29,7 @@ const EbayProgressSpinner: FC<SpanProps & EbayProgressSpinnerProps> = ({
         aria-label={ariaLabel}
         role="img"
     >
-        <EbayIcon name="spinner" />
+        <EbayIcon name="spinner24" />
     </span>
 )
 

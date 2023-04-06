@@ -26,14 +26,14 @@ exports[`Storyshots ebay-select Basic 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="icon icon--dropdown"
+      class="icon icon--chevron-down-12"
       focusable="false"
       height="8"
       width="8"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlink:href="#icon-dropdown"
+        xlink:href="#icon-chevron-down-12"
       />
     </svg>
   </span>
@@ -66,14 +66,14 @@ exports[`Storyshots ebay-select Borderless select 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="icon icon--dropdown"
+      class="icon icon--chevron-down-12"
       focusable="false"
       height="8"
       width="8"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlink:href="#icon-dropdown"
+        xlink:href="#icon-chevron-down-12"
       />
     </svg>
   </span>
@@ -117,14 +117,14 @@ exports[`Storyshots ebay-select Controlled component 1`] = `
         </select>
         <svg
           aria-hidden="true"
-          class="icon icon--dropdown"
+          class="icon icon--chevron-down-12"
           focusable="false"
           height="8"
           width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-dropdown"
+            xlink:href="#icon-chevron-down-12"
           />
         </svg>
       </span>
@@ -168,14 +168,14 @@ exports[`Storyshots ebay-select Disabled select 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="icon icon--dropdown"
+      class="icon icon--chevron-down-12"
       focusable="false"
       height="8"
       width="8"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlink:href="#icon-dropdown"
+        xlink:href="#icon-chevron-down-12"
       />
     </svg>
   </span>
@@ -219,14 +219,14 @@ exports[`Storyshots ebay-select Floating label 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="icon icon--dropdown"
+        class="icon icon--chevron-down-12"
         focusable="false"
         height="8"
         width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-dropdown"
+          xlink:href="#icon-chevron-down-12"
         />
       </svg>
     </span>
@@ -317,14 +317,14 @@ exports[`Storyshots ebay-select Grouped options 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="icon icon--dropdown"
+      class="icon icon--chevron-down-12"
       focusable="false"
       height="8"
       width="8"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlink:href="#icon-dropdown"
+        xlink:href="#icon-chevron-down-12"
       />
     </svg>
   </span>
@@ -367,14 +367,14 @@ exports[`Storyshots ebay-select Invalid floating label select 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="icon icon--dropdown"
+        class="icon icon--chevron-down-12"
         focusable="false"
         height="8"
         width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-dropdown"
+          xlink:href="#icon-chevron-down-12"
         />
       </svg>
     </span>
@@ -410,14 +410,14 @@ exports[`Storyshots ebay-select Invalid select 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="icon icon--dropdown"
+      class="icon icon--chevron-down-12"
       focusable="false"
       height="8"
       width="8"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlink:href="#icon-dropdown"
+        xlink:href="#icon-chevron-down-12"
       />
     </svg>
   </span>
@@ -461,14 +461,14 @@ exports[`Storyshots ebay-select Large Select 1`] = `
       </select>
       <svg
         aria-hidden="true"
-        class="icon icon--dropdown"
+        class="icon icon--chevron-down-12"
         focusable="false"
         height="8"
         width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-dropdown"
+          xlink:href="#icon-chevron-down-12"
         />
       </svg>
     </span>
@@ -502,14 +502,14 @@ exports[`Storyshots ebay-select Options class 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="icon icon--dropdown"
+      class="icon icon--chevron-down-12"
       focusable="false"
       height="8"
       width="8"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlink:href="#icon-dropdown"
+        xlink:href="#icon-chevron-down-12"
       />
     </svg>
   </span>
@@ -542,14 +542,14 @@ exports[`Storyshots ebay-select Uncontrolled component with defaultValue 1`] = `
     </select>
     <svg
       aria-hidden="true"
-      class="icon icon--dropdown"
+      class="icon icon--chevron-down-12"
       focusable="false"
       height="8"
       width="8"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlink:href="#icon-dropdown"
+        xlink:href="#icon-chevron-down-12"
       />
     </svg>
   </span>

@@ -30,11 +30,11 @@ const EbayRadio: FC<InputProps & EbayRadioProps> = ({
     const containerClass = classNames('radio', className, { 'radio--large': size === 'large' })
 
     const iconChecked = size === 'large' ?
-        <EbayIcon name="radioCheckedLarge" className="radio__checked" /> :
-        <EbayIcon name="radioChecked" className="radio__checked" />
+        <EbayIcon name="radioChecked24" className="radio__checked" /> :
+        <EbayIcon name="radioChecked18" className="radio__checked" />
     const iconUnChecked = size === 'large' ?
-        <EbayIcon name="radioUncheckedLarge" className="radio__unchecked" /> :
-        <EbayIcon name="radioUnchecked" className="radio__unchecked" />
+        <EbayIcon name="radioUnchecked24" className="radio__unchecked" /> :
+        <EbayIcon name="radioUnchecked18" className="radio__unchecked" />
 
     const childrenArray = Children.toArray(children) as ReactElement[]
     const ebayLabel = childrenArray.find(child => child.type === EbayLabel)

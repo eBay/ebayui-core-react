@@ -37,7 +37,7 @@ const EbayEek: FC<EbayEekProps> = ({
                 </span>
                 <span className="eek__rating" aria-hidden="true">{rating}</span>
             </div>
-            <EbayIcon name="eekArrow" height="28px" width="11px" />
+            <EbayIcon name="eekArrow" />
         </div>
     )
 }

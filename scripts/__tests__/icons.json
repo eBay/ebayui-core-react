@@ -1,7 +1,7 @@
 [
     {
         "attributes": {
-            "id": "icon-add",
+            "id": "icon-add-20",
             "viewBox": "0 0 20 20"
         },
         "children": [
@@ -23,7 +23,7 @@
     },
     {
         "attributes": {
-            "id": "icon-social-messenger",
+            "id": "icon-social-messenger-24",
             "viewBox": "0 0 24 24"
         },
         "children": [
@@ -81,7 +81,7 @@
     },
     {
         "attributes": {
-            "id": "icon-social-whatsapp",
+            "id": "icon-social-whatsapp-24",
             "viewBox": "0 0 24 24"
         },
         "children": [
@@ -103,7 +103,7 @@
     },
     {
         "attributes": {
-            "id": "program-badge-authenticity-guaranteed",
+            "id": "icon-program-badge-authenticity-guaranteed-48",
             "viewBox": "0 0 48 48"
         },
         "children": [

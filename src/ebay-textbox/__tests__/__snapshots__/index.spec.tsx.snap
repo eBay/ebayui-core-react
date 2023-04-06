@@ -342,8 +342,6 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
           aria-hidden="true"
           class="icon icon--messages"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -372,8 +370,6 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
           aria-hidden="true"
           class="icon icon--user-profile"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -390,8 +386,6 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
           aria-hidden="true"
           class="icon icon--search"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -413,8 +407,6 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
             aria-hidden="true"
             class="icon icon--clear"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use

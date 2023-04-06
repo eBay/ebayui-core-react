@@ -12,8 +12,6 @@ exports[`Storyshots ebay-icon-button Default 1`] = `
         aria-hidden="true"
         class="icon icon--menu"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -32,8 +30,6 @@ exports[`Storyshots ebay-icon-button Default 1`] = `
         aria-hidden="true"
         class="icon icon--settings"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -57,8 +53,6 @@ exports[`Storyshots ebay-icon-button Transparent 1`] = `
         aria-hidden="true"
         class="icon icon--menu"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -82,8 +76,6 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
         aria-hidden="true"
         class="icon icon--menu"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -109,8 +101,6 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
         aria-hidden="true"
         class="icon icon--cart"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
@@ -136,8 +126,6 @@ exports[`Storyshots ebay-icon-button With Badges 1`] = `
         aria-hidden="true"
         class="icon icon--chat-large"
         focusable="false"
-        height="64px"
-        width="64px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
