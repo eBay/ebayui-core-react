@@ -66,13 +66,13 @@ storiesOf('ebay-menu', module)
     .add('With Icons', () => (<>
         <EbayMenu>
             <Item>
-                <EbayIcon name="confirmation" style={{ marginRight: '8px' }} /> Confirmed
+                <EbayIcon name="confirmation16" style={{ marginRight: '8px' }} /> Confirmed
             </Item>
             <Item value="item 2">
-                <EbayIcon name="attention" style={{ marginRight: '8px' }} /> Not yet confirmed
+                <EbayIcon name="attention16" style={{ marginRight: '8px' }} /> Not yet confirmed
             </Item>
             <Item value="item 3">
-                <EbayIcon name="attention" style={{ marginRight: '8px' }} /> Not yet confirmed
+                <EbayIcon name="attention16" style={{ marginRight: '8px' }} /> Not yet confirmed
             </Item>
         </EbayMenu>
     </>))

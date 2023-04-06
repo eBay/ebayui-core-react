@@ -430,13 +430,13 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--confirmation"
+            class="icon icon--confirmation-16"
             focusable="false"
             style="margin-right: 8px;"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-confirmation"
+              xlink:href="#icon-confirmation-16"
             />
           </svg>
            Confirmed
@@ -463,13 +463,13 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--attention"
+            class="icon icon--attention-16"
             focusable="false"
             style="margin-right: 8px;"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-attention"
+              xlink:href="#icon-attention-16"
             />
           </svg>
            Not yet confirmed
@@ -496,13 +496,13 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--attention"
+            class="icon icon--attention-16"
             focusable="false"
             style="margin-right: 8px;"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-attention"
+              xlink:href="#icon-attention-16"
             />
           </svg>
            Not yet confirmed

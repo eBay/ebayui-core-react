@@ -17,8 +17,6 @@ exports[`Storyshots ebay-cta-button Default 1`] = `
           aria-hidden="true"
           class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -48,8 +46,6 @@ exports[`Storyshots ebay-cta-button Fluid 1`] = `
           aria-hidden="true"
           class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -74,8 +70,6 @@ exports[`Storyshots ebay-cta-button Fluid 1`] = `
           aria-hidden="true"
           class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -105,8 +99,6 @@ exports[`Storyshots ebay-cta-button Large 1`] = `
           aria-hidden="true"
           class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
@@ -139,8 +131,6 @@ exports[`Storyshots ebay-cta-button Truncated 1`] = `
             aria-hidden="true"
             class="icon icon--arrow-right-24"
             focusable="false"
-            height="8"
-            width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -165,8 +155,6 @@ exports[`Storyshots ebay-cta-button Truncated 1`] = `
             aria-hidden="true"
             class="icon icon--arrow-right-24"
             focusable="false"
-            height="8"
-            width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use

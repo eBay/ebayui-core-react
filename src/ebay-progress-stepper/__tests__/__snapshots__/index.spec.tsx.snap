@@ -27,8 +27,6 @@ exports[`Storyshots ebay-progress-stepper Blocked 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -58,8 +56,6 @@ exports[`Storyshots ebay-progress-stepper Blocked 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -90,8 +86,6 @@ exports[`Storyshots ebay-progress-stepper Blocked 1`] = `
             aria-label="current"
             className="icon icon--stepper-attention-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -121,8 +115,6 @@ exports[`Storyshots ebay-progress-stepper Blocked 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -168,8 +160,6 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -201,8 +191,6 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
             aria-label="current"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -233,8 +221,6 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -265,8 +251,6 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -332,8 +316,6 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -366,8 +348,6 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
             aria-label="current"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -399,8 +379,6 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -448,8 +426,6 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -479,8 +455,6 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -511,8 +485,6 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
             aria-label="current"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -542,8 +514,6 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -589,8 +559,6 @@ exports[`Storyshots ebay-progress-stepper Default state: complete 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -620,8 +588,6 @@ exports[`Storyshots ebay-progress-stepper Default state: complete 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -651,8 +617,6 @@ exports[`Storyshots ebay-progress-stepper Default state: complete 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -683,8 +647,6 @@ exports[`Storyshots ebay-progress-stepper Default state: complete 1`] = `
             aria-label="current"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -731,8 +693,6 @@ exports[`Storyshots ebay-progress-stepper Default state: upcoming 1`] = `
             aria-label="current"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -765,8 +725,6 @@ exports[`Storyshots ebay-progress-stepper Default state: upcoming 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -799,8 +757,6 @@ exports[`Storyshots ebay-progress-stepper Default state: upcoming 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -833,8 +789,6 @@ exports[`Storyshots ebay-progress-stepper Default state: upcoming 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -883,8 +837,6 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
             aria-label="complete"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -923,8 +875,6 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
             aria-label="current"
             className="icon icon--stepper-confirmation-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
@@ -959,8 +909,6 @@ exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
             aria-label="upcoming"
             className="icon icon--stepper-upcoming-24"
             focusable={false}
-            height="24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use

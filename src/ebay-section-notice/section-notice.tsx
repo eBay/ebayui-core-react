@@ -37,7 +37,7 @@ const EbaySectionNotice: FC<Props> = ({
             aria-roledescription={ariaRoleDescription}>
             {hasStatus && (
                 <div className="section-notice__header" id={`section-notice-${status}`}>
-                    <EbayIcon name={`${status}FilledSmall` as Icon} a11yText={ariaLabel} a11yVariant="label" />
+                    <EbayIcon name={`${status}Filled16` as Icon} a11yText={ariaLabel} a11yVariant="label" />
                 </div>
             )}
             <NoticeContent {...content.props} type="section" />

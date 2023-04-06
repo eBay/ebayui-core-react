@@ -571,12 +571,12 @@ exports[`Storyshots ebay-fake-menu-button With icon 1`] = `
       >
         <svg
           aria-hidden={true}
-          className="icon icon--settings"
+          className="icon icon--settings-16"
           focusable={false}
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-settings"
+            xlinkHref="#icon-settings-16"
           />
         </svg>
         <span>

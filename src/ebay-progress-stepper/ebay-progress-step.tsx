@@ -44,7 +44,7 @@ const EbayProgressStep: FC<EbayProgressStepProps> = ({
             aria-current={current ? 'step' : undefined}
         >
             <div className="progress-stepper__icon">
-                {icon && <EbayIcon name={icon} height="24" width="24" aria-label={ariaLabel} />}
+                {icon && <EbayIcon name={icon} aria-label={ariaLabel} />}
             </div>
 
             <div className="progress-stepper__text">
