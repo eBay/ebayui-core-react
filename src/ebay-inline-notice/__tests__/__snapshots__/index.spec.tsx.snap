@@ -10,13 +10,13 @@ exports[`Storyshots ebay-inline-notice Attention message 1`] = `
     >
       <svg
         aria-label="Attention"
-        class="icon icon--attention-filled-small"
+        class="icon icon--attention-filled-16"
         focusable="false"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention-filled-small"
+          xlink:href="#icon-attention-filled-16"
         />
       </svg>
     </span>
@@ -41,13 +41,13 @@ exports[`Storyshots ebay-inline-notice Confirmation message 1`] = `
     >
       <svg
         aria-label="Confirmation"
-        class="icon icon--confirmation-filled-small"
+        class="icon icon--confirmation-filled-16"
         focusable="false"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-confirmation-filled-small"
+          xlink:href="#icon-confirmation-filled-16"
         />
       </svg>
     </span>
@@ -96,13 +96,13 @@ exports[`Storyshots ebay-inline-notice Information message 1`] = `
     >
       <svg
         aria-label="Information"
-        class="icon icon--information-filled-small"
+        class="icon icon--information-filled-16"
         focusable="false"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-information-filled-small"
+          xlink:href="#icon-information-filled-16"
         />
       </svg>
     </span>
@@ -132,13 +132,13 @@ exports[`Storyshots ebay-inline-notice Notice toggle 1`] = `
     >
       <svg
         aria-label="Toggle notice"
-        class="icon icon--confirmation-filled-small"
+        class="icon icon--confirmation-filled-16"
         focusable="false"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-confirmation-filled-small"
+          xlink:href="#icon-confirmation-filled-16"
         />
       </svg>
     </span>
