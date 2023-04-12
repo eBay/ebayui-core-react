@@ -20,12 +20,12 @@ exports[`Storyshots ebay-infotip Custom button content (With render prop) 1`] = 
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
           <span
@@ -174,12 +174,12 @@ exports[`Storyshots ebay-infotip Default 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--information-small"
+          class="icon icon--information-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-information-small"
+            xlink:href="#icon-information-16"
           />
         </svg>
       </button>
@@ -249,12 +249,12 @@ exports[`Storyshots ebay-infotip Disabled 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--information-small"
+          class="icon icon--information-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-information-small"
+            xlink:href="#icon-information-16"
           />
         </svg>
       </button>
@@ -323,12 +323,12 @@ exports[`Storyshots ebay-infotip Expanded by default 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--information-small"
+          class="icon icon--information-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-information-small"
+            xlink:href="#icon-information-16"
           />
         </svg>
       </button>
@@ -402,12 +402,12 @@ exports[`Storyshots ebay-infotip In paragraph 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -478,12 +478,12 @@ exports[`Storyshots ebay-infotip Modal 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--information-small"
+          class="icon icon--information-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-information-small"
+            xlink:href="#icon-information-16"
           />
         </svg>
       </button>
@@ -567,12 +567,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -637,12 +637,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -707,12 +707,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -777,12 +777,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -847,12 +847,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -917,12 +917,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -987,12 +987,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -1057,12 +1057,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -1127,12 +1127,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -1197,12 +1197,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -1267,12 +1267,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -1337,12 +1337,12 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--information-small"
+            class="icon icon--information-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-information-small"
+              xlink:href="#icon-information-16"
             />
           </svg>
         </button>
@@ -1412,12 +1412,12 @@ exports[`Storyshots ebay-infotip Pointer with custom location 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--information-small"
+          class="icon icon--information-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-information-small"
+            xlink:href="#icon-information-16"
           />
         </svg>
       </button>
