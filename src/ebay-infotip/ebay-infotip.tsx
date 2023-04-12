@@ -33,11 +33,11 @@ const EbayInfotip: FC<InfotipProps> = ({
     onCollapse,
     children,
     initialExpanded,
-    icon = 'informationSmall',
+    icon = 'information16',
     a11yCloseText,
     'aria-label': ariaLabel,
     className
-}) => {
+}: InfotipProps) => {
     const buttonRef = useRef()
     const {
         isExpanded,
