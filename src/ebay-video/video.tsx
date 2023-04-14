@@ -225,7 +225,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
                         style={{ opacity: 1, zIndex: 999 }}
                         aria-label={a11yPlayText}
                     >
-                        <EbayIcon name="play24" />
+                        <EbayIcon name="play64Colored" />
                     </button>
                 </div>
             }
