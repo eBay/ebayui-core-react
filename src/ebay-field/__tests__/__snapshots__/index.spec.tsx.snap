@@ -265,26 +265,22 @@ exports[`Storyshots ebay-field Default - inline 1`] = `
       >
         <svg
           aria-hidden={true}
-          className="checkbox__checked icon icon--checkbox-checked"
+          className="checkbox__checked icon icon--checkbox-checked-18"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-checkbox-checked"
+            xlinkHref="#icon-checkbox-checked-18"
           />
         </svg>
         <svg
           aria-hidden={true}
-          className="checkbox__unchecked icon icon--checkbox-unchecked"
+          className="checkbox__unchecked icon icon--checkbox-unchecked-18"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-checkbox-unchecked"
+            xlinkHref="#icon-checkbox-unchecked-18"
           />
         </svg>
       </span>
@@ -372,26 +368,22 @@ Array [
         >
           <svg
             aria-hidden={true}
-            className="checkbox__checked icon icon--checkbox-checked"
+            className="checkbox__checked icon icon--checkbox-checked-18"
             focusable={false}
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-checkbox-checked"
+              xlinkHref="#icon-checkbox-checked-18"
             />
           </svg>
           <svg
             aria-hidden={true}
-            className="checkbox__unchecked icon icon--checkbox-unchecked"
+            className="checkbox__unchecked icon icon--checkbox-unchecked-18"
             focusable={false}
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlinkHref="#icon-checkbox-unchecked"
+              xlinkHref="#icon-checkbox-unchecked-18"
             />
           </svg>
         </span>

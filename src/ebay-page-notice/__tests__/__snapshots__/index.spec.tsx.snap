@@ -13,15 +13,13 @@ exports[`Storyshots ebay-page-notice Attention message 1`] = `
     >
       <svg
         aria-label="Attention"
-        class="icon icon--attention-filled-small"
+        class="icon icon--attention-filled-16"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-attention-filled-small"
+          xlink:href="#icon-attention-filled-16"
         />
       </svg>
     </div>
@@ -73,15 +71,13 @@ exports[`Storyshots ebay-page-notice Confirmation message 1`] = `
     >
       <svg
         aria-label="Success"
-        class="icon icon--confirmation-filled-small"
+        class="icon icon--confirmation-filled-16"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-confirmation-filled-small"
+          xlink:href="#icon-confirmation-filled-16"
         />
       </svg>
     </div>
@@ -120,15 +116,13 @@ exports[`Storyshots ebay-page-notice Dismissible message with CTA 1`] = `
     >
       <svg
         aria-label="Congratulations"
-        class="icon icon--information-filled-small"
+        class="icon icon--information-filled-16"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-information-filled-small"
+          xlink:href="#icon-information-filled-16"
         />
       </svg>
     </div>
@@ -162,14 +156,12 @@ exports[`Storyshots ebay-page-notice Dismissible message with CTA 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--close-small"
+          class="icon icon--close-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-close-small"
+            xlink:href="#icon-close-16"
           />
         </svg>
       </button>
@@ -191,15 +183,13 @@ exports[`Storyshots ebay-page-notice Dismissible notice 1`] = `
     >
       <svg
         aria-label="Information"
-        class="icon icon--information-filled-small"
+        class="icon icon--information-filled-16"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-information-filled-small"
+          xlink:href="#icon-information-filled-16"
         />
       </svg>
     </div>
@@ -230,14 +220,12 @@ exports[`Storyshots ebay-page-notice Dismissible notice 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--close-small"
+          class="icon icon--close-16"
           focusable="false"
-          height="16px"
-          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-close-small"
+            xlink:href="#icon-close-16"
           />
         </svg>
       </button>
@@ -259,15 +247,13 @@ exports[`Storyshots ebay-page-notice Information message 1`] = `
     >
       <svg
         aria-label="Information"
-        class="icon icon--information-filled-small"
+        class="icon icon--information-filled-16"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-information-filled-small"
+          xlink:href="#icon-information-filled-16"
         />
       </svg>
     </div>
@@ -306,15 +292,13 @@ exports[`Storyshots ebay-page-notice Message with footer 1`] = `
     >
       <svg
         aria-label="Congratulations"
-        class="icon icon--confirmation-filled-small"
+        class="icon icon--confirmation-filled-16"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-confirmation-filled-small"
+          xlink:href="#icon-confirmation-filled-16"
         />
       </svg>
     </div>
@@ -372,15 +356,13 @@ exports[`Storyshots ebay-page-notice Simple usage with id 1`] = `
     >
       <svg
         aria-label="Success"
-        class="icon icon--confirmation-filled-small"
+        class="icon icon--confirmation-filled-16"
         focusable="false"
-        height="16px"
         role="img"
-        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-confirmation-filled-small"
+          xlink:href="#icon-confirmation-filled-16"
         />
       </svg>
     </div>

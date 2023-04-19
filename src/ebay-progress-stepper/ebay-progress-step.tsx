@@ -12,10 +12,10 @@ export type EbayProgressStepProps = {
 }
 
 const typeIcons: { [key in StepState]: Icon } = {
-    complete: 'stepperConfirmation',
-    attention: 'stepperAttention',
-    upcoming: 'stepperUpcoming',
-    active: 'stepperConfirmation'
+    complete: 'stepperConfirmation24',
+    attention: 'stepperAttention24',
+    upcoming: 'stepperUpcoming24',
+    active: 'stepperConfirmation24'
 }
 
 const EbayProgressStep: FC<EbayProgressStepProps> = ({
@@ -44,7 +44,7 @@ const EbayProgressStep: FC<EbayProgressStepProps> = ({
             aria-current={current ? 'step' : undefined}
         >
             <div className="progress-stepper__icon">
-                {icon && <EbayIcon name={icon} height="24" width="24" aria-label={ariaLabel} />}
+                {icon && <EbayIcon name={icon} aria-label={ariaLabel} />}
             </div>
 
             <div className="progress-stepper__text">

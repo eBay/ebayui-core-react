@@ -36,7 +36,7 @@ storiesOf('ebay-fake-menu-button', module)
     //
     .add('With icon', () => (<>
         <EbayFakeMenuButton text="Settings">
-            <EbayIcon name="settings" />
+            <EbayIcon name="settings16" />
             <Item href="http://ebay.com">item 1 that has very long text</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>

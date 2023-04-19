@@ -7,6 +7,6 @@ type Props = {
 
 export const ReportButton: FC<Props> = ({ onReport, children }) => (
     <button className="video-player__report-button" onClick={onReport}>
-        <EbayIcon name="reportFlag" />{children}
+        <EbayIcon name="flag24" />{children}
     </button>
 )

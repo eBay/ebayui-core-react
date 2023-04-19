@@ -225,7 +225,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
                         style={{ opacity: 1, zIndex: 999 }}
                         aria-label={a11yPlayText}
                     >
-                        <EbayIcon name="videoPlay" />
+                        <EbayIcon name="play64Colored" />
                     </button>
                 </div>
             }
@@ -249,7 +249,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
                 </video>
             </div>
             <div className={classNames('video-player__overlay', { 'video-player__overlay--hidden': !failed })}>
-                <EbayIcon name="attention" />
+                <EbayIcon name="attention64" />
                 <div className="video-player__overlay-text">
                     {errorText}
                 </div>

@@ -15,10 +15,10 @@ runs:
           env:
               GITHUB_TOKEN: ${{ github.token }}
           with:
-              major-wording: 'MAJOR,BREAKING CHANGE,breaking'
-              minor-wording: 'MINOR,FEAT,CHORE,feat'
-              patch-wording: 'PATCH,FIX,fix'
-              rc-wording: 'ALPHA,BETA,alpha,beta'
+              major-wording: 'MAJOR,major,BREAKING,breaking'
+              minor-wording: 'MINOR,minor,FEAT,feat,CHORE,chore'
+              patch-wording: 'PATCH,patch,FIX,fix'
+              rc-wording: 'ALPHA,alpha,BETA,beta'
 
         - name: Publish to NPM
           shell: sh

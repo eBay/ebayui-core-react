@@ -15,14 +15,12 @@ exports[`Storyshots ebay-cta-button Default 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--cta"
+          class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-cta"
+            xlink:href="#icon-arrow-right-24"
           />
         </svg>
       </span>
@@ -46,14 +44,12 @@ exports[`Storyshots ebay-cta-button Fluid 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--cta"
+          class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-cta"
+            xlink:href="#icon-arrow-right-24"
           />
         </svg>
       </span>
@@ -72,14 +68,12 @@ exports[`Storyshots ebay-cta-button Fluid 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--cta"
+          class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-cta"
+            xlink:href="#icon-arrow-right-24"
           />
         </svg>
       </span>
@@ -103,14 +97,12 @@ exports[`Storyshots ebay-cta-button Large 1`] = `
         </span>
         <svg
           aria-hidden="true"
-          class="icon icon--cta"
+          class="icon icon--arrow-right-24"
           focusable="false"
-          height="8"
-          width="8"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-cta"
+            xlink:href="#icon-arrow-right-24"
           />
         </svg>
       </span>
@@ -137,14 +129,12 @@ exports[`Storyshots ebay-cta-button Truncated 1`] = `
           </span>
           <svg
             aria-hidden="true"
-            class="icon icon--cta"
+            class="icon icon--arrow-right-24"
             focusable="false"
-            height="8"
-            width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-cta"
+              xlink:href="#icon-arrow-right-24"
             />
           </svg>
         </span>
@@ -163,14 +153,12 @@ exports[`Storyshots ebay-cta-button Truncated 1`] = `
           </span>
           <svg
             aria-hidden="true"
-            class="icon icon--cta"
+            class="icon icon--arrow-right-24"
             focusable="false"
-            height="8"
-            width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-cta"
+              xlink:href="#icon-arrow-right-24"
             />
           </svg>
         </span>

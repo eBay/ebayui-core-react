@@ -49,7 +49,7 @@ const EbayInlineNotice: FC<Props> = ({
         >
             {!isGeneral ? (
                 <span className="inline-notice__header">
-                    <EbayIcon name={`${status}FilledSmall` as Icon} a11yText={ariaLabel} a11yVariant="label" />
+                    <EbayIcon name={`${status}Filled16` as Icon} a11yText={ariaLabel} a11yVariant="label" />
                 </span>
             ) : null}
             <NoticeContent

@@ -164,7 +164,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
             aria-label={a11yCloseText}
             onClick={onCloseBtnClick as any}
         >
-            {closeButton || <EbayIcon name="close" />}
+            {closeButton || <EbayIcon name="close16" />}
         </button>
     )
 

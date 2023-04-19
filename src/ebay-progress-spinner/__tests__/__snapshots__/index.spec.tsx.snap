@@ -10,14 +10,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--spinner"
+        className="icon icon--spinner-24"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-spinner"
+          xlinkHref="#icon-spinner-24"
         />
       </svg>
     </span>
@@ -30,14 +28,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--spinner"
+        className="icon icon--spinner-24"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-spinner"
+          xlinkHref="#icon-spinner-24"
         />
       </svg>
     </span>
@@ -50,14 +46,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--spinner"
+        className="icon icon--spinner-24"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-spinner"
+          xlinkHref="#icon-spinner-24"
         />
       </svg>
     </span>

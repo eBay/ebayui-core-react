@@ -19,26 +19,22 @@ exports[`Storyshots ebay-checkbox Control value from outside 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="checkbox__checked icon icon--checkbox-checked"
+        class="checkbox__checked icon icon--checkbox-checked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-checkbox-checked"
+          xlink:href="#icon-checkbox-checked-18"
         />
       </svg>
       <svg
         aria-hidden="true"
-        class="checkbox__unchecked icon icon--checkbox-unchecked"
+        class="checkbox__unchecked icon icon--checkbox-unchecked-18"
         focusable="false"
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-checkbox-unchecked"
+          xlink:href="#icon-checkbox-unchecked-18"
         />
       </svg>
     </span>
@@ -71,26 +67,22 @@ exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked"
+          class="checkbox__checked icon icon--checkbox-checked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-checked"
+            xlink:href="#icon-checkbox-checked-18"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-unchecked"
+            xlink:href="#icon-checkbox-unchecked-18"
           />
         </svg>
       </span>
@@ -119,26 +111,22 @@ exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked-large"
+          class="checkbox__checked icon icon--checkbox-checked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-checked-large"
+            xlink:href="#icon-checkbox-checked-24"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked-large"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-unchecked-large"
+            xlink:href="#icon-checkbox-unchecked-24"
           />
         </svg>
       </span>
@@ -173,26 +161,22 @@ exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked"
+          class="checkbox__checked icon icon--checkbox-checked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-checked"
+            xlink:href="#icon-checkbox-checked-18"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-unchecked"
+            xlink:href="#icon-checkbox-unchecked-18"
           />
         </svg>
       </span>
@@ -222,26 +206,22 @@ exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked-large"
+          class="checkbox__checked icon icon--checkbox-checked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-checked-large"
+            xlink:href="#icon-checkbox-checked-24"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked-large"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-unchecked-large"
+            xlink:href="#icon-checkbox-unchecked-24"
           />
         </svg>
       </span>
@@ -282,26 +262,22 @@ exports[`Storyshots ebay-checkbox Grouped checkbox-buttons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="checkbox__checked icon icon--checkbox-checked"
+            class="checkbox__checked icon icon--checkbox-checked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-checkbox-checked"
+              xlink:href="#icon-checkbox-checked-18"
             />
           </svg>
           <svg
             aria-hidden="true"
-            class="checkbox__unchecked icon icon--checkbox-unchecked"
+            class="checkbox__unchecked icon icon--checkbox-unchecked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-checkbox-unchecked"
+              xlink:href="#icon-checkbox-unchecked-18"
             />
           </svg>
         </span>
@@ -333,26 +309,22 @@ exports[`Storyshots ebay-checkbox Grouped checkbox-buttons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="checkbox__checked icon icon--checkbox-checked"
+            class="checkbox__checked icon icon--checkbox-checked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-checkbox-checked"
+              xlink:href="#icon-checkbox-checked-18"
             />
           </svg>
           <svg
             aria-hidden="true"
-            class="checkbox__unchecked icon icon--checkbox-unchecked"
+            class="checkbox__unchecked icon icon--checkbox-unchecked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-checkbox-unchecked"
+              xlink:href="#icon-checkbox-unchecked-18"
             />
           </svg>
         </span>
@@ -384,26 +356,22 @@ exports[`Storyshots ebay-checkbox Grouped checkbox-buttons 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="checkbox__checked icon icon--checkbox-checked"
+            class="checkbox__checked icon icon--checkbox-checked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-checkbox-checked"
+              xlink:href="#icon-checkbox-checked-18"
             />
           </svg>
           <svg
             aria-hidden="true"
-            class="checkbox__unchecked icon icon--checkbox-unchecked"
+            class="checkbox__unchecked icon icon--checkbox-unchecked-18"
             focusable="false"
-            height="24px"
-            width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-checkbox-unchecked"
+              xlink:href="#icon-checkbox-unchecked-18"
             />
           </svg>
         </span>
@@ -439,26 +407,22 @@ exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked"
+          class="checkbox__checked icon icon--checkbox-checked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-checked"
+            xlink:href="#icon-checkbox-checked-18"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-unchecked"
+            xlink:href="#icon-checkbox-unchecked-18"
           />
         </svg>
       </span>
@@ -488,26 +452,22 @@ exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked-large"
+          class="checkbox__checked icon icon--checkbox-checked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-checked-large"
+            xlink:href="#icon-checkbox-checked-24"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked-large"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-24"
           focusable="false"
-          height="64px"
-          width="64px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-unchecked-large"
+            xlink:href="#icon-checkbox-unchecked-24"
           />
         </svg>
       </span>
@@ -549,26 +509,22 @@ exports[`Storyshots ebay-checkbox Styled checkbox-button 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="checkbox__checked icon icon--checkbox-checked"
+          class="checkbox__checked icon icon--checkbox-checked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-checked"
+            xlink:href="#icon-checkbox-checked-18"
           />
         </svg>
         <svg
           aria-hidden="true"
-          class="checkbox__unchecked icon icon--checkbox-unchecked"
+          class="checkbox__unchecked icon icon--checkbox-unchecked-18"
           focusable="false"
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-checkbox-unchecked"
+            xlink:href="#icon-checkbox-unchecked-18"
           />
         </svg>
       </span>

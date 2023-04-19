@@ -4,20 +4,10 @@ import { withForwardRef } from '../common/component-utils'
 import { randomId } from '../common/random-id'
 import { Icon } from './types'
 
-const iconPixelSizes: Record<string, number> = {
-    small: 16,
-    large: 64
-}
-const DEFAULT_ICON_SIZE = 24
-
 export type A11yVariant = 'label';
 
 export type EbayIconProps = SVGProps<SVGSVGElement> & {
     className?: string;
-    /**
-     * @deprecated Use <EbayProgramBadge /> instead of type='program-badge'
-     */
-    type?: 'icon' | 'program-badge' | string
     name: Icon;
     noSkinClasses?: boolean;
     a11yText?: string;
@@ -27,7 +17,6 @@ export type EbayIconProps = SVGProps<SVGSVGElement> & {
 
 const EbayIcon: FC<EbayIconProps> = ({
     name,
-    type = 'icon',
     className: extraClass,
     noSkinClasses = false,
     a11yText,
@@ -50,16 +39,13 @@ const EbayIcon: FC<EbayIconProps> = ({
     } : {
         'aria-hidden': true
     }
-    const kebabName = kebabCased(withoutProgramBadgePrefix(name))
-    const iconSize = `${getIconPixelSize(kebabName)}px`
+    const kebabName = kebabCased(name)
     const className = classNames(extraClass,
-        { [`${type} ${type}--${kebabName}`]: !noSkinClasses }
+        { [`icon icon--${kebabName}`]: !noSkinClasses }
     )
 
     return (
         <svg
-            height={iconSize}
-            width={iconSize}
             {...rest}
             className={className}
             xmlns="http://www.w3.org/2000/svg"
@@ -68,22 +54,15 @@ const EbayIcon: FC<EbayIconProps> = ({
             {...a11yProps}
         >
             {a11yText && !withAriaLabel && <title id={a11yTextId}>{a11yText}</title>}
-            <use xlinkHref={`#${type}-${kebabName}`} />
+            <use xlinkHref={`#icon-${kebabName}`} />
         </svg>
     )
 }
 
-function getIconPixelSize(iconName: string) {
-    const sizeCandidate = iconName.split('-').slice(-1)[0]
-    return iconPixelSizes[sizeCandidate] || DEFAULT_ICON_SIZE
-}
-
-function withoutProgramBadgePrefix(name: string) {
-    // Deprecated, remove this function in v4.x
-    return name.replace(/programBadge([A-Z])/, (s, c) => c.toLowerCase())
-}
 function kebabCased(str: string) {
-    return str.replace(/([A-Z])/g, (s, c) => `-${c.toLowerCase()}`)
+    return str
+        .replace(/([0-9]+)/g, (s, n) => `-${n}`)
+        .replace(/([A-Z])/g, (s, c) => `-${c.toLowerCase()}`)
 }
 
 export default withForwardRef(EbayIcon)

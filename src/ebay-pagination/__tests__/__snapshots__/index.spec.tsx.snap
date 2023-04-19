@@ -22,17 +22,20 @@ exports[`Storyshots ebay-pagination Arrows disabled 1`] = `
     aria-label="Previous page"
     className="icon-link pagination__previous"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </a>
@@ -57,17 +60,20 @@ exports[`Storyshots ebay-pagination Arrows disabled 1`] = `
     aria-label="Next page"
     className="icon-link pagination__next"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </a>
@@ -96,17 +102,20 @@ exports[`Storyshots ebay-pagination Basic links 1`] = `
     aria-label="Previous page"
     className="icon-link pagination__previous"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </a>
@@ -219,17 +228,20 @@ exports[`Storyshots ebay-pagination Basic links 1`] = `
     className="icon-link pagination__next"
     href="https://www.ebay.com/sch/i.html?_from=R40&_nkw=iphone&_sacat=0&_pgn=10"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </a>
@@ -257,17 +269,20 @@ exports[`Storyshots ebay-pagination Buttons 1`] = `
     aria-label="Previous page"
     className="icon-btn pagination__previous"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </button>
@@ -370,17 +385,20 @@ exports[`Storyshots ebay-pagination Buttons 1`] = `
     aria-label="Next page"
     className="icon-btn pagination__next"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </button>
@@ -411,17 +429,20 @@ Array [
         aria-label="Previous page"
         className="icon-btn pagination__previous"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -584,17 +605,20 @@ Array [
         aria-label="Next page"
         className="icon-btn pagination__next"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -622,17 +646,20 @@ Array [
         aria-label="Previous page"
         className="icon-btn pagination__previous"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -695,17 +722,20 @@ Array [
         aria-label="Next page"
         className="icon-btn pagination__next"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -739,17 +769,20 @@ Array [
       aria-label="Previous page"
       className="icon-btn pagination__previous"
       onClick={[Function]}
+      style={
+        Object {
+          "minWidth": "40px",
+        }
+      }
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-prev"
+        className="icon icon--arrow-left-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-prev"
+          xlinkHref="#icon-arrow-left-16"
         />
       </svg>
     </button>
@@ -892,17 +925,20 @@ Array [
       aria-label="Next page"
       className="icon-btn pagination__next"
       onClick={[Function]}
+      style={
+        Object {
+          "minWidth": "40px",
+        }
+      }
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-next"
+        className="icon icon--arrow-right-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-next"
+          xlinkHref="#icon-arrow-right-16"
         />
       </svg>
     </button>
@@ -930,17 +966,20 @@ Array [
       aria-label="Previous page"
       className="icon-btn pagination__previous"
       onClick={[Function]}
+      style={
+        Object {
+          "minWidth": "40px",
+        }
+      }
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-prev"
+        className="icon icon--arrow-left-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-prev"
+          xlinkHref="#icon-arrow-left-16"
         />
       </svg>
     </button>
@@ -1083,17 +1122,20 @@ Array [
       aria-label="Next page"
       className="icon-btn pagination__next"
       onClick={[Function]}
+      style={
+        Object {
+          "minWidth": "40px",
+        }
+      }
     >
       <svg
         aria-hidden={true}
-        className="icon icon--pagination-next"
+        className="icon icon--arrow-right-16"
         focusable={false}
-        height="24px"
-        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-pagination-next"
+          xlinkHref="#icon-arrow-right-16"
         />
       </svg>
     </button>
@@ -1151,17 +1193,20 @@ Array [
               aria-label="Previous page"
               className="icon-btn pagination__previous"
               onClick={[Function]}
+              style={
+                Object {
+                  "minWidth": "40px",
+                }
+              }
             >
               <svg
                 aria-hidden={true}
-                className="icon icon--pagination-prev"
+                className="icon icon--arrow-left-16"
                 focusable={false}
-                height="24px"
-                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <use
-                  xlinkHref="#icon-pagination-prev"
+                  xlinkHref="#icon-arrow-left-16"
                 />
               </svg>
             </button>
@@ -1224,17 +1269,20 @@ Array [
               aria-label="Next page"
               className="icon-btn pagination__next"
               onClick={[Function]}
+              style={
+                Object {
+                  "minWidth": "40px",
+                }
+              }
             >
               <svg
                 aria-hidden={true}
-                className="icon icon--pagination-next"
+                className="icon icon--arrow-right-16"
                 focusable={false}
-                height="24px"
-                width="24px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <use
-                  xlinkHref="#icon-pagination-next"
+                  xlinkHref="#icon-arrow-right-16"
                 />
               </svg>
             </button>
@@ -1270,17 +1318,20 @@ Array [
         aria-label="Previous page"
         className="icon-btn pagination__previous"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1348,17 +1399,20 @@ Array [
         aria-label="Next page"
         className="icon-btn pagination__next"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1386,17 +1440,20 @@ Array [
         aria-label="Previous page"
         className="icon-btn pagination__previous"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1508,17 +1565,20 @@ Array [
         aria-label="Next page"
         className="icon-btn pagination__next"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1546,17 +1606,20 @@ Array [
         aria-label="Previous page"
         className="icon-btn pagination__previous"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1679,17 +1742,20 @@ Array [
         aria-label="Next page"
         className="icon-btn pagination__next"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1717,17 +1783,20 @@ Array [
         aria-label="Previous page"
         className="icon-btn pagination__previous"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-prev"
+          className="icon icon--arrow-left-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-prev"
+            xlinkHref="#icon-arrow-left-16"
           />
         </svg>
       </button>
@@ -1905,17 +1974,20 @@ Array [
         aria-label="Next page"
         className="icon-btn pagination__next"
         onClick={[Function]}
+        style={
+          Object {
+            "minWidth": "40px",
+          }
+        }
       >
         <svg
           aria-hidden={true}
-          className="icon icon--pagination-next"
+          className="icon icon--arrow-right-16"
           focusable={false}
-          height="24px"
-          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-pagination-next"
+            xlinkHref="#icon-arrow-right-16"
           />
         </svg>
       </button>
@@ -1946,17 +2018,20 @@ exports[`Storyshots ebay-pagination Variant \`showLast\` (interactive) 1`] = `
     aria-label="Previous page"
     className="icon-btn pagination__previous"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-prev"
+      className="icon icon--arrow-left-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-prev"
+        xlinkHref="#icon-arrow-left-16"
       />
     </svg>
   </button>
@@ -2119,17 +2194,20 @@ exports[`Storyshots ebay-pagination Variant \`showLast\` (interactive) 1`] = `
     aria-label="Next page"
     className="icon-btn pagination__next"
     onClick={[Function]}
+    style={
+      Object {
+        "minWidth": "40px",
+      }
+    }
   >
     <svg
       aria-hidden={true}
-      className="icon icon--pagination-next"
+      className="icon icon--arrow-right-16"
       focusable={false}
-      height="24px"
-      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <use
-        xlinkHref="#icon-pagination-next"
+        xlinkHref="#icon-arrow-right-16"
       />
     </svg>
   </button>

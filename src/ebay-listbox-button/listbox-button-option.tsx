@@ -33,7 +33,7 @@ const ListboxOption: FC<EbayListboxButtonOptionProps> = ({
             onClick={(e) => {onClick(e, value, index)}}
         >
             <span className="listbox-button__value">{children}</span>
-            <EbayIcon name="tickSmall" />
+            <EbayIcon name="tick16" />
         </div>)
 }
 

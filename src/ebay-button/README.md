@@ -26,7 +26,7 @@ import '@ebay/skin/button.css'
 ### Icon button
 ```jsx
 <EbayButton aria-label="Menu button">
-    <EbayIcon name="MENU" />
+    <EbayIcon name="menu20" />
 </EbayButton>
 ```
 

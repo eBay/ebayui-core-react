@@ -94,7 +94,7 @@ const EbaySelect: FC<EbaySelectProps> = ({
                 >
                     {options(children)}
                 </select>
-                <EbayIcon name="dropdown" height="8" width="8" />
+                <EbayIcon name="chevronDown12" height="8" width="8" />
             </span>
         </Container>
     )

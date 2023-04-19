@@ -60,6 +60,7 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
     const isAnchor = !!href
     const ButtonOrAnchor = isAnchor ? 'a' : 'button'
     const iconClassName = isAnchor ? 'icon-link' : 'icon-btn'
+    const arrowStyle = { ...style, minWidth: '40px' }
     switch (type) {
         case 'previous':
             return (
@@ -70,10 +71,10 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
                     aria-label={a11yPreviousText}
                     href={disabled ? undefined : href}
                     className={classNames(iconClassName, 'pagination__previous')}
-                    style={style}
+                    style={arrowStyle}
                     onClick={handlePreviousPage}
                 >
-                    <EbayIcon name="paginationPrev" />
+                    <EbayIcon name="arrowLeft16" />
                 </ButtonOrAnchor >
             )
         case 'next':
@@ -85,10 +86,10 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
                     aria-label={a11yNextText}
                     href={disabled ? undefined : href}
                     className={classNames(iconClassName, 'pagination__next')}
-                    style={style}
+                    style={arrowStyle}
                     onClick={handleNextPage}
                 >
-                    <EbayIcon name="paginationNext" />
+                    <EbayIcon name="arrowRight16" />
                 </ButtonOrAnchor >
             )
         case 'separator':

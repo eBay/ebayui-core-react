@@ -36,11 +36,11 @@ const EbayCheckbox: FC<InputProps & EbayCheckboxProps> = ({
     const containerClass = classNames('checkbox', className, { 'checkbox--large': size === 'large' })
 
     const iconChecked = size === 'large' ?
-        <EbayIcon name="checkboxCheckedLarge" className="checkbox__checked" /> :
-        <EbayIcon name="checkboxChecked" className="checkbox__checked" />
+        <EbayIcon name="checkboxChecked24" className="checkbox__checked" /> :
+        <EbayIcon name="checkboxChecked18" className="checkbox__checked" />
     const iconUnChecked = size === 'large' ?
-        <EbayIcon name="checkboxUncheckedLarge" className="checkbox__unchecked" /> :
-        <EbayIcon name="checkboxUnchecked" className="checkbox__unchecked" />
+        <EbayIcon name="checkboxUnchecked24" className="checkbox__unchecked" /> :
+        <EbayIcon name="checkboxUnchecked18" className="checkbox__unchecked" />
 
     const ebayLabel = findComponent(children, EbayLabel)
 
