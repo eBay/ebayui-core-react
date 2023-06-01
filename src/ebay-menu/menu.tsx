@@ -9,7 +9,7 @@ import { handleActionKeydown } from '../common/event-utils'
 import { MenuItemProps } from './menu-item'
 import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
 
-type ContainerDivProps = Omit<ComponentProps<'div' | 'span'>, 'onKeyDown' | 'onChange'>
+type ContainerDivProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onChange'>
 type ContainerSpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
 
 type Callback = (i: number, checked: boolean) => void
