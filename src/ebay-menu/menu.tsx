@@ -9,9 +9,10 @@ import { handleActionKeydown } from '../common/event-utils'
 import { MenuItemProps } from './menu-item'
 import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
 
-type SpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
+type DivProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onChange'>
 type Callback = (i: number, checked: boolean) => void
-type Props = SpanProps & {
+type Props = DivProps & {
+    autofocus?: boolean;
     type?: EbayMenuType;
     priority?: EbayMenuPriority;
     checked?: number;
@@ -87,7 +88,7 @@ const EbayMenu: FC<Props> = ({
     }, [checkedIndexes])
 
     return (
-        <span {...rest} className={classNames(className, 'menu')}>
+        <div {...rest} className={classNames(className, 'menu')}>
             <div className="menu__items" role="menu">
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
@@ -120,7 +121,7 @@ const EbayMenu: FC<Props> = ({
                     } as MenuItemProps)
                 })}
             </div>
-        </span>
+        </div>
     )
 }
 
