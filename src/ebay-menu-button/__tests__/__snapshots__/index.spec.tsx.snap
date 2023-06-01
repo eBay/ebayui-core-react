@@ -1845,12 +1845,12 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="icon icon--overflow-horizontal-16"
+        className="icon icon--overflow-vertical-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-overflow-horizontal-16"
+          xlinkHref="#icon-overflow-vertical-16"
         />
       </svg>
     </button>
