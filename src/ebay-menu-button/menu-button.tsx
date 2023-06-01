@@ -129,7 +129,7 @@ const EbayMenuButton: FC<Props> = ({
     return (
         <span className={wrapperClasses}>
             {variant === 'overflow' ?
-                <EbayIconButton icon="overflowHorizontal16" {...buttonProps} /> :
+                <EbayIconButton icon="overflowVertical16" {...buttonProps} /> :
                 <EbayButton
                     variant={variant === 'form' ? 'form' : undefined}
                     bodyState={noToggleIcon ? undefined : 'expand'}
