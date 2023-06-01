@@ -2,7 +2,7 @@
 
 exports[`Storyshots ebay-menu Checkbox 1`] = `
 <DocumentFragment>
-  <div
+  <span
     class="menu"
   >
     <div
@@ -78,13 +78,13 @@ exports[`Storyshots ebay-menu Checkbox 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Storyshots ebay-menu Default 1`] = `
 <DocumentFragment>
-  <div
+  <span
     class="menu"
   >
     <div
@@ -155,13 +155,13 @@ exports[`Storyshots ebay-menu Default 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Storyshots ebay-menu Radio 1`] = `
 <DocumentFragment>
-  <div
+  <span
     class="menu"
   >
     <div
@@ -238,13 +238,13 @@ exports[`Storyshots ebay-menu Radio 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Storyshots ebay-menu With Badges 1`] = `
 <DocumentFragment>
-  <div
+  <span
     class="menu"
   >
     <div
@@ -329,13 +329,13 @@ exports[`Storyshots ebay-menu With Badges 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Storyshots ebay-menu With Disabled Item 1`] = `
 <DocumentFragment>
-  <div
+  <span
     class="menu"
   >
     <div
@@ -407,13 +407,13 @@ exports[`Storyshots ebay-menu With Disabled Item 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Storyshots ebay-menu With Icons 1`] = `
 <DocumentFragment>
-  <div
+  <span
     class="menu"
   >
     <div
@@ -519,13 +519,13 @@ exports[`Storyshots ebay-menu With Icons 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;
 
 exports[`Storyshots ebay-menu With Separator 1`] = `
 <DocumentFragment>
-  <div
+  <span
     class="menu"
   >
     <div
@@ -643,6 +643,6 @@ exports[`Storyshots ebay-menu With Separator 1`] = `
         </svg>
       </div>
     </div>
-  </div>
+  </span>
 </DocumentFragment>
 `;

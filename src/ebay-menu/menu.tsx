@@ -9,13 +9,17 @@ import { handleActionKeydown } from '../common/event-utils'
 import { MenuItemProps } from './menu-item'
 import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
 
-type DivProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onChange'>
+type ContainerDivProps = Omit<ComponentProps<'div' | 'span'>, 'onKeyDown' | 'onChange'>
+type ContainerSpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
+
 type Callback = (i: number, checked: boolean) => void
-type Props = DivProps & {
+type Props = ContainerDivProps & ContainerSpanProps & {
     autofocus?: boolean;
-    type?: EbayMenuType;
-    priority?: EbayMenuPriority;
+    baseEl?: 'div' | 'span',
     checked?: number;
+    className?: string;
+    priority?: EbayMenuPriority;
+    type?: EbayMenuType;
     onKeyDown?: Callback;
     onSelect?: Callback;
     onChange?: Callback;
@@ -24,6 +28,7 @@ type Props = DivProps & {
 const changedIndex = (arr1: boolean[], arr2: boolean[]): number => arr1.findIndex((x, i) => arr2[i] !== x)
 
 const EbayMenu: FC<Props> = ({
+    baseEl: Container = 'span',
     type,
     priority = 'secondary',
     checked,
@@ -88,7 +93,7 @@ const EbayMenu: FC<Props> = ({
     }, [checkedIndexes])
 
     return (
-        <div {...rest} className={classNames(className, 'menu')}>
+        <Container {...rest} className={classNames(className, 'menu')}>
             <div className="menu__items" role="menu">
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
@@ -121,7 +126,7 @@ const EbayMenu: FC<Props> = ({
                     } as MenuItemProps)
                 })}
             </div>
-        </div>
+        </Container>
     )
 }
 
