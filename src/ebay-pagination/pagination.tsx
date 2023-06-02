@@ -35,9 +35,9 @@ const EbayPagination: FC<PaginationProps> = ({
     a11yNextText = 'Next page',
     variant = 'show-range',
     fluid = false,
-    onPrevious = () => { },
-    onNext = () => { },
-    onSelect = () => { },
+    onPrevious = () => {},
+    onNext = () => {},
+    onSelect = () => {},
     children,
     ...rest
 }) => {
