@@ -1,0 +1,1405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-split-button Controls 1`] = `
+<DocumentFragment>
+  <span
+    class="split-button"
+  >
+    <button
+      class="btn btn--secondary btn--split-start"
+    >
+      Save document
+    </button>
+    <span
+      class="menu-button"
+    >
+      <button
+        aria-controls="abc123"
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-label="Show save options"
+        class="btn menu-button__button btn--secondary btn--split-end"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon icon--chevron-down-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-chevron-down-16"
+          />
+        </svg>
+      </button>
+      <div
+        class="menu-button__menu menu-button__menu--reverse menu"
+        id="abc123"
+        tabindex="-1"
+      >
+        <div
+          class="menu__items"
+          role="menu"
+        >
+          <div
+            class="menu-button__item menu__item"
+            role="menuitem"
+            tabindex="0"
+          >
+            <span
+              aria-hidden="false"
+            >
+              Save as...
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--tick-16"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-tick-16"
+              />
+            </svg>
+          </div>
+          <div
+            class="menu-button__item menu__item"
+            role="menuitem"
+            tabindex="0"
+          >
+            <span
+              aria-hidden="false"
+            >
+              Export
+            </span>
+            <svg
+              aria-hidden="true"
+              class="icon icon--tick-16"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-tick-16"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Default 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--primary btn--split-start"
+      >
+        Save document
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show save options"
+          class="btn menu-button__button btn--primary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Save as...
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Export
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--split-start"
+      >
+        Split Button Menu with Separator
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="btn menu-button__button btn--secondary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <hr
+        class="menu-button__item menu-button__separator"
+        role="separator"
+        tabindex="0"
+      />
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 3
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--tertiary btn--split-start"
+      >
+        Tertiary button menu with icons
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Expand"
+          class="btn menu-button__button btn--tertiary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--confirmation-16"
+            focusable="false"
+            style="margin-right: 8px;"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-confirmation-16"
+            />
+          </svg>
+           Confirmed
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--attention-16"
+            focusable="false"
+            style="margin-right: 8px;"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-attention-16"
+            />
+          </svg>
+           Not yet confirmed
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--attention-16"
+            focusable="false"
+            style="margin-right: 8px;"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-attention-16"
+            />
+          </svg>
+           Not yet confirmed
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Disabled 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--split-start"
+        disabled=""
+      >
+        Disabled Split Button
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--secondary btn--split-end"
+          disabled=""
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    />
+  </div>
+  <p />
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Loading 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        aria-label="Stand by or stop loading by using menu"
+        aria-live="polite"
+        class="btn btn--secondary btn--split-start"
+      >
+        <span
+          class="btn__cell"
+        >
+          <span
+            aria-label="Busy"
+            class="progress-spinner"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon icon--spinner-24"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-spinner-24"
+              />
+            </svg>
+          </span>
+        </span>
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--secondary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        aria-disabled="true"
+        class="menu-button__item menu__item"
+        role="menuitemcheckbox"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Start loading
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        aria-disabled="false"
+        class="menu-button__item menu__item"
+        role="menuitemcheckbox"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Stop loading
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Size 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--primary btn--large btn--split-start"
+      >
+        Primary multi-select
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--primary btn--large btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu-button__item menu__item"
+        role="menuitemcheckbox"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked="true"
+        class="menu-button__item menu__item"
+        role="menuitemcheckbox"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitemcheckbox"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 3
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked="true"
+        class="menu-button__item menu__item"
+        role="menuitemcheckbox"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 4
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--large btn--split-start"
+      >
+        Single-select
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="btn menu-button__button btn--secondary btn--large btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        aria-checked="false"
+        class="menu-button__item menu__item"
+        role="menuitemradio"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked="true"
+        class="menu-button__item menu__item"
+        role="menuitemradio"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        aria-checked="false"
+        class="menu-button__item menu__item"
+        role="menuitemradio"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 3
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--tertiary btn--large btn--split-start"
+      >
+        Tertiary
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Expand"
+          class="btn menu-button__button btn--tertiary btn--large btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 3
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Transparent 1`] = `
+<DocumentFragment>
+  <div
+    style="background: lightcyan; padding: 1em;"
+  >
+    <p>
+      <span
+        class="split-button"
+      >
+        <button
+          class="btn btn--secondary btn--split-start btn--transparent"
+        >
+          Transparent split button
+        </button>
+        <span
+          class="menu-button"
+        >
+          <button
+            aria-controls="abc123"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="Show options"
+            class="btn menu-button__button btn--secondary btn--split-end btn--transparent"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon icon--chevron-down-16"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-chevron-down-16"
+              />
+            </svg>
+          </button>
+        </span>
+      </span>
+    </p>
+    <div
+      class="menu-button__menu menu-button__menu--reverse menu"
+      id="abc123"
+      tabindex="-1"
+    >
+      <div
+        class="menu__items"
+        role="menu"
+      >
+        <div
+          class="menu-button__item menu__item"
+          role="menuitem"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="false"
+          >
+            Item 1
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--tick-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-tick-16"
+            />
+          </svg>
+        </div>
+        <div
+          class="menu-button__item menu__item"
+          role="menuitem"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="false"
+          >
+            Item 2
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--tick-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-tick-16"
+            />
+          </svg>
+        </div>
+        <div
+          class="menu-button__item menu__item"
+          role="menuitem"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="false"
+          >
+            Item 3
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--tick-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-tick-16"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <p />
+    <p>
+      <span
+        class="split-button"
+      >
+        <button
+          class="btn btn--tertiary btn--split-start btn--transparent"
+        >
+          Transparent tertiary split button
+        </button>
+        <span
+          class="menu-button"
+        >
+          <button
+            aria-controls="abc123"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="Show options"
+            class="btn menu-button__button btn--tertiary btn--split-end btn--transparent"
+          >
+            <svg
+              aria-hidden="true"
+              class="icon icon--chevron-down-16"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                xlink:href="#icon-chevron-down-16"
+              />
+            </svg>
+          </button>
+        </span>
+      </span>
+    </p>
+    <div
+      class="menu-button__menu menu-button__menu--reverse menu"
+      id="abc123"
+      tabindex="-1"
+    >
+      <div
+        class="menu__items"
+        role="menu"
+      >
+        <div
+          class="menu-button__item menu__item"
+          role="menuitem"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="false"
+          >
+            Item 1
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--tick-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-tick-16"
+            />
+          </svg>
+        </div>
+        <div
+          class="menu-button__item menu__item"
+          role="menuitem"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="false"
+          >
+            Item 2
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--tick-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-tick-16"
+            />
+          </svg>
+        </div>
+        <div
+          class="menu-button__item menu__item"
+          role="menuitem"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="false"
+          >
+            Item 3
+          </span>
+          <svg
+            aria-hidden="true"
+            class="icon icon--tick-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-tick-16"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <p />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-split-button Truncated 1`] = `
+<DocumentFragment>
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--primary btn--split-start btn--truncated"
+        style="max-width: 200px;"
+      >
+        Primary Split Button with truncated text label
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Show options"
+          class="btn menu-button__button btn--primary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 3
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+  <p>
+    <span
+      class="split-button"
+    >
+      <button
+        class="btn btn--secondary btn--split-start btn--truncated"
+        style="max-width: 200px;"
+      >
+        Split Button with truncated text label
+      </button>
+      <span
+        class="menu-button"
+      >
+        <button
+          aria-controls="abc123"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Menu"
+          class="btn menu-button__button btn--secondary btn--split-end"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-down-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-down-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </span>
+  </p>
+  <div
+    class="menu-button__menu menu-button__menu--reverse menu"
+    id="abc123"
+    tabindex="-1"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 1
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu-button__item menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 3
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <p />
+</DocumentFragment>
+`;

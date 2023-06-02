@@ -1,33 +1,19 @@
 import React, {
     Children, cloneElement, useEffect, useState,
-    ComponentProps, FC, ReactElement
+    FC, ReactElement
 } from 'react'
 import classNames from 'classnames'
 import useRovingIndex from '../common/event-utils/use-roving-index'
 import { usePrevious } from '../common/component-utils/usePrevious'
 import { handleActionKeydown } from '../common/event-utils'
 import { MenuItemProps } from './menu-item'
-import { EbayMenuItem, EbayMenuType, EbayMenuPriority } from './index'
+import { EbayMenuItem } from './index'
+import { MenuProps } from './index'
 
-type ContainerDivProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onChange'>
-type ContainerSpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
-
-type Callback = (i: number, checked: boolean) => void
-type Props = ContainerDivProps & ContainerSpanProps & {
-    autofocus?: boolean;
-    baseEl?: 'div' | 'span',
-    checked?: number;
-    className?: string;
-    priority?: EbayMenuPriority;
-    type?: EbayMenuType;
-    onKeyDown?: Callback;
-    onSelect?: Callback;
-    onChange?: Callback;
-}
 
 const changedIndex = (arr1: boolean[], arr2: boolean[]): number => arr1.findIndex((x, i) => arr2[i] !== x)
 
-const EbayMenu: FC<Props> = ({
+const EbayMenu: FC<MenuProps> = ({
     baseEl: Container = 'span',
     type,
     priority = 'secondary',
