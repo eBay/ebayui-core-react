@@ -17,7 +17,7 @@ describe('<EbayMenu>', () => {
                 </EbayMenu>
             )
 
-            fireEvent.click(wrapper.container.querySelector('.menu__item'))
+            fireEvent.click(wrapper.container.querySelectorAll('.menu__item')[0])
 
             expect(onClickSpy).toBeCalled()
         })
@@ -30,7 +30,7 @@ describe('<EbayMenu>', () => {
                     <EbayMenuItem/>
                 </EbayMenu>
             )
-            fireEvent.keyDown(wrapper.container.querySelector('.menu__item'))
+            fireEvent.keyDown(wrapper.container.querySelectorAll('.menu__item')[0])
 
             expect(onKeyDownSpy).toBeCalledWith(0, false)
         })

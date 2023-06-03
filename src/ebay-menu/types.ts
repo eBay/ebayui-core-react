@@ -3,11 +3,12 @@ import { ComponentProps } from 'react'
 export type EbayMenuType = 'radio' | 'checkbox'
 export type EbayMenuPriority = 'primary' | 'secondary' | 'none'
 
-type ContainerDivProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onChange' >
-type ContainerSpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange'>
+type ContainerDivProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onChange' | 'onSelect'>
+type ContainerSpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange' | 'onSelect'>
 
-export type SelectCallback = (i: number) => void
+export type SelectCallback = (i: number, checked: boolean) => void
 export type ChangeCallback = (i: number, checked: boolean) => void
+export type KeyDownCallback = (i: number, checked: boolean) => void
 
 export type MenuProps = ContainerDivProps & ContainerSpanProps & {
     autofocus?: boolean;
@@ -16,7 +17,7 @@ export type MenuProps = ContainerDivProps & ContainerSpanProps & {
     className?: string;
     priority?: EbayMenuPriority;
     type?: EbayMenuType;
-    onKeyDown?: () => void;
+    onKeyDown?: KeyDownCallback;
     onSelect?: SelectCallback;
     onChange?: ChangeCallback;
 }
