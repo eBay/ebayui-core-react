@@ -48,5 +48,5 @@ Name | Type    | Stateful | Required | Description | Data
 `onBlur` | Function | - | No | triggered on blur
 `onExpand` | Function | - | No | Called when content is expanded
 `onCollapse` | Function | - | No | Called when content is collapsed
-`onChange` | Function | - | No | Arguments: (e: event, { index: number, checked: number[], checkedValues: string[] }) for type `radio`/`checkbox`
-`onSelect` | Function | - | No | Arguments: (e: event, { index: number, checked: number[] }), not for use with type `radio`/`checkbox`
+`onChange` | Function | - | No | Arguments: (index: number, checked: boolean) for type `radio`/`checkbox`
+`onSelect` | Function | - | No | Arguments: (index: number, checked: boolean), not for use with type `radio`/`checkbox`
