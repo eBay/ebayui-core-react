@@ -178,7 +178,6 @@ storiesOf('ebay-menu-button', module)
                 type="radio"
                 checked={defaultSortIndex}
                 onChange={(index) => { 
-                    console.log('am i here')
                     setCheckedSort(index)
                 }
             }
