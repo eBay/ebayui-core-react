@@ -4,7 +4,7 @@ import { filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
 
-import { EbayMenu, EbayMenuType } from '../ebay-menu'
+import { ChangeCallback, EbayMenu, EbayMenuType, SelectCallback } from '../ebay-menu'
 import { EbayButton, EbayButtonProps } from '../ebay-button'
 import { EbayIconButton } from '../ebay-icon-button'
 import { EbayIcon } from '../ebay-icon'
@@ -20,8 +20,8 @@ export type EbayMenuButtonProps = {
     variant?: EbayMenuButtonVariant;
     onCollapse?: () => void;
     onExpand?: () => void;
-    onChange?: () => void;
-    onSelect?: () => void;
+    onChange?: ChangeCallback;
+    onSelect?: SelectCallback;
     expanded?: boolean;
     noToggleIcon?: boolean;
     checked?: number;

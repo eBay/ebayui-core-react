@@ -177,7 +177,10 @@ storiesOf('ebay-menu-button', module)
                 text={`Sort order: ${sortItems[checkedSort]}`}
                 type="radio"
                 checked={defaultSortIndex}
-                onChange={(index) => setCheckedSort(index)}
+                onChange={(index) => { 
+                    setCheckedSort(index)
+                }
+            }
             >
                 {sortItems.map((item, i) => <Item key={i}>{item}</Item>)}
             </EbayMenuButton>
