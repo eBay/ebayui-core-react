@@ -45,7 +45,7 @@ eBayUI React components
 * [x] [ebay-listbox-button](src/ebay-listbox-button)
 * [ ] `ebay-listbox`
 * [x] [ebay-menu](src/ebay-menu)
-* [ ] `ebay-menu-button` (will be released in v5)
+* [x] [ebay-menu-button](src/ebay-menu-button)
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
@@ -58,7 +58,7 @@ eBayUI React components
 * [x] [ebay-select](src/ebay-select)
 * [x] [ebay-signal](src/ebay-signal)
 * [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
-* [ ] `ebay-split-button` (will be released in v5)
+* [x] [ebay-split-button](src/ebay-split-button)
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
 * [x] [ebay-switch](src/ebay-switch)
