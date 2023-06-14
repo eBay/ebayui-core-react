@@ -22,10 +22,11 @@ Name | Type | Stateful | Required | Description
 
 ## Events
 
-Event | Data | Description
---- | --- | ---
-`onConfirm` |  | Triggered when confirm button is clicked
-`onReject` |  | Trigered when reject button is clicked
+Event | Data  | Description
+--- |-------| ---
+`onOpen` | event | Triggered when dialog is opened
+`onConfirm` | event | Triggered when confirm button is clicked
+`onReject` | event | Trigered when reject button is clicked
 
 ## EbayDialogHeader
 Will render a header content for the dialog. Will always render the header element even if this is not present

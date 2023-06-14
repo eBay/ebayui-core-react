@@ -3,6 +3,8 @@ import { render, fireEvent } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 
 import { EbayBreadcrumbs, EbayBreadcrumbItem } from '../index'
+import any = jasmine.any
+import userEvent from '@testing-library/user-event'
 
 describe('<EbayBreadcrumbs>', () => {
     describe('on category click', () => {
@@ -13,9 +15,12 @@ describe('<EbayBreadcrumbs>', () => {
                     <EbayBreadcrumbItem>home</EbayBreadcrumbItem>
                 </EbayBreadcrumbs>
             )
-            fireEvent.click(wrapper.getByRole('button'))
+            const button = wrapper.getByRole('button')
+            userEvent.click(button)
 
-            expect(spy).toBeCalled()
+            const syntheticEvent = expect.objectContaining( { target: null })
+            const expectedEventProps = { el: button }
+            expect(spy).toBeCalledWith(syntheticEvent, expectedEventProps)
         })
     })
 

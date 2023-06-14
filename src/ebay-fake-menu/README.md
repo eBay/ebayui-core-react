@@ -21,11 +21,11 @@ import '@ebay/skin/menu';
 
 ## EbayFakeMenu Props
 
-Name | Type | Required | Description
---- | --- | --- | ---
-itemMatchesUrl | Boolean | No | used in conjunction with `current` -- This determines whether aria-current will be `page` or `true` -- Defaults to `true` which gives `aria-current` a value of `page`
-`onKeydown` | Function | No | Arguments: (index: number, checked: boolean)
-`onSelect` | Function | No | For using with keyboard navigation, arguments: (index: number, checked: boolean)
+| Name           | Type     | Required | Description                                                                                                                                                            | Data    |
+|----------------|----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| itemMatchesUrl | Boolean  | No       | used in conjunction with `current` -- This determines whether aria-current will be `page` or `true` -- Defaults to `true` which gives `aria-current` a value of `page` |         |
+| `onKeydown`    | Function | No       | triggered on key down                                                                                                                                                  | `({ })` |
+| `onSelect`     | Function | No       | For using with keyboard navigation, arguments: (index: number, checked: boolean)                                                                                       |         |
 
 ## EbayFakeMenuItem Props
 

@@ -3,12 +3,13 @@ import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayLabel, EbayLabelProps } from '../ebay-field'
 import { findComponent } from '../common/component-utils'
+import { EbayChangeEventHandler } from '../common/event-utils/types'
 
 type Size = 'default' | 'large'
 type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange'>
 type EbayCheckboxProps = {
     size?: Size;
-    onChange?: (e: ChangeEvent<HTMLInputElement>, value: string | number, checked: boolean) => void;
+    onChange?: EbayChangeEventHandler<HTMLInputElement, { value: string | number, checked: boolean }>;
     inputRef?: React.LegacyRef<HTMLInputElement>;
 }
 
@@ -29,7 +30,7 @@ const EbayCheckbox: FC<InputProps & EbayCheckboxProps> = ({
     const [isChecked, setChecked] = useState(defaultChecked)
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const input = e.target
-        onChange(e, input?.value, input?.checked)
+        onChange(e, { value: input?.value, checked: Boolean(input?.checked) })
         setChecked(input?.checked)
     }
 

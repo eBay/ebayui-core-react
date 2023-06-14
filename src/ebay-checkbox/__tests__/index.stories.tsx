@@ -8,7 +8,13 @@ storiesOf(`ebay-checkbox`, module)
     .add(`Default checkbox-button`, () => (
         <>
             <p>
-                <EbayCheckbox value="123" id="checkbox-11">
+                <EbayCheckbox
+                    value="123"
+                    id="checkbox-11"
+                    onChange={(e, props) => action('onChange')(e, props)}
+                    onFocus={(e) => action('onFocus')(e)}
+                    onKeyDown={(e) => action('onKeyDown')(e)}
+                >
                     <EbayLabel>Default</EbayLabel>
                 </EbayCheckbox>
             </p>

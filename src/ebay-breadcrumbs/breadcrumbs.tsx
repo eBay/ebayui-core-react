@@ -1,7 +1,8 @@
 import React, { Children, cloneElement, ComponentProps, FC, ReactElement, ReactNode } from 'react'
 import classNames from 'classnames'
+import { EbayEventHandler } from '../common/event-utils/types'
 
-type BreadcrumbProps = ComponentProps<'div'> & {
+type BreadcrumbProps = Omit<ComponentProps<'div'>, 'onSelect'> & {
     /**
      * Breadcrumbs expects `<EbayBreadcrumbItem/>` as children.
      * Other elements will not work.
@@ -12,7 +13,7 @@ type BreadcrumbProps = ComponentProps<'div'> & {
     id?: string;
     a11yHeadingTag?: keyof JSX.IntrinsicElements;
     a11yHeadingText?: string;
-    onSelect?: (event: MouseEvent | KeyboardEvent, target: HTMLElement) => void;
+    onSelect?: EbayEventHandler<HTMLElement, { el: HTMLElement }>;
 }
 
 const Breadcrumbs: FC<BreadcrumbProps> = ({
@@ -47,7 +48,7 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({
                         isLastItem,
                         href,
                         children,
-                        onClick: event => onSelect(event, event.target)
+                        onClick: event => onSelect(event, { el: event.target })
                     }
 
                     return cloneElement(item, itemProps)
