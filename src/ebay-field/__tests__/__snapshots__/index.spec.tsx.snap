@@ -257,6 +257,8 @@ exports[`Storyshots ebay-field Default - inline 1`] = `
         className="checkbox__control"
         id="checkbox-2"
         onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         type="checkbox"
       />
       <span
@@ -360,6 +362,8 @@ Array [
           className="checkbox__control"
           id="checkbox-2"
           onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
           type="checkbox"
         />
         <span

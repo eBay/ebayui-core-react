@@ -12,8 +12,8 @@ storiesOf(`ebay-checkbox`, module)
                     value="123"
                     id="checkbox-11"
                     onChange={(e, props) => action('onChange')(e, props)}
-                    onFocus={(e) => action('onFocus')(e)}
-                    onKeyDown={(e) => action('onKeyDown')(e)}
+                    onFocus={(e, props) => action('onFocus')(e, props)}
+                    onKeyDown={(e, props) => action('onKeyDown')(e, props)}
                 >
                     <EbayLabel>Default</EbayLabel>
                 </EbayCheckbox>
