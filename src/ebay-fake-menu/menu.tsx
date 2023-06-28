@@ -5,12 +5,11 @@ import React, {
 import classNames from 'classnames'
 import { EbayFakeMenuItemProps } from './index'
 
-type SpanProps = Omit<ComponentProps<'div'>, 'onKeyDown'>
-type Callback = (event: KeyboardEvent | MouseEvent, i: number) => void
+type SpanProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onSelect'>
 type Props = SpanProps & {
     itemMatchesUrl?: boolean;
-    onKeyDown?: Callback;
-    onSelect?: Callback;
+    onKeyDown?: (event: KeyboardEvent | MouseEvent, { index: number }) => void;
+    onSelect?: (event: KeyboardEvent | MouseEvent, { index: number }) => void;
 }
 
 const EbayFakeMenu: FC<Props> = ({
@@ -40,11 +39,11 @@ const EbayFakeMenu: FC<Props> = ({
                                 ...itemRest,
                                 'aria-current': current ? defaultAriaCurrent : undefined,
                                 onClick: e => {
-                                    onSelect(e, i)
+                                    onSelect(e, { index: i })
                                     onClick(e)
                                 },
                                 onKeyDown: e => {
-                                    onKeyDown(e, i)
+                                    onKeyDown(e, { index: i })
                                 }
                             } as EbayFakeMenuItemProps)}
                         </li>
