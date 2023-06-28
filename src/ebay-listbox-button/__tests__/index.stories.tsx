@@ -11,7 +11,7 @@ storiesOf(`ebay-listbox-button`, module)
     .add(`Default`, () => (<>
         <EbayListboxButton
             value="BB"
-            onChange={(e: React.ChangeEvent<ChangeEventProps>, props: ChangeEventProps) => action(`onChange`)(e, props)}
+            onChange={(e: ChangeEvent, props: ChangeEventProps) => action(`onChange`)(e, props)}
             onCollapse={() => action(`onCollapse`)()}
             onExpand={() => action('onExpand')()}
         >

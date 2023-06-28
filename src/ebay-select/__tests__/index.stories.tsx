@@ -2,13 +2,13 @@ import React, { ChangeEvent, useState } from 'react';
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayButton } from '../../ebay-button'
-import { EbaySelect, EbaySelectOption } from '../index'
+import { EbaySelect, EbaySelectOption, ChangeEventProps } from '../index'
 
 storiesOf(`ebay-select`, module)
     .add(`Basic`, () => (<>
         <EbaySelect
             name="formSelect"
-            onChange={action(`select-change`)}
+            onChange={(e: ChangeEvent, props: ChangeEventProps) => action(`onChange`)(e, props)}
         >
             <EbaySelectOption value="1">Option 1</EbaySelectOption>
             <EbaySelectOption value="2">Option 2</EbaySelectOption>

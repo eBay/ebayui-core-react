@@ -4,14 +4,16 @@ import EbaySelectOption from './ebay-select-option'
 import { EbayIcon } from '../ebay-icon'
 import { filterByType } from '../common/component-utils'
 import { useFloatingLabel } from '../common/floating-label-utils/hooks'
+import { EbayChangeEventHandler } from '../common/event-utils/types'
 
 const isControlled = value => typeof value !== 'undefined'
 
 type SelectValue = string | ReadonlyArray<string> | number;
+export type ChangeEventProps = { index: number, selected: string[] }
 export type EbaySelectProps = Omit<ComponentProps<'select'>, 'onChange'> & {
     borderless?: boolean;
     defaultValue?: SelectValue;
-    onChange?: (e: ChangeEvent<HTMLSelectElement>, selectedIndex: number, newValue: SelectValue) => void;
+    onChange?: EbayChangeEventHandler<HTMLSelectElement, ChangeEventProps>;
     floatingLabel?: string;
     inputSize?: 'default' | 'large';
     invalid?: boolean;
@@ -60,7 +62,7 @@ const EbaySelect: FC<EbaySelectProps> = ({
             setValue(newValue)
         }
 
-        onChange(e, selectedIndex, newValue)
+        onChange(e, { index: selectedIndex, selected: [newValue] })
     }
 
     const handleBlur = (event: FocusEvent<HTMLSelectElement>) => {

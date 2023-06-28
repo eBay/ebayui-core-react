@@ -4,7 +4,7 @@ import React, {
 } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
-import { EbayChangeEventHandler, EbayEventHandler, Key } from '../common/event-utils/types'
+import { EbayChangeEventHandler, Key } from '../common/event-utils/types'
 import { filterByType } from '../common/component-utils'
 import EbayListboxButtonOption from './listbox-button-option'
 
@@ -20,7 +20,7 @@ export type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onChange'> &
     maxHeight?: string;
     prefixId?: string;
     floatingLabel?: string;
-    onChange?: EbayChangeEventHandler<ChangeEventProps>;
+    onChange?: EbayChangeEventHandler<HTMLButtonElement, ChangeEventProps>;
     onCollapse?: () => void;
     onExpand?: () => void;
 }

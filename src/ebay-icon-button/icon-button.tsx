@@ -1,9 +1,9 @@
-import React, { ComponentProps, FC, KeyboardEvent, MouseEvent, RefObject } from 'react'
+import React, { ComponentProps, FC, KeyboardEvent, RefObject } from 'react'
 import classNames from 'classnames'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { EbayBadge } from '../ebay-badge'
 import { withForwardRef } from '../common/component-utils'
-import { EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
+import { EbayKeyboardEventHandler } from '../common/event-utils/types'
 
 export type EbayIconButtonProps = {
     href?: string;
