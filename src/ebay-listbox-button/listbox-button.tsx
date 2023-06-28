@@ -4,23 +4,30 @@ import React, {
 } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
-import { Key } from '../common/event-utils/types'
+import { EbayChangeEventHandler, EbayEventHandler, Key } from '../common/event-utils/types'
 import { filterByType } from '../common/component-utils'
 import EbayListboxButtonOption from './listbox-button-option'
 
-type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onSelect'> & {
+export type ChangeEventProps = {
+    index: number;
+    selected: string[];
+    wasClicked: boolean;
+}
+
+export type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onChange'> & {
     borderless?: boolean;
     fluid?: boolean;
     maxHeight?: string;
     prefixId?: string;
     floatingLabel?: string;
-    onSelect?: (e: MouseEvent | KeyboardEvent, value: any, index: number) => void;
+    onChange?: EbayChangeEventHandler<ChangeEventProps>;
+    onCollapse?: () => void;
+    onExpand?: () => void;
 }
 
 const ListboxButton: FC<EbayListboxButtonProps> = ({
     children,
     name,
-    onSelect = () => {},
     value,
     borderless,
     fluid,
@@ -28,6 +35,9 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     maxHeight,
     prefixId,
     floatingLabel,
+    onChange = () => {},
+    onCollapse = () => {},
+    onExpand = () => {},
     ...rest
 }) => {
     const optionsContainerRef = useRef<HTMLDivElement>(null)
@@ -61,6 +71,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const [expanded, setExpanded] = useState(false)
     // Additional flag to avoid multiple re-render when users tries to open and close
     const [optionsOpened, setOptionsOpened] = useState(false)
+    const [wasClicked, setWasClicked] = useState<boolean>()
 
     useEffect(() => {
         setSelectedOption(selectedOptionFromValue)
@@ -81,7 +92,8 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         setExpanded(false)
         setActiveDescendant(index)
         buttonRef.current.focus()
-        onSelect(e, optionValue, index)
+        onChange(e, { index, selected: [getSelectedValueByIndex(selectedIndex)], wasClicked })
+        setWasClicked(false)
     }
 
     const reset = () => {
@@ -172,7 +184,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 setExpanded(false)
                 setTimeout(() => setSelectedOption(childrenArray[selectedIndex]))
                 setTimeout(() => buttonRef.current.focus(), 0)
-                onSelect(e, getSelectedValueByIndex(selectedIndex), selectedIndex)
+                onChange(e as any, { index: selectedIndex, selected: [String(selectedIndex)], wasClicked })
                 break
             case 'Esc':
             case 'Escape':
@@ -201,6 +213,11 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         'btn--floating-label': floatingLabel
     })
     const expandBtnTextId = prefixId && 'expand-btn-text'
+
+    useEffect(() => {
+        if (expanded) onExpand()
+        else onCollapse()
+    }, [expanded])
 
     return (
         <span className={wrapperClassName}>
@@ -240,7 +257,10 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                         onKeyDown={(e) => onOptionContainerKeydown(e)}
                         // adding onMouseDown preventDefault b/c on IE the onClick event is not being fired on each
                         // option https://stackoverflow.com/questions/17769005/onclick-and-onblur-ordering-issue
-                        onMouseDown={(e) => e.preventDefault()}
+                        onMouseDown={(e) => {
+                            e.preventDefault()
+                            setWasClicked(true)
+                        }}
                         onBlur={() => {
                             setExpanded(false)
                             setTimeout(() => buttonRef.current.focus(), 0)
