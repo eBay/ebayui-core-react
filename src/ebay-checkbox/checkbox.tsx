@@ -40,8 +40,10 @@ const EbayCheckbox: FC<InputProps & EbayCheckboxProps> = ({
     const handleFocus = (e: FocusEvent<HTMLInputElement>) =>
         onFocus(e, { value: e.target?.value, checked: Boolean(e.target?.checked) })
 
-    const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) =>
-        onKeyDown(e, { value: e.target?.value, checked: Boolean(e.target?.checked) })
+    const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+        const input = e.target as EventTarget & HTMLInputElement
+        onKeyDown(e, { value: input.value, checked: Boolean(input.checked) })
+    }
 
     const containerClass = classNames('checkbox', className, { 'checkbox--large': size === 'large' })
 
