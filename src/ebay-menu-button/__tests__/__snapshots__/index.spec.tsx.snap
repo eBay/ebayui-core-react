@@ -663,16 +663,17 @@ Array [
       aria-label="Menu"
       className="menu-button__button icon-btn"
       onClick={[Function]}
+      onKeyDown={[Function]}
       type="button"
     >
       <svg
         aria-hidden={true}
-        className="icon icon--overflow"
+        className="icon icon--overflow-vertical-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-overflow"
+          xlinkHref="#icon-overflow-vertical-16"
         />
       </svg>
     </button>

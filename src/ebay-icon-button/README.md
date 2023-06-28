@@ -39,3 +39,12 @@ Name | Type | Stateful | Required | Description | Data
 `bageNumber` | Number | No | No | number on the badge
 `bageAriaLabel` | String | No | No | aria label of the badge
 `transparent` | Boolean | No | No | for transparent background
+
+## Callbacks
+
+| Name       | Type     | Required | Description                 | Data              |
+|------------|----------|----------|-----------------------------|-------------------|
+| `onClick`  | Function | No       | triggered on click          | `(MouseEvent)`    |
+| `onEscape` | Function | No       | triggered on Esc key press  | `(KeyboardEvent)` |
+| `onFocus`  | Function | No       | triggered on keyboard focus | `(FocusEvent)`    |
+| `onBlur`   | Function | No       | triggered on focus lost     | `(FocusEvent)` |

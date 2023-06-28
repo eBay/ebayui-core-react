@@ -452,6 +452,7 @@ Array [
       aria-label="Menu"
       className="fake-menu-button__button icon-btn"
       onClick={[Function]}
+      onKeyDown={[Function]}
       type="button"
     >
       <svg
