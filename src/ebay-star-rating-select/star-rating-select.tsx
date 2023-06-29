@@ -1,18 +1,20 @@
-import React, { ChangeEvent, ComponentProps, FC, MouseEvent, useEffect, useState } from 'react'
+import React, { ChangeEvent, ComponentProps, FC, KeyboardEvent, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { range } from '../common/range'
 import { randomId } from '../common/random-id'
+import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
 
+export type EventProps = { value: number }
 type Props = ComponentProps<'div'> & {
     a11yText?: string;
     value?: string;
     a11yStarText?: string[]
     disabled?: boolean;
     name?: string;
-    onKeyDown?: (e: MouseEvent, value: number) => void;
-    onChange?: (event: ChangeEvent<HTMLInputElement>, value: string | number) => void;
-    onFocus?: (event: ChangeEvent<HTMLInputElement>, value: string | number) => void;
+    onKeyDown?: EbayKeyboardEventHandler<HTMLInputElement, EventProps>;
+    onChange?: EbayChangeEventHandler<HTMLInputElement, EventProps>;
+    onFocus?: EbayFocusEventHandler<HTMLInputElement, EventProps>;
 }
 const stars = range(1, 5)
 const getValue = (val) => {
@@ -28,9 +30,9 @@ const EbayStarRatingSelect: FC<Props> = ({
     className,
     a11yStarText = [],
     disabled,
-    onChange,
-    onFocus,
-    onKeyDown,
+    onChange = () => {},
+    onFocus = () => {},
+    onKeyDown = () => {},
     name = `star-rating-${randomId()}`,
     ...rest
 }) => {
@@ -39,21 +41,21 @@ const EbayStarRatingSelect: FC<Props> = ({
         setChecked(getValue(value))
     }, [value])
     const handleKeyDown = (i:number) => (e) => {
-        if (!disabled && onKeyDown) {
+        if (!disabled) {
             setChecked(getValue(i))
-            onKeyDown(e, i)
+            onKeyDown(e, { value: i })
         }
     }
     const handleClick = (i:number) => (e) => {
-        if (!disabled && onChange) {
+        if (!disabled) {
             setChecked(getValue(i))
-            onChange(e, i)
+            onChange(e, { value: i })
         }
     }
     const handleFocus = (i:number) => (e) => {
-        if (!disabled && onFocus) {
+        if (!disabled) {
             setChecked(getValue(i))
-            onFocus(e, i)
+            onFocus(e, { value: i })
         }
     }
     return (
