@@ -9,8 +9,16 @@ import { VideoAction, VideoPlayView } from './types'
 import EbayVideoSource from './source'
 import { defaultVideoConfig, ERROR_ANOTHER_LOAD, ERROR_NO_PLAYER } from './const'
 import { customControls } from './controls'
+import { EbayEventHandler } from '../common/event-utils/types'
 
-export type EbayVideoProps = ComponentProps<'video'> & {
+export type PlayEventProps = {
+    player: Player;
+}
+export type VolumeChangeProps = {
+    volume: number;
+    muted: boolean;
+}
+export type EbayVideoProps = Omit<ComponentProps<'video'>, 'onPlay' | 'onVolumeChange'> & {
     width?: number;
     height?: number;
     thumbnail?: string;
@@ -30,8 +38,8 @@ export type EbayVideoProps = ComponentProps<'video'> & {
     errorText: string;
     reportText?: string;
     onLoadError?: (err: Error) => void;
-    onPlay?: (e: SyntheticEvent, { player: Player }) => void;
-    onVolumeChange?: (e: SyntheticEvent, { volume: number, muted: boolean }) => void;
+    onPlay?: EbayEventHandler<HTMLVideoElement, PlayEventProps>;
+    onVolumeChange?: EbayEventHandler<HTMLVideoElement, VolumeChangeProps>;
     onReport?: () => void;
 };
 
@@ -198,7 +206,10 @@ const EbayVideo: FC<EbayVideoProps> = ({
 
     const handleVolumeChange = (e: SyntheticEvent<HTMLVideoElement, Event>) => {
         const eventTarget = e.currentTarget
-        onVolumeChange(e, { volume: eventTarget.volume, muted: eventTarget.muted })
+        onVolumeChange(e, {
+            volume: Math.round((eventTarget.volume + Number.EPSILON) * 100) / 100,
+            muted: eventTarget.muted
+        })
     }
 
     const handleOnPause = () => {

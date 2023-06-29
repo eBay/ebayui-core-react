@@ -9,7 +9,10 @@ export function customControls(onReport = () => {}): { Report } {
         constructor(parent, controls, text) {
             super(parent, controls)
 
-            appendChild(parent, <ReportButton onReport={onReport}>{text}</ReportButton>)
+            appendChild(parent, <ReportButton>{text}</ReportButton>, button => {
+                // have to listen to clicks this way (React onClick will not work):
+                this.eventManager.listen(button, 'click', () => onReport())
+            })
         }
     }
 
@@ -28,9 +31,12 @@ export function customControls(onReport = () => {}): { Report } {
     return { Report }
 }
 
-function appendChild(container: HTMLElement, reactElement: ReactElement): void {
+function appendChild(container: HTMLElement, reactElement: ReactElement, callback: (child: ChildNode) => void): void {
     const tempEl: HTMLElement = document.createElement('div')
-    ReactDOM.render(reactElement, tempEl)
 
-    container.appendChild(tempEl.firstChild)
+    ReactDOM.render(reactElement, tempEl, () => {
+        const child = tempEl.firstChild
+        container.appendChild(child)
+        callback(child)
+    })
 }

@@ -1,12 +1,8 @@
-import { EbayIcon } from '../ebay-icon'
 import React, { FC } from 'react'
+import { EbayIcon } from '../ebay-icon'
 
-type Props = {
-    onReport: () => void;
-}
-
-export const ReportButton: FC<Props> = ({ onReport, children }) => (
-    <button className="video-player__report-button" onClick={onReport}>
+export const ReportButton: FC = ({ children }) => (
+    <button className="video-player__report-button">
         <EbayIcon name="flag24" />{children}
     </button>
 )
