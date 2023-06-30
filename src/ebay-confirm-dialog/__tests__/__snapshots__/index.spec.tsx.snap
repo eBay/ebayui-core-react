@@ -63,14 +63,14 @@ exports[`Storyshots ebay-confirm-dialog Default 1`] = `
             <button
               class="btn confirm-dialog__reject btn--secondary"
             >
-              Delete
+              Cancel
             </button>
             <button
               aria-describedby="confirm-dialog-main"
               class="btn confirm-dialog__confirm btn--primary"
               id="confirm-dialog-confirm"
             >
-              Cancel
+              Okay
             </button>
           </div>
           <div

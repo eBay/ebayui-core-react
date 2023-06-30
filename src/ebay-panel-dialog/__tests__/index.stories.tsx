@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { EbayPanelDialog } from '../index'
 import { EbayDialogCloseButton, EbayDialogHeader } from '../../ebay-dialog-base'
+import { action } from '../../../.storybook/action'
 
 const story: any = {
     component: EbayPanelDialog,
@@ -15,14 +16,24 @@ const textParagraph = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 export const _Default = () => {
     const [open, setOpen] = useState(false);
-    const close = () => setOpen(false);
     return (
         <div>
-            <button className="btn btn--secondary" onClick={() => setOpen(!open)}>
+            <button
+                className="btn btn--secondary"
+                onClick={() => setOpen(!open)}
+            >
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayPanelDialog open={open} onClose={close} a11yCloseText="Close">
+            <EbayPanelDialog
+                open={open}
+                onOpen={() => action('onOpen')()}
+                onClose={() => {
+                    action('onClose')()
+                    setOpen(false)
+                }}
+                a11yCloseText="Close"
+            >
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>

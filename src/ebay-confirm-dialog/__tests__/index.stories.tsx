@@ -21,11 +21,17 @@ export const _Default = () => {
             <p>Some outside content...</p>
             <EbayConfirmDialog
                 open={open}
-                onOpen={e => action('opened')(e)}
-                onConfirm={close}
-                onReject={close}
-                confirmText="Cancel"
-                rejectText="Delete"
+                onOpen={() => action('onOpen')()}
+                onConfirm={() => {
+                    action('onConfirm')()
+                    close()
+                }}
+                onReject={() => {
+                    action('onReject')()
+                    close()
+                }}
+                confirmText="Okay"
+                rejectText="Cancel"
             >
                 <EbayDialogHeader>Delete Address?</EbayDialogHeader>
                 <p>You will permanently lose this address.</p>

@@ -1,51 +1,64 @@
 import React from 'react'
 import requireContext from 'node-require-context'
-import { render, fireEvent, RenderResult } from '@testing-library/react'
+import { screen, render, fireEvent } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayConfirmDialog } from '../index';
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
+const openSpy = jest.fn()
+const confirmSpy = jest.fn()
+const rejectSpy = jest.fn()
+
+const showDialog = () =>
+    render(
+        <EbayConfirmDialog
+            open
+            animated={false}
+            confirmText="Confirm"
+            rejectText="Reject"
+            a11yCloseText="Close"
+            onOpen={openSpy}
+            onConfirm={confirmSpy}
+            onReject={rejectSpy}
+        >
+            <EbayDialogHeader>Heading</EbayDialogHeader>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p><a href="http://www.ebay.com">www.ebay.com</a></p>
+            <input placeholder="Enter a value" />
+        </EbayConfirmDialog>
+    );
 
 describe('<EbayConfirmDialog>', () => {
-    let wrapper: RenderResult
-    const closeDrawerHandler = jest.fn()
-
-    beforeEach(() => {
-        wrapper = render(
-            <EbayConfirmDialog
-                animated={false}
-                confirmText="Confirm"
-                rejectText="Reject"
-                open
-                onReject={closeDrawerHandler}
-                a11yCloseText="Close"
-            >
-                <EbayDialogHeader>Heading</EbayDialogHeader>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p><a href="http://www.ebay.com">www.ebay.com</a></p>
-                <input placeholder="Enter a value" />
-            </EbayConfirmDialog>
-        )
+    it('should focus on Confirm button', () => {
+        showDialog()
+        expect(screen.getByText('Confirm')).toHaveFocus()
     })
 
-    it('should have close button', () => {
-        expect(wrapper.getByText('Reject')).toBeInTheDocument()
+    it('should trigger onConfirm when Confirm button is clicked', () => {
+        showDialog()
+        fireEvent.click(screen.getByText('Confirm'))
+        expect(confirmSpy).toBeCalled()
     })
 
-    it('should focus on Okay button', () => {
-        expect(wrapper.getByText('Confirm')).toHaveFocus()
+    it('should trigger onOpen when dialog appears', () => {
+        showDialog()
+        expect(openSpy).toBeCalled()
     })
 
-    it('should trigger onClose when close button is clicked', () => {
-        fireEvent.click(wrapper.getByText('Reject'))
-        expect(closeDrawerHandler).toBeCalled()
+    it('should trigger onReject when Reject button is clicked', () => {
+        showDialog()
+        const button = screen.getByText('Reject')
+        fireEvent.click(button)
+        expect(button).toBeInTheDocument()
+        expect(rejectSpy).toBeCalled()
     })
+
 })
 
 initStoryshots({

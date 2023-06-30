@@ -6,14 +6,12 @@ const classPrefix = 'fullscreen-dialog'
 
 export interface Props<T = any> extends DialogBaseProps<T> {
   open?: boolean;
-  onOpen?: () => void;
   onClose?: () => void;
 }
 
 const EbayFullscreenDialog: FC<Props> = ({
     open,
     onClose = () => {},
-    onOpen = () => {},
     className,
     animated,
     ...rest

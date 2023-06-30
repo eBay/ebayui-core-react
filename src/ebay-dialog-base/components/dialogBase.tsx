@@ -8,7 +8,9 @@ import React, {
     ReactElement,
     cloneElement,
     MouseEventHandler,
-    ReactNode
+    ReactNode,
+    KeyboardEvent,
+    KeyboardEventHandler
 } from 'react'
 import classNames from 'classnames'
 import * as screenreaderTrap from 'makeup-screenreader-trap'
@@ -16,6 +18,7 @@ import * as keyboardTrap from 'makeup-keyboard-trap'
 import { EbayIcon } from '../../ebay-icon'
 import { randomId } from '../../common/random-id'
 import { useDialogAnimation, TransitionElement } from './animation'
+
 
 export type WindowType = 'compact'
 type ClassPrefix = 'fullscreen-dialog' | 'lightbox-dialog' | 'panel-dialog'
@@ -38,7 +41,8 @@ export interface DialogBaseProps<T> extends HTMLProps<T> {
     buttonPosition?: ButtonPosition;
     ariaLabelledby?: string;
     a11yCloseText?: string;
-    onCloseBtnClick?: MouseEventHandler;
+    onOpen?: () => void;
+    onCloseBtnClick?: MouseEventHandler & KeyboardEventHandler;
     onBackgroundClick?: MouseEventHandler;
     mainId?: string;
     ignoreEscape?: boolean;
@@ -66,6 +70,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     actions,
     onScroll,
     open = false,
+    onOpen = () => {},
     onBackgroundClick = () => {},
     ignoreEscape,
     closeButton,
@@ -128,10 +133,10 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
         onTransitionEnd: () => handleFocus(open)
     })
 
-    const onKeyDown = (event: React.KeyboardEvent) => {
+    const onKeyDown = (event: KeyboardEvent) => {
         if (!ignoreEscape && event.key === 'Escape') {
             event.stopPropagation()
-            onCloseBtnClick(undefined)
+            onCloseBtnClick(event)
         }
     }
 
@@ -139,6 +144,9 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
         // For animated dialogs we handle the focus on transitionEnd event
         if (!animated) {
             handleFocus(open)
+        }
+        if (open) {
+            onOpen()
         }
     }, [open])
 
@@ -162,7 +170,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
             })}
             type="button"
             aria-label={a11yCloseText}
-            onClick={onCloseBtnClick as any}
+            onClick={onCloseBtnClick}
         >
             {closeButton || <EbayIcon name="close16" />}
         </button>

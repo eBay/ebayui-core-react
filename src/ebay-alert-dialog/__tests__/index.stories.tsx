@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { EbayAlertDialog } from '../index';
 import { EbayDialogHeader } from '../../ebay-dialog-base'
+import { action } from '../../../.storybook/action'
 
 const story: any = {
     component: EbayAlertDialog,
@@ -22,7 +23,16 @@ export const _Default = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayAlertDialog open={open} onConfirm={close} confirmText="Confirm" a11yCloseText="Close">
+            <EbayAlertDialog
+                open={open}
+                onOpen={() => action('onOpen')()}
+                onConfirm={() => {
+                    action('onConfirm')()
+                    close()
+                }}
+                confirmText="Confirm"
+                a11yCloseText="Close"
+            >
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>

@@ -8,14 +8,12 @@ const classPrefix = 'alert-dialog'
 export interface Props<T = any> extends DialogBaseProps<T> {
   open?: boolean;
   confirmText: string;
-  onOpen?: () => void;
   onConfirm?: () => void;
 }
 
 const EbayAlertDialog: FC<Props> = ({
     a11yCloseText = 'Close Dialog',
     confirmText,
-    onOpen = () => {},
     onConfirm = () => {},
     ...rest
 }) => {

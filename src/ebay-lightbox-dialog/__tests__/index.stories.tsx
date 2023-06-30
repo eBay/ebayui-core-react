@@ -4,6 +4,7 @@ import { EbayButton } from '../../ebay-button'
 import { EbayCheckbox } from '../../ebay-checkbox'
 import { EbayLabel } from '../../ebay-field'
 import { EbayLightboxDialog } from '../index'
+import { action } from '../../../.storybook/action'
 
 const story: any = {
     component: EbayLightboxDialog,
@@ -25,7 +26,15 @@ export const _Default = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayLightboxDialog open={open} onClose={close} a11yCloseText="Close">
+            <EbayLightboxDialog
+                open={open}
+                onOpen={() => action('onOpen')()}
+                onClose={() => {
+                    action('onClose')()
+                    setOpen(false)
+                }}
+                a11yCloseText="Close"
+            >
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>
