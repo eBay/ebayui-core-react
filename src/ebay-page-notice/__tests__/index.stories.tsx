@@ -1,6 +1,7 @@
 import React  from 'react'
 import { storiesOf } from '@storybook/react'
 import { EbayPageNotice, EbayNoticeContent, EbayPageNoticeTitle, EbayPageNoticeFooter, EbayPageNoticeCTA } from '..'
+import { action } from '../../../.storybook/action'
 
 storiesOf(`ebay-page-notice`, module)
 
@@ -63,7 +64,12 @@ storiesOf(`ebay-page-notice`, module)
     </>))
 
     .add(`Dismissible notice`, () => (<>
-        <EbayPageNotice status="information" aria-label="Information" a11yDismissText="Close">
+        <EbayPageNotice
+            status="information"
+            aria-label="Information"
+            a11yDismissText="Close"
+            onDismiss={e => action('onDismiss')(e)}
+        >
             <EbayNoticeContent>
                 <EbayPageNoticeTitle>Good news!</EbayPageNoticeTitle>
                 <p>
