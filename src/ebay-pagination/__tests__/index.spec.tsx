@@ -14,6 +14,8 @@ jest.mock('react-dom', () => {
   };
 });
 
+var anySyntheticEvent = expect.objectContaining({ type: null });
+
 describe('<EbayPagination>', () => {
     describe('on page click', () => {
         it('should fire an event', () => {
@@ -64,7 +66,7 @@ describe('<EbayPagination>', () => {
             fireEvent.click(wrapper.getByLabelText('Previous page'))
 
             expect(spyOnSelect).not.toBeCalled()
-            expect(spyOnPrev).toBeCalled()
+            expect(spyOnPrev).toBeCalledWith(anySyntheticEvent)
             expect(spyOnNext).not.toBeCalled()
         })
 
@@ -73,13 +75,13 @@ describe('<EbayPagination>', () => {
 
             expect(spyOnSelect).not.toBeCalled()
             expect(spyOnPrev).not.toBeCalled()
-            expect(spyOnNext).toBeCalled()
+            expect(spyOnNext).toBeCalledWith(anySyntheticEvent)
         })
 
         it('should trigger onSelect() on clicking pagination item', () => {
             fireEvent.click(wrapper.getAllByRole('link')[1])
 
-            expect(spyOnSelect).toBeCalledWith(expect.anything(), undefined, 2)
+            expect(spyOnSelect).toBeCalledWith(anySyntheticEvent, { value: '', index: 2 })
             expect(spyOnPrev).not.toBeCalled()
             expect(spyOnNext).not.toBeCalled()
         })
