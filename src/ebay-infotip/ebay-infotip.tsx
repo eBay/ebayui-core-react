@@ -22,8 +22,8 @@ type InfotipProps = {
     'aria-label'?: string;
     className?: string;
     children?: ReactNode;
-    modala11yMaximizeText?:string;
-    modala11yMinimizeText?:string;
+    a11yMaximizeText?:string;
+    a11yMinimizeText?:string;
 };
 
 const EbayInfotip: FC<InfotipProps> = ({
@@ -39,8 +39,8 @@ const EbayInfotip: FC<InfotipProps> = ({
     a11yCloseText,
     'aria-label': ariaLabel,
     className,
-    modala11yMaximizeText,
-    modala11yMinimizeText
+    a11yMaximizeText,
+    a11yMinimizeText
 }: InfotipProps) => {
     const buttonRef = useRef()
     const {
@@ -95,8 +95,8 @@ const EbayInfotip: FC<InfotipProps> = ({
                     mode="mini"
                     a11yCloseText={a11yCloseText}
                     className="dialog--mini__overlay"
-                    a11yMaximizeText={modala11yMaximizeText}
-                    a11yMinimizeText={modala11yMinimizeText}
+                    a11yMaximizeText={a11yMaximizeText}
+                    a11yMinimizeText={a11yMinimizeText}
                 >
                     <EbayDialogHeader>{heading}</EbayDialogHeader>
                     {contentChildren}
