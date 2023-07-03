@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ComponentProps, FC, KeyboardEvent, useEffect, useState } from 'react'
+import React, { ComponentProps, FC, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { range } from '../common/range'

@@ -1,4 +1,4 @@
-import React, { FC, Key, ReactNode, RefObject, StyleHTMLAttributes, MouseEvent, ComponentProps } from 'react'
+import React, { FC, Key, ReactNode, RefObject, StyleHTMLAttributes, ComponentProps } from 'react'
 import { EbayIcon } from '../ebay-icon'
 import { withForwardRef } from '../common/component-utils'
 import classNames from 'classnames'

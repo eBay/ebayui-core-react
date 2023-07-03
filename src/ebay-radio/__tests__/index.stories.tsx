@@ -42,44 +42,52 @@ storiesOf(`ebay-radio`, module)
             <EbayLabel>Disabled</EbayLabel>
         </EbayRadio>
     </>))
-    .add(`Grouped radio-buttons`, () => (
-        <fieldset>
-            <legend>Choose an Option</legend>
-            <EbayField>
-                <EbayRadio
-                    id="group-radio-1"
-                    value="1"
-                    defaultChecked
-                    name="radio-group"
-                    onChange={action('radio-change')}
-                >
-                    <EbayLabel>Option 1</EbayLabel>
-                </EbayRadio>
-            </EbayField>
-            <EbayField>
-                <EbayRadio
-                    id="group-radio-2"
-                    value="2"
-                    defaultChecked={false}
-                    name="radio-group"
-                    onChange={action('radio-change')}
-                >
-                    <EbayLabel>Option 2</EbayLabel>
-                </EbayRadio>
-            </EbayField>
-            <EbayField>
-                <EbayRadio
-                    id="group-radio-3"
-                    value="3"
-                    defaultChecked={false}
-                    name="radio-group"
-                    onChange={action('radio-change')}
-                >
-                    <EbayLabel>Option 3</EbayLabel>
-                </EbayRadio>
-            </EbayField>
-        </fieldset>
-    ))
+    .add(`Grouped radio-buttons`, () => {
+        const defaultProps = {
+            onChange: (e, props) => action('onChange')(e, props),
+            onFocus: (e, props) => action('onFocus')(e, props),
+            onKeyDown: (e, props) => action('onKeyDown')(e, props)
+        }
+
+        return (
+            <fieldset>
+                <legend>Choose an Option</legend>
+                <EbayField>
+                    <EbayRadio
+                        id="group-radio-1"
+                        value="1"
+                        defaultChecked
+                        name="radio-group"
+                        {...defaultProps}
+                    >
+                        <EbayLabel>Option 1</EbayLabel>
+                    </EbayRadio>
+                </EbayField>
+                <EbayField>
+                    <EbayRadio
+                        id="group-radio-2"
+                        value="2"
+                        defaultChecked={false}
+                        name="radio-group"
+                        {...defaultProps}
+                    >
+                        <EbayLabel>Option 2</EbayLabel>
+                    </EbayRadio>
+                </EbayField>
+                <EbayField>
+                    <EbayRadio
+                        id="group-radio-3"
+                        value="3"
+                        defaultChecked={false}
+                        name="radio-group"
+                        {...defaultProps}
+                    >
+                        <EbayLabel>Option 3</EbayLabel>
+                    </EbayRadio>
+                </EbayField>
+            </fieldset>
+        )
+    })
     .add(`Styled radio-button`, () => (
         <>
             <style dangerouslySetInnerHTML={{

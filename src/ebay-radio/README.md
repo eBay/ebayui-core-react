@@ -46,7 +46,12 @@ Name | Type | Description
 `checked` | boolean | Set the radio button state to checked/unchecked. Use this for **controlled component**.
 `defaultChecked` | boolean | Set the radio button initial state to checked/unchecked. Use this for **uncontrolled component**.
 `size` | String | No | No | Either `large` or `regular` (default). Sets the radio icon size. For mweb this should be set to `large`. (Note: The dimensions of the radio will not change, but only the icon)
-`onChange` | Function | Callback fired when selected is changed, with param `{ originalEvent, value }`
-`onFocus` | Function | Callback fired when button is focused, with param `{ originalEvent, value }`
+
+## Callbacks
+Name | Data | Description
+--- | --- | --- | ---
+`onChange` | `(ChangeEvent, { value })` | Callback fired when selected radio button is changed
+`onFocus` | `(FocusEvent, { value })` | Callback fired when radio button is focused
+`onKeydown` | `(KeyboardEvent, { value })` | Callback fired when key is down
 
 Note: For this component, `className`/`style` are applied to the container, while all other HTML attributes are applied to the input.
