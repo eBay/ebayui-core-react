@@ -27,7 +27,11 @@ yarn add @ebay/ui-core-react
 Name | Type | Stateful | Description
 --- | --- | --- | ---
 `disabled` | Boolean | No |
-`onChange` | `{ originalEvent, value, checked }` | selected value and checked status
+
+## Callbacks
+Name | Data | Description
+--- | --- | --- | ---
+`onChange` | `(ChangeEvent, { value: string, checked: boolean }` | Triggered on change
 
 Note: For this component, `className`/`style` are applied to the root tag, while all other HTML attributes are applied to the `input` tag.
 
