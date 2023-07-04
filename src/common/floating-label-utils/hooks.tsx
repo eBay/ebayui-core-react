@@ -12,6 +12,7 @@ type FloatingLabelHookProps = {
     className?: string;
     placeholder?: string;
     invalid?: boolean;
+    onMount?: () => void;
 }
 
 type FloatingLabelHookReturn = {
@@ -74,7 +75,8 @@ export function useFloatingLabel({
     inputSize,
     inputValue,
     placeholder,
-    invalid
+    invalid,
+    onMount = () => {}
 } : FloatingLabelHookProps): FloatingLabelHookReturn {
     const _internalInputRef = useRef(null)
     const inputRef = () => ref || _internalInputRef
@@ -103,6 +105,7 @@ export function useFloatingLabel({
         }
         selectFirstOptionText.current = getPlaceholder(inputRef()?.current)
         setPlaceholder(inputRef()?.current, ``)
+        onMount()
     }, [])
 
     useEffect(() => {

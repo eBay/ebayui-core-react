@@ -1,16 +1,63 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, FC, useEffect, useState, KeyboardEvent, MouseEvent } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayButton } from '../../ebay-button'
 import { EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../index';
 
 storiesOf('ebay-textbox', module)
-    .add('Default textbox', () => (<>
-        <EbayTextbox
-            defaultValue="EbayTextbox"
-            onChange={action('textbox-changed')}
-        />
-    </>))
+    .add('Default textbox', () => <EbayTextbox defaultValue="EbayTextbox" />)
+    .add('Testing callbacks', () => {
+        const TestComponent: FC = () => {
+            const ref = React.useRef(null)
+            const [ value, setValue ] = useState('')
+
+            const handleInputChange = (e: ChangeEvent<HTMLTextAreaElement & HTMLInputElement>, props: { value: string }) => {
+                action('onInputChange')(e, props)
+                setValue(props.value)
+            }
+            const handleButtonClick = (e: KeyboardEvent & MouseEvent<HTMLTextAreaElement & HTMLInputElement>, props: { value: string }) => {
+                action('onButtonClick')(e, props)
+                setValue('')
+            }
+
+            return (
+                <form ref={ref}>
+                    <p>
+                        <EbayTextbox
+                            value={value}
+                            onChange={(e, props) => action('onChange')(e, props)}
+                            onInputChange={(e, props) => handleInputChange(e, props)}
+                            onFocus={(e, props) => action('onFocus')(e, props)}
+                            onBlur={(e, props) => action('onBlur')(e, props)}
+                            onKeyPress={(e, props) => action('onKeyPress')(e, props)}
+                            onKeyUp={(e, props) => action('onKeyUp')(e, props)}
+                            onKeyDown={(e, props) => action('onKeyDown')(e, props)}
+                            onInvalid={(e, props) => action('onInvalid')(e, props)}
+                            onButtonClick={(e, props) => handleButtonClick(e, props)}
+                            required
+                        >
+                            {<EbayTextboxPostfixIcon
+                                name="clear16"
+                                buttonAriaLabel="Clear"
+                                style={{ opacity: value.length ? '1' : '0'}}
+                            />}
+                        </EbayTextbox>
+                    </p>
+                    <p>
+                        <EbayButton
+                            onClick={(e) => {
+                                e.preventDefault()
+                                ref.current?.reportValidity()
+                            }}
+                        >
+                            Check value presence
+                        </EbayButton>
+                    </p>
+                </form>
+            )
+        }
+        return <><TestComponent /></>
+    })
     .add('Disabled textbox', () => (<>
         <EbayTextbox disabled />
     </>))
@@ -44,18 +91,18 @@ storiesOf('ebay-textbox', module)
     .add('With icon', () => (<div>
         <p>
             <EbayTextbox placeholder="email">
-                <EbayTextboxPrefixIcon name="messages" />
+                <EbayTextboxPrefixIcon name="mail16" />
             </EbayTextbox>
         </p>
         <p>
             <EbayTextbox placeholder="username">
-                <EbayTextboxPostfixIcon name="userProfile" />
+                <EbayTextboxPostfixIcon name="profile20" />
             </EbayTextbox>
         </p>
         <p>
             <EbayTextbox placeholder="search" onButtonClick={action('Clear!')}>
-                <EbayTextboxPrefixIcon name="search" />
-                <EbayTextboxPostfixIcon name="clear" buttonAriaLabel="Clear"/>
+                <EbayTextboxPrefixIcon name="search16" />
+                <EbayTextboxPostfixIcon name="clear16" buttonAriaLabel="Clear"/>
             </EbayTextbox>
         </p>
     </div>))
@@ -63,12 +110,11 @@ storiesOf('ebay-textbox', module)
         const Component = () => {
             const [value, setValue] = useState('')
 
-            const handleOnChange = e => {
-                const newValue = e.target.value
-                setValue(newValue.substring(0, 10))
+            const handleOnChange = (e, props) => {
+                setValue(props.value.substring(0, 10))
             }
 
-            return <EbayTextbox onChange={handleOnChange} value={value} placeholder="Max 10 chars" />
+            return <EbayTextbox onInputChange={handleOnChange} value={value} placeholder="Max 10 chars" />
         }
 
         return <><Component /></>
@@ -82,8 +128,10 @@ storiesOf('ebay-textbox', module)
     })
     .add('Floating label', () => (
         <EbayTextbox
-            onChange={action('textbox-changed')}
             floatingLabel="Floating label"
+            onChange={action('onChange')}
+            onInputChange={action('onInputChange')}
+            onFloatingLabelInit={() => action('onFloatingLabelInit')()}
         />
     ))
     .add('Floating label with value', () => (

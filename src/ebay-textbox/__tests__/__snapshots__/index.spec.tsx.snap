@@ -331,6 +331,49 @@ exports[`Storyshots ebay-textbox Ref forwarding 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-textbox Testing callbacks 1`] = `
+<DocumentFragment>
+  <form>
+    <p>
+      <span
+        class="textbox textbox--icon-end"
+      >
+        <input
+          class="textbox__control"
+          required=""
+          type="text"
+          value=""
+        />
+        <button
+          aria-label="Clear"
+          class="icon-btn icon-btn--transparent"
+          style="opacity: 0;"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--clear-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-clear-16"
+            />
+          </svg>
+        </button>
+      </span>
+    </p>
+    <p>
+      <button
+        class="btn btn--secondary"
+      >
+        Check value presence
+      </button>
+    </p>
+  </form>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-textbox With icon 1`] = `
 <DocumentFragment>
   <div>
@@ -340,12 +383,12 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--messages"
+          class="icon icon--mail-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-messages"
+            xlink:href="#icon-mail-16"
           />
         </svg>
         <input
@@ -368,12 +411,12 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="icon icon--user-profile"
+          class="icon icon--profile-20"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-user-profile"
+            xlink:href="#icon-profile-20"
           />
         </svg>
       </span>
@@ -384,12 +427,12 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--search"
+          class="icon icon--search-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-search"
+            xlink:href="#icon-search-16"
           />
         </svg>
         <input
@@ -405,12 +448,12 @@ exports[`Storyshots ebay-textbox With icon 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--clear"
+            class="icon icon--clear-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-clear"
+              xlink:href="#icon-clear-16"
             />
           </svg>
         </button>
