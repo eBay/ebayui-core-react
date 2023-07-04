@@ -1,14 +1,26 @@
-import React, { FC, ReactElement } from 'react'
+import React, {
+    ComponentProps,
+    FC,
+    KeyboardEvent,
+    KeyboardEventHandler,
+    MouseEvent,
+    MouseEventHandler,
+    ReactElement, useState
+} from 'react'
 import cx from 'classnames'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayIcon, Icon } from '../ebay-icon'
+import { EbaySectionNoticeFooter } from './index'
 
-type Props = React.HTMLProps<HTMLElement> & {
-    status?: 'general' | 'none' | 'attention' | 'confirmation' | 'information';
+export type SectionNoticeStatus = 'general' | 'none' | 'attention' | 'confirmation' | 'information'
+export type Props = ComponentProps<'section'> & {
+    status?: SectionNoticeStatus;
     'aria-label'?: string;
     'aria-roledescription'?: string;
     className?: string;
+    a11yDismissText?: string;
+    onDismiss?: MouseEventHandler & KeyboardEventHandler;
 }
 
 const EbaySectionNotice: FC<Props> = ({
@@ -17,8 +29,11 @@ const EbaySectionNotice: FC<Props> = ({
     className,
     'aria-label': ariaLabel,
     'aria-roledescription': ariaRoleDescription = 'Notice',
+    a11yDismissText,
+    onDismiss = () => {},
     ...rest
 }) => {
+    const [dismissed, setDismissed] = useState(false)
     const childrenArray = React.Children.toArray(children) as ReactElement[]
     const content = childrenArray.find(({ type }) => type === EbayNoticeContent)
     const hasStatus = status !== 'general' && status !== 'none'
@@ -27,7 +42,12 @@ const EbaySectionNotice: FC<Props> = ({
         throw new Error(`EbaySectionNotice: Please use a EbayNoticeContent that defines the content of the notice`)
     }
 
-    return (
+    const handleDismissed = (event: MouseEvent & KeyboardEvent) => {
+        setDismissed(true)
+        onDismiss(event)
+    }
+
+    return dismissed ? null : (
         <section
             {...rest}
             className={cx(className, `section-notice`, hasStatus && `section-notice--${status}`)}
@@ -42,6 +62,16 @@ const EbaySectionNotice: FC<Props> = ({
             )}
             <NoticeContent {...content.props} type="section" />
             {children}
+            {a11yDismissText && (
+                <EbaySectionNoticeFooter>
+                    <button
+                        aria-label={a11yDismissText}
+                        className="fake-link page-notice__dismiss"
+                        onClick={handleDismissed as any}>
+                        <EbayIcon name="close16" />
+                    </button>
+                </EbaySectionNoticeFooter>
+            )}
         </section>
     )
 }

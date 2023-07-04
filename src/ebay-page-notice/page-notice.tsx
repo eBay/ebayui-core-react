@@ -11,6 +11,7 @@ import React, {
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import { EbayIcon, Icon } from '../ebay-icon'
+import { EbayPageNoticeFooter } from './index'
 
 export type PageNoticeStatus = 'general' | 'attention' | 'confirmation' | 'information'
 export type Props = ComponentProps<'section'> & {
@@ -60,14 +61,14 @@ const EbayPageNotice: FC<Props> = ({
             <NoticeContent {...content.props} type="page" />
             {children}
             {a11yDismissText && (
-                <div className="page-notice__footer">
+                <EbayPageNoticeFooter>
                     <button
                         aria-label={a11yDismissText}
                         className="fake-link page-notice__dismiss"
                         onClick={handleDismissed as any}>
                         <EbayIcon name="close16" />
                     </button>
-                </div>
+                </EbayPageNoticeFooter>
             )}
         </section>
     )

@@ -108,43 +108,46 @@ exports[`Storyshots ebay-textbox Floating label invalid 1`] = `
 
 exports[`Storyshots ebay-textbox Floating label with autofocus 1`] = `
 <DocumentFragment>
-  <span
-    class="floating-label"
-  >
-    <label
-      class="floating-label__label floating-label__label--animate"
-    >
-      Autofocused field
-    </label>
+  <p>
     <span
-      class="textbox"
+      class="floating-label"
     >
-      <input
-        class="textbox__control"
-        type="text"
-        value=""
-      />
+      <label
+        class="floating-label__label"
+      >
+        Regular field
+      </label>
+      <span
+        class="textbox"
+      >
+        <input
+          class="textbox__control"
+          type="text"
+          value=""
+        />
+      </span>
     </span>
-  </span>
-   
-  <span
-    class="floating-label"
-  >
-    <label
-      class="floating-label__label"
-    >
-      Regular field
-    </label>
+  </p>
+  <p>
     <span
-      class="textbox"
+      class="floating-label"
     >
-      <input
-        class="textbox__control"
-        type="text"
-        value=""
-      />
+      <label
+        class="floating-label__label floating-label__label--animate"
+      >
+        Autofocused field
+      </label>
+      <span
+        class="textbox"
+      >
+        <input
+          class="textbox__control"
+          type="text"
+          value=""
+        />
+      </span>
     </span>
-  </span>
+  </p>
 </DocumentFragment>
 `;
 

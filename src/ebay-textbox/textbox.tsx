@@ -88,7 +88,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
     })
 
     const handleFocus = (event?: FocusEvent<HTMLInputElement & HTMLTextAreaElement>) => {
-        onFocus(event, { value: event.target?.value })
+        onFocus(event, { value: event?.target?.value || defaultValue })
         onFloatingLabelFocus()
     }
 

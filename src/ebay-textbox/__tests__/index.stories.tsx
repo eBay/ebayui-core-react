@@ -149,14 +149,18 @@ storiesOf('ebay-textbox', module)
         />
     ))
     .add('Floating label with autofocus', () => (<>
-        <EbayTextbox floatingLabel="Autofocused field" autoFocus /> <EbayTextbox floatingLabel="Regular field"/>
+        <p>
+            <EbayTextbox floatingLabel="Regular field" />
+        </p>
+        <p>
+            <EbayTextbox floatingLabel="Autofocused field" autoFocus onFocus={action('onFocus')} />
+        </p>
     </>))
     .add('Floating label with placeholder, controlled', () => {
         const Component = () => {
             const [value, setValue] = useState('')
 
-            const handleOnChange = e => {
-                const newValue = e.target.value
+            const handleOnChange = (e, { value: newValue }) => {
                 setValue(newValue.toLowerCase())
             }
 
