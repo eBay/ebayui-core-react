@@ -500,6 +500,7 @@ exports[`Storyshots ebay-infotip Modal 1`] = `
             class="drawer-dialog__window drawer-dialog__window drawer-dialog__window--slide"
           >
             <button
+              aria-label="Maximize Text Label"
               class="drawer-dialog__handle"
               type="button"
             />
