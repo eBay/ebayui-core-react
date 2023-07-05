@@ -59,7 +59,10 @@ const EbaySelect: FC<EbaySelectProps> = ({
         if (!isControlled(controlledValue)) {
             setValue(newValue)
         }
-
+        if (ref?.current) {
+            ref?.current?.focus?.()
+        }
+        
         onChange(e, selectedIndex, newValue)
     }
 
