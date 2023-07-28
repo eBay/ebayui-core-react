@@ -29,7 +29,7 @@ const Tooltip: FC<TooltipProps> = ({
     const host = cloneElement(originalHostComponent, {
         className: `${type}__host`,
         'aria-expanded': isExpanded,
-        'aria-describedby': content?.props.id,
+        'aria-describedby': content?.props?.id,
         ...originalHostComponent.props
     })
 
