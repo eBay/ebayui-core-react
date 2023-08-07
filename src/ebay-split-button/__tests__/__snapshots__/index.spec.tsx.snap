@@ -22,12 +22,12 @@ exports[`Storyshots ebay-split-button Controls 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--chevron-down-24"
+          class="icon icon--chevron-down-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-chevron-down-24"
+            xlink:href="#icon-chevron-down-16"
           />
         </svg>
       </button>
@@ -59,12 +59,12 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -92,12 +92,12 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -125,12 +125,12 @@ exports[`Storyshots ebay-split-button Default 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -165,12 +165,12 @@ exports[`Storyshots ebay-split-button Disabled 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -203,12 +203,12 @@ exports[`Storyshots ebay-split-button Loading 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -241,12 +241,12 @@ exports[`Storyshots ebay-split-button Size 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -274,12 +274,12 @@ exports[`Storyshots ebay-split-button Size 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -307,12 +307,12 @@ exports[`Storyshots ebay-split-button Size 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -348,12 +348,12 @@ exports[`Storyshots ebay-split-button Transparent 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="icon icon--chevron-down-24"
+              class="icon icon--chevron-down-16"
               focusable="false"
               xmlns="http://www.w3.org/2000/svg"
             >
               <use
-                xlink:href="#icon-chevron-down-24"
+                xlink:href="#icon-chevron-down-16"
               />
             </svg>
           </button>
@@ -381,12 +381,12 @@ exports[`Storyshots ebay-split-button Transparent 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="icon icon--chevron-down-24"
+              class="icon icon--chevron-down-16"
               focusable="false"
               xmlns="http://www.w3.org/2000/svg"
             >
               <use
-                xlink:href="#icon-chevron-down-24"
+                xlink:href="#icon-chevron-down-16"
               />
             </svg>
           </button>
@@ -421,12 +421,12 @@ exports[`Storyshots ebay-split-button Truncated 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
@@ -455,12 +455,12 @@ exports[`Storyshots ebay-split-button Truncated 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="icon icon--chevron-down-24"
+            class="icon icon--chevron-down-16"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
           >
             <use
-              xlink:href="#icon-chevron-down-24"
+              xlink:href="#icon-chevron-down-16"
             />
           </svg>
         </button>
