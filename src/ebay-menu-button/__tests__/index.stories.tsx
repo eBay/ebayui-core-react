@@ -43,7 +43,7 @@ storiesOf('ebay-menu-button', module)
     //
     .add('With icon', () => (<>
         <EbayMenuButton text="Settings">
-            <EbayIcon name="settings" />
+            <EbayIcon name="settings16" />
             <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>

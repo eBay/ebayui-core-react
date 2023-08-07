@@ -22,12 +22,12 @@ exports[`Storyshots ebay-fake-menu-button Borderless 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -57,12 +57,12 @@ exports[`Storyshots ebay-fake-menu-button Default 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -93,12 +93,12 @@ exports[`Storyshots ebay-fake-menu-button Disabled 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -128,12 +128,12 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -242,12 +242,12 @@ exports[`Storyshots ebay-fake-menu-button Fixed Width 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -279,12 +279,12 @@ Array [
         </span>
         <svg
           aria-hidden={true}
-          className="icon icon--chevron-down-24"
+          className="icon icon--chevron-down-16"
           focusable={false}
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-chevron-down-24"
+            xlinkHref="#icon-chevron-down-16"
           />
         </svg>
       </span>
@@ -312,12 +312,12 @@ Array [
         </span>
         <svg
           aria-hidden={true}
-          className="icon icon--chevron-down-24"
+          className="icon icon--chevron-down-16"
           focusable={false}
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-chevron-down-24"
+            xlinkHref="#icon-chevron-down-16"
           />
         </svg>
       </span>
@@ -355,12 +355,12 @@ exports[`Storyshots ebay-fake-menu-button Reverse (Menu grows to the left) 1`] =
         </span>
         <svg
           aria-hidden={true}
-          className="icon icon--chevron-down-24"
+          className="icon icon--chevron-down-16"
           focusable={false}
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-chevron-down-24"
+            xlinkHref="#icon-chevron-down-16"
           />
         </svg>
       </span>
@@ -396,12 +396,12 @@ Array [
         </span>
         <svg
           aria-hidden={true}
-          className="icon icon--chevron-down-24"
+          className="icon icon--chevron-down-16"
           focusable={false}
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-chevron-down-24"
+            xlinkHref="#icon-chevron-down-16"
           />
         </svg>
       </span>
@@ -432,12 +432,12 @@ Array [
         </span>
         <svg
           aria-hidden={true}
-          className="icon icon--chevron-down-24"
+          className="icon icon--chevron-down-16"
           focusable={false}
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-chevron-down-24"
+            xlinkHref="#icon-chevron-down-16"
           />
         </svg>
       </span>
@@ -507,12 +507,12 @@ exports[`Storyshots ebay-fake-menu-button With Custom Label 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -542,12 +542,12 @@ exports[`Storyshots ebay-fake-menu-button With Separator 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>
@@ -589,12 +589,12 @@ exports[`Storyshots ebay-fake-menu-button With icon 1`] = `
       </span>
       <svg
         aria-hidden={true}
-        className="icon icon--chevron-down-24"
+        className="icon icon--chevron-down-16"
         focusable={false}
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlinkHref="#icon-chevron-down-24"
+          xlinkHref="#icon-chevron-down-16"
         />
       </svg>
     </span>

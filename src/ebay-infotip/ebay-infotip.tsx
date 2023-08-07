@@ -22,6 +22,8 @@ type InfotipProps = {
     'aria-label'?: string;
     className?: string;
     children?: ReactNode;
+    a11yMaximizeText?:string;
+    a11yMinimizeText?:string;
 };
 
 const EbayInfotip: FC<InfotipProps> = ({
@@ -36,7 +38,9 @@ const EbayInfotip: FC<InfotipProps> = ({
     icon = 'information16',
     a11yCloseText,
     'aria-label': ariaLabel,
-    className
+    className,
+    a11yMaximizeText,
+    a11yMinimizeText
 }: InfotipProps) => {
     const buttonRef = useRef()
     const {
@@ -66,24 +70,41 @@ const EbayInfotip: FC<InfotipProps> = ({
     const { children: contentChildren, ...contentProps } = content.props
 
     return (
-        <Tooltip
-            type="infotip"
-            isExpanded={isExpanded}
-            className={classNames(className, { 'dialog--mini': isModal })}
-            ref={containerRef}>
-            <TooltipHost>
-                {cloneElement(button, {
-                    ref: buttonRef,
-                    onClick: toggleTooltip,
-                    disabled,
-                    variant,
-                    'aria-label': ariaLabel,
-                    'aria-expanded': isExpanded,
-                    icon,
-                    ...button.props
-                })}
-            </TooltipHost>
-            {isModal ? (
+        <>
+
+            <Tooltip
+                type="infotip"
+                isExpanded={isExpanded}
+                className={classNames(className, { 'dialog--mini': isModal })}
+                ref={containerRef}>
+                <TooltipHost>
+                    {cloneElement(button, {
+                        ref: buttonRef,
+                        onClick: toggleTooltip,
+                        disabled,
+                        variant,
+                        'aria-label': ariaLabel,
+                        'aria-expanded': isExpanded,
+                        icon,
+                        ...button.props
+                    })}
+                </TooltipHost>
+                {!isModal && (
+                    <TooltipContent
+                        {...contentProps}
+                        type="infotip"
+                        style={overlayStyle}
+                        pointer={pointer}
+                        showCloseButton
+                        a11yCloseText={a11yCloseText}
+                        onClose={collapseTooltip}
+                    >
+                        {heading}
+                        {contentChildren}
+                    </TooltipContent>
+                )}
+            </Tooltip>
+            {isModal && (
                 <EbayDrawerDialog
                     {...contentProps}
                     open={isExpanded}
@@ -91,25 +112,14 @@ const EbayInfotip: FC<InfotipProps> = ({
                     mode="mini"
                     a11yCloseText={a11yCloseText}
                     className="dialog--mini__overlay"
+                    a11yMaximizeText={a11yMaximizeText}
+                    a11yMinimizeText={a11yMinimizeText}
                 >
                     <EbayDialogHeader>{heading}</EbayDialogHeader>
                     {contentChildren}
                 </EbayDrawerDialog>
-            ) : (
-                <TooltipContent
-                    {...contentProps}
-                    type="infotip"
-                    style={overlayStyle}
-                    pointer={pointer}
-                    showCloseButton
-                    a11yCloseText={a11yCloseText}
-                    onClose={collapseTooltip}
-                >
-                    {heading}
-                    {contentChildren}
-                </TooltipContent>
             )}
-        </Tooltip>
+        </>
     )
 }
 

@@ -26,14 +26,10 @@ const Tooltip: FC<TooltipProps> = ({
         throw new Error(`Tooltip: Please use a TooltipHost that defines the host of the tooltip`)
     }
 
-    if (!content) {
-        throw new Error(`Tooltip: Please use a component that defines the content of the tooltip`)
-    }
-
     const host = cloneElement(originalHostComponent, {
         className: `${type}__host`,
         'aria-expanded': isExpanded,
-        'aria-describedby': content.props.id,
+        'aria-describedby': content?.props?.id,
         ...originalHostComponent.props
     })
 

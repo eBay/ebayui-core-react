@@ -72,13 +72,13 @@ storiesOf('ebay-split-button', module)
             <EbaySplitButton priority="tertiary" a11yMenuText="Expand" onClick={action('clicked')}>
                 Tertiary button menu with icons
                 <Item>
-                    <EbayIcon name="confirmation" style={{ marginRight: '8px' }} /> Confirmed
+                    <EbayIcon name="confirmation16" style={{ marginRight: '8px' }} /> Confirmed
                 </Item>
                 <Item>
-                    <EbayIcon name="attention" style={{ marginRight: '8px' }} /> Not yet confirmed
+                    <EbayIcon name="attention16" style={{ marginRight: '8px' }} /> Not yet confirmed
                 </Item>
                 <Item>
-                    <EbayIcon name="attention" style={{ marginRight: '8px' }} /> Not yet confirmed
+                    <EbayIcon name="attention16" style={{ marginRight: '8px' }} /> Not yet confirmed
                 </Item>
             </EbaySplitButton>
         </p>

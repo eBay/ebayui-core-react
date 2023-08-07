@@ -12,8 +12,8 @@ const EbaySplitButton: FC<Props> = ({
     a11yButtonLoadingText,
     onCollapse,
     onExpand,
-    onSelect,
-    onChange,
+    onSelect = () => {},
+    onChange = () => {},
     ref,
     ...rest
 }) => {
