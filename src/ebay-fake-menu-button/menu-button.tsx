@@ -3,6 +3,7 @@ import classnames from 'classnames'
 
 import { filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
+import { EbayKeyboardEventHandler, EbayMouseEventHandler } from '../common/event-utils/types'
 import { randomId } from '../common/random-id'
 import { EbayButton, EbayButtonProps } from '../ebay-button'
 import { EbayIcon } from '../ebay-icon'
@@ -23,13 +24,14 @@ export type EbayFakeMenuButtonProps = {
     onCollapse?: () => void;
     onExpand?: () => void;
     text?: string;
-    // todo: implement the following props
-    type?: 'radio' | 'checkbox';
+    onSelect?: EbayMouseEventHandler<HTMLAnchorElement, { index: number }>;
+    onKeyDown?: EbayKeyboardEventHandler<HTMLElement>;
+    onMouseDown?: EbayMouseEventHandler<HTMLAnchorElement, { index: number }>;
 }
 
-type ButtonProps = Omit<EbayButtonProps, 'variant'> &
-    Omit<ComponentProps<'button'>, 'type'> &
-    ComponentProps<'a'>
+type ButtonProps = Omit<EbayButtonProps, 'variant' | 'onKeyDown' | 'onMouseDown'> &
+    Omit<ComponentProps<'button'>, 'onKeyDown' | 'onMouseDown' | 'onSelect'> &
+    Omit<ComponentProps<'a'>, 'onKeyDown' | 'onMouseDown' | 'onSelect'>
 type Props = ButtonProps & EbayFakeMenuButtonProps
 
 const EbayMenuButton: FC<Props> = ({
@@ -42,6 +44,8 @@ const EbayMenuButton: FC<Props> = ({
     className,
     onCollapse = () => {},
     onExpand = () => {},
+    onMouseDown = () => {},
+    onSelect = () => {},
     text = '',
     children,
     ...rest
@@ -121,10 +125,14 @@ const EbayMenuButton: FC<Props> = ({
                     id={menuId}
                     tabIndex={-1}
                     onKeyDown={handleMenuKeydown}
+                    onSelect={onSelect}
                 >
                     {menuItems.map((item, i) =>
                         cloneElement<EbayFakeMenuItemProps>(item, {
                             ...item.props,
+                            onMouseDown: (e) => {
+                                onMouseDown(e, { index: i })
+                            },
                             className: classnames(item.props.className, 'fake-menu-button__item'),
                             key: i,
                             autoFocus: i === 0

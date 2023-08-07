@@ -50,10 +50,6 @@ Name | Type | Required | Description
 `fixWidth` | Boolean  | No | Constrain items container width to button width
 `borderless` | Boolean | No | Whether button has borders
 `size` | String   | No | button size: `large` or `regular` (default)
-`onExpand` | Function | No | Triggered on menu expand
-`onCollapse` | Function | No | Triggered on menu collapse
-`onChange` | Function | No | Not yet implemented
-`onSelect` | Function | No | Not yet implemented
 
 ## EbayFakeMenuButtonItem Attributes
 
@@ -67,3 +63,12 @@ Name | Type | Required | Description
 `badge-number` | Number | No | Not yet implemented
 `badge-aria-label` | String | Yes (if `badge-number` provided) | Not yet implemented
 `onClick` | Function | No | For a non-link menu item, with param `{ originalEvent }`
+
+## Callbacks
+| Name          | Required             | Description                          | Arguments                          |
+|---------------|----------------------|--------------------------------------|------------------------------------|
+ `onKeyDown`   | No | Triggered on key down                | `(KeyboardEvent)`                  |
+ `onMouseDown` | No | Triggered on mouse down on menu item | `(MouseEvent, { index: number })`  |
+ `onCollapse`  | No | Triggered on menu collapse           | `()`                               |
+ `onExpand`    | No | Triggered on menu expand             | `()`                               |
+ `onSelect`    | No | Not yet implemented                  | `(ChangeEvent, { index: number })` |

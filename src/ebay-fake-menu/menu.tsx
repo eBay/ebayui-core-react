@@ -1,15 +1,16 @@
 import React, {
     Children, cloneElement,
-    ComponentProps, FC, ReactElement, KeyboardEvent, MouseEvent
+    ComponentProps, FC, ReactElement
 } from 'react'
 import classNames from 'classnames'
 import { EbayFakeMenuItemProps } from './index'
+import { EbayKeyboardEventHandler, EbayMouseEventHandler } from '../common/event-utils/types'
 
 type SpanProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onSelect'>
 type Props = SpanProps & {
     itemMatchesUrl?: boolean;
-    onKeyDown?: (event: KeyboardEvent | MouseEvent, { index: number }) => void;
-    onSelect?: (event: KeyboardEvent | MouseEvent, { index: number }) => void;
+    onKeyDown?: EbayKeyboardEventHandler<HTMLElement, { index: number }>;
+    onSelect?: EbayMouseEventHandler<HTMLAnchorElement, { index: number }>;
 }
 
 const EbayFakeMenu: FC<Props> = ({

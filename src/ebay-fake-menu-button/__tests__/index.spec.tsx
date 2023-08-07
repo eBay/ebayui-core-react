@@ -1,5 +1,5 @@
 import React from 'react'
-import { fireEvent, render } from '@testing-library/react';
+import { screen, fireEvent, render } from '@testing-library/react';
 import initStoryshots from '@storybook/addon-storyshots'
 import { EbayFakeMenuButton, EbayFakeMenuButtonItem } from '..'
 
@@ -7,69 +7,98 @@ initStoryshots({
     config: ({ configure }) => configure(() => require('./index.stories.tsx'), module)
 })
 
+const anySyntheticEvent = expect.objectContaining( { type: null })
 jest.useFakeTimers()
 
 describe('<EbayFakeMenuButton>', () => {
     describe('on button click', () => {
-        let spy
+        let expandSpy
+
         beforeEach(() => {
-            spy = jest.fn()
+            expandSpy = jest.fn()
+        })
+        afterEach(() => {
+            expandSpy.mockClear()
         })
         it('should fire onExpand event', () => {
-            const wrapper = render(
-                <EbayFakeMenuButton onExpand={spy}>
+            render(
+                <EbayFakeMenuButton onExpand={expandSpy}>
                     <EbayFakeMenuButtonItem />
                 </EbayFakeMenuButton>
             )
-            fireEvent.click(wrapper.getByRole('button'))
+            fireEvent.click(screen.getByRole('button'))
 
-            expect(spy).toBeCalled()
+            expect(expandSpy).toBeCalled()
         })
         it('should fire onCollapse event', () => {
-            const wrapper = render(
-                <EbayFakeMenuButton onCollapse={spy}>
+            render(
+                <EbayFakeMenuButton onCollapse={expandSpy}>
                     <EbayFakeMenuButton />
                 </EbayFakeMenuButton>
             )
 
-            const button = wrapper.getByRole('button')
+            const button = screen.getByRole('button')
             fireEvent.click(button)
             fireEvent.click(button)
 
-            expect(spy).toBeCalled()
+            expect(expandSpy).toBeCalled()
         })
     })
+
     describe('on opened menu', () => {
-        let spy, button
+        let collapseSpy, keyDownSpy, mouseDownSpy, selectSpy, button
+
         beforeEach(() => {
-            spy = jest.fn()
-            const wrapper = render(
-                <EbayFakeMenuButton onCollapse={spy}>
-                    <EbayFakeMenuButtonItem />
+            collapseSpy = jest.fn()
+            keyDownSpy = jest.fn()
+            mouseDownSpy = jest.fn()
+            selectSpy = jest.fn()
+            render(
+                <EbayFakeMenuButton
+                    onCollapse={collapseSpy}
+                    onKeyDown={keyDownSpy}
+                    onMouseDown={mouseDownSpy}
+                    onSelect={selectSpy}
+                >
+                    <EbayFakeMenuButtonItem>link 1</EbayFakeMenuButtonItem>
+                    <EbayFakeMenuButtonItem>link 2</EbayFakeMenuButtonItem>
                 </EbayFakeMenuButton>
             )
-            button = wrapper.getByRole('button')
+            button = screen.getByRole('button')
             fireEvent.click(button)
+        })
+        afterEach(() => {
+            collapseSpy.mockClear()
+        })
+
+        it('should call onMouseDown', () => {
+            const link = screen.getByText('link 2')
+            fireEvent.mouseDown(link)
+            fireEvent.click(link)
+
+            expect(mouseDownSpy).toBeCalledWith(anySyntheticEvent, { index: 1 })
+            expect(selectSpy).toBeCalledWith(anySyntheticEvent, { index: 1 })
         })
 
         it('should close on button click', () => {
             fireEvent.click(button)
 
-            expect(spy).toBeCalled()
+            expect(collapseSpy).toBeCalled()
         })
 
-        // todo: fix these tests
-        // it('should close on Esc press', () => {
-        //     fireEvent.keyDown(menu, { key: 'Escape' })
-        //
-        //     expect(spy).toBeCalled()
-        // })
-        //
-        // it('should close on BG click', () => {
-        //     jest.runAllTimers()
-        //     document.body.click();
-        //
-        //     expect(spy).toBeCalled()
-        // })
+        it('should close on Esc press', () => {
+            fireEvent.focus(button)
+            fireEvent.keyDown(button, { key: 'Escape' })
+
+            expect(keyDownSpy).toBeCalledWith(anySyntheticEvent)
+            expect(collapseSpy).toBeCalled()
+        })
+
+        it('should close on BG click', () => {
+            jest.runAllTimers()
+            document.body.click()
+
+            expect(collapseSpy).toBeCalled()
+        })
     })
 })
