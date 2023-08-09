@@ -6,7 +6,7 @@ eBayUI React components
 
 ### Requirements
 
-* [Node.js](https://nodejs.org/en/) (v16.14+)
+* [Node.js](https://nodejs.org/en/) (v18.13)
 * [React](https://reactjs.org/) (v16.8+)
 * [eBay Skin](https://ebay.github.io/skin/) (v16)
 
@@ -125,11 +125,13 @@ But we suggest to use polyfills automatically by editing your `.babelrc`:
                 "useBuiltIns": "usage",
                 "corejs": "3",
                 "targets": {
-                    "chrome": "63",
-                    "safari": "12",
-                    "ios": "12",
-                    "edge": "18",
-                    "ie": "11"
+                    "Chrome": 87,
+                    "Firefox": 78,
+                    "Safari": 11,
+                    "Edge": 103,
+                    "Opera": 89,
+                    "ChromeAndroid": 83,
+                    "ios_saf": 12
                 }
             }
         ]
