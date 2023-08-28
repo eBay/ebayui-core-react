@@ -24,7 +24,7 @@ import '@ebay/skin/menu';
 | Name           | Type     | Required | Description                                                                                                                                                            | Data            |
 |----------------|----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 | itemMatchesUrl | Boolean  | No       | used in conjunction with `current` -- This determines whether aria-current will be `page` or `true` -- Defaults to `true` which gives `aria-current` a value of `page` |                 |
-| `onKeydown`    | Function | No       | triggered on key down                                                                                                                                                  | `(KeyboardEvent |MouseEvent, { index: number })` |
+| `onKeyDown`    | Function | No       | triggered on key down                                                                                                                                                  | `(KeyboardEvent |MouseEvent, { index: number })` |
 | `onSelect`     | Function | No       | For using with keyboard navigation                                                                                                                                     | `(KeyboardEvent  |MouseEvent, { index: number })`                                     |
 
 ## EbayFakeMenuItem Props

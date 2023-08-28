@@ -28,6 +28,7 @@ const EbayIconButton: FC<Props> = ({
     className: extraClasses,
     forwardedRef,
     onEscape = () => {},
+    onKeyDown = () => {},
     ...rest
 }: Props) => {
     const classPrefix = href ? 'icon-link' : 'icon-btn'
@@ -50,6 +51,7 @@ const EbayIconButton: FC<Props> = ({
         if (e.key === 'Escape' || e.key === 'Esc') {
             onEscape(e)
         }
+        onKeyDown(e)
     }
 
     return href ? (

@@ -68,7 +68,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const [selectedOption, setSelectedOption] = useState(selectedOptionFromValue)
     const [selectedIndex, setSelectedIndex] = useState(initialSelectedOptionIndex)
     // Update the expanded status to the state
-    const [expanded, setExpanded] = useState(false)
+    const [expanded, setExpanded] = useState<boolean|undefined>()
     // Additional flag to avoid multiple re-render when users tries to open and close
     const [optionsOpened, setOptionsOpened] = useState(false)
     const [wasClicked, setWasClicked] = useState<boolean>()
@@ -215,8 +215,8 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const expandBtnTextId = prefixId && 'expand-btn-text'
 
     useEffect(() => {
-        if (expanded) onExpand()
-        else onCollapse()
+        if (expanded === true) onExpand()
+        else if (expanded === false) onCollapse()
     }, [expanded])
 
     return (
@@ -225,7 +225,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 {...rest}
                 type="button"
                 className={buttonClassName}
-                aria-expanded={expanded}
+                aria-expanded={!!expanded}
                 aria-haspopup="listbox"
                 aria-labelledby={prefixId && `${prefixId} ${expandBtnTextId}`}
                 onClick={onButtonClick}

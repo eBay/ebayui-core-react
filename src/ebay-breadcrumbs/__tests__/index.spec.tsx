@@ -1,9 +1,8 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 
 import { EbayBreadcrumbs, EbayBreadcrumbItem } from '../index'
-import any = jasmine.any
 import userEvent from '@testing-library/user-event'
 
 describe('<EbayBreadcrumbs>', () => {

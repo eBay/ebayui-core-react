@@ -21,8 +21,8 @@ export type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
     a11yPreviousText?: string;
     a11yNextText?: string;
     a11yCurrentText?: string;
-    onPrevious?: EbayEventHandler<{ value: string }>;
-    onNext?: EbayEventHandler<{ value: string }>;
+    onPrevious?: EbayEventHandler;
+    onNext?: EbayEventHandler;
     onSelect?: EbayEventHandler<{ value: string, index: number }>;
     variant?: PaginationVariant;
     fluid?: boolean;
