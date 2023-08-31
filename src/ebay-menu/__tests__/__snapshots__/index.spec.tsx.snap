@@ -160,6 +160,83 @@ exports[`Storyshots ebay-menu Default 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-menu Div container 1`] = `
+<DocumentFragment>
+  <div
+    class="menu"
+  >
+    <div
+      class="menu__items"
+      role="menu"
+    >
+      <div
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 1 that has very long text
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 2
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+      <div
+        class="menu__item"
+        role="menuitem"
+        tabindex="0"
+      >
+        <span
+          aria-hidden="false"
+        >
+          Item 3
+        </span>
+        <svg
+          aria-hidden="true"
+          class="icon icon--tick-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-tick-16"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-menu Radio 1`] = `
 <DocumentFragment>
   <div

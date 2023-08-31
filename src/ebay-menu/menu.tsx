@@ -16,6 +16,7 @@ import { EbayMenuItem, MenuItemProps, EbayMenuProps } from './index'
 import { Key } from '../common/event-utils/types'
 
 const EbayMenu: FC<EbayMenuProps> = ({
+    baseEl: Container = 'span',
     type,
     priority = 'secondary',
     checked,
@@ -133,12 +134,12 @@ const EbayMenu: FC<EbayMenuProps> = ({
     }
 
     return (
-        <span {...rest} className={classNames(className, 'menu')}>
+        <Container {...rest} className={classNames(className, 'menu')}>
             <div className="menu__items" role="menu" ref={forwardedRef}>
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
-                        onFocus: onItemFocus = () => {},
                         onClick: onItemClick = () => {},
+                        onFocus: onItemFocus = () => {},
                         onKeyDown: onItemKeyDown = () => {},
                         ...itemRest
                     }: MenuItemProps = child.props
@@ -165,7 +166,7 @@ const EbayMenu: FC<EbayMenuProps> = ({
                     } as MenuItemProps)
                 })}
             </div>
-        </span>
+        </Container>
     )
 }
 

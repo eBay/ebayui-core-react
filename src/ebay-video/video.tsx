@@ -1,4 +1,4 @@
-import React, { ComponentProps, FC, SyntheticEvent, useEffect, useRef, useState } from 'react'
+import React, { ComponentProps, FC, SyntheticEvent, MouseEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import shaka from 'shaka-player/dist/shaka-player.ui'
 
@@ -40,7 +40,7 @@ export type EbayVideoProps = Omit<ComponentProps<'video'>, 'onPlay' | 'onVolumeC
     onLoadError?: (err: Error) => void;
     onPlay?: EbayEventHandler<HTMLVideoElement, PlayEventProps>;
     onVolumeChange?: EbayEventHandler<HTMLVideoElement, VolumeChangeProps>;
-    onReport?: EbayEventHandler;
+    onReport?: (event?: MouseEvent<HTMLButtonElement>) => void;
 };
 
 const EbayVideo: FC<EbayVideoProps> = ({

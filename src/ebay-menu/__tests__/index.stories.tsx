@@ -113,3 +113,10 @@ storiesOf('ebay-menu', module)
             </Item>
         </EbayMenu>
     </>))
+    .add('Div container', () => (<>
+        <EbayMenu baseEl="div">
+            <Item>Item 1 that has very long text</Item>
+            <Item>Item 2</Item>
+            <Item>Item 3</Item>
+        </EbayMenu>
+    </>))

@@ -26,6 +26,7 @@ Name | Type | Required | Description
 --- | --- | --- | ---
 `type` | String | No | Can be `radio`/`checkbox`
 `checked` | Number | No | when used with `radio` type will check the item with the corresponding index
+`baseEl` | String | No | Container can be `span` (default) or `div`
 `onKeydown` | Function | No | props: (e: event, { index: number, checked: number[], checkedValues?: string[] })
 `onSelect` | Function | No | props: (e: event, { index: number }), triggered on item clicked (not for type `radio`/`checkbox`)
 `onChange` | Function | No | props: (e: event, { index: number, checked: number[], checkedValues: string[]), triggered on item `checked` change, (for type `radio`/`checkbox` only)
