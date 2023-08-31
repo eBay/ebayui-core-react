@@ -11,7 +11,7 @@ export function customControls(onReport = () => {}): { Report } {
 
             appendChild(parent, <ReportButton>{text}</ReportButton>, button => {
                 // have to listen to clicks this way (React onClick will not work):
-                this.eventManager.listen(button, 'click', () => onReport())
+                this.eventManager.listen(button, 'click', onReport)
             })
         }
     }

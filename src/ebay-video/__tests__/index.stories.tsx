@@ -21,7 +21,7 @@ const defaultProps: EbayVideoProps = {
     onPlay: (e: SyntheticEvent<HTMLVideoElement>, props: PlayEventProps) => action('onPlay')(e, props),
     onVolumeChange: (e: SyntheticEvent<HTMLVideoElement>, props: VolumeChangeProps) => action('onVolumeChange')(e, props),
     onLoadError: (err: Error) => action('onLoadError')(err),
-    onReport: () => action('onReport')(),
+    onReport: (e) => action('onReport')(e),
 }
 
 export const Default = () => (

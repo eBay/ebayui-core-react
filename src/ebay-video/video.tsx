@@ -40,7 +40,7 @@ export type EbayVideoProps = Omit<ComponentProps<'video'>, 'onPlay' | 'onVolumeC
     onLoadError?: (err: Error) => void;
     onPlay?: EbayEventHandler<HTMLVideoElement, PlayEventProps>;
     onVolumeChange?: EbayEventHandler<HTMLVideoElement, VolumeChangeProps>;
-    onReport?: () => void;
+    onReport?: EbayEventHandler;
 };
 
 const EbayVideo: FC<EbayVideoProps> = ({
