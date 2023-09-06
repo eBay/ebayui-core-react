@@ -33,7 +33,7 @@ Name | Type | Stateful | Description | Data
 --- | --- | --- | --- | ---
 `a11yHeadingText` | String | No | heading for breadcrumb which will be clipped (default: 'Page navigation')
 `a11yHeadingTag` | String | No | heading tag for breadcrumb (default: `h2`)
-`onSelect` | Function | No | click breadcrumb items | `(event: MouseEvent | KeyboardEvent, { el: HTMLElement })`
+`onSelect` | Function | No | click breadcrumb items | `(event: MouseEvent | KeyboardEvent)`
 
 All other props will be applied to the main wrapper (`nav`) element.
 

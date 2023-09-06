@@ -16,8 +16,8 @@ export type PaginationItemProps = HtmlProps & {
     hide?: boolean;
     a11yPreviousText?: string;
     a11yNextText?: string;
-    onPrevious?: EbayEventHandler<{ value: string }>;
-    onNext?: EbayEventHandler<{ value: string }>;
+    onPrevious?: EbayEventHandler;
+    onNext?: EbayEventHandler;
     onSelect?: EbayEventHandler<{ value: string, index: number }>;
     style?: StyleHTMLAttributes<HTMLButtonElement & HTMLAnchorElement>;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;

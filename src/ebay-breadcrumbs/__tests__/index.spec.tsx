@@ -18,8 +18,7 @@ describe('<EbayBreadcrumbs>', () => {
             userEvent.click(button)
 
             const syntheticEvent = expect.objectContaining( { target: null })
-            const expectedEventProps = { el: button }
-            expect(spy).toBeCalledWith(syntheticEvent, expectedEventProps)
+            expect(spy).toBeCalledWith(syntheticEvent)
         })
     })
 

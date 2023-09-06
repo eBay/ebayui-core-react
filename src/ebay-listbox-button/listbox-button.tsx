@@ -85,11 +85,29 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         optionsContainerEle.setAttribute(`aria-activedescendant`, getSelectedOption(index).id)
     }
 
+    const collapseListbox = () => {
+        setExpanded(false)
+        onCollapse()
+    }
+
+    const expandListbox = () => {
+        setExpanded(true)
+        onExpand()
+    }
+
+    const toggleListbox = () => {
+        if (expanded) {
+            collapseListbox()
+        } else {
+            expandListbox()
+        }
+    }
+
     const onOptionsSelect = (e, optionValue, index) => {
         // OnSelect set the selectedValue to the state and expanded to false to close the list box
         setSelectedOption(childrenArray[index])
         setSelectedIndex(index)
-        setExpanded(false)
+        collapseListbox()
         setActiveDescendant(index)
         buttonRef.current.focus()
         onChange(e, { index, selected: [getSelectedValueByIndex(selectedIndex)], wasClicked })
@@ -97,7 +115,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     }
 
     const reset = () => {
-        setExpanded(false)
+        collapseListbox()
         setSelectedOption(childrenArray[initialSelectedOptionIndex])
     }
 
@@ -141,14 +159,14 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const focusOptionsContainer = (focusOptions?: FocusOptions) =>
         setTimeout(() => optionsContainerRef?.current?.focus(focusOptions), 0)
     const onButtonClick = () => {
-        setExpanded(!expanded)
+        toggleListbox()
         setOptionsOpened(true)
         focusOptionsContainer({ preventScroll: true })
     }
     const onButtonKeyup = (e: KeyboardEvent<HTMLButtonElement>) => {
         switch (e.key as Key) {
             case 'Escape':
-                setExpanded(false)
+                collapseListbox()
                 break
             case 'Enter':
                 focusOptionsContainer()
@@ -181,10 +199,14 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 }
                 break
             case 'Enter':
-                setExpanded(false)
+                collapseListbox()
                 setTimeout(() => setSelectedOption(childrenArray[selectedIndex]))
                 setTimeout(() => buttonRef.current.focus(), 0)
-                onChange(e as any, { index: selectedIndex, selected: [String(selectedIndex)], wasClicked })
+                onChange(e as any, {
+                    index: selectedIndex,
+                    selected: [getSelectedValueByIndex(selectedIndex)],
+                    wasClicked
+                })
                 break
             case 'Esc':
             case 'Escape':
@@ -213,11 +235,6 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         'btn--floating-label': floatingLabel
     })
     const expandBtnTextId = prefixId && 'expand-btn-text'
-
-    useEffect(() => {
-        if (expanded === true) onExpand()
-        else if (expanded === false) onCollapse()
-    }, [expanded])
 
     return (
         <span className={wrapperClassName}>
@@ -262,7 +279,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                             setWasClicked(true)
                         }}
                         onBlur={() => {
-                            setExpanded(false)
+                            collapseListbox()
                             setTimeout(() => buttonRef.current.focus(), 0)
                         }}
                     >

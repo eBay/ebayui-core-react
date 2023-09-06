@@ -13,7 +13,7 @@ type BreadcrumbProps = Omit<ComponentProps<'div'>, 'onSelect'> & {
     id?: string;
     a11yHeadingTag?: keyof JSX.IntrinsicElements;
     a11yHeadingText?: string;
-    onSelect?: EbayEventHandler<HTMLElement, { el: HTMLElement }>;
+    onSelect?: EbayEventHandler<HTMLElement>;
 }
 
 const Breadcrumbs: FC<BreadcrumbProps> = ({
@@ -48,7 +48,7 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({
                         isLastItem,
                         href,
                         children,
-                        onClick: event => onSelect(event, { el: event.target })
+                        onClick: event => onSelect(event)
                     }
 
                     return cloneElement(item, itemProps)
