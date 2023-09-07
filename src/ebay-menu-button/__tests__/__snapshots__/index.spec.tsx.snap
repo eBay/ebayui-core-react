@@ -146,7 +146,7 @@ exports[`Storyshots ebay-menu-button Expanded 1`] = `
       </svg>
     </span>
   </button>
-  <span
+  <div
     className="menu-button__menu menu"
     tabIndex={-1}
   >
@@ -227,7 +227,7 @@ exports[`Storyshots ebay-menu-button Expanded 1`] = `
         </svg>
       </div>
     </div>
-  </span>
+  </div>
 </span>
 `;
 

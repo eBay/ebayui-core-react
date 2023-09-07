@@ -154,6 +154,7 @@ const EbayMenuButton: FC<Props> = ({
             }
             {expanded &&
                 <EbayMenu
+                    baseEl="div"
                     ref={menuRef}
                     type={type}
                     className={menuClasses}
