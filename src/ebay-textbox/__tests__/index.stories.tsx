@@ -135,3 +135,18 @@ storiesOf('ebay-textbox', module)
 
         return <><Component/></>
     })
+    .add('Floating label with multiline', () => (
+        <EbayTextbox
+            onChange={action('textbox-changed')}
+            floatingLabel="Floating label"
+            multiline
+        />
+    ))
+    .add('Floating label with multiline and opaque label', () => (
+        <EbayTextbox
+            onChange={action('textbox-changed')}
+            floatingLabel="Floating label"
+            multiline
+            opaqueLabel
+        />
+    ))

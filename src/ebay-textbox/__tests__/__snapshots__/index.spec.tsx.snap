@@ -148,6 +148,50 @@ exports[`Storyshots ebay-textbox Floating label with autofocus 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-textbox Floating label with multiline 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Floating label
+    </label>
+    <span
+      class="textbox"
+    >
+      <textarea
+        class="textbox__control"
+        type="text"
+      />
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-textbox Floating label with multiline and opaque label 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label floating-label--opaque"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Floating label
+    </label>
+    <span
+      class="textbox"
+    >
+      <textarea
+        class="textbox__control"
+        type="text"
+      />
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-textbox Floating label with placeholder, controlled 1`] = `
 <DocumentFragment>
   <p>

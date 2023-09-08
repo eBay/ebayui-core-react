@@ -38,6 +38,7 @@ import "@ebay/skin/textbox.css";
 | --------------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fluid`         | Boolean  | No       | No       | Takes the full width of the container
 | `multiline`     | Boolean  | No       | No       | Renders a multi-line textbox if true                                                                                                                      |
+| `opaqueLabel`   | Boolean  | No       | No       | Only works with floating label. If set, then background is obscured of the floating label. Used with textarea to prevent label overlap                                                                                                                      |
 | `invalid`       | Boolean  | No       | No       | Indicates a field-level error with red border if true                                                                                                     |
 | `type`          | String   | No       | No       | Default: `text`, can be `password` if needed                                                                                                              |
 | `value`         | String   | No       | No       | Indicates the value of the input element, required for a controlled component.                                                                            |
