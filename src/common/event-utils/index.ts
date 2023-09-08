@@ -2,6 +2,7 @@
 * Based on https://github.com/eBay/ebayui-core/edit/master/src/common/event-utils/index.js
 */
 
+import React from 'react'
 import { Key } from './types'
 
 type Callback = () => void
@@ -12,41 +13,49 @@ type Callback = () => void
  * @param {KeyboardEvent} e
  * @param {Function} callback
  */
-function handleKeydown(keyList: Key[], e: KeyboardEvent, callback: Callback = () => {}): void {
+function handleKeydown(keyList: Key[], e: React.KeyboardEvent, callback: Callback = () => {}): void {
     if (keyList.includes(e.key as Key)) {
         callback()
     }
 }
 
 // inverse of found keys
-function handleNotKeydown(keyList: Key[], e: KeyboardEvent, callback: Callback = () => {}): void {
+function handleNotKeydown(keyList: Key[], e: React.KeyboardEvent, callback: Callback = () => {}): void {
     if (!keyList.includes(e.key as Key)) {
         callback()
     }
 }
 
-export function handleEnterKeydown(e: KeyboardEvent, callback: Callback): void {
-    handleKeydown(['Enter'], e, callback)
+export function handleEnterKeydown(e: React.KeyboardEvent, callback: Callback): void {
+    if (e.key === 'Enter') {
+        callback()
+    }
 }
 
-export function handleActionKeydown(e: KeyboardEvent, callback: Callback): void {
-    handleKeydown([' ', 'Enter'], e, callback)
+export function handleActionKeydown(e: React.KeyboardEvent, callback: Callback): void {
+    if (isActionKey(e.key as Key)) {
+        callback()
+    }
 }
 
-export function handleEscapeKeydown(e: KeyboardEvent, callback: Callback): void {
+export function isActionKey(key: Key): boolean {
+    return [' ', 'Enter'].includes(key)
+}
+
+export function handleEscapeKeydown(e: React.KeyboardEvent, callback: Callback): void {
     handleKeydown(['Esc', 'Escape'], e, callback)
 }
 
-export function handleUpDownArrowsKeydown(e: KeyboardEvent, callback: Callback): void {
+export function handleUpDownArrowsKeydown(e: React.KeyboardEvent, callback: Callback): void {
     handleKeydown(['Up', 'ArrowUp', 'Down', 'ArrowDown'], e, callback)
 }
 
-export function handleLeftRightArrowsKeydown(e: KeyboardEvent, callback: Callback): void {
+export function handleLeftRightArrowsKeydown(e: React.KeyboardEvent, callback: Callback): void {
     handleKeydown(['Left', 'ArrowLeft', 'Right', 'ArrowRight'], e, callback)
 }
 
 // only fire for character input, not modifier/meta keys (enter, escape, backspace, tab, etc.)
-export function handleTextInput(e: KeyboardEvent, callback: Callback): void {
+export function handleTextInput(e: React.KeyboardEvent, callback: Callback): void {
     const keyList: Key[] = [
         // Edge
         'Esc',
@@ -72,7 +81,7 @@ export function handleTextInput(e: KeyboardEvent, callback: Callback): void {
     handleNotKeydown(keyList, e, callback)
 }
 
-export function preventDefaultIfHijax(e: KeyboardEvent, hijax: boolean): void {
+export function preventDefaultIfHijax(e: React.KeyboardEvent, hijax: boolean): void {
     if (hijax) {
         e.preventDefault()
     }

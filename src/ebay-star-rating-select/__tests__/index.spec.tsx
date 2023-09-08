@@ -12,6 +12,8 @@ let onChangeSpy = jest.fn()
 let onFocusSpy = jest.fn()
 let onKeyDownSpy = jest.fn()
 
+const anySyntheticEvent = expect.objectContaining( { type: null })
+
 describe('star-rating-select', () => {
     it('renders defaults', async () => {
         await htmlSnap(<Isolated a11yText={null} a11yStarText={null}/>);
@@ -44,7 +46,7 @@ describe('star-rating-select', () => {
 
         it('should emit the onChange event with 2', () => {
             expect(onChangeSpy).toBeCalledTimes(1);
-            expect(onChangeSpy).toBeCalledWith(expect.anything(), 2);
+            expect(onChangeSpy).toBeCalledWith(anySyntheticEvent, { value: 2 });
         });
 
         describe('when star is clicked', () => {
@@ -54,7 +56,7 @@ describe('star-rating-select', () => {
 
             it('should emit the onChange event with 4', () => {
                 expect(onChangeSpy).toBeCalledTimes(2);
-                expect(onChangeSpy).toBeCalledWith(expect.anything(), 4);
+                expect(onChangeSpy).toBeCalledWith(anySyntheticEvent, { value: 4 });
             });
         });
     });
@@ -85,7 +87,7 @@ describe('star-rating-select', () => {
 
         it('should emit the focus event', () => {
             expect(onFocusSpy).toBeCalledTimes(1);
-            expect(onFocusSpy).toBeCalledWith(expect.anything(), 2);
+            expect(onFocusSpy).toBeCalledWith(anySyntheticEvent, { value: 2 });
         });
     });
 
@@ -98,7 +100,7 @@ describe('star-rating-select', () => {
 
         it('should emit the onKeyDown event', () => {
             expect(onKeyDownSpy).toBeCalledTimes(1);
-            expect(onKeyDownSpy).toBeCalledWith(expect.anything(), 5);
+            expect(onKeyDownSpy).toBeCalledWith(anySyntheticEvent, { value: 5 });
         });
     });
 });

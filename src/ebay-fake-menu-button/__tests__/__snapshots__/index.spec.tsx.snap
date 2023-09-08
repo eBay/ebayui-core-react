@@ -152,6 +152,7 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
           href="http://ebay.com"
           onClick={[Function]}
           onKeyDown={[Function]}
+          onMouseDown={[Function]}
         >
           <span>
             item 1 that has very long text
@@ -174,6 +175,7 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
           href="http://ebay.com"
           onClick={[Function]}
           onKeyDown={[Function]}
+          onMouseDown={[Function]}
         >
           <span>
             item 2
@@ -196,6 +198,7 @@ exports[`Storyshots ebay-fake-menu-button Expanded 1`] = `
           href="http://ebay.com"
           onClick={[Function]}
           onKeyDown={[Function]}
+          onMouseDown={[Function]}
         >
           <span>
             item 3
@@ -452,6 +455,7 @@ Array [
       aria-label="Menu"
       className="fake-menu-button__button icon-btn"
       onClick={[Function]}
+      onKeyDown={[Function]}
       type="button"
     >
       <svg

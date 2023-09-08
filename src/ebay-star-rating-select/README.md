@@ -35,3 +35,11 @@ Name | Type | Stateful | Description
 | `a11yText`       | String  | No       | Yes      | container aria-label               |
 | `value`           | String  | No       | Yes      | The amount of stars to be filled. Can be "2-5" for 2 and a half stars.|
 | `disabled` | Boolean | No | Rating stars are disabled or not
+
+## Callbacks
+
+| Name       | Type     | Required | Description               | Data                                 |
+|------------|----------|----------|---------------------------|--------------------------------------|
+| `onChange` | Function | No       | triggered on value change | `(ChangeEvent, { value: number })`   |
+| `onFocus` | Function | No       | triggered on focus        | `(FocusEvent, { value: number })`    |
+| `onKeydown` | Function | No       | triggered on keydown     | `(KeyboardEvent, { value: number })` |

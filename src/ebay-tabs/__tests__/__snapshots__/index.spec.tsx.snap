@@ -242,58 +242,6 @@ exports[`Storyshots ebay-tabs Default Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Fake Tabs (links) 1`] = `
-<DocumentFragment>
-  <div
-    class="fake-tabs"
-  >
-    <ul
-      class="fake-tabs__items"
-    >
-      <li
-        class="fake-tabs__item fake-tabs__item--current"
-      >
-        <a
-          aria-current="page"
-          href="https://www.ebay.com/1"
-        >
-          Tab 1
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
-      >
-        <a
-          href="https://www.ebay.com/2"
-        >
-          Tab 2
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
-      >
-        <a
-          href="https://www.ebay.com/3"
-        >
-          Tab 3
-        </a>
-      </li>
-    </ul>
-    <div
-      class="fake-tabs__content"
-    >
-      <div
-        class="fake-tabs__cell"
-      >
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare, quam at lacinia pretium, lacus urna luctus nisi, eget molestie massa tortor id lacus. Aenean ac fringilla lacus. Fusce vel dui ex. Vivamus luctus egestas nulla, non hendrerit purus luctus at. Maecenas vel diam enim. Pellentesque quam neque, porttitor tincidunt vestibulum at, dapibus sit amet tortor.
-        </p>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Storyshots ebay-tabs Large Tabs 1`] = `
 <DocumentFragment>
   <div

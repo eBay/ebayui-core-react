@@ -10,7 +10,6 @@ export interface Props<T = any> extends DialogBaseProps<T> {
   open?: boolean;
   animated?: boolean;
   position?: Position;
-  onOpen?: () => void;
   onClose?: () => void;
 }
 
@@ -19,7 +18,6 @@ const EbayPanelDialog: FC<Props> = ({
     animated,
     position = 'start',
     onClose = () => {},
-    onOpen = () => {},
     className,
     ...rest
 }) => (

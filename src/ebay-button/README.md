@@ -56,7 +56,7 @@ Name | Type | Stateful | Required | Description | Data
 `truncate` | Boolean | No | No | will truncate the text of the button onto a single line, and adds an ellipsis, when the button's text overflows
 `borderless` | Boolean | No | No | shows button without border
 `fixedHeight` | Boolean | No | No | fixes the height based on `size`
-`onClick` | Function | - | No | click or action key pressed (`Space` / `Enter`)
-`onEscape` | Function | - | No | `Esc`-key pressed
-`onFocus` | Function | - | No | triggered on focus
-`onBlur` | Function | - | No | triggered on blur
+`onClick` | Function | - | No | click or action key pressed (`Space` / `Enter`) | `(event: MouseEvent | KeyboardEvent)`
+`onEscape` | Function | - | No | `Esc`-key pressed | `(event: KeyboardEvent)`
+`onFocus` | Function | - | No | triggered on focus | `(event: FocusEvent)`
+`onBlur` | Function | - | No | triggered on blur | `(event: FocusEvent)`

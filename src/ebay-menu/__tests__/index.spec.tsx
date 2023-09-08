@@ -1,5 +1,6 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, screen } from '@testing-library/react'
+import { act } from '@testing-library/react-hooks'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayMenu, EbayMenuItem } from '../index'
 
@@ -7,81 +8,230 @@ initStoryshots({
     config: ({ configure }) => configure(() => require('./index.stories'), module)
 })
 
+const onKeyDownSpy = jest.fn()
+const onClickSpy = jest.fn()
+const onSelectSpy = jest.fn()
+const onChangeSpy = jest.fn()
+
 describe('<EbayMenu>', () => {
-    describe('on menu item click', () => {
-        it('should fire onClick event', () => {
-            const onClickSpy = jest.fn()
-            const wrapper = render(
-                <EbayMenu>
-                    <EbayMenuItem onClick={onClickSpy}/>
+    describe('menu item', () => {
+        beforeEach(() => {
+            render(
+                <EbayMenu onClick={onClickSpy} onSelect={onSelectSpy} onKeyDown={onKeyDownSpy}>
+                    <EbayMenuItem value="1">item1</EbayMenuItem>
+                    <EbayMenuItem value="2">item2</EbayMenuItem>
                 </EbayMenu>
             )
+        })
 
-            fireEvent.click(wrapper.container.querySelectorAll('.menu__item')[0])
+        it('should fire onClick, onSelect event', async () => {
+            await act(() => {
+                fireEvent.click(screen.getByText('item2'))
+            })
 
-            expect(onClickSpy).toBeCalled()
+            const expectedProps = {
+                index: 1,
+                checked: [1]
+            }
+
+            expect(onClickSpy).toBeCalledWith(expect.any(Object))
+            expect(onSelectSpy).toBeCalledWith(expect.any(Object), expectedProps)
+        })
+
+        it('should fire onKeyDown event', async () => {
+            const [item1] = screen.getAllByRole('menuitem')
+
+            await act(() => {
+                fireEvent.keyDown(item1, { key: 'Esc' })
+            })
+
+            const expectedProps = {
+                index: 0,
+                checked: []
+            }
+
+            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+        })
+
+        it('should fire onKeyDown, onSelect event', async () => {
+            const [item1, item2] = screen.getAllByRole('menuitem')
+
+            await act(() => {
+                fireEvent.keyDown(item2, { key: 'Enter' })
+            })
+
+            const expectedProps = {
+                index: 1,
+                checked: [1]
+            }
+
+            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onSelectSpy).toBeCalledWith(expect.any(Object), expectedProps)
         })
     })
-    describe('on key down', () => {
-        it('should fire onKeyDown event', () => {
-            const onKeyDownSpy = jest.fn()
-            const wrapper = render(
-                <EbayMenu onKeyDown={onKeyDownSpy}>
-                    <EbayMenuItem/>
+
+    describe('type="radio"', () => {
+        beforeEach(() => {
+            render(
+                <EbayMenu
+                    type="radio"
+                    onClick={onClickSpy}
+                    onChange={onChangeSpy}
+                    onKeyDown={onKeyDownSpy}
+                >
+                    <EbayMenuItem value="1" checked>item1</EbayMenuItem>
+                    <EbayMenuItem value="2">item2</EbayMenuItem>
                 </EbayMenu>
             )
-            fireEvent.keyDown(wrapper.container.querySelectorAll('.menu__item')[0])
+        })
+        it('should fire onClick, onChange event', async () => {
+            const [item1, item2] = screen.getAllByRole('menuitemradio')
 
-            expect(onKeyDownSpy).toBeCalledWith(0, false)
+            expect(item1).toHaveAttribute('aria-checked', 'true')
+            expect(item2).toHaveAttribute('aria-checked', 'false')
+
+            await act(() => {
+                fireEvent.click(item2)
+            })
+
+            const expectedProps = {
+                index: 1,
+                indexes: [1],
+                checked: [1],
+                checkedValues: ['2']
+            }
+
+            expect(onClickSpy).toBeCalledWith(expect.any(Object))
+            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
+
+            expect(item1).toHaveAttribute('aria-checked', 'false')
+            expect(item2).toHaveAttribute('aria-checked', 'true')
+        })
+
+        it('should fire onKeyDown event', async () => {
+            const [item1] = screen.getAllByRole('menuitemradio')
+
+            await act(() => {
+                fireEvent.keyDown(item1, { key: 'Esc' })
+            })
+
+            const expectedProps = {
+                index: 0,
+                indexes: [0],
+                checked: [0],
+                checkedValues: ['1']
+            }
+
+            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+        })
+
+        it('should fire onKeyDown, onChange event', async () => {
+            const [item1, item2] = screen.getAllByRole('menuitemradio')
+
+            await act(() => {
+                fireEvent.keyDown(item2, { key: 'Enter' })
+            })
+
+            const expectedProps = {
+                index: 1,
+                indexes: [1],
+                checked: [1],
+                checkedValues: ['2']
+            }
+
+            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
         })
     })
-    describe('on radio item select', () => {
-        it('should fire onSelect & onChange event', () => {
-            const onSelectSpy = jest.fn()
-            const onChangeSpy = jest.fn()
-            const wrapper = render(
-                <EbayMenu onSelect={onSelectSpy} onChange={onChangeSpy} type='radio'>
-                    <EbayMenuItem checked />
-                    <EbayMenuItem />
+
+    describe('type="checkbox"', () => {
+        beforeEach(() => {
+            render(
+                <EbayMenu
+                    type="checkbox"
+                    onClick={onClickSpy}
+                    onChange={onChangeSpy}
+                    onKeyDown={onKeyDownSpy}
+                >
+                    <EbayMenuItem value="1" checked>item1</EbayMenuItem>
+                    <EbayMenuItem value="2">item2</EbayMenuItem>
                 </EbayMenu>
             )
-            expect(wrapper.container.querySelector('.menu__item')).toHaveAttribute('aria-checked', 'true')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'false')
-
-            fireEvent.click(wrapper.container.querySelectorAll('.menu__item')[1])
-
-            expect(onChangeSpy).toBeCalledWith(1, true)
-            expect(onSelectSpy).toBeCalledWith(1, true)
-
-            expect(wrapper.container.querySelector('.menu__item')).toHaveAttribute('aria-checked', 'false')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'true')
         })
-    })
-    describe('on checkbox item select', () => {
-        it('should fire onSelect & onChange event', () => {
-            const onSelectSpy = jest.fn()
-            const onChangeSpy = jest.fn()
-            const wrapper = render(
-                <EbayMenu onSelect={onSelectSpy} onChange={onChangeSpy} type='checkbox'>
-                    <EbayMenuItem />
-                    <EbayMenuItem checked />
-                </EbayMenu>
-            )
-            expect(wrapper.container.querySelector('.menu__item')).not.toHaveAttribute('aria-checked')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'true')
+        it('should fire onClick, onChange event', async () => {
+            const [item1, item2] = screen.getAllByRole('menuitemcheckbox')
 
-            fireEvent.click(wrapper.container.querySelectorAll('.menu__item')[1])
+            expect(item1).toHaveAttribute('aria-checked', 'true')
+            expect(item2).toHaveAttribute('aria-checked', 'false')
 
-            expect(onChangeSpy).toBeCalledWith(1, false)
-            expect(onSelectSpy).toBeCalledWith(1, false)
+            await act(() => {
+                fireEvent.click(item2)
+            })
 
-            expect(wrapper.container.querySelector('.menu__item')).not.toHaveAttribute('aria-checked')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'false')
+            let expectedProps = {
+                index: 1,
+                indexes: [0, 1],
+                checked: [0, 1],
+                checkedValues: ['1', '2']
+            }
 
-            fireEvent.click(wrapper.container.querySelectorAll('.menu__item')[0])
+            expect(onClickSpy).toBeCalledWith(expect.any(Object))
+            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
 
-            expect(wrapper.container.querySelector('.menu__item')).toHaveAttribute('aria-checked', 'true')
-            expect(wrapper.container.querySelectorAll('.menu__item')[1]).toHaveAttribute('aria-checked', 'false')
+            expect(item1).toHaveAttribute('aria-checked', 'true')
+            expect(item2).toHaveAttribute('aria-checked', 'true')
+
+            await act(() => {
+                fireEvent.click(item1)
+            })
+
+            expectedProps = {
+                index: 0,
+                indexes: [1],
+                checked: [1],
+                checkedValues: ['2']
+            }
+
+            expect(onClickSpy).toBeCalledWith(expect.any(Object))
+            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
+
+            expect(item1).toHaveAttribute('aria-checked', 'false')
+            expect(item2).toHaveAttribute('aria-checked', 'true')
+        })
+
+        it('should fire onKeyDown event', async () => {
+            const [item1] = screen.getAllByRole('menuitemcheckbox')
+
+            await act(() => {
+                fireEvent.keyDown(item1, { key: 'Esc' })
+            })
+
+            const expectedProps = {
+                index: 0,
+                indexes: [0],
+                checked: [0],
+                checkedValues: ['1']
+            }
+
+            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+        })
+
+        it('should fire onKeyDown, onChange event', async () => {
+            const [item1, item2] = screen.getAllByRole('menuitemcheckbox')
+
+            await act(() => {
+                fireEvent.keyDown(item2, { key: ' ' })
+            })
+
+            const expectedProps = {
+                index: 1,
+                indexes: [0, 1],
+                checked: [0, 1],
+                checkedValues: ['1', '2']
+            }
+
+            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
         })
     })
 })

@@ -37,14 +37,16 @@ import 'shaka-player/dist/controls.css'
 | a11yPlayText | String   | Yes      | a11y text for the play button                                                                                   |
 | errorText    | String   | Yes      | content for error when an either the library or video cannot load                                               |
 | reportText   | String   | Yes      | text for report button                                                                                          |
-| onLoadError   | Callback | No       | triggered when there is a load error with video player or source, arguments: (Event)                            |
-| onPlay   | Callback | No       | triggered when playback starts, arguments: (Event, { player })                                                  |
-| onVolumeChange   | Callback | No       | triggered when volume is changed, arguments: (Event, { volume: number, muted: boolean })                        |
-| onReport   | Callback | No       | triggered when report button is clicked, no arguments                                                           |
+## Callbacks
+| Name           | Required | Description                                                      | Arguments                                   |
+|----------------|----------|------------------------------------------------------------------|---------------------------------------------|
+| onLoadError    | No       | triggered when there is a load error with video player or source | (Event)                                     |
+| onPlay         | No       | triggered when playback starts                                   | (Event, { player })                         |
+| onVolumeChange | No       | triggered when volume is changed                                 | (Event, { volume: number, muted: boolean }) |
+| onReport       | No       | triggered when report button is clicked                          |                                             |
 
 
 ## EbayVideoSource Props
-
 | Name | Type   | Required | Description                                                                                                     |
 |------|--------|----------|-----------------------------------------------------------------------------------------------------------------|
 | src  | String | Yes      | video/playlist URL

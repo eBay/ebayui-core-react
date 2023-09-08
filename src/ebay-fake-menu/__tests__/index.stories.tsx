@@ -10,9 +10,9 @@ storiesOf('ebay-fake-menu', module)
                 action('click')('MENU click event prevented')
                 event.preventDefault()
             }}
-            onKeyDown={action('key down')}
-            onSelect={(event) => {
-                action('select')('event prevented')
+            onKeyDown={(event, props) => action('onKeyDown')(event, props)}
+            onSelect={(event, props) => {
+                action('onSelect')(event, props)
                 event.preventDefault()
             }}
         >

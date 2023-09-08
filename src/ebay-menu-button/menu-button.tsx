@@ -4,7 +4,7 @@ import { filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
 
-import { ChangeCallback, EbayMenu, EbayMenuType, SelectCallback } from '../ebay-menu'
+import { EbayMenu, EbayMenuChangeEventHandler, EbayMenuSelectEventHandler, EbayMenuType } from '../ebay-menu'
 import { EbayButton, EbayButtonProps } from '../ebay-button'
 import { EbayIconButton } from '../ebay-icon-button'
 import { EbayIcon } from '../ebay-icon'
@@ -20,8 +20,8 @@ export type EbayMenuButtonProps = {
     variant?: EbayMenuButtonVariant;
     onCollapse?: () => void;
     onExpand?: () => void;
-    onChange?: ChangeCallback;
-    onSelect?: SelectCallback;
+    onChange?: EbayMenuChangeEventHandler;
+    onSelect?: EbayMenuSelectEventHandler;
     expanded?: boolean;
     noToggleIcon?: boolean;
     checked?: number;
@@ -63,13 +63,15 @@ const EbayMenuButton: FC<Props> = ({
     const menuRef = useRef()
 
     const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
+    const defaultIndexes = menuItems.map((item) => Boolean(item.props.checked))
+    const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(defaultIndexes)
 
     const menuButtonLabel = findComponent(children, EbayMenuButtonLabel)
     const icon = findComponent(children, EbayIcon)
     const textLabel = text ? <span>{text}</span> : null
     const label = labelWithIcon(menuButtonLabel || textLabel, icon)
 
-    const wrapperClasses = classnames('menu-button', className, expanded && 'menu-button--expanded')
+    const wrapperClasses = classnames('menu-button', className)
 
     const menuClasses = classnames('menu-button__menu', {
         'menu-button__menu--fix-width': fixWidth,
@@ -125,6 +127,18 @@ const EbayMenuButton: FC<Props> = ({
         ...rest
     }
 
+    const handleOnChange: EbayMenuChangeEventHandler = (e, eventProps) => {
+        if (type === 'radio' || type === 'checkbox') {
+            const newCheckedIndexes = checkedIndexes.map((_, i) => eventProps.indexes.includes(i))
+            setCheckedIndexes(newCheckedIndexes)
+        }
+        onChange(e, eventProps)
+    }
+
+    const checkedIndex = () => {
+        const index = checkedIndexes.findIndex(Boolean)
+        return index > -1 ? index : checked
+    }
 
     return (
         <span className={wrapperClasses}>
@@ -138,27 +152,30 @@ const EbayMenuButton: FC<Props> = ({
                     {label}
                 </EbayButton>
             }
-            <EbayMenu
-                baseEl="div"
-                ref={menuRef}
-                type={type}
-                className={menuClasses}
-                tabIndex={-1}
-                id={menuId}
-                autofocus
-                checked={checked}
-                onKeyDown={handleMenuKeydown}
-                onChange={onChange}
-                onSelect={onSelect}
-            >
-                {menuItems.map((item, i) =>
-                    cloneElement(item, {
-                        ...item.props,
-                        className: classnames(item.props.className, 'menu-button__item'),
-                        key: i
-                    })
-                )}
-            </EbayMenu>
+            {expanded &&
+                <EbayMenu
+                    baseEl="div"
+                    ref={menuRef}
+                    type={type}
+                    className={menuClasses}
+                    tabIndex={-1}
+                    id={menuId}
+                    autofocus
+                    checked={checkedIndex()}
+                    onKeyDown={handleMenuKeydown}
+                    onChange={handleOnChange}
+                    onSelect={onSelect}
+                >
+                    {menuItems.map((item, i) =>
+                        cloneElement(item, {
+                            ...item.props,
+                            className: classnames(item.props.className, 'menu-button__item'),
+                            key: i,
+                            checked: checkedIndexes[i]
+                        })
+                    )}
+                </EbayMenu>
+            }
         </span>
     )
 }

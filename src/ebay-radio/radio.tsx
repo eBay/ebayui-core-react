@@ -1,15 +1,22 @@
-import React, { ChangeEvent, Children, cloneElement, ComponentProps, FC, ReactElement } from 'react'
+import React, {
+    ChangeEvent, FocusEvent, KeyboardEvent,
+    Children, cloneElement,
+    ComponentProps, FC, ReactElement
+} from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayLabel, EbayLabelProps } from '../ebay-field'
+import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
 
 type Size = 'default' | 'large'
 
 type EbayRadioProps = {
     size?: Size;
-    onChange?: (event: ChangeEvent<HTMLInputElement>, value: string | number) => void;
+    onChange?: EbayChangeEventHandler<HTMLInputElement, { value: string | number }>;
+    onFocus?: EbayFocusEventHandler<HTMLInputElement, { value: string | number }>;
+    onKeyDown?: EbayKeyboardEventHandler<HTMLInputElement, { value: string | number }>;
 }
-type InputProps = Omit<ComponentProps<'input'>, 'size'>
+type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'>
 
 const EbayRadio: FC<InputProps & EbayRadioProps> = ({
     size = 'default',
@@ -19,14 +26,22 @@ const EbayRadio: FC<InputProps & EbayRadioProps> = ({
     style,
     id,
     onChange = () => {},
+    onFocus = () => {},
+    onKeyDown = () => {},
     children,
     ...rest
-}) => {
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const input = e.target
+}: InputProps & EbayRadioProps) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
+        onChange(e, { value: e.target?.value })
 
-        onChange(e, input?.value)
+    const handleFocus = (e: FocusEvent<HTMLInputElement>) =>
+        onFocus(e, { value: e.target?.value })
+
+    const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+        const radioButton = e.target as any
+        return onKeyDown(e, { value: radioButton?.value })
     }
+
     const containerClass = classNames('radio', className, { 'radio--large': size === 'large' })
 
     const iconChecked = size === 'large' ?
@@ -50,6 +65,8 @@ const EbayRadio: FC<InputProps & EbayRadioProps> = ({
                     defaultChecked={defaultChecked}
                     checked={checked}
                     onChange={handleChange}
+                    onFocus={handleFocus}
+                    onKeyDown={handleKeyDown}
                 />
                 <span className="radio__icon" hidden>{iconChecked}{iconUnChecked}</span>
             </span>

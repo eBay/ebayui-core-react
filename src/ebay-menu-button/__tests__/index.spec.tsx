@@ -50,8 +50,11 @@ describe('<EbayMenuButton>', () => {
             const item = screen.getAllByRole('menuitem')[1]
             fireEvent.click(item)
 
-           
-            expect(spy).toBeCalled()
+            const expectedEventProps = {
+                index: 1,
+                checked: [1]
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 
@@ -69,7 +72,13 @@ describe('<EbayMenuButton>', () => {
             const item = screen.getAllByRole('menuitemradio')[1]
             fireEvent.click(item)
 
-            expect(spy).toBeCalledWith()
+            const expectedEventProps = {
+                index: 1,
+                indexes: [1],
+                checked: [1],
+                checkedValues: ["second"],
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 
@@ -87,9 +96,14 @@ describe('<EbayMenuButton>', () => {
             const item = screen.getAllByRole('menuitemcheckbox')[1]
             fireEvent.click(item)
 
-            
+            const expectedEventProps = {
+                index: 1,
+                indexes: [1],
+                checked: [1],
+                checkedValues: ["second"],
+            }
 
-            expect(spy).toBeCalled()
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 })

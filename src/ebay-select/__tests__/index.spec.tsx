@@ -10,6 +10,8 @@ initStoryshots({
         }, module)
 })
 
+const anySyntheticEvent = expect.objectContaining( { type: null })
+
 describe('<EbaySelect>', () => {
     describe('on render', () => {
         it('should pass a proper className to a wrapper element', () => {
@@ -38,16 +40,18 @@ describe('<EbaySelect>', () => {
         it('should fire onChange event', () => {
             const spy = jest.fn()
             const wrapper = render(
-                <EbaySelect name="foo" value="1" onChange={spy} >
+                <EbaySelect name="foo" value="1" onChange={spy}>
                     <EbaySelectOption value="1">Option 1</EbaySelectOption>
                     <EbaySelectOption value="2">Option 2</EbaySelectOption>
                     <EbaySelectOption value="3">Option 3</EbaySelectOption>
                 </EbaySelect>
             )
-            simulateSelectChange(wrapper, '3', 2)
+            const index = 2
+            const selectedValue = '3'
+            simulateSelectChange(wrapper, selectedValue, index)
 
             expect(spy).toBeCalledTimes(1)
-            expect(spy).toBeCalledWith(expect.anything(), 2, '3')
+            expect(spy).toBeCalledWith(anySyntheticEvent, { index, selected: [selectedValue] })
         })
     })
 
@@ -58,7 +62,7 @@ describe('<EbaySelect>', () => {
         beforeEach(() => {
             spy = jest.fn()
             wrapper = render(
-                <EbaySelect name="foo" defaultValue="2" onChange={spy} >
+                <EbaySelect name="foo" defaultValue="2" onChange={spy}>
                     <EbaySelectOption value="1">Option 1</EbaySelectOption>
                     <EbaySelectOption value="2">Option 2</EbaySelectOption>
                     <EbaySelectOption value="3">Option 3</EbaySelectOption>

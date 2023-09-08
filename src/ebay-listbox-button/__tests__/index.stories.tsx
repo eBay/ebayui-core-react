@@ -1,19 +1,19 @@
-import React, { KeyboardEvent } from 'react'
+import React, { ChangeEvent, KeyboardEvent } from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 
 import { EbayListboxButton, EbayListboxButtonOption } from '../index'
 import StateFullTest from './statefull-test'
+import { ChangeEventProps } from '../listbox-button'
 
 storiesOf(`ebay-listbox-button`, module)
 
     .add(`Default`, () => (<>
         <EbayListboxButton
             value="BB"
-            onSelect={
-                // checking TS defs here:
-                (e: MouseEvent | KeyboardEvent, value: any, index: number) => action(`onSelect triggered`)(e, value, index)
-            }
+            onChange={(e: ChangeEvent, props: ChangeEventProps) => action(`onChange`)(e, props)}
+            onCollapse={() => action(`onCollapse`)()}
+            onExpand={() => action('onExpand')()}
         >
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -38,7 +38,7 @@ storiesOf(`ebay-listbox-button`, module)
                 <EbayListboxButton
                     value="BB"
                     prefixId={listboxBtnLabel}
-                    onSelect={action(`onSelect triggered`)}
+                    onChange={(e, props) => action(`onChange`)(e, props)}
                 >
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>

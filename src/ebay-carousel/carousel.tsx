@@ -24,7 +24,7 @@ type CarouselProps = ComponentProps<'div'> & {
 
 // TO-DO:
 // Image slides
-// Auto play
+// Auto play (+ onPlay/onPause callbacks)
 
 const EbayCarousel: FC<CarouselProps> = ({
     gap = 16,

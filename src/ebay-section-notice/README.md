@@ -45,3 +45,8 @@ import "@ebay/skin/section-notice";
 | `aria-label`           | String                                                               | No       | The description of the notice itself for screen readers. Check out [this issue](https://github.com/eBay/skin/issues/1001) for more context. | -          |
 | `aria-roledescription` | String                                                               | No       | Adds role description attribute to the section notice                                                                                       | `"Notice"` |
 | `children`             | React Node                                                           | No       | The content to be displayed within the notice. **Must have the EbayNoticeContent within the children!**                                     | -          |
+
+## Callbacks
+| Name | Required             | Description       | Arguments |
+|------|----------------------|-------------------|-----------|
+| `onDismiss` | No | Triggered on notice dismiss | (Event)  |

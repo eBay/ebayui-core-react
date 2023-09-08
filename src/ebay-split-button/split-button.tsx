@@ -42,8 +42,8 @@ const EbaySplitButton: FC<Props> = ({
                 a11yText={a11yMenuText}
                 onCollapse={onCollapse}
                 onExpand={onExpand}
-                onChange={onChange}
                 onSelect={onSelect}
+                onChange={onChange}
             >
                 {menuItems}
             </EbayMenuButton>

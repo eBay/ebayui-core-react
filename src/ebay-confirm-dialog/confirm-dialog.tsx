@@ -9,7 +9,6 @@ export interface Props<T = any> extends DialogBaseProps<T> {
     open?: boolean;
     confirmText: string;
     rejectText: string;
-    onOpen?: () => void;
     onReject?: () => void;
     onConfirm?: () => void;
 }
@@ -18,7 +17,6 @@ const EbayConfirmDialog: FC<Props> = ({
     a11yCloseText = 'Close Dialog',
     confirmText,
     rejectText,
-    onOpen = () => {},
     onReject = () => {},
     onConfirm = () => {},
     ...rest

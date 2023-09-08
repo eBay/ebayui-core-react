@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react';
 import { action } from '../../../.storybook/action'
 import { EbayIcon } from '../../ebay-icon'
+import { EbayTab, EbayTabPanel, EbayTabs } from '../../ebay-tabs'
 import { EbayMenu, EbayMenuItem as Item, EbayMenuSeparator as Separator } from '../index'
 
 storiesOf('ebay-menu', module)
@@ -16,16 +17,52 @@ storiesOf('ebay-menu', module)
         </EbayMenu>
     </>))
     .add('Radio', () => (<>
-        <EbayMenu
-            type="radio"
-            onKeyDown={action('key down')}
-            onChange={action('change')}
-            onSelect={action('select')}
-        >
-            <Item value="item 1" checked>item 1</Item>
-            <Item value="item 2">item 2</Item>
-            <Item value="item 3">item 3</Item>
-        </EbayMenu>
+        <EbayTabs>
+            <EbayTab>Menu.checked</EbayTab>
+            <EbayTabPanel>
+                <EbayMenu
+                    type="radio"
+                    checked={1}
+                    onKeyDown={action('key down')}
+                    // Test TS complier errors here:
+                    onChange={(e, { index, checked}) => action('change')(e, { index, checked })}
+                    onSelect={(e, { index, checked }) => action('select')(e, { index, checked })}
+                >
+                    <Item>item 0</Item>
+                    <Item>Prechecked on menu level</Item>
+                    <Item>item 2</Item>
+                </EbayMenu>
+            </EbayTabPanel>
+
+            <EbayTab>Item.checked</EbayTab>
+            <EbayTabPanel>
+                <EbayMenu
+                    type="radio"
+                    onKeyDown={action('key down')}
+                    onChange={action('change')}
+                    onSelect={action('select')}
+                >
+                    <Item checked>Prechecked on item level</Item>
+                    <Item>item 1</Item>
+                    <Item>item 2</Item>
+                </EbayMenu>
+            </EbayTabPanel>
+
+            <EbayTab>Menu.checked+Item.checked</EbayTab>
+            <EbayTabPanel>
+                <EbayMenu
+                    type="radio"
+                    checked={1}
+                    onKeyDown={action('key down')}
+                    onChange={action('change')}
+                    onSelect={action('select')}
+                >
+                    <Item checked>Prechecked on item level</Item>
+                    <Item>Prechecked on menu level</Item>
+                    <Item>item 2</Item>
+                </EbayMenu>
+            </EbayTabPanel>
+        </EbayTabs>
     </>))
     .add('Checkbox', () => (<>
         <EbayMenu
@@ -74,5 +111,12 @@ storiesOf('ebay-menu', module)
             <Item value="item 3">
                 <EbayIcon name="attention16" style={{ marginRight: '8px' }} /> Not yet confirmed
             </Item>
+        </EbayMenu>
+    </>))
+    .add('Div container', () => (<>
+        <EbayMenu baseEl="div">
+            <Item>Item 1 that has very long text</Item>
+            <Item>Item 2</Item>
+            <Item>Item 3</Item>
         </EbayMenu>
     </>))

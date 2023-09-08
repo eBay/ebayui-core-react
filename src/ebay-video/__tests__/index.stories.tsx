@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { SyntheticEvent, useState } from 'react'
 import { Meta } from '@storybook/react'
 import 'shaka-player/dist/controls.css'
 
 import { action } from '../../../.storybook/action'
 import { EbayButton } from '../../ebay-button'
 import { EbayVideo, EbayVideoProps, EbayVideoSource } from '../index'
+import { PlayEventProps, VolumeChangeProps } from '../video'
 
 export default {
     component: EbayVideo,
@@ -16,7 +17,11 @@ const defaultProps: EbayVideoProps = {
     a11yPlayText: "Click to play",
     errorText: "An error has occurred",
     width: 600,
-    height: 400
+    height: 400,
+    onPlay: (e: SyntheticEvent<HTMLVideoElement>, props: PlayEventProps) => action('onPlay')(e, props),
+    onVolumeChange: (e: SyntheticEvent<HTMLVideoElement>, props: VolumeChangeProps) => action('onVolumeChange')(e, props),
+    onLoadError: (err: Error) => action('onLoadError')(err),
+    onReport: (e) => action('onReport')(e),
 }
 
 export const Default = () => (

@@ -7,6 +7,8 @@ initStoryshots({
     config: ({ configure }) => configure(() => require('./index.stories'), module)
 })
 
+const anySyntheticEvent = expect.objectContaining( { type: null })
+
 describe('<EbayFakeMenu>', () => {
     describe('on menu item click', () => {
         it('should fire onClick event', () => {
@@ -31,9 +33,10 @@ describe('<EbayFakeMenu>', () => {
                 </EbayFakeMenu>
             )
 
-            fireEvent.keyDown(wrapper.container.querySelectorAll('.fake-menu__item')[0])
+            const index = 0
+            fireEvent.keyDown(wrapper.container.querySelectorAll('.fake-menu__item')[index])
 
-            expect(onKeyDownSpy.mock.calls[0][1]).toEqual(0)
+            expect(onKeyDownSpy).toBeCalledWith(anySyntheticEvent, { index })
         })
     })
     describe('on item select', () => {
@@ -46,9 +49,10 @@ describe('<EbayFakeMenu>', () => {
                 </EbayFakeMenu>
             )
 
-            fireEvent.click(wrapper.container.querySelectorAll('.fake-menu__item')[1])
+            const index = 1
+            fireEvent.click(wrapper.container.querySelectorAll('.fake-menu__item')[index])
 
-            expect(onSelectSpy).toBeCalledWith(expect.anything(), 1)
+            expect(onSelectSpy).toBeCalledWith(anySyntheticEvent, { index })
         })
     })
 

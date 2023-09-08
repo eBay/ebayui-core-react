@@ -79,16 +79,19 @@ describe('<EbaySplitButton>', () => {
 
     describe('on select', () => {
         it('should fire onSelect event', () => {
-            const indexToSelect = 1
+            const indexToSelect = 0
             const spy = jest.fn()
-            render(splitButton({ type: 'checkbox', onChange: spy}))
+            render(splitButton({ onSelect: spy }))
 
             const dropdownButton = screen.getAllByRole('button')[1]
             fireEvent.click(dropdownButton)
-            const menuItem = screen.getAllByRole('menuitemcheckbox')[indexToSelect]
+            const menuItem = screen.getAllByRole('menuitem')[indexToSelect]
             fireEvent.click(menuItem)
-            
-            expect(spy).toBeCalledWith(indexToSelect, true)
+            const expectedEventProps = {
+                index: indexToSelect,
+                checked: [indexToSelect]
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 
@@ -105,13 +108,25 @@ describe('<EbaySplitButton>', () => {
             const menuItem = menuItems[indexToCheck]
             fireEvent.click(menuItem)
 
-            expect(spy).toBeCalledWith(indexToCheck, true)
+            const expectedEventProps = {
+                index: indexToCheck,
+                indexes: [indexToCheck],
+                checked: [indexToCheck],
+                checkedValues: [values[indexToCheck]],
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
             spy.mockClear()
 
             const anotherMenuItem = menuItems[anotherIndexToCheck]
             fireEvent.click(anotherMenuItem)
-            
-            expect(spy).toBeCalledWith(anotherIndexToCheck, true)
+
+            const newerExpectedEventProps = {
+                index: anotherIndexToCheck,
+                indexes: [anotherIndexToCheck],
+                checked: [anotherIndexToCheck],
+                checkedValues: [values[anotherIndexToCheck]],
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), newerExpectedEventProps)
 
         })
     })
@@ -129,15 +144,25 @@ describe('<EbaySplitButton>', () => {
             const menuItem = menuItems[indexToCheck]
             fireEvent.click(menuItem)
 
-           
-            expect(spy).toBeCalledWith(indexToCheck, true)
+            const expectedEventProps = {
+                index: indexToCheck,
+                indexes: [indexToCheck],
+                checked: [indexToCheck],
+                checkedValues: [values[indexToCheck]],
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
             spy.mockClear()
 
             const anotherMenuItem = menuItems[anotherIndexToCheck]
             fireEvent.click(anotherMenuItem)
 
-           
-            expect(spy).toBeCalledWith(anotherIndexToCheck, true)
+            const newerExpectedEventProps = {
+                index: anotherIndexToCheck,
+                indexes: [indexToCheck, anotherIndexToCheck],
+                checked: [indexToCheck, anotherIndexToCheck],
+                checkedValues: [values[indexToCheck], values[anotherIndexToCheck]],
+            }
+            expect(spy).toBeCalledWith(expect.any(Object), newerExpectedEventProps)
 
         })
     })

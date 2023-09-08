@@ -6,7 +6,7 @@ import { EbayBreadcrumbs, EbayBreadcrumbItem as Item } from '../index'
 
 storiesOf('ebay-breadcrumb', module)
     .add('default', () => (<>
-        <EbayBreadcrumbs onSelect={action('select')}>
+        <EbayBreadcrumbs onSelect={(e, { el }) => action('select')(e, { el })}>
             <Item href="https://www.ebay.com/">eBay</Item>
             <Item href="https://www.ebay.com/rpp/cell-phone-pda">Cell Phones, Smart Watches & Accessories</Item>
             <Item href="https://www.ebay.com/b/Smart-Watch-Accessories/182064/bn_16565905">Smart Watch Accessories</Item>

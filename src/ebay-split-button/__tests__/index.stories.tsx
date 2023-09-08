@@ -45,8 +45,8 @@ storiesOf('ebay-split-button', module)
                 onClick={action('click')}
                 // testing TS compilation here:
                 onKeyDown={(e) => action('key down')(e)}
-                onSelect={(index ) => action('select')(index)}
-                onChange={(index, checked ) => action('change')(index, checked )}
+                onSelect={(e, { index, checked }) => action('select')(e, { index, checked })}
+                onChange={(e, { index, checked }) => action('change')(e, { index, checked })}
                 //
                 onEscape={action('escape')}
                 onFocus={action('focus')}
@@ -154,11 +154,10 @@ storiesOf('ebay-split-button', module)
             <p>
                 <EbaySplitButton
                     bodyState={loading ? 'loading' : 'reset'}
-                    type="checkbox"
                     a11yMenuText="Show options"
                     a11yButtonLoadingText="Stand by or stop loading by using menu"
                     onClick={() => setLoading(true)}
-                    onSelect={(index) => {
+                    onSelect={(e, { index }) => {
                         const value = [true, false][index]
                         setLoading(value)
                     }}

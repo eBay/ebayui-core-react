@@ -1,23 +1,30 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, Ref } from 'react'
+import { EbayEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
 
 export type EbayMenuType = 'radio' | 'checkbox'
 export type EbayMenuPriority = 'primary' | 'secondary' | 'none'
 
 type ContainerDivProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onChange' | 'onSelect'>
 type ContainerSpanProps = Omit<ComponentProps<'span'>, 'onKeyDown' | 'onChange' | 'onSelect'>
-
-export type SelectCallback = (i: number, checked: boolean) => void
-export type ChangeCallback = (i: number, checked: boolean) => void
-export type KeyDownCallback = (i: number, checked: boolean) => void
-
-export type MenuProps = ContainerDivProps & ContainerSpanProps & {
+type SelectProps = {
+    index: number;
+    checked: number[];
+}
+type ChangeProps = SelectProps & {
+    indexes: number[];
+    checkedValues: string[];
+}
+export type EbayMenuKeyDownEventHandler = EbayKeyboardEventHandler<HTMLElement, SelectProps | ChangeProps>
+export type EbayMenuChangeEventHandler = EbayEventHandler<HTMLElement, ChangeProps>
+export type EbayMenuSelectEventHandler = EbayEventHandler<HTMLElement, SelectProps>
+export type EbayMenuProps = ContainerDivProps & ContainerSpanProps & {
+    type?: EbayMenuType;
+    priority?: EbayMenuPriority;
+    checked?: number;
     autofocus?: boolean;
     baseEl?: 'div' | 'span',
-    checked?: number;
-    className?: string;
-    priority?: EbayMenuPriority;
-    type?: EbayMenuType;
-    onKeyDown?: KeyDownCallback;
-    onSelect?: SelectCallback;
-    onChange?: ChangeCallback;
+    onKeyDown?: EbayMenuKeyDownEventHandler;
+    onChange?: EbayMenuChangeEventHandler;
+    onSelect?: EbayMenuSelectEventHandler;
+    forwardedRef?: Ref<HTMLDivElement>;
 }

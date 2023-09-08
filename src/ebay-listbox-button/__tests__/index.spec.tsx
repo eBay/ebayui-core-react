@@ -1,8 +1,11 @@
-import initStoryshots from '@storybook/addon-storyshots';
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
-
+import { fireEvent, render, screen } from '@testing-library/react';
+import initStoryshots from '@storybook/addon-storyshots';
 import { EbayListboxButton, EbayListboxButtonOption } from '..';
+
+const { getByRole, getAllByRole } = screen
+const anySyntheticEvent = expect.objectContaining( { type: null })
+
 jest.useFakeTimers()
 describe("<EbayListboxButton>", () => {
     describe("a11y prefix", () => {
@@ -25,14 +28,14 @@ describe("<EbayListboxButton>", () => {
             return { buttonElement, expandBtnTextId };
         };
 
-        it("should render with correct aria-labelledby if recived prefix id", async () => {
+        it("should render with correct aria-labelledby if received prefix id", async () => {
             const listboxBtnLabel = "listbox-button__label";
             const { buttonElement, expandBtnTextId } = await renderListbox(listboxBtnLabel);
 
             expect(buttonElement).toHaveAttribute("aria-labelledby", `${listboxBtnLabel} ${expandBtnTextId}`);
         });
 
-        it("should render without aria-labelledby if NOT recived prefix id", async () => {
+        it("should render without aria-labelledby if NOT received prefix id", async () => {
             const { buttonElement } = await renderListbox();
 
             expect(buttonElement).not.toHaveAttribute("aria-labelledby");
@@ -84,6 +87,56 @@ describe("<EbayListboxButton>", () => {
             });
         });
 
+    })
+
+    describe('on change', () => {
+        it('should fire onChange event', () => {
+            const spy = jest.fn()
+            render(
+                <EbayListboxButton onChange={spy}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+                </EbayListboxButton>
+            )
+            fireEvent.click(getByRole('button'))
+            const index = 0
+            fireEvent.mouseDown(getAllByRole('option')[index])
+            fireEvent.click(getAllByRole('option')[index])
+
+            expect(spy).toBeCalledWith(anySyntheticEvent, { index, selected: ['AA'], wasClicked: true })
+        })
+    })
+    describe('on expand', () => {
+        it('should fire onExpand event', () => {
+            const spy = jest.fn()
+            render(
+                <EbayListboxButton onExpand={spy}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+                </EbayListboxButton>
+            )
+            fireEvent.click(getByRole('button'))
+
+            expect(spy).toBeCalledWith()
+        })
+    })
+    describe('on collapse', () => {
+        it('should fire a event', () => {
+            const spy = jest.fn()
+            render(
+                <EbayListboxButton onCollapse={spy}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+                </EbayListboxButton>
+            )
+            fireEvent.click(getByRole('button'))
+            fireEvent.click(getByRole('button'))
+
+            expect(spy).toBeCalledWith()
+        })
     })
 });
 
