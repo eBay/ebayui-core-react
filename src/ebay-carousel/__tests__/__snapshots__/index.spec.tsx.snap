@@ -15,12 +15,12 @@ exports[`Storyshots ebay-carousel Continuous 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-prev icon icon--chevron-left-24"
+          class="icon icon--carousel-prev icon icon--chevron-left-12"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-chevron-left-24"
+            xlink:href="#icon-chevron-left-12"
           />
         </svg>
       </button>
@@ -110,12 +110,12 @@ exports[`Storyshots ebay-carousel Continuous 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-next icon icon--chevron-right-24"
+          class="icon icon--carousel-next icon icon--chevron-right-12"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-chevron-right-24"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </button>
@@ -139,12 +139,12 @@ exports[`Storyshots ebay-carousel Items Per Slide 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-prev icon icon--chevron-left-24"
+          class="icon icon--carousel-prev icon icon--chevron-left-12"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-chevron-left-24"
+            xlink:href="#icon-chevron-left-12"
           />
         </svg>
       </button>
@@ -234,12 +234,12 @@ exports[`Storyshots ebay-carousel Items Per Slide 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--carousel-next icon icon--chevron-right-24"
+          class="icon icon--carousel-next icon icon--chevron-right-12"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-chevron-right-24"
+            xlink:href="#icon-chevron-right-12"
           />
         </svg>
       </button>
