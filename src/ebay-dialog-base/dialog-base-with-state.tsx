@@ -1,8 +1,13 @@
 import React, { Children, ReactElement } from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
-import EbayDialogPreviousButton from './components/dialog-previous-button'
 import { DialogBase, DialogBaseProps } from './components/dialogBase'
-import { EbayDialogCloseButton, EbayDialogFooter, EbayDialogHeader, EbayDialogActions } from './index'
+import {
+    EbayDialogCloseButton,
+    EbayDialogFooter,
+    EbayDialogHeader,
+    EbayDialogActions,
+    EbayDialogPreviousButton
+} from './index'
 
 export const DialogBaseWithState = ({
     isModal,
