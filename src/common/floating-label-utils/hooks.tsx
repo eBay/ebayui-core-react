@@ -12,6 +12,7 @@ type FloatingLabelHookProps = {
     className?: string;
     placeholder?: string;
     invalid?: boolean;
+    opaqueLabel?: boolean;
     onMount?: () => void;
 }
 
@@ -76,6 +77,7 @@ export function useFloatingLabel({
     inputValue,
     placeholder,
     invalid,
+    opaqueLabel,
     onMount = () => {}
 } : FloatingLabelHookProps): FloatingLabelHookReturn {
     const _internalInputRef = useRef(null)
@@ -123,7 +125,8 @@ export function useFloatingLabel({
     })
 
     const floatingLabelClassName = classNames(`floating-label`, {
-        'floating-label--large': inputSize === `large`
+        'floating-label--large': inputSize === `large`,
+        'floating-label--opaque': opaqueLabel
     })
 
     const FragmentContainer = useCallback(({ children }) => <>{children}</>, [])
