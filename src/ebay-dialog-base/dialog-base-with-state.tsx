@@ -1,7 +1,13 @@
 import React, { Children, ReactElement } from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
 import { DialogBase, DialogBaseProps } from './components/dialogBase'
-import { EbayDialogCloseButton, EbayDialogFooter, EbayDialogHeader, EbayDialogActions } from './index'
+import {
+    EbayDialogCloseButton,
+    EbayDialogFooter,
+    EbayDialogHeader,
+    EbayDialogActions,
+    EbayDialogPreviousButton
+} from './index'
 
 export const DialogBaseWithState = ({
     isModal,
@@ -17,8 +23,15 @@ export const DialogBaseWithState = ({
     const footer = childrenArray.find((child: ReactElement) => child.type === EbayDialogFooter)
     const actions = childrenArray.find((child: ReactElement) => child.type === EbayDialogActions)
     const closeButton = childrenArray.find((child: ReactElement) => child.type === EbayDialogCloseButton)
+    const previousButton = childrenArray.find((child: ReactElement) => child.type === EbayDialogPreviousButton)
     const content = childrenArray.filter((child: ReactElement) =>
-        ![EbayDialogHeader, EbayDialogFooter, EbayDialogCloseButton, EbayDialogActions].some(c => c === child.type))
+        ![
+            EbayDialogHeader,
+            EbayDialogFooter,
+            EbayDialogCloseButton,
+            EbayDialogActions,
+            EbayDialogPreviousButton
+        ].some(c => c === child.type))
 
     const dialogBase = (
         <DialogBase
@@ -29,6 +42,7 @@ export const DialogBaseWithState = ({
             footer={footer}
             actions={actions}
             closeButton={closeButton}
+            previousButton={previousButton}
             animated={animated}
         >
             {content}

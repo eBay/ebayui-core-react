@@ -4,3 +4,4 @@ export { default as EbayDialogCloseButton } from './components/dialog-close-butt
 export { WindowType, DialogBaseProps } from './components/dialogBase'
 export { default as DialogBaseWithState } from './dialog-base-with-state'
 export { default as EbayDialogActions } from './components/dialog-actions'
+export { default as EbayDialogPreviousButton } from './components/dialog-previous-button'
