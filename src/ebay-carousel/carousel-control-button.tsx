@@ -12,8 +12,8 @@ type CarouselControlProps = {
 }
 
 const icon: Record<CarouselControlType, Icon> = {
-    prev: 'chevronLeft24',
-    next: 'chevronRight24'
+    prev: 'chevronLeft12',
+    next: 'chevronRight12'
 }
 
 const typeToDirection: Record<CarouselControlType, MovementDirection> = {
