@@ -6,7 +6,11 @@ import { EbaySwitch } from '../index'
 storiesOf(`ebay-switch`, module)
     .add(`Default switch-button`, () => (
         <span className="field">
-            <EbaySwitch value="123" id="switch-1" />
+            <EbaySwitch
+                value="123"
+                id="switch-1"
+                onChange={(e, props) => action('onChange')(e, props)}
+            />
             <label className="field__label field__label--end" htmlFor="switch-1">Default</label>
         </span>
     ))

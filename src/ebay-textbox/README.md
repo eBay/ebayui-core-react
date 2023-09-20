@@ -11,19 +11,15 @@ yarn add @ebay/ui-core-react
 ```
 
 ### Import JS
-
 ```jsx harmony
 import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
 ```
 
 ### Import following styles from SKIN
-
 ```jsx harmony
 import "@ebay/skin/textbox";
 ```
-
 ### or if using CSS/SCSS
-
 ```jsx
 import "@ebay/skin/textbox.css";
 ```
@@ -45,12 +41,23 @@ import "@ebay/skin/textbox.css";
 | `defaultValue`  | String   | No       | No       | Indicates the default input element value. Use when the component is not controlled.                                                                      |
 | `inputSize`     | String   | No       | No       | `default` (default), `large`                                                                                                                              |
 | `floatingLabel`  | String   | No       | No       | Indicates that the input is a floating label type and renders it as a label                                                                      |
-| `onFocus`       | Function | No       | No       | Called when input gets focus, parameters passed: `originalEvent`, `value`                                                                                 |
-| `onBlur`        | Function | No       | No       | Called when input loses focus, parameters passed: `originalEvent`, `value`                                                                                |
-| `onChange`      | Function | No       | No       | Called when input changes value, parameters passed: `originalEvent`, `value`                                                                              |
-| `onButtonClick` | Function | No       | No       | Triggers when clicking on postfix-icon-button. Requires `buttonAriaLabel` to be present in order to attach correctly                                                                              |
 
-It supports all the events supported by an input element (e.g. `onInput`, `onKeyDown`, `onKeyUp`)
+## Callbacks
+| Name | Required | Description | Arguments |
+|------|----------|-------------|-----------|
+
+| `onChange`      | No       | Triggered when focus leaves and value is changed. | `(ChangeEvent, { value: string })` |                                                                              |
+| `onInputChange`      | No       | Triggered when the value of the input is changed. | `(ChangeEvent, { value: string })` |                                                                              |
+| `onFocus`       | No       | Called when input gets focus | `(FocusEvent, { value: string })`                                                                                 |
+| `onBlur`        | No       | Called when input loses focus | `(FocusEvent, { value: string })`                                                                                |
+| `onKeyPress`        | No       | Called on key press | `(KeyboardEvent, { value: string })`                                                                                |
+| `onKeyUp`        | No       | Called on key up | `(KeyboardEvent, { value: string })`                                                                                |
+| `onKeyDown`        | No       | Called on key down | `(KeyboardEvent, { value: string })`                                                                                |
+| `onInvalid`        | No       | Triggered when value is invalid | `(ChangeEvent, { value: string })`                                                                                |
+| `onFloatingLabelInit`        | No       | Triggered when floating label is initialized | `()`                                                                                |
+| `onButtonClick` | No       | Triggers when clicking on postfix-icon-button. Requires `buttonAriaLabel` to be present in order to attach correctly | `(MouseEvent, { value: string })` |
+
+It supports all the events supported by an input element (e.g. `onInput`, `onPaste`)
 
 ## EbayTextboxPrefixIcon
 | Name            | Type     | Required | Description                                                                                                                                               |

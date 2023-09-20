@@ -1,22 +1,33 @@
-import React, { Dispatch, FC, MouseEvent, ReactElement, useState } from 'react'
+import React, {
+    ComponentProps,
+    FC,
+    KeyboardEvent,
+    KeyboardEventHandler,
+    MouseEvent,
+    MouseEventHandler,
+    ReactElement,
+    useState
+} from 'react'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import { EbayIcon, Icon } from '../ebay-icon'
+import { EbayPageNoticeFooter } from './index'
 
-type Props = React.HTMLProps<HTMLElement> & {
-    status?: 'general' | 'attention' | 'confirmation' | 'information',
-    'aria-label'?: string,
-    a11yDismissText?: string,
-    onDismiss?: Dispatch<MouseEvent>
+export type PageNoticeStatus = 'general' | 'attention' | 'confirmation' | 'information'
+export type Props = ComponentProps<'section'> & {
+    status?: PageNoticeStatus;
+    'aria-label'?: string;
+    a11yDismissText?: string;
+    onDismiss?: MouseEventHandler & KeyboardEventHandler;
 };
 
 const EbayPageNotice: FC<Props> = ({
     id,
     status = 'general',
     children,
-    onDismiss,
     a11yDismissText,
     'aria-label': ariaLabel,
+    onDismiss = () => {},
     ...rest
 }) => {
     const [dismissed, setDismissed] = useState(false)
@@ -27,11 +38,9 @@ const EbayPageNotice: FC<Props> = ({
         throw new Error(`EbayPageNotice: Please use a EbayNoticeContent that defines the content of the notice`)
     }
 
-    const handleDismissedClicked = (event: MouseEvent) => {
+    const handleDismissed = (event: MouseEvent & KeyboardEvent) => {
         setDismissed(true)
-        if (onDismiss) {
-            onDismiss(event)
-        }
+        onDismiss(event)
     }
 
     return dismissed ? null : (
@@ -52,14 +61,14 @@ const EbayPageNotice: FC<Props> = ({
             <NoticeContent {...content.props} type="page" />
             {children}
             {a11yDismissText && (
-                <div className="page-notice__footer">
+                <EbayPageNoticeFooter>
                     <button
                         aria-label={a11yDismissText}
                         className="fake-link page-notice__dismiss"
-                        onClick={handleDismissedClicked}>
+                        onClick={handleDismissed as any}>
                         <EbayIcon name="close16" />
                     </button>
-                </div>
+                </EbayPageNoticeFooter>
             )}
         </section>
     )

@@ -1,7 +1,8 @@
-import React, { FC, Key, ReactNode, RefObject, StyleHTMLAttributes, MouseEvent, ComponentProps } from 'react'
+import React, { FC, Key, ReactNode, RefObject, StyleHTMLAttributes, ComponentProps } from 'react'
 import { EbayIcon } from '../ebay-icon'
 import { withForwardRef } from '../common/component-utils'
 import classNames from 'classnames'
+import { EbayEventHandler } from '../common/event-utils/types'
 
 export type PaginationItemType = 'previous' | 'next' | 'page' | 'separator'
 type HtmlProps = Omit<ComponentProps<'button'>, 'type'> & ComponentProps<'a'> & ComponentProps<'li'>
@@ -15,9 +16,9 @@ export type PaginationItemProps = HtmlProps & {
     hide?: boolean;
     a11yPreviousText?: string;
     a11yNextText?: string;
-    onSelect?: (e: MouseEvent | KeyboardEvent, value: string, index: number) => void;
-    onNext?: (e: MouseEvent | KeyboardEvent) => void;
-    onPrevious?: (e: MouseEvent | KeyboardEvent) => void;
+    onPrevious?: EbayEventHandler;
+    onNext?: EbayEventHandler;
+    onSelect?: EbayEventHandler<{ value: string, index: number }>;
     style?: StyleHTMLAttributes<HTMLButtonElement & HTMLAnchorElement>;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     children?: ReactNode;
@@ -43,7 +44,7 @@ const EbayPaginationItem: FC<PaginationItemProps> = ({
     ...rest
 }) => {
     const handlePageNumber = (e) => {
-        onSelect(e, e.currentTarget.innerText, pageIndex)
+        onSelect(e, { value: e.currentTarget?.innerText || '', index: pageIndex })
     }
 
     const handleNextPage = (e) => {

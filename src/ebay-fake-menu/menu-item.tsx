@@ -2,7 +2,7 @@ import React, { ComponentProps, FC, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 
-export type EbayFakeMenuItemProps = Omit<ComponentProps<'a'>, 'onKeyDown'> & {
+export type EbayFakeMenuItemProps = Omit<ComponentProps<'a'>, 'onKeyDown' | 'onMouseDown'> & {
     current?: boolean;
     disabled?: boolean;
     autoFocus?: boolean;

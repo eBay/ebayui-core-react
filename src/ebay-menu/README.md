@@ -26,15 +26,16 @@ Name | Type | Required | Description
 --- | --- | --- | ---
 `type` | String | No | Can be `radio`/`checkbox`
 `checked` | Number | No | when used with `radio` type will check the item with the corresponding index
-`onKeydown` | Function | No | arguments: (index: number, checked: boolean)
-`onChange` | Function | No | arguments: (index: number, checked: boolean) for type `radio`/`checkbox`
-`onSelect` | Function | No | arguments: (index: number, checked: boolean), not for use with type `radio`/`checkbox`
+`baseEl` | String | No | Container can be `span` (default) or `div`
+`onKeydown` | Function | No | props: (e: event, { index: number, checked: number[], checkedValues?: string[] })
+`onSelect` | Function | No | props: (e: event, { index: number }), triggered on item clicked (not for type `radio`/`checkbox`)
+`onChange` | Function | No | props: (e: event, { index: number, checked: number[], checkedValues: string[]), triggered on item `checked` change, (for type `radio`/`checkbox` only)
 
 ## EbayMenuItem Props
 
 Name | Type | Required | Description
 --- | --- | --- | ---
-`value` | String | No | for type `radio`, `checkbox`: the value to use with callbacks for `checked[]`
+`value` | String | No | for type `radio`, `checkbox`: the value to use with callbacks for `checkedValues[]`
 `checked` | Boolean | No | for type `radio`, `checkbox`: whether or not the item is checked
 `disabled` | Boolean | No | makes the menu item disabled
 `badgeNumber` | Number | No | used as the number to be placed in the badge

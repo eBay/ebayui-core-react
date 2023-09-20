@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-section-notice Attention message 1`] = `
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Attention message 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-attention"
@@ -56,7 +56,7 @@ exports[`Storyshots ebay-section-notice Attention message 1`] = `
       class="section-notice__footer"
     >
       <button
-        class="btn fake-link btn--secondary"
+        class="fake-link"
       >
         Show more
       </button>
@@ -65,7 +65,7 @@ exports[`Storyshots ebay-section-notice Attention message 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-section-notice Confirmation message 1`] = `
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Confirmation message 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-confirmation"
@@ -91,29 +91,31 @@ exports[`Storyshots ebay-section-notice Confirmation message 1`] = `
     <div
       class="section-notice__main"
     >
-      <p>
-        This successfully finished 
+      <h2
+        class="section-notice__title"
+      >
+        This successfully finished! 
         <a
           href="http://www.ebay.com"
         >
           next page
         </a>
-      </p>
+      </h2>
     </div>
     <div
       class="section-notice__footer"
     >
       <button
-        class="btn fake-link btn--secondary"
+        class="fake-link"
       >
-        Dismiss
+        Take a look
       </button>
     </div>
   </section>
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-section-notice Default message (with action) 1`] = `
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (with action) 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"
@@ -137,7 +139,7 @@ exports[`Storyshots ebay-section-notice Default message (with action) 1`] = `
       class="section-notice__footer"
     >
       <button
-        class="btn fake-link btn--secondary"
+        class="fake-link"
       >
         Do something
       </button>
@@ -146,7 +148,7 @@ exports[`Storyshots ebay-section-notice Default message (with action) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-section-notice Default message (with no action) 1`] = `
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (with no action) 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"
@@ -170,7 +172,7 @@ exports[`Storyshots ebay-section-notice Default message (with no action) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-section-notice Information message 1`] = `
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Information message (dismissable) 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-information"
@@ -196,7 +198,9 @@ exports[`Storyshots ebay-section-notice Information message 1`] = `
     <div
       class="section-notice__main"
     >
-      <p>
+      <h2
+        class="section-notice__title"
+      >
         <strong>
           Good news!
         </strong>
@@ -207,22 +211,41 @@ exports[`Storyshots ebay-section-notice Information message 1`] = `
           Learn more
         </a>
         .
-      </p>
+      </h2>
     </div>
+    <p
+      class="section-notice__cta"
+    >
+      <a
+        href="https://www.ebay.com"
+      >
+        Opt in
+      </a>
+    </p>
     <div
       class="section-notice__footer"
     >
       <button
-        class="btn fake-link btn--secondary"
+        aria-label="Dismiss"
+        class="fake-link page-notice__dismiss"
       >
-        Dismiss
+        <svg
+          aria-hidden="true"
+          class="icon icon--close-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-close-16"
+          />
+        </svg>
       </button>
     </div>
   </section>
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-section-notice Section with link 1`] = `
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Section with link 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"
@@ -260,7 +283,7 @@ exports[`Storyshots ebay-section-notice Section with link 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-section-notice Section with title 1`] = `
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Section with title 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"

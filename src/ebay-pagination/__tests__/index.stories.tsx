@@ -11,9 +11,9 @@ storiesOf('ebay-pagination', module)
             a11yPreviousText="Previous page"
             a11yNextText="Next page"
             a11yCurrentText="Results Pagination - Page 1"
-            onPrevious={action('onPaginationPrevious')}
-            onNext={action('onPaginationNext')}
-            onSelect={action('onPageSelect')}
+            onPrevious={(e) => action('onPrevious')(e)}
+            onNext={(e) => action('onNext')(e)}
+            onSelect={(e, props) => action('onSelect')(e, props)}
         >
             <Item type="previous" disabled href="https://www.ebay.com/sch/i.html?_from=R40&_nkw=iphone&_sacat=0&_pgn=5" />
             <Item href="https://www.ebay.com/sch/i.html?_from=R40&_nkw=iphone&_sacat=0&_pgn=1" current>1</Item>
@@ -37,9 +37,10 @@ storiesOf('ebay-pagination', module)
     </>))
     .add('Buttons', () => (<>
         <EbayPagination
-            onPrevious={action('onPaginationPrevious')}
-            onNext={action('onPaginationNext')}
-            onSelect={action('onPageSelect')}
+            onPrevious={(e) => action('onPrevious')(e)}
+            onNext={(e) => action('onNext')(e)}
+            onSelect={(e, props) => action('onSelect')(e, props)}
+
         >
             <Item type="previous" />
             <Item>1</Item>
@@ -216,7 +217,7 @@ storiesOf('ebay-pagination', module)
             const [open, setOpen] = useState(false)
             const handlePrev = () => setActiveIndex(Math.max(activeIndex - 1, 0))
             const handleNext = () => setActiveIndex(Math.min(activeIndex + 1, numOfItems))
-            const handleSelect = (_, __, index) => setActiveIndex(index)
+            const handleSelect = (e, { index }) => setActiveIndex(index)
 
             return (
                 <>

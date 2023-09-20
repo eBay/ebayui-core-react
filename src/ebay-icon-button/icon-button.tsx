@@ -1,8 +1,9 @@
-import React, { ComponentProps, FC, RefObject } from 'react'
+import React, { ComponentProps, FC, KeyboardEvent, RefObject } from 'react'
 import classNames from 'classnames'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { EbayBadge } from '../ebay-badge'
 import { withForwardRef } from '../common/component-utils'
+import { EbayKeyboardEventHandler } from '../common/event-utils/types'
 
 export type EbayIconButtonProps = {
     href?: string;
@@ -11,13 +12,14 @@ export type EbayIconButtonProps = {
     badgeAriaLabel?: string;
     transparent?: boolean;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
+    onEscape?: EbayKeyboardEventHandler;
 }
 
 type HTMLButtonProps = ComponentProps<'button'>;
 type HTMLAnchorProps = ComponentProps<'a'>;
 type Props = EbayIconButtonProps & HTMLButtonProps & HTMLAnchorProps;
 
-const EbayIconButton:FC<Props> = ({
+const EbayIconButton: FC<Props> = ({
     href,
     icon,
     badgeNumber,
@@ -25,8 +27,10 @@ const EbayIconButton:FC<Props> = ({
     transparent,
     className: extraClasses,
     forwardedRef,
+    onEscape = () => {},
+    onKeyDown = () => {},
     ...rest
-}) => {
+}: Props) => {
     const classPrefix = href ? 'icon-link' : 'icon-btn'
     const className = classNames(
         extraClasses,
@@ -43,11 +47,19 @@ const EbayIconButton:FC<Props> = ({
         </>
     )
 
+    const keyDownHandler = (e: KeyboardEvent<HTMLButtonElement & HTMLAnchorElement>) => {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+            onEscape(e)
+        }
+        onKeyDown(e)
+    }
+
     return href ? (
         <a
             ref={forwardedRef}
             className={className}
             href={href}
+            onKeyDown={keyDownHandler}
             {...rest}
         >
             {children}
@@ -57,6 +69,7 @@ const EbayIconButton:FC<Props> = ({
             ref={forwardedRef}
             type="button"
             className={className}
+            onKeyDown={keyDownHandler}
             {...rest}
         >
             {children}

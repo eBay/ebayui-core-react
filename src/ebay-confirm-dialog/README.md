@@ -20,12 +20,12 @@ Name | Type | Stateful | Required | Description
 `rejectText`  | String  | No       | Yes      | Text for reject button  |
 `animated` | Boolean | Yes | No | Renders the dialog with an animation. Note that the dialog will always be present in the DOM
 
-## Events
-
-Event | Data | Description
---- | --- | ---
-`onConfirm` |  | Triggered when confirm button is clicked
-`onReject` |  | Trigered when reject button is clicked
+## Callbacks
+Event | Arguments | Description
+--- |-----------| ---
+`onOpen` | (Event)   | Triggered when dialog is opened
+`onConfirm` | (Event)   | Triggered when confirm button is clicked
+`onReject` | (Event)   | Trigered when reject button is clicked
 
 ## EbayDialogHeader
 Will render a header content for the dialog. Will always render the header element even if this is not present

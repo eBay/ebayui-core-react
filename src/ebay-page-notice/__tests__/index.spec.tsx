@@ -6,6 +6,8 @@ import { EbayNoticeContent, EbayPageNotice, EbayPageNoticeTitle } from '../index
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
+var anySyntheticEvent = expect.objectContaining({ type: null });
+
 describe('<EbayPageNotice>', () => {
     describe('when a page title exists', () => {
         it('should render the title within the notice content', () => {
@@ -50,7 +52,7 @@ describe('<EbayPageNotice>', () => {
     describe('when allyDismissText is provided...', () => {
         let wrapper;
         let dismissButton;
-        const dismissMock = jest.fn();
+        const dismissMock = jest.fn()
 
         beforeEach( async () => {
             wrapper = render(
@@ -64,14 +66,14 @@ describe('<EbayPageNotice>', () => {
         })
 
         it( 'should add a close button with the provided label.', () => {
-            expect( dismissButton ).not.toBeNull();
+            expect( dismissButton ).not.toBeNull()
         })
 
         it( 'should hide the notice when the dismiss button is clicked.', async () => {
             expect(wrapper.getByRole('region', { name: 'Information' })).toBeVisible()
             await dismissButton.click()
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
-            expect(dismissMock).toHaveBeenCalled()
+            expect(dismissMock).toHaveBeenCalledWith(anySyntheticEvent)
         })
 
         it('should hide the notice when the user focuses the dismiss button and presses space', async () => {

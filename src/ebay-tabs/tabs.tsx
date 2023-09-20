@@ -1,16 +1,20 @@
-import React, { cloneElement, ComponentProps, FC, useEffect, useState } from 'react'
+import React, { cloneElement, ComponentProps, FC, KeyboardEvent, useEffect, useState } from 'react'
 import classNames from 'classnames'
 
 import { handleActionKeydown, handleLeftRightArrowsKeydown } from '../common/event-utils'
+import { filterByType } from '../common/component-utils'
+import { Activation, Size } from './types'
 import Tab from './tab'
 import TabPanel from './tab-panel'
-import { Activation, Size } from './types'
-import { filterBy, filterByType } from '../common/component-utils'
 
-type TabsProps = ComponentProps<'div'> & {
+export type TabsProps = ComponentProps<'div'> & {
     index?: number;
     size?: Size;
     activation?: Activation;
+    onSelect?: ({ selectedIndex: number }) => void;
+    /**
+     * @deprecated Use onSelect instead
+     */
     onTabSelect?: (index: number) => void;
 };
 
@@ -20,6 +24,7 @@ const Tabs: FC<TabsProps> = ({
     index = 0,
     size = 'medium',
     activation = 'auto',
+    onSelect = () => {},
     onTabSelect = () => {},
     children
 }) => {
@@ -28,7 +33,8 @@ const Tabs: FC<TabsProps> = ({
     const [selectedIndex, setSelectedIndex] = useState<number>(index)
     const [focusedIndex, setFocusedIndex] = useState<number>(index)
 
-    const onSelect = (i: number): void => {
+    const handleSelect = (i: number): void => {
+        onSelect({ selectedIndex: i })
         onTabSelect(i)
         setSelectedIndex(i)
     }
@@ -42,7 +48,7 @@ const Tabs: FC<TabsProps> = ({
             ev.preventDefault()
 
             if (activation === 'manual') {
-                onSelect(i)
+                handleSelect(i)
             }
         })
 
@@ -57,16 +63,15 @@ const Tabs: FC<TabsProps> = ({
             headings[nextIndex]?.focus()
 
             if (activation !== 'manual') {
-                onSelect(nextIndex)
+                handleSelect(nextIndex)
             }
         })
     }
 
     useEffect(() => {
-        onSelect(index)
+        handleSelect(index)
     }, [index])
 
-    const isFake = filterBy(children, ({ type, props }) => type === Tab && props.href).length > 0
     const isLarge = size === 'large'
 
     const tabHeadings = filterByType(children, Tab).map((item, i) =>
@@ -78,35 +83,24 @@ const Tabs: FC<TabsProps> = ({
             selected: selectedIndex === i,
             focused: focusedIndex === i,
             onClick: () => {
-                onSelect(i)
+                handleSelect(i)
                 setFocusedIndex(i)
             },
             onKeyDown: e => { onKeyDown(e, i) }
         }))
 
     const tabPanels = filterByType(children, TabPanel).map((item, i) => {
-        const { children: content } = item.props
         const itemProps = {
             index: i,
             parentId: id,
             selected: selectedIndex === i,
-            fake: isFake,
-            children: content
+            children: item.props.children
         }
 
         return cloneElement(item, itemProps)
     })
 
-    return isFake ? (
-        <div id={id} className={classNames(className, 'fake-tabs')}>
-            <ul className={classNames('fake-tabs__items', { 'fake-tabs__items--large': isLarge })}>
-                {tabHeadings}
-            </ul>
-            <div className="fake-tabs__content">
-                {tabPanels}
-            </div>
-        </div>
-    ) : (
+    return (
         <div id={id} className={classNames(className, 'tabs')}>
             <div className={classNames('tabs__items', { 'tabs__items--large': isLarge })} role="tablist">
                 {tabHeadings}

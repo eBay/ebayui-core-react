@@ -28,27 +28,23 @@ import '@ebay/skin/tabs';
 
 Name | Type | Stateful | Description
 --- | --- | --- | ---
-`index` |Number | Yes | 0-based index of selected tab heading and panel
+`index` |Number | Yes | Deprecated, use `selectedIndex` instead. 0-based index of selected tab heading and panel
+`selectedIndex` |Number | Yes | 0-based index of selected tab heading and panel
 `activation` | Enum | Yes | whether to use automatic or manual activation when navigating by keyboard, can be `auto` (default) or `manual`
 `size` | Enum | No | Whether to opt into larger font-size for tab headings, can be `medium` (default) or `large`
 
 ## Callbacks
 
-Event | Data | Description
---- | --- | ---
-`onTabSelect` | `{ index }` |
+| Event         | Data                                      | Description                                                                                             |
+|---------------|-------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| `onTabSelect` | `({ index: number })`                     | Triggered on tab selected. Deprecated, use onSelect instead. Will be removed in the next major release. |
+| `onSelect`    | `(ChangeEvent, { selectedIndex:number })` | Triggered on tab selected.                                                                              |
 
 ## EbayTab
 
 ```jsx harmony
 <EbayTab>Tab 1</EbayTab>
 ```
-
-### EbayTab Props
-
-Name | Type | Stateful | Description
---- | --- | --- | ---
-`href` | String | No | For use with `fake` tab component (links instead of real tabs)
 
 ## EbayTabPanel
 ```jsx harmony

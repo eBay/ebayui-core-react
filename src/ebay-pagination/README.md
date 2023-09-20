@@ -44,11 +44,11 @@ Name | Type | Stateful | Description
 
 ### EbayPagination Events
 
-Event | Data | Description
---- | --- | ---
-`onPrevious` | `{ originalEvent }`| clicked previous arrow button
-`onNext` | `{ originalEvent }` | clicked next arrow button
-`onSelect` | `{ originalEvent, value, index }` | page selected clicked
+| Event        | Data                        | Description                   |
+|--------------|-----------------------------|-------------------------------|
+| `onPrevious` | `(Event)`                   | clicked previous arrow button |
+| `onNext`     | `(Event)`                   | clicked next arrow button     |
+| `onSelect`   | `(Event, { value, index })` | page selected clicked         |
 
 ## EbayPaginationItem Tag
 

@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayTabs, EbayTab, EbayTabPanel } from '../index'
 
-
 describe('<EbayTabs>', () => {
     describe('on `tab` key press', () => {
         let wrapper, tabs
@@ -71,12 +70,13 @@ describe('<EbayTabs>', () => {
     })
 
     describe('on tab click', () => {
-        let wrapper, spy, tabs
+        let wrapper, spy, oldSpy, tabs
 
         beforeEach(() => {
+            oldSpy = jest.fn()
             spy = jest.fn()
             wrapper = render(
-                <EbayTabs onTabSelect={spy}>
+                <EbayTabs onTabSelect={oldSpy} onSelect={spy}>
                     <EbayTab key="0">tab1</EbayTab>,
                     <EbayTab key="1">tab2</EbayTab>,
                     <EbayTabPanel key="0">Tab panel 1</EbayTabPanel>,
@@ -87,8 +87,10 @@ describe('<EbayTabs>', () => {
         })
 
         it('should fire an event', () => {
-            fireEvent.click(tabs[0])
-            expect(spy).toBeCalled()
+            const selectedIndex = 0
+            fireEvent.click(tabs[selectedIndex])
+            expect(oldSpy).toBeCalledWith(selectedIndex)
+            expect(spy).toBeCalledWith({ selectedIndex })
         })
 
         it('should select the new tab on click', () => {

@@ -6,7 +6,10 @@ import { EbayTabs, EbayTab as Tab, EbayTabPanel as Panel } from '../index'
 
 storiesOf('ebay-tabs', module)
     .add('Default Tabs', () => (<>
-        <EbayTabs onTabSelect={action('tab selected')}>
+        <EbayTabs
+            onTabSelect={action('tab selected')}
+            onSelect={(e, props) => action('onSelect(e, props')}
+        >
             <Tab>Tab 1</Tab>
             <Tab>Tab 2</Tab>
             <Tab>Tab 3</Tab>
@@ -74,20 +77,6 @@ storiesOf('ebay-tabs', module)
 
         return <><Component /></>
     } )
-    .add('Fake Tabs (links)', () => (<>
-        <EbayTabs>
-            <Tab href="https://www.ebay.com/1">Tab 1</Tab>
-            <Tab href="https://www.ebay.com/2">Tab 2</Tab>
-            <Tab href="https://www.ebay.com/3">Tab 3</Tab>
-            <Panel>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare, quam at lacinia pretium, lacus
-                    urna luctus nisi, eget molestie massa tortor id lacus. Aenean ac fringilla lacus. Fusce vel dui ex.
-                    Vivamus luctus egestas nulla, non hendrerit purus luctus at. Maecenas vel diam enim. Pellentesque
-                    quam neque, porttitor tincidunt vestibulum at, dapibus sit amet tortor.
-                </p>
-            </Panel>
-        </EbayTabs>
-    </>))
     .add('Manually activated Tabs', () => (<>
         <EbayTabs activation="manual">
             <Tab>Tab 1</Tab>

@@ -4,7 +4,7 @@ import { EbayBadge } from '../ebay-badge'
 import { EbayIcon } from '../ebay-icon'
 import { EbayMenuType } from './types'
 
-export type MenuItemProps = Omit<ComponentProps<'div'>, 'onKeyDown'> & {
+export type MenuItemProps = ComponentProps<'div'> & {
     type?: EbayMenuType;
     focused?: boolean;
     tabIndex?: number;

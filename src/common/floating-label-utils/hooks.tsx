@@ -13,6 +13,7 @@ type FloatingLabelHookProps = {
     placeholder?: string;
     invalid?: boolean;
     opaqueLabel?: boolean;
+    onMount?: () => void;
 }
 
 type FloatingLabelHookReturn = {
@@ -76,7 +77,8 @@ export function useFloatingLabel({
     inputValue,
     placeholder,
     invalid,
-    opaqueLabel
+    opaqueLabel,
+    onMount = () => {}
 } : FloatingLabelHookProps): FloatingLabelHookReturn {
     const _internalInputRef = useRef(null)
     const inputRef = () => ref || _internalInputRef
@@ -105,6 +107,7 @@ export function useFloatingLabel({
         }
         selectFirstOptionText.current = getPlaceholder(inputRef()?.current)
         setPlaceholder(inputRef()?.current, ``)
+        onMount()
     }, [])
 
     useEffect(() => {

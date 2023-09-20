@@ -1,7 +1,6 @@
 import { ComponentProps } from 'react'
 import { EbayButtonProps } from '../ebay-button'
-import { MenuProps } from '../ebay-menu'
-import { EbayMenuButtonProps } from '../ebay-menu-button'
+import { EbayMenuProps } from '../ebay-menu'
 
 export type EbaySplitButtonProps = {
     a11yMenuText?: string;
@@ -17,5 +16,4 @@ export type Props =
     Omit<EbayButtonProps, 'ref'> &
     Omit<ComponentProps<'button'>, 'type' | MenuEvents> &
     Omit<ComponentProps<'a'>, MenuEvents> &
-    Omit<MenuProps, 'priority'> &
-    EbayMenuButtonProps;
+    Omit<EbayMenuProps, 'priority'>;

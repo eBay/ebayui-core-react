@@ -48,10 +48,12 @@ https://reactjs.org/docs/forms.html#the-select-tag. Notice that the selected val
 | `disabled`      | String   | No       | passed to the `<select>` element, default is `false`         |
 | `className`     | String   | No       | passed to the wrapper-element of the `<select>` element      |
 | `borderless`    | String   | No       | whether button has borders, default is `false`               |
-| `onChange`      | Function | No       | { el, index, selected }                                      |
 | `floatingLabel` | String   | No       | Indicates that the select is a floating label type and renders it as a label |
 | `inputSize`     | String   | No       | `default` (default), `large`                                 |
 | `invalid`       | Boolean  | No       | Indicates a field-level error with red border if true        |
+
+## Callbacks
+| `onChange`      | Function | No       | Called on option change with arguments: `(ChangeEvent, { index: number, selected: string[] }`                                      |
 
 ## EbaySelectOption Attributes
 

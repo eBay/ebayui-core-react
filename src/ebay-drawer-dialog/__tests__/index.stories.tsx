@@ -19,7 +19,20 @@ export const _Default = () => {
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog open={open} onClose={() => setOpen(false)}>
+            <EbayDrawerDialog
+                open={open}
+                onShow={action('onShow')}
+                onOpen={action('onOpen')}
+                onClose={() => {
+                    action('onClose')()
+                    setOpen(false)
+                }}
+                onExpanded={action('onExpanded')}
+                onCollapsed={action('onCollapsed')}
+                a11yCloseText="Close"
+                a11yMaximizeText="Maximize"
+                a11yMinimizeText="Minimize"
+            >
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
@@ -30,7 +43,8 @@ export const _Default = () => {
 };
 
 export const _Opened = () => (<>
-    <EbayDrawerDialog open onClose={action('Close button clicked.')} a11yCloseText="Close drawer">
+    <EbayDrawerDialog open onClose={action('Close button clicked.')} a11yCloseText="Close drawer"
+                      a11yMaximizeText="Maximize" a11yMinimizeText="Minimize">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -48,8 +62,9 @@ export const _WithoutHandle = () => {
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog noHandle open={open} onClose={() => setOpen(false)}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <EbayDrawerDialog noHandle open={open} onClose={() => setOpen(false)}
+                              a11yMaximizeText="Maximize" a11yMinimizeText="Minimize" a11yCloseText="Close">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
@@ -81,8 +96,9 @@ export const _LotsOfContent = () => {
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
             {numbers}
-            <EbayDrawerDialog open={open} onClose={() => setOpen(false)}>
-                <EbayDialogHeader>Scrollable content</EbayDialogHeader>
+            <EbayDrawerDialog open={open} onClose={() => setOpen(false)}
+                              a11yMaximizeText="Maximize" a11yMinimizeText="Minimize" a11yCloseText="Close">
+            <EbayDialogHeader>Scrollable content</EbayDialogHeader>
                 {numbers}
                 <EbayDialogFooter>
                     <EbayButton onClick={() => setOpen(false)}>Close</EbayButton>
@@ -99,8 +115,9 @@ export const _CustomFocus = () => {
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog open={open} focus={focusRef} onClose={() => setOpen(false)}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <EbayDrawerDialog open={open} focus={focusRef} onClose={() => setOpen(false)}
+                              a11yMaximizeText="Maximize" a11yMinimizeText="Minimize" a11yCloseText="Close">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
@@ -118,8 +135,9 @@ export const _WithoutAnimation = () => {
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog open={open} onClose={() => setOpen(false)} animated={false}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <EbayDrawerDialog open={open} onClose={() => setOpen(false)} animated={false}
+                              a11yMaximizeText="Maximize" a11yMinimizeText="Minimize" a11yCloseText="Close">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
@@ -135,7 +153,8 @@ export const _TriggerExpanded = () => {
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog open={open} onClose={() => setOpen(false)} expanded={expanded}>
+            <EbayDrawerDialog open={open} onClose={() => setOpen(false)} expanded={expanded}
+                a11yMaximizeText="Maximize" a11yMinimizeText="Minimize" a11yCloseText="Close">
                 <p>
                     Trigger Dialog Expanded programmatically.
                 </p>

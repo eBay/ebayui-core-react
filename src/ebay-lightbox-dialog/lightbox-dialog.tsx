@@ -9,7 +9,6 @@ type Mode = 'default' | 'mini'
 export interface Props<T = any> extends DialogBaseProps<T> {
   open?: boolean;
   mode?: Mode;
-  onOpen?: () => void;
   onClose?: () => void;
 }
 
@@ -17,7 +16,6 @@ const EbayLightboxDialog: FC<Props> = ({
     open,
     mode,
     onClose = () => {},
-    onOpen = () => {},
     ...rest
 }) => (
     <DialogBaseWithState

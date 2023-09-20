@@ -28,7 +28,6 @@ yarn add @ebay/ui-core-react
 Name | Type | Stateful | Description
 --- | --- | --- | ---
 `value` | String | No |
-`onSelect` | `{ originalEvent, value, index }` | selected value and the index
 `aria-disabled` | boolean | No | Set to true if the field is disabled
 `aria-invalid` | boolean | No | Set to true if the field is invalid
 `fluid` | boolean | No | To make the listbox fluid
@@ -36,3 +35,11 @@ Name | Type | Stateful | Description
 `maxHeight` | string | No | example: 100px, 200px, 10rem
 `prefixId` | string | No | The id of an external element to use as the a11y prefix label for the listbox button.
 `floatingLabel` | string | No | Indicates that the listbox is a floating label type and renders it with a label
+
+## Callbacks
+
+| Name       | Type     | Required | Description           | Data                                                                         |
+|------------|----------|----------|-----------------------|------------------------------------------------------------------------------|
+| `onChange`  | Function | No       | triggered on change   | `(ChangeEvent, { index: number, selected: string[] , wasClicked: boolean })` |
+| `onCollapse` | Function | No       | triggered on collapse | `()`                                                            |
+| `onExpand`  | Function | No       | triggered on expand   | `()`                                                               |

@@ -11,10 +11,17 @@ import {
 
 storiesOf('ebay-fake-menu-button', module)
     .add('Default', () => (<>
-        <EbayFakeMenuButton text="eBay Menu">
-            <Item href="http://ebay.com">eBay US</Item>
-            <Item href="http://ebay.de">eBay DE</Item>
-            <Item href="http://ebay.co.uk">eBay UK</Item>
+        <EbayFakeMenuButton
+            text="eBay Menu"
+            onExpand={() => action('onExpand')()}
+            onCollapse={() => action('onCollapse')()}
+            onKeyDown={(e) => action('onKeyDown')(e)}
+            onMouseDown={(e, props) => action('onMouseDown')(e, props)}
+            onSelect={(e, props) => action('onSelect')(e, props)}
+        >
+            <Item href="http://ebay.com" onClick={e => e.preventDefault()}>eBay US</Item>
+            <Item href="http://ebay.de" onClick={e => e.preventDefault()}>eBay DE</Item>
+            <Item href="http://ebay.co.uk" onClick={e => e.preventDefault()}>eBay UK</Item>
         </EbayFakeMenuButton>
     </>))
     .add('Expanded', () => (<>

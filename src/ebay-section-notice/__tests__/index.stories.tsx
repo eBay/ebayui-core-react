@@ -1,7 +1,6 @@
 import React  from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
-import { EbayButton } from '../../ebay-button'
 import { EbaySectionNotice, EbayNoticeContent, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from '../index'
 
 storiesOf(`ebay-section-notice`, module)
@@ -26,9 +25,9 @@ storiesOf(`ebay-section-notice`, module)
                 </p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
-                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
+                <button onClick={action('Action Button Clicked')} className="fake-link">
                     Do something
-                </EbayButton>
+                </button>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
     </>))
@@ -36,29 +35,29 @@ storiesOf(`ebay-section-notice`, module)
     .add(`Confirmation message`, () => (<>
         <EbaySectionNotice status="confirmation">
             <EbayNoticeContent>
-                <p>This successfully finished <a href="http://www.ebay.com">next page</a></p>
+                <EbaySectionNoticeTitle>This successfully finished! <a href="http://www.ebay.com">next page</a></EbaySectionNoticeTitle>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
-                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
-                    Dismiss
-                </EbayButton>
+                <button onClick={action('Action Button Clicked')} className="fake-link">
+                    Take a look
+                </button>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
     </>))
 
-    .add(`Information message`, () => (<>
-        <EbaySectionNotice status="information">
+    .add(`Information message (dismissable)`, () => (<>
+        <EbaySectionNotice
+            status="information"
+            a11yDismissText="Dismiss"
+            onDismiss={e => action('onDismiss')(e)}
+        >
             <EbayNoticeContent>
-                <p>
+                <EbaySectionNoticeTitle>
                     <strong>Good news!</strong> You get free shipping on your next pair of shoes!&nbsp;
                     <a href="http://www.ebay.com">Learn more</a>.
-                </p>
+                </EbaySectionNoticeTitle>
             </EbayNoticeContent>
-            <EbaySectionNoticeFooter>
-                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
-                    Dismiss
-                </EbayButton>
-            </EbaySectionNoticeFooter>
+            <p className="section-notice__cta"><a href="https://www.ebay.com">Opt in</a></p>
         </EbaySectionNotice>
     </>))
 
@@ -74,9 +73,9 @@ storiesOf(`ebay-section-notice`, module)
                 </p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
-                <EbayButton onClick={action('Action Button Clicked')} className="fake-link">
+                <button onClick={action('Action Button Clicked')} className="fake-link">
                     Show more
-                </EbayButton>
+                </button>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
     </>))

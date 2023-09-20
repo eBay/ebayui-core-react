@@ -1,7 +1,9 @@
 import React from 'react'
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayButton } from '../index'
+
+const anySyntheticEvent = expect.objectContaining( { target: null })
 
 initStoryshots({
     config: ({ configure }) =>
@@ -34,15 +36,31 @@ describe('<EbayButton>', () => {
 
             fireEvent.click(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toBeCalledWith(anySyntheticEvent)
         })
         it('on escape', () => {
             const spy = jest.fn()
             const wrapper = render(<EbayButton onEscape={spy} />)
 
-            fireEvent.keyDown(wrapper.getByRole('button'), {key: 'Escape' })
+            fireEvent.keyDown(wrapper.getByRole('button'), { key: 'Escape' })
 
-            expect(spy).toBeCalled()
+            expect(spy).toBeCalledWith(anySyntheticEvent)
+        })
+        it('on focus', () => {
+            const spy = jest.fn()
+            const wrapper = render(<EbayButton onFocus={spy} />)
+
+            fireEvent.focus(wrapper.getByRole('button'))
+
+            expect(spy).toBeCalledWith(anySyntheticEvent)
+        })
+        it('on blur', () => {
+            const spy = jest.fn()
+            const wrapper = render(<EbayButton onBlur={spy} />)
+
+            fireEvent.blur(wrapper.getByRole('button'))
+
+            expect(spy).toBeCalledWith(anySyntheticEvent)
         })
     })
 })

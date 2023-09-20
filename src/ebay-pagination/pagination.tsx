@@ -1,5 +1,6 @@
 import React, {
     Children, ComponentProps, FC, ReactElement,
+    MouseEvent, KeyboardEvent,
     cloneElement, useEffect, useRef, useState, createRef
 } from 'react'
 import {
@@ -13,16 +14,16 @@ import { filterBy } from '../common/component-utils'
 import { PaginationItemType } from './pagination-item'
 import { ItemState, PaginationVariant } from './types'
 import { EbayIcon } from '../ebay-icon'
+import { EbayEventHandler } from '../common/event-utils/types'
 
-type PaginationCallback = (e?: Event, value?: string) => void;
-type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
+export type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
     id?: string;
     a11yPreviousText?: string;
     a11yNextText?: string;
     a11yCurrentText?: string;
-    onPrevious?: PaginationCallback;
-    onNext?: PaginationCallback;
-    onSelect?: (e?: Event, value?: string, index?: number) => void;
+    onPrevious?: EbayEventHandler;
+    onNext?: EbayEventHandler;
+    onSelect?: EbayEventHandler<{ value: string, index: number }>;
     variant?: PaginationVariant;
     fluid?: boolean;
 };
@@ -119,12 +120,12 @@ const EbayPagination: FC<PaginationProps> = ({
                         key={key}
                         href={href}
                         onClick={
-                            (event: React.MouseEvent<HTMLAnchorElement> & Event) => {
+                            (event: MouseEvent<HTMLAnchorElement> & KeyboardEvent) => {
                                 if (!href) {
                                     event.preventDefault()
                                 }
                                 const currentTarget = event.currentTarget as HTMLElement
-                                onSelect(event, currentTarget?.innerText, pageIndex)
+                                onSelect(event as any, { value: currentTarget?.innerText || '', index: pageIndex })
                                 updatePages(Number(currentTarget?.innerText))
                             }
                         }
