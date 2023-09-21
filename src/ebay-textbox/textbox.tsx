@@ -38,6 +38,7 @@ export type EbayTextboxProps = {
     onButtonClick?: EbayKeyboardEventHandler<HTMLInputElement, TextboxEventProps> &
         EbayMouseEventHandler<HTMLInputElement, TextboxEventProps>;
     forwardedRef?: Ref<HTMLTextAreaElement | HTMLInputElement>;
+    opaqueLabel?: boolean;
 } & Omit<TextInputProps, 'onFocus' | 'onBlur' | 'onChange' | 'onKeyPress' | 'onKeyUp' | 'onKeyDown' | 'onInvalid'>;
 
 const EbayTextbox: FC<EbayTextboxProps> = ({
@@ -63,6 +64,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
     floatingLabel,
     children,
     placeholder,
+    opaqueLabel,
     ...rest
 }) => {
     const [value, setValue] = useState(defaultValue)
@@ -84,6 +86,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
         inputValue: controlledValue || inputValue,
         placeholder,
         invalid,
+        opaqueLabel,
         onMount: onFloatingLabelInit
     })
 

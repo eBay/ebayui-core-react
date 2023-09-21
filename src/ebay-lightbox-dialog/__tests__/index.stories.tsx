@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
+import { EbayDialogFooter, EbayDialogHeader, EbayDialogPreviousButton } from '../../ebay-dialog-base'
 import { EbayButton } from '../../ebay-button'
 import { EbayCheckbox } from '../../ebay-checkbox'
 import { EbayLabel } from '../../ebay-field'
@@ -158,5 +158,17 @@ export const _WithNoBackgroundClick = () => {
         </div>
     );
 };
+
+export const _WithPreviousButton = () => (
+    <div>
+        <p>Some outside content...</p>
+        <EbayLightboxDialog open a11yCloseText="Close dialog">
+            <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')}/>
+            <EbayDialogHeader>Heading</EbayDialogHeader>
+            {textParagraph}
+            <p><a href="http://www.ebay.com">www.ebay.com</a></p>
+        </EbayLightboxDialog>
+    </div>
+);
 
 export default story;

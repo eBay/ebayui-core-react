@@ -47,6 +47,7 @@ export interface DialogBaseProps<T> extends HTMLProps<T> {
     mainId?: string;
     ignoreEscape?: boolean;
     closeButton?: ReactElement;
+    previousButton?: ReactElement;
     focus?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     animated?: boolean;
     transitionElement?: TransitionElement;
@@ -74,6 +75,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     onBackgroundClick = () => {},
     ignoreEscape,
     closeButton,
+    previousButton,
     isModal,
     role = 'dialog',
     focus,
@@ -198,6 +200,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
                 {top}
                 {dialogHeader && (
                     <div className={`${classPrefix}__header`}>
+                        {previousButton}
                         {buttonPosition === 'right' && dialogHeader}
                         {buttonPosition !== 'bottom' && closeButtonContent}
                         {(buttonPosition === 'left' || buttonPosition === 'hidden') && dialogHeader}

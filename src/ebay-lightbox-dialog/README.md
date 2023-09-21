@@ -32,3 +32,6 @@ Will render a header content for the dialog. Will always render the header eleme
 
 ## EbayDialogFooter
 Will render the footer content for the dialog. If not present then will not have any footer.
+
+## EbayDialogPreviousButton
+Will render the previous icon button. The icon can be overwritten with the `icon` attribute
