@@ -35,8 +35,8 @@ exports[`Storyshots ebay-listbox-button Borderless 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="BB"
     hidden={true}
-    value="BB"
   >
     <option
       value="AA"
@@ -87,8 +87,8 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="AA"
     hidden={true}
-    value="AA"
   >
     <option
       value="AA"
@@ -148,8 +148,8 @@ Array [
     </button>
     <select
       className="listbox-button__native"
+      defaultValue="BB"
       hidden={true}
-      value="BB"
     >
       <option
         value="AA"
@@ -200,8 +200,8 @@ exports[`Storyshots ebay-listbox-button Default 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="BB"
     hidden={true}
-    value="BB"
   >
     <option
       value="AA"
@@ -252,8 +252,8 @@ exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="BB"
     hidden={true}
-    value="BB"
   >
     <option
       value="AA"
@@ -309,8 +309,8 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="AA"
     hidden={true}
-    value="AA"
   >
     <option
       value="AA"
@@ -360,8 +360,8 @@ exports[`Storyshots ebay-listbox-button Fluid 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="BB"
     hidden={true}
-    value="BB"
   >
     <option
       value="AA"
@@ -412,8 +412,8 @@ exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="BB"
     hidden={true}
-    value="BB"
   >
     <option
       value="AA"
@@ -464,8 +464,8 @@ exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
     </button>
     <select
       className="listbox-button__native"
+      defaultValue="California"
       hidden={true}
-      value="California"
     >
       <option
         value="California"
@@ -540,8 +540,8 @@ exports[`Storyshots ebay-listbox-button Too many options 1`] = `
   </button>
   <select
     className="listbox-button__native"
+    defaultValue="BB"
     hidden={true}
-    value="BB"
   >
     <option
       value="AA"

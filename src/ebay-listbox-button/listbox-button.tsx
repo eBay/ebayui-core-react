@@ -286,7 +286,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                         {updatelistBoxButtonOptions}
                     </div>
                 </div>}
-            <select hidden className="listbox-button__native" name={name} value={selectedOption.props.value}>
+            <select hidden className="listbox-button__native" name={name} defaultValue={selectedOption.props.value}>
                 {
                     updatelistBoxButtonOptions.map((option, i) =>
                         <option value={option.props.value} key={i} />)
