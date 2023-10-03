@@ -106,6 +106,30 @@ describe("<EbayListboxButton>", () => {
 
             expect(spy).toBeCalledWith(anySyntheticEvent, { index, selected: ['AA'], wasClicked: true })
         })
+
+        it(`should pass the current selected value`, () => {
+            const spy = jest.fn()
+            render(
+                <EbayListboxButton onChange={spy}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+                </EbayListboxButton>
+            )
+            fireEvent.click(getByRole('button'))
+
+            fireEvent.mouseDown(getAllByRole('option')[0])
+            fireEvent.click(getAllByRole('option')[0])
+            expect(spy).toBeCalledWith(anySyntheticEvent, { index: 0, selected: ['AA'], wasClicked: true })
+
+            fireEvent.mouseDown(getAllByRole('option')[1])
+            fireEvent.click(getAllByRole('option')[1])
+            expect(spy).toBeCalledWith(anySyntheticEvent, { index: 1, selected: ['BB'], wasClicked: true })
+
+            fireEvent.mouseDown(getAllByRole('option')[2])
+            fireEvent.click(getAllByRole('option')[2])
+            expect(spy).toBeCalledWith(anySyntheticEvent, { index: 2, selected: ['CC'], wasClicked: true })
+        })
     })
     describe('on expand', () => {
         it('should fire onExpand event', () => {
