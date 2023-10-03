@@ -1,6 +1,6 @@
 import React, {
     Children, cloneElement, useEffect, useRef, useState,
-    ComponentProps, FC, KeyboardEvent, ReactElement
+    ComponentProps, FC, KeyboardEvent, ReactElement, useCallback
 } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
@@ -79,10 +79,12 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
 
     const childrenArray = Children.toArray(children) as ReactElement[]
     const getSelectedValueByIndex = (index: number) => childrenArray[index].props.value
+    const getIndexByValue = useCallback((selectedValue) =>
+        childrenArray.findIndex(({ props }) => props.value === selectedValue), [childrenArray])
     const getSelectedOption = (currentIndex: number) => optionsByIndexRef.current.get(currentIndex)
     const setActiveDescendant = (index: number) => {
         const optionsContainerEle = optionsContainerRef.current
-        optionsContainerEle.setAttribute(`aria-activedescendant`, getSelectedOption(index).id)
+        optionsContainerEle?.setAttribute(`aria-activedescendant`, getSelectedOption(index).id)
     }
 
     const collapseListbox = () => {
@@ -103,7 +105,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         }
     }
 
-    const onOptionsSelect = (e, optionValue, index) => {
+    const onOptionsSelect = (e, index) => {
         // OnSelect set the selectedValue to the state and expanded to false to close the list box
         setSelectedOption(childrenArray[index])
         setSelectedIndex(index)
@@ -217,14 +219,14 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         }
     }
 
-    // We want to minic the select box behavior so we take the onSelect that passed
-    // at the parent level and use it for the OnClick on the list box since its a fake dropdown
-    const updatelistBoxButtonOptions = listBoxButtonOptions
+    // We want to mimic the select box behavior, so we take the onSelect that passed
+    // at the parent level and use it for the OnClick on the list box since it is a fake dropdown
+    const updateListBoxButtonOptions = listBoxButtonOptions
         .map((child, index) => cloneElement(child, {
             index,
             key: index,
             selected: child.props.value === selectedOption.props.value,
-            onClick: (e, optionValue) => onOptionsSelect(e, optionValue, index),
+            onClick: (e) => onOptionsSelect(e, index),
             innerRef: optionNode => !optionNode
                 ? optionsByIndexRef.current.delete(index)
                 : optionsByIndexRef.current.set(index, optionNode)
@@ -283,12 +285,17 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                             setTimeout(() => buttonRef.current.focus(), 0)
                         }}
                     >
-                        {updatelistBoxButtonOptions}
+                        {updateListBoxButtonOptions}
                     </div>
                 </div>}
-            <select hidden className="listbox-button__native" name={name} value={selectedOption.props.value}>
+            <select
+                hidden
+                className="listbox-button__native"
+                name={name}
+                onChange={(e) => onOptionsSelect(e, getIndexByValue(e.target.value))}
+                value={selectedOption.props.value}>
                 {
-                    updatelistBoxButtonOptions.map((option, i) =>
+                    updateListBoxButtonOptions.map((option, i) =>
                         <option value={option.props.value} key={i} />)
                 }
             </select>

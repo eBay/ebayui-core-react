@@ -36,6 +36,7 @@ exports[`Storyshots ebay-listbox-button Borderless 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="BB"
   >
     <option
@@ -88,6 +89,7 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="AA"
   >
     <option
@@ -149,6 +151,7 @@ Array [
     <select
       className="listbox-button__native"
       hidden={true}
+      onChange={[Function]}
       value="BB"
     >
       <option
@@ -201,6 +204,7 @@ exports[`Storyshots ebay-listbox-button Default 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="BB"
   >
     <option
@@ -253,6 +257,7 @@ exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="BB"
   >
     <option
@@ -310,6 +315,7 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="AA"
   >
     <option
@@ -361,6 +367,7 @@ exports[`Storyshots ebay-listbox-button Fluid 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="BB"
   >
     <option
@@ -413,6 +420,7 @@ exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="BB"
   >
     <option
@@ -465,6 +473,7 @@ exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
     <select
       className="listbox-button__native"
       hidden={true}
+      onChange={[Function]}
       value="California"
     >
       <option
@@ -541,6 +550,7 @@ exports[`Storyshots ebay-listbox-button Too many options 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value="BB"
   >
     <option
