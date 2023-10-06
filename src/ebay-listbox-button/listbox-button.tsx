@@ -110,7 +110,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         collapseListbox()
         setActiveDescendant(index)
         buttonRef.current.focus()
-        onChange(e, { index, selected: [getSelectedValueByIndex(selectedIndex)], wasClicked })
+        onChange(e, { index, selected: [getSelectedValueByIndex(index)], wasClicked })
         setWasClicked(false)
     }
 
