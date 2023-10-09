@@ -50,6 +50,7 @@ export interface DialogBaseProps<T> extends HTMLProps<T> {
     previousButton?: ReactElement;
     focus?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     animated?: boolean;
+    closeButtonClass?: string;
     transitionElement?: TransitionElement;
     children?: ReactNode;
 }
@@ -81,6 +82,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     focus,
     transitionElement,
     animated,
+    closeButtonClass,
     ...props
 }) => {
     const dialogRef = useRef(null)
@@ -167,7 +169,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     const closeButtonContent = buttonPosition !== 'hidden' && (
         <button
             ref={closeButtonRef}
-            className={classNames(`icon-btn`, `${classPrefix}__close`, {
+            className={classNames(`icon-btn`, closeButtonClass, `${classPrefix}__close`, {
                 'icon-btn--transparent': classPrefix === `toast-dialog`
             })}
             type="button"
