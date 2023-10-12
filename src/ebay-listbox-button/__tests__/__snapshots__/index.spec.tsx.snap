@@ -422,6 +422,57 @@ exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
 </span>
 `;
 
+exports[`Storyshots ebay-listbox-button Preselected index 1`] = `
+<span
+  className="listbox-button"
+>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="btn btn--form"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    type="button"
+  >
+    <span
+      className="btn__cell"
+    >
+      <span
+        className="btn__text"
+      >
+        Option 2
+      </span>
+      <svg
+        aria-hidden={true}
+        className="icon icon--chevron-down-16"
+        focusable={false}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlinkHref="#icon-chevron-down-16"
+        />
+      </svg>
+    </span>
+  </button>
+  <select
+    className="listbox-button__native"
+    hidden={true}
+    value="BB"
+  >
+    <option
+      value="AA"
+    />
+    <option
+      value="BB"
+    />
+    <option
+      value="CC"
+    />
+  </select>
+</span>
+`;
+
 exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
 <div>
   <span

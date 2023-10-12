@@ -15,6 +15,7 @@ export type ChangeEventProps = {
 }
 
 export type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onChange'> & {
+    selected?: number;
     borderless?: boolean;
     fluid?: boolean;
     maxHeight?: string;
@@ -30,6 +31,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     children,
     name,
     value,
+    selected,
     borderless,
     fluid,
     className,
@@ -53,7 +55,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         EbayListboxButtonOption that defines the options of the listbox`)
     }
     const getInitialSelectedOption = (): { option: any, index: number } => {
-        const selectedIndex = listBoxButtonOptions.findIndex(({ props }) =>
+        const selectedIndex = selected !== undefined ? selected : listBoxButtonOptions.findIndex(({ props }) =>
             value !== undefined && props.value === value)
         const index = selectedIndex > -1 || floatingLabel ? selectedIndex : undefined
         return {

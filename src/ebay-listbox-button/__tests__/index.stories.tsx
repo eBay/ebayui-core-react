@@ -19,6 +19,12 @@ storiesOf(`ebay-listbox-button`, module)
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
         </EbayListboxButton>
+    </>))    .add(`Preselected index`, () => (<>
+        <EbayListboxButton selected={1}>
+            <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+        </EbayListboxButton>
     </>))
     .add(`Default - no selected option`, () => (<>
         <EbayListboxButton

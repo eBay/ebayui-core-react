@@ -70,6 +70,15 @@ describe("<EbayListboxButton>", () => {
             );
             expect(component.getByRole('button')).toHaveTextContent("Option 2");
         });
+        it('should preselect option by index', async () => {
+            const component = await render(
+                <EbayListboxButton selected={1}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Option 2");
+        });
     });
 
     describe('given the listbox with 3 items', () => {
