@@ -62,7 +62,6 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
-    onSelect={[Function]}
     type="button"
   >
     <span
@@ -71,7 +70,7 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
       <span
         className="btn__text"
       >
-        Option 1
+        -
       </span>
       <svg
         aria-hidden={true}
@@ -88,7 +87,7 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
-    value="AA"
+    value=""
   >
     <option
       value="AA"
@@ -443,7 +442,7 @@ exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
         <span
           className="btn__text"
         >
-          California
+          -
         </span>
         <svg
           aria-hidden={true}
@@ -460,7 +459,7 @@ exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
     <select
       className="listbox-button__native"
       hidden={true}
-      value="California"
+      value=""
     >
       <option
         value="California"

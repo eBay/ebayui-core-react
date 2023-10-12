@@ -20,6 +20,7 @@ export type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onChange'> &
     maxHeight?: string;
     prefixId?: string;
     floatingLabel?: string;
+    unselectedText?: string;
     onChange?: EbayChangeEventHandler<HTMLButtonElement, ChangeEventProps>;
     onCollapse?: () => void;
     onExpand?: () => void;
@@ -35,6 +36,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     maxHeight,
     prefixId,
     floatingLabel,
+    unselectedText = '-',
     onChange = () => {},
     onCollapse = () => {},
     onExpand = () => {},
@@ -51,8 +53,9 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         EbayListboxButtonOption that defines the options of the listbox`)
     }
     const getInitialSelectedOption = (): { option: any, index: number } => {
-        const selectedIndex = listBoxButtonOptions.findIndex(({ props }) => props.value === value)
-        const index = selectedIndex > -1 || floatingLabel ? selectedIndex : 0
+        const selectedIndex = listBoxButtonOptions.findIndex(({ props }) =>
+            value !== undefined && props.value === value)
+        const index = selectedIndex > -1 || floatingLabel ? selectedIndex : undefined
         return {
             option: listBoxButtonOptions[index],
             index
@@ -236,6 +239,16 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     })
     const expandBtnTextId = prefixId && 'expand-btn-text'
 
+    const buttonLabel = floatingLabel ? (
+        <span className="btn__floating-label">
+            {floatingLabel}
+        </span>
+    ) : (
+        <span className="btn__text" id={expandBtnTextId}>
+            {selectedOption?.props.children || unselectedText}
+        </span>
+    )
+
     return (
         <span className={wrapperClassName}>
             <button
@@ -252,15 +265,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 ref={buttonRef}
             >
                 <span className="btn__cell">
-                    {floatingLabel ? (
-                        <span className="btn__floating-label">
-                            {floatingLabel}
-                        </span>
-                    ) : null}
-                    {selectedOption &&
-                    <span className="btn__text" id={expandBtnTextId}>
-                        {selectedOption.props.children}
-                    </span>}
+                    {buttonLabel}
                     <EbayIcon name="chevronDown16" />
                 </span>
             </button>

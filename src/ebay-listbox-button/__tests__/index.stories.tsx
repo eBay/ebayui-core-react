@@ -22,9 +22,9 @@ storiesOf(`ebay-listbox-button`, module)
     </>))
     .add(`Default - no selected option`, () => (<>
         <EbayListboxButton
-            onSelect={action(`onSelect triggered`)}
+            onChange={(e: ChangeEvent, props: ChangeEventProps) => action(`onChange`)(e, props)}
         >
-            <EbayListboxButtonOption value="AA" >Option 1</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
         </EbayListboxButton>

@@ -42,18 +42,51 @@ describe("<EbayListboxButton>", () => {
         });
     });
 
+    describe('on render', () => {
+        it('should display default button label', async () => {
+            const component = await render(
+                <EbayListboxButton>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("-");
+        });
+        it('should display custom button label', async () => {
+            const component = await render(
+                <EbayListboxButton unselectedText="Selected:">
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Selected:");
+        });
+        it('should display button label with selected option', async () => {
+            const component = await render(
+                <EbayListboxButton value="BB">
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Option 2");
+        });
+    });
+
     describe('given the listbox with 3 items', () => {
         let component
         beforeEach(async () => {
             component = await render(
-                    <EbayListboxButton value="BB" prefixId={"listboxBtnLabel"} name="listbox-button-name">
+                    <EbayListboxButton prefixId={"listboxBtnLabel"} name="listbox-button-name">
                         <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                         <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
                         <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
                     </EbayListboxButton>
             );
         });
-        it('then it should not be expanded', () => {
+        it('should display default button label', () => {
+            expect(component.getByRole('button')).toHaveTextContent("-");
+        });
+        it('should not be expanded', () => {
             expect(component.getByRole('button')).toHaveAttribute("aria-expanded", `false`);
         });
 
