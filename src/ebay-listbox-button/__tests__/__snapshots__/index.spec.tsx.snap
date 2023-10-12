@@ -275,7 +275,7 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
   <button
     aria-expanded={false}
     aria-haspopup="listbox"
-    className="btn btn--form btn--floating-label"
+    className="btn btn--form"
     onClick={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
@@ -289,11 +289,6 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
         className="btn__floating-label"
       >
         Select
-      </span>
-      <span
-        className="btn__text"
-      >
-        Option 1
       </span>
       <svg
         aria-hidden={true}
@@ -310,7 +305,7 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
-    value="AA"
+    value=""
   >
     <option
       value="AA"

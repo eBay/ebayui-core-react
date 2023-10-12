@@ -52,7 +52,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     }
     const getInitialSelectedOption = (): { option: any, index: number } => {
         const selectedIndex = listBoxButtonOptions.findIndex(({ props }) => props.value === value)
-        const index = selectedIndex > -1 ? selectedIndex : 0
+        const index = selectedIndex > -1 || floatingLabel ? selectedIndex : 0
         return {
             option: listBoxButtonOptions[index],
             index
@@ -223,7 +223,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         .map((child, index) => cloneElement(child, {
             index,
             key: index,
-            selected: child.props.value === selectedOption.props.value,
+            selected: selectedOption && child.props.value === selectedOption.props.value,
             onClick: (e, optionValue) => onOptionsSelect(e, optionValue, index),
             innerRef: optionNode => !optionNode
                 ? optionsByIndexRef.current.delete(index)
@@ -232,7 +232,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const wrapperClassName = classNames('listbox-button', className, { 'listbox-button--fluid': fluid })
     const buttonClassName = classNames('btn btn--form', {
         'btn--borderless': borderless,
-        'btn--floating-label': floatingLabel
+        'btn--floating-label': floatingLabel && selectedOption
     })
     const expandBtnTextId = prefixId && 'expand-btn-text'
 
@@ -257,7 +257,10 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                             {floatingLabel}
                         </span>
                     ) : null}
-                    <span className="btn__text" id={expandBtnTextId}>{selectedOption.props.children}</span>
+                    {selectedOption &&
+                    <span className="btn__text" id={expandBtnTextId}>
+                        {selectedOption.props.children}
+                    </span>}
                     <EbayIcon name="chevronDown16" />
                 </span>
             </button>
@@ -286,7 +289,11 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                         {updatelistBoxButtonOptions}
                     </div>
                 </div>}
-            <select hidden className="listbox-button__native" name={name} value={selectedOption.props.value}>
+            <select
+                hidden
+                className="listbox-button__native"
+                name={name}
+                value={selectedOption ? selectedOption?.props.value : ''}>
                 {
                     updatelistBoxButtonOptions.map((option, i) =>
                         <option value={option.props.value} key={i} />)
