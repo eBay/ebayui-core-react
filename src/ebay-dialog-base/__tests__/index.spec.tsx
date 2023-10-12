@@ -45,13 +45,16 @@ describe('DialogBase', () => {
         let wrapper: RenderResult
 
         beforeEach(() => {
-            wrapper = render(<HeaderFooterDialog classPrefix="drawer-dialog" className="custom-class" open />);
+            wrapper = render(<HeaderFooterDialog classPrefix="drawer-dialog" closeButtonClass="closeButtonClass" className="custom-class" open />);
         })
         it('should render a DialogBase', () => {
             expect(wrapper.container.querySelector('.custom-class')).toBeInTheDocument();
         });
         it('should render a DialogBase with custom classNames', () => {
             expect(wrapper.container.firstChild).toHaveClass('custom-class');
+        });
+        it('should render a close button with a custom className', () => {
+            expect(wrapper.container.querySelector(".closeButtonClass")).toBeInTheDocument();
         });
         describe('click events', () => {
             let spyCloseBtnClick = jest.fn();
