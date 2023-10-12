@@ -35,6 +35,7 @@ yarn add @ebay/ui-core-react
 | `borderless`     | boolean | No       | To make the listbox borderless                                                                          |
 | `maxHeight`      | string  | No       | example: 100px, 200px, 10rem                                                                            |
 | `prefixId`       | string  | No       | The id of an external element to use as the a11y prefix label for the listbox button.                   |
+| `prefixLabel`       | string  | No       | The label to add before selected option on the button. Cannot be used with `prefixId`              |
 | `floatingLabel`  | string  | No       | Indicates that the listbox is a floating label type and renders it with a label                         |
 | `unselectedText` | string  | No       | The text to be shown when no options are selected. Default is '-'. Cannot be used with `floating-label` |
 

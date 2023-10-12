@@ -20,6 +20,7 @@ export type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onChange'> &
     fluid?: boolean;
     maxHeight?: string;
     prefixId?: string;
+    prefixLabel?: string;
     floatingLabel?: string;
     unselectedText?: string;
     onChange?: EbayChangeEventHandler<HTMLButtonElement, ChangeEventProps>;
@@ -37,6 +38,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     className,
     maxHeight,
     prefixId,
+    prefixLabel,
     floatingLabel,
     unselectedText = '-',
     onChange = () => {},
@@ -246,9 +248,12 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
             {floatingLabel}
         </span>
     ) : (
-        <span className="btn__text" id={expandBtnTextId}>
-            {selectedOption?.props.children || unselectedText}
-        </span>
+        <>
+            {prefixLabel && <span className="btn__label">{prefixLabel}</span>}
+            <span className="btn__text" id={expandBtnTextId}>
+                {selectedOption?.props.children || unselectedText}
+            </span>
+        </>
     )
 
     return (

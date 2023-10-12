@@ -54,12 +54,12 @@ describe("<EbayListboxButton>", () => {
         });
         it('should display custom button label', async () => {
             const component = await render(
-                <EbayListboxButton unselectedText="Selected:">
+                <EbayListboxButton unselectedText="Select">
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
                 </EbayListboxButton>
             );
-            expect(component.getByRole('button')).toHaveTextContent("Selected:");
+            expect(component.getByRole('button')).toHaveTextContent("Select");
         });
         it('should display button label with selected option', async () => {
             const component = await render(
@@ -69,6 +69,24 @@ describe("<EbayListboxButton>", () => {
                 </EbayListboxButton>
             );
             expect(component.getByRole('button')).toHaveTextContent("Option 2");
+        });
+        it('should display button label with prefix', async () => {
+            const component = await render(
+                <EbayListboxButton prefixLabel="Selected:">
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Selected:-");
+        });
+        it('should display button label with prefix and selected option', async () => {
+            const component = await render(
+                <EbayListboxButton prefixLabel="Selected:" selected={1}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Selected:Option 2");
         });
         it('should preselect option by index', async () => {
             const component = await render(
