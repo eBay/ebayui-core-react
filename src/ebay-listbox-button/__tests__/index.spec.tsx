@@ -42,18 +42,78 @@ describe("<EbayListboxButton>", () => {
         });
     });
 
+    describe('on render', () => {
+        it('should display default button label', async () => {
+            const component = await render(
+                <EbayListboxButton>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("-");
+        });
+        it('should display custom button label', async () => {
+            const component = await render(
+                <EbayListboxButton unselectedText="Select">
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Select");
+        });
+        it('should display button label with selected option', async () => {
+            const component = await render(
+                <EbayListboxButton value="BB">
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Option 2");
+        });
+        it('should display button label with prefix', async () => {
+            const component = await render(
+                <EbayListboxButton prefixLabel="Selected:">
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Selected:-");
+        });
+        it('should display button label with prefix and selected option', async () => {
+            const component = await render(
+                <EbayListboxButton prefixLabel="Selected:" selected={1}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Selected:Option 2");
+        });
+        it('should preselect option by index', async () => {
+            const component = await render(
+                <EbayListboxButton selected={1}>
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                </EbayListboxButton>
+            );
+            expect(component.getByRole('button')).toHaveTextContent("Option 2");
+        });
+    });
+
     describe('given the listbox with 3 items', () => {
         let component
         beforeEach(async () => {
             component = await render(
-                    <EbayListboxButton value="BB" prefixId={"listboxBtnLabel"} name="listbox-button-name">
+                    <EbayListboxButton prefixId={"listboxBtnLabel"} name="listbox-button-name">
                         <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                         <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
                         <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
                     </EbayListboxButton>
             );
         });
-        it('then it should not be expanded', () => {
+        it('should display default button label', () => {
+            expect(component.getByRole('button')).toHaveTextContent("-");
+        });
+        it('should not be expanded', () => {
             expect(component.getByRole('button')).toHaveAttribute("aria-expanded", `false`);
         });
 
