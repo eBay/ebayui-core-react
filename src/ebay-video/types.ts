@@ -6,3 +6,5 @@ export type VideoSource = {
     src: string;
     type?: VideoSourceType
 }
+
+export { Player } from './shaka-player'
