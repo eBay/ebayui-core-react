@@ -86,6 +86,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
         inputValue: controlledValue || inputValue,
         placeholder,
         invalid,
+        type,
         opaqueLabel,
         onMount: onFloatingLabelInit
     })
