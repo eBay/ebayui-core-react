@@ -243,12 +243,10 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     })
     const expandBtnTextId = prefixId && 'expand-btn-text'
 
-    const buttonLabel = floatingLabel ? (
-        <span className="btn__floating-label">
-            {floatingLabel}
-        </span>
-    ) : (
+
+    const buttonLabel = (
         <>
+            {floatingLabel && <span className="btn__floating-label">{floatingLabel}</span>}
             {prefixLabel && <span className="btn__label">{prefixLabel}</span>}
             <span className="btn__text" id={expandBtnTextId}>
                 {selectedOption?.props.children || unselectedText}
