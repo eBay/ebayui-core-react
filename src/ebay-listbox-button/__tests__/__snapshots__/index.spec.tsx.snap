@@ -288,6 +288,11 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
       >
         Select
       </span>
+      <span
+        className="btn__text"
+      >
+        -
+      </span>
       <svg
         aria-hidden={true}
         className="icon icon--chevron-down-16"
