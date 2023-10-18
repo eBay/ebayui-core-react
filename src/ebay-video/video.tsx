@@ -1,5 +1,7 @@
 import React, { ComponentProps, FC, SyntheticEvent, MouseEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
+// need that for broken definitions workaround
+// @ts-ignore
 import shaka from 'shaka-player/dist/shaka-player.ui'
 
 import { filterByType } from '../common/component-utils'

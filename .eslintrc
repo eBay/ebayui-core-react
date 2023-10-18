@@ -54,6 +54,8 @@
                 "args": "none"
             }
         ],
+        // need that for shaka-player workaround
+        "@typescript-eslint/ban-ts-comment": "off",
         // works incorrectly with type imports
         "no-import-assign": "off",
         "react/prop-types": "off",
