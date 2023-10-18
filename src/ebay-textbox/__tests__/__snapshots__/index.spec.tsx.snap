@@ -106,6 +106,29 @@ exports[`Storyshots ebay-textbox Floating label invalid 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Storyshots ebay-textbox Floating label type date 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Floating label
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control"
+        type="date"
+        value=""
+      />
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-textbox Floating label with autofocus 1`] = `
 <DocumentFragment>
   <p>
