@@ -7,4 +7,4 @@ export type VideoSource = {
     type?: VideoSourceType
 }
 
-export { Player } from './shaka-player'
+export type Player = Record<string, any>
