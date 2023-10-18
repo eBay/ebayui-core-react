@@ -1,11 +1,13 @@
 import React, { ComponentProps, FC, SyntheticEvent, MouseEvent, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
+// need that for broken definitions workaround
+// @ts-ignore
 import shaka from 'shaka-player/dist/shaka-player.ui'
 
 import { filterByType } from '../common/component-utils'
 import { EbayIcon } from '../ebay-icon'
 import { EbayProgressSpinner } from '../ebay-progress-spinner'
-import { VideoAction, VideoPlayView } from './types'
+import { Player, VideoAction, VideoPlayView } from './types'
 import EbayVideoSource from './source'
 import { defaultVideoConfig, ERROR_ANOTHER_LOAD, ERROR_NO_PLAYER } from './const'
 import { customControls } from './controls'

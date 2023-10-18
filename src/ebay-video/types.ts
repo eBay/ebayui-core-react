@@ -6,3 +6,5 @@ export type VideoSource = {
     src: string;
     type?: VideoSourceType
 }
+
+export type Player = Record<string, any>
