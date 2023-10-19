@@ -64,8 +64,8 @@ const EbayTourtip:FC<TourtipProps> = ({
             <TooltipHost
                 {...host.props}
                 forwardedRef={hostRef}
-                ariaLabel={ariaLabel}
-                ariaExpanded={isExpanded} />
+                aria-label={ariaLabel}
+                aria-expanded={isExpanded} />
             <TooltipContent
                 {...contentProps}
                 a11yCloseText={a11yCloseText}
