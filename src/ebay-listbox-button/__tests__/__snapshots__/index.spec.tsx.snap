@@ -475,6 +475,7 @@ exports[`Storyshots ebay-listbox-button Prefix label 1`] = `
   <select
     className="listbox-button__native"
     hidden={true}
+    onChange={[Function]}
     value=""
   >
     <option
