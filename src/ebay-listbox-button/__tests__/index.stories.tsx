@@ -20,11 +20,18 @@ storiesOf(`ebay-listbox-button`, module)
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
         </EbayListboxButton>
     </>))
+    .add(`Preselected index`, () => (<>
+        <EbayListboxButton selected={1}>
+            <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+        </EbayListboxButton>
+    </>))
     .add(`Default - no selected option`, () => (<>
         <EbayListboxButton
-            onSelect={action(`onSelect triggered`)}
+            onChange={(e: ChangeEvent, props: ChangeEventProps) => action(`onChange`)(e, props)}
         >
-            <EbayListboxButtonOption value="AA" >Option 1</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
         </EbayListboxButton>
@@ -121,12 +128,15 @@ storiesOf(`ebay-listbox-button`, module)
             <EbayListboxButtonOption value="102">Option 39</EbayListboxButtonOption>
         </EbayListboxButton>
     </>))
+    .add(`Prefix label`, () => (<>
+        <EbayListboxButton prefixLabel="Selected:">
+            <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+        </EbayListboxButton>
+    </>))
     .add(`Floating label`, () => (<>
-        <EbayListboxButton
-            value=""
-            floatingLabel="Select"
-            onSelect={action(`onSelect triggered`)}
-        >
+        <EbayListboxButton floatingLabel="Select">
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>

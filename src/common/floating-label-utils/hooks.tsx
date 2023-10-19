@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 type InputRef = RefObject<HTMLSelectElement | HTMLTextAreaElement | HTMLInputElement> | any
 type FloatingLabelHookProps = {
+    type?: string;
     inputId?: string;
     ref?: InputRef;
     disabled?: boolean;
@@ -78,6 +79,7 @@ export function useFloatingLabel({
     placeholder,
     invalid,
     opaqueLabel,
+    type,
     onMount = () => {}
 } : FloatingLabelHookProps): FloatingLabelHookReturn {
     const _internalInputRef = useRef(null)
@@ -120,7 +122,7 @@ export function useFloatingLabel({
     const labelClassName = classNames(className, classPrefix, {
         [`${classPrefix}--disabled`]: disabled,
         [`${classPrefix}--animate`]: shouldAnimate,
-        [`${classPrefix}--inline`]: !isFloating,
+        [`${classPrefix}--inline`]: !isFloating && type !== 'date',
         [`${classPrefix}--invalid`]: invalid
     })
 

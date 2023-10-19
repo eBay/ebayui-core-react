@@ -1,11 +1,14 @@
 import React, { ReactElement } from 'react'
 import ReactDOM from 'react-dom'
+// need that for broken definitions workaround
+// @ts-ignore
 import { ui } from 'shaka-player/dist/shaka-player.ui'
 import { ReportButton } from './reportButton'
 
 export function customControls(onReport = () => {}): { Report } {
     // Have to contain in order to not execute until shaka is downloaded
-    const Report = class extends ui.Element {
+    // eslint-disable-next-line no-extra-parens
+    const Report = class extends (ui.Element as any) {
         constructor(parent, controls, text) {
             super(parent, controls)
 

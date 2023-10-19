@@ -134,6 +134,15 @@ storiesOf('ebay-textbox', module)
             onFloatingLabelInit={() => action('onFloatingLabelInit')()}
         />
     ))
+    .add('Floating label type date', () => (
+        <EbayTextbox
+            type="date"
+            floatingLabel="Floating label"
+            onChange={action('onChange')}
+            onInputChange={action('onInputChange')}
+            onFloatingLabelInit={() => action('onFloatingLabelInit')()}
+        />
+    ))
     .add('Floating label with value', () => (
         <EbayTextbox
             onChange={action('textbox-changed')}
