@@ -1,43 +1,55 @@
 import React, { useState } from 'react'
-import { ComponentMeta, storiesOf } from '@storybook/react'
+import { ComponentMeta } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayIcon } from '../../ebay-icon'
-import { EbayMenuButtonItem as Item, EbayMenuButtonSeparator as Separator } from '../../ebay-menu-button'
+import {
+    EbayMenuButtonItem as Item,
+    EbayMenuButtonSeparator as Separator
+} from '../../ebay-menu-button'
 import { EbaySplitButton } from '../index'
 import { Priority } from '../../ebay-button'
 
 Item.displayName = 'Item'
 Item.toString = () => 'Item'
-storiesOf('ebay-split-button', module)
-    .add('Controls', (args) =>
-        <EbaySplitButton {...args}>
-            Save document
-            <Item>Save as...</Item>
-            <Item>Export</Item>
-        </EbaySplitButton>,
-        {
-            component: EbaySplitButton,
-            args: {
-                priority: 'secondary',
-                a11yMenuText: 'Show save options'
+
+export default {
+    title: 'ebay-split-button'
+} 
+
+export const Controls = (args) => (
+    <EbaySplitButton {...args}>
+        Save document
+        <Item>Save as...</Item>
+        <Item>Export</Item>
+    </EbaySplitButton>
+)
+
+Controls.story = {
+    parameters: {
+        component: EbaySplitButton,
+        args: {
+            priority: 'secondary',
+            a11yMenuText: 'Show save options'
+        },
+        argTypes: {
+            priority: {
+                options: ['primary', 'secondary', 'tertiary', 'none'] as Priority[],
+                control: 'select'
             },
-            argTypes: {
-                priority: {
-                    options: ['primary', 'secondary', 'tertiary', 'none'] as Priority[],
-                    control: 'select'
-                },
-                onClick: { action: 'clicked' },
-                onKeyDown: { action: 'key down' },
-                onEscape: { action: 'Esc pressed' },
-                onFocus: { action: 'focused' },
-                onBlur: { action: 'blured' },
-                onCollapse: { action: 'collapsed' },
-                onExpand: { action: 'expanded' },
-                onSelect: { action: 'selected' }
-            }
-        } as ComponentMeta<typeof EbaySplitButton>
-    )
-    .add('Default', () => (<>
+            onClick: { action: 'clicked' },
+            onKeyDown: { action: 'key down' },
+            onEscape: { action: 'Esc pressed' },
+            onFocus: { action: 'focused' },
+            onBlur: { action: 'blured' },
+            onCollapse: { action: 'collapsed' },
+            onExpand: { action: 'expanded' },
+            onSelect: { action: 'selected' }
+        }
+    } as ComponentMeta<typeof EbaySplitButton>
+}
+
+export const Default = () => (
+    <>
         <p>
             <EbaySplitButton
                 priority="primary"
@@ -82,8 +94,11 @@ storiesOf('ebay-split-button', module)
                 </Item>
             </EbaySplitButton>
         </p>
-    </>))
-    .add('Size', () => (<>
+    </>
+)
+
+export const Size = () => (
+    <>
         <p>
             <EbaySplitButton
                 priority="primary"
@@ -128,10 +143,19 @@ storiesOf('ebay-split-button', module)
                 <Item>Item 3</Item>
             </EbaySplitButton>
         </p>
-    </>))
-    .add('Truncated', () => (<>
+    </>
+)
+
+export const Truncated = () => (
+    <>
         <p>
-            <EbaySplitButton priority="primary" style={{ maxWidth: '200px' }} truncate a11yMenuText="Show options" onClick={action('clicked')}>
+            <EbaySplitButton
+                priority="primary"
+                style={{ maxWidth: '200px' }}
+                truncate
+                a11yMenuText="Show options"
+                onClick={action('clicked')}
+            >
                 Primary Split Button with truncated text label
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
@@ -139,18 +163,26 @@ storiesOf('ebay-split-button', module)
             </EbaySplitButton>
         </p>
         <p>
-            <EbaySplitButton style={{ maxWidth: '200px' }} truncate a11yMenuText="Menu" onClick={action('clicked')}>
+            <EbaySplitButton
+                style={{ maxWidth: '200px' }}
+                truncate
+                a11yMenuText="Menu"
+                onClick={action('clicked')}
+            >
                 Split Button with truncated text label
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
                 <Item>Item 3</Item>
             </EbaySplitButton>
         </p>
-    </>))
-    .add('Loading', () => {
-        const [loading, setLoading] = useState(false)
+    </>
+)
 
-        return (<>
+export const Loading = () => {
+    const [loading, setLoading] = useState(false)
+
+    return (
+        <>
             <p>
                 <EbaySplitButton
                     bodyState={loading ? 'loading' : 'reset'}
@@ -167,9 +199,12 @@ storiesOf('ebay-split-button', module)
                     <Item disabled={!loading}>Stop loading</Item>
                 </EbaySplitButton>
             </p>
-        </>)
-    })
-    .add('Transparent', () => (<div style={{ background: 'lightcyan', padding: '1em' }}>
+        </>
+    )
+}
+
+export const Transparent = () => (
+    <div style={{ background: 'lightcyan', padding: '1em' }}>
         <p>
             <EbaySplitButton transparent a11yMenuText="Show options" onClick={action('clicked')}>
                 Transparent split button
@@ -179,18 +214,27 @@ storiesOf('ebay-split-button', module)
             </EbaySplitButton>
         </p>
         <p>
-            <EbaySplitButton priority="tertiary" transparent a11yMenuText="Show options" onClick={action('clicked')}>
+            <EbaySplitButton
+                priority="tertiary"
+                transparent
+                a11yMenuText="Show options"
+                onClick={action('clicked')}
+            >
                 Transparent tertiary split button
                 <Item>Item 1</Item>
                 <Item>Item 2</Item>
                 <Item>Item 3</Item>
             </EbaySplitButton>
         </p>
-    </div>))
-    .add('Disabled', () => (<>
+    </div>
+)
+
+export const Disabled = () => (
+    <>
         <p>
             <EbaySplitButton disabled a11yMenuText="Show options" onClick={action('clicked')}>
                 Disabled Split Button
             </EbaySplitButton>
         </p>
-    </>))
+    </>
+)

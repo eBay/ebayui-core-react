@@ -1,46 +1,76 @@
 import React, { useState } from 'react'
-import { storiesOf } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayButton } from '../../ebay-button'
 import { EbayInlineNotice, EbayNoticeContent } from '../index'
 
-storiesOf(`ebay-inline-notice`, module)
+export default {
+    title: 'ebay-inline-notice'
+}
 
-    .add(`Default`, () => (<>
+export const Default = () => (
+    <>
         <EbayInlineNotice aria-label="General">
-            <EbayNoticeContent><p>text message</p></EbayNoticeContent>
+            <EbayNoticeContent>
+                <p>text message</p>
+            </EbayNoticeContent>
         </EbayInlineNotice>
-    </>))
+    </>
+)
 
-    .add(`Confirmation message`, () => (<>
+export const ConfirmationMessage = () => (
+    <>
         <EbayInlineNotice status="confirmation" aria-label="Confirmation">
             <EbayNoticeContent>
                 <p>Delivered on May 1, 2017</p>
-                <p>Tracking number: <a href="http://www.ebay.com">93878473859376898908657567</a></p>
+                <p>
+                    Tracking number: <a href="http://www.ebay.com">93878473859376898908657567</a>
+                </p>
             </EbayNoticeContent>
         </EbayInlineNotice>
-    </>))
+    </>
+)
 
-    .add(`Information message`, () => (<>
+ConfirmationMessage.story = {
+    name: 'Confirmation message'
+}
+
+export const InformationMessage = () => (
+    <>
         <EbayInlineNotice status="information" aria-label="Information">
             <EbayNoticeContent>
                 <p>Global Shipping Program transaction.</p>
             </EbayNoticeContent>
         </EbayInlineNotice>
-    </>))
+    </>
+)
 
-    .add(`Attention message`, () => (<>
+InformationMessage.story = {
+    name: 'Information message'
+}
+
+export const AttentionMessage = () => (
+    <>
         <EbayInlineNotice status="attention" aria-label="Attention">
             <EbayNoticeContent>
                 <p>Update your credit card.</p>
             </EbayNoticeContent>
         </EbayInlineNotice>
-    </>))
+    </>
+)
 
-    .add(`Notice toggle`, () => (<>
+AttentionMessage.story = {
+    name: 'Attention message'
+}
+
+export const NoticeToggle = () => (
+    <>
         <NoticeToggleStory />
-    </>))
+    </>
+)
 
+NoticeToggle.story = {
+    name: 'Notice toggle'
+}
 
 function NoticeToggleStory() {
     const [hidden, setHidden] = useState(false)
@@ -50,12 +80,14 @@ function NoticeToggleStory() {
             <EbayInlineNotice
                 status="confirmation"
                 hidden={hidden}
-                onNoticeShow={action(`Showing`)}
+                onNoticeShow={action('Showing')}
                 aria-label="Toggle notice"
             >
                 <EbayNoticeContent>
                     <p>Delivered on May 1, 2017</p>
-                    <p>Tracking number: <a href="http://www.ebay.com">93878473859376898908657567</a></p>
+                    <p>
+                        Tracking number: <a href="http://www.ebay.com">93878473859376898908657567</a>
+                    </p>
                 </EbayNoticeContent>
             </EbayInlineNotice>
         </>

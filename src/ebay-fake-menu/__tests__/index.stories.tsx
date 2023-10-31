@@ -1,10 +1,17 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react';
 import { action } from '../../../.storybook/action'
-import { EbayFakeMenu, EbayFakeMenuItem as Item, EbayFakeMenuSeparator as Separator } from '../index'
+import {
+    EbayFakeMenu,
+    EbayFakeMenuItem as Item,
+    EbayFakeMenuSeparator as Separator
+} from '../index'
 
-storiesOf('ebay-fake-menu', module)
-    .add('Default', () => (<>
+export default {
+    title: 'ebay-fake-menu'
+}
+
+export const Default = () => (
+    <>
         <EbayFakeMenu
             onClick={(event) => {
                 action('click')('MENU click event prevented')
@@ -16,15 +23,25 @@ storiesOf('ebay-fake-menu', module)
                 event.preventDefault()
             }}
         >
-            <Item href="#" onClick={(event) => {
-                action('click')('ITEM click event prevented')
-                event.preventDefault()
-            }}>Item 1 that has very long text</Item>
-            <Item href="#" current>Current page</Item>
+            <Item
+                href="#"
+                onClick={(event) => {
+                    action('click')('ITEM click event prevented')
+                    event.preventDefault()
+                }}
+            >
+                Item 1 that has very long text
+            </Item>
+            <Item href="#" current>
+                Current page
+            </Item>
             <Item href="#">Item 3</Item>
         </EbayFakeMenu>
-    </>))
-    .add('Without tick icon', () => (<>
+    </>
+)
+
+export const WithoutTickIcon = () => (
+    <>
         <EbayFakeMenu
             itemMatchesUrl={false}
             onClick={(event) => {
@@ -37,15 +54,29 @@ storiesOf('ebay-fake-menu', module)
                 event.preventDefault()
             }}
         >
-            <Item href="#" onClick={(event) => {
-                action('click')('ITEM click event prevented')
-                event.preventDefault()
-            }}>Item 1 that has very long text</Item>
-            <Item href="#" current>Current page</Item>
+            <Item
+                href="#"
+                onClick={(event) => {
+                    action('click')('ITEM click event prevented')
+                    event.preventDefault()
+                }}
+            >
+                Item 1 that has very long text
+            </Item>
+            <Item href="#" current>
+                Current page
+            </Item>
             <Item href="#">Item 3</Item>
         </EbayFakeMenu>
-    </>))
-    .add('With Separator', () => (<>
+    </>
+)
+
+WithoutTickIcon.story = {
+    name: 'Without tick icon'
+}
+
+export const WithSeparator = () => (
+    <>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
             <Item href="#">Item 2</Item>
@@ -54,11 +85,15 @@ storiesOf('ebay-fake-menu', module)
             <Item href="#">Item 4</Item>
             <Item href="#">Item 5</Item>
         </EbayFakeMenu>
-    </>))
-    .add('With Disabled Item', () => (<>
+    </>
+)
+
+export const WithDisabledItem = () => (
+    <>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
             <Item disabled>Item 2</Item>
             <Item href="#">Item 3</Item>
         </EbayFakeMenu>
-    </>))
+    </>
+)

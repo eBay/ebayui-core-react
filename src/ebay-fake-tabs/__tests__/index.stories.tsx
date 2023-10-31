@@ -1,10 +1,13 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react'
+import React from 'react'
 
 import { EbayFakeTabs, EbayFakeTab as Tab } from '../index'
 
-storiesOf('ebay-fake-tabs', module)
-    .add('Default Tabs', () => (<>
+export default {
+    title: 'ebay-fake-tabs'
+}
+
+export const DefaultTabs = () => (
+    <>
         <EbayFakeTabs>
             <Tab href="http://ebay.com">eBay.com</Tab>
             <Tab href="http://ebay.de">eBay.de</Tab>
@@ -12,8 +15,11 @@ storiesOf('ebay-fake-tabs', module)
             <h3>eBay.com Content</h3>
             <p>Some US content...</p>
         </EbayFakeTabs>
-    </>))
-    .add('Pre-selected Tab', () => (<>
+    </>
+)
+
+export const PreSelectedTab = () => (
+    <>
         <EbayFakeTabs selectedIndex={1}>
             <Tab href="http://ebay.com">eBay.com</Tab>
             <Tab href="http://ebay.de">eBay.de</Tab>
@@ -21,8 +27,15 @@ storiesOf('ebay-fake-tabs', module)
             <h3>eBay.de Content</h3>
             <p>Some German content...</p>
         </EbayFakeTabs>
-    </>))
-    .add('tabMatchesCurrentUrl: false', () => (<>
+    </>
+)
+
+PreSelectedTab.story = {
+    name: 'Pre-selected Tab'
+}
+
+export const TabMatchesCurrentUrlFalse = () => (
+    <>
         <EbayFakeTabs tabMatchesCurrentUrl={false} selectedIndex={2}>
             <Tab href="http://ebay.com">eBay.com</Tab>
             <Tab href="http://ebay.de">eBay.de</Tab>
@@ -30,4 +43,9 @@ storiesOf('ebay-fake-tabs', module)
             <h3>eBay.co.uk Content</h3>
             <p>Some British content...</p>
         </EbayFakeTabs>
-    </>))
+    </>
+)
+
+TabMatchesCurrentUrlFalse.story = {
+    name: 'tabMatchesCurrentUrl: false'
+}
