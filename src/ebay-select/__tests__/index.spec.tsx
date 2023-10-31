@@ -32,12 +32,12 @@ describe('<EbaySelect>', () => {
         })
     })
     describe('on blur events', () => {
-        it('should have "floating-label__label--inline" class after blur event', () => {
+        it('should have "inline" class after blur event when no value is present', () => {
             const { container, getByRole } = render(<EbaySelectWith3Options floatingLabel="Test label" />);
             fireEvent.blur(getByRole('combobox'));
             expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline');
         });
-        it('should not have "floating-label__label--inline" class after blur event', () => {
+        it('should not have "inline" class after blur event when no value is present', () => {
             const { container, getByRole } = render(<EbaySelectWith3Options floatingLabel="Test label" defaultValue="1" />);
             fireEvent.blur(getByRole('combobox'));
             expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline');
