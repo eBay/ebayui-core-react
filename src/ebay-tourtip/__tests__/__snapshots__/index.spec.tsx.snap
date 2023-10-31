@@ -1,0 +1,949 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-tourtip Default tourtip 1`] = `
+<DocumentFragment>
+  <div
+    style="width: 100%; margin: 300px;"
+  >
+    <span
+      class="tourtip tourtip--expanded"
+    >
+      <button
+        aria-expanded="true"
+        class="btn tourtip__host btn--secondary"
+      >
+        Info
+      </button>
+      <span
+        class="tourtip__overlay"
+        role="region"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+      >
+        <span
+          class="tourtip__pointer tourtip__pointer--bottom"
+        />
+        <span
+          class="tourtip__mask"
+        >
+          <span
+            class="tourtip__cell"
+          >
+            <span
+              class="tourtip__content"
+            >
+              <p>
+                Content
+              </p>
+            </span>
+            <button
+              aria-label="close"
+              class="icon-btn icon-btn--transparent tourtip__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close-16"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close-16"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tourtip Footer and heading tourtip 1`] = `
+<DocumentFragment>
+  <div
+    style="width: 100%; margin: 300px;"
+  >
+    <span
+      class="tourtip tourtip--expanded"
+    >
+      <button
+        aria-expanded="true"
+        class="btn tourtip__host btn--secondary"
+      >
+        Info
+      </button>
+      <span
+        class="tourtip__overlay"
+        role="region"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+      >
+        <span
+          class="tourtip__pointer tourtip__pointer--bottom"
+        />
+        <span
+          class="tourtip__mask"
+        >
+          <span
+            class="tourtip__cell"
+          >
+            <span
+              class="tourtip__content"
+            >
+              <h2
+                class="tourtip__heading"
+                type="tourtip"
+              >
+                Title
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </span>
+            <button
+              aria-label="close"
+              class="icon-btn icon-btn--transparent tourtip__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close-16"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close-16"
+                />
+              </svg>
+            </button>
+            <div
+              class="tourtip__footer"
+            >
+              <span
+                class="tourtip__index"
+              >
+                1 / 3
+              </span>
+              <button
+                class="fake-link"
+              >
+                Back
+              </button>
+              <button
+                class="btn btn--primary"
+              >
+                Next
+              </button>
+            </div>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tourtip Footer tourtip 1`] = `
+<DocumentFragment>
+  <div
+    style="width: 100%; margin: 300px;"
+  >
+    <span
+      class="tourtip tourtip--expanded"
+    >
+      <button
+        aria-expanded="true"
+        class="btn tourtip__host btn--secondary"
+      >
+        Info
+      </button>
+      <span
+        class="tourtip__overlay"
+        role="region"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+      >
+        <span
+          class="tourtip__pointer tourtip__pointer--bottom"
+        />
+        <span
+          class="tourtip__mask"
+        >
+          <span
+            class="tourtip__cell"
+          >
+            <span
+              class="tourtip__content"
+            >
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </span>
+            <button
+              aria-label="close"
+              class="icon-btn icon-btn--transparent tourtip__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close-16"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close-16"
+                />
+              </svg>
+            </button>
+            <div
+              class="tourtip__footer"
+            >
+              <span
+                class="tourtip__index"
+              >
+                1 / 3
+              </span>
+              <button
+                class="fake-link"
+              >
+                Back
+              </button>
+              <button
+                class="btn btn--primary"
+              >
+                Next
+              </button>
+            </div>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          top
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--top"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          top-left
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: scale3d(1,1,1); left: -10px;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--top-left"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          top-right
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: scale3d(1,1,1); right: -10px;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--top-right"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          right
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(-16px) translateY(-50%) scale3d(1,1,1); right: 100%; top: -6px;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--right"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          right-bottom
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(-16px) scale3d(1,1,1); right: 100%; bottom: -50%;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--right-bottom"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          right-top
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(-16px) scale3d(1,1,1); right: 100%; top: -100%;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--right-top"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          bottom
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--bottom"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          bottom-left
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: scale3d(1,1,1); left: -10px;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--bottom-left"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          bottom-right
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: scale3d(1,1,1); right: -10px;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--bottom-right"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          left
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(16px) translateY(-50%) scale3d(1,1,1); left: 100%; top: -6px;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--left"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          left-bottom
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(16px) scale3d(1,1,1); left: 100%; bottom: -10px;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--left-bottom"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      style="width: 100%; margin: 300px;"
+    >
+      <span
+        class="tourtip tourtip--expanded"
+      >
+        <a
+          aria-expanded="true"
+          class="tourtip__host"
+          href="https://www.ebay.com"
+        >
+          left-top
+        </a>
+        <span
+          class="tourtip__overlay"
+          role="region"
+          style="transform: translateX(16px) scale3d(1,1,1); left: 100%; top: -100%;"
+        >
+          <span
+            class="tourtip__pointer tourtip__pointer--left-top"
+          />
+          <span
+            class="tourtip__mask"
+          >
+            <span
+              class="tourtip__cell"
+            >
+              <span
+                class="tourtip__content"
+              >
+                <p>
+                  Use Access Key 'S' to display settings.
+                </p>
+              </span>
+              <button
+                aria-label="close"
+                class="icon-btn icon-btn--transparent tourtip__close"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="icon icon--close-16"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use
+                    xlink:href="#icon-close-16"
+                  />
+                </svg>
+              </button>
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-tourtip Pointer with custom location 1`] = `
+<DocumentFragment>
+  <div
+    style="width: 100%; margin: 300px;"
+  >
+    <span
+      class="tourtip tourtip--expanded"
+    >
+      <a
+        aria-expanded="true"
+        class="tourtip__host"
+        href="https://www.ebay.com"
+      >
+        View options
+      </a>
+      <span
+        class="tourtip__overlay"
+        role="region"
+        style="transform: scale3d(1,1,1); left: -16px; top: 40px;"
+      >
+        <span
+          class="tourtip__pointer tourtip__pointer--top-left"
+        />
+        <span
+          class="tourtip__mask"
+        >
+          <span
+            class="tourtip__cell"
+          >
+            <span
+              class="tourtip__content"
+            >
+              <p>
+                Use Access Key 'S' to display settings.
+              </p>
+            </span>
+            <button
+              aria-label="close"
+              class="icon-btn icon-btn--transparent tourtip__close"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="icon icon--close-16"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use
+                  xlink:href="#icon-close-16"
+                />
+              </svg>
+            </button>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;

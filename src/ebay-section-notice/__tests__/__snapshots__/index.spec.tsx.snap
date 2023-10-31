@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Attention message 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="section-notice-attention"
+    aria-roledescription="Notice"
+    class="section-notice section-notice--attention"
+    role="region"
+  >
+    <div
+      class="section-notice__header"
+      id="section-notice-attention"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--attention-filled-16"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-attention-filled-16"
+        />
+      </svg>
+    </div>
+    <div
+      class="section-notice__main"
+    >
+      <p>
+        <strong>
+          Error.
+        </strong>
+         Please take another look at the following:
+        <br />
+        <a
+          href="http://www.ebay.com"
+        >
+          Card number
+        </a>
+        ,
+        <a
+          href="http://www.ebay.com"
+        >
+          Expiration date
+        </a>
+         &
+        <a
+          href="http://www.ebay.com"
+        >
+          Security code
+        </a>
+        .
+      </p>
+    </div>
+    <div
+      class="section-notice__footer"
+    >
+      <button
+        class="fake-link"
+      >
+        Show more
+      </button>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Confirmation message 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="section-notice-confirmation"
+    aria-roledescription="Notice"
+    class="section-notice section-notice--confirmation"
+    role="region"
+  >
+    <div
+      class="section-notice__header"
+      id="section-notice-confirmation"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--confirmation-filled-16"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-confirmation-filled-16"
+        />
+      </svg>
+    </div>
+    <div
+      class="section-notice__main"
+    >
+      <h2
+        class="section-notice__title"
+      >
+        This successfully finished! 
+        <a
+          href="http://www.ebay.com"
+        >
+          next page
+        </a>
+      </h2>
+    </div>
+    <div
+      class="section-notice__footer"
+    >
+      <button
+        class="fake-link"
+      >
+        Take a look
+      </button>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (with action) 1`] = `
+<DocumentFragment>
+  <section
+    aria-roledescription="Notice"
+    class="section-notice"
+    role="region"
+  >
+    <div
+      class="section-notice__main"
+    >
+      <p>
+        Items you didn't win will now show in the 
+        <a
+          href="http://www.ebay.com"
+        >
+          Didn't win
+        </a>
+         section of this page.
+      </p>
+    </div>
+    <div
+      class="section-notice__footer"
+    >
+      <button
+        class="fake-link"
+      >
+        Do something
+      </button>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (with no action) 1`] = `
+<DocumentFragment>
+  <section
+    aria-roledescription="Notice"
+    class="section-notice"
+    role="region"
+  >
+    <div
+      class="section-notice__main"
+    >
+      <p>
+        Items you didn't win will now show in the 
+        <a
+          href="http://www.ebay.com"
+        >
+          Didn't win
+        </a>
+         section of this page.
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Information message (dismissable) 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="section-notice-information"
+    aria-roledescription="Notice"
+    class="section-notice section-notice--information"
+    role="region"
+  >
+    <div
+      class="section-notice__header"
+      id="section-notice-information"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--information-filled-16"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-information-filled-16"
+        />
+      </svg>
+    </div>
+    <div
+      class="section-notice__main"
+    >
+      <h2
+        class="section-notice__title"
+      >
+        <strong>
+          Good news!
+        </strong>
+         You get free shipping on your next pair of shoes! 
+        <a
+          href="http://www.ebay.com"
+        >
+          Learn more
+        </a>
+        .
+      </h2>
+    </div>
+    <p
+      class="section-notice__cta"
+    >
+      <a
+        href="https://www.ebay.com"
+      >
+        Opt in
+      </a>
+    </p>
+    <div
+      class="section-notice__footer"
+    >
+      <button
+        aria-label="Dismiss"
+        class="fake-link page-notice__dismiss"
+      >
+        <svg
+          aria-hidden="true"
+          class="icon icon--close-16"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-close-16"
+          />
+        </svg>
+      </button>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Section with link 1`] = `
+<DocumentFragment>
+  <section
+    aria-roledescription="Notice"
+    class="section-notice"
+    role="region"
+  >
+    <div
+      class="section-notice__main"
+    >
+      <h2
+        class="section-notice__title"
+      >
+        Title
+      </h2>
+      <p>
+        Items you didn't win will now show in the 
+        <a
+          href="http://www.ebay.com"
+        >
+          Didn't win
+        </a>
+         section of this page.
+      </p>
+    </div>
+    <div
+      class="section-notice__footer"
+    >
+      <a
+        href="https://www.ebay.com"
+      >
+        Go see details
+      </a>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Section with title 1`] = `
+<DocumentFragment>
+  <section
+    aria-roledescription="Notice"
+    class="section-notice"
+    role="region"
+  >
+    <div
+      class="section-notice__main"
+    >
+      <h2
+        class="section-notice__title"
+      >
+        Title
+      </h2>
+      <p>
+        Items you didn't win will now show in the 
+        <a
+          href="http://www.ebay.com"
+        >
+          Didn't win
+        </a>
+         section of this page.
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;

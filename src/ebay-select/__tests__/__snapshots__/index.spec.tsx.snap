@@ -1,0 +1,557 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ebay-select Basic 1`] = `
+<DocumentFragment>
+  <span
+    class="select"
+  >
+    <select
+      name="formSelect"
+    >
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+      <option
+        value="3"
+      >
+        Option 3
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="icon icon--chevron-down-12"
+      focusable="false"
+      height="8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-chevron-down-12"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Borderless select 1`] = `
+<DocumentFragment>
+  <span
+    class="select select--borderless"
+  >
+    <select
+      name="formSelect"
+    >
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+      <option
+        value="3"
+      >
+        Option 3
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="icon icon--chevron-down-12"
+      focusable="false"
+      height="8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-chevron-down-12"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Controlled component 1`] = `
+<DocumentFragment>
+  <div
+    style="width: 500px;"
+  >
+    <div
+      style="display: flex; align-items: center;"
+    >
+      <span
+        class="select"
+      >
+        <select
+          name="selectCountry"
+        >
+          <option
+            value="DE"
+          >
+            DE
+          </option>
+          <option
+            value="US"
+          >
+            US
+          </option>
+          <option
+            value="UK"
+          >
+            UK
+          </option>
+          <option
+            value="AU"
+          >
+            AU
+          </option>
+        </select>
+        <svg
+          aria-hidden="true"
+          class="icon icon--chevron-down-12"
+          focusable="false"
+          height="8"
+          width="8"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-chevron-down-12"
+          />
+        </svg>
+      </span>
+      <div
+        style="margin: 0px 2rem;"
+      >
+        Current selected: 
+        <strong>
+          UK
+        </strong>
+      </div>
+      <button
+        class="btn btn--secondary"
+      >
+        Set selected to US
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Disabled select 1`] = `
+<DocumentFragment>
+  <span
+    class="select customclass"
+  >
+    <select
+      disabled=""
+      name="formSelect"
+    >
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="icon icon--chevron-down-12"
+      focusable="false"
+      height="8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-chevron-down-12"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Floating label 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Label
+    </label>
+    <span
+      class="select"
+    >
+      <select
+        name="formSelect"
+      >
+        <option
+          value=""
+        />
+        <option
+          value="1"
+        >
+          Option 1
+        </option>
+        <option
+          value="2"
+        >
+          Option 2
+        </option>
+        <option
+          value="3"
+        >
+          Option 3
+        </option>
+      </select>
+      <svg
+        aria-hidden="true"
+        class="icon icon--chevron-down-12"
+        focusable="false"
+        height="8"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-chevron-down-12"
+        />
+      </svg>
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Grouped options 1`] = `
+<DocumentFragment>
+  <span
+    class="select"
+  >
+    <select
+      name="formSelect"
+    >
+      <option
+        value="pre"
+      >
+        Option PRE
+      </option>
+      <optgroup
+        label="Group 1"
+      >
+        <option
+          value="1"
+        >
+          Option 1[Group 1]
+        </option>
+        <option
+          value="2"
+        >
+          Option 2[Group 1]
+        </option>
+        <option
+          value="3"
+        >
+          Option 3[Group 1]
+        </option>
+      </optgroup>
+      <option
+        value="mid"
+      >
+        Option MID
+      </option>
+      <optgroup
+        label="Group 2"
+      >
+        <option
+          value="4"
+        >
+          Option 4[Group 2]
+        </option>
+        <option
+          value="5"
+        >
+          Option 5[Group 2]
+        </option>
+        <option
+          value="6"
+        >
+          Option 6[Group 2]
+        </option>
+      </optgroup>
+      <optgroup
+        label="Group 3"
+      >
+        <option
+          value="7"
+        >
+          Option 7[Group 3]
+        </option>
+        <option
+          value="8"
+        >
+          Option 8[Group 3]
+        </option>
+        <option
+          value="9"
+        >
+          Option 9[Group 3]
+        </option>
+      </optgroup>
+      <option
+        value="post"
+      >
+        Option POST
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="icon icon--chevron-down-12"
+      focusable="false"
+      height="8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-chevron-down-12"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Invalid floating label select 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label floating-label__label--invalid"
+    >
+      Invalid label
+    </label>
+    <span
+      class="select"
+    >
+      <select
+        aria-invalid="true"
+        aria-label="Please select a option"
+        name="formSelect"
+      >
+        <option
+          value="1"
+        >
+          Option 1
+        </option>
+        <option
+          value="2"
+        >
+          Option 2
+        </option>
+        <option
+          value="3"
+        >
+          Option 3
+        </option>
+      </select>
+      <svg
+        aria-hidden="true"
+        class="icon icon--chevron-down-12"
+        focusable="false"
+        height="8"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-chevron-down-12"
+        />
+      </svg>
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Invalid select 1`] = `
+<DocumentFragment>
+  <span
+    class="select"
+  >
+    <select
+      aria-invalid="true"
+      aria-label="Please select a option"
+      name="formSelect"
+    >
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+      <option
+        value="3"
+      >
+        Option 3
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="icon icon--chevron-down-12"
+      focusable="false"
+      height="8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-chevron-down-12"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Large Select 1`] = `
+<DocumentFragment>
+  <span
+    class="floating-label floating-label--large"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Label
+    </label>
+    <span
+      class="select select--large"
+    >
+      <select
+        name="formSelect"
+      >
+        <option
+          value=""
+        />
+        <option
+          value="1"
+        >
+          Option 1
+        </option>
+        <option
+          value="2"
+        >
+          Option 2
+        </option>
+        <option
+          value="3"
+        >
+          Option 3
+        </option>
+      </select>
+      <svg
+        aria-hidden="true"
+        class="icon icon--chevron-down-12"
+        focusable="false"
+        height="8"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-chevron-down-12"
+        />
+      </svg>
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Options class 1`] = `
+<DocumentFragment>
+  <span
+    class="select"
+  >
+    <select
+      name="formSelect"
+    >
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+      <option
+        value="3"
+      >
+        Option 3
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="icon icon--chevron-down-12"
+      focusable="false"
+      height="8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-chevron-down-12"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Storyshots ebay-select Uncontrolled component with defaultValue 1`] = `
+<DocumentFragment>
+  <span
+    class="select"
+  >
+    <select
+      name="formSelect"
+    >
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+      <option
+        value="3"
+      >
+        Option 3
+      </option>
+    </select>
+    <svg
+      aria-hidden="true"
+      class="icon icon--chevron-down-12"
+      focusable="false"
+      height="8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <use
+        xlink:href="#icon-chevron-down-12"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
