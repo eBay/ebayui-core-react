@@ -56,6 +56,16 @@ describe('<EbayTextbox>', () => {
             fireEvent.blur(screen.getByRole('textbox'), { target: { value } })
             expect(spy).toBeCalledWith(anySyntheticEvent, { value })
         })
+        it('should have "inline" class after blur event when no value is present', () => {
+            const { container, getByRole } = render(<EbayTextbox floatingLabel="Test label" />);
+            fireEvent.blur(screen.getByRole('textbox'), { target: { value:'' } })
+            expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline');
+        });
+        it('should not have "inline" class after blur event when value is present', () => {
+            const { container, getByRole } = render(<EbayTextbox floatingLabel="Test label" />);
+            fireEvent.blur(screen.getByRole('textbox'), { target: { value:'New Value' } })
+            expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline');
+        });
     })
 
     describe('on textbox key down', () => {
