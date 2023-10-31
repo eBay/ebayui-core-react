@@ -1,12 +1,24 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { EbayProgressSpinner } from '../index'
 
-storiesOf(`ebay-progress-spinner`, module)
-    .add(`Default, Small & Large`, () => (
-        <>
-            <p><EbayProgressSpinner /></p>
-            <p><EbayProgressSpinner size="small" aria-label="Stand by..."/></p>
-            <p><EbayProgressSpinner size="large" aria-label="Stand by..."/></p>
-        </>
-    ))
+export default {
+    title: 'ebay-progress-spinner'
+}
+
+export const DefaultSmallLarge = () => (
+    <>
+        <p>
+            <EbayProgressSpinner />
+        </p>
+        <p>
+            <EbayProgressSpinner size="small" aria-label="Stand by..." />
+        </p>
+        <p>
+            <EbayProgressSpinner size="large" aria-label="Stand by..." />
+        </p>
+    </>
+)
+
+DefaultSmallLarge.story = {
+    name: 'Default, Small & Large'
+}

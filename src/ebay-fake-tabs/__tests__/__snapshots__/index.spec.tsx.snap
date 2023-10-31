@@ -1,166 +1,166 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ebay-fake-tabs Default Tabs 1`] = `
-<DocumentFragment>
-  <div
-    class="fake-tabs"
+<div
+  className="fake-tabs"
+>
+  <ul
+    className="fake-tabs__items"
   >
-    <ul
-      class="fake-tabs__items"
+    <li
+      className="fake-tabs__item"
     >
-      <li
-        class="fake-tabs__item"
+      <a
+        aria-current="page"
+        href="http://ebay.com"
       >
-        <a
-          aria-current="page"
-          href="http://ebay.com"
-        >
-          eBay.com
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
+        eBay.com
+      </a>
+    </li>
+    <li
+      className="fake-tabs__item"
+    >
+      <a
+        aria-current={null}
+        href="http://ebay.de"
       >
-        <a
-          href="http://ebay.de"
-        >
-          eBay.de
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
+        eBay.de
+      </a>
+    </li>
+    <li
+      className="fake-tabs__item"
+    >
+      <a
+        aria-current={null}
+        href="http://ebay.co.uk"
       >
-        <a
-          href="http://ebay.co.uk"
-        >
-          eBay.co.uk
-        </a>
-      </li>
-    </ul>
+        eBay.co.uk
+      </a>
+    </li>
+  </ul>
+  <div
+    className="fake-tabs__content"
+  >
     <div
-      class="fake-tabs__content"
+      className="fake-tabs__cell"
     >
-      <div
-        class="fake-tabs__cell"
-      >
-        <h3>
-          eBay.com Content
-        </h3>
-        <p>
-          Some US content...
-        </p>
-      </div>
+      <h3>
+        eBay.com Content
+      </h3>
+      <p>
+        Some US content...
+      </p>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`Storyshots ebay-fake-tabs Pre-selected Tab 1`] = `
-<DocumentFragment>
-  <div
-    class="fake-tabs"
+<div
+  className="fake-tabs"
+>
+  <ul
+    className="fake-tabs__items"
   >
-    <ul
-      class="fake-tabs__items"
+    <li
+      className="fake-tabs__item"
     >
-      <li
-        class="fake-tabs__item"
+      <a
+        aria-current={null}
+        href="http://ebay.com"
       >
-        <a
-          href="http://ebay.com"
-        >
-          eBay.com
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
+        eBay.com
+      </a>
+    </li>
+    <li
+      className="fake-tabs__item"
+    >
+      <a
+        aria-current="page"
+        href="http://ebay.de"
       >
-        <a
-          aria-current="page"
-          href="http://ebay.de"
-        >
-          eBay.de
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
+        eBay.de
+      </a>
+    </li>
+    <li
+      className="fake-tabs__item"
+    >
+      <a
+        aria-current={null}
+        href="http://ebay.co.uk"
       >
-        <a
-          href="http://ebay.co.uk"
-        >
-          eBay.co.uk
-        </a>
-      </li>
-    </ul>
+        eBay.co.uk
+      </a>
+    </li>
+  </ul>
+  <div
+    className="fake-tabs__content"
+  >
     <div
-      class="fake-tabs__content"
+      className="fake-tabs__cell"
     >
-      <div
-        class="fake-tabs__cell"
-      >
-        <h3>
-          eBay.de Content
-        </h3>
-        <p>
-          Some German content...
-        </p>
-      </div>
+      <h3>
+        eBay.de Content
+      </h3>
+      <p>
+        Some German content...
+      </p>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`Storyshots ebay-fake-tabs tabMatchesCurrentUrl: false 1`] = `
-<DocumentFragment>
-  <div
-    class="fake-tabs"
+<div
+  className="fake-tabs"
+>
+  <ul
+    className="fake-tabs__items"
   >
-    <ul
-      class="fake-tabs__items"
+    <li
+      className="fake-tabs__item"
     >
-      <li
-        class="fake-tabs__item"
+      <a
+        aria-current={null}
+        href="http://ebay.com"
       >
-        <a
-          href="http://ebay.com"
-        >
-          eBay.com
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
+        eBay.com
+      </a>
+    </li>
+    <li
+      className="fake-tabs__item"
+    >
+      <a
+        aria-current={null}
+        href="http://ebay.de"
       >
-        <a
-          href="http://ebay.de"
-        >
-          eBay.de
-        </a>
-      </li>
-      <li
-        class="fake-tabs__item"
+        eBay.de
+      </a>
+    </li>
+    <li
+      className="fake-tabs__item"
+    >
+      <a
+        aria-current="true"
+        href="http://ebay.co.uk"
       >
-        <a
-          aria-current="true"
-          href="http://ebay.co.uk"
-        >
-          eBay.co.uk
-        </a>
-      </li>
-    </ul>
+        eBay.co.uk
+      </a>
+    </li>
+  </ul>
+  <div
+    className="fake-tabs__content"
+  >
     <div
-      class="fake-tabs__content"
+      className="fake-tabs__cell"
     >
-      <div
-        class="fake-tabs__cell"
-      >
-        <h3>
-          eBay.co.uk Content
-        </h3>
-        <p>
-          Some British content...
-        </p>
-      </div>
+      <h3>
+        eBay.co.uk Content
+      </h3>
+      <p>
+        Some British content...
+      </p>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;

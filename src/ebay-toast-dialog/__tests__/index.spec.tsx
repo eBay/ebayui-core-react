@@ -1,4 +1,5 @@
 import * as React from 'react';
+import requireContext from 'node-require-context'
 import { render, fireEvent } from '@testing-library/react'
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayToast } from '../index'
@@ -42,8 +43,9 @@ describe('<EbayToast>', () => {
 })
 
 initStoryshots({
-    config: ({ configure }) =>
-        configure(() => {
-            require('./index.stories')
-        }, module)
+    config: ({ configure }) => {
+        const req = requireContext('./', false, /\.stories\.tsx$/);
+        return configure(req, module)
+    }
+
 })

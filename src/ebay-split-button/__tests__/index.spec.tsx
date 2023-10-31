@@ -1,4 +1,5 @@
 import React from 'react'
+import requireContext from 'node-require-context'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayMenuButtonItem as Item } from '../../ebay-menu-button'
@@ -9,10 +10,11 @@ const values = ["first", "second", "third"]
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
 initStoryshots({
-    config: ({ configure }) =>
-        configure(() => {
-            require('./index.stories')
-        }, module)
+    config: ({ configure }) => {
+        const req = requireContext('./', false, /\.stories\.tsx$/);
+        return configure(req, module)
+    }
+
 })
 
 describe('<EbaySplitButton>', () => {

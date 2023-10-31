@@ -16,7 +16,7 @@ module.exports = {
         config.resolve.extensions.push('.ts', '.tsx')
 
         // Remove storybook css predefined webpack rule and use custom rule
-        config.module.rules = config.module.rules.filter(rule => !rule.test.test('.css'))
+        config.module.rules = config.module.rules.filter(rule => !rule?.test?.test?.('.css'))
         config.module.rules.push({
             test: /\.css$/,
             use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
