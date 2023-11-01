@@ -91,7 +91,7 @@ export function useFloatingLabel({
 
     const onBlur = () => {
         setAnimate(true)
-        setFloating(false)
+        setFloating(hasValue(inputRef()?.current))
         setFocused(false)
         setPlaceholder(inputRef().current, ``)
     }

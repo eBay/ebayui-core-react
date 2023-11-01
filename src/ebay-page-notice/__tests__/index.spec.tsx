@@ -1,4 +1,5 @@
 import React from 'react';
+import requireContext from 'node-require-context'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { initStoryshots } from '../../../config/jest/storyshots';
@@ -87,8 +88,9 @@ describe('<EbayPageNotice>', () => {
 })
 
 initStoryshots({
-    config: ({ configure }) =>
-        configure(() => {
-            require('./index.stories')
-        }, module)
+    config: ({ configure }) => {
+        const req = requireContext('./', false, /\.stories\.tsx$/);
+        return configure(req, module)
+    }
+
 })

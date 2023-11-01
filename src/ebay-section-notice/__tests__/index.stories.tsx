@@ -1,27 +1,40 @@
-import React  from 'react'
-import { storiesOf } from '@storybook/react'
+import React from 'react'
 import { action } from '../../../.storybook/action'
-import { EbaySectionNotice, EbayNoticeContent, EbaySectionNoticeTitle, EbaySectionNoticeFooter } from '../index'
+import {
+    EbaySectionNotice,
+    EbayNoticeContent,
+    EbaySectionNoticeTitle,
+    EbaySectionNoticeFooter
+} from '../index'
 
-storiesOf(`ebay-section-notice`, module)
+export default {
+    title: 'ebay-section-notice'
+}
 
-    .add(`Default message (with no action)`, () => (<>
+export const DefaultMessageWithNoAction = () => (
+    <>
         <EbaySectionNotice>
             <EbayNoticeContent>
                 <p>
-                    Items you didn&apos;t win will now show in the <a href="http://www.ebay.com">Didn&apos;t win</a> section
-                    of this page.
+                    Items you didn&apos;t win will now show in the{' '}
+                    <a href="http://www.ebay.com">Didn&apos;t win</a> section of this page.
                 </p>
             </EbayNoticeContent>
         </EbaySectionNotice>
-    </>))
+    </>
+)
 
-    .add(`Default message (with action)`, () => (<>
+DefaultMessageWithNoAction.story = {
+    name: 'Default message (with no action)'
+}
+
+export const DefaultMessageWithAction = () => (
+    <>
         <EbaySectionNotice>
             <EbayNoticeContent>
                 <p>
-                    Items you didn&apos;t win will now show in the <a href="http://www.ebay.com">Didn&apos;t win</a> section
-                    of this page.
+                    Items you didn&apos;t win will now show in the{' '}
+                    <a href="http://www.ebay.com">Didn&apos;t win</a> section of this page.
                 </p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
@@ -30,12 +43,20 @@ storiesOf(`ebay-section-notice`, module)
                 </button>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
-    </>))
+    </>
+)
 
-    .add(`Confirmation message`, () => (<>
+DefaultMessageWithAction.story = {
+    name: 'Default message (with action)'
+}
+
+export const ConfirmationMessage = () => (
+    <>
         <EbaySectionNotice status="confirmation">
             <EbayNoticeContent>
-                <EbaySectionNoticeTitle>This successfully finished! <a href="http://www.ebay.com">next page</a></EbaySectionNoticeTitle>
+                <EbaySectionNoticeTitle>
+                    This successfully finished! <a href="http://www.ebay.com">next page</a>
+                </EbaySectionNoticeTitle>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
                 <button onClick={action('Action Button Clicked')} className="fake-link">
@@ -43,13 +64,19 @@ storiesOf(`ebay-section-notice`, module)
                 </button>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
-    </>))
+    </>
+)
 
-    .add(`Information message (dismissable)`, () => (<>
+ConfirmationMessage.story = {
+    name: 'Confirmation message'
+}
+
+export const InformationMessageDismissable = () => (
+    <>
         <EbaySectionNotice
             status="information"
             a11yDismissText="Dismiss"
-            onDismiss={e => action('onDismiss')(e)}
+            onDismiss={(e) => action('onDismiss')(e)}
         >
             <EbayNoticeContent>
                 <EbaySectionNoticeTitle>
@@ -57,11 +84,19 @@ storiesOf(`ebay-section-notice`, module)
                     <a href="http://www.ebay.com">Learn more</a>.
                 </EbaySectionNoticeTitle>
             </EbayNoticeContent>
-            <p className="section-notice__cta"><a href="https://www.ebay.com">Opt in</a></p>
+            <p className="section-notice__cta">
+                <a href="https://www.ebay.com">Opt in</a>
+            </p>
         </EbaySectionNotice>
-    </>))
+    </>
+)
 
-    .add(`Attention message`, () => (<>
+InformationMessageDismissable.story = {
+    name: 'Information message (dismissable)'
+}
+
+export const AttentionMessage = () => (
+    <>
         <EbaySectionNotice status="attention">
             <EbayNoticeContent>
                 <p>
@@ -78,31 +113,48 @@ storiesOf(`ebay-section-notice`, module)
                 </button>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
-    </>))
+    </>
+)
 
-    .add(`Section with title`, () => (<>
+AttentionMessage.story = {
+    name: 'Attention message'
+}
+
+export const SectionWithTitle = () => (
+    <>
         <EbaySectionNotice>
             <EbayNoticeContent>
                 <EbaySectionNoticeTitle>Title</EbaySectionNoticeTitle>
                 <p>
-                    Items you didn&apos;t win will now show in the <a href="http://www.ebay.com">Didn&apos;t win</a> section
-                    of this page.
+                    Items you didn&apos;t win will now show in the{' '}
+                    <a href="http://www.ebay.com">Didn&apos;t win</a> section of this page.
                 </p>
             </EbayNoticeContent>
         </EbaySectionNotice>
-    </>))
+    </>
+)
 
-    .add(`Section with link`, () => (<>
+SectionWithTitle.story = {
+    name: 'Section with title'
+}
+
+export const SectionWithLink = () => (
+    <>
         <EbaySectionNotice>
             <EbayNoticeContent>
                 <EbaySectionNoticeTitle>Title</EbaySectionNoticeTitle>
                 <p>
-                    Items you didn&apos;t win will now show in the <a href="http://www.ebay.com">Didn&apos;t win</a> section
-                    of this page.
+                    Items you didn&apos;t win will now show in the{' '}
+                    <a href="http://www.ebay.com">Didn&apos;t win</a> section of this page.
                 </p>
             </EbayNoticeContent>
             <EbaySectionNoticeFooter>
                 <a href="https://www.ebay.com">Go see details</a>
             </EbaySectionNoticeFooter>
         </EbaySectionNotice>
-    </>))
+    </>
+)
+
+SectionWithLink.story = {
+    name: 'Section with link'
+}

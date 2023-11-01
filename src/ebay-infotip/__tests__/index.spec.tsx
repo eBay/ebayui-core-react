@@ -1,4 +1,5 @@
 import React from 'react'
+import requireContext from 'node-require-context'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../index'
@@ -109,8 +110,9 @@ describe('<EbayInfotip>', () => {
 })
 
 initStoryshots({
-    config: ({ configure }) =>
-        configure(() => {
-            require('./index.stories')
-        }, module)
+    config: ({ configure }) => {
+        const req = requireContext('./', false, /\.stories\.tsx$/);
+        return configure(req, module)
+    }
+
 })

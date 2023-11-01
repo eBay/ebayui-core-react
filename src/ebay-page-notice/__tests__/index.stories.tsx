@@ -1,23 +1,43 @@
-import React  from 'react'
-import { storiesOf } from '@storybook/react'
-import { EbayPageNotice, EbayNoticeContent, EbayPageNoticeTitle, EbayPageNoticeFooter, EbayPageNoticeCTA } from '..'
+import React from 'react'
+import {
+    EbayPageNotice,
+    EbayNoticeContent,
+    EbayPageNoticeTitle,
+    EbayPageNoticeFooter,
+    EbayPageNoticeCTA
+} from '..'
 import { action } from '../../../.storybook/action'
 
-storiesOf(`ebay-page-notice`, module)
+export default {
+    title: 'ebay-page-notice'
+}
 
-    .add(`Simple usage`, () => (<>
+export const SimpleUsage = () => (
+    <>
         <EbayPageNotice aria-label="Default">
             <EbayNoticeContent>text message</EbayNoticeContent>
         </EbayPageNotice>
-    </>))
+    </>
+)
 
-    .add(`Simple usage with id`, () => (<>
+SimpleUsage.story = {
+    name: 'Simple usage'
+}
+
+export const SimpleUsageWithId = () => (
+    <>
         <EbayPageNotice status="confirmation" aria-label="Success" id="main-page-notice">
             <EbayNoticeContent>text message</EbayNoticeContent>
         </EbayPageNotice>
-    </>))
+    </>
+)
 
-    .add(`Confirmation message`, () => (<>
+SimpleUsageWithId.story = {
+    name: 'Simple usage with id'
+}
+
+export const ConfirmationMessage = () => (
+    <>
         <EbayPageNotice status="confirmation" aria-label="Success">
             <EbayNoticeContent>
                 <EbayPageNoticeTitle>Congrats!</EbayPageNoticeTitle>
@@ -26,9 +46,15 @@ storiesOf(`ebay-page-notice`, module)
                 </p>
             </EbayNoticeContent>
         </EbayPageNotice>
-    </>))
+    </>
+)
 
-    .add(`Information message`, () => (<>
+ConfirmationMessage.story = {
+    name: 'Confirmation message'
+}
+
+export const InformationMessage = () => (
+    <>
         <EbayPageNotice status="information" aria-label="Information">
             <EbayNoticeContent>
                 <EbayPageNoticeTitle>Good news!</EbayPageNoticeTitle>
@@ -37,21 +63,35 @@ storiesOf(`ebay-page-notice`, module)
                 </p>
             </EbayNoticeContent>
         </EbayPageNotice>
-    </>))
+    </>
+)
 
-    .add(`Attention message`, () => (<>
+InformationMessage.story = {
+    name: 'Information message'
+}
+
+export const AttentionMessage = () => (
+    <>
         <EbayPageNotice status="attention" aria-label="Attention">
             <EbayNoticeContent>
                 <EbayPageNoticeTitle>Error.</EbayPageNoticeTitle>
                 <p>
-                    Please take another look at the following:<br />
-                    <a href="#">Card number</a>, <a href="#">Expiration date</a> &amp; <a href="#">Security code</a>.
+                    Please take another look at the following:
+                    <br />
+                    <a href="#">Card number</a>, <a href="#">Expiration date</a> &amp;{' '}
+                    <a href="#">Security code</a>.
                 </p>
             </EbayNoticeContent>
         </EbayPageNotice>
-    </>))
+    </>
+)
 
-    .add(`Message with footer`, () => (<>
+AttentionMessage.story = {
+    name: 'Attention message'
+}
+
+export const MessageWithFooter = () => (
+    <>
         <EbayPageNotice status="confirmation" aria-label="Congratulations">
             <EbayNoticeContent>
                 <EbayPageNoticeTitle>Your order&apos;s in!</EbayPageNoticeTitle>
@@ -61,14 +101,20 @@ storiesOf(`ebay-page-notice`, module)
                 <a href="https://ebay.com">Action</a>
             </EbayPageNoticeFooter>
         </EbayPageNotice>
-    </>))
+    </>
+)
 
-    .add(`Dismissible notice`, () => (<>
+MessageWithFooter.story = {
+    name: 'Message with footer'
+}
+
+export const DismissibleNotice = () => (
+    <>
         <EbayPageNotice
             status="information"
             aria-label="Information"
             a11yDismissText="Close"
-            onDismiss={e => action('onDismiss')(e)}
+            onDismiss={(e) => action('onDismiss')(e)}
         >
             <EbayNoticeContent>
                 <EbayPageNoticeTitle>Good news!</EbayPageNoticeTitle>
@@ -77,9 +123,15 @@ storiesOf(`ebay-page-notice`, module)
                 </p>
             </EbayNoticeContent>
         </EbayPageNotice>
-    </>))
+    </>
+)
 
-    .add(`Dismissible message with CTA`, () => (<>
+DismissibleNotice.story = {
+    name: 'Dismissible notice'
+}
+
+export const DismissibleMessageWithCta = () => (
+    <>
         <EbayPageNotice status="information" aria-label="Congratulations" a11yDismissText="Close">
             <EbayNoticeContent>
                 <EbayPageNoticeTitle>Your order&apos;s in!</EbayPageNoticeTitle>
@@ -89,4 +141,9 @@ storiesOf(`ebay-page-notice`, module)
                 <a href="https://ebay.com">Action</a>
             </EbayPageNoticeCTA>
         </EbayPageNotice>
-    </>))
+    </>
+)
+
+DismissibleMessageWithCta.story = {
+    name: 'Dismissible message with CTA'
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import requireContext from 'node-require-context'
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { initStoryshots } from '../../../config/jest/storyshots'
@@ -56,6 +57,16 @@ describe('<EbayTextbox>', () => {
             fireEvent.blur(screen.getByRole('textbox'), { target: { value } })
             expect(spy).toBeCalledWith(anySyntheticEvent, { value })
         })
+        it('should have "inline" class after blur event when no value is present', () => {
+            const { container, getByRole } = render(<EbayTextbox floatingLabel="Test label" />);
+            fireEvent.blur(screen.getByRole('textbox'), { target: { value:'' } })
+            expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline');
+        });
+        it('should not have "inline" class after blur event when value is present', () => {
+            const { container, getByRole } = render(<EbayTextbox floatingLabel="Test label" />);
+            fireEvent.blur(screen.getByRole('textbox'), { target: { value:'New Value' } })
+            expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline');
+        });
     })
 
     describe('on textbox key down', () => {
@@ -147,8 +158,9 @@ describe('<EbayTextbox>', () => {
 })
 
 initStoryshots({
-    config: ({ configure }) =>
-        configure(() => {
-            require('./index.stories')
-        }, module)
+    config: ({ configure }) => {
+        const req = requireContext('./', false, /\.stories\.tsx$/);
+        return configure(req, module)
+    }
+
 })

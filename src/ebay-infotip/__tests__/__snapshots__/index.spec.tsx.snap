@@ -390,7 +390,7 @@ exports[`Storyshots ebay-infotip In paragraph 1`] = `
       NOTE: No block elements can be nested in p elements, like div, h1-6, or other p elements. Any content with that will break
     </em>
     <p>
-      Some paragraph content  
+      Some paragraph content 
       <span
         class="infotip"
       >
@@ -556,7 +556,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      top  
+      top 
       <span
         class="infotip"
       >
@@ -626,7 +626,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      top-left  
+      top-left 
       <span
         class="infotip"
       >
@@ -696,7 +696,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      top-right  
+      top-right 
       <span
         class="infotip"
       >
@@ -766,7 +766,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      right  
+      right 
       <span
         class="infotip"
       >
@@ -836,7 +836,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      right-bottom  
+      right-bottom 
       <span
         class="infotip"
       >
@@ -906,7 +906,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      right-top  
+      right-top 
       <span
         class="infotip"
       >
@@ -976,7 +976,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      bottom  
+      bottom 
       <span
         class="infotip"
       >
@@ -1046,7 +1046,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      bottom-left  
+      bottom-left 
       <span
         class="infotip"
       >
@@ -1116,7 +1116,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      bottom-right  
+      bottom-right 
       <span
         class="infotip"
       >
@@ -1186,7 +1186,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      left  
+      left 
       <span
         class="infotip"
       >
@@ -1256,7 +1256,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      left-bottom  
+      left-bottom 
       <span
         class="infotip"
       >
@@ -1326,7 +1326,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
     <div
       style="margin: 100px 0px;"
     >
-      left-top  
+      left-top 
       <span
         class="infotip"
       >

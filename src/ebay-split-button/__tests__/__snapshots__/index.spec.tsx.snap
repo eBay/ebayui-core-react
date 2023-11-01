@@ -17,7 +17,6 @@ exports[`Storyshots ebay-split-button Controls 1`] = `
         aria-controls="abc123"
         aria-expanded="false"
         aria-haspopup="true"
-        aria-label="Show save options"
         class="btn menu-button__button btn--secondary btn--split-end"
       >
         <svg
