@@ -13,7 +13,7 @@ import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { EbaySectionNoticeFooter } from './index'
 
-export type SectionNoticeStatus = 'general' | 'none' | 'attention' | 'confirmation' | 'information'
+export type SectionNoticeStatus = 'general' | 'none' | 'attention' | 'confirmation' | 'information' | 'education'
 export type Props = ComponentProps<'section'> & {
     status?: SectionNoticeStatus;
     'aria-label'?: string;
@@ -21,6 +21,9 @@ export type Props = ComponentProps<'section'> & {
     className?: string;
     a11yDismissText?: string;
     onDismiss?: MouseEventHandler & KeyboardEventHandler;
+    educationIcon?: Icon;
+    iconClass?: string;
+    prominent?: boolean;
 }
 
 const EbaySectionNotice: FC<Props> = ({
@@ -30,6 +33,9 @@ const EbaySectionNotice: FC<Props> = ({
     'aria-label': ariaLabel,
     'aria-roledescription': ariaRoleDescription = 'Notice',
     a11yDismissText,
+    educationIcon,
+    iconClass,
+    prominent,
     onDismiss = () => {},
     ...rest
 }) => {
@@ -37,6 +43,16 @@ const EbaySectionNotice: FC<Props> = ({
     const childrenArray = React.Children.toArray(children) as ReactElement[]
     const content = childrenArray.find(({ type }) => type === EbayNoticeContent)
     const hasStatus = status !== 'general' && status !== 'none'
+    const isEducational = status === 'education'
+    let iconName = null
+
+    if (hasStatus) {
+        if (isEducational) {
+            iconName = educationIcon || 'lightbulb24'
+        } else {
+            iconName = `${status}Filled16` as Icon
+        }
+    }
 
     if (!content) {
         throw new Error(`EbaySectionNotice: Please use a EbayNoticeContent that defines the content of the notice`)
@@ -50,14 +66,18 @@ const EbaySectionNotice: FC<Props> = ({
     return dismissed ? null : (
         <section
             {...rest}
-            className={cx(className, `section-notice`, hasStatus && `section-notice--${status}`)}
+            className={cx(className, `section-notice`, {
+                [`section-notice--${status}`]: hasStatus,
+                'section-notice--education': isEducational && prominent,
+                'section-notice--large-icon': isEducational
+            })}
             role="region"
             aria-label={!hasStatus ? ariaLabel : null}
             aria-labelledby={hasStatus ? `section-notice-${status}` : null}
             aria-roledescription={ariaRoleDescription}>
-            {hasStatus && (
+            {iconName && (
                 <div className="section-notice__header" id={`section-notice-${status}`}>
-                    <EbayIcon name={`${status}Filled16` as Icon} a11yText={ariaLabel} a11yVariant="label" />
+                    <EbayIcon className={iconClass} name={iconName} a11yText={ariaLabel} a11yVariant="label" />
                 </div>
             )}
             <NoticeContent {...content.props} type="section" />

@@ -172,6 +172,126 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (wit
 </DocumentFragment>
 `;
 
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section Notice 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="section-notice-education"
+    aria-roledescription="Notice"
+    class="section-notice section-notice--large-icon"
+    role="region"
+  >
+    <div
+      class="section-notice__header"
+      id="section-notice-education"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--lightbulb-24"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-lightbulb-24"
+        />
+      </svg>
+    </div>
+    <div
+      class="section-notice__main"
+    >
+      <p>
+        Items you didn't win will now show in the 
+        <a
+          href="http://www.ebay.com"
+        >
+          Didn't win
+        </a>
+         section of this page.
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section Notice Custom Icon 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="section-notice-education"
+    aria-roledescription="Notice"
+    class="section-notice section-notice--education section-notice--large-icon"
+    role="region"
+  >
+    <div
+      class="section-notice__header"
+      id="section-notice-education"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--lightning-bolt-24"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-lightning-bolt-24"
+        />
+      </svg>
+    </div>
+    <div
+      class="section-notice__main"
+    >
+      <p>
+        Items you didn't win will now show in the 
+        <a
+          href="http://www.ebay.com"
+        >
+          Didn't win
+        </a>
+         section of this page.
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section Notice Prominent 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="section-notice-education"
+    aria-roledescription="Notice"
+    class="section-notice section-notice--education section-notice--large-icon"
+    role="region"
+  >
+    <div
+      class="section-notice__header"
+      id="section-notice-education"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon icon--lightbulb-24"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use
+          xlink:href="#icon-lightbulb-24"
+        />
+      </svg>
+    </div>
+    <div
+      class="section-notice__main"
+    >
+      <p>
+        Items you didn't win will now show in the 
+        <a
+          href="http://www.ebay.com"
+        >
+          Didn't win
+        </a>
+         section of this page.
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
 exports[`<EbaySectionNotice> Storyshots ebay-section-notice Information message (dismissable) 1`] = `
 <DocumentFragment>
   <section
