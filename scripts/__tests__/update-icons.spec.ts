@@ -50,7 +50,7 @@ const EbaySvg: FC = () => (
 
 export default EbaySvg
 `
-            expect(generateEbaySVG(skinCollection)).toEqual(svgIconsText)
+            expect(generateEbaySVG(skinCollection)).toMatchSnapshot()
         })
     })
 })
