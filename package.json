@@ -1,6 +1,6 @@
 {
   "name": "@ebay/ui-core-react",
-  "version": "5.4.7",
+  "version": "5.5.0",
   "description": "Skin components build off React",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
