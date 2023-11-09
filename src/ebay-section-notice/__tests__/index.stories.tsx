@@ -158,3 +158,43 @@ export const SectionWithLink = () => (
 SectionWithLink.story = {
     name: 'Section with link'
 }
+
+export const EducationalSectionNotice = () => (
+    <>
+        <EbaySectionNotice status='education'>
+            <EbayNoticeContent>
+                <p>
+                    Items you didn&apos;t win will now show in the{' '}
+                    <a href="http://www.ebay.com">Didn&apos;t win</a> section of this page.
+                </p>
+            </EbayNoticeContent>
+        </EbaySectionNotice>
+    </>
+)
+
+export const EducationalSectionNoticeProminent = () => (
+    <>
+        <EbaySectionNotice status='education' prominent>
+            <EbayNoticeContent>
+                <p>
+                    Items you didn&apos;t win will now show in the{' '}
+                    <a href="http://www.ebay.com">Didn&apos;t win</a> section of this page.
+                </p>
+            </EbayNoticeContent>
+        </EbaySectionNotice>
+    </>
+)
+
+export const EducationalSectionNoticeCustomIcon = () => (
+    <>
+        <EbaySectionNotice status='education' prominent educationIcon="lightningBolt24">
+            <EbayNoticeContent>
+                <p>
+                    Items you didn&apos;t win will now show in the{' '}
+                    <a href="http://www.ebay.com">Didn&apos;t win</a> section of this page.
+                </p>
+            </EbayNoticeContent>
+        </EbaySectionNotice>
+    </>
+)
+
