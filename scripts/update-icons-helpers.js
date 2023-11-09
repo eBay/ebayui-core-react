@@ -11,6 +11,11 @@ function parseSVG(skinIconsFile) {
     return (icons && parseSync(icons, { camelcase: true }) || {}).children || []
 }
 
+function parseSVGSymbols(skinIconsFile) {
+    const icons = parseSVG(skinIconsFile);
+    return icons.filter(({ name }) => name === 'symbol');
+}
+
 function getIconKeys(icons = []) {
     const symbolIds = icons.map(symbol => symbol.attributes.id)
     const skipped = symbolIds.filter(id => !id.startsWith('icon-'));
@@ -28,8 +33,7 @@ function getIconKeys(icons = []) {
 }
 
 function saveIconType(keys, typesFile) {
-    const typesText = `
-    }${fileHeader}\n
+    const typesText = `${fileHeader}\n
 export type Icon =
     ${keys.map(key => `'${key}'`).join(' |\n    ')}
 `
@@ -56,11 +60,10 @@ export const icons: Icon[] = [
 }
 
 function saveSvgIcons(collection, ebaySvgFile) {
-    const symbols = collection.filter(({ name }) => name === 'symbol')
-    const svgText = generateEbaySVG(symbols)
+    const svgText = generateEbaySVG(collection)
     writeFile(ebaySvgFile, svgText, err => {
         if (err) console.error(err)
-        else console.log(`${symbols.length} SVG symbols written to ${ebaySvgFile}.`)
+        else console.log(`${collection.length} SVG symbols written to ${ebaySvgFile}.`)
     })
 }
 
@@ -69,13 +72,15 @@ function generateEbaySVG(svgSymbols) {
         transformAttr: transformSVGtoReact
     }));
 
+    // Use position absolute and height/width 0px instead of display none
+    // so <defs> element for spectrum icons are shown
     return `/* eslint-disable */
 // @ts-nocheck
 ${fileHeader}\n
 import React, { FC } from 'react'
 
 const EbaySvg: FC = () => (
-    <svg style={{ display: 'none' }}>
+    <svg style={{ position: 'absolute', height: '0px', width: '0px' }}>
         ${symbolStrings.join('\n        ')}
     </svg>)
 
@@ -112,6 +117,7 @@ function camelCased(str) {
 module.exports = {
     getIconKeys,
     parseSVG,
+    parseSVGSymbols,
     saveIconType,
     saveIconConstants,
     saveSvgIcons,

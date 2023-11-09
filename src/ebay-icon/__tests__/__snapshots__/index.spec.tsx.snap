@@ -125,6 +125,244 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
+          ai16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ai20
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-20"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-20"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ai24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiFilled16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-filled-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-filled-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiFilled20
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-filled-20"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-filled-20"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiFilled24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-filled-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-filled-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiSpectrum16Colored
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-spectrum-16-colored"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-spectrum-16-colored"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiSpectrum20Colored
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-spectrum-20-colored"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-spectrum-20-colored"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiSpectrum24Colored
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-spectrum-24-colored"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-spectrum-24-colored"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiSpectrumFilled16Colored
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-spectrum-filled-16-colored"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-spectrum-filled-16-colored"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiSpectrumFilled20Colored
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-spectrum-filled-20-colored"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-spectrum-filled-20-colored"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiSpectrumFilled24Colored
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-spectrum-filled-24-colored"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-spectrum-filled-24-colored"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiSpectrumThin16Colored
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-spectrum-thin-16-colored"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-spectrum-thin-16-colored"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          aiThin16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--ai-thin-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-ai-thin-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
           amex12Colored
         </td>
         <td>
@@ -499,6 +737,40 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
+          arrowsExpand16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--arrows-expand-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-arrows-expand-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          arrowsExpand24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--arrows-expand-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-arrows-expand-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
           article16
         </td>
         <td>
@@ -799,6 +1071,23 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
           >
             <use
               xlink:href="#icon-avatar-signed-out"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          backgroundRemoval24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--background-removal-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-background-removal-24"
             />
           </svg>
         </td>
@@ -1275,6 +1564,40 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
           >
             <use
               xlink:href="#icon-car-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          carBrake16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--car-brake-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-car-brake-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          carBrake24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--car-brake-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-car-brake-24"
             />
           </svg>
         </td>
@@ -1978,6 +2301,40 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
+          chineseCoin16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--chinese-coin-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chinese-coin-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          chineseCoin24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--chinese-coin-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chinese-coin-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
           clear16
         </td>
         <td>
@@ -2091,6 +2448,23 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
           >
             <use
               xlink:href="#icon-clock-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          close12
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--close-12"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-close-12"
             />
           </svg>
         </td>
@@ -5021,6 +5395,40 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
+          graph16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--graph-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-graph-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          graph24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--graph-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-graph-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
           gridView16
         </td>
         <td>
@@ -5151,6 +5559,40 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
           >
             <use
               xlink:href="#icon-hanger-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          headlight16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--headlight-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-headlight-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          headlight24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--headlight-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-headlight-24"
             />
           </svg>
         </td>
@@ -9951,6 +10393,23 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
+          sparklineUpFilled24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--sparkline-up-filled-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-sparkline-up-filled-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
           spinner20
         </td>
         <td>
@@ -9996,6 +10455,40 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
           >
             <use
               xlink:href="#icon-spinner-30"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          splitPayment16
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--split-payment-16"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-split-payment-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          splitPayment24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--split-payment-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-split-payment-24"
             />
           </svg>
         </td>
@@ -10308,6 +10801,23 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
       </tr>
       <tr>
         <td>
+          storeFilled24
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--store-filled-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-store-filled-24"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
           suitcase24
         </td>
         <td>
@@ -10370,6 +10880,23 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
           >
             <use
               xlink:href="#icon-text-messaging-16"
+            />
+          </svg>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          textMessaging20
+        </td>
+        <td>
+          <svg
+            aria-hidden="true"
+            class="icon icon--text-messaging-20"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-text-messaging-20"
             />
           </svg>
         </td>
