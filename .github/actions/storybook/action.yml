@@ -12,7 +12,7 @@ runs:
     steps:
         - name: Build Storybook
           shell: sh
-          run: yarn build-storybook --output-dir storybook-static/${{ inputs.branch }}
+          run: NODE_OPTIONS=--openssl-legacy-provider yarn build-storybook --output-dir storybook-static/${{ inputs.branch }}
 
         - name: Publish Storybook
           uses: JamesIves/github-pages-deploy-action@v4
