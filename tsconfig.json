@@ -10,7 +10,7 @@
         "allowJs": false,
         "checkJs": false,
         "jsx": "react",
-        "rootDir": "./",
+        "rootDir": "./src",
         "outDir": "./lib",
         "declaration": true,
         "declarationMap": true,
@@ -23,7 +23,8 @@
     },
     "exclude": [
         "lib",
-        "node_modules"
+        "node_modules",
+        "src/**/__tests__"
     ],
     "include": [
         "src",
