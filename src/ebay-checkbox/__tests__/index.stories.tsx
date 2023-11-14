@@ -136,10 +136,13 @@ export const ControlValueFromOutside = () => {
         const [isDisabled, setDisabled] = useState(false)
         const counter = useRef(0)
         const handleOnChange = (
-            e: ChangeEvent<HTMLInputElement>,
+            e: ChangeEvent<HTMLInputElement>, {
+                value,
+                checked
+            } : {
             value: string | number,
             checked: boolean
-        ) => {
+        }) => {
             if (counter.current < 4) {
                 setChecked(checked)
             } else {

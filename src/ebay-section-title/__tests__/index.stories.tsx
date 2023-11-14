@@ -66,7 +66,7 @@ export const WithInfo = () => (
                     a11yCloseText="Dismiss infotip"
                     aria-label="Important information"
                     pointer="top-left"
-                    icon="information"
+                    icon="information16"
                 >
                     <EbayInfotipHeading>Important</EbayInfotipHeading>
                     <EbayInfotipContent>

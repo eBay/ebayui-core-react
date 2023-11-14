@@ -146,11 +146,14 @@ export const ControlledComponent = () => {
     const TestControlledComponent = () => {
         const [selectedValue, setSelectedValue] = useState('UK')
         const handleChange = (
-            e: ChangeEvent<HTMLSelectElement>,
-            selectedIndex: number,
-            newValue: string
-        ) => {
-            setSelectedValue(newValue)
+            e: ChangeEvent<HTMLSelectElement>, {
+                index,
+                selected
+            } : {
+                index: number,
+                selected: string[]
+        }) => {
+            setSelectedValue(selected[0])
         }
 
         return (

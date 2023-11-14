@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Attention message 1`] = `
+exports[`Storyshots ebay-section-notice Attention message 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-attention"
@@ -65,7 +65,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Attention message 1`
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Confirmation message 1`] = `
+exports[`Storyshots ebay-section-notice Confirmation message 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-confirmation"
@@ -115,7 +115,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Confirmation message
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (with action) 1`] = `
+exports[`Storyshots ebay-section-notice Default message (with action) 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"
@@ -148,7 +148,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (wit
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (with no action) 1`] = `
+exports[`Storyshots ebay-section-notice Default message (with no action) 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"
@@ -172,7 +172,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Default message (wit
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section Notice 1`] = `
+exports[`Storyshots ebay-section-notice Educational Section Notice 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-education"
@@ -212,7 +212,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section 
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section Notice Custom Icon 1`] = `
+exports[`Storyshots ebay-section-notice Educational Section Notice Custom Icon 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-education"
@@ -252,7 +252,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section 
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section Notice Prominent 1`] = `
+exports[`Storyshots ebay-section-notice Educational Section Notice Prominent 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-education"
@@ -292,7 +292,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Educational Section 
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Information message (dismissable) 1`] = `
+exports[`Storyshots ebay-section-notice Information message (dismissable) 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="section-notice-information"
@@ -365,7 +365,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Information message 
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Section with link 1`] = `
+exports[`Storyshots ebay-section-notice Section with link 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"
@@ -403,7 +403,7 @@ exports[`<EbaySectionNotice> Storyshots ebay-section-notice Section with link 1`
 </DocumentFragment>
 `;
 
-exports[`<EbaySectionNotice> Storyshots ebay-section-notice Section with title 1`] = `
+exports[`Storyshots ebay-section-notice Section with title 1`] = `
 <DocumentFragment>
   <section
     aria-roledescription="Notice"

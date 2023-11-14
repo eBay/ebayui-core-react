@@ -96,12 +96,12 @@ exports[`Storyshots ebay-section-title With Info 1`] = `
       >
         <svg
           aria-hidden={true}
-          className="icon icon--information"
+          className="icon icon--information-16"
           focusable={false}
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlinkHref="#icon-information"
+            xlinkHref="#icon-information-16"
           />
         </svg>
       </button>

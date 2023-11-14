@@ -100,12 +100,12 @@ exports[`Storyshots ebay-infotip Custom icon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="icon icon--settings"
+          class="icon icon--settings-16"
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
         >
           <use
-            xlink:href="#icon-settings"
+            xlink:href="#icon-settings-16"
           />
         </svg>
       </button>

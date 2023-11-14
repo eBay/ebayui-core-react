@@ -11,7 +11,7 @@ export const DefaultTabs = () => (
     <>
         <EbayTabs
             onTabSelect={action('tab selected')}
-            onSelect={(e, props) => action('onSelect(e, props')}
+            onSelect={action('onSelect(props')}
         >
             <Tab>Tab 1</Tab>
             <Tab>Tab 2</Tab>
