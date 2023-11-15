@@ -47,6 +47,7 @@ const EbayMenuItem: FC<EbayFakeMenuItemProps> = ({
     }
 
     const tick = <EbayIcon name="tick16" />
+    // todo: remove this workaround when Skin team fixes https://github.com/eBay/skin/issues/2208
     const badgeStyleFix = {
         marginLeft: 'var(--spacing-100)',
         marginRight: 'var(--spacing-100)'
