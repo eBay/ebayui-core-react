@@ -1,22 +1,11 @@
-import React, { cloneElement, ComponentProps, FC, KeyboardEvent, useEffect, useState } from 'react'
+import React, { cloneElement, FC, KeyboardEvent, useEffect, useState } from 'react'
 import classNames from 'classnames'
 
 import { handleActionKeydown, handleLeftRightArrowsKeydown } from '../common/event-utils'
 import { filterByType } from '../common/component-utils'
-import { Activation, Size } from './types'
 import Tab from './tab'
 import TabPanel from './tab-panel'
-
-export type TabsProps = ComponentProps<'div'> & {
-    index?: number;
-    size?: Size;
-    activation?: Activation;
-    onSelect?: ({ selectedIndex: number }) => void;
-    /**
-     * @deprecated Use onSelect instead
-     */
-    onTabSelect?: (index: number) => void;
-};
+import type { TabsProps } from './types'
 
 const Tabs: FC<TabsProps> = ({
     id,
