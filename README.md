@@ -105,41 +105,14 @@ If you render children components dynamically and don't want to get React `key` 
 </EbayParentComponent>
 ```
 
-#### IE-10/11 (deprecated)
-You will need polyfills for IE. Recommended approach is using `core-js` with or without `babel`.
+### Pass-Through Attributes
 
-To manually use polyfills you need to import them:
-```js
-import 'core-js/stable/object/values'
+HTML attributes can be used on any component, and they will be passed through to the most prominent tag of the component. The most prominent tag is usually the root or form control, but individual components will note if it varies for specific cases.
 
-Object.values({ a: 'Hello' }).map(console.log)
+Example of usage:
+```jsx
+<EbayButton id="my-button" />
 ```
-
-But we suggest to use polyfills automatically by editing your `.babelrc`:
-```json
-{
-    "presets": [
-        [
-            "@babel/preset-env",
-            {
-                "useBuiltIns": "usage",
-                "corejs": "3",
-                "targets": {
-                    "Chrome": 87,
-                    "Firefox": 78,
-                    "Safari": 11,
-                    "Edge": 103,
-                    "Opera": 89,
-                    "ChromeAndroid": 83,
-                    "ios_saf": 12
-                }
-            }
-        ]
-    ]
-}
-```
-`targets` can also be something like "> 0.2%, not dead"
-
 
 ### Issues
 
