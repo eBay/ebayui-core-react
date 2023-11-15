@@ -149,6 +149,16 @@ export const WithCustomLabel = () => (
             <Item>item 2</Item>
             <Item>item 3</Item>
         </EbayMenuButton>
+
+        <hr />
+
+        <h2 id="external-label">External label</h2>
+        <EbayMenuButton prefixId="external-label">
+            <EbayMenuButtonLabel>Using external label for a11y</EbayMenuButtonLabel>
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
     </>
 )
 

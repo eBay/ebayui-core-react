@@ -26,7 +26,6 @@ export type EbayMenuButtonProps = {
     noToggleIcon?: boolean;
     checked?: number;
     collapseOnSelect?: boolean;
-    // todo: implement the following props
     prefixId?: string;
     prefixLabel?: string;
 }
@@ -49,6 +48,8 @@ const EbayMenuButton: FC<Props> = ({
     checked,
     collapseOnSelect,
     a11yText,
+    prefixId,
+    prefixLabel,
     onClick = () => {},
     onExpand = () => {},
     onCollapse = () => {},
@@ -120,6 +121,7 @@ const EbayMenuButton: FC<Props> = ({
         'aria-haspopup': true,
         'aria-label': a11yText,
         'aria-controls': menuId,
+        'aria-labelledby': prefixId,
         onClick: e => {
             setExpanded(!expanded)
             onClick(e)
