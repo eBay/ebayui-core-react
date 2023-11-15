@@ -15,14 +15,14 @@
         "declaration": true,
         "declarationMap": true,
         "strict": true,
-        "strictBindCallApply": false,
-        "strictFunctionTypes": false,
-        "strictNullChecks": false,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": false, // 21 errors
+        "strictNullChecks": false, // 150+ errors
         "strictPropertyInitialization": false,
-        "useUnknownInCatchVariables": false,
-        "noImplicitAny": false,
+        "useUnknownInCatchVariables": true,
+        "noImplicitAny": false, // 300+ errors
         "noImplicitThis": true,
-        "alwaysStrict": false,
+        "alwaysStrict": true,
         "moduleResolution": "node",
         "baseUrl": "./",
         "allowSyntheticDefaultImports": true,
