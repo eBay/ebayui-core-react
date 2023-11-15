@@ -1,10 +1,10 @@
 import React from 'react';
-import requireContext from 'node-require-context'
+import requireContext from 'node-require-context';
 import { render } from '@testing-library/react';
 import { initStoryshots } from '../../../config/jest/storyshots';
-import { EbayButton } from '../../ebay-button'
+import { EbayButton } from '../../ebay-button';
 import { EbayNoticeContent, EbaySectionNotice } from '../index';
-import userEvent from '@testing-library/user-event'
+import userEvent from '@testing-library/user-event';
 
 var anySyntheticEvent = expect.objectContaining({ type: null });
 
@@ -94,6 +94,7 @@ describe('<EbaySectionNotice>', () => {
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
             expect(dismissMock).toHaveBeenCalled()
         })
+    })
 })
 
 initStoryshots({
@@ -101,5 +102,4 @@ initStoryshots({
         const req = requireContext('./', false, /\.stories\.tsx$/);
         return configure(req, module)
     }
-
 })

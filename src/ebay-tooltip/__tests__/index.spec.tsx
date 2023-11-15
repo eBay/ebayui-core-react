@@ -170,6 +170,7 @@ describe('<EbayTooltip>', () => {
             expect(() => {
                 render(
                     <EbayTooltip>
+                        {/* @ts-ignore: Forcing error to test assertion */}
                         <EbayTooltipHost>
                             <a>Test</a>
                             <button>Test</button>

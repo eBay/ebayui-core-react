@@ -127,6 +127,7 @@ describe('<EbayPagination>', () => {
 
 initStoryshots({
     test: snapshotWithOptions({
+        // @ts-ignore: This method exists on storybook but no on type definitions
         createNodeMock: (element) => document.createElement(element.type)
     }),
     config: ({ configure }) =>

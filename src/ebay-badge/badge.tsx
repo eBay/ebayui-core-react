@@ -5,7 +5,7 @@ export type EbayBadgeType = 'menu' | 'icon' | 'img'
 
 type Props = ComponentProps<'span'> & {
     type?: EbayBadgeType;
-    number: number;
+    number: number | string;
 }
 
 const EbayBadge: FC<Props> = ({

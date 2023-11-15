@@ -8,7 +8,7 @@ type InfotipHostProps = ComponentProps<'button'> & {
     icon?: Icon;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     variant?: Variant;
-    children?: ({ icon }) => ReactNode | ReactNode
+    children?: (({ icon }) => ReactNode) | ReactNode
 }
 
 const EbayInfotipHost: FC<InfotipHostProps> = ({
@@ -21,7 +21,11 @@ const EbayInfotipHost: FC<InfotipHostProps> = ({
 }) => {
     const classPrefix = variant === 'modal' ? 'dialog--mini' : 'infotip'
     const buttonIcon = <EbayIcon name={icon} />
-    const buttonContent = typeof children === 'function' ? children({ icon: buttonIcon }) : children
+    let buttonContent = children
+
+    if (children instanceof Function) {
+        buttonContent = children({ icon: buttonIcon })
+    }
 
     return (
         <button
