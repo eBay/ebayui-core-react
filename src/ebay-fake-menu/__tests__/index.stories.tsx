@@ -5,6 +5,7 @@ import {
     EbayFakeMenuItem as Item,
     EbayFakeMenuSeparator as Separator
 } from '../index'
+import { EbayMenu } from '../../ebay-menu'
 
 export default {
     title: 'ebay-fake-menu'
@@ -92,8 +93,34 @@ export const WithDisabledItem = () => (
     <>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
-            <Item disabled>Item 2</Item>
+            <Item>Item without href</Item>
+            <Item disabled>Disabled Item</Item>
             <Item href="#">Item 3</Item>
+        </EbayFakeMenu>
+    </>
+)
+
+export const MixedWithButtons = () => (
+    <>
+        <EbayFakeMenu>
+            <Item href="#">Link 1</Item>
+            <Item type="button">Button</Item>
+            <Item href="#">Link 2</Item>
+            <Item type="button" disabled>Disabled Button</Item>
+        </EbayFakeMenu>
+    </>
+)
+
+export const WithBadges = () => (
+    <>
+        <EbayFakeMenu>
+            <Item href="" badgeNumber={5} badgeAriaLabel="item 1 (5 unread items)">
+                item 1
+            </Item>
+            <Item href="" badgeNumber={23} aria-label="item 2 (23 unread items)">
+                item 2
+            </Item>
+            <Item href="">item 3</Item>
         </EbayFakeMenu>
     </>
 )
