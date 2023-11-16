@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, ComponentProps, FC, ReactElement, ReactNode } from 'react'
+import React, { Children, cloneElement, ComponentProps, FC, isValidElement, ReactElement, ReactNode } from 'react'
 import classNames from 'classnames'
 import { EbayEventHandler } from '../common/event-utils/types'
 
@@ -28,7 +28,7 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({
     const headingId = `${id}-breadcrumbs-heading`
     const lastItemIndex = Children.count(breadcrumbItems) - 1
     const A11yHeadingTag = a11yHeadingTag
-    const anyLink = Children.toArray(breadcrumbItems).some((item: ReactElement) => item.props.href)
+    const anyLink = Children.toArray(breadcrumbItems).some(item => isValidElement(item) && item.props.href)
     const tag = anyLink ? 'a' : 'button'
 
     return (
@@ -40,9 +40,9 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({
         >
             <A11yHeadingTag id={headingId} className="clipped">{a11yHeadingText}</A11yHeadingTag>
             <ul>
-                {Children.map(breadcrumbItems, (item: ReactElement, index) => {
+                {Children.map(breadcrumbItems, (item, index) => {
                     const isLastItem = index === lastItemIndex
-                    const { href, children } = item.props
+                    const { href, children } = isValidElement(item) && item.props
                     const itemProps = {
                         tag,
                         isLastItem,
@@ -51,7 +51,7 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({
                         onClick: event => onSelect(event)
                     }
 
-                    return cloneElement(item, itemProps)
+                    return isValidElement(item) && cloneElement(item, itemProps)
                 })}
             </ul>
         </nav>

@@ -1,4 +1,4 @@
-import { Children, Dispatch, FC, ReactElement, ReactNode, SetStateAction, useEffect, useState } from 'react'
+import { Children, Dispatch, FC, isValidElement, ReactElement, ReactNode, SetStateAction, useEffect, useState } from 'react'
 import useKeyPress from './use-key-press'
 
 const useRovingIndex = (
@@ -11,8 +11,8 @@ const useRovingIndex = (
 
     const rovingIndexArray = Children
         .toArray(children)
-        .reduce<number[]>((focusables, child: ReactElement, i) =>
-            child.type === FocusableType ? [...focusables, i] : focusables, [])
+        .reduce<number[]>((focusables, child, i) =>
+            isValidElement(child) && child.type === FocusableType ? [...focusables, i] : focusables, [])
 
     const currentIndex = rovingIndexArray.indexOf(rovingIndex)
 
