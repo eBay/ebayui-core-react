@@ -18,9 +18,9 @@ const defaultProps: EbayVideoProps = {
     errorText: "An error has occurred",
     width: 600,
     height: 400,
-    onPlay: (e: SyntheticEvent<HTMLVideoElement>, props: PlayEventProps) => action('onPlay')(e, props),
-    onVolumeChange: (e: SyntheticEvent<HTMLVideoElement>, props: VolumeChangeProps) => action('onVolumeChange')(e, props),
-    onLoadError: (err: Error) => action('onLoadError')(err),
+    onPlay: (e, props) => action('onPlay')(e, props),
+    onVolumeChange: (e, props) => action('onVolumeChange')(e, props),
+    onLoadError: (err) => action('onLoadError')(err),
     onReport: (e) => action('onReport')(e),
 }
 

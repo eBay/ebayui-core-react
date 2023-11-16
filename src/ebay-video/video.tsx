@@ -77,8 +77,8 @@ const EbayVideo: FC<EbayVideoProps> = ({
 
     const containerRef = useRef<HTMLDivElement>(null)
     const videoRef = useRef<HTMLVideoElement>(null)
-    const playerRef = useRef<Player>(null)
-    const uiRef = useRef(null)
+    const playerRef = useRef<Player | null>(null)
+    const uiRef = useRef<any>(null)
 
     const sources = filterByType(children, EbayVideoSource).map(elementProps)
 
@@ -143,7 +143,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
             video,
             reportText
         )
-        uiRef.current.configure({
+        uiRef.current?.configure({
             addBigPlayButton: true,
             controlPanelElements: [],
             addSeekBar: false
@@ -166,10 +166,10 @@ const EbayVideo: FC<EbayVideoProps> = ({
     useEffect(() => {
         switch (action) {
             case 'play':
-                videoRef.current.play()
+                videoRef.current?.play()
                 break
             case 'pause':
-                videoRef.current.pause()
+                videoRef.current?.pause()
                 break
             default:
         }
@@ -186,7 +186,9 @@ const EbayVideo: FC<EbayVideoProps> = ({
             ...defaultVideoConfig,
             ...updatedControls
         })
-        videoRef.current.controls = false
+        if (videoRef.current) {
+            videoRef.current.controls = false
+        }
     }
 
     const handlePlaying = (e: SyntheticEvent<HTMLVideoElement, Event>) => {
@@ -195,15 +197,17 @@ const EbayVideo: FC<EbayVideoProps> = ({
         showControls()
 
         if (playView === 'fullscreen') {
-            videoRef.current.requestFullscreen()
+            videoRef.current?.requestFullscreen()
         }
 
         setPlaying(true)
-        onPlay(e, { player: playerRef.current })
+        if (playerRef.current) {
+            onPlay(e, { player: playerRef.current })
+        }
     }
 
     const handleOnPlayClick = () => {
-        videoRef.current.play()
+        videoRef.current?.play()
     }
 
     const handleVolumeChange = (e: SyntheticEvent<HTMLVideoElement, Event>) => {
@@ -217,7 +221,9 @@ const EbayVideo: FC<EbayVideoProps> = ({
     const handleOnPause = () => {
         // On IOS, the controls force showing up if the video exist fullscreen while playing.
         // This forces the controls to always hide
-        videoRef.current.controls = false
+        if (videoRef.current) {
+            videoRef.current.controls = false
+        }
     }
 
     const style = {

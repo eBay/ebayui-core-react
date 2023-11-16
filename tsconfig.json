@@ -17,7 +17,7 @@
         "strict": true,
         "strictBindCallApply": true,
         "strictFunctionTypes": true,
-        "strictNullChecks": false, // 150+ errors
+        "strictNullChecks": true,
         "strictPropertyInitialization": false,
         "useUnknownInCatchVariables": true,
         "noImplicitAny": false, // 300+ errors
