@@ -6,7 +6,7 @@ import { ListItemRef } from './types'
 import { getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
 import { debounce } from '../common/debounce'
 
-type CarouselProps = ComponentProps<'div'> & {
+export type CarouselProps = ComponentProps<'div'> & {
     className?: string;
     gap?: number;
     index?: number; // Scroll to index slide
