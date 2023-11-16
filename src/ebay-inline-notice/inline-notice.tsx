@@ -2,7 +2,7 @@ import React, { FC, useEffect, ReactNode } from 'react'
 import classNames from 'classnames'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import NoticeContent from '../common/notice-utils/notice-content'
-import { findComponent } from '../common/component-utils'
+import { elementProps, findComponent } from '../common/component-utils'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { NoticeStatus } from './types'
 
@@ -53,7 +53,7 @@ const EbayInlineNotice: FC<Props> = ({
                 </span>
             ) : null}
             <NoticeContent
-                {...content.props}
+                {...elementProps(content)}
                 type="inline" />
         </div>
     )

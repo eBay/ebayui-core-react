@@ -1,4 +1,4 @@
-import React, { ChangeEvent, cloneElement, ComponentProps, FC, useState, useRef, FocusEvent } from 'react'
+import React, { ChangeEvent, cloneElement, ComponentProps, FC, useState, useRef, FocusEvent, isValidElement, ReactElement } from 'react'
 import classNames from 'classnames'
 import EbaySelectOption from './ebay-select-option'
 import { EbayIcon } from '../ebay-icon'
@@ -126,12 +126,12 @@ function options(children) {
     let optGroups = {}
     let withinGroup = false
 
-    const childrenOpts = filterByType(children, EbaySelectOption).map(c => cloneElement(c, {}))
+    const childrenOpts = filterByType(children, EbaySelectOption).map(c => isValidElement(c) && cloneElement(c, {}))
 
     if (childrenOpts) {
         optGroups = optionGroups(childrenOpts)
         let currentGroupName
-        childrenOpts.forEach((option, idx) => {
+        childrenOpts.forEach((option: ReactElement, idx) => {
             const { value, optionClassName, children: optionChildren, optgroup } = option.props
             withinGroup = optgroup && renderedGroups.indexOf(optgroup) === -1
 

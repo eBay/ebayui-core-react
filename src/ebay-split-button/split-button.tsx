@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { filterBy, filterByType } from '../common/component-utils'
+import { elementType, filterBy, filterByType } from '../common/component-utils'
 import { EbayButton } from '../ebay-button'
 import { EbayMenuButton, EbayMenuButtonItem, EbayMenuButtonSeparator } from '../ebay-menu-button'
 import { Props } from './types'
@@ -17,8 +17,8 @@ const EbaySplitButton: FC<Props> = ({
     ref,
     ...rest
 }) => {
-    const menuItemComponents: FC[] = [EbayMenuButtonItem, EbayMenuButtonSeparator]
-    const buttonLabel = filterBy(children, el => !menuItemComponents.includes(el.type as any))
+    const menuItemComponents = [EbayMenuButtonItem, EbayMenuButtonSeparator]
+    const buttonLabel = filterBy(children, el => !menuItemComponents.map(String).includes(elementType(el).toString()))
     const menuItems = filterByType(children, menuItemComponents)
 
     return (

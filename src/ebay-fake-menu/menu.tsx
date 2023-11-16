@@ -1,10 +1,8 @@
-import React, {
-    Children, cloneElement,
-    ComponentProps, FC, ReactElement
-} from 'react'
+import React, { Children, cloneElement, ComponentProps, FC, isValidElement } from 'react'
 import classNames from 'classnames'
 import { EbayFakeMenuItemProps } from './index'
 import { EbayKeyboardEventHandler, EbayMouseEventHandler } from '../common/event-utils/types'
+import { elementProps } from '../common/component-utils'
 
 type SpanProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onSelect'>
 type Props = SpanProps & {
@@ -27,16 +25,16 @@ const EbayFakeMenu: FC<Props> = ({
     return (
         <div {...rest} className={classNames(className, 'fake-menu')}>
             <ul className="fake-menu__items" tabIndex={-1}>
-                {childrenArray.map((child: ReactElement, i) => {
+                {childrenArray.map((child, i) => {
                     const {
                         current,
                         onClick = () => {},
                         ...itemRest
-                    }: EbayFakeMenuItemProps = child.props
+                    }: EbayFakeMenuItemProps = elementProps(child)
 
                     return (
                         <li key={i}>
-                            {cloneElement(child, {
+                            {isValidElement(child) && cloneElement(child, {
                                 ...itemRest,
                                 'aria-current': current ? defaultAriaCurrent : undefined,
                                 onClick: e => {

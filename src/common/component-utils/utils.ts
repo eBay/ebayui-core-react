@@ -1,23 +1,24 @@
-import { Children, FC, ReactElement, ReactNode } from 'react'
+import { Children, FC, isValidElement, JSXElementConstructor, ReactNode } from 'react'
 import './array.polyfill.flat' // for Mobile Safari 11
 
-export function findComponent(nodes: ReactNode = [], componentType: FC): ReactElement | undefined {
-    const elements = Children.toArray(nodes) as ReactElement[]
-    return elements.find(({ type }) => type === componentType) || null
+export const findComponent = (nodes: ReactNode = [], componentType: FC<any>): ReactNode | undefined =>
+    Children.toArray(nodes).find(child =>
+        isValidElement(child) && child.type === componentType) || null
+
+export const excludeComponent = (nodes: ReactNode = [], componentType: FC<any>): ReactNode[] =>
+    Children.toArray(nodes).filter(child =>
+        isValidElement(child) && child.type !== componentType)
+
+export const filterByType = (nodes: ReactNode = [], componentType: FC<any> | FC<any>[]): ReactNode[] => {
+    const types = [componentType.toString()].flat()
+    return Children
+        .toArray(nodes)
+        .filter(child => isValidElement(child) && types.includes(child.type as string))
 }
 
-export function excludeComponent(nodes: ReactNode = [], componentType: FC): ReactElement[] {
-    const elements = Children.toArray(nodes) as ReactElement[]
-    return elements.filter(({ type }) => type !== componentType)
-}
+export const filterBy = (nodes: ReactNode = [], predicate: (el: ReactNode) => boolean): ReactNode[] =>
+    Children.toArray(nodes).filter(predicate)
 
-export function filterByType(nodes: ReactNode = [], componentType: FC | FC[]): ReactElement[] {
-    const elements = Children.toArray(nodes) as ReactElement[]
-    const types = [componentType].flat()
-    return elements.filter(({ type }) => types.includes(type as any))
-}
-
-export function filterBy(nodes: ReactNode = [], predicate: (el: ReactElement) => boolean): ReactElement[] {
-    const elements = Children.toArray(nodes) as ReactElement[]
-    return elements.filter(predicate)
-}
+export const elementProps = (node: ReactNode): Record<string, any> => isValidElement(node) ? node.props : {}
+export const elementType = (node: ReactNode): string | JSXElementConstructor<any> | null =>
+    isValidElement(node) ? node.type : null

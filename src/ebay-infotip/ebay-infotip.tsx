@@ -1,10 +1,10 @@
-import React, { cloneElement, createElement, CSSProperties, FC, useRef, ReactNode } from 'react'
+import React, { cloneElement, createElement, CSSProperties, FC, useRef, ReactNode, isValidElement } from 'react'
 import classNames from 'classnames'
-import { findComponent } from '../common/component-utils'
+import { elementProps, findComponent } from '../common/component-utils'
 import { Tooltip, TooltipHost, TooltipContent, PointerDirection, useTooltip } from '../common/tooltip-utils'
 import { EbayDrawerDialog } from '../ebay-drawer-dialog'
 import { EbayDialogHeader } from '../ebay-dialog-base'
-import EbayInfotipHost from './ebay-infotip-host'
+import EbayInfotipHost, { InfotipHostProps } from './ebay-infotip-host'
 import { Icon } from '../ebay-icon'
 import { Variant } from './types'
 import { EbayInfotipHeading, EbayInfotipContent } from './index'
@@ -67,7 +67,7 @@ const EbayInfotip: FC<InfotipProps> = ({
         throw new Error(`EbayInfotip: Please use a EbayInfotipContent that defines the content of the infotip`)
     }
 
-    const { children: contentChildren, ...contentProps } = content.props
+    const { children: contentChildren, ...contentProps } = elementProps(content)
 
     return (
         <>
@@ -78,7 +78,7 @@ const EbayInfotip: FC<InfotipProps> = ({
                 className={classNames(className, { 'dialog--mini': isModal })}
                 ref={containerRef}>
                 <TooltipHost>
-                    {cloneElement(button, {
+                    {isValidElement(button) && cloneElement<InfotipHostProps>(button, {
                         ref: buttonRef,
                         onClick: toggleTooltip,
                         disabled,
@@ -86,7 +86,7 @@ const EbayInfotip: FC<InfotipProps> = ({
                         'aria-label': ariaLabel,
                         'aria-expanded': isExpanded,
                         icon,
-                        ...button.props
+                        ...elementProps(button)
                     })}
                 </TooltipHost>
                 {!isModal && (
@@ -109,7 +109,6 @@ const EbayInfotip: FC<InfotipProps> = ({
                     {...contentProps}
                     open={isExpanded}
                     onClose={collapseTooltip}
-                    mode="mini"
                     a11yCloseText={a11yCloseText}
                     className="dialog--mini__overlay"
                     a11yMaximizeText={a11yMaximizeText}

@@ -1,6 +1,6 @@
-import React, { cloneElement, ComponentProps, FC, useEffect, useRef, useState } from 'react'
+import React, { cloneElement, ComponentProps, FC, isValidElement, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
-import { filterByType, findComponent } from '../common/component-utils'
+import { elementProps, filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
 
@@ -63,7 +63,7 @@ const EbayMenuButton: FC<Props> = ({
     const menuRef = useRef()
 
     const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
-    const defaultIndexes = menuItems.map((item) => Boolean(item.props.checked))
+    const defaultIndexes = menuItems.map(item => Boolean(elementProps(item).checked))
     const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(defaultIndexes)
 
     const menuButtonLabel = findComponent(children, EbayMenuButtonLabel)
@@ -167,7 +167,7 @@ const EbayMenuButton: FC<Props> = ({
                     onSelect={onSelect}
                 >
                     {menuItems.map((item, i) =>
-                        cloneElement(item, {
+                        isValidElement(item) && cloneElement(item, {
                             ...item.props,
                             className: classnames(item.props.className, 'menu-button__item'),
                             key: i,

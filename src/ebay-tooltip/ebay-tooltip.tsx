@@ -1,5 +1,5 @@
 import React, { CSSProperties, FC, useRef } from 'react'
-import { findComponent } from '../common/component-utils'
+import { elementProps, findComponent } from '../common/component-utils'
 import {
     Tooltip,
     TooltipHost,
@@ -87,8 +87,8 @@ const EbayTooltip: FC<Props> = ({
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
         >
-            <TooltipHost {...host.props} />
-            <TooltipContent {...content.props} type="tooltip" style={overlayStyle} pointer={pointer} />
+            <TooltipHost {...elementProps(host)} />
+            <TooltipContent {...elementProps(content)} type="tooltip" style={overlayStyle} pointer={pointer} />
         </Tooltip>
     )
 }

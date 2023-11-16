@@ -1,6 +1,7 @@
-import React, { Children, cloneElement, ComponentProps, FC, isValidElement, ReactElement, ReactNode } from 'react'
+import React, { Children, cloneElement, ComponentProps, FC, isValidElement, ReactNode } from 'react'
 import classNames from 'classnames'
 import { EbayEventHandler } from '../common/event-utils/types'
+import { elementProps } from '../common/component-utils'
 
 type BreadcrumbProps = Omit<ComponentProps<'div'>, 'onSelect'> & {
     /**
@@ -28,7 +29,7 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({
     const headingId = `${id}-breadcrumbs-heading`
     const lastItemIndex = Children.count(breadcrumbItems) - 1
     const A11yHeadingTag = a11yHeadingTag
-    const anyLink = Children.toArray(breadcrumbItems).some(item => isValidElement(item) && item.props.href)
+    const anyLink = Children.toArray(breadcrumbItems).some(item => elementProps(item).href)
     const tag = anyLink ? 'a' : 'button'
 
     return (
@@ -42,7 +43,7 @@ const Breadcrumbs: FC<BreadcrumbProps> = ({
             <ul>
                 {Children.map(breadcrumbItems, (item, index) => {
                     const isLastItem = index === lastItemIndex
-                    const { href, children } = isValidElement(item) && item.props
+                    const { href, children } = elementProps(item)
                     const itemProps = {
                         tag,
                         isLastItem,

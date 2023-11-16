@@ -1,7 +1,7 @@
 import React, {
     Children, ComponentProps, FC, ReactElement,
     MouseEvent, KeyboardEvent,
-    cloneElement, useEffect, useRef, useState, createRef
+    cloneElement, useEffect, useRef, useState, createRef, isValidElement
 } from 'react'
 import {
     EbayFakeMenuButton,
@@ -10,7 +10,7 @@ import {
 import classNames from 'classnames'
 import { debounce } from '../common/debounce'
 import { calcPageState, getMaxWidth } from './helpers'
-import { filterBy } from '../common/component-utils'
+import { elementProps, elementType, filterBy } from '../common/component-utils'
 import { PaginationItemType } from './pagination-item'
 import { ItemState, PaginationVariant } from './types'
 import { EbayIcon } from '../ebay-icon'
@@ -45,7 +45,10 @@ const EbayPagination: FC<PaginationProps> = ({
     const paginationContainerRef = useRef<HTMLUnknownElement>(null)
     const childPageRefs = useRef([])
     childPageRefs.current = Children.map(children, createRef)
-    const totalPages = filterBy(children, ({ props }) => props.type === undefined || props.type === 'page').length
+    const totalPages = filterBy(
+        children,
+        child => elementType(child) === undefined || elementProps(child).type === 'page'
+    ).length
     const itemWidthRef = useRef<number>(0)
     const arrowWidthRef = useRef<number>(0)
     const getNumOfVisiblePageItems = () => {
@@ -97,8 +100,8 @@ const EbayPagination: FC<PaginationProps> = ({
         const firstDot = page.indexOf('dots')
         const lastDot = page.lastIndexOf('dots')
 
-        return Children.map(children, (item: ReactElement, index) => {
-            const { type = 'page', current, disabled, href, children: text } = item.props
+        return Children.map(children, (item, index) => {
+            const { type = 'page', current, disabled, href, children: text } = elementProps(item)
             const isDot = page[index] === 'dots'
             const key = `${id}-item-${index}`
             const hide = page[index] === 'hidden'
@@ -163,7 +166,7 @@ const EbayPagination: FC<PaginationProps> = ({
                     </li>
                 )
             }
-            return itemType === type ? cloneElement(item, newProps) : null
+            return itemType === type && isValidElement(item) ? cloneElement(item, newProps) : null
         })
     }
 

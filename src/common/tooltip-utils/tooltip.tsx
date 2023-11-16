@@ -1,4 +1,4 @@
-import React, { cloneElement, ComponentProps, FC, RefObject } from 'react'
+import React, { cloneElement, ComponentProps, FC, isValidElement, RefObject } from 'react'
 import classNames from 'classnames'
 import { withForwardRef } from '../component-utils/forwardRef'
 import { findComponent, excludeComponent } from '../component-utils'
@@ -26,12 +26,15 @@ const Tooltip: FC<TooltipProps> = ({
         throw new Error(`Tooltip: Please use a TooltipHost that defines the host of the tooltip`)
     }
 
-    const host = cloneElement(originalHostComponent, {
-        className: `${type}__host`,
-        'aria-expanded': isExpanded,
-        'aria-describedby': content?.props?.id,
-        ...originalHostComponent.props
-    })
+    const host =
+        isValidElement(content) &&
+        isValidElement(originalHostComponent) &&
+        cloneElement(originalHostComponent, {
+            className: `${type}__host`,
+            'aria-expanded': isExpanded,
+            'aria-describedby': content?.props?.id,
+            ...originalHostComponent.props
+        })
 
     return (
         <span
