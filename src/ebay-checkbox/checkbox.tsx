@@ -1,4 +1,6 @@
-import React, { ChangeEvent, cloneElement, ComponentProps, FC, FocusEvent, isValidElement, KeyboardEvent, useState } from 'react'
+import React, {
+    ChangeEvent, cloneElement, ComponentProps, FC, FocusEvent, isValidElement, KeyboardEvent, useState
+} from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayLabel, EbayLabelProps } from '../ebay-field'

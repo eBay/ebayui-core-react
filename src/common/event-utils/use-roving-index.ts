@@ -1,4 +1,4 @@
-import { Children, Dispatch, FC, isValidElement, ReactElement, ReactNode, SetStateAction, useEffect, useState } from 'react'
+import { Children, Dispatch, FC, isValidElement, ReactNode, SetStateAction, useEffect, useState } from 'react'
 import useKeyPress from './use-key-press'
 
 const useRovingIndex = (
