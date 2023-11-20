@@ -1,6 +1,6 @@
 import React from 'react'
-import { ComponentMeta } from '@storybook/react';
-import { EbayCarousel, EbayCarouselItem } from '../index';
+import { ComponentMeta, Story } from '@storybook/react'
+import { EbayCarousel, EbayCarouselItem, CarouselProps } from '../index';
 
 const story: ComponentMeta<typeof EbayCarousel> = {
   component: EbayCarousel,
@@ -54,7 +54,7 @@ export const Continuous = (args) => {
   );
 };
 
-const _ItemsPerSlide = (args) => {
+const _ItemsPerSlide: Story<CarouselProps> = (args) => {
     return (
         <EbayCarousel gap={16} {...args}>
             {items}

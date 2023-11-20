@@ -82,10 +82,10 @@ const EbayPagination: FC<PaginationProps> = ({
         const debouncedUpdate = debounce(updatePages, 16)
 
         updatePages()
-        window.addEventListener('resize', debouncedUpdate)
+        window.addEventListener('resize', () => debouncedUpdate())
 
         return () => {
-            window.removeEventListener('resize', debouncedUpdate)
+            window.removeEventListener('resize', () => debouncedUpdate())
         }
     }, [children])
 
@@ -120,7 +120,7 @@ const EbayPagination: FC<PaginationProps> = ({
                         key={key}
                         href={href}
                         onClick={
-                            (event: MouseEvent<HTMLAnchorElement> & KeyboardEvent) => {
+                            event => {
                                 if (!href) {
                                     event.preventDefault()
                                 }
