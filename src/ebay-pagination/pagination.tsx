@@ -120,7 +120,7 @@ const EbayPagination: FC<PaginationProps> = ({
                         key={key}
                         href={href}
                         onClick={
-                            (event: MouseEvent<HTMLAnchorElement> & KeyboardEvent) => {
+                            event => {
                                 if (!href) {
                                     event.preventDefault()
                                 }
