@@ -29,10 +29,13 @@ import '@ebay/skin/menu';
 
 ## EbayFakeMenuItem Props
 
-Name | Type | Required | Description
---- | --- | --- | ---
-`href` | String | No | Redirection link on click
+Name | Type    | Required | Description
+--- |---------| --- | ---
+`href` | String  | No | Redirection link on click
+`type` | String  | No | Set to `button` to render menu-item as a button instead of a link
 `current` | Boolean | No | Whether or not the href is the current href of the page
+`badgeNumber` | Number  | No | Used as a number to be placed inside the badge
+`badgeAriaLabel` | Number  | No | Only if `badgeNumber` provided, passed as the `aria-label` directly to the badge
 
 ## EbayFakeMenuSeparator
 Example:
