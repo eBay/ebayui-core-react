@@ -130,6 +130,7 @@ export const Borderless = () => (
 
 export const WithCustomLabel = () => (
     <>
+        <h2>Custom style label</h2>
         <EbayMenuButton>
             <EbayMenuButtonLabel>
                 <span
@@ -150,11 +151,30 @@ export const WithCustomLabel = () => (
             <Item>item 3</Item>
         </EbayMenuButton>
 
-        <hr />
+        <br /><br />
 
         <h2 id="external-label">External label</h2>
         <EbayMenuButton prefixId="external-label">
             <EbayMenuButtonLabel>Using external label for a11y</EbayMenuButtonLabel>
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+
+        <br /><br />
+
+        <h2>Prefix Label</h2>
+        <EbayMenuButton prefixLabel="Prefix:">
+            <EbayMenuButtonLabel>Label</EbayMenuButtonLabel>
+            <Item>item 1</Item>
+            <Item>item 2</Item>
+            <Item>item 3</Item>
+        </EbayMenuButton>
+
+        <br /><br />
+
+        <h2>No Label</h2>
+        <EbayMenuButton split="end">
             <Item>item 1</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -202,7 +222,8 @@ export const SingleSelectMenuButtonCollapseOnClick = () => {
 
     return (
         <EbayMenuButton
-            text={`Sort order: ${sortItems[checkedSort]}`}
+            prefixLabel="Sort order:"
+            text={sortItems[checkedSort]}
             type="radio"
             collapseOnSelect
             checked={defaultSortIndex}
@@ -230,7 +251,8 @@ export const SingleSelectMenuButtonMenuChecked = () => {
     return (
         <>
             <EbayMenuButton
-                text={`Topic: ${topicItems[checkedTopic]}`}
+              prefixLabel="Topic:"
+                text={topicItems[checkedTopic]}
                 type="radio"
                 checked={defaultTopicIndex}
                 onChange={(e, { index }) => setCheckedTopic(index)}
@@ -241,7 +263,8 @@ export const SingleSelectMenuButtonMenuChecked = () => {
             </EbayMenuButton>
       &nbsp;
             <EbayMenuButton
-                text={`Sort order: ${sortItems[checkedSort]}`}
+                prefixLabel="Sort order:"
+                text={sortItems[checkedSort]}
                 type="radio"
                 checked={defaultSortIndex}
                 onChange={(e, { index }) => setCheckedSort(index)}
