@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { elementType, filterBy, filterByType } from '../common/component-utils'
+import { excludeComponent, filterByType } from '../common/component-utils'
 import { EbayButton } from '../ebay-button'
 import { EbayMenuButton, EbayMenuButtonItem, EbayMenuButtonSeparator } from '../ebay-menu-button'
 import { Props } from './types'
@@ -18,7 +18,7 @@ const EbaySplitButton: FC<Props> = ({
     ...rest
 }) => {
     const menuItemComponents = [EbayMenuButtonItem, EbayMenuButtonSeparator]
-    const buttonLabel = filterBy(children, el => !menuItemComponents.map(String).includes(elementType(el).toString()))
+    const buttonLabel = excludeComponent(children, menuItemComponents)[0]
     const menuItems = filterByType(children, menuItemComponents)
 
     return (

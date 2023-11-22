@@ -10,7 +10,7 @@ import {
 import classNames from 'classnames'
 import { debounce } from '../common/debounce'
 import { calcPageState, getMaxWidth } from './helpers'
-import { elementProps, elementType, filterBy } from '../common/component-utils'
+import { elementProps, filterBy } from '../common/component-utils'
 import { PaginationItemType } from './pagination-item'
 import { ItemState, PaginationVariant } from './types'
 import { EbayIcon } from '../ebay-icon'
@@ -47,7 +47,7 @@ const EbayPagination: FC<PaginationProps> = ({
     childPageRefs.current = Children.map(children, createRef)
     const totalPages = filterBy(
         children,
-        child => elementType(child) === undefined || elementProps(child).type === 'page'
+        child => [undefined, 'page'].includes(elementProps(child).type)
     ).length
     const itemWidthRef = useRef<number>(0)
     const arrowWidthRef = useRef<number>(0)
@@ -65,11 +65,14 @@ const EbayPagination: FC<PaginationProps> = ({
 
     const [page, setPage] = useState<ItemState[]>([])
     const [selectedIndex, setSelectedIndex] = useState<number>(0)
-    // selectedPageIndexFromDotMenu: override pageIndex on pagination with dot menu value
-    const updatePages = (selectedPageIndexFromDotMenu?: number) => {
-        const selectedPageIndex = selectedPageIndexFromDotMenu || childPageRefs.current.findIndex(pageRef =>
-            pageRef.current?.getAttribute('aria-current') === 'page'
-        )
+
+    const currentIndex = () => childPageRefs.current.findIndex(pageRef =>
+        pageRef.current?.getAttribute('aria-current') === 'page'
+    )
+
+    // selectedIndexFromDotMenu: override pageIndex on pagination with dot menu value
+    const updatePages = (selectedIndexFromDotMenu?: number) => {
+        const selectedPageIndex = selectedIndexFromDotMenu !== undefined ? selectedIndexFromDotMenu : currentIndex()
         const visiblePageItems = getNumOfVisiblePageItems()
         const pageState = calcPageState(
             selectedPageIndex,
@@ -85,10 +88,10 @@ const EbayPagination: FC<PaginationProps> = ({
         const debouncedUpdate = debounce(updatePages, 16)
 
         updatePages()
-        window.addEventListener('resize', () => debouncedUpdate())
+        window.addEventListener('resize', debouncedUpdate as any)
 
         return () => {
-            window.removeEventListener('resize', () => debouncedUpdate())
+            window.removeEventListener('resize', debouncedUpdate as any)
         }
     }, [children])
 

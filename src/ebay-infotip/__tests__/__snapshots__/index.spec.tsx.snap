@@ -494,7 +494,6 @@ exports[`Storyshots ebay-infotip Modal 1`] = `
         arial-modal="true"
         class="drawer-dialog dialog--mini__overlay drawer-dialog--mask-fade-slow"
         hidden=""
-        mode="mini"
         role="dialog"
       >
         <div

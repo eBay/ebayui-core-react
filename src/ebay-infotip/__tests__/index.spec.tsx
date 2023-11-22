@@ -2,12 +2,12 @@ import React from 'react'
 import requireContext from 'node-require-context'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
 import { initStoryshots } from '../../../config/jest/storyshots'
-import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../index'
+import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading, EbayInfotipHost, EbayInfotipProps } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
-const renderComponent = (props?: any) => render(
-    <EbayInfotip {...props}>
+const renderComponent = (props?: Partial<EbayInfotipProps>) => render(
+    <EbayInfotip a11yCloseText="Close" {...props}>
         <EbayInfotipHeading>Title</EbayInfotipHeading>
         <EbayInfotipContent>
             <p>Info content</p>
@@ -60,6 +60,43 @@ describe('<EbayInfotip>', () => {
             fireEvent.click(wrapper.container.querySelector('button.infotip__close'))
 
             expect(spy).toBeCalled()
+        })
+    })
+
+    describe('on modal variant', () => {
+        it('should fire an event', () => {
+            const spy = jest.fn()
+            const wrapper = renderComponent({ variant: 'modal', onExpand: spy })
+            fireEvent.click(wrapper.container.querySelector('button.infotip__host'))
+
+            expect(spy).toBeCalled()
+        })
+    })
+
+    describe('on custom button content', () => {
+        it('should overwrite aria-label', () => {
+            const wrapper = render(
+              <EbayInfotip
+                pointer="top-left"
+                a11yCloseText="Close"
+                aria-label="Wrong aria-label, should be overwritten"
+              >
+                  <EbayInfotipHost aria-label="Click to open infotip">
+                      {({ icon }: any) => (
+                        <span>
+                            {icon}
+                            <span style={{ marginLeft: 5 }}>Click me</span>
+                        </span>
+                      )}
+                  </EbayInfotipHost>
+                  <EbayInfotipContent>
+                      <EbayInfotipHeading>Title</EbayInfotipHeading>
+                      <p>Use Access Key &apos;S&apos; to display settings.</p>
+                  </EbayInfotipContent>
+              </EbayInfotip>
+            )
+
+            expect(wrapper.container.querySelector('button.infotip__host')).toHaveAttribute('aria-label', 'Click to open infotip')
         })
     })
 

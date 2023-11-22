@@ -9,9 +9,9 @@ import React, {
 } from 'react'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
+import { elementProps, findComponent } from '../common/component-utils'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { EbayPageNoticeFooter } from './index'
-import { elementProps, elementType } from '../common/component-utils'
 
 export type PageNoticeStatus = 'general' | 'attention' | 'confirmation' | 'information'
 export type Props = ComponentProps<'section'> & {
@@ -31,8 +31,7 @@ const EbayPageNotice: FC<Props> = ({
     ...rest
 }) => {
     const [dismissed, setDismissed] = useState(false)
-    const childrenArray = React.Children.toArray(children)
-    const content = childrenArray.find(child => elementType(child) === EbayNoticeContent)
+    const content = findComponent(children, EbayNoticeContent)
 
     if (!content) {
         throw new Error(`EbayPageNotice: Please use a EbayNoticeContent that defines the content of the notice`)

@@ -1,7 +1,7 @@
 import React, { ComponentProps, FC, RefObject, ReactNode } from 'react'
 import classNames from 'classnames/dedupe'
 import { EbayIcon, Icon } from '../ebay-icon'
-import { withForwardRef } from '../common/component-utils/forwardRef'
+import { withForwardRef } from '../common/component-utils'
 import { Variant } from './types'
 
 export type InfotipHostProps = ComponentProps<'button'> & {
@@ -21,11 +21,7 @@ const EbayInfotipHost: FC<InfotipHostProps> = ({
 }) => {
     const classPrefix = variant === 'modal' ? 'dialog--mini' : 'infotip'
     const buttonIcon = <EbayIcon name={icon} />
-    let buttonContent = children
-
-    if (children instanceof Function) {
-        buttonContent = children({ icon: buttonIcon })
-    }
+    const buttonContent = children instanceof Function ? children({ icon: buttonIcon }) : children
 
     return (
         <button
