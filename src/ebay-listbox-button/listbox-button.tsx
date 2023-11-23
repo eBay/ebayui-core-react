@@ -157,8 +157,8 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     }
 
     const makeSelections = (updatedIndex) => {
-        makeOptionActive(updatedIndex)
-        makeOptionInActive(selectedIndex)
+        makeOptionActive(selectedIndex === undefined || updatedIndex === -1 ? 0 : updatedIndex)
+        makeOptionInActive(selectedIndex === undefined || selectedIndex === -1 ? 0 : selectedIndex)
         scrollOptions(updatedIndex)
         setActiveDescendant(updatedIndex)
         setSelectedIndex(updatedIndex)
