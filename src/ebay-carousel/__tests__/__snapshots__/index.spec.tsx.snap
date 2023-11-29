@@ -158,70 +158,70 @@ exports[`Storyshots ebay-carousel Items Per Slide 1`] = `
           <li
             aria-hidden="false"
             class="carousel__snap-point"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 1
           </li>
           <li
             aria-hidden="false"
             class="demo-card"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 2
           </li>
           <li
             aria-hidden="false"
             class="demo-card"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 3
           </li>
           <li
             aria-hidden="false"
             class="carousel__snap-point"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 4
           </li>
           <li
             aria-hidden="false"
             class="demo-card"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 5
           </li>
           <li
             aria-hidden="false"
             class="demo-card"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 6
           </li>
           <li
             aria-hidden="false"
             class="carousel__snap-point"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 7
           </li>
           <li
             aria-hidden="false"
             class="demo-card"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 8
           </li>
           <li
             aria-hidden="false"
             class="demo-card"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center; margin-right: 16px;"
           >
             Item 9
           </li>
           <li
             aria-hidden="false"
             class="carousel__snap-point"
-            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; height: 120px; line-height: 120px; text-align: center;"
+            style="color: rgb(10, 28, 107); background: rgb(194, 245, 255); font-size: 24px; font-weight: bold; width: calc(33.333333333333336% - 10.666666666666666px); height: 120px; line-height: 120px; text-align: center;"
           >
             Item 10
           </li>

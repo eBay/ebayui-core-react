@@ -4,7 +4,7 @@
         "module": "commonjs",
         "lib": [
             "dom",
-            "es2017",
+            "es2019",
             "dom.iterable"
         ],
         "allowJs": false,
@@ -35,7 +35,6 @@
         "src/**/__tests__"
     ],
     "include": [
-        "src",
-        "test"
+        "src"
     ]
 }

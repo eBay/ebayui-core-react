@@ -1,4 +1,5 @@
 module.exports = {
+    'testEnvironment': 'jsdom',
     'resolver': 'jest-pnp-resolver',
     'moduleNameMapper': {
         '\\.(css|less)$': 'identity-obj-proxy'
@@ -45,10 +46,7 @@ module.exports = {
     'coverageReporters': [
         'json', 'lcov', 'text', 'cobertura'
     ],
-    setupFiles: [
-        '<rootDir>/config/jest/setup-tests.ts'
-    ],
     setupFilesAfterEnv: [
-        '@testing-library/jest-dom/extend-expect'
+        '<rootDir>/config/jest/setup-tests.ts'
     ]
 }

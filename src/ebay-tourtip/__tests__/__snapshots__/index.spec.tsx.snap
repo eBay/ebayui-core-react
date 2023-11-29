@@ -17,7 +17,7 @@ exports[`Storyshots ebay-tourtip Default tourtip 1`] = `
       <span
         class="tourtip__overlay"
         role="region"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="tourtip__pointer tourtip__pointer--bottom"
@@ -76,7 +76,7 @@ exports[`Storyshots ebay-tourtip Footer and heading tourtip 1`] = `
       <span
         class="tourtip__overlay"
         role="region"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="tourtip__pointer tourtip__pointer--bottom"
@@ -160,7 +160,7 @@ exports[`Storyshots ebay-tourtip Footer tourtip 1`] = `
       <span
         class="tourtip__overlay"
         role="region"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="tourtip__pointer tourtip__pointer--bottom"
@@ -240,7 +240,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="region"
-          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; top: calc(100% + 2px);"
         >
           <span
             class="tourtip__pointer tourtip__pointer--top"
@@ -295,7 +295,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="region"
-          style="transform: scale3d(1,1,1); left: -10px;"
+          style="transform: scale3d(1,1,1); left: -10px; top: calc(100% + 2px);"
         >
           <span
             class="tourtip__pointer tourtip__pointer--top-left"
@@ -350,7 +350,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="region"
-          style="transform: scale3d(1,1,1); right: -10px;"
+          style="transform: scale3d(1,1,1); right: -10px; top: calc(100% + 2px);"
         >
           <span
             class="tourtip__pointer tourtip__pointer--top-right"
@@ -570,7 +570,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="region"
-          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
         >
           <span
             class="tourtip__pointer tourtip__pointer--bottom"
@@ -625,7 +625,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="region"
-          style="transform: scale3d(1,1,1); left: -10px;"
+          style="transform: scale3d(1,1,1); left: -10px; bottom: calc(100% + 12px);"
         >
           <span
             class="tourtip__pointer tourtip__pointer--bottom-left"
@@ -680,7 +680,7 @@ exports[`Storyshots ebay-tourtip Pointer direction 1`] = `
         <span
           class="tourtip__overlay"
           role="region"
-          style="transform: scale3d(1,1,1); right: -10px;"
+          style="transform: scale3d(1,1,1); right: -10px; bottom: calc(100% + 12px);"
         >
           <span
             class="tourtip__pointer tourtip__pointer--bottom-right"
