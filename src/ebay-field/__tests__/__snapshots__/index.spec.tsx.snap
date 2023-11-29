@@ -283,7 +283,7 @@ exports[`Storyshots ebay-field Default - inline 1`] = `
     <span
       className="checkbox"
       style={
-        Object {
+        {
           "alignItems": "center",
         }
       }
@@ -328,7 +328,7 @@ exports[`Storyshots ebay-field Default - inline 1`] = `
 `;
 
 exports[`Storyshots ebay-field Labels on the right 1`] = `
-Array [
+[
   <p>
     <span
       className="field"
@@ -392,7 +392,7 @@ Array [
       <span
         className="checkbox"
         style={
-          Object {
+          {
             "alignItems": "center",
           }
         }

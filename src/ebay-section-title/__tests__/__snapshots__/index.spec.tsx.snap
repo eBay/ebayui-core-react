@@ -17,7 +17,7 @@ exports[`Storyshots ebay-section-title Default 1`] = `
 `;
 
 exports[`Storyshots ebay-section-title With CTA 1`] = `
-Array [
+[
   <div
     className="section-title"
   >
@@ -109,7 +109,7 @@ exports[`Storyshots ebay-section-title With Info 1`] = `
         className="infotip__overlay"
         role={null}
         style={
-          Object {
+          {
             "bottom": "auto",
             "left": "-10px",
             "right": "auto",

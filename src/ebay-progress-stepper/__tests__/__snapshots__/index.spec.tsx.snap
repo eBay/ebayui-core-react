@@ -3,7 +3,7 @@
 exports[`Storyshots ebay-progress-stepper Blocked 1`] = `
 <div
   style={
-    Object {
+    {
       "padding": 50,
     }
   }
@@ -136,7 +136,7 @@ exports[`Storyshots ebay-progress-stepper Blocked 1`] = `
 exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
 <div
   style={
-    Object {
+    {
       "padding": 50,
     }
   }
@@ -292,7 +292,7 @@ exports[`Storyshots ebay-progress-stepper Controlled 1`] = `
 exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
 <div
   style={
-    Object {
+    {
       "padding": 50,
     }
   }
@@ -402,7 +402,7 @@ exports[`Storyshots ebay-progress-stepper Custom Titles 1`] = `
 exports[`Storyshots ebay-progress-stepper Default 1`] = `
 <div
   style={
-    Object {
+    {
       "padding": 50,
     }
   }
@@ -535,7 +535,7 @@ exports[`Storyshots ebay-progress-stepper Default 1`] = `
 exports[`Storyshots ebay-progress-stepper Default state: complete 1`] = `
 <div
   style={
-    Object {
+    {
       "padding": 50,
     }
   }
@@ -668,7 +668,7 @@ exports[`Storyshots ebay-progress-stepper Default state: complete 1`] = `
 exports[`Storyshots ebay-progress-stepper Default state: upcoming 1`] = `
 <div
   style={
-    Object {
+    {
       "padding": 50,
     }
   }
@@ -813,7 +813,7 @@ exports[`Storyshots ebay-progress-stepper Default state: upcoming 1`] = `
 exports[`Storyshots ebay-progress-stepper Vertical (column) 1`] = `
 <div
   style={
-    Object {
+    {
       "padding": 50,
     }
   }
