@@ -50,12 +50,12 @@ Name | Type     | Required | Description
 `disabled` | Boolean  | No | will disable the entire dropdown (disables the ebay-button label) if set to true
 `variant` | String   | No | will change the button style: `overflow`, `form` or `button`
 `collapseOnSelect` | Boolean  | No | Will collapse whole menu when an item is selected in menu. Typically used in type=`radio`
-`prefixId` | String   | No | The id of an external element to use as the prefix label for the menu button. Cannot be used with `prefix-label` (NOT YET IMPLEMENTED)
+`prefixId` | String   | No | The id of an external element to use as the prefix label for the menu button. Cannot be used with `prefix-label`
 `prefixLabel` | String   | No |The label to add before each selected item on the button. Cannot be used with `prefix-id` (NOT YET IMPLEMENTED)
 `onExpand` | Function | No | Called when content is expanded
 `onCollapse` | Function | No | Called when content is collapsed
 `onSelect` | Function | No | props: (e: event, { index: number }), triggered on item clicked (not for type `radio`/`checkbox`)
-`onChange` | Function | No | props: (e: event, { index: number, checked: number[], checkedValues: string[]), triggered on item `checked` change, (for type `radio`/`checkbox` only)
+`onChange` | Function | No | props: (e: event, { index: number, checked: number[], checkedValues: string[] }), triggered on item `checked` change, (for type `radio`/`checkbox` only)
 
 ## EbayMenuButtonItem Attributes
 
