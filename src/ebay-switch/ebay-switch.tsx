@@ -6,16 +6,19 @@ type Props = Omit<ComponentProps<'input'>, 'onChange'> & {
     onChange?: EbayChangeEventHandler<HTMLInputElement, { value: string | number, checked: boolean }>;
 }
 
+const isControlled = checked => typeof checked !== 'undefined'
+
 const EbaySwitch: FC<Props> = ({
     id,
     value,
     name,
     className,
     checked,
+    defaultChecked = false,
     onChange = () => {},
     ...rest
 }) => {
-    const [isChecked, setChecked] = useState(!!checked)
+    const [isChecked, setChecked] = useState(defaultChecked)
 
     useEffect(() => {
         setChecked(!!checked)
@@ -40,8 +43,8 @@ const EbaySwitch: FC<Props> = ({
                 role="switch"
                 type="checkbox"
                 value={value}
-                aria-checked={isChecked}
-                checked={isChecked}
+                aria-checked={isControlled(checked) ? checked : isChecked}
+                checked={isControlled(checked) ? checked : isChecked}
                 name={name}
                 onChange={handleChange}
             />
