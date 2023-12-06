@@ -14,10 +14,11 @@ const EbaySwitch: FC<Props> = ({
     name,
     className,
     checked,
+    defaultChecked = false,
     onChange = () => {},
     ...rest
 }) => {
-    const [isChecked, setChecked] = useState(!!checked)
+    const [isChecked, setChecked] = useState(defaultChecked)
 
     useEffect(() => {
         setChecked(!!checked)
