@@ -18,6 +18,15 @@ describe('<EbaySwitch>', () => {
 
             expect(spy).toBeCalledWith(anySyntheticEvent, { value, checked: true })
         })
+
+        it('should not change when controlled', () => {
+            const checked = true;
+            const wrapper = render(<EbaySwitch checked={checked} />)
+            const input = wrapper.container.querySelector('input')
+            fireEvent.click(input)
+
+            expect(input?.checked).toBe(checked)
+        })
     })
 })
 
