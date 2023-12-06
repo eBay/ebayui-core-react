@@ -20,7 +20,7 @@ describe('<EbaySwitch>', () => {
         })
 
         it('should not change when controlled', () => {
-            const checked = true;
+            const checked = true
             const wrapper = render(<EbaySwitch checked={checked} />)
             const input = wrapper.container.querySelector('input')
             fireEvent.click(input)

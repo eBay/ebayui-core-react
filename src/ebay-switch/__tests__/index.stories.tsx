@@ -46,16 +46,16 @@ DisabledSwitchButton.story = {
 }
 
 export const ControlledSwitchButton = () => {
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(false)
     return (
         <span className="field">
             <EbaySwitch
                 checked={checked}
                 id="switch-30"
                 onChange={(e, props) => {
-                    action("onChange")(e, props);
+                    action("onChange")(e, props)
                     if (props) {
-                        setChecked(props.checked);
+                        setChecked(props.checked)
                     }
                 }}
             />
