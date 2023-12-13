@@ -1,4 +1,4 @@
-import React, { ChangeEvent, cloneElement, ComponentProps, FC, useState, useRef, FocusEvent, forwardRef } from 'react'
+import React, { ChangeEvent, cloneElement, ComponentProps, FC, useState, FocusEvent } from 'react'
 import classNames from 'classnames'
 import EbaySelectOption from './ebay-select-option'
 import { EbayIcon } from '../ebay-icon'
