@@ -10,7 +10,18 @@ import { EbayListboxButton, EbayListboxButtonOption } from '@ebay/ui-core-react/
 ## Import following styles from SKIN
 ```jsx harmony
 import '@ebay/skin/listbox-button';
+
+// Add if you're using floating labels
+import '@ebay/skin/floating-label';
 ```
+## Import styles using SCSS/CSS
+```jsx harmony
+import '@ebay/skin/listbox-button.css'
+
+// Add if you're using floating labels
+import '@ebay/skin/floating-label.css';
+```
+
 ## Usage
 ```
 yarn add @ebay/ui-core-react
