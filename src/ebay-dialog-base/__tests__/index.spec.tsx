@@ -5,8 +5,6 @@ import DialogBase from '../components/dialogBase';
 import EbayDialogHeader from '../components/dialog-header';
 import { HeaderFooterDialog } from './mocks';
 
-jest.useFakeTimers()
-
 describe('DialogBase', () => {
     it('should use id from header', () => {
         const wrapper = render(
@@ -74,8 +72,7 @@ describe('DialogBase', () => {
                 expect(spyCloseBtnClick).toHaveBeenCalled();
             });
             it('when background clicked then it should trigger onBackgroundClick event', () => {
-                jest.runAllTimers()
-                document.body.click();
+                fireEvent.click(wrapper.container.querySelector('.drawer-dialog'));
                 expect(spyBackgroundClick).toHaveBeenCalled();
             });
         });
