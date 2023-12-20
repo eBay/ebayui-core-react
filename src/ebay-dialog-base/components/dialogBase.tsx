@@ -10,8 +10,7 @@ import React, {
     MouseEventHandler,
     ReactNode,
     KeyboardEvent,
-    KeyboardEventHandler,
-    MouseEvent
+    KeyboardEventHandler
 } from 'react'
 import classNames from 'classnames'
 import * as screenreaderTrap from 'makeup-screenreader-trap'
@@ -97,6 +96,24 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     }, [])
 
     useEffect(() => {
+        const handleBackgroundClick = (e: React.MouseEvent) => {
+            if (drawerBaseEl.current && !drawerBaseEl.current.contains(e.target)) {
+                onBackgroundClick(e)
+            }
+        }
+        if (open && buttonPosition !== 'hidden') {
+            // On React 18 useEffect hooks runs synchronous instead of asynchronous as React 17 or prior
+            // causing the event listener to be attached to the document at the same time that the dialog
+            // opens. Adding a timeout so the event is attached after the click event that opened the modal
+            // is finished.
+            setTimeout(() => {
+                document.addEventListener('click', handleBackgroundClick as any, false)
+            })
+        }
+        return () => document.removeEventListener('click', handleBackgroundClick as any, false)
+    }, [onBackgroundClick, open])
+
+    useEffect(() => {
         if (open && isModal) {
             screenreaderTrap.trap(drawerBaseEl.current)
             keyboardTrap.trap(drawerBaseEl.current)
@@ -136,12 +153,6 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
             onOpen()
         }
     }, [open])
-
-    const handleDialogClick = (e: MouseEvent) => {
-        if (e.currentTarget === e.target && buttonPosition !== 'hidden') {
-            onBackgroundClick(e)
-        }
-    }
 
     function handleFocus(isOpen: boolean) {
         if (isOpen) {
@@ -185,7 +196,6 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
             className={classNames(classPrefix, props.className)}
             aria-live={!isModal ? 'polite' : undefined}
             ref={dialogRef}
-            onClick={handleDialogClick}
             onKeyDown={onKeyDown}
         >
             <div className={classNames(windowClassName, windowClass)} ref={drawerBaseEl}>
