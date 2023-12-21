@@ -1,6 +1,6 @@
 import React, { cloneElement, ComponentProps, FC, isValidElement, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
-import { elementProps, filterByType, findComponent } from '../common/component-utils'
+import { AnyProps, elementProps, filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { randomId } from '../common/random-id'
 
@@ -62,7 +62,7 @@ const EbayMenuButton: FC<Props> = ({
     const buttonRef = useRef(null)
     const menuRef = useRef()
 
-    const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
+    const menuItems = filterByType<AnyProps>(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
     const defaultIndexes = menuItems.map(item => Boolean(elementProps(item).checked))
     const [checkedIndexes, setCheckedIndexes] = useState<boolean[]>(defaultIndexes)
 

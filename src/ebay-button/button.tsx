@@ -28,7 +28,7 @@ export type EbayButtonProps = {
     split?: Split;
     transparent?: boolean;
     onClick?: (e: MouseEvent) => void;
-    onEscape?: EbayKeyboardEventHandler<HTMLButtonElement & HTMLAnchorElement>;
+    onEscape?: EbayKeyboardEventHandler<HTMLButtonElement | HTMLAnchorElement>;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     borderless?: boolean;
     fixedHeight?: boolean;

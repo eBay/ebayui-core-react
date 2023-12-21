@@ -1,5 +1,5 @@
 import React, { CSSProperties, FC, useRef } from 'react'
-import { elementProps, findComponent } from '../common/component-utils'
+import { AnyProps, elementProps, findComponent } from '../common/component-utils'
 import {
     Tooltip,
     TooltipHost,
@@ -45,7 +45,7 @@ const EbayTourtip:FC<TourtipProps> = ({
     if (!content) {
         throw new Error(`EbayTourtip: Please use a EbayTourtipContent that defines the content of the tourtip`)
     }
-    const { children: contentChildren, contentProps } = elementProps(content)
+    const { children: contentChildren, contentProps = {} } = elementProps(content)
     const host = findComponent(children, EbayTourtipHost)
     if (!host) {
         throw new Error(`EbayTourtip: Please use a EbayTourtipHost that defines the host of the tourtip`)
@@ -67,7 +67,7 @@ const EbayTourtip:FC<TourtipProps> = ({
                 aria-label={ariaLabel}
                 aria-expanded={isExpanded} />
             <TooltipContent
-                {...contentProps}
+                {...contentProps as AnyProps}
                 a11yCloseText={a11yCloseText}
                 onClose={collapseTooltip}
                 pointer={pointer}

@@ -1,6 +1,5 @@
 import React, {
     Children, ComponentProps, FC, ReactElement,
-    MouseEvent, KeyboardEvent,
     cloneElement, useEffect, useRef, useState, createRef, isValidElement
 } from 'react'
 import {
@@ -11,10 +10,9 @@ import classNames from 'classnames'
 import { debounce } from '../common/debounce'
 import { calcPageState, getMaxWidth } from './helpers'
 import { elementProps, filterBy } from '../common/component-utils'
-import { PaginationItemType } from './pagination-item'
-import { ItemState, PaginationVariant } from './types'
 import { EbayIcon } from '../ebay-icon'
 import { EbayEventHandler } from '../common/event-utils/types'
+import { PaginationItemProps, PaginationItemType, ItemState, PaginationVariant } from './index'
 
 export type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
     id?: string;
@@ -47,7 +45,7 @@ const EbayPagination: FC<PaginationProps> = ({
     childPageRefs.current = Children.map(children, createRef)
     const totalPages = filterBy(
         children,
-        child => [undefined, 'page'].includes(elementProps(child).type)
+        child => [undefined, 'page'].includes(elementProps<PaginationItemProps>(child).type)
     ).length
     const itemWidthRef = useRef<number>(0)
     const arrowWidthRef = useRef<number>(0)
@@ -104,7 +102,7 @@ const EbayPagination: FC<PaginationProps> = ({
         const lastDot = page.lastIndexOf('dots')
 
         return Children.map(children, (item, index) => {
-            const { type = 'page', current, disabled, href, children: text } = elementProps(item)
+            const { type = 'page', current, disabled, href, children: text } = elementProps<PaginationItemProps>(item)
             const isDot = page[index] === 'dots'
             const key = `${id}-item-${index}`
             const hide = page[index] === 'hidden'

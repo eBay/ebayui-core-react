@@ -1,3 +1,3 @@
-export { default as EbayPagination } from './pagination'
-export { default as EbayPaginationItem } from './pagination-item'
-export { PaginationVariant } from './types'
+export { default as EbayPagination, PaginationProps } from './pagination'
+export { default as EbayPaginationItem, PaginationItemProps, PaginationItemType } from './pagination-item'
+export { PaginationVariant, ItemState } from './types'
