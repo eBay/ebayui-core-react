@@ -105,7 +105,7 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
 `;
 
 exports[`Storyshots ebay-listbox-button Default - with a11y prefix 1`] = `
-Array [
+[
   <label
     id="listbox-button__label"
   >

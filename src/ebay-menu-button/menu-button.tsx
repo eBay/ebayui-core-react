@@ -1,43 +1,16 @@
-import React, { cloneElement, ComponentProps, FC, isValidElement, useEffect, useRef, useState } from 'react'
+import React, { cloneElement, FC, isValidElement, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
 import { AnyProps, elementProps, filterByType, findComponent } from '../common/component-utils'
-import { handleEscapeKeydown } from '../common/event-utils'
-import { randomId } from '../common/random-id'
 
-import { EbayMenu, EbayMenuChangeEventHandler, EbayMenuSelectEventHandler, EbayMenuType } from '../ebay-menu'
-import { EbayButton, EbayButtonProps } from '../ebay-button'
+import { EbayMenu, EbayMenuChangeEventHandler } from '../ebay-menu'
+import { EbayButton } from '../ebay-button'
 import { EbayIconButton } from '../ebay-icon-button'
 import { EbayIcon } from '../ebay-icon'
-import { EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, EbayMenuButtonVariant } from './index'
+import { EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, LabelProps, MenuButtonProps } from './index'
+import { randomId } from '../common/random-id'
+import { handleEscapeKeydown } from '../common/event-utils'
 
-export type EbayMenuButtonProps = {
-    a11yText?: string;
-    className?: string;
-    fixWidth?: boolean;
-    reverse?: boolean;
-    text?: string;
-    type?: EbayMenuType;
-    variant?: EbayMenuButtonVariant;
-    onCollapse?: () => void;
-    onExpand?: () => void;
-    onChange?: EbayMenuChangeEventHandler;
-    onSelect?: EbayMenuSelectEventHandler;
-    expanded?: boolean;
-    noToggleIcon?: boolean;
-    checked?: number;
-    collapseOnSelect?: boolean;
-    // todo: implement the following props
-    prefixId?: string;
-    prefixLabel?: string;
-}
-
-type MenuEvents = 'onSelect' | 'onChange'
-type Props = Omit<EbayButtonProps, 'type' | 'variant' | 'onKeyDown'> &
-    Omit<ComponentProps<'button'>, 'type' | MenuEvents> &
-    Omit<ComponentProps<'a'>, MenuEvents> &
-    EbayMenuButtonProps
-
-const EbayMenuButton: FC<Props> = ({
+const EbayMenuButton: FC<MenuButtonProps> = ({
     type,
     variant = 'button',
     className,
@@ -49,6 +22,8 @@ const EbayMenuButton: FC<Props> = ({
     checked,
     collapseOnSelect,
     a11yText,
+    prefixId,
+    prefixLabel,
     onClick = () => {},
     onExpand = () => {},
     onCollapse = () => {},
@@ -68,9 +43,7 @@ const EbayMenuButton: FC<Props> = ({
 
     const menuButtonLabel = findComponent(children, EbayMenuButtonLabel)
     const icon = findComponent(children, EbayIcon)
-    const textLabel = text ? <span>{text}</span> : null
-    const label = labelWithIcon(menuButtonLabel || textLabel, icon)
-
+    const label = labelWithPrefixAndIcon({ text, prefixId, prefixLabel, menuButtonLabel, icon })
     const wrapperClasses = classnames('menu-button', className)
 
     const menuClasses = classnames('menu-button__menu', {
@@ -120,6 +93,7 @@ const EbayMenuButton: FC<Props> = ({
         'aria-haspopup': true,
         'aria-label': a11yText,
         'aria-controls': menuId,
+        'aria-labelledby': prefixId,
         onClick: e => {
             setExpanded(!expanded)
             onClick(e)
@@ -180,15 +154,16 @@ const EbayMenuButton: FC<Props> = ({
     )
 }
 
-function labelWithIcon(label, icon) {
-    if (!icon) {
-        return label
-    }
-    if (!label) {
-        return icon
-    }
+function labelWithPrefixAndIcon({ text, prefixId, prefixLabel, menuButtonLabel, icon }: LabelProps) {
+    const textLabelElement = text.length ? <span>{text}</span> : null
+    const prefixLabelElement = !prefixId && prefixLabel && [
+        <span className="menu-button-prefix-label">{prefixLabel}</span>,
+        <>&nbsp;</>
+    ]
+    const labelWithPrefix = [prefixLabelElement, menuButtonLabel || textLabelElement]
+    const labelArray = [icon, labelWithPrefix].flat().filter(Boolean) as JSX.Element[]
 
-    return <>{icon}{label}</>
+    return labelArray.length ? labelArray : null
 }
 
 export default EbayMenuButton

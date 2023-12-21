@@ -1,10 +1,10 @@
 import React, {
-    ChangeEvent, cloneElement, ComponentProps, FC, useState, useRef, FocusEvent, isValidElement, ReactElement
+    ChangeEvent, cloneElement, ComponentProps, FC, useState, FocusEvent, isValidElement, ReactElement
 } from 'react'
 import classNames from 'classnames'
 import EbaySelectOption from './ebay-select-option'
 import { EbayIcon } from '../ebay-icon'
-import { filterByType } from '../common/component-utils'
+import { filterByType, withForwardRef } from '../common/component-utils'
 import { useFloatingLabel } from '../common/floating-label-utils/hooks'
 import { EbayChangeEventHandler } from '../common/event-utils/types'
 
@@ -17,6 +17,7 @@ export type EbaySelectProps = Omit<ComponentProps<'select'>, 'onChange'> & {
     defaultValue?: SelectValue;
     onChange?: EbayChangeEventHandler<HTMLSelectElement, ChangeEventProps>;
     floatingLabel?: string;
+    forwardedRef?: React.Ref<HTMLSelectElement>;
     inputSize?: 'default' | 'large';
     invalid?: boolean;
 };
@@ -32,6 +33,7 @@ const EbaySelect: FC<EbaySelectProps> = ({
     onBlur = () => {},
     onFocus = () => {},
     floatingLabel,
+    forwardedRef,
     children,
     inputSize,
     invalid,
@@ -39,7 +41,6 @@ const EbaySelect: FC<EbaySelectProps> = ({
 }) => {
     const isFieldInvalid = invalid || rest['aria-invalid'] === 'true'
     const [value, setValue] = useState<SelectValue>(defaultValue)
-    const selectRef = useRef(null)
     const {
         label,
         Container,
@@ -47,7 +48,7 @@ const EbaySelect: FC<EbaySelectProps> = ({
         onFocus: onFloatingLabelFocus,
         ref
     } = useFloatingLabel({
-        ref: selectRef,
+        ref: forwardedRef,
         inputId: rest.id,
         className: className,
         disabled: disabled,
@@ -104,7 +105,7 @@ const EbaySelect: FC<EbaySelectProps> = ({
     )
 }
 
-export default EbaySelect
+export default withForwardRef<EbaySelectProps>(EbaySelect)
 
 function optionGroups(data) {
     const optGroups = {}

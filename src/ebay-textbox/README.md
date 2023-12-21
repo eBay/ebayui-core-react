@@ -18,10 +18,16 @@ import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
 ### Import following styles from SKIN
 ```jsx harmony
 import "@ebay/skin/textbox";
+
+// Add if you're using floating labels
+import "@ebay/skin/floating-label";
 ```
 ### or if using CSS/SCSS
 ```jsx
 import "@ebay/skin/textbox.css";
+
+// Add if you're using floating labels
+import "@ebay/skin/floating-label.css";
 ```
 
 ```jsx harmony

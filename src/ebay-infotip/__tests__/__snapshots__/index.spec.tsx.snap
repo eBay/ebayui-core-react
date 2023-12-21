@@ -37,7 +37,7 @@ exports[`Storyshots ebay-infotip Custom button content (With render prop) 1`] = 
       </button>
       <span
         class="infotip__overlay"
-        style="transform: scale3d(1,1,1); left: -10px;"
+        style="transform: scale3d(1,1,1); left: -10px; top: calc(100% + 2px);"
       >
         <span
           class="infotip__pointer infotip__pointer--top-left"
@@ -111,7 +111,7 @@ exports[`Storyshots ebay-infotip Custom icon 1`] = `
       </button>
       <span
         class="infotip__overlay"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="infotip__pointer infotip__pointer--bottom"
@@ -185,7 +185,7 @@ exports[`Storyshots ebay-infotip Default 1`] = `
       </button>
       <span
         class="infotip__overlay"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="infotip__pointer infotip__pointer--bottom"
@@ -260,7 +260,7 @@ exports[`Storyshots ebay-infotip Disabled 1`] = `
       </button>
       <span
         class="infotip__overlay"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="infotip__pointer infotip__pointer--bottom"
@@ -334,7 +334,7 @@ exports[`Storyshots ebay-infotip Expanded by default 1`] = `
       </button>
       <span
         class="infotip__overlay"
-        style="transform: scale3d(1,1,1); left: -10px;"
+        style="transform: scale3d(1,1,1); left: -10px; top: calc(100% + 2px);"
       >
         <span
           class="infotip__pointer infotip__pointer--top-left"
@@ -413,7 +413,7 @@ exports[`Storyshots ebay-infotip In paragraph 1`] = `
         </button>
         <span
           class="infotip__overlay"
-          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom"
@@ -578,7 +578,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         </button>
         <span
           class="infotip__overlay"
-          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; top: calc(100% + 2px);"
         >
           <span
             class="infotip__pointer infotip__pointer--top"
@@ -648,7 +648,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         </button>
         <span
           class="infotip__overlay"
-          style="transform: scale3d(1,1,1); left: -10px;"
+          style="transform: scale3d(1,1,1); left: -10px; top: calc(100% + 2px);"
         >
           <span
             class="infotip__pointer infotip__pointer--top-left"
@@ -718,7 +718,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         </button>
         <span
           class="infotip__overlay"
-          style="transform: scale3d(1,1,1); right: -10px;"
+          style="transform: scale3d(1,1,1); right: -10px; top: calc(100% + 2px);"
         >
           <span
             class="infotip__pointer infotip__pointer--top-right"
@@ -998,7 +998,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         </button>
         <span
           class="infotip__overlay"
-          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom"
@@ -1068,7 +1068,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         </button>
         <span
           class="infotip__overlay"
-          style="transform: scale3d(1,1,1); left: -10px;"
+          style="transform: scale3d(1,1,1); left: -10px; bottom: calc(100% + 12px);"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom-left"
@@ -1138,7 +1138,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
         </button>
         <span
           class="infotip__overlay"
-          style="transform: scale3d(1,1,1); right: -10px;"
+          style="transform: scale3d(1,1,1); right: -10px; bottom: calc(100% + 12px);"
         >
           <span
             class="infotip__pointer infotip__pointer--bottom-right"
@@ -1487,7 +1487,7 @@ exports[`Storyshots ebay-infotip Text instead of icon 1`] = `
       </button>
       <span
         class="infotip__overlay"
-        style="transform: scale3d(1,1,1); left: -10px;"
+        style="transform: scale3d(1,1,1); left: -10px; top: calc(100% + 2px);"
       >
         <span
           class="infotip__pointer infotip__pointer--top-left"

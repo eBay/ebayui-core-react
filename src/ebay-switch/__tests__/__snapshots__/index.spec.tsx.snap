@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots ebay-switch Controlled switch-button 1`] = `
+<DocumentFragment>
+  <span
+    class="field"
+  >
+    <span
+      class="switch"
+    >
+      <input
+        aria-checked="false"
+        class="switch__control"
+        id="switch-30"
+        role="switch"
+        type="checkbox"
+        value=""
+      />
+      <span
+        class="switch__button"
+      />
+    </span>
+    <label
+      class="field__label field__label--end"
+      for="switch-30"
+    >
+      Unchecked
+    </label>
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Storyshots ebay-switch Default switch-button 1`] = `
 <DocumentFragment>
   <span

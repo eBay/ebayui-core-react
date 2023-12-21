@@ -18,7 +18,7 @@ exports[`Storyshots ebay-tooltip Anchor host 1`] = `
       <span
         class="tooltip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="tooltip__pointer tooltip__pointer--bottom"
@@ -61,7 +61,7 @@ exports[`Storyshots ebay-tooltip Default tooltip 1`] = `
       <span
         class="tooltip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="tooltip__pointer tooltip__pointer--bottom"
@@ -109,7 +109,7 @@ exports[`Storyshots ebay-tooltip No hover 1`] = `
       <span
         class="tooltip__overlay"
         role="tooltip"
-        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+        style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
       >
         <span
           class="tooltip__pointer tooltip__pointer--bottom"
@@ -154,7 +154,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; top: calc(100% + 2px);"
         >
           <span
             class="tooltip__pointer tooltip__pointer--top"
@@ -193,7 +193,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: scale3d(1,1,1); left: -10px;"
+          style="transform: scale3d(1,1,1); left: -10px; top: calc(100% + 2px);"
         >
           <span
             class="tooltip__pointer tooltip__pointer--top-left"
@@ -232,7 +232,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: scale3d(1,1,1); right: -10px;"
+          style="transform: scale3d(1,1,1); right: -10px; top: calc(100% + 2px);"
         >
           <span
             class="tooltip__pointer tooltip__pointer--top-right"
@@ -388,7 +388,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%;"
+          style="transform: translateX(-50%) scale3d(1,1,1); left: 50%; bottom: calc(100% + 12px);"
         >
           <span
             class="tooltip__pointer tooltip__pointer--bottom"
@@ -427,7 +427,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: scale3d(1,1,1); left: -10px;"
+          style="transform: scale3d(1,1,1); left: -10px; bottom: calc(100% + 12px);"
         >
           <span
             class="tooltip__pointer tooltip__pointer--bottom-left"
@@ -466,7 +466,7 @@ exports[`Storyshots ebay-tooltip Pointer direction 1`] = `
         <span
           class="tooltip__overlay"
           role="tooltip"
-          style="transform: scale3d(1,1,1); right: -10px;"
+          style="transform: scale3d(1,1,1); right: -10px; bottom: calc(100% + 12px);"
         >
           <span
             class="tooltip__pointer tooltip__pointer--bottom-right"
