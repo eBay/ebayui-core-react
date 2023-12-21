@@ -96,6 +96,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
     }, [])
 
     useEffect(() => {
+        let timeout: number
         const handleBackgroundClick = (e: React.MouseEvent) => {
             if (drawerBaseEl.current && !drawerBaseEl.current.contains(e.target)) {
                 onBackgroundClick(e)
@@ -106,11 +107,14 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
             // causing the event listener to be attached to the document at the same time that the dialog
             // opens. Adding a timeout so the event is attached after the click event that opened the modal
             // is finished.
-            setTimeout(() => {
+            timeout = window.setTimeout(() => {
                 document.addEventListener('click', handleBackgroundClick as any, false)
             })
         }
-        return () => document.removeEventListener('click', handleBackgroundClick as any, false)
+        return () => {
+            clearTimeout(timeout)
+            document.removeEventListener('click', handleBackgroundClick as any, false)
+        }
     }, [onBackgroundClick, open])
 
     useEffect(() => {
