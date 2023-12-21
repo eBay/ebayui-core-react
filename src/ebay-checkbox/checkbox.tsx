@@ -1,4 +1,6 @@
-import React, { ChangeEvent, cloneElement, ComponentProps, FC, FocusEvent, KeyboardEvent, useState } from 'react'
+import React, {
+    ChangeEvent, cloneElement, ComponentProps, FC, FocusEvent, isValidElement, KeyboardEvent, useState
+} from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayLabel, EbayLabelProps } from '../ebay-field'
@@ -75,7 +77,7 @@ const EbayCheckbox: FC<InputProps & EbayCheckboxProps> = ({
                 </span>
             </span>
             {ebayLabel ?
-                cloneElement<EbayLabelProps>(ebayLabel, {
+                isValidElement(ebayLabel) && cloneElement<EbayLabelProps>(ebayLabel, {
                     ...ebayLabel.props,
                     position: 'end',
                     htmlFor: id

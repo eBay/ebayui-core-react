@@ -12,7 +12,7 @@ export type EbayIconButtonProps = {
     badgeAriaLabel?: string;
     transparent?: boolean;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
-    onEscape?: EbayKeyboardEventHandler;
+    onEscape?: EbayKeyboardEventHandler<HTMLButtonElement & HTMLAnchorElement>;
 }
 
 type HTMLButtonProps = ComponentProps<'button'>;

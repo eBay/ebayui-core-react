@@ -1,7 +1,7 @@
-import React, { cloneElement, ComponentProps, FC, useEffect, useRef, useState } from 'react'
+import React, { cloneElement, ComponentProps, FC, isValidElement, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
 
-import { filterByType, findComponent } from '../common/component-utils'
+import { AnyProps, filterByType, findComponent } from '../common/component-utils'
 import { handleEscapeKeydown } from '../common/event-utils'
 import { EbayKeyboardEventHandler, EbayMouseEventHandler } from '../common/event-utils/types'
 import { randomId } from '../common/random-id'
@@ -56,7 +56,7 @@ const EbayMenuButton: FC<Props> = ({
 
     const icon = findComponent(children, EbayIcon)
     const label = findComponent(children, EbayFakeMenuButtonLabel) || (icon ? <span>{text}</span> : text)
-    const menuItems = filterByType(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
+    const menuItems = filterByType<AnyProps>(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
 
     useEffect(() => {
         const handleBackgroundClick = (e: React.MouseEvent) => {
@@ -128,7 +128,7 @@ const EbayMenuButton: FC<Props> = ({
                     onSelect={onSelect}
                 >
                     {menuItems.map((item, i) =>
-                        cloneElement<EbayFakeMenuItemProps>(item, {
+                        isValidElement(item) && cloneElement<EbayFakeMenuItemProps>(item, {
                             ...item.props,
                             onMouseDown: (e) => {
                                 onMouseDown(e, { index: i })

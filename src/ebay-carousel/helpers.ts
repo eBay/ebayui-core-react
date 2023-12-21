@@ -1,4 +1,4 @@
-import { Children, cloneElement, ReactElement, ReactNode, RefObject } from 'react'
+import { Children, cloneElement, isValidElement, ReactElement, ReactNode, RefObject } from 'react'
 import { ListItemRef, MovementDirection, RelativeRect } from './types'
 
 export function getRelativeRects(el: Element): RelativeRect {
@@ -39,8 +39,10 @@ export const alterChildren = (
     itemsPerSlide?: number,
     slideWidth?: number,
     offset?: number,
-    gap?: number): ReactElement[] => Children.map(children, (item: ReactElement, index) => {
-    const { style = {} } = item.props
+    gap?: number
+): ReactElement[] => Children.map(children, (item, index) => {
+    const childProps = isValidElement(item) ? item.props : {}
+    const { style = {} } = childProps
     let itemWidth
 
     if (itemsPerSlide) {
@@ -49,14 +51,14 @@ export const alterChildren = (
     }
     const isStartOfSlide = itemsPerSlide ? index % itemsPerSlide === 0 : true
 
-    return cloneElement(item, {
-        ...item.props,
+    return isValidElement(item) && cloneElement(item, {
+        ...childProps,
         slideWidth,
         offset,
         ref: el => {
             itemsRef.current[index] = el
         },
-        className: isStartOfSlide ? 'carousel__snap-point' : item.props.className,
+        className: isStartOfSlide ? 'carousel__snap-point' : childProps.className,
         style: {
             ...style,
             width: itemWidth || style.width,

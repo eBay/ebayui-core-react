@@ -5,11 +5,11 @@ import React, {
     KeyboardEventHandler,
     MouseEvent,
     MouseEventHandler,
-    ReactElement,
     useState
 } from 'react'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
+import { elementProps, findComponent } from '../common/component-utils'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { EbayPageNoticeFooter } from './index'
 
@@ -31,8 +31,7 @@ const EbayPageNotice: FC<Props> = ({
     ...rest
 }) => {
     const [dismissed, setDismissed] = useState(false)
-    const childrenArray = React.Children.toArray(children)
-    const content = childrenArray.find((child: ReactElement) => child.type === EbayNoticeContent) as ReactElement
+    const content = findComponent(children, EbayNoticeContent)
 
     if (!content) {
         throw new Error(`EbayPageNotice: Please use a EbayNoticeContent that defines the content of the notice`)
@@ -58,7 +57,7 @@ const EbayPageNotice: FC<Props> = ({
                     />
                 </div>
             ) : null}
-            <NoticeContent {...content.props} type="page" />
+            <NoticeContent {...elementProps(content)} type="page" />
             {children}
             {a11yDismissText && (
                 <EbayPageNoticeFooter>

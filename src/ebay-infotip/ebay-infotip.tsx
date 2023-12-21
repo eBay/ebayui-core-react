@@ -1,32 +1,13 @@
-import React, { cloneElement, createElement, CSSProperties, FC, useRef, ReactNode } from 'react'
+import React, { cloneElement, createElement, FC, useRef, isValidElement } from 'react'
 import classNames from 'classnames'
-import { findComponent } from '../common/component-utils'
-import { Tooltip, TooltipHost, TooltipContent, PointerDirection, useTooltip } from '../common/tooltip-utils'
+import { elementProps, findComponent } from '../common/component-utils'
+import { Tooltip, TooltipHost, TooltipContent, useTooltip } from '../common/tooltip-utils'
 import { EbayDrawerDialog } from '../ebay-drawer-dialog'
 import { EbayDialogHeader } from '../ebay-dialog-base'
-import EbayInfotipHost from './ebay-infotip-host'
-import { Icon } from '../ebay-icon'
-import { Variant } from './types'
-import { EbayInfotipHeading, EbayInfotipContent } from './index'
+import EbayInfotipHost, { InfotipHostProps } from './ebay-infotip-host'
+import { EbayInfotipHeading, EbayInfotipContent, EbayInfotipProps } from './index'
 
-type InfotipProps = {
-    variant?: Variant;
-    icon?: Icon;
-    disabled?: boolean;
-    initialExpanded?: boolean;
-    pointer?: PointerDirection;
-    overlayStyle?: CSSProperties;
-    onExpand?: () => void;
-    onCollapse?: () => void;
-    a11yCloseText: string;
-    'aria-label'?: string;
-    className?: string;
-    children?: ReactNode;
-    a11yMaximizeText?:string;
-    a11yMinimizeText?:string;
-};
-
-const EbayInfotip: FC<InfotipProps> = ({
+const EbayInfotip: FC<EbayInfotipProps> = ({
     variant = 'default',
     pointer,
     overlayStyle,
@@ -41,7 +22,7 @@ const EbayInfotip: FC<InfotipProps> = ({
     className,
     a11yMaximizeText,
     a11yMinimizeText
-}: InfotipProps) => {
+}: EbayInfotipProps) => {
     const buttonRef = useRef()
     const {
         isExpanded,
@@ -53,7 +34,7 @@ const EbayInfotip: FC<InfotipProps> = ({
     const containerRef = useRef()
     const heading = findComponent(children, EbayInfotipHeading)
     const content = findComponent(children, EbayInfotipContent)
-    const button = findComponent(children, EbayInfotipHost) || createElement(EbayInfotipHost)
+    const button = findComponent(children, EbayInfotipHost)
 
     const toggleTooltip = () => {
         if (isExpanded) {
@@ -67,27 +48,35 @@ const EbayInfotip: FC<InfotipProps> = ({
         throw new Error(`EbayInfotip: Please use a EbayInfotipContent that defines the content of the infotip`)
     }
 
-    const { children: contentChildren, ...contentProps } = content.props
+    const { children: contentChildren, ...contentProps } = elementProps(content)
+
+    const buttonProps = {
+        ref: buttonRef,
+        onClick: toggleTooltip,
+        disabled,
+        variant,
+        'aria-label': ariaLabel,
+        'aria-expanded': isExpanded,
+        icon
+    }
+
+    const hostButton = isValidElement(button) ?
+        cloneElement<InfotipHostProps>(button, {
+            ...buttonProps,
+            ...button.props
+        }) :
+        createElement(EbayInfotipHost, { ...buttonProps })
 
     return (
         <>
-
             <Tooltip
                 type="infotip"
                 isExpanded={isExpanded}
                 className={classNames(className, { 'dialog--mini': isModal })}
-                ref={containerRef}>
+                ref={containerRef}
+            >
                 <TooltipHost>
-                    {cloneElement(button, {
-                        ref: buttonRef,
-                        onClick: toggleTooltip,
-                        disabled,
-                        variant,
-                        'aria-label': ariaLabel,
-                        'aria-expanded': isExpanded,
-                        icon,
-                        ...button.props
-                    })}
+                    {hostButton}
                 </TooltipHost>
                 {!isModal && (
                     <TooltipContent
@@ -109,7 +98,6 @@ const EbayInfotip: FC<InfotipProps> = ({
                     {...contentProps}
                     open={isExpanded}
                     onClose={collapseTooltip}
-                    mode="mini"
                     a11yCloseText={a11yCloseText}
                     className="dialog--mini__overlay"
                     a11yMaximizeText={a11yMaximizeText}
