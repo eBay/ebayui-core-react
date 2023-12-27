@@ -171,4 +171,16 @@ export const _WithPreviousButton = () => (
     </div>
 );
 
+export const _WithWideSize = () => (
+    <div>
+        <p>Some outside content...</p>
+        <EbayLightboxDialog open a11yCloseText="Close dialog" size="wide">
+            <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')}/>
+            <EbayDialogHeader>Heading</EbayDialogHeader>
+            {textParagraph}
+            <p><a href="http://www.ebay.com">www.ebay.com</a></p>
+        </EbayLightboxDialog>
+    </div>
+);
+
 export default story;
