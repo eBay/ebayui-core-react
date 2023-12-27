@@ -1,8 +1,8 @@
-import React, { cloneElement, FC, isValidElement, KeyboardEvent, useEffect, useState } from 'react'
+import React, { cloneElement, FC, KeyboardEvent, useEffect, useState } from 'react'
 import classNames from 'classnames'
 
 import { handleActionKeydown, handleLeftRightArrowsKeydown } from '../common/event-utils'
-import { elementProps, filterByType } from '../common/component-utils'
+import { filterByType } from '../common/component-utils'
 import Tab from './tab'
 import TabPanel from './tab-panel'
 import type { TabsProps } from './types'
@@ -64,7 +64,7 @@ const Tabs: FC<TabsProps> = ({
     const isLarge = size === 'large'
 
     const tabHeadings = filterByType(children, Tab).map((item, i) =>
-        isValidElement(item) && cloneElement(item, {
+        cloneElement(item, {
             ...item.props,
             refCallback: ref => { headings[i] = ref },
             index: i,
@@ -83,10 +83,10 @@ const Tabs: FC<TabsProps> = ({
             index: i,
             parentId: id,
             selected: selectedIndex === i,
-            children: elementProps(item).children
+            children: item.props.children
         }
 
-        return isValidElement(item) && cloneElement(item, itemProps)
+        return cloneElement(item, itemProps)
     })
 
     return (

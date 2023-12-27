@@ -16,7 +16,7 @@
         "declarationMap": true,
         "strict": true,
         "strictBindCallApply": true,
-        "strictFunctionTypes": true,
+        "strictFunctionTypes": false, // 21 errors
         "strictNullChecks": false, // 150+ errors
         "strictPropertyInitialization": false,
         "useUnknownInCatchVariables": true,

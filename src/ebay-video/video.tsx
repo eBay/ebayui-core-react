@@ -4,7 +4,7 @@ import classNames from 'classnames'
 // @ts-ignore
 import shaka from 'shaka-player/dist/shaka-player.ui'
 
-import { elementProps, filterByType } from '../common/component-utils'
+import { filterByType } from '../common/component-utils'
 import { EbayIcon } from '../ebay-icon'
 import { EbayProgressSpinner } from '../ebay-progress-spinner'
 import { Player, VideoAction, VideoPlayView } from './types'
@@ -80,7 +80,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
     const playerRef = useRef<Player>(null)
     const uiRef = useRef(null)
 
-    const sources = filterByType(children, EbayVideoSource).map(elementProps)
+    const sources = filterByType(children, EbayVideoSource).map(({ props }) => props)
 
     const handleError = (err: Error) => {
         setLoaded(true)
