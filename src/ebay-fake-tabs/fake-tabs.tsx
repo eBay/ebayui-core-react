@@ -1,4 +1,4 @@
-import React, { cloneElement, ComponentProps, FC, isValidElement } from 'react'
+import React, { cloneElement, ComponentProps, FC } from 'react'
 import classNames from 'classnames'
 
 import { excludeComponent, filterByType } from '../common/component-utils'
@@ -18,7 +18,7 @@ const EbayFakeTabs: FC<FakeTabsProps> = ({
 }) => {
     const ariaCurrent = tabMatchesCurrentUrl === false ? 'true' : 'page'
     const tabHeadings = filterByType(children, Tab).map((item, i) =>
-        isValidElement(item) && cloneElement(item, {
+        cloneElement(item, {
             ...item.props,
             ariaCurrent: selectedIndex === i ? ariaCurrent : null
         }))

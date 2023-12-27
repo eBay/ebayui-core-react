@@ -280,7 +280,7 @@ export const InsideADialog = () => {
         const [open, setOpen] = useState(false)
         const handlePrev = () => setActiveIndex(Math.max(activeIndex - 1, 0))
         const handleNext = () => setActiveIndex(Math.min(activeIndex + 1, numOfItems))
-        const handleSelect = (e, props) => setActiveIndex(props.index)
+        const handleSelect = (e, { index }) => setActiveIndex(index)
 
         return (
             <>
