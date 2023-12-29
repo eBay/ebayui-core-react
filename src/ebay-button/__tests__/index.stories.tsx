@@ -284,7 +284,7 @@ export const FlexButton = () => (
             <span>Select</span>
             <span style={{ display: 'inline-flex' }}>
                 <span>Any</span>
-                <EbayIcon name="chevronDown16" />
+                <EbayIcon name="chevronDown12" />
             </span>
         </EbayButtonCell>
     </EbayButton>
