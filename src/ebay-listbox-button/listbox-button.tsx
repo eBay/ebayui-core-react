@@ -273,7 +273,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
             >
                 <span className="btn__cell">
                     {buttonLabel}
-                    <EbayIcon name="chevronDown16" />
+                    <EbayIcon name="chevronDown12" />
                 </span>
             </button>
             {(expanded || optionsOpened) &&

@@ -42,7 +42,7 @@
   "author": "tmanyanov@ebay.com",
   "license": "ISC",
   "peerDependencies": {
-    "@ebay/skin": "^16.0.0",
+    "@ebay/skin": "^17.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "shaka-player": "^4.3.2"
@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@babel/register": "^7.0.0",
-    "@ebay/skin": "^16.0.0",
+    "@ebay/skin": "^17.0.0",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@storybook/addon-a11y": "^6.5.6",
     "@storybook/addon-essentials": "^6.5.6",

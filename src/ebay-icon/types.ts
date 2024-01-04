@@ -40,7 +40,6 @@ export type Icon =
     'arrowRight16' |
     'arrowRight20' |
     'arrowRight24' |
-    'arrowTitle20' |
     'arrows3d16' |
     'arrows3d24' |
     'arrows3dFilled64Colored' |
@@ -59,13 +58,10 @@ export type Icon =
     'audioLow16' |
     'audioOff16' |
     'authenticityGuarantee16' |
-    'authenticityGuarantee16Fit' |
     'authenticityGuarantee24' |
-    'authenticityGuarantee24Fit' |
     'autoAdjust24' |
     'avatarSignedOut' |
     'backgroundRemoval24' |
-    'bag24' |
     'bank24' |
     'bank64' |
     'bankAccount12Colored' |
@@ -81,9 +77,9 @@ export type Icon =
     'bookmark16' |
     'bookmark24' |
     'brandAuthorizedSeller16' |
-    'brandAuthorizedSeller16Fit' |
     'brandAuthorizedSeller24' |
-    'brandAuthorizedSeller24Fit' |
+    'brightness16' |
+    'brightness20' |
     'brightness24' |
     'calendar16' |
     'calendar24' |
@@ -107,9 +103,7 @@ export type Icon =
     'cb24Colored' |
     'cb32Colored' |
     'certifiedRecycled16' |
-    'certifiedRecycled16Fit' |
     'certifiedRecycled24' |
-    'certifiedRecycled24Fit' |
     'chair16' |
     'chair24' |
     'chat16' |
@@ -135,14 +129,14 @@ export type Icon =
     'chevronRight24' |
     'chevronUp12' |
     'chevronUp16' |
+    'chevronUp20' |
     'chevronUp24' |
     'chineseCoin16' |
     'chineseCoin24' |
     'clear16' |
     'clear24' |
     'clickToCall16' |
-    'clickToCall16Fit' |
-    'clickToCall24Fit' |
+    'clickToCall24' |
     'clock16' |
     'clock24' |
     'close12' |
@@ -169,28 +163,6 @@ export type Icon =
     'creditCard24' |
     'creditCard64' |
     'crop24' |
-    'currencyDollar16' |
-    'currencyDollar24' |
-    'currencyEuro16' |
-    'currencyEuro24' |
-    'currencyFranc16' |
-    'currencyFranc24' |
-    'currencyKrona16' |
-    'currencyKrona24' |
-    'currencyPeso16' |
-    'currencyPeso24' |
-    'currencyPound16' |
-    'currencyPound24' |
-    'currencyRinggit16' |
-    'currencyRinggit24' |
-    'currencyRupee16' |
-    'currencyRupee24' |
-    'currencyWon16' |
-    'currencyWon24' |
-    'currencyYuan16' |
-    'currencyYuan24' |
-    'currencyZloty16' |
-    'currencyZloty24' |
     'customize16' |
     'customize24' |
     'delete16' |
@@ -207,9 +179,7 @@ export type Icon =
     'directDebit24Colored' |
     'directDebit32Colored' |
     'directFromBrand16' |
-    'directFromBrand16Fit' |
     'directFromBrand24' |
-    'directFromBrand24Fit' |
     'discord24' |
     'discount16' |
     'discount24' |
@@ -225,14 +195,11 @@ export type Icon =
     'ebayBalance18Colored' |
     'ebayBalance24Colored' |
     'ebayBalance32Colored' |
-    'ebayBucks16Colored' |
     'ebayBucksLogo16Colored' |
-    'ebayForCharity16Fit' |
-    'ebayForCharity24Fit' |
+    'ebayForCharity16' |
+    'ebayForCharity24' |
     'ebayInternationalShipping16' |
-    'ebayInternationalShipping16Fit' |
     'ebayInternationalShipping24' |
-    'ebayInternationalShipping24Fit' |
     'ebayLive16' |
     'ebayLive24' |
     'ebayMastercard12Colored' |
@@ -240,19 +207,17 @@ export type Icon =
     'ebayMastercard24Colored' |
     'ebayMastercard32Colored' |
     'ebayMoneyBackGuaranteeLogo16Colored' |
-    'ebayPlus16Fit' |
-    'ebayPlus24Fit' |
+    'ebayPlus16' |
+    'ebayPlus24' |
     'ebayPlusLogo16Colored' |
     'ebayPreloved16' |
     'ebayPreloved24' |
     'ebayRefurbished16' |
-    'ebayRefurbished16Fit' |
     'ebayRefurbished24' |
-    'ebayRefurbished24Fit' |
     'eekArrow' |
     'eekRangeArrow' |
-    'escrow16Fit' |
-    'escrow24Fit' |
+    'escrow16' |
+    'escrow24' |
     'escrowCard12Colored' |
     'escrowCard18Colored' |
     'escrowCard24Colored' |
@@ -261,8 +226,10 @@ export type Icon =
     'euro24' |
     'expand16' |
     'externalLink16' |
+    'externalLink20' |
     'externalLink24' |
     'faceHappiest24' |
+    'faceHappy16' |
     'faceHappy24' |
     'faceNeutral24' |
     'faceSad24' |
@@ -271,6 +238,9 @@ export type Icon =
     'facebookMessenger24' |
     'fastAndFree16' |
     'fastAndFree24' |
+    'feedback16' |
+    'feedback20' |
+    'feedback24' |
     'file16' |
     'file24' |
     'filter16' |
@@ -289,8 +259,7 @@ export type Icon =
     'franc16' |
     'franc24' |
     'freeWarranty16' |
-    'freeWarranty16Fit' |
-    'freeWarranty24Fit' |
+    'freeWarranty24' |
     'fullView16' |
     'fullView24' |
     'fullViewFilled16' |
@@ -336,6 +305,7 @@ export type Icon =
     'help20' |
     'help24' |
     'helpOutline16' |
+    'helpOutline20' |
     'helpOutline24' |
     'hide16' |
     'hide24' |
@@ -381,6 +351,7 @@ export type Icon =
     'krona24' |
     'lamp16' |
     'lamp24' |
+    'largeBox16' |
     'largeBox24' |
     'legacyAuthenticityGuarantee48Colored' |
     'legacyClickToCall48Colored' |
@@ -422,12 +393,16 @@ export type Icon =
     'mailOpen24' |
     'mailUnread16' |
     'mailUnread24' |
+    'map16' |
+    'map20' |
+    'map24' |
     'masonryView24' |
     'masonryViewFilled24' |
     'mastercard12Colored' |
     'mastercard18Colored' |
     'mastercard24Colored' |
     'mastercard32Colored' |
+    'mediumBox16' |
     'mediumBox24' |
     'menu20' |
     'menu24' |
@@ -435,13 +410,15 @@ export type Icon =
     'microphone24' |
     'mobile24' |
     'mobileSignal24' |
-    'moneyBackGuarantee16Fit' |
-    'moneyBackGuarantee24Fit' |
+    'moneyBackGuarantee16' |
+    'moneyBackGuarantee24' |
+    'moon16' |
+    'moon20' |
+    'moon24' |
     'motorcycle16' |
     'motorcycle24' |
     'move16' |
     'move24' |
-    'nectar24Colored' |
     'nectarLogo24Colored' |
     'negativeFilled16' |
     'negativeFilled24' |
@@ -465,7 +442,6 @@ export type Icon =
     'package64' |
     'pause16' |
     'pause24' |
-    'pause64Colored' |
     'pauseFilled64Colored' |
     'payoneer12Colored' |
     'payoneer18Colored' |
@@ -495,10 +471,7 @@ export type Icon =
     'pinterest24' |
     'play16' |
     'play24' |
-    'play64Colored' |
-    'playFilled16' |
     'playFilled16Colored' |
-    'playFilled24' |
     'playFilled24Colored' |
     'playFilled64Colored' |
     'postepay12Colored' |
@@ -534,21 +507,20 @@ export type Icon =
     'reply24' |
     'return16' |
     'return24' |
+    'ribbon16' |
+    'ribbon24' |
     'rim16' |
     'rim24' |
     'ringgit16' |
     'ringgit24' |
     'rotate24' |
-    'rotateLandscapeLeft' |
     'rotateLandscapeLeft24' |
-    'rotateLandscapeRight' |
     'rotateLandscapeRight24' |
-    'rotatePortraitLeft' |
     'rotatePortraitLeft24' |
-    'rotatePortraitRight' |
     'rotatePortraitRight24' |
     'rupee16' |
     'rupee24' |
+    'satchel16' |
     'satchel24' |
     'save16' |
     'save20' |
@@ -586,23 +558,17 @@ export type Icon =
     'shoeBox24' |
     'show16' |
     'show24' |
+    'smallBox16' |
     'smallBox24' |
     'smallLetter24' |
     'sneaker16' |
     'sneaker24' |
+    'snowflake16' |
+    'snowflake24' |
     'snowmobile16' |
     'snowmobile24' |
-    'socialDiscord24' |
-    'socialFacebook24' |
-    'socialFacebookMessenger24' |
-    'socialInstagram24' |
-    'socialLink24' |
-    'socialLinkedin24' |
-    'socialPinterest24' |
-    'socialReddit24' |
-    'socialTwitter24' |
-    'socialWhatsapp24' |
     'sort12' |
+    'sort16' |
     'sort24' |
     'sortDown12' |
     'sortUp12' |
@@ -644,8 +610,8 @@ export type Icon =
     'textMessaging20' |
     'textMessaging24' |
     'textMessaging64' |
-    'theEbayVault16Fit' |
-    'theEbayVault24Fit' |
+    'theEbayVault16' |
+    'theEbayVault24' |
     'thumbDown16' |
     'thumbDown24' |
     'thumbDownFilled16' |
@@ -657,15 +623,17 @@ export type Icon =
     'thumbUpFilled24' |
     'tick16' |
     'tick24' |
+    'tiktok24' |
+    'toggleModeBottom24' |
+    'toggleModeTop24' |
     'topRatedSeller16' |
-    'topRatedSeller16Fit' |
-    'topRatedSeller24Fit' |
+    'topRatedSeller24' |
+    'topService16' |
+    'topService24' |
     'tradingCard16' |
     'tradingCard24' |
     'transaction24' |
-    'trendDown16' |
     'trendDown16Fit' |
-    'trendUp16' |
     'trendUp16Fit' |
     'trophy16' |
     'trophy24' |
@@ -681,8 +649,12 @@ export type Icon =
     'unselectAll24' |
     'upload16' |
     'upload24' |
-    'verifiedCondition16Fit' |
-    'verifiedCondition24Fit' |
+    'venmo12Colored' |
+    'venmo18Colored' |
+    'venmo24Colored' |
+    'venmo32Colored' |
+    'verifiedCondition16' |
+    'verifiedCondition24' |
     'video24' |
     'visa12Colored' |
     'visa18Colored' |
@@ -701,6 +673,7 @@ export type Icon =
     'won24' |
     'wrench16' |
     'wrench24' |
+    'youtube24' |
     'yuan16' |
     'yuan24' |
     'zloty16' |
