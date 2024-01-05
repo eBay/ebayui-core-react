@@ -14,7 +14,6 @@ import { Priority, Size, BodyState, Variant, Split } from './types'
 import { EbayIcon } from '../ebay-icon'
 import EbayButtonLoading from './button-loading'
 import EbayButtonExpand from './button-expand'
-import { EbayKeyboardEventHandler } from '../common/event-utils/types'
 
 export type EbayButtonProps = {
     fluid?: boolean;
@@ -28,7 +27,7 @@ export type EbayButtonProps = {
     split?: Split;
     transparent?: boolean;
     onClick?: (e: MouseEvent) => void;
-    onEscape?: EbayKeyboardEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+    onEscape?: (e: KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     borderless?: boolean;
     fixedHeight?: boolean;

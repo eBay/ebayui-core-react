@@ -1,6 +1,7 @@
 import React, {
     Children, ComponentProps, FC, ReactElement,
-    cloneElement, useEffect, useRef, useState, createRef, isValidElement
+    MouseEvent, KeyboardEvent,
+    cloneElement, useEffect, useRef, useState, createRef
 } from 'react'
 import {
     EbayFakeMenuButton,
@@ -9,10 +10,11 @@ import {
 import classNames from 'classnames'
 import { debounce } from '../common/debounce'
 import { calcPageState, getMaxWidth } from './helpers'
-import { elementProps, filterBy } from '../common/component-utils'
+import { filterBy } from '../common/component-utils'
+import { PaginationItemType } from './pagination-item'
+import { ItemState, PaginationVariant } from './types'
 import { EbayIcon } from '../ebay-icon'
 import { EbayEventHandler } from '../common/event-utils/types'
-import { PaginationItemProps, PaginationItemType, ItemState, PaginationVariant } from './index'
 
 export type PaginationProps = Omit<ComponentProps<'nav'>, 'onSelect'> & {
     id?: string;
@@ -43,10 +45,7 @@ const EbayPagination: FC<PaginationProps> = ({
     const paginationContainerRef = useRef<HTMLUnknownElement>(null)
     const childPageRefs = useRef([])
     childPageRefs.current = Children.map(children, createRef)
-    const totalPages = filterBy(
-        children,
-        child => [undefined, 'page'].includes(elementProps<PaginationItemProps>(child).type)
-    ).length
+    const totalPages = filterBy(children, ({ props }) => props.type === undefined || props.type === 'page').length
     const itemWidthRef = useRef<number>(0)
     const arrowWidthRef = useRef<number>(0)
     const getNumOfVisiblePageItems = () => {
@@ -63,14 +62,11 @@ const EbayPagination: FC<PaginationProps> = ({
 
     const [page, setPage] = useState<ItemState[]>([])
     const [selectedIndex, setSelectedIndex] = useState<number>(0)
-
-    const currentIndex = () => childPageRefs.current.findIndex(pageRef =>
-        pageRef.current?.getAttribute('aria-current') === 'page'
-    )
-
-    // selectedIndexFromDotMenu: override pageIndex on pagination with dot menu value
-    const updatePages = (selectedIndexFromDotMenu?: number) => {
-        const selectedPageIndex = selectedIndexFromDotMenu !== undefined ? selectedIndexFromDotMenu : currentIndex()
+    // selectedPageIndexFromDotMenu: override pageIndex on pagination with dot menu value
+    const updatePages = (selectedPageIndexFromDotMenu?: number) => {
+        const selectedPageIndex = selectedPageIndexFromDotMenu || childPageRefs.current.findIndex(pageRef =>
+            pageRef.current?.getAttribute('aria-current') === 'page'
+        )
         const visiblePageItems = getNumOfVisiblePageItems()
         const pageState = calcPageState(
             selectedPageIndex,
@@ -86,10 +82,10 @@ const EbayPagination: FC<PaginationProps> = ({
         const debouncedUpdate = debounce(updatePages, 16)
 
         updatePages()
-        window.addEventListener('resize', debouncedUpdate as any)
+        window.addEventListener('resize', () => debouncedUpdate())
 
         return () => {
-            window.removeEventListener('resize', debouncedUpdate as any)
+            window.removeEventListener('resize', () => debouncedUpdate())
         }
     }, [children])
 
@@ -101,8 +97,8 @@ const EbayPagination: FC<PaginationProps> = ({
         const firstDot = page.indexOf('dots')
         const lastDot = page.lastIndexOf('dots')
 
-        return Children.map(children, (item, index) => {
-            const { type = 'page', current, disabled, href, children: text } = elementProps<PaginationItemProps>(item)
+        return Children.map(children, (item: ReactElement, index) => {
+            const { type = 'page', current, disabled, href, children: text } = item.props
             const isDot = page[index] === 'dots'
             const key = `${id}-item-${index}`
             const hide = page[index] === 'hidden'
@@ -167,7 +163,7 @@ const EbayPagination: FC<PaginationProps> = ({
                     </li>
                 )
             }
-            return itemType === type && isValidElement(item) ? cloneElement(item, newProps) : null
+            return itemType === type ? cloneElement(item, newProps) : null
         })
     }
 

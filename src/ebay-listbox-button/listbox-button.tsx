@@ -1,12 +1,12 @@
 import React, {
     Children, cloneElement, useEffect, useRef, useState,
-    ComponentProps, FC, KeyboardEvent, ReactElement, useCallback, isValidElement
+    ComponentProps, FC, KeyboardEvent, ReactElement, useCallback
 } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayChangeEventHandler, Key } from '../common/event-utils/types'
-import { elementProps, filterByType } from '../common/component-utils'
-import EbayListboxButtonOption, { EbayListboxButtonOptionProps } from './listbox-button-option'
+import { filterByType } from '../common/component-utils'
+import EbayListboxButtonOption from './listbox-button-option'
 
 export type ChangeEventProps = {
     index: number;
@@ -57,8 +57,8 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         EbayListboxButtonOption that defines the options of the listbox`)
     }
     const getInitialSelectedOption = (): { option: any, index: number } => {
-        const selectedIndex = selected !== undefined ? selected : listBoxButtonOptions.findIndex(option =>
-            value !== undefined && elementProps(option).value === value)
+        const selectedIndex = selected !== undefined ? selected : listBoxButtonOptions.findIndex(({ props }) =>
+            value !== undefined && props.value === value)
         const index = selectedIndex > -1 || floatingLabel ? selectedIndex : undefined
         return {
             option: listBoxButtonOptions[index],
@@ -229,7 +229,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     // We want to mimic the select box behavior, so we take the onSelect that passed
     // at the parent level and use it for the OnClick on the list box since it is a fake dropdown
     const updateListBoxButtonOptions = listBoxButtonOptions
-        .map((child, index) => isValidElement(child) && cloneElement<EbayListboxButtonOptionProps>(child, {
+        .map((child, index) => cloneElement(child, {
             index,
             key: index,
             selected: selectedOption && child.props.value === selectedOption.props.value,
@@ -237,7 +237,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
             innerRef: optionNode => !optionNode
                 ? optionsByIndexRef.current.delete(index)
                 : optionsByIndexRef.current.set(index, optionNode)
-        } as unknown))
+        }))
     const wrapperClassName = classNames('listbox-button', className, { 'listbox-button--fluid': fluid })
     const buttonClassName = classNames('btn btn--form', {
         'btn--borderless': borderless,
@@ -273,7 +273,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
             >
                 <span className="btn__cell">
                     {buttonLabel}
-                    <EbayIcon name="chevronDown16" />
+                    <EbayIcon name="chevronDown12" />
                 </span>
             </button>
             {(expanded || optionsOpened) &&

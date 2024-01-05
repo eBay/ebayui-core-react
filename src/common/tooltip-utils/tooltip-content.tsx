@@ -1,6 +1,6 @@
 import React, { FC, CSSProperties, ReactNode } from 'react'
 import { EbayIcon } from '../../ebay-icon'
-import { elementProps, excludeComponent, findComponent } from '../component-utils'
+import { excludeComponent, findComponent } from '../component-utils'
 import { PointerDirection, TooltipType } from './types'
 import { DEFAULT_POINTER_DIRECTION, POINTER_STYLES, TYPE_ROLES } from './constants'
 import TooltipCloseButton from './tooltip-close-button'
@@ -43,7 +43,7 @@ const TooltipContent: FC<TooltipContentProps> = ({
                     <span className={`${type}__content`}>{allChildrenExceptFooter}</span>
                     {showCloseButton ? (
                         <button
-                            {...elementProps(closeButton)}
+                            {...closeButton?.props}
                             className={`icon-btn icon-btn--transparent ${type}__close`}
                             type="button"
                             aria-label={a11yCloseText}

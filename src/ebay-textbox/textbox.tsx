@@ -1,7 +1,7 @@
 import React, {
     cloneElement, ComponentProps, FC, Ref,
     ChangeEvent, FocusEvent, KeyboardEvent, MouseEvent, SyntheticEvent,
-    useEffect, useState, isValidElement
+    useEffect, useState
 } from 'react'
 import classNames from 'classnames'
 import { findComponent, withForwardRef } from '../common/component-utils'
@@ -180,7 +180,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
                     ref={ref}
                     placeholder={floatingLabelPlaceholder}
                 />
-                {isValidElement(postfixIcon) && cloneElement(postfixIcon, {
+                {postfixIcon && cloneElement(postfixIcon, {
                     ...postfixIcon.props,
                     onClick: (e) => {
                         const { onClick: iconClick = () => {} } = postfixIcon.props

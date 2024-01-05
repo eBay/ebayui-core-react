@@ -87,7 +87,7 @@ export function preventDefaultIfHijax(e: React.KeyboardEvent, hijax: boolean): v
     }
 }
 
-type Handler = (e: UIEvent) => void
+type Handler = (e: KeyboardEvent) => void
 
 const handlers: Handler[] = []
 
@@ -103,7 +103,7 @@ export function removeEventListener(_: unknown, handler: Handler): void {
     }
     handlers.splice(handlers.indexOf(handler), 1)
 }
-export function handleResize(e: UIEvent): void {
+export function handleResize(e: KeyboardEvent): void {
     window.removeEventListener('resize', handleResize)
     const callback = () => {
         if (handlers.length) {

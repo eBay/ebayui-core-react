@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { AnyProps, excludeComponent, filterByType } from '../common/component-utils'
+import { filterBy, filterByType } from '../common/component-utils'
 import { EbayButton } from '../ebay-button'
 import { EbayMenuButton, EbayMenuButtonItem, EbayMenuButtonSeparator } from '../ebay-menu-button'
 import { Props } from './types'
@@ -17,9 +17,9 @@ const EbaySplitButton: FC<Props> = ({
     ref,
     ...rest
 }) => {
-    const menuItemComponents = [EbayMenuButtonItem, EbayMenuButtonSeparator]
-    const buttonLabel = excludeComponent<AnyProps>(children, menuItemComponents)[0]
-    const menuItems = filterByType<AnyProps>(children, menuItemComponents)
+    const menuItemComponents: FC[] = [EbayMenuButtonItem, EbayMenuButtonSeparator]
+    const buttonLabel = filterBy(children, el => !menuItemComponents.includes(el.type as any))
+    const menuItems = filterByType(children, menuItemComponents)
 
     return (
         <span className="split-button">

@@ -1,9 +1,9 @@
 import React, { ComponentProps, FC } from 'react'
 import classNames from 'classnames'
 
-export type EbayMenuButtonSeparatorProps = ComponentProps<'hr'>
+type Props = ComponentProps<'hr'>
 
-const EbayMenuButtonSeparator: FC<EbayMenuButtonSeparatorProps> = ({
+const EbayMenuButtonSeparator: FC<Props> = ({
     className,
     ...rest
 }) => (

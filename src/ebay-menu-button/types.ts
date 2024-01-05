@@ -1,6 +1,6 @@
 import { EbayMenuChangeEventHandler, EbayMenuSelectEventHandler, EbayMenuType } from '../ebay-menu'
 import { EbayButtonProps } from '../ebay-button'
-import { ComponentProps, ReactNode } from 'react'
+import { ComponentProps, ReactElement } from 'react'
 
 export type EbayMenuButtonVariant = 'overflow' | 'form' | 'button'
 
@@ -34,6 +34,6 @@ export type LabelProps = {
   text?: string;
   prefixId?: string;
   prefixLabel?: string;
-  menuButtonLabel?: ReactNode;
-  icon?: ReactNode;
+  menuButtonLabel?: ReactElement;
+  icon?: JSX.Element;
 }

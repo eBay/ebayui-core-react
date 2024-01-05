@@ -12,8 +12,8 @@ export const Default = () => (
         <p>
             <EbayButton
                 onClick={action('clicked')}
-                onEscape={e => action('escape pressed')(e)}
-                onFocus={e => action('focus')(e)}
+                onEscape={action('escape pressed')}
+                onFocus={(e) => action('focus')(e)}
                 onBlur={action('blur')}
                 onKeyDown={action('key down')}
             >
@@ -284,7 +284,7 @@ export const FlexButton = () => (
             <span>Select</span>
             <span style={{ display: 'inline-flex' }}>
                 <span>Any</span>
-                <EbayIcon name="chevronDown16" />
+                <EbayIcon name="chevronDown12" />
             </span>
         </EbayButtonCell>
     </EbayButton>
