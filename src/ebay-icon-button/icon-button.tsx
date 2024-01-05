@@ -4,6 +4,7 @@ import { EbayIcon, Icon } from '../ebay-icon'
 import { EbayBadge } from '../ebay-badge'
 import { withForwardRef } from '../common/component-utils'
 import { EbayKeyboardEventHandler } from '../common/event-utils/types'
+import { Size } from '../ebay-button'
 
 export type EbayIconButtonProps = {
     href?: string;
@@ -11,6 +12,7 @@ export type EbayIconButtonProps = {
     badgeNumber?: number;
     badgeAriaLabel?: string;
     transparent?: boolean;
+    size?: Size;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     onEscape?: EbayKeyboardEventHandler;
 }
@@ -27,6 +29,7 @@ const EbayIconButton: FC<Props> = ({
     transparent,
     className: extraClasses,
     forwardedRef,
+    size,
     onEscape = () => {},
     onKeyDown = () => {},
     ...rest
@@ -35,6 +38,7 @@ const EbayIconButton: FC<Props> = ({
     const className = classNames(
         extraClasses,
         classPrefix,
+        size && `${classPrefix}--${size}`,
         {
             [`${classPrefix}--badged`]: badgeNumber,
             [`${classPrefix}--transparent`]: transparent

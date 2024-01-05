@@ -65,6 +65,7 @@ const EbayButton:FC<Props> = ({
     }
     const sizeStyles: { [key in Size]: string } = {
         large: `${classPrefix}--large`,
+        small: `${classPrefix}--small`,
         regular: '',
         default: ''
     }
