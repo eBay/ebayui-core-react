@@ -97,7 +97,6 @@ const EbayCalendar: FC<EbayCalendarProps> = ({
         )
     }
 
-    // Selected
     useEffect(() => {
         if (selected) {
             const selectedISOs = Array.isArray(selected) ? selected : [selected]
