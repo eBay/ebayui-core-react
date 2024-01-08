@@ -7,6 +7,10 @@ import { EbayCalendar } from '../index'
 
 const anySyntheticEvent = expect.objectContaining( { target: null })
 
+jest
+    .useFakeTimers()
+    .setSystemTime(new Date('2024-01-05').getTime())
+
 initStoryshots({
     config: ({ configure }) => {
         const req = requireContext('./', false, /\.stories\.tsx$/);
@@ -29,7 +33,7 @@ describe('<EbayCalendar />', () => {
         await waitFor(() => expect(screen.getByText('1')).toHaveFocus())
     })
 
-    it('should call onFocus with the date that has ficos', async() => {
+    it('should call onFocus with the date that has focus', async() => {
         const onFocus = jest.fn()
         render(<EbayCalendar interactive selected="2024-01-01" onFocus={onFocus} />)
         const day = screen.getByText('1')
@@ -44,7 +48,7 @@ describe('<EbayCalendar />', () => {
         fireEvent.keyDown(day, { key: 'ArrowUp' })
         await waitFor(() => expect(onFocus).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-01' }))
 
-        expect(onFocus).toHaveBeenCalledTimes(5)
+        await waitFor(() => expect(onFocus).toHaveBeenCalledTimes(5))
     })
 
     it('should call onSelect with event and passed iso date on selection', () => {
