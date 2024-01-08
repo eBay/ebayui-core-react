@@ -13,7 +13,12 @@ export function findFirstDayOfWeek(localeName: string): number {
     return 0
 }
 
-export function getWeekdayInfo(localeName: string) {
+type WeekdayInfo = {
+    firstDayOfWeek: number;
+    weekdayLabels: string[];
+}
+
+export function getWeekdayInfo(localeName: string): WeekdayInfo {
     const firstDayOfWeek = findFirstDayOfWeek(localeName)
 
     const weekdayLabelFormatter = new Intl.DateTimeFormat(localeName, {
@@ -33,16 +38,16 @@ export function toISO(date: Date): DayISO {
     return date.toISOString().slice(0, 10) as DayISO
 }
 
-export function fromISO(iso: DayISO) {
+export function fromISO(iso: DayISO): Date {
     return new Date(iso)
 }
 
-export function offsetISO(iso: DayISO, days: number) {
+export function offsetISO(iso: DayISO, days: number): DayISO {
     const date = fromISO(iso)
     date.setUTCDate(date.getUTCDate() + days)
     return toISO(date)
 }
 
-export function localeOverride(locale?: string) {
+export function localeOverride(locale?: string): string {
     return locale || navigator.language
 }
