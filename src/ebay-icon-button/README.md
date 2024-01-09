@@ -39,6 +39,7 @@ Name | Type | Stateful | Required | Description | Data
 `bageNumber` | Number | No | No | number on the badge
 `bageAriaLabel` | String | No | No | aria label of the badge
 `transparent` | Boolean | No | No | for transparent background
+`size` | String | No | No | alternative size for the icon button, 'large' or 'small'
 
 ## Callbacks
 
