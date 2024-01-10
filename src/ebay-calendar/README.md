@@ -2,6 +2,16 @@
 
 ## Usage
 
+### Import JS
+```jsx harmony
+import { EbayCalendar } from '@ebay/ui-core-react/ebay-calendar'
+```
+
+### Import following styles from SKIN
+```jsx harmony
+import "@ebay/skin/calendar";
+```
+
 ```react
 <EbayCalendar />
 ```
