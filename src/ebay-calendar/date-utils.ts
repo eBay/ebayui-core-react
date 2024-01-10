@@ -31,10 +31,20 @@ export function getWeekdayInfo(localeName: string): WeekdayInfo {
         return dayLabel
     })
 
-    return { firstDayOfWeek, weekdayLabels }
+    return {
+        firstDayOfWeek,
+        weekdayLabels
+    }
+}
+
+export function dateArgToISO(arg?: DateConstructor['arguments']): DayISO {
+    if (!arg) return undefined
+    if (/^\d\d\d\d-\d\d-\d\d$/g.test(arg)) return arg as DayISO
+    return toISO(new Date(arg))
 }
 
 export function toISO(date: Date): DayISO {
+    if (isNaN(date.getTime())) return
     return date.toISOString().slice(0, 10) as DayISO
 }
 

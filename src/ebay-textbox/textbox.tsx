@@ -14,7 +14,7 @@ import {
     EbayKeyboardEventHandler, EbayMouseEventHandler
 } from '../common/event-utils/types'
 
-const isControlled = value => typeof value !== 'undefined'
+export const isControlled = (value?: unknown): boolean => typeof value !== 'undefined'
 
 type TextInputProps = ComponentProps<'input'> & ComponentProps<'textarea'>
 
@@ -154,7 +154,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
         'textbox__control--fluid': fluid,
         'textbox__control--large': inputSize === 'large'
     })
-    const wrapperClassName = classNames('textbox', {
+    const wrapperClassName = classNames('textbox', rest.className, {
         'textbox--icon-end': postfixIcon
     })
 

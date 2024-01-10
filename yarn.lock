@@ -9337,6 +9337,22 @@ makeerror@1.0.12:
   dependencies:
     tmpl "1.0.5"
 
+makeup-exit-emitter@~0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/makeup-exit-emitter/-/makeup-exit-emitter-0.4.1.tgz#99a6db81c44a7465658b89d5f4e9324d21755190"
+  integrity sha512-KZJRxx/eiGxMs0qHOw5lbNQn+BOv0GZb/sKQ02vNRFuqAGS2KGXQH+lWYZDrwwDKvexgln/kE+8xf1mjArpDgw==
+  dependencies:
+    makeup-next-id "~0.4.0"
+
+makeup-expander@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/makeup-expander/-/makeup-expander-0.10.1.tgz#5ba44f8a142625a885dde2bab1d6177b4d07672a"
+  integrity sha512-auGubmGHsxRTOSvraLBwSYvSouzOlMNR6aXpE5GHi29p0z/IoMCH+Pb8IAXUPSv3ABXSh0bdSjaCrNIH0VNAVw==
+  dependencies:
+    makeup-exit-emitter "~0.4.0"
+    makeup-focusables "~0.3.0"
+    makeup-next-id "~0.4.0"
+
 makeup-focusables@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/makeup-focusables/-/makeup-focusables-0.3.0.tgz#0cbd285dda7d794580f239462c6244b5f048fe36"
@@ -9348,6 +9364,11 @@ makeup-keyboard-trap@^0.4.1:
   integrity sha512-V7AK5+bRclsV6202wfDwy+9rdprdkKN0k+b/c6OvXJcydu2D6CGAM68nqAyRHoFMEcMJ6tBCmE4SjRt87fu77A==
   dependencies:
     makeup-focusables "~0.3.0"
+
+makeup-next-id@~0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/makeup-next-id/-/makeup-next-id-0.4.1.tgz#7530470175360e836af66c6d421349abf612738c"
+  integrity sha512-5s1caaRFSkvAu6Vhh1ZGkMyycf6bwEfZWwd0qEXzJj2P1aF+8baLo5sPZlMnfSao/SeUD6le0J8CaOzlt4KZSA==
 
 makeup-screenreader-trap@^0.4.1:
   version "0.4.1"

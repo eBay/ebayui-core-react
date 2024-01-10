@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "makeup-expander": "^0.10.1",
     "makeup-keyboard-trap": "^0.4.1",
     "makeup-screenreader-trap": "^0.4.1",
     "react-remove-scroll": "^2.2.0"

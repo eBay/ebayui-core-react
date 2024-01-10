@@ -96,7 +96,7 @@ exports[`Storyshots ebay-tooltip No hover 1`] = `
       class="tooltip"
     >
       <span
-        class="textbox"
+        class="textbox tooltip__host"
       >
         <input
           aria-expanded="false"
