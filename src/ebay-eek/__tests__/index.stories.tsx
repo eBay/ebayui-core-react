@@ -1,17 +1,15 @@
 import React from 'react'
-import { EbayEek } from '../index'
+import { EbayEek, EbayEekProps } from '../index'
+import { Meta, Story } from '@storybook/react'
 
-export default {
-    title: 'ebay-eek'
+const meta: Meta<typeof EbayEek> = {
+    component: EbayEek,
+    title: 'graphics & icons/ebay-eek'
 }
 
-export const Standard = () => (
-    <>
-        <EbayEek max="A+++" min="E" rating="C" />
-    </>
-)
+export default meta
 
-export const RegularA = () => (
+export const RegularA: Story<EbayEekProps> = () => (
     <>
         <div>
             <EbayEek max="A" min="G" rating="A" />
@@ -25,7 +23,7 @@ export const RegularA = () => (
     </>
 )
 
-export const A = () => (
+export const A: Story<EbayEekProps> = () => (
     <>
         <div>
             <EbayEek max="A++" min="E" rating="A++" />
@@ -54,7 +52,7 @@ A.story = {
     name: 'A++'
 }
 
-export const ValidA = () => (
+export const ValidA: Story<EbayEekProps> = () => (
     <>
         <div>
             <EbayEek max="A+++" min="D" rating="A+++" />
@@ -94,7 +92,7 @@ ValidA.story = {
     name: 'Valid A+++'
 }
 
-export const InvalidCombinations = () => (
+export const InvalidCombinations: Story<EbayEekProps> = () => (
     <>
         <EbayEek max="B" min="G" rating="D" />
         <EbayEek max="A" min="G" rating="A+++" />

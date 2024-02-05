@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-calendar Default 1`] = `
+exports[`Storyshots building blocks/ebay-calendar Default 1`] = `
 <DocumentFragment>
   <div
     class="calendar"
@@ -88,7 +88,7 @@ exports[`Storyshots ebay-calendar Default 1`] = `
                 </span>
               </td>
               <td
-                class="calendar__cell--selected"
+                class=""
               >
                 <span
                   class=""
@@ -97,7 +97,7 @@ exports[`Storyshots ebay-calendar Default 1`] = `
                   <span
                     class="clipped"
                   >
-                    -selected-
+                    -
                   </span>
                 </span>
               </td>
@@ -510,11 +510,58 @@ exports[`Storyshots ebay-calendar Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
+exports[`Storyshots building blocks/ebay-calendar Disable Before And After 1`] = `
 <DocumentFragment>
   <div
     class="calendar"
   >
+    <div
+      class="calendar__header"
+    >
+      <div
+        class="calendar__header--inner"
+      >
+        <button
+          aria-label="Show December 2023"
+          class="icon-btn icon-btn--small icon-btn--transparent"
+          disabled=""
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-left-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-left-24"
+            />
+          </svg>
+        </button>
+        <h3>
+          January 2024
+        </h3>
+        <h3>
+          February 2024
+        </h3>
+        <button
+          aria-label="Show March 2024"
+          class="icon-btn icon-btn--small icon-btn--transparent"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="icon icon--chevron-right-24"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use
+              xlink:href="#icon-chevron-right-24"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
     <div
       class="calendar__body"
     >
@@ -592,9 +639,11 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__cell--selected calendar__range--start calendar__range"
               >
                 <button
+                  aria-label="3-selected-start of range"
+                  aria-pressed="true"
                   data-iso="2024-01-03"
                   tabindex="-1"
                 >
@@ -602,9 +651,10 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="4-in range"
                   data-iso="2024-01-04"
                   tabindex="-1"
                 >
@@ -612,12 +662,11 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
                 </button>
               </td>
               <td
-                class="calendar__cell--selected calendar__range--start calendar__range"
+                class="calendar__range"
               >
                 <button
                   aria-current="date"
-                  aria-label="5-selected-start of range"
-                  aria-pressed="true"
+                  aria-label="5-in range"
                   data-iso="2024-01-05"
                 >
                   5
@@ -973,11 +1022,10 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
                 colspan="4"
               />
               <td
-                class="calendar__cell--selected calendar__range calendar__range--end"
+                class="calendar__range"
               >
                 <button
-                  aria-label="1-selected-end of range"
-                  aria-pressed="true"
+                  aria-label="1-in range"
                   data-iso="2024-02-01"
                   tabindex="-1"
                 >
@@ -985,9 +1033,10 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="2-in range"
                   data-iso="2024-02-02"
                   tabindex="-1"
                 >
@@ -995,9 +1044,10 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="3-in range"
                   data-iso="2024-02-03"
                   tabindex="-1"
                 >
@@ -1007,77 +1057,77 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="4-in range"
                   data-iso="2024-02-04"
-                  disabled=""
                   tabindex="-1"
                 >
                   4
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="5-in range"
                   data-iso="2024-02-05"
-                  disabled=""
                   tabindex="-1"
                 >
                   5
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="6-in range"
                   data-iso="2024-02-06"
-                  disabled=""
                   tabindex="-1"
                 >
                   6
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="7-in range"
                   data-iso="2024-02-07"
-                  disabled=""
                   tabindex="-1"
                 >
                   7
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="8-in range"
                   data-iso="2024-02-08"
-                  disabled=""
                   tabindex="-1"
                 >
                   8
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="9-in range"
                   data-iso="2024-02-09"
-                  disabled=""
                   tabindex="-1"
                 >
                   9
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="10-in range"
                   data-iso="2024-02-10"
-                  disabled=""
                   tabindex="-1"
                 >
                   10
@@ -1086,77 +1136,77 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="11-in range"
                   data-iso="2024-02-11"
-                  disabled=""
                   tabindex="-1"
                 >
                   11
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="12-in range"
                   data-iso="2024-02-12"
-                  disabled=""
                   tabindex="-1"
                 >
                   12
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="13-in range"
                   data-iso="2024-02-13"
-                  disabled=""
                   tabindex="-1"
                 >
                   13
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="14-in range"
                   data-iso="2024-02-14"
-                  disabled=""
                   tabindex="-1"
                 >
                   14
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="15-in range"
                   data-iso="2024-02-15"
-                  disabled=""
                   tabindex="-1"
                 >
                   15
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="16-in range"
                   data-iso="2024-02-16"
-                  disabled=""
                   tabindex="-1"
                 >
                   16
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="17-in range"
                   data-iso="2024-02-17"
-                  disabled=""
                   tabindex="-1"
                 >
                   17
@@ -1165,77 +1215,77 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="18-in range"
                   data-iso="2024-02-18"
-                  disabled=""
                   tabindex="-1"
                 >
                   18
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="19-in range"
                   data-iso="2024-02-19"
-                  disabled=""
                   tabindex="-1"
                 >
                   19
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="20-in range"
                   data-iso="2024-02-20"
-                  disabled=""
                   tabindex="-1"
                 >
                   20
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="21-in range"
                   data-iso="2024-02-21"
-                  disabled=""
                   tabindex="-1"
                 >
                   21
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="22-in range"
                   data-iso="2024-02-22"
-                  disabled=""
                   tabindex="-1"
                 >
                   22
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="23-in range"
                   data-iso="2024-02-23"
-                  disabled=""
                   tabindex="-1"
                 >
                   23
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="24-in range"
                   data-iso="2024-02-24"
-                  disabled=""
                   tabindex="-1"
                 >
                   24
@@ -1244,55 +1294,55 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="25-in range"
                   data-iso="2024-02-25"
-                  disabled=""
                   tabindex="-1"
                 >
                   25
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="26-in range"
                   data-iso="2024-02-26"
-                  disabled=""
                   tabindex="-1"
                 >
                   26
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="27-in range"
                   data-iso="2024-02-27"
-                  disabled=""
                   tabindex="-1"
                 >
                   27
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="28-in range"
                   data-iso="2024-02-28"
-                  disabled=""
                   tabindex="-1"
                 >
                   28
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="29-in range"
                   data-iso="2024-02-29"
-                  disabled=""
                   tabindex="-1"
                 >
                   29
@@ -1307,7 +1357,7 @@ exports[`Storyshots ebay-calendar Disable Before And After 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-calendar Disable Weekdays 1`] = `
+exports[`Storyshots building blocks/ebay-calendar Disable Weekdays 1`] = `
 <DocumentFragment>
   <div
     class="calendar"
@@ -1387,11 +1437,9 @@ exports[`Storyshots ebay-calendar Disable Weekdays 1`] = `
                 </button>
               </td>
               <td
-                class="calendar__cell--selected"
+                class=""
               >
                 <button
-                  aria-label="3-selected"
-                  aria-pressed="true"
                   data-iso="2024-01-03"
                   tabindex="-1"
                 >
@@ -2064,7 +2112,7 @@ exports[`Storyshots ebay-calendar Disable Weekdays 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-calendar Interactive 1`] = `
+exports[`Storyshots building blocks/ebay-calendar Interactive 1`] = `
 <DocumentFragment>
   <div
     class="calendar"
@@ -2452,7 +2500,7 @@ exports[`Storyshots ebay-calendar Interactive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-calendar Multiple Months 1`] = `
+exports[`Storyshots building blocks/ebay-calendar Multiple Months 1`] = `
 <DocumentFragment>
   <div
     class="calendar"
@@ -3193,7 +3241,7 @@ exports[`Storyshots ebay-calendar Multiple Months 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-calendar Navigable 1`] = `
+exports[`Storyshots building blocks/ebay-calendar Navigable 1`] = `
 <DocumentFragment>
   <div
     class="calendar"
@@ -3980,7 +4028,7 @@ exports[`Storyshots ebay-calendar Navigable 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-calendar Range Selected 1`] = `
+exports[`Storyshots building blocks/ebay-calendar Range Selected 1`] = `
 <DocumentFragment>
   <div
     class="calendar"
@@ -4443,11 +4491,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 colspan="4"
               />
               <td
-                class="calendar__cell--selected calendar__range calendar__range--end"
+                class="calendar__range"
               >
                 <button
-                  aria-label="1-selected-end of range"
-                  aria-pressed="true"
+                  aria-label="1-in range"
                   data-iso="2024-02-01"
                   tabindex="-1"
                 >
@@ -4455,9 +4502,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="2-in range"
                   data-iso="2024-02-02"
                   tabindex="-1"
                 >
@@ -4465,9 +4513,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="3-in range"
                   data-iso="2024-02-03"
                   tabindex="-1"
                 >
@@ -4477,9 +4526,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="4-in range"
                   data-iso="2024-02-04"
                   tabindex="-1"
                 >
@@ -4487,9 +4537,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="5-in range"
                   data-iso="2024-02-05"
                   tabindex="-1"
                 >
@@ -4497,9 +4548,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="6-in range"
                   data-iso="2024-02-06"
                   tabindex="-1"
                 >
@@ -4507,9 +4559,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="7-in range"
                   data-iso="2024-02-07"
                   tabindex="-1"
                 >
@@ -4517,9 +4570,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="8-in range"
                   data-iso="2024-02-08"
                   tabindex="-1"
                 >
@@ -4527,9 +4581,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="9-in range"
                   data-iso="2024-02-09"
                   tabindex="-1"
                 >
@@ -4537,9 +4592,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="10-in range"
                   data-iso="2024-02-10"
                   tabindex="-1"
                 >
@@ -4549,9 +4605,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="11-in range"
                   data-iso="2024-02-11"
                   tabindex="-1"
                 >
@@ -4559,9 +4616,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="12-in range"
                   data-iso="2024-02-12"
                   tabindex="-1"
                 >
@@ -4569,9 +4627,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="13-in range"
                   data-iso="2024-02-13"
                   tabindex="-1"
                 >
@@ -4579,9 +4638,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="14-in range"
                   data-iso="2024-02-14"
                   tabindex="-1"
                 >
@@ -4589,9 +4649,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="15-in range"
                   data-iso="2024-02-15"
                   tabindex="-1"
                 >
@@ -4599,9 +4660,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="16-in range"
                   data-iso="2024-02-16"
                   tabindex="-1"
                 >
@@ -4609,9 +4671,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="17-in range"
                   data-iso="2024-02-17"
                   tabindex="-1"
                 >
@@ -4621,9 +4684,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="18-in range"
                   data-iso="2024-02-18"
                   tabindex="-1"
                 >
@@ -4631,9 +4695,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="19-in range"
                   data-iso="2024-02-19"
                   tabindex="-1"
                 >
@@ -4641,9 +4706,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="20-in range"
                   data-iso="2024-02-20"
                   tabindex="-1"
                 >
@@ -4651,9 +4717,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="21-in range"
                   data-iso="2024-02-21"
                   tabindex="-1"
                 >
@@ -4661,9 +4728,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="22-in range"
                   data-iso="2024-02-22"
                   tabindex="-1"
                 >
@@ -4671,9 +4739,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="23-in range"
                   data-iso="2024-02-23"
                   tabindex="-1"
                 >
@@ -4681,9 +4750,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="24-in range"
                   data-iso="2024-02-24"
                   tabindex="-1"
                 >
@@ -4693,9 +4763,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
             </tr>
             <tr>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="25-in range"
                   data-iso="2024-02-25"
                   tabindex="-1"
                 >
@@ -4703,9 +4774,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="26-in range"
                   data-iso="2024-02-26"
                   tabindex="-1"
                 >
@@ -4713,9 +4785,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="27-in range"
                   data-iso="2024-02-27"
                   tabindex="-1"
                 >
@@ -4723,9 +4796,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="28-in range"
                   data-iso="2024-02-28"
                   tabindex="-1"
                 >
@@ -4733,9 +4807,10 @@ exports[`Storyshots ebay-calendar Range Selected 1`] = `
                 </button>
               </td>
               <td
-                class=""
+                class="calendar__range"
               >
                 <button
+                  aria-label="29-in range"
                   data-iso="2024-02-29"
                   tabindex="-1"
                 >

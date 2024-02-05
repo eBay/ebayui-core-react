@@ -5,7 +5,7 @@ import { EbayCheckbox } from '../../ebay-checkbox'
 import { EbayField, EbayLabel, EbayFieldDescription } from '../index'
 
 export default {
-    title: 'ebay-field'
+    title: 'form input/ebay-field'
 }
 
 export const DefaultInline = () => (

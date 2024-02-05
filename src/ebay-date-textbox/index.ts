@@ -1,1 +1,1 @@
-export { default as EbayDateTextbox } from './date-textbox'
+export { default as EbayDateTextbox, EbayDateTextboxProps } from './date-textbox'

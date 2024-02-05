@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { EbayConfirmDialog } from '../index';
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 import { action } from '../../../.storybook/action'
+import { Meta, Story } from '@storybook/react'
 
-const story: any = {
+const story: Meta<typeof EbayConfirmDialog> = {
     component: EbayConfirmDialog,
-    title: 'ebay-confirm-dialog'
-};
+    title: 'dialogs/ebay-confirm-dialog'
+}
 
-
-export const _Default = () => {
-    const [open, setOpen] = useState(true);
-    const close = () => setOpen(false);
+export const _Default: Story<typeof EbayConfirmDialog> = () => {
+    const [open, setOpen] = useState(true)
+    const close = () => setOpen(false)
 
     return (
         <div>
@@ -40,7 +40,7 @@ export const _Default = () => {
     )
 };
 
-export const _WithAnimation = () => {
+export const _WithAnimation: Story<typeof EbayConfirmDialog> = () => {
     const [open, setOpen] = useState(false);
     const close = () => setOpen(false);
 

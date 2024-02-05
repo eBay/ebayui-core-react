@@ -1,32 +1,28 @@
 import React, {useState} from 'react'
-import { ComponentMeta, Story } from '@storybook/react'
-import { EbayDateTextbox } from '../index'
+import { Meta, Story, StoryObj } from '@storybook/react'
+import { EbayDateTextbox, EbayDateTextboxProps } from '../index'
 import {EbayButton} from '../../ebay-button'
 
-const story: ComponentMeta<typeof EbayDateTextbox> = {
+const story: Meta<typeof EbayDateTextbox> = {
   component: EbayDateTextbox,
-  title:'ebay-date-textbox',
+  title: 'form input/ebay-date-textbox',
 }
 
-export const Default = () => {
-    return (
-        <EbayDateTextbox />
-    )
+export const Default: StoryObj<EbayDateTextboxProps> = {}
+
+export const Range: StoryObj<EbayDateTextboxProps> = {
+    args: {
+        range: true
+    }
 }
 
-export const Range = () => {
-    return (
-        <EbayDateTextbox range />
-    )
+export const CollpaseOnSelect: StoryObj<EbayDateTextboxProps> = {
+    args: {
+        collapseOnSelect: true
+    }
 }
 
-export const CollpaseOnSelect = () => {
-    return (
-        <EbayDateTextbox collapseOnSelect />
-    )
-}
-
-export const ControlledValues = () => {
+export const ControlledValues: Story<EbayDateTextboxProps> = () => {
     const Component = () => {
         const [value, setValue] = useState('')
 

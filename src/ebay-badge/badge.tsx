@@ -3,12 +3,12 @@ import classNames from 'classnames'
 
 export type EbayBadgeType = 'menu' | 'icon' | 'img'
 
-type Props = ComponentProps<'span'> & {
+export type EbayBadgeProps = ComponentProps<'span'> & {
     type?: EbayBadgeType;
     number: number | string;
 }
 
-const EbayBadge: FC<Props> = ({
+const EbayBadge: FC<EbayBadgeProps> = ({
     number,
     type = 'img',
     className,

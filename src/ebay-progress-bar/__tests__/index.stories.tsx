@@ -2,7 +2,7 @@ import React from 'react'
 import { EbayProgressBar } from '../index'
 
 export default {
-    title: 'ebay-progress-bar',
+    title: 'progress/ebay-progress-bar',
     component: EbayProgressBar
 }
 

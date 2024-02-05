@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-video Captions 1`] = `
+exports[`Storyshots media/ebay-video Captions 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -130,7 +130,7 @@ exports[`Storyshots ebay-video Captions 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Controlled 1`] = `
+exports[`Storyshots media/ebay-video Controlled 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -271,7 +271,7 @@ exports[`Storyshots ebay-video Controlled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Default 1`] = `
+exports[`Storyshots media/ebay-video Default 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -402,7 +402,7 @@ exports[`Storyshots ebay-video Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Fail 1`] = `
+exports[`Storyshots media/ebay-video Fail 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -532,7 +532,7 @@ exports[`Storyshots ebay-video Fail 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Fail Inside Playlist 1`] = `
+exports[`Storyshots media/ebay-video Fail Inside Playlist 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -662,7 +662,7 @@ exports[`Storyshots ebay-video Fail Inside Playlist 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Flexible Container 1`] = `
+exports[`Storyshots media/ebay-video Flexible Container 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%;"
@@ -796,7 +796,7 @@ exports[`Storyshots ebay-video Flexible Container 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Multiple Videos 1`] = `
+exports[`Storyshots media/ebay-video Multiple Videos 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -927,7 +927,7 @@ exports[`Storyshots ebay-video Multiple Videos 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Muted Autoplay 1`] = `
+exports[`Storyshots media/ebay-video Muted Autoplay 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -1058,7 +1058,7 @@ exports[`Storyshots ebay-video Muted Autoplay 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video No Report Button 1`] = `
+exports[`Storyshots media/ebay-video No Report Button 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -1188,7 +1188,7 @@ exports[`Storyshots ebay-video No Report Button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Report Text 1`] = `
+exports[`Storyshots media/ebay-video Report Text 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"
@@ -1318,7 +1318,7 @@ exports[`Storyshots ebay-video Report Text 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-video Single Video 1`] = `
+exports[`Storyshots media/ebay-video Single Video 1`] = `
 <DocumentFragment>
   <div
     class="video-player video-player--poster"

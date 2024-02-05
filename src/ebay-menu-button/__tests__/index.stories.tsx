@@ -9,7 +9,7 @@ import {
 } from '../index'
 
 export default {
-    title: 'ebay-menu-button'
+    title: 'buttons/ebay-menu-button'
 }
 
 export const Default = () => (

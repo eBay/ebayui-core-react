@@ -5,7 +5,7 @@ import { icons } from './constants'
 
 export default {
     component: EbayIcon,
-    title: 'ebay-icon'
+    title: 'graphics & icons/ebay-icon'
 } as Meta;
 
 export const AllIcons = () => (

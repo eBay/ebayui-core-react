@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-infotip Custom button content (With render prop) 1`] = `
+exports[`Storyshots buttons/ebay-infotip Custom button content (With render prop) 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin: 200px;"
@@ -84,7 +84,7 @@ exports[`Storyshots ebay-infotip Custom button content (With render prop) 1`] = 
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Custom icon 1`] = `
+exports[`Storyshots buttons/ebay-infotip Custom icon 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin: 200px;"
@@ -158,7 +158,7 @@ exports[`Storyshots ebay-infotip Custom icon 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Default 1`] = `
+exports[`Storyshots buttons/ebay-infotip Default 1`] = `
 <DocumentFragment>
   <div
     style="display: flex; margin: 200px;"
@@ -232,7 +232,7 @@ exports[`Storyshots ebay-infotip Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Disabled 1`] = `
+exports[`Storyshots buttons/ebay-infotip Disabled 1`] = `
 <DocumentFragment>
   <div
     style="display: flex; margin: 200px;"
@@ -307,7 +307,7 @@ exports[`Storyshots ebay-infotip Disabled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Expanded by default 1`] = `
+exports[`Storyshots buttons/ebay-infotip Expanded by default 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin: 200px;"
@@ -381,7 +381,7 @@ exports[`Storyshots ebay-infotip Expanded by default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip In paragraph 1`] = `
+exports[`Storyshots buttons/ebay-infotip In paragraph 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin: 100px;"
@@ -462,7 +462,7 @@ exports[`Storyshots ebay-infotip In paragraph 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Modal 1`] = `
+exports[`Storyshots buttons/ebay-infotip Modal 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin: 100px;"
@@ -548,7 +548,7 @@ exports[`Storyshots ebay-infotip Modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Pointer direction 1`] = `
+exports[`Storyshots buttons/ebay-infotip Pointer direction 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin-left: 300px;"
@@ -1397,7 +1397,7 @@ exports[`Storyshots ebay-infotip Pointer direction 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Pointer with custom location 1`] = `
+exports[`Storyshots buttons/ebay-infotip Pointer with custom location 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin: 200px;"
@@ -1471,7 +1471,7 @@ exports[`Storyshots ebay-infotip Pointer with custom location 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-infotip Text instead of icon 1`] = `
+exports[`Storyshots buttons/ebay-infotip Text instead of icon 1`] = `
 <DocumentFragment>
   <div
     style="width: 100%; margin: 200px;"

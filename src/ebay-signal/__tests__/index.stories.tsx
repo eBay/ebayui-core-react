@@ -3,7 +3,7 @@ import { EbaySignal } from '../index';
 
 export default {
     component: EbaySignal,
-    title: 'ebay-signal',
+    title: 'graphics & icons/ebay-signal',
 };
 
 export const defaultCase = () => (<>

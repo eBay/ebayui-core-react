@@ -8,7 +8,7 @@ import {
 } from '../index'
 
 export default {
-    title: 'ebay-progress-stepper'
+    title: 'progress/ebay-progress-stepper'
 }
 
 export const Default = () => (

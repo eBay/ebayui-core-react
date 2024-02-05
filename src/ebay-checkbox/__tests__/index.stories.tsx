@@ -1,13 +1,17 @@
 import React, { useState, useRef, ChangeEvent } from 'react'
+import { Meta, Story } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayLabel } from '../../ebay-field'
 import { EbayCheckbox } from '../index'
 
-export default {
-    title: 'ebay-checkbox'
+const meta: Meta<typeof EbayCheckbox> = {
+    component: EbayCheckbox,
+    title: 'form input/ebay-checkbox'
 }
 
-export const DefaultCheckboxButton = () => (
+export default meta
+
+export const DefaultCheckboxButton: Story<typeof EbayCheckbox> = () => (
     <>
         <p>
             <EbayCheckbox
@@ -28,11 +32,7 @@ export const DefaultCheckboxButton = () => (
     </>
 )
 
-DefaultCheckboxButton.story = {
-    name: 'Default checkbox-button'
-}
-
-export const SelectedCheckboxButton = () => (
+export const SelectedCheckboxButton: Story<typeof EbayCheckbox> = () => (
     <>
         <p>
             <EbayCheckbox checked value="123" id="checkbox-21">
@@ -47,11 +47,7 @@ export const SelectedCheckboxButton = () => (
     </>
 )
 
-SelectedCheckboxButton.story = {
-    name: 'Selected checkbox-button'
-}
-
-export const DisabledCheckboxButton = () => (
+export const DisabledCheckboxButton: Story<typeof EbayCheckbox> = () => (
     <>
         <p>
             <EbayCheckbox disabled value="123" id="checkbox-31">
@@ -66,11 +62,7 @@ export const DisabledCheckboxButton = () => (
     </>
 )
 
-DisabledCheckboxButton.story = {
-    name: 'Disabled checkbox-button'
-}
-
-export const GroupedCheckboxButtons = () => (
+export const GroupedCheckboxButtons: Story<typeof EbayCheckbox> = () => (
     <fieldset>
         <legend>Choose an Option</legend>
         <span className="field">
@@ -106,11 +98,7 @@ export const GroupedCheckboxButtons = () => (
     </fieldset>
 )
 
-GroupedCheckboxButtons.story = {
-    name: 'Grouped checkbox-buttons'
-}
-
-export const StyledCheckboxButton = () => (
+export const StyledCheckboxButton: Story<typeof EbayCheckbox> = () => (
     <span className="checkbox">
         <style
             dangerouslySetInnerHTML={{
@@ -126,11 +114,7 @@ export const StyledCheckboxButton = () => (
     </span>
 )
 
-StyledCheckboxButton.story = {
-    name: 'Styled checkbox-button'
-}
-
-export const ControlValueFromOutside = () => {
+export const ControlValueFromOutside: Story<typeof EbayCheckbox> = () => {
     const Controller = () => {
         const [isChecked, setChecked] = useState(true)
         const [isDisabled, setDisabled] = useState(false)
@@ -173,8 +157,4 @@ export const ControlValueFromOutside = () => {
             <Controller />
         </>
     )
-}
-
-ControlValueFromOutside.story = {
-    name: 'Control value from outside'
 }

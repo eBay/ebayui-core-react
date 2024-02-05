@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-breadcrumb all buttons 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-breadcrumbs All Buttons 1`] = `
 <DocumentFragment>
   <nav
     aria-labelledby="ebay-breadcrumb-breadcrumbs-heading"
@@ -71,85 +71,7 @@ exports[`Storyshots ebay-breadcrumb all buttons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-breadcrumb all links 1`] = `
-<DocumentFragment>
-  <nav
-    aria-labelledby="ebay-breadcrumb-breadcrumbs-heading"
-    class="breadcrumbs"
-    role="navigation"
-  >
-    <h3
-      class="clipped"
-      id="ebay-breadcrumb-breadcrumbs-heading"
-    >
-      Custom page navigation
-    </h3>
-    <ul>
-      <li>
-        <a
-          href="https://www.ebay.com/"
-        >
-          eBay
-        </a>
-        <svg
-          aria-hidden="true"
-          class="icon icon--chevron-right-12"
-          focusable="false"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-chevron-right-12"
-          />
-        </svg>
-      </li>
-      <li>
-        <a
-          href="https://www.ebay.com/rpp/cell-phone-pda"
-        >
-          Cell Phones, Smart Watches & Accessories
-        </a>
-        <svg
-          aria-hidden="true"
-          class="icon icon--chevron-right-12"
-          focusable="false"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-chevron-right-12"
-          />
-        </svg>
-      </li>
-      <li>
-        <a
-          href="https://www.ebay.com/b/Smart-Watch-Accessories/182064/bn_16565905"
-        >
-          Smart Watch Accessories
-        </a>
-        <svg
-          aria-hidden="true"
-          class="icon icon--chevron-right-12"
-          focusable="false"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use
-            xlink:href="#icon-chevron-right-12"
-          />
-        </svg>
-      </li>
-      <li>
-        <a
-          aria-current="location"
-          href="https://www.ebay.com/b/Smart-Watch-Bands/182068/bn_16565906"
-        >
-          Smart Watch Bands
-        </a>
-      </li>
-    </ul>
-  </nav>
-</DocumentFragment>
-`;
-
-exports[`Storyshots ebay-breadcrumb custom props 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-breadcrumbs Custom Props 1`] = `
 <DocumentFragment>
   <nav
     aria-labelledby="ebay-breadcrumb-breadcrumbs-heading"
@@ -236,7 +158,7 @@ exports[`Storyshots ebay-breadcrumb custom props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-breadcrumb default 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-breadcrumbs Default 1`] = `
 <DocumentFragment>
   <nav
     aria-labelledby="ebay-breadcrumb-breadcrumbs-heading"
@@ -304,6 +226,84 @@ exports[`Storyshots ebay-breadcrumb default 1`] = `
       <li>
         <a
           aria-current="location"
+        >
+          Smart Watch Bands
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`Storyshots navigation & disclosure/ebay-breadcrumbs all links 1`] = `
+<DocumentFragment>
+  <nav
+    aria-labelledby="ebay-breadcrumb-breadcrumbs-heading"
+    class="breadcrumbs"
+    role="navigation"
+  >
+    <h3
+      class="clipped"
+      id="ebay-breadcrumb-breadcrumbs-heading"
+    >
+      Custom page navigation
+    </h3>
+    <ul>
+      <li>
+        <a
+          href="https://www.ebay.com/"
+        >
+          eBay
+        </a>
+        <svg
+          aria-hidden="true"
+          class="icon icon--chevron-right-12"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-chevron-right-12"
+          />
+        </svg>
+      </li>
+      <li>
+        <a
+          href="https://www.ebay.com/rpp/cell-phone-pda"
+        >
+          Cell Phones, Smart Watches & Accessories
+        </a>
+        <svg
+          aria-hidden="true"
+          class="icon icon--chevron-right-12"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-chevron-right-12"
+          />
+        </svg>
+      </li>
+      <li>
+        <a
+          href="https://www.ebay.com/b/Smart-Watch-Accessories/182064/bn_16565905"
+        >
+          Smart Watch Accessories
+        </a>
+        <svg
+          aria-hidden="true"
+          class="icon icon--chevron-right-12"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use
+            xlink:href="#icon-chevron-right-12"
+          />
+        </svg>
+      </li>
+      <li>
+        <a
+          aria-current="location"
+          href="https://www.ebay.com/b/Smart-Watch-Bands/182068/bn_16565906"
         >
           Smart Watch Bands
         </a>

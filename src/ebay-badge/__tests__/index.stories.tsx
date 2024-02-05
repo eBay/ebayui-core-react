@@ -1,20 +1,31 @@
-import React from 'react'
+import { Meta, StoryObj } from '@storybook/react'
 import { EbayBadge } from '../index'
+import { EbayBadgeProps } from '../badge'
 
-
-export default {
+const meta: Meta<typeof EbayBadge> = {
     component: EbayBadge,
-    title: 'ebay-badge'
-};
+    title: 'graphics & icons/ebay-badge'
+}
 
-export const Default = () => (<>
-    <EbayBadge aria-label="1 unread item" number={1} />
-</>)
+export default meta
 
-export const Zero = () => (<>
-    <EbayBadge aria-label="0 unread items" number={0} />
-</>)
+export const Default: StoryObj<EbayBadgeProps> = {
+    args: {
+        "aria-label": "1 unread item",
+        number: 1
+    }
+}
 
-export const BigNumbers = () => (<>
-    <EbayBadge aria-label="120 unread items" number={120} />
-</>)
+export const Zero: StoryObj<EbayBadgeProps> = {
+    args: {
+        "aria-label": "0 unread items",
+        number: 0
+    }
+}
+
+export const BigNumbers: StoryObj<EbayBadgeProps> = {
+    args: {
+        "aria-label": "120 unread items",
+        number: 120
+    }
+}

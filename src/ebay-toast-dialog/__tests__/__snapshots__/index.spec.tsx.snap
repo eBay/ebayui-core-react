@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-toast-dialog AlwaysOpened 1`] = `
+exports[`Storyshots dialogs/ebay-toast-dialog AlwaysOpened 1`] = `
 <DocumentFragment>
   <aside
     aria-labelledby="dialog-title-abc123"
@@ -83,7 +83,7 @@ exports[`Storyshots ebay-toast-dialog AlwaysOpened 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-toast-dialog Default 1`] = `
+exports[`Storyshots dialogs/ebay-toast-dialog Default 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -172,7 +172,7 @@ exports[`Storyshots ebay-toast-dialog Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-toast-dialog WithAnimation 1`] = `
+exports[`Storyshots dialogs/ebay-toast-dialog WithAnimation 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"

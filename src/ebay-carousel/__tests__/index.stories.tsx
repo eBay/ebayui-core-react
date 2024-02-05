@@ -1,10 +1,10 @@
 import React from 'react'
-import { ComponentMeta, Story } from '@storybook/react'
-import { EbayCarousel, EbayCarouselItem, CarouselProps } from '../index';
+import { Meta, Story } from '@storybook/react'
+import { EbayCarousel, EbayCarouselItem } from '../index';
 
-const story: ComponentMeta<typeof EbayCarousel> = {
+const story = {
   component: EbayCarousel,
-  title:'ebay-carousel',
+  title: 'navigation & disclosure/ebay-carousel',
     argTypes: {
         gap: {
             control: { type: 'number' },
@@ -29,7 +29,7 @@ const story: ComponentMeta<typeof EbayCarousel> = {
         onNext: { action: 'onNext'},
         onScroll: { action: 'onScroll'}
     },
-};
+} as Meta<typeof EbayCarousel>;
 
 const items = Array(10).fill(0).map((_, i) => (
     <EbayCarouselItem style={{
@@ -46,26 +46,16 @@ const items = Array(10).fill(0).map((_, i) => (
     </EbayCarouselItem>
 ))
 
-export const Continuous = (args) => {
-  return (
+export const Continuous: Story<typeof EbayCarousel> = (args) => (
     <EbayCarousel {...args}>
         {items}
     </EbayCarousel>
-  );
-};
+)
 
-const _ItemsPerSlide: Story<CarouselProps> = (args) => {
-    return (
-        <EbayCarousel gap={16} {...args}>
-            {items}
-        </EbayCarousel>
-    );
-};
-
-export const ItemsPerSlide = _ItemsPerSlide.bind({})
-ItemsPerSlide.args = {
-    itemsPerSlide: 3
-}
-
+export const _ItemsPerSlide: Story<typeof EbayCarousel> = (args) => (
+    <EbayCarousel gap={16} {...args} itemsPerSlide={3}>
+        {items}
+    </EbayCarousel>
+)
 
 export default story;

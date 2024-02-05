@@ -1,13 +1,17 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayButton, EbayButtonCell } from '../index'
 import EbayIcon from '../../ebay-icon/icon'
 
-export default {
-    title: 'ebay-button'
+const meta: Meta<typeof EbayButton> = {
+    component: EbayButton,
+    title: 'buttons/ebay-button'
 }
 
-export const Default = () => (
+export default meta
+
+export const Default: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton
@@ -26,7 +30,7 @@ export const Default = () => (
     </>
 )
 
-export const Size = () => (
+export const Size: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton size="large">Large Button</EbayButton>
@@ -47,7 +51,7 @@ export const Size = () => (
     </>
 )
 
-export const Priority = () => (
+export const Priority: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton priority="primary">Primary Button</EbayButton>
@@ -85,7 +89,7 @@ export const Priority = () => (
     </>
 )
 
-export const DestructiveVariant = () => (
+export const DestructiveVariant: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton priority="primary" variant="destructive">
@@ -120,11 +124,7 @@ export const DestructiveVariant = () => (
     </>
 )
 
-DestructiveVariant.story = {
-    name: 'Destructive variant'
-}
-
-export const Fluid = () => (
+export const Fluid: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton priority="primary" fluid>
@@ -142,7 +142,7 @@ export const Fluid = () => (
     </>
 )
 
-export const WithIcon = () => (
+export const WithIcon: Story<typeof EbayButton> = () => (
     <>
         <p>
             Form button:
@@ -179,11 +179,7 @@ export const WithIcon = () => (
     </>
 )
 
-WithIcon.story = {
-    name: 'With icon'
-}
-
-export const IconOnly = () => (
+export const IconOnly: Story<typeof EbayButton> = () => (
     <>
         <p>
             Form button:
@@ -209,7 +205,7 @@ export const IconOnly = () => (
     </>
 )
 
-export const Transparent = () => (
+export const Transparent: Story<typeof EbayButton> = () => (
     <div style={{ background: 'rgba(66, 214, 205, 0.5)' }}>
         <p>
             <EbayButton>Default Button</EbayButton>
@@ -230,7 +226,7 @@ export const Transparent = () => (
     </div>
 )
 
-export const Disabled = () => (
+export const Disabled: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton priority="primary" disabled>
@@ -248,17 +244,13 @@ export const Disabled = () => (
     </>
 )
 
-export const PartiallyDisabledButton = () => (
+export const PartiallyDisabledButton: Story<typeof EbayButton> = () => (
     <EbayButton priority="primary" partiallyDisabled>
         Hello, I am a button!
     </EbayButton>
 )
 
-PartiallyDisabledButton.story = {
-    name: 'Partially disabled Button'
-}
-
-export const Truncated = () => (
+export const Truncated: Story<typeof EbayButton> = () => (
     <div>
         <p>
             <EbayButton truncate style={{ maxWidth: '200px' }}>
@@ -278,7 +270,7 @@ export const Truncated = () => (
     </div>
 )
 
-export const FlexButton = () => (
+export const FlexButton: Story<typeof EbayButton> = () => (
     <EbayButton priority="primary" fluid>
         <EbayButtonCell style={{ justifyContent: 'space-between' }}>
             <span>Select</span>
@@ -290,7 +282,7 @@ export const FlexButton = () => (
     </EbayButton>
 )
 
-export const LoadingButton = () => (
+export const LoadingButton: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton bodyState="loading" />
@@ -310,11 +302,7 @@ export const LoadingButton = () => (
     </>
 )
 
-LoadingButton.story = {
-    name: 'Loading button'
-}
-
-export const ExpandButton = () => (
+export const ExpandButton: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton priority="primary" bodyState="expand">
@@ -347,11 +335,7 @@ export const ExpandButton = () => (
     </>
 )
 
-ExpandButton.story = {
-    name: 'Expand button'
-}
-
-export const SplitButton = () => (
+export const SplitButton: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton priority="primary" split="start">
@@ -392,11 +376,7 @@ export const SplitButton = () => (
     </>
 )
 
-SplitButton.story = {
-    name: 'Split button'
-}
-
-export const FormButton = () => (
+export const FormButton: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton variant="form">Form button</EbayButton>
@@ -404,11 +384,7 @@ export const FormButton = () => (
     </>
 )
 
-FormButton.story = {
-    name: 'Form button'
-}
-
-export const BorderlessButton = () => (
+export const BorderlessButton: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton borderless>Borderless button</EbayButton>
@@ -416,11 +392,7 @@ export const BorderlessButton = () => (
     </>
 )
 
-BorderlessButton.story = {
-    name: 'Borderless button'
-}
-
-export const FixedHeight = () => (
+export const FixedHeight: Story<typeof EbayButton> = () => (
     <>
         <p>
             <EbayButton fixedHeight>Fixed height button</EbayButton>
@@ -432,7 +404,3 @@ export const FixedHeight = () => (
         </p>
     </>
 )
-
-FixedHeight.story = {
-    name: 'Fixed height'
-}

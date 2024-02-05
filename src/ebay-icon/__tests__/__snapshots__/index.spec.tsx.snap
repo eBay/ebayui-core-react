@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-icon All Icons 1`] = `
+exports[`Storyshots graphics & icons/ebay-icon All Icons 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -11586,7 +11586,7 @@ exports[`Storyshots ebay-icon All Icons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon Custom Color 1`] = `
+exports[`Storyshots graphics & icons/ebay-icon Custom Color 1`] = `
 <DocumentFragment>
   <div>
     <style>
@@ -11650,7 +11650,7 @@ exports[`Storyshots ebay-icon Custom Color 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon Non Decorative 1`] = `
+exports[`Storyshots graphics & icons/ebay-icon Non Decorative 1`] = `
 <DocumentFragment>
   <div>
     <svg

@@ -9,7 +9,7 @@ import {
 import { action } from '../../../.storybook/action'
 
 export default {
-    title: 'ebay-page-notice'
+    title: 'notices & tips/ebay-page-notice'
 }
 
 export const SimpleUsage = () => (

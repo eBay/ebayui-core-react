@@ -13,8 +13,8 @@ Item.displayName = 'Item'
 Item.toString = () => 'Item'
 
 export default {
-    title: 'ebay-split-button'
-} 
+    title: 'buttons/ebay-split-button'
+}
 
 export const Controls = (args) => (
     <EbaySplitButton {...args}>

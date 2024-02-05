@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-section-title Default 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-section-title Default 1`] = `
 <div
   className="section-title"
 >
@@ -16,7 +16,7 @@ exports[`Storyshots ebay-section-title Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-section-title With CTA 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-section-title With CTA 1`] = `
 [
   <div
     className="section-title"
@@ -63,7 +63,7 @@ exports[`Storyshots ebay-section-title With CTA 1`] = `
 ]
 `;
 
-exports[`Storyshots ebay-section-title With Info 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-section-title With Info 1`] = `
 <div
   className="section-title"
 >
@@ -164,7 +164,7 @@ exports[`Storyshots ebay-section-title With Info 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-section-title With Subtitle 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-section-title With Subtitle 1`] = `
 <div
   className="section-title"
 >
@@ -185,7 +185,7 @@ exports[`Storyshots ebay-section-title With Subtitle 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-section-title With Title But W/O Subtitle 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-section-title With Title But W/O Subtitle 1`] = `
 <div
   className="section-title"
 >

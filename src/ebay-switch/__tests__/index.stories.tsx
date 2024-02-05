@@ -3,7 +3,7 @@ import { action } from '../../../.storybook/action'
 import { EbaySwitch } from '../index'
 
 export default {
-    title: 'ebay-switch'
+    title: 'form input/ebay-switch'
 }
 
 export const DefaultSwitchButton = () => (

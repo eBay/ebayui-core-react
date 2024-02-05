@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-icon-button Default 1`] = `
+exports[`Storyshots buttons/ebay-icon-button Default 1`] = `
 <DocumentFragment>
   <p>
     <button
@@ -41,7 +41,7 @@ exports[`Storyshots ebay-icon-button Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon-button Transparent 1`] = `
+exports[`Storyshots buttons/ebay-icon-button Transparent 1`] = `
 <DocumentFragment>
   <p>
     <button
@@ -64,7 +64,7 @@ exports[`Storyshots ebay-icon-button Transparent 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-icon-button With Badges 1`] = `
+exports[`Storyshots buttons/ebay-icon-button With Badges 1`] = `
 <DocumentFragment>
   <p>
     <button

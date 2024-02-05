@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-select Basic 1`] = `
+exports[`Storyshots form input/ebay-select Basic 1`] = `
 <DocumentFragment>
   <span
     class="select"
@@ -40,7 +40,7 @@ exports[`Storyshots ebay-select Basic 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Borderless select 1`] = `
+exports[`Storyshots form input/ebay-select Borderless select 1`] = `
 <DocumentFragment>
   <span
     class="select select--borderless"
@@ -80,7 +80,7 @@ exports[`Storyshots ebay-select Borderless select 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Controlled component 1`] = `
+exports[`Storyshots form input/ebay-select Controlled component 1`] = `
 <DocumentFragment>
   <div
     style="width: 500px;"
@@ -146,7 +146,7 @@ exports[`Storyshots ebay-select Controlled component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Disabled select 1`] = `
+exports[`Storyshots form input/ebay-select Disabled select 1`] = `
 <DocumentFragment>
   <span
     class="select customclass"
@@ -182,7 +182,7 @@ exports[`Storyshots ebay-select Disabled select 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Floating label 1`] = `
+exports[`Storyshots form input/ebay-select Floating label 1`] = `
 <DocumentFragment>
   <span
     class="floating-label"
@@ -234,7 +234,7 @@ exports[`Storyshots ebay-select Floating label 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Grouped options 1`] = `
+exports[`Storyshots form input/ebay-select Grouped options 1`] = `
 <DocumentFragment>
   <span
     class="select"
@@ -331,7 +331,7 @@ exports[`Storyshots ebay-select Grouped options 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Invalid floating label select 1`] = `
+exports[`Storyshots form input/ebay-select Invalid floating label select 1`] = `
 <DocumentFragment>
   <span
     class="floating-label"
@@ -382,7 +382,7 @@ exports[`Storyshots ebay-select Invalid floating label select 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Invalid select 1`] = `
+exports[`Storyshots form input/ebay-select Invalid select 1`] = `
 <DocumentFragment>
   <span
     class="select"
@@ -424,7 +424,7 @@ exports[`Storyshots ebay-select Invalid select 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Large Select 1`] = `
+exports[`Storyshots form input/ebay-select Large Select 1`] = `
 <DocumentFragment>
   <span
     class="floating-label floating-label--large"
@@ -476,7 +476,7 @@ exports[`Storyshots ebay-select Large Select 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Options class 1`] = `
+exports[`Storyshots form input/ebay-select Options class 1`] = `
 <DocumentFragment>
   <span
     class="select"
@@ -516,7 +516,7 @@ exports[`Storyshots ebay-select Options class 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-select Uncontrolled component with defaultValue 1`] = `
+exports[`Storyshots form input/ebay-select Uncontrolled component with defaultValue 1`] = `
 <DocumentFragment>
   <span
     class="select"

@@ -3,7 +3,7 @@ import { EbayButton } from '../../ebay-button'
 import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '../index'
 
 export default {
-    title: 'ebay-snackbar-dialog'
+    title: 'dialogs/ebay-snackbar-dialog'
 }
 
 export const Default = () => {

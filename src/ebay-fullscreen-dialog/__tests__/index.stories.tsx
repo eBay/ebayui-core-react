@@ -5,7 +5,7 @@ import { action } from '../../../.storybook/action'
 
 const story: any = {
   component: EbayFullscreenDialog,
-  title:'ebay-fullscreen-dialog'
+  title: 'dialogs/ebay-fullscreen-dialog'
 };
 
 export const _Default = () => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-confirm-dialog Default 1`] = `
+exports[`Storyshots dialogs/ebay-confirm-dialog Default 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -90,7 +90,7 @@ exports[`Storyshots ebay-confirm-dialog Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-confirm-dialog With Animation 1`] = `
+exports[`Storyshots dialogs/ebay-confirm-dialog With Animation 1`] = `
 <DocumentFragment>
   <div>
     <button

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-page-notice Attention message 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Attention message 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="attention-status"
@@ -58,7 +58,7 @@ exports[`Storyshots ebay-page-notice Attention message 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-page-notice Confirmation message 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Confirmation message 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="confirmation-status"
@@ -103,7 +103,7 @@ exports[`Storyshots ebay-page-notice Confirmation message 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-page-notice Dismissible message with CTA 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Dismissible message with CTA 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="information-status"
@@ -170,7 +170,7 @@ exports[`Storyshots ebay-page-notice Dismissible message with CTA 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-page-notice Dismissible notice 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Dismissible notice 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="information-status"
@@ -234,7 +234,7 @@ exports[`Storyshots ebay-page-notice Dismissible notice 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-page-notice Information message 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Information message 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="information-status"
@@ -279,7 +279,7 @@ exports[`Storyshots ebay-page-notice Information message 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-page-notice Message with footer 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Message with footer 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="confirmation-status"
@@ -327,7 +327,7 @@ exports[`Storyshots ebay-page-notice Message with footer 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-page-notice Simple usage 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Simple usage 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="general-status"
@@ -343,7 +343,7 @@ exports[`Storyshots ebay-page-notice Simple usage 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-page-notice Simple usage with id 1`] = `
+exports[`Storyshots notices & tips/ebay-page-notice Simple usage with id 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="main-page-notice"

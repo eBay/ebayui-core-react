@@ -1,13 +1,17 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 
 import { EbayBreadcrumbs, EbayBreadcrumbItem as Item } from '../index'
 
-export default {
-    title: 'ebay-breadcrumb'
+const meta: Meta<typeof EbayBreadcrumbs> = {
+    component: EbayBreadcrumbs,
+    title: 'navigation & disclosure/ebay-breadcrumbs'
 }
 
-export const Default = () => (
+export default meta
+
+export const Default: Story<typeof EbayBreadcrumbs> = () => (
     <>
         <EbayBreadcrumbs onSelect={(e, { el }) => action('select')(e, { el })}>
             <Item href="https://www.ebay.com/">eBay</Item>
@@ -22,11 +26,7 @@ export const Default = () => (
     </>
 )
 
-Default.story = {
-    name: 'default'
-}
-
-export const AllLinks = () => (
+export const AllLinks: Story<typeof EbayBreadcrumbs> = () => (
     <>
         <EbayBreadcrumbs a11yHeadingText="Custom page navigation" a11yHeadingTag="h3">
             <Item href="https://www.ebay.com/">eBay</Item>
@@ -74,11 +74,7 @@ export const CustomProps = () => (
     </>
 )
 
-CustomProps.story = {
-    name: 'custom props'
-}
-
-export const AllButtons = () => (
+export const AllButtons: Story<typeof EbayBreadcrumbs> = () => (
     <>
         <EbayBreadcrumbs
             a11yHeadingText="Custom page navigation"
@@ -96,7 +92,3 @@ export const AllButtons = () => (
         </EbayBreadcrumbs>
     </>
 )
-
-AllButtons.story = {
-    name: 'all buttons'
-}

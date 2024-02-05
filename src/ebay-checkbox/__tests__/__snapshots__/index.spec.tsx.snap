@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-checkbox Control value from outside 1`] = `
+exports[`Storyshots form input/ebay-checkbox Control Value From Outside 1`] = `
 <DocumentFragment>
   <span
     class="checkbox custom"
@@ -48,7 +48,7 @@ exports[`Storyshots ebay-checkbox Control value from outside 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
+exports[`Storyshots form input/ebay-checkbox Default Checkbox Button 1`] = `
 <DocumentFragment>
   <p>
     <span
@@ -141,7 +141,7 @@ exports[`Storyshots ebay-checkbox Default checkbox-button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
+exports[`Storyshots form input/ebay-checkbox Disabled Checkbox Button 1`] = `
 <DocumentFragment>
   <p>
     <span
@@ -236,7 +236,7 @@ exports[`Storyshots ebay-checkbox Disabled checkbox-button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-checkbox Grouped checkbox-buttons 1`] = `
+exports[`Storyshots form input/ebay-checkbox Grouped Checkbox Buttons 1`] = `
 <DocumentFragment>
   <fieldset>
     <legend>
@@ -387,7 +387,7 @@ exports[`Storyshots ebay-checkbox Grouped checkbox-buttons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
+exports[`Storyshots form input/ebay-checkbox Selected Checkbox Button 1`] = `
 <DocumentFragment>
   <p>
     <span
@@ -482,7 +482,7 @@ exports[`Storyshots ebay-checkbox Selected checkbox-button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-checkbox Styled checkbox-button 1`] = `
+exports[`Storyshots form input/ebay-checkbox Styled Checkbox Button 1`] = `
 <DocumentFragment>
   <span
     class="checkbox"

@@ -1,17 +1,20 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import {
     EbayFakeMenu,
     EbayFakeMenuItem as Item,
     EbayFakeMenuSeparator as Separator
 } from '../index'
-import { EbayMenu } from '../../ebay-menu'
 
-export default {
-    title: 'ebay-fake-menu'
+const meta: Meta<typeof EbayFakeMenu> = {
+    component: EbayFakeMenu,
+    title: 'building blocks/ebay-fake-menu'
 }
 
-export const Default = () => (
+export default meta
+
+export const Default: Story<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu
             onClick={(event) => {
@@ -41,7 +44,7 @@ export const Default = () => (
     </>
 )
 
-export const WithoutTickIcon = () => (
+export const WithoutTickIcon: Story<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu
             itemMatchesUrl={false}
@@ -72,11 +75,7 @@ export const WithoutTickIcon = () => (
     </>
 )
 
-WithoutTickIcon.story = {
-    name: 'Without tick icon'
-}
-
-export const WithSeparator = () => (
+export const WithSeparator: Story<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
@@ -89,7 +88,7 @@ export const WithSeparator = () => (
     </>
 )
 
-export const WithDisabledItem = () => (
+export const WithDisabledItem: Story<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
@@ -100,7 +99,7 @@ export const WithDisabledItem = () => (
     </>
 )
 
-export const MixedWithButtons = () => (
+export const MixedWithButtons: Story<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="#">Link 1</Item>
@@ -111,7 +110,7 @@ export const MixedWithButtons = () => (
     </>
 )
 
-export const WithBadges = () => (
+export const WithBadges: Story<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="" badgeNumber={5} badgeAriaLabel="item 1 (5 unread items)">

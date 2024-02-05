@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
+import { Meta, Story } from '@storybook/react'
 import { EbayAlertDialog } from '../index';
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 import { action } from '../../../.storybook/action'
 
-const story: any = {
+const story = {
     component: EbayAlertDialog,
-    title: 'ebay-alert-dialog'
-};
+    title: 'dialogs/ebay-alert-dialog'
+} satisfies Meta<typeof EbayAlertDialog>;
 
 const textParagraph = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -14,7 +15,7 @@ const textParagraph = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
     fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
     deserunt mollit anim id est laborum.</p>
 
-export const _Default = () => {
+export const _Default: Story<typeof EbayAlertDialog> = () => {
     const [open, setOpen] = useState(true);
     const close = () => setOpen(false);
     return (
@@ -41,9 +42,9 @@ export const _Default = () => {
     );
 };
 
-export const _WithAnimation= () => {
-    const [open, setOpen] = useState(false);
-    const close = () => setOpen(false);
+export const _WithAnimation: Story<typeof EbayAlertDialog> = () => {
+    const [open, setOpen] = useState(false)
+    const close = () => setOpen(false)
     return (
         <div>
             <button className="btn btn--secondary" onClick={() => setOpen(!open)}>
@@ -54,10 +55,10 @@ export const _WithAnimation= () => {
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p><a href="http://www.ebay.com">www.ebay.com</a></p>
-             </EbayAlertDialog>
+            </EbayAlertDialog>
         </div>
-    );
+    )
 };
 
 
-export default story;
+export default story

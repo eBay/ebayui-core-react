@@ -5,7 +5,7 @@ import { EbayToast } from '../index'
 import { action } from '../../../.storybook/action'
 
 export default {
-    title: 'ebay-toast-dialog'
+    title: 'dialogs/ebay-toast-dialog'
 }
 
 export const Default = () => {

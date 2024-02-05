@@ -9,7 +9,7 @@ import { PlayEventProps, VolumeChangeProps } from '../video'
 
 export default {
     component: EbayVideo,
-    title: 'ebay-video'
+    title: 'media/ebay-video'
 } as Meta;
 
 const defaultProps: EbayVideoProps = {

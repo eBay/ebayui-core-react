@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-progress-bar Custom Max 1`] = `
+exports[`Storyshots progress/ebay-progress-bar Custom Max 1`] = `
 [
   <p>
     50/200
@@ -23,7 +23,7 @@ exports[`Storyshots ebay-progress-bar Custom Max 1`] = `
 ]
 `;
 
-exports[`Storyshots ebay-progress-bar Default 1`] = `
+exports[`Storyshots progress/ebay-progress-bar Default 1`] = `
 [
   <p>
     0%
@@ -55,7 +55,7 @@ exports[`Storyshots ebay-progress-bar Default 1`] = `
 ]
 `;
 
-exports[`Storyshots ebay-progress-bar Fluid 1`] = `
+exports[`Storyshots progress/ebay-progress-bar Fluid 1`] = `
 <p>
   <progress
     className="progress-bar progress-bar--fluid"

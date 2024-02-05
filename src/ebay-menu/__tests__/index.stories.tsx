@@ -5,7 +5,7 @@ import { EbayTab, EbayTabPanel, EbayTabs } from '../../ebay-tabs'
 import { EbayMenu, EbayMenuItem as Item, EbayMenuSeparator as Separator } from '../index'
 
 export default {
-    title: 'ebay-menu'
+    title: 'building blocks/ebay-menu'
 }
 
 export const Default = () => (

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-lightbox-dialog Always Opened 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog Always Opened 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -90,7 +90,7 @@ exports[`Storyshots ebay-lightbox-dialog Always Opened 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog Default 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog Default 1`] = `
 <DocumentFragment>
   <div>
     <button
@@ -172,7 +172,7 @@ exports[`Storyshots ebay-lightbox-dialog Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog Disable Dialog Close 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog Disable Dialog Close 1`] = `
 <DocumentFragment>
   <div>
     <button
@@ -299,7 +299,7 @@ exports[`Storyshots ebay-lightbox-dialog Disable Dialog Close 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog Mini Dialog 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog Mini Dialog 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -380,7 +380,7 @@ exports[`Storyshots ebay-lightbox-dialog Mini Dialog 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog Scrolling Content 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog Scrolling Content 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -497,7 +497,7 @@ exports[`Storyshots ebay-lightbox-dialog Scrolling Content 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog With Animation 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog With Animation 1`] = `
 <DocumentFragment>
   <div>
     <button
@@ -579,7 +579,7 @@ exports[`Storyshots ebay-lightbox-dialog With Animation 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog With No Background Click 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog With No Background Click 1`] = `
 <DocumentFragment>
   <div>
     <button
@@ -645,7 +645,7 @@ exports[`Storyshots ebay-lightbox-dialog With No Background Click 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog With Previous Button 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog With Previous Button 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -751,7 +751,7 @@ exports[`Storyshots ebay-lightbox-dialog With Previous Button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-lightbox-dialog With Wide Size 1`] = `
+exports[`Storyshots dialogs/ebay-lightbox-dialog With Wide Size 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"

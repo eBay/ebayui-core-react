@@ -5,7 +5,7 @@ import { EbayButton } from '../../ebay-button'
 import { EbayLightboxDialog } from '../../ebay-lightbox-dialog'
 
 export default {
-    title: 'ebay-pagination'
+    title: 'navigation & disclosure/ebay-pagination'
 }
 
 export const BasicLinks = () => (

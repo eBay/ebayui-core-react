@@ -6,6 +6,7 @@ import { EbaySvg } from '../src/ebay-svg'
 
 import "@ebay/skin"
 import "@ebay/skin/tokens"
+import "@ebay/skin/marketsans"
 
 export const decorators = [
     withA11y,
@@ -18,3 +19,23 @@ export const decorators = [
         </>
     )
 ]
+
+export const parameters = {
+    layout: "centered",
+    controls: { expanded: true },
+    options: {
+        storySort: {
+            order: [
+                "buttons",
+                "dialogs",
+                "form input",
+                "graphics & icons",
+                "media",
+                "navigation & disclosure",
+                "notices & tips",
+                "progress",
+                "building blocks",
+            ],
+        },
+    },
+};

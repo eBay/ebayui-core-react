@@ -5,7 +5,7 @@ import { action } from '../../../.storybook/action'
 
 const story: any = {
     component: EbayPanelDialog,
-    title: 'ebay-panel-dialog'
+    title: 'dialogs/ebay-panel-dialog'
 };
 
 const textParagraph = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
