@@ -1,6 +1,6 @@
 module.exports = {
     stories: ['../src/**/__tests__/*.stories.tsx'],
-    addons: ['@storybook/addon-essentials', '@storybook/addon-knobs', 'storybook-addon-jsx', '@storybook/addon-a11y'],
+    addons: ['@storybook/addon-essentials', 'storybook-addon-jsx', '@storybook/addon-a11y'],
     webpackFinal: async config => {
         config.module.rules.push({
             test: /\.(ts|tsx)$/,
