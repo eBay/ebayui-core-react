@@ -4,7 +4,7 @@ import { EbayButton } from '../../ebay-button'
 import { EbayInlineNotice, EbayNoticeContent } from '../index'
 
 export default {
-    title: 'ebay-inline-notice'
+    title: 'notices & tips/ebay-inline-notice'
 }
 
 export const Default = () => (

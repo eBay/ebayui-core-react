@@ -6,7 +6,7 @@ import StateFullTest from './statefull-test'
 import { ChangeEventProps } from '../listbox-button'
 
 export default {
-    title: 'ebay-listbox-button'
+    title: 'buttons/ebay-listbox-button'
 }
 
 export const Default = () => (

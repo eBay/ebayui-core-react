@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-progress-spinner Default, Small & Large 1`] = `
+exports[`Storyshots progress/ebay-progress-spinner Default, Small & Large 1`] = `
 [
   <p>
     <span

@@ -8,7 +8,7 @@ import {
 } from '../index'
 
 export default {
-    title: 'ebay-section-title'
+    title: 'navigation & disclosure/ebay-section-title'
 }
 
 export const Default = () => (

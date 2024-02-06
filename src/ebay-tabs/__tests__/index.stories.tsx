@@ -4,7 +4,7 @@ import { action } from '../../../.storybook/action'
 import { EbayTabs, EbayTab as Tab, EbayTabPanel as Panel } from '../index'
 
 export default {
-    title: 'ebay-tabs'
+    title: 'navigation & disclosure/ebay-tabs'
 }
 
 export const DefaultTabs = () => (

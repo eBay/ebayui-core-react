@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-date-textbox Collpase On Select 1`] = `
+exports[`Storyshots form input/ebay-date-textbox Collpase On Select 1`] = `
 <DocumentFragment>
   <span
     class="date-textbox"
@@ -468,7 +468,7 @@ exports[`Storyshots ebay-date-textbox Collpase On Select 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-date-textbox Controlled Values 1`] = `
+exports[`Storyshots form input/ebay-date-textbox Controlled Values 1`] = `
 <DocumentFragment>
   <span
     class="date-textbox"
@@ -945,7 +945,7 @@ exports[`Storyshots ebay-date-textbox Controlled Values 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-date-textbox Default 1`] = `
+exports[`Storyshots form input/ebay-date-textbox Default 1`] = `
 <DocumentFragment>
   <span
     class="date-textbox"
@@ -1413,7 +1413,7 @@ exports[`Storyshots ebay-date-textbox Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-date-textbox Range 1`] = `
+exports[`Storyshots form input/ebay-date-textbox Range 1`] = `
 <DocumentFragment>
   <span
     class="date-textbox"

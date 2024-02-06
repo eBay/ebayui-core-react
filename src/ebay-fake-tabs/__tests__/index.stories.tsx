@@ -1,10 +1,13 @@
 import React from 'react'
+import { Meta } from '@storybook/react'
 
 import { EbayFakeTabs, EbayFakeTab as Tab } from '../index'
 
-export default {
-    title: 'ebay-fake-tabs'
+const meta: Meta<typeof EbayFakeTabs> = {
+    title: 'navigation & disclosure/ebay-fake-tabs'
 }
+
+export default meta
 
 export const DefaultTabs = () => (
     <>

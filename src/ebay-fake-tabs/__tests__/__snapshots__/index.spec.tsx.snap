@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-fake-tabs Default Tabs 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-fake-tabs Default Tabs 1`] = `
 <div
   className="fake-tabs"
 >
@@ -55,7 +55,7 @@ exports[`Storyshots ebay-fake-tabs Default Tabs 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-fake-tabs Pre-selected Tab 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-fake-tabs Pre-selected Tab 1`] = `
 <div
   className="fake-tabs"
 >
@@ -110,7 +110,7 @@ exports[`Storyshots ebay-fake-tabs Pre-selected Tab 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-fake-tabs tabMatchesCurrentUrl: false 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-fake-tabs tabMatchesCurrentUrl: false 1`] = `
 <div
   className="fake-tabs"
 >

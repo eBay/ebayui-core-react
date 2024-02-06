@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-split-button Controls 1`] = `
+exports[`Storyshots buttons/ebay-split-button Controls 1`] = `
 <DocumentFragment>
   <span
     class="split-button"
@@ -35,7 +35,7 @@ exports[`Storyshots ebay-split-button Controls 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-split-button Default 1`] = `
+exports[`Storyshots buttons/ebay-split-button Default 1`] = `
 <DocumentFragment>
   <p>
     <span
@@ -139,7 +139,7 @@ exports[`Storyshots ebay-split-button Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-split-button Disabled 1`] = `
+exports[`Storyshots buttons/ebay-split-button Disabled 1`] = `
 <DocumentFragment>
   <p>
     <span
@@ -179,7 +179,7 @@ exports[`Storyshots ebay-split-button Disabled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-split-button Loading 1`] = `
+exports[`Storyshots buttons/ebay-split-button Loading 1`] = `
 <DocumentFragment>
   <p>
     <span
@@ -217,7 +217,7 @@ exports[`Storyshots ebay-split-button Loading 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-split-button Size 1`] = `
+exports[`Storyshots buttons/ebay-split-button Size 1`] = `
 <DocumentFragment>
   <p>
     <span
@@ -321,7 +321,7 @@ exports[`Storyshots ebay-split-button Size 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-split-button Transparent 1`] = `
+exports[`Storyshots buttons/ebay-split-button Transparent 1`] = `
 <DocumentFragment>
   <div
     style="background: lightcyan; padding: 1em;"
@@ -396,7 +396,7 @@ exports[`Storyshots ebay-split-button Transparent 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-split-button Truncated 1`] = `
+exports[`Storyshots buttons/ebay-split-button Truncated 1`] = `
 <DocumentFragment>
   <p>
     <span

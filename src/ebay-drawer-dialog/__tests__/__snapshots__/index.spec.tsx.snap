@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-drawer-dialog Custom Focus 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Custom Focus 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -75,7 +75,7 @@ exports[`Storyshots ebay-drawer-dialog Custom Focus 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-drawer-dialog Default 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Default 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -141,7 +141,7 @@ exports[`Storyshots ebay-drawer-dialog Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-drawer-dialog Lots Of Content 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Lots Of Content 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -808,7 +808,7 @@ exports[`Storyshots ebay-drawer-dialog Lots Of Content 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-drawer-dialog Opened 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Opened 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -892,7 +892,7 @@ exports[`Storyshots ebay-drawer-dialog Opened 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-drawer-dialog Trigger Expanded 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Trigger Expanded 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -956,7 +956,7 @@ exports[`Storyshots ebay-drawer-dialog Trigger Expanded 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-drawer-dialog Without Animation 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Without Animation 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -966,7 +966,7 @@ exports[`Storyshots ebay-drawer-dialog Without Animation 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-drawer-dialog Without Handle 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Without Handle 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -1027,7 +1027,7 @@ exports[`Storyshots ebay-drawer-dialog Without Handle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-drawer-dialog Without Handle And Close Button 1`] = `
+exports[`Storyshots dialogs/ebay-drawer-dialog Without Handle And Close Button 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"

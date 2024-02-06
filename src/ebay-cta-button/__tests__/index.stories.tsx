@@ -1,11 +1,15 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import { EbayCtaButton } from '../index'
 
-export default {
-    title: 'ebay-cta-button'
+const meta: Meta<typeof EbayCtaButton> = {
+    component: EbayCtaButton,
+    title: 'buttons/ebay-cta-button'
 }
 
-export const Default = () => (
+export default meta
+
+export const Default: Story<typeof EbayCtaButton> = () => (
     <>
         <p>
             <EbayCtaButton href="https://ebay.com">Take Action Now!</EbayCtaButton>
@@ -13,7 +17,7 @@ export const Default = () => (
     </>
 )
 
-export const Large = () => (
+export const Large: Story<typeof EbayCtaButton> = () => (
     <>
         <p>
             <EbayCtaButton href="https://ebay.com" size="large">
@@ -23,7 +27,7 @@ export const Large = () => (
     </>
 )
 
-export const Fluid = () => (
+export const Fluid: Story<typeof EbayCtaButton> = () => (
     <>
         <p>
             <EbayCtaButton href="https://ebay.com" fluid>
@@ -38,7 +42,7 @@ export const Fluid = () => (
     </>
 )
 
-export const Truncated = () => (
+export const Truncated: Story<typeof EbayCtaButton> = () => (
     <div style={{ maxWidth: '200px' }}>
         <p>
             <EbayCtaButton href="https://ebay.com" truncate>

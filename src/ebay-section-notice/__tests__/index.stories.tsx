@@ -8,7 +8,7 @@ import {
 } from '../index'
 
 export default {
-    title: 'ebay-section-notice'
+    title: 'notices & tips/ebay-section-notice'
 }
 
 export const DefaultMessageWithNoAction = () => (

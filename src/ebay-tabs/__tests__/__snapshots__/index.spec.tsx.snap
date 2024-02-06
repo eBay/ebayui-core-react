@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-tabs Bottom Tabs on Long Page 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Bottom Tabs on Long Page 1`] = `
 <DocumentFragment>
   <p
     style="margin: 10em 0px;"
@@ -117,7 +117,7 @@ exports[`Storyshots ebay-tabs Bottom Tabs on Long Page 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Default Tabs 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Default Tabs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -242,7 +242,7 @@ exports[`Storyshots ebay-tabs Default Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Large Tabs 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Large Tabs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -367,7 +367,7 @@ exports[`Storyshots ebay-tabs Large Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Manually activated Tabs 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Manually activated Tabs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -501,7 +501,7 @@ exports[`Storyshots ebay-tabs Manually activated Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Multiple Tabs 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Multiple Tabs 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -718,7 +718,7 @@ exports[`Storyshots ebay-tabs Multiple Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Pre-selected Tab 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Pre-selected Tab 1`] = `
 <DocumentFragment>
   <div
     class="tabs"
@@ -843,7 +843,7 @@ exports[`Storyshots ebay-tabs Pre-selected Tab 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Programmatically selected Tabs 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Programmatically selected Tabs 1`] = `
 <DocumentFragment>
   <button>
     Select Tab 1
@@ -950,7 +950,7 @@ exports[`Storyshots ebay-tabs Programmatically selected Tabs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-tabs Tabs with inputs 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-tabs Tabs with inputs 1`] = `
 <DocumentFragment>
   <div
     class="tabs"

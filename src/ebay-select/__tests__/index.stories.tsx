@@ -4,7 +4,7 @@ import { EbayButton } from '../../ebay-button'
 import { EbaySelect, EbaySelectOption, ChangeEventProps } from '../index'
 
 export default {
-    title: 'ebay-select'
+    title: 'form input/ebay-select'
 }
 
 export const Basic = () => (

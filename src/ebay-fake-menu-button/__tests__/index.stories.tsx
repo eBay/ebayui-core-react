@@ -1,4 +1,5 @@
 import React from 'react'
+import { Meta, Story } from '@storybook/react'
 import { action } from '../../../.storybook/action'
 import { EbayIcon } from '../../ebay-icon'
 import {
@@ -8,11 +9,14 @@ import {
     EbayFakeMenuButtonLabel
 } from '../index'
 
-export default {
-    title: 'ebay-fake-menu-button'
+const meta: Meta<typeof EbayFakeMenuButton> = {
+    component: EbayFakeMenuButton,
+    title: 'buttons/ebay-fake-menu-button'
 }
 
-export const Default = () => (
+export default meta
+
+export const Default: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton
             text="eBay Menu"
@@ -35,7 +39,7 @@ export const Default = () => (
     </>
 )
 
-export const Expanded = () => (
+export const Expanded: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton expanded text="eBay Menu">
             <Item href="http://ebay.com">item 1 that has very long text</Item>
@@ -45,7 +49,7 @@ export const Expanded = () => (
     </>
 )
 
-export const Disabled = () => (
+export const Disabled: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton text="eBay Menu" disabled>
             <Item href="http://ebay.com">item 1 that has very long text</Item>
@@ -55,7 +59,7 @@ export const Disabled = () => (
     </>
 )
 
-export const WithIcon = () => (
+export const WithIcon: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton text="Settings">
             <EbayIcon name="settings16" />
@@ -66,11 +70,7 @@ export const WithIcon = () => (
     </>
 )
 
-WithIcon.story = {
-    name: 'With icon'
-}
-
-export const WithoutToggleIcon = () => (
+export const WithoutToggleIcon: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton noToggleIcon text="Menu">
             <Item href="http://ebay.com">item 1 that has very long text</Item>
@@ -80,11 +80,7 @@ export const WithoutToggleIcon = () => (
     </>
 )
 
-WithoutToggleIcon.story = {
-    name: 'Without toggle icon'
-}
-
-export const Variants = () => (
+export const Variants: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <h3>Button</h3>
         <EbayFakeMenuButton variant="button" text="Button" a11yText="Menu inside the form">
@@ -109,7 +105,7 @@ export const Variants = () => (
     </>
 )
 
-export const Priorities = () => (
+export const Priorities: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton variant="button" priority="primary" text="Primary" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
@@ -124,7 +120,7 @@ export const Priorities = () => (
     </>
 )
 
-export const Borderless = () => (
+export const Borderless: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton text="eBay Menu without borders!" borderless>
             <Item href="http://ebay.com">item 1</Item>
@@ -134,7 +130,7 @@ export const Borderless = () => (
     </>
 )
 
-export const WithCustomLabel = () => (
+export const WithCustomLabel: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton>
             <EbayFakeMenuButtonLabel>
@@ -157,7 +153,7 @@ export const WithCustomLabel = () => (
     </>
 )
 
-export const WithSeparator = () => (
+export const WithSeparator: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton
             text="Complex menu"
@@ -180,7 +176,7 @@ export const WithSeparator = () => (
     </>
 )
 
-export const FixedWidth = () => (
+export const FixedWidth: Story<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton text="Menu has a button width" fixWidth>
             <Item href="http://ebay.com">item 1 that has very very long text</Item>
@@ -190,7 +186,7 @@ export const FixedWidth = () => (
     </>
 )
 
-export const ReverseMenuGrowsToTheLeft = () => (
+export const ReverseMenuGrowsToTheLeft: Story<typeof EbayFakeMenuButton> = () => (
     <div style={{ marginLeft: '100px' }}>
         <EbayFakeMenuButton text="Menu grows to the left" reverse>
             <Item href="http://ebay.com">item 1 that has very very long text</Item>

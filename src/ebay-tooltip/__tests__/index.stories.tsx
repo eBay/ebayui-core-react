@@ -19,7 +19,7 @@ const allPointers: PointerDirection[] = [
 ]
 
 export default {
-    title: 'ebay-tooltip'
+    title: 'notices & tips/ebay-tooltip'
 }
 
 export const DefaultTooltip = () => (

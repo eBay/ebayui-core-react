@@ -8,7 +8,7 @@ import { action } from '../../../.storybook/action'
 
 const story: any = {
     component: EbayLightboxDialog,
-    title: 'ebay-lightbox-dialog'
+    title: 'dialogs/ebay-lightbox-dialog'
 };
 
 const textParagraph = <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

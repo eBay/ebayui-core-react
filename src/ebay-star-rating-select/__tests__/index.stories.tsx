@@ -5,7 +5,7 @@ import { IsolatedDefaultProps, FieldsetDefaultProps } from './mocks'
 
 export default {
     component: EbayStarRatingSelect,
-    title: 'ebay-star-rating-select',
+    title: 'form input/ebay-star-rating-select',
     argTypes: {
         disabled: {
             control: { type: 'boolean' },

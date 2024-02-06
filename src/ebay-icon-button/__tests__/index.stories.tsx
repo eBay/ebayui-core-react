@@ -3,7 +3,7 @@ import { action } from '../../../.storybook/action'
 import { EbayIconButton } from '../index'
 
 export default {
-    title: 'ebay-icon-button'
+    title: 'buttons/ebay-icon-button'
 }
 
 export const Default = () => (

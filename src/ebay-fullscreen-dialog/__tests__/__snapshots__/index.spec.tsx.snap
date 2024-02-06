@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-fullscreen-dialog Always Opened 1`] = `
+exports[`Storyshots dialogs/ebay-fullscreen-dialog Always Opened 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -95,7 +95,7 @@ exports[`Storyshots ebay-fullscreen-dialog Always Opened 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-fullscreen-dialog Default 1`] = `
+exports[`Storyshots dialogs/ebay-fullscreen-dialog Default 1`] = `
 <DocumentFragment>
   <div>
     <button
@@ -163,7 +163,7 @@ exports[`Storyshots ebay-fullscreen-dialog Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-fullscreen-dialog With Animation 1`] = `
+exports[`Storyshots dialogs/ebay-fullscreen-dialog With Animation 1`] = `
 <DocumentFragment>
   <div>
     <button

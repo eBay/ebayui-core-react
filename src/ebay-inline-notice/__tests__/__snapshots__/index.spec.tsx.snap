@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-inline-notice Attention message 1`] = `
+exports[`Storyshots notices & tips/ebay-inline-notice Attention message 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice inline-notice--attention"
@@ -31,7 +31,7 @@ exports[`Storyshots ebay-inline-notice Attention message 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-inline-notice Confirmation message 1`] = `
+exports[`Storyshots notices & tips/ebay-inline-notice Confirmation message 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice inline-notice--confirmation"
@@ -70,7 +70,7 @@ exports[`Storyshots ebay-inline-notice Confirmation message 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-inline-notice Default 1`] = `
+exports[`Storyshots notices & tips/ebay-inline-notice Default 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice"
@@ -86,7 +86,7 @@ exports[`Storyshots ebay-inline-notice Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-inline-notice Information message 1`] = `
+exports[`Storyshots notices & tips/ebay-inline-notice Information message 1`] = `
 <DocumentFragment>
   <div
     class="inline-notice inline-notice--information"
@@ -117,7 +117,7 @@ exports[`Storyshots ebay-inline-notice Information message 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-inline-notice Notice toggle 1`] = `
+exports[`Storyshots notices & tips/ebay-inline-notice Notice toggle 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"

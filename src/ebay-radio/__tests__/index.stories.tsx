@@ -5,7 +5,7 @@ import { EbayButton } from '../../ebay-button'
 import { EbayRadio } from '../index'
 
 export default {
-    title: 'ebay-radio'
+    title: 'form input/ebay-radio'
 }
 
 export const Default = () => (

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-cta-button Default 1`] = `
+exports[`Storyshots buttons/ebay-cta-button Default 1`] = `
 <DocumentFragment>
   <p>
     <a
@@ -29,7 +29,7 @@ exports[`Storyshots ebay-cta-button Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-cta-button Fluid 1`] = `
+exports[`Storyshots buttons/ebay-cta-button Fluid 1`] = `
 <DocumentFragment>
   <p>
     <a
@@ -82,7 +82,7 @@ exports[`Storyshots ebay-cta-button Fluid 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-cta-button Large 1`] = `
+exports[`Storyshots buttons/ebay-cta-button Large 1`] = `
 <DocumentFragment>
   <p>
     <a
@@ -111,7 +111,7 @@ exports[`Storyshots ebay-cta-button Large 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-cta-button Truncated 1`] = `
+exports[`Storyshots buttons/ebay-cta-button Truncated 1`] = `
 <DocumentFragment>
   <div
     style="max-width: 200px;"

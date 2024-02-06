@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-alert-dialog Default 1`] = `
+exports[`Storyshots dialogs/ebay-alert-dialog Default 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -92,7 +92,7 @@ exports[`Storyshots ebay-alert-dialog Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-alert-dialog With Animation 1`] = `
+exports[`Storyshots dialogs/ebay-alert-dialog With Animation 1`] = `
 <DocumentFragment>
   <div>
     <button

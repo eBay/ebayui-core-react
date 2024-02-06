@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-carousel Continuous 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-carousel Continuous 1`] = `
 <DocumentFragment>
   <div
     class="carousel"
@@ -124,7 +124,7 @@ exports[`Storyshots ebay-carousel Continuous 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-carousel Items Per Slide 1`] = `
+exports[`Storyshots navigation & disclosure/ebay-carousel Items Per Slide 1`] = `
 <DocumentFragment>
   <div
     class="carousel carousel--slides carousel--peek"

@@ -4,7 +4,7 @@ import { EbayStarRating } from '../'
 
 export default {
     component: EbayStarRating,
-    title: 'ebay-star-rating',
+    title: 'graphics & icons/ebay-star-rating',
     argTypes: {
         value: {
             control: { type: 'select' },

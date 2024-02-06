@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-switch Controlled switch-button 1`] = `
+exports[`Storyshots form input/ebay-switch Controlled switch-button 1`] = `
 <DocumentFragment>
   <span
     class="field"
@@ -30,7 +30,7 @@ exports[`Storyshots ebay-switch Controlled switch-button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-switch Default switch-button 1`] = `
+exports[`Storyshots form input/ebay-switch Default switch-button 1`] = `
 <DocumentFragment>
   <span
     class="field"
@@ -60,7 +60,7 @@ exports[`Storyshots ebay-switch Default switch-button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-switch Disabled switch-button 1`] = `
+exports[`Storyshots form input/ebay-switch Disabled switch-button 1`] = `
 <DocumentFragment>
   <span
     class="field"
@@ -91,7 +91,7 @@ exports[`Storyshots ebay-switch Disabled switch-button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-switch Selected switch-button 1`] = `
+exports[`Storyshots form input/ebay-switch Selected switch-button 1`] = `
 <DocumentFragment>
   <span
     class="field"

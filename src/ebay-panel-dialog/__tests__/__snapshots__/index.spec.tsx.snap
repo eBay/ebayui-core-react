@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-panel-dialog Always Opened 1`] = `
+exports[`Storyshots dialogs/ebay-panel-dialog Always Opened 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -91,7 +91,7 @@ exports[`Storyshots ebay-panel-dialog Always Opened 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-panel-dialog Custom Close Button 1`] = `
+exports[`Storyshots dialogs/ebay-panel-dialog Custom Close Button 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -166,7 +166,7 @@ exports[`Storyshots ebay-panel-dialog Custom Close Button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-panel-dialog Default 1`] = `
+exports[`Storyshots dialogs/ebay-panel-dialog Default 1`] = `
 <DocumentFragment>
   <div>
     <button
@@ -235,7 +235,7 @@ exports[`Storyshots ebay-panel-dialog Default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-panel-dialog From Right 1`] = `
+exports[`Storyshots dialogs/ebay-panel-dialog From Right 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -317,7 +317,7 @@ exports[`Storyshots ebay-panel-dialog From Right 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-panel-dialog With Animation 1`] = `
+exports[`Storyshots dialogs/ebay-panel-dialog With Animation 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"
@@ -384,7 +384,7 @@ exports[`Storyshots ebay-panel-dialog With Animation 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Storyshots ebay-panel-dialog With Animation From Right 1`] = `
+exports[`Storyshots dialogs/ebay-panel-dialog With Animation From Right 1`] = `
 <DocumentFragment>
   <button
     class="btn btn--secondary"

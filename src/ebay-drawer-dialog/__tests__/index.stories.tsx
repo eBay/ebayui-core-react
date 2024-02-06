@@ -3,17 +3,18 @@ import { EbayButton } from '../../ebay-button';
 import { action } from '../../../.storybook/action';
 import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayDrawerDialog } from '../index';
+import { Meta, Story } from '@storybook/react'
 
-const story: any = {
+const story: Meta<typeof EbayDrawerDialog> = {
     component: EbayDrawerDialog,
-    title: 'ebay-drawer-dialog'
+    title: 'dialogs/ebay-drawer-dialog'
 };
 
 const numbers = Array(100)
     .fill(1)
     .map((x, i) => <p key={i}>{i + 1}</p>);
 
-export const _Default = () => {
+export const _Default: Story<typeof EbayDrawerDialog> = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -42,7 +43,7 @@ export const _Default = () => {
     );
 };
 
-export const _Opened = () => (<>
+export const _Opened: Story<typeof EbayDrawerDialog> = () => (<>
     <EbayDrawerDialog open onClose={action('Close button clicked.')} a11yCloseText="Close drawer"
                       a11yMaximizeText="Maximize" a11yMinimizeText="Minimize">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -56,7 +57,7 @@ export const _Opened = () => (<>
     </EbayDrawerDialog>
 </>);
 
-export const _WithoutHandle = () => {
+export const _WithoutHandle: Story<typeof EbayDrawerDialog> = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -73,7 +74,7 @@ export const _WithoutHandle = () => {
     );
 };
 
-export const _WithoutHandleAndCloseButton = () => {
+export const _WithoutHandleAndCloseButton: Story<typeof EbayDrawerDialog> = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -89,7 +90,7 @@ export const _WithoutHandleAndCloseButton = () => {
     );
 };
 
-export const _LotsOfContent = () => {
+export const _LotsOfContent: Story<typeof EbayDrawerDialog> = () => {
     const [open, setOpen] = useState(false)
 
     return (
@@ -108,7 +109,7 @@ export const _LotsOfContent = () => {
     );
 };
 
-export const _CustomFocus = () => {
+export const _CustomFocus: Story<typeof EbayDrawerDialog> = () => {
     const [open, setOpen] = useState(false)
     const focusRef = createRef() as any
 
@@ -129,7 +130,7 @@ export const _CustomFocus = () => {
     );
 };
 
-export const _WithoutAnimation = () => {
+export const _WithoutAnimation: Story<typeof EbayDrawerDialog> = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -146,7 +147,7 @@ export const _WithoutAnimation = () => {
     );
 };
 
-export const _TriggerExpanded = () => {
+export const _TriggerExpanded: Story<typeof EbayDrawerDialog> = () => {
     const [open, setOpen] = useState(false);
     const [expanded, setExpanded] = useState(false);
 

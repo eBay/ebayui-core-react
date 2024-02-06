@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-listbox-button Borderless 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Borderless 1`] = `
 <span
   className="listbox-button"
 >
@@ -52,7 +52,7 @@ exports[`Storyshots ebay-listbox-button Borderless 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Default - no selected option 1`] = `
 <span
   className="listbox-button"
 >
@@ -104,7 +104,7 @@ exports[`Storyshots ebay-listbox-button Default - no selected option 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Default - with a11y prefix 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Default - with a11y prefix 1`] = `
 [
   <label
     id="listbox-button__label"
@@ -167,7 +167,7 @@ exports[`Storyshots ebay-listbox-button Default - with a11y prefix 1`] = `
 ]
 `;
 
-exports[`Storyshots ebay-listbox-button Default 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Default 1`] = `
 <span
   className="listbox-button"
 >
@@ -219,7 +219,7 @@ exports[`Storyshots ebay-listbox-button Default 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Disabled State 1`] = `
 <span
   className="listbox-button"
 >
@@ -272,7 +272,7 @@ exports[`Storyshots ebay-listbox-button Disabled State 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Floating label 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Floating label 1`] = `
 <span
   className="listbox-button"
 >
@@ -329,7 +329,7 @@ exports[`Storyshots ebay-listbox-button Floating label 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Fluid 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Fluid 1`] = `
 <span
   className="listbox-button listbox-button--fluid"
 >
@@ -381,7 +381,7 @@ exports[`Storyshots ebay-listbox-button Fluid 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Invalid State 1`] = `
 <span
   className="listbox-button"
 >
@@ -434,7 +434,7 @@ exports[`Storyshots ebay-listbox-button Invalid State 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Prefix label 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Prefix label 1`] = `
 <span
   className="listbox-button"
 >
@@ -491,7 +491,7 @@ exports[`Storyshots ebay-listbox-button Prefix label 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Preselected index 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Preselected index 1`] = `
 <span
   className="listbox-button"
 >
@@ -543,7 +543,7 @@ exports[`Storyshots ebay-listbox-button Preselected index 1`] = `
 </span>
 `;
 
-exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Statefull component 1`] = `
 <div>
   <span
     className="listbox-button"
@@ -621,7 +621,7 @@ exports[`Storyshots ebay-listbox-button Statefull component 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-listbox-button Too many options 1`] = `
+exports[`Storyshots buttons/ebay-listbox-button Too many options 1`] = `
 <span
   className="listbox-button"
 >

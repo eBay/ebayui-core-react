@@ -4,7 +4,7 @@ import { EbayButton } from '../../ebay-button'
 import { EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../index'
 
 export default {
-    title: 'ebay-textbox'
+    title: 'form input/ebay-textbox'
 }
 
 export const DefaultTextbox = () => <EbayTextbox defaultValue="EbayTextbox" />

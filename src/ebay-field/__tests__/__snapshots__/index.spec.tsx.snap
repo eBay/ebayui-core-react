@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ebay-field Block 1`] = `
+exports[`Storyshots form input/ebay-field Block 1`] = `
 <div>
   <div
     className="field"
@@ -83,7 +83,7 @@ exports[`Storyshots ebay-field Block 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-field Block and inline combination 1`] = `
+exports[`Storyshots form input/ebay-field Block and inline combination 1`] = `
 <div>
   <span
     className="field"
@@ -218,7 +218,7 @@ exports[`Storyshots ebay-field Block and inline combination 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-field Default - inline 1`] = `
+exports[`Storyshots form input/ebay-field Default - inline 1`] = `
 <div>
   <span
     className="field"
@@ -327,7 +327,7 @@ exports[`Storyshots ebay-field Default - inline 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-field Labels on the right 1`] = `
+exports[`Storyshots form input/ebay-field Labels on the right 1`] = `
 [
   <p>
     <span
@@ -442,7 +442,7 @@ exports[`Storyshots ebay-field Labels on the right 1`] = `
 ]
 `;
 
-exports[`Storyshots ebay-field required 1`] = `
+exports[`Storyshots form input/ebay-field required 1`] = `
 <div>
   <span
     className="field"
@@ -529,7 +529,7 @@ exports[`Storyshots ebay-field required 1`] = `
 </div>
 `;
 
-exports[`Storyshots ebay-field with description 1`] = `
+exports[`Storyshots form input/ebay-field with description 1`] = `
 <div>
   <div
     className="field"
