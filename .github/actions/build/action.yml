@@ -8,4 +8,5 @@ runs:
           shell: sh
           run: |
             yarn build
+            echo "hello"
             yarn copy
