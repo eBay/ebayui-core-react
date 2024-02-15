@@ -30,20 +30,17 @@ jobs:
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/analyze
 
-    release:
+    build:
         needs: analyze
-        name: Bump & Release
+        name: Build
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/build
-            - uses: ./.github/actions/release
-              with:
-                npmToken: ${{ secrets.NPM_TOKEN }}
 
     publish-storybook:
-        needs: release
+        needs: build
         name: Publish Storybook
         runs-on: ubuntu-latest
         steps:
