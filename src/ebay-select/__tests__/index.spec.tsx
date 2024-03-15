@@ -1,16 +1,6 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { fireEvent, render } from '@testing-library/react';
-import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbaySelect, EbaySelectOption } from '../index'
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-})
 
 const anySyntheticEvent = expect.objectContaining( { type: null })
 const EbaySelectWith3Options = (props) => (

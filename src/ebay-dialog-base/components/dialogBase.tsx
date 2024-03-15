@@ -194,7 +194,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
         <Container
             {...props}
             aria-labelledby={dialogLabelledBy}
-            arial-modal="true"
+            aria-modal="true"
             role={role}
             hidden={!open}
             className={classNames(classPrefix, props.className)}

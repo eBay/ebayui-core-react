@@ -1,9 +1,7 @@
 import * as React from 'react';
-import requireContext from 'node-require-context'
 import { render, fireEvent } from '@testing-library/react'
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayToast } from '../index'
-import { initStoryshots } from '../../../config/jest/storyshots'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -40,12 +38,4 @@ describe('<EbayToast>', () => {
         fireEvent.click(document.querySelector('button.toast-dialog__close'))
         expect(closeToastHandler).toBeCalled()
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
 })

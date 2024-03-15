@@ -1,8 +1,6 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayTextbox, EbayTextboxPostfixIcon } from '../index'
 
 var anySyntheticEvent = expect.objectContaining({ type: null });
@@ -24,7 +22,7 @@ describe('<EbayTextbox>', () => {
     describe('on textbox change (and focus leaving the field)', () => {
         it('should fire an onChange event', () => {
             const spy = jest.fn()
-            const wrapper = render(<EbayTextbox onChange={spy} />)
+            render(<EbayTextbox onChange={spy} />)
 
             const value = `It's a spy!`
             const textbox = screen.getByRole('textbox')
@@ -58,12 +56,12 @@ describe('<EbayTextbox>', () => {
             expect(spy).toBeCalledWith(anySyntheticEvent, { value })
         })
         it('should have "inline" class after blur event when no value is present', () => {
-            const { container, getByRole } = render(<EbayTextbox floatingLabel="Test label" />);
+            const { container } = render(<EbayTextbox floatingLabel="Test label" />);
             fireEvent.blur(screen.getByRole('textbox'), { target: { value:'' } })
             expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline');
         });
         it('should not have "inline" class after blur event when value is present', () => {
-            const { container, getByRole } = render(<EbayTextbox floatingLabel="Test label" />);
+            const { container } = render(<EbayTextbox floatingLabel="Test label" />);
             fireEvent.blur(screen.getByRole('textbox'), { target: { value:'New Value' } })
             expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline');
         });
@@ -155,12 +153,4 @@ describe('<EbayTextbox>', () => {
             expect(ref.current.tagName).toBe('INPUT')
         })
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
 })

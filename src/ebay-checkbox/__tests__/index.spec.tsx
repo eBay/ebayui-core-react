@@ -1,7 +1,5 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { fireEvent, render, screen } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayCheckbox } from '../index'
 
 const { getByRole } = screen
@@ -36,11 +34,3 @@ describe('<EbayCheckbox>', () => {
         })
     })
 })
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-});

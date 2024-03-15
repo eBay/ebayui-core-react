@@ -1,7 +1,5 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { fireEvent, render, screen } from '@testing-library/react'
 import EbayDateTextbox from '../date-textbox'
 import userEvent from '@testing-library/user-event'
@@ -13,13 +11,6 @@ jest
 // makeup-expander uses a random generated id, so we need to mock it for the
 // snapshot to be consistent
 jest.mock('makeup-next-id', () => (el) => el.setAttribute('id', 'testid'))
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-})
 
 describe('<EbayDateTextbox />', () => {
     it('should open the calendar when clicking on the postfix icon', () => {

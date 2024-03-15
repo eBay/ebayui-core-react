@@ -1,7 +1,5 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react';
-import { snapshotWithOptions } from '@storybook/addon-storyshots'
-import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbayPagination, EbayPaginationItem as Item } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
@@ -122,18 +120,6 @@ describe('<EbayPagination>', () => {
             expect(wrapper.container.querySelectorAll('li')[1]).not.toHaveAttribute('hidden')
         })
     })
-})
-
-
-initStoryshots({
-    test: snapshotWithOptions({
-        // @ts-ignore: This method exists on storybook but no on type definitions
-        createNodeMock: (element) => document.createElement(element.type)
-    }),
-    config: ({ configure }) =>
-        configure(() => {
-            require('./index.stories')
-        }, module)
 })
 
 function resizeWindow(x, y) {

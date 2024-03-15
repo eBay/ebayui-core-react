@@ -1,9 +1,7 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { render, fireEvent } from '@testing-library/react'
 import { EbayDrawerDialog } from '../index'
 import { EbayDialogHeader } from '../../ebay-dialog-base';
-import {initStoryshots} from '../../../config/jest/storyshots'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -46,10 +44,3 @@ describe('<EbayDrawerDialog>', () => {
         expect(closeButton).toBeNull()
     })
 })
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-});

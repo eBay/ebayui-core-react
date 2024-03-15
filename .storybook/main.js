@@ -1,27 +1,47 @@
+const { resolve } = require('path')
+
 module.exports = {
     stories: ['../src/**/__tests__/*.stories.tsx'],
-    addons: ['@storybook/addon-essentials', 'storybook-addon-jsx', '@storybook/addon-a11y'],
-    webpackFinal: async config => {
-        config.module.rules.push({
-            test: /\.(ts|tsx)$/,
-            use: [
-                {
-                    loader: 'ts-loader',
-                    options: {
-                        transpileOnly: true
-                    }
-                }
-            ]
-        })
-        config.resolve.extensions.push('.ts', '.tsx')
+    typescript: {
+        check: false,
+        reactDocgen: 'react-docgen-typescript',
+        reactDocgenTypescriptOptions: {
+            compilerOptions: {
+                allowSyntheticDefaultImports: false,
+                esModuleInterop: false,
+            },
+            propFilter: () => true,
+        },
+    },
+    addons: [
+        '@storybook/addon-essentials',
+        '@storybook/addon-a11y',
+        {
+            name: '@storybook/addon-storysource',
+            options: {
+                rule: {
+                    test: [/\.stories\.tsx?$/],
+                    include: [resolve(__dirname, '../src')],
+                },
+                loaderOptions: {
+                    injectStoryParameters: false,
+                    prettierConfig: { printWidth: 80 },
+                },
+            },
+        },
+    ],
 
-        // Remove storybook css predefined webpack rule and use custom rule
-        config.module.rules = config.module.rules.filter(rule => !rule?.test?.test?.('.css'))
-        config.module.rules.push({
-            test: /\.css$/,
-            use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
-        })
+    framework: {
+        name: '@storybook/react-webpack5',
+        options: {}
+    },
 
-        return config
+    docs: {
+        autodocs: true
+    },
+
+    core: {
+        disableTelemetry: true,
+        disableWhatsNewNotifications: true,
     }
 }

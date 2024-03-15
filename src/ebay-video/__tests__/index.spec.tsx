@@ -1,7 +1,5 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { render, screen } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayVideo, EbayVideoSource } from '../index'
 
 describe('<EbayVideo>', () => {
@@ -38,11 +36,4 @@ describe('<EbayVideo>', () => {
     it('shows loading spinner', () => {
         expect(screen.getByLabelText('Loading')).toBeInTheDocument()
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/)
-        return configure(req, module)
-    }
 })

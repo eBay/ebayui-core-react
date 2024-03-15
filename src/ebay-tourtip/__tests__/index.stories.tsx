@@ -42,11 +42,7 @@ export const DefaultTourtip = () => (
     </div>
 )
 
-DefaultTourtip.story = {
-    name: 'Default tourtip'
-}
-
-export const _PointerDirection = () => (
+export const PointersWithAllDirections = () => (
     <div>
         {allPointers.map((pointerType, index) => (
             <div
@@ -70,10 +66,6 @@ export const _PointerDirection = () => (
     </div>
 )
 
-_PointerDirection.story = {
-    name: 'Pointer direction'
-}
-
 export const PointerWithCustomLocation = () => (
     <div style={{ width: '100%', margin: 300 }}>
         <EbayTourtip a11yCloseText="close" pointer="top-left" overlayStyle={{ top: 40, left: -16 }}>
@@ -87,10 +79,6 @@ export const PointerWithCustomLocation = () => (
         </EbayTourtip>
     </div>
 )
-
-PointerWithCustomLocation.story = {
-    name: 'Pointer with custom location'
-}
 
 export const FooterTourtip = () => (
     <div style={{ width: '100%', margin: 300 }}>
@@ -109,10 +97,6 @@ export const FooterTourtip = () => (
     </div>
 )
 
-FooterTourtip.story = {
-    name: 'Footer tourtip'
-}
-
 export const FooterAndHeadingTourtip = () => (
     <div style={{ width: '100%', margin: 300 }}>
         <EbayTourtip a11yCloseText="close" pointer="bottom">
@@ -130,7 +114,3 @@ export const FooterAndHeadingTourtip = () => (
         </EbayTourtip>
     </div>
 )
-
-FooterAndHeadingTourtip.story = {
-    name: 'Footer and heading tourtip'
-}

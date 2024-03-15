@@ -6,7 +6,7 @@ import {
     EbayPageNoticeFooter,
     EbayPageNoticeCTA
 } from '..'
-import { action } from '../../../.storybook/action'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'notices & tips/ebay-page-notice'
@@ -20,10 +20,6 @@ export const SimpleUsage = () => (
     </>
 )
 
-SimpleUsage.story = {
-    name: 'Simple usage'
-}
-
 export const SimpleUsageWithId = () => (
     <>
         <EbayPageNotice status="confirmation" aria-label="Success" id="main-page-notice">
@@ -31,10 +27,6 @@ export const SimpleUsageWithId = () => (
         </EbayPageNotice>
     </>
 )
-
-SimpleUsageWithId.story = {
-    name: 'Simple usage with id'
-}
 
 export const ConfirmationMessage = () => (
     <>
@@ -49,10 +41,6 @@ export const ConfirmationMessage = () => (
     </>
 )
 
-ConfirmationMessage.story = {
-    name: 'Confirmation message'
-}
-
 export const InformationMessage = () => (
     <>
         <EbayPageNotice status="information" aria-label="Information">
@@ -66,10 +54,6 @@ export const InformationMessage = () => (
     </>
 )
 
-InformationMessage.story = {
-    name: 'Information message'
-}
-
 export const AttentionMessage = () => (
     <>
         <EbayPageNotice status="attention" aria-label="Attention">
@@ -77,7 +61,7 @@ export const AttentionMessage = () => (
                 <EbayPageNoticeTitle>Error.</EbayPageNoticeTitle>
                 <p>
                     Please take another look at the following:
-                    <br />
+                    <br/>
                     <a href="#">Card number</a>, <a href="#">Expiration date</a> &amp;{' '}
                     <a href="#">Security code</a>.
                 </p>
@@ -85,10 +69,6 @@ export const AttentionMessage = () => (
         </EbayPageNotice>
     </>
 )
-
-AttentionMessage.story = {
-    name: 'Attention message'
-}
 
 export const MessageWithFooter = () => (
     <>
@@ -103,10 +83,6 @@ export const MessageWithFooter = () => (
         </EbayPageNotice>
     </>
 )
-
-MessageWithFooter.story = {
-    name: 'Message with footer'
-}
 
 export const DismissibleNotice = () => (
     <>
@@ -126,10 +102,6 @@ export const DismissibleNotice = () => (
     </>
 )
 
-DismissibleNotice.story = {
-    name: 'Dismissible notice'
-}
-
 export const DismissibleMessageWithCta = () => (
     <>
         <EbayPageNotice status="information" aria-label="Congratulations" a11yDismissText="Close">
@@ -143,7 +115,3 @@ export const DismissibleMessageWithCta = () => (
         </EbayPageNotice>
     </>
 )
-
-DismissibleMessageWithCta.story = {
-    name: 'Dismissible message with CTA'
-}

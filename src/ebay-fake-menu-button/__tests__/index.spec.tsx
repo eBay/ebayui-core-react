@@ -1,11 +1,6 @@
 import React from 'react'
 import { screen, fireEvent, render } from '@testing-library/react';
-import initStoryshots from '@storybook/addon-storyshots'
 import { EbayFakeMenuButton, EbayFakeMenuButtonItem } from '..'
-
-initStoryshots({
-    config: ({ configure }) => configure(() => require('./index.stories.tsx'), module)
-})
 
 const anySyntheticEvent = expect.objectContaining( { type: null })
 jest.useFakeTimers()

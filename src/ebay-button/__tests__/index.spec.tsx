@@ -1,21 +1,84 @@
 import React from 'react'
-import requireContext from 'node-require-context'
-
-import { fireEvent, render } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
+import { fireEvent, render, screen } from '@testing-library/react'
+import { composeStory } from '@storybook/react'
+import Meta, { Default, Size, Priority, DestructiveVariant } from './index.stories';
 import { EbayButton } from '../index'
+
+const DefaultStory = composeStory(Default, Meta);
+const SizeStory = composeStory(Size, Meta);
+const PriorityStory = composeStory(Priority, Meta);
+const DestructiveVariantStory = composeStory(DestructiveVariant, Meta);
 
 const anySyntheticEvent = expect.objectContaining( { target: null })
 
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-})
-
 describe('<EbayButton>', () => {
+    describe('Default story', () => {
+        beforeEach(() => {
+            render(<DefaultStory />)
+        })
+
+        it('renders button correctly', () => {
+            const button = screen.getByRole('button')
+            expect(button).toHaveTextContent('Hello, I am a button!')
+            expect(button).toHaveClass('btn btn--secondary')
+        })
+
+        it('renders link correctly', () => {
+            const link = screen.getByRole('link')
+            expect(link).toHaveAttribute('href', 'https://ebay.com')
+            expect(link).toHaveTextContent('Hello, I am a link!')
+            expect(link).toHaveClass('fake-btn fake-btn--secondary')
+        })
+    })
+
+    describe('Size story', () => {
+        beforeEach(() => {
+            render(<SizeStory />)
+        })
+
+        it('renders large button correctly', () => {
+            const button = screen.getByText('Large Button')
+            expect(button).toHaveClass('btn btn--secondary btn--large')
+        })
+
+        it('renders default size button correctly', () => {
+            const button = screen.getByText('Default Size Button')
+            expect(button).toHaveClass('btn btn--secondary')
+        })
+    })
+
+    describe('Priority story', () => {
+        beforeEach(() => {
+            render(<PriorityStory />)
+        })
+
+        it('renders primary button correctly', () => {
+            const button = screen.getByText('Primary Button')
+            expect(button).toHaveClass('btn btn--primary')
+        })
+
+        it('renders secondary button correctly', () => {
+            const button = screen.getByText('Secondary Button')
+            expect(button).toHaveClass('btn btn--secondary')
+        })
+    })
+
+    describe('DestructiveVariant story', () => {
+        beforeEach(() => {
+            render(<DestructiveVariantStory />)
+        })
+
+        it('renders primary destructive button correctly', () => {
+            const button = screen.getByText('Primary Button')
+            expect(button).toHaveClass('btn btn--primary btn--destructive')
+        })
+
+        it('renders secondary destructive button correctly', () => {
+            const button = screen.getByText('Secondary Button')
+            expect(button).toHaveClass('btn btn--secondary btn--destructive')
+        })
+    })
+
     describe('on passing a ref', () => {
         it('should set the ref to button element', () => {
             const ref = React.createRef() as any

@@ -1,7 +1,5 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayButton } from '../../ebay-button'
 import { EbayTourtip, EbayTourtipContent, EbayTourtipFooter, EbayTourtipHeading, EbayTourtipHost } from '../index'
 
@@ -102,12 +100,4 @@ describe('<EbayTourtip>', () => {
             expect(host).toHaveFocus()
         })
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
 })

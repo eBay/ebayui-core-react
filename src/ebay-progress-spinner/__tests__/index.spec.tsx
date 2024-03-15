@@ -1,10 +1,19 @@
-import initStoryshots from '@storybook/addon-storyshots'
-import requireContext from 'node-require-context'
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import { composeStory } from '@storybook/react';
+import Meta, { DefaultSmallLarge } from './index.stories';
 
+const DefaultStory = composeStory(DefaultSmallLarge, Meta);
 
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
+describe('ebay-progress-spinner rendering', () => {
+  it('renders', () => {
+    render(<DefaultStory />);
+      const [spinner, smallSpinner, largeSpinner] = screen.getAllByRole('img')
+      expect(spinner).toHaveAttribute('aria-label', 'Busy')
+      expect(spinner).toHaveClass('progress-spinner')
+      expect(smallSpinner).toHaveAttribute('aria-label', 'Stand by...')
+      expect(smallSpinner).toHaveClass('progress-spinner progress-spinner--small')
+      expect(largeSpinner).toHaveAttribute('aria-label', 'Stand by...')
+      expect(largeSpinner).toHaveClass('progress-spinner progress-spinner--large')
+  });
 });

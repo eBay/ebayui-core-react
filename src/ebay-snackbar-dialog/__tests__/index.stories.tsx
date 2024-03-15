@@ -1,83 +1,83 @@
-import React, { useState } from 'react'
-import { EbayButton } from '../../ebay-button'
-import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '../index'
+import React, { useState } from 'react';
+import { EbayButton } from '../../ebay-button';
+import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '../index';
 
 export default {
-    title: 'dialogs/ebay-snackbar-dialog'
-}
+  title: 'dialogs/ebay-snackbar-dialog',
+};
 
 export const Default = () => {
-    const TestComponent = () => {
-        const [open, setOpen] = useState(false)
-
-        return (
-            <>
-                <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
-                <EbaySnackbarDialog open={open} onClose={() => setOpen(false)}>
-                    <p>1 item deleted from watch list.</p>
-                </EbaySnackbarDialog>
-            </>
-        )
-    }
+  const TestComponent = () => {
+    const [open, setOpen] = useState(false);
 
     return (
-        <>
-            <TestComponent />
-        </>
-    )
-}
+      <>
+        <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
+        <EbaySnackbarDialog open={open} onClose={() => setOpen(false)}>
+          <p>1 item deleted from watch list.</p>
+        </EbaySnackbarDialog>
+      </>
+    );
+  };
 
-export const WithAction = () => {
+  return (
+    <>
+      <TestComponent />
+    </>
+  );
+};
+
+export const WithAction = {
+  render: () => {
     const TestComponent = () => {
-        const [open, setOpen] = useState(false)
+      const [open, setOpen] = useState(false);
 
-        return (
-            <>
-                <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
-                <EbaySnackbarDialog open={open} onClose={() => setOpen(false)}>
-                    <p>1 item deleted from watch list.</p>
-                    <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
-                </EbaySnackbarDialog>
-            </>
-        )
-    }
+      return (
+        <>
+          <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
+          <EbaySnackbarDialog open={open} onClose={() => setOpen(false)}>
+            <p>1 item deleted from watch list.</p>
+            <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
+          </EbaySnackbarDialog>
+        </>
+      );
+    };
 
     return (
-        <>
-            <TestComponent />
-        </>
-    )
-}
+      <>
+        <TestComponent />
+      </>
+    );
+  },
 
-WithAction.story = {
-    name: 'With action'
-}
+  name: 'With action',
+};
 
-export const WithColumnLayout = () => {
+export const WithColumnLayout = {
+  render: () => {
     const TestComponent = () => {
-        const [open, setOpen] = useState(false)
+      const [open, setOpen] = useState(false);
 
-        return (
-            <>
-                <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
-                <EbaySnackbarDialog open={open} onClose={() => setOpen(false)} layout="column">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
-                </EbaySnackbarDialog>
-            </>
-        )
-    }
+      return (
+        <>
+          <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
+          <EbaySnackbarDialog open={open} onClose={() => setOpen(false)} layout="column">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+            <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
+          </EbaySnackbarDialog>
+        </>
+      );
+    };
 
     return (
-        <>
-            <TestComponent />
-        </>
-    )
-}
+      <>
+        <TestComponent />
+      </>
+    );
+  },
 
-WithColumnLayout.story = {
-    name: 'With column layout'
-}
+  name: 'With column layout',
+};

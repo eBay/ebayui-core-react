@@ -1,8 +1,6 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 
 import { waitFor, fireEvent, render, screen } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayCalendar } from '../index'
 
 const anySyntheticEvent = expect.objectContaining( { target: null })
@@ -10,13 +8,6 @@ const anySyntheticEvent = expect.objectContaining( { target: null })
 jest
     .useFakeTimers()
     .setSystemTime(new Date('2024-01-05').getTime())
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-})
 
 describe('<EbayCalendar />', () => {
     it('should change day focused as we navigate with keyboard', async() => {

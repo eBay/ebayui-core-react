@@ -8,7 +8,7 @@ const validRanges = {
 }
 
 
-export = (input: EbayEekProps): number => {
+export default (input: EbayEekProps): number => {
     const { max, min, rating } = input
     const validMax = validRanges[max]
     if (!(validMax && validMax.indexOf(min) > -1)) {

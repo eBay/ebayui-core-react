@@ -1,14 +1,7 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbayRadio } from '../index';
 import { EbayLabel } from '../../ebay-field'
-
-initStoryshots({
-    config: ({ configure }) =>
-        configure(() => {require('./index.stories')}, module),
-    storyNameRegex: /^((?!.*?controlled).)*$/i // all stories except the Controlled ones
-})
 
 var anySyntheticEvent = expect.objectContaining({ type: null });
 

@@ -1,371 +1,372 @@
-import React, { ChangeEvent, FC, useEffect, useState, KeyboardEvent, MouseEvent } from 'react'
-import { action } from '../../../.storybook/action'
-import { EbayButton } from '../../ebay-button'
-import { EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../index'
+import React, { ChangeEvent, FC, useState, KeyboardEvent, MouseEvent } from 'react';
+import { action } from '@storybook/addon-actions';
+import { EbayButton } from '../../ebay-button';
+import { EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../index';
 
 export default {
-    title: 'form input/ebay-textbox'
-}
+  title: 'form input/ebay-textbox',
+};
 
-export const DefaultTextbox = () => <EbayTextbox defaultValue="EbayTextbox" />
+export const DefaultTextbox = {
+  render: () => <EbayTextbox defaultValue="EbayTextbox" />,
+  name: 'Default textbox',
+};
 
-DefaultTextbox.story = {
-    name: 'Default textbox'
-}
-
-export const TestingCallbacks = () => {
+export const TestingCallbacks = {
+  render: () => {
     const TestComponent: FC = () => {
-        const ref = React.useRef(null)
-        const [value, setValue] = useState('')
+      const ref = React.useRef(null);
+      const [value, setValue] = useState('');
 
-        const handleInputChange = (
-            e: ChangeEvent<HTMLTextAreaElement & HTMLInputElement>,
-            props: { value: string }
-        ) => {
-            action('onInputChange')(e, props)
-            setValue(props.value)
-        }
-        const handleButtonClick = (
-            e: KeyboardEvent & MouseEvent<HTMLTextAreaElement & HTMLInputElement>,
-            props: { value: string }
-        ) => {
-            action('onButtonClick')(e, props)
-            setValue('')
-        }
+      const handleInputChange = (
+        e: ChangeEvent<HTMLTextAreaElement & HTMLInputElement>,
+        props: { value: string }
+      ) => {
+        action('onInputChange')(e, props);
+        setValue(props.value);
+      };
+      const handleButtonClick = (
+        e: KeyboardEvent & MouseEvent<HTMLTextAreaElement & HTMLInputElement>,
+        props: { value: string }
+      ) => {
+        action('onButtonClick')(e, props);
+        setValue('');
+      };
 
-        return (
-            <form ref={ref}>
-                <p>
-                    <EbayTextbox
-                        value={value}
-                        onChange={(e, props) => action('onChange')(e, props)}
-                        onInputChange={(e, props) => handleInputChange(e, props)}
-                        onFocus={(e, props) => action('onFocus')(e, props)}
-                        onBlur={(e, props) => action('onBlur')(e, props)}
-                        onKeyPress={(e, props) => action('onKeyPress')(e, props)}
-                        onKeyUp={(e, props) => action('onKeyUp')(e, props)}
-                        onKeyDown={(e, props) => action('onKeyDown')(e, props)}
-                        onInvalid={(e, props) => action('onInvalid')(e, props)}
-                        onButtonClick={(e, props) => handleButtonClick(e, props)}
-                        required
-                    >
-                        <EbayTextboxPostfixIcon
-                            name="clear16"
-                            buttonAriaLabel="Clear"
-                            style={{ opacity: value.length ? '1' : '0' }}
-                        />
-                    </EbayTextbox>
-                </p>
-                <p>
-                    <EbayButton
-                        onClick={(e) => {
-                            e.preventDefault()
-                            ref.current?.reportValidity()
-                        }}
-                    >
-                        Check value presence
-                    </EbayButton>
-                </p>
-            </form>
-        )
-    }
+      return (
+        <form ref={ref}>
+          <p>
+            <EbayTextbox
+              value={value}
+              onChange={(e, props) => action('onChange')(e, props)}
+              onInputChange={(e, props) => handleInputChange(e, props)}
+              onFocus={(e, props) => action('onFocus')(e, props)}
+              onBlur={(e, props) => action('onBlur')(e, props)}
+              onKeyPress={(e, props) => action('onKeyPress')(e, props)}
+              onKeyUp={(e, props) => action('onKeyUp')(e, props)}
+              onKeyDown={(e, props) => action('onKeyDown')(e, props)}
+              onInvalid={(e, props) => action('onInvalid')(e, props)}
+              onButtonClick={(e, props) => handleButtonClick(e, props)}
+              required
+            >
+              <EbayTextboxPostfixIcon
+                name="clear16"
+                buttonAriaLabel="Clear"
+                style={{ opacity: value.length ? '1' : '0' }}
+              />
+            </EbayTextbox>
+          </p>
+          <p>
+            <EbayButton
+              onClick={(e) => {
+                e.preventDefault();
+                ref.current?.reportValidity();
+              }}
+            >
+              Check value presence
+            </EbayButton>
+          </p>
+        </form>
+      );
+    };
     return (
-        <>
-            <TestComponent />
-        </>
-    )
-}
+      <>
+        <TestComponent />
+      </>
+    );
+  },
 
-TestingCallbacks.story = {
-    name: 'Testing callbacks'
-}
+  name: 'Testing callbacks',
+};
 
-export const DisabledTextbox = () => (
+export const DisabledTextbox = {
+  render: () => (
     <>
-        <EbayTextbox disabled />
+      <EbayTextbox disabled />
     </>
-)
+  ),
 
-DisabledTextbox.story = {
-    name: 'Disabled textbox'
-}
+  name: 'Disabled textbox',
+};
 
-export const PlaceholderTextbox = () => (
+export const PlaceholderTextbox = {
+  render: () => (
     <>
-        <EbayTextbox placeholder="placeholder text" />
+      <EbayTextbox placeholder="placeholder text" />
     </>
-)
+  ),
 
-PlaceholderTextbox.story = {
-    name: 'Placeholder textbox'
-}
+  name: 'Placeholder textbox',
+};
 
-export const InvalidTextbox = () => (
+export const InvalidTextbox = {
+  render: () => (
     <>
-        <EbayTextbox invalid />
+      <EbayTextbox invalid />
     </>
-)
+  ),
 
-InvalidTextbox.story = {
-    name: 'Invalid textbox'
-}
+  name: 'Invalid textbox',
+};
 
-export const FluidTextbox = () => (
+export const FluidTextbox = {
+  render: () => (
     <>
-        <EbayTextbox fluid />
+      <EbayTextbox fluid />
     </>
-)
+  ),
 
-FluidTextbox.story = {
-    name: 'Fluid textbox'
-}
+  name: 'Fluid textbox',
+};
 
-export const PasswordTextbox = () => (
+export const PasswordTextbox = {
+  render: () => (
     <>
-        <EbayTextbox type="password" />
+      <EbayTextbox type="password" />
     </>
-)
+  ),
 
-PasswordTextbox.story = {
-    name: 'Password textbox'
-}
+  name: 'Password textbox',
+};
 
-export const MultilineTextbox = () => (
+export const MultilineTextbox = {
+  render: () => (
     <>
-        <EbayTextbox multiline defaultValue={'some default value\nnext line'} />
+      <EbayTextbox multiline defaultValue={'some default value\nnext line'} />
     </>
-)
+  ),
 
-MultilineTextbox.story = {
-    name: 'Multiline textbox'
-}
+  name: 'Multiline textbox',
+};
 
-export const MultilineInvalidTextbox = () => (
+export const MultilineInvalidTextbox = {
+  render: () => (
     <>
-        <EbayTextbox multiline invalid defaultValue="some default value" />
+      <EbayTextbox multiline invalid defaultValue="some default value" />
     </>
-)
+  ),
 
-MultilineInvalidTextbox.story = {
-    name: 'Multiline invalid textbox'
-}
+  name: 'Multiline invalid textbox',
+};
 
-export const AutofocusedTextbox = () => (
+export const AutofocusedTextbox = {
+  render: () => (
     <>
-        <EbayTextbox autoFocus placeholder="Should focus here" />
+      <EbayTextbox autoFocus placeholder="Should focus here" />
     </>
-)
+  ),
 
-AutofocusedTextbox.story = {
-    name: 'Autofocused textbox'
-}
+  name: 'Autofocused textbox',
+};
 
-export const LargeTextbox = () => (
+export const LargeTextbox = {
+  render: () => (
     <>
-        <EbayTextbox placeholder="placeholder text" inputSize="large" />
+      <EbayTextbox placeholder="placeholder text" inputSize="large" />
     </>
-)
+  ),
 
-LargeTextbox.story = {
-    name: 'Large textbox'
-}
+  name: 'Large textbox',
+};
 
-export const WithIcon = () => (
+export const WithIcon = {
+  render: () => (
     <div>
-        <p>
-            <EbayTextbox placeholder="email">
-                <EbayTextboxPrefixIcon name="mail16" />
-            </EbayTextbox>
-        </p>
-        <p>
-            <EbayTextbox placeholder="username">
-                <EbayTextboxPostfixIcon name="profile20" />
-            </EbayTextbox>
-        </p>
-        <p>
-            <EbayTextbox placeholder="search" onButtonClick={action('Clear!')}>
-                <EbayTextboxPrefixIcon name="search16" />
-                <EbayTextboxPostfixIcon name="clear16" buttonAriaLabel="Clear" />
-            </EbayTextbox>
-        </p>
+      <p>
+        <EbayTextbox placeholder="email">
+          <EbayTextboxPrefixIcon name="mail16" />
+        </EbayTextbox>
+      </p>
+      <p>
+        <EbayTextbox placeholder="username">
+          <EbayTextboxPostfixIcon name="profile20" />
+        </EbayTextbox>
+      </p>
+      <p>
+        <EbayTextbox placeholder="search" onButtonClick={action('Clear!')}>
+          <EbayTextboxPrefixIcon name="search16" />
+          <EbayTextboxPostfixIcon name="clear16" buttonAriaLabel="Clear" />
+        </EbayTextbox>
+      </p>
     </div>
-)
+  ),
 
-WithIcon.story = {
-    name: 'With icon'
-}
+  name: 'With icon',
+};
 
-export const ControlValueFromOutside = () => {
+export const ControlValueFromOutside = {
+  render: () => {
     const Component = () => {
-        const [value, setValue] = useState('')
+      const [value, setValue] = useState('');
 
-        const handleOnChange = (e, props) => {
-            setValue(props.value.substring(0, 10))
-        }
+      const handleOnChange = (e, props) => {
+        setValue(props.value.substring(0, 10));
+      };
 
-        return <EbayTextbox onInputChange={handleOnChange} value={value} placeholder="Max 10 chars" />
-    }
-
-    return (
-        <>
-            <Component />
-        </>
-    )
-}
-
-ControlValueFromOutside.story = {
-    name: 'Control value from outside'
-}
-
-export const RefForwarding = () => {
-    const ref = React.createRef() as any
+      return (
+        <EbayTextbox onInputChange={handleOnChange} value={value} placeholder="Max 10 chars" />
+      );
+    };
 
     return (
-        <>
-            <EbayTextbox forwardedRef={ref} />
-        </>
-    )
-}
+      <>
+        <Component />
+      </>
+    );
+  },
 
-RefForwarding.story = {
-    name: 'Ref forwarding'
-}
+  name: 'Control value from outside',
+};
 
-export const FloatingLabel = () => (
+export const RefForwarding = {
+  render: () => {
+    const ref = React.createRef() as any;
+
+    return (
+      <>
+        <EbayTextbox forwardedRef={ref} />
+      </>
+    );
+  },
+
+  name: 'Ref forwarding',
+};
+
+export const FloatingLabel = {
+  render: () => (
     <EbayTextbox
-        floatingLabel="Floating label"
-        onChange={action('onChange')}
-        onInputChange={action('onInputChange')}
-        onFloatingLabelInit={() => action('onFloatingLabelInit')()}
+      floatingLabel="Floating label"
+      onChange={action('onChange')}
+      onInputChange={action('onInputChange')}
+      onFloatingLabelInit={() => action('onFloatingLabelInit')()}
     />
-)
+  ),
 
-FloatingLabel.story = {
-    name: 'Floating label'
-}
+  name: 'Floating label',
+};
 
-export const FloatingLabelTypeDate = () => (
+export const FloatingLabelTypeDate = {
+  render: () => (
     <EbayTextbox
-        type="date"
-        floatingLabel="Floating label"
-        onChange={action('onChange')}
-        onInputChange={action('onInputChange')}
-        onFloatingLabelInit={() => action('onFloatingLabelInit')()}
+      type="date"
+      floatingLabel="Floating label"
+      onChange={action('onChange')}
+      onInputChange={action('onInputChange')}
+      onFloatingLabelInit={() => action('onFloatingLabelInit')()}
     />
-)
+  ),
 
-FloatingLabelTypeDate.story = {
-    name: 'Floating label type date'
-}
+  name: 'Floating label type date',
+};
 
-export const FloatingLabelWithValue = () => (
+export const FloatingLabelWithValue = {
+  render: () => (
     <EbayTextbox
-        onChange={action('textbox-changed')}
-        floatingLabel="Floating label"
-        defaultValue="Default value"
+      onChange={action('textbox-changed')}
+      floatingLabel="Floating label"
+      defaultValue="Default value"
     />
-)
+  ),
 
-FloatingLabelWithValue.story = {
-    name: 'Floating label with value'
-}
+  name: 'Floating label with value',
+};
 
-export const FloatingLabelInvalid = () => (
+export const FloatingLabelInvalid = {
+  render: () => (
     <EbayTextbox
-        invalid
-        onChange={action('textbox-changed')}
-        floatingLabel="Invalid Floating label"
+      invalid
+      onChange={action('textbox-changed')}
+      floatingLabel="Invalid Floating label"
     />
-)
+  ),
 
-FloatingLabelInvalid.story = {
-    name: 'Floating label invalid'
-}
+  name: 'Floating label invalid',
+};
 
-export const FloatingLabelWithAutofocus = () => (
+export const FloatingLabelWithAutofocus = {
+  render: () => (
     <>
-        <p>
-            <EbayTextbox floatingLabel="Regular field" />
-        </p>
-        <p>
-            <EbayTextbox floatingLabel="Autofocused field" autoFocus onFocus={action('onFocus')} />
-        </p>
+      <p>
+        <EbayTextbox floatingLabel="Regular field" />
+      </p>
+      <p>
+        <EbayTextbox floatingLabel="Autofocused field" autoFocus onFocus={action('onFocus')} />
+      </p>
     </>
-)
+  ),
 
-FloatingLabelWithAutofocus.story = {
-    name: 'Floating label with autofocus'
-}
+  name: 'Floating label with autofocus',
+};
 
-export const FloatingLabelWithPlaceholderControlled = () => {
+export const FloatingLabelWithPlaceholderControlled = {
+  render: () => {
     const Component = () => {
-        const [value, setValue] = useState('')
+      const [value, setValue] = useState('');
 
-        const handleOnChange = (e, { value: newValue }) => {
-            setValue(newValue.toLowerCase())
-        }
+      const handleOnChange = (e, { value: newValue }) => {
+        setValue(newValue.toLowerCase());
+      };
 
-        return (
-            <>
-                <p>
-                    <EbayTextbox
-                        floatingLabel="Will convert to lowercase"
-                        placeholder="Enter some UPPERCASE"
-                        onChange={handleOnChange}
-                        value={value}
-                        size={30}
-                    />
-                </p>
-                <p>
-                    <EbayButton
-                        onClick={() => {
-                            setValue('changed text')
-                        }}
-                    >
-                        Change text
-                    </EbayButton>
-                </p>
-                <p>
-                    <EbayButton
-                        onClick={() => {
-                            setValue('')
-                        }}
-                    >
-                        Clear
-                    </EbayButton>
-                </p>
-            </>
-        )
-    }
+      return (
+        <>
+          <p>
+            <EbayTextbox
+              floatingLabel="Will convert to lowercase"
+              placeholder="Enter some UPPERCASE"
+              onChange={handleOnChange}
+              value={value}
+              size={30}
+            />
+          </p>
+          <p>
+            <EbayButton
+              onClick={() => {
+                setValue('changed text');
+              }}
+            >
+              Change text
+            </EbayButton>
+          </p>
+          <p>
+            <EbayButton
+              onClick={() => {
+                setValue('');
+              }}
+            >
+              Clear
+            </EbayButton>
+          </p>
+        </>
+      );
+    };
 
     return (
-        <>
-            <Component />
-        </>
-    )
-}
+      <>
+        <Component />
+      </>
+    );
+  },
 
-FloatingLabelWithPlaceholderControlled.story = {
-    name: 'Floating label with placeholder, controlled'
-}
+  name: 'Floating label with placeholder, controlled',
+};
 
-export const FloatingLabelWithMultiline = () => (
+export const FloatingLabelWithMultiline = {
+  render: () => (
     <EbayTextbox onChange={action('textbox-changed')} floatingLabel="Floating label" multiline />
-)
+  ),
 
-FloatingLabelWithMultiline.story = {
-    name: 'Floating label with multiline'
-}
+  name: 'Floating label with multiline',
+};
 
-export const FloatingLabelWithMultilineAndOpaqueLabel = () => (
+export const FloatingLabelWithMultilineAndOpaqueLabel = {
+  render: () => (
     <EbayTextbox
-        onChange={action('textbox-changed')}
-        floatingLabel="Floating label"
-        multiline
-        opaqueLabel
+      onChange={action('textbox-changed')}
+      floatingLabel="Floating label"
+      multiline
+      opaqueLabel
     />
-)
+  ),
 
-FloatingLabelWithMultilineAndOpaqueLabel.story = {
-    name: 'Floating label with multiline and opaque label'
-}
+  name: 'Floating label with multiline and opaque label',
+};

@@ -1,16 +1,6 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { fireEvent, render } from '@testing-library/react';
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayIconButton } from '../../ebay-icon-button';
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-})
 
 const anySyntheticEvent = expect.objectContaining( { type: null })
 

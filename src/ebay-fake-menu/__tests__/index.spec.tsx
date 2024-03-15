@@ -1,11 +1,6 @@
 import React  from 'react'
 import { fireEvent, render } from '@testing-library/react';
-import initStoryshots from '@storybook/addon-storyshots'
 import { EbayFakeMenu, EbayFakeMenuItem } from '../index'
-
-initStoryshots({
-    config: ({ configure }) => configure(() => require('./index.stories'), module)
-})
 
 const anySyntheticEvent = expect.objectContaining( { type: null })
 

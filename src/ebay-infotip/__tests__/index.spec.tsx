@@ -1,7 +1,5 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
@@ -107,12 +105,4 @@ describe('<EbayInfotip>', () => {
             expect(host).toHaveFocus()
         })
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
 })

@@ -1,5 +1,5 @@
-import React, { ChangeEvent, KeyboardEvent } from 'react'
-import { action } from '../../../.storybook/action'
+import React, { ChangeEvent } from 'react'
+import { action } from '@storybook/addon-actions'
 
 import { EbayListboxButton, EbayListboxButtonOption } from '../index'
 import StateFullTest from './statefull-test'
@@ -34,10 +34,6 @@ export const PreselectedIndex = () => (
     </>
 )
 
-PreselectedIndex.story = {
-    name: 'Preselected index'
-}
-
 export const DefaultNoSelectedOption = () => (
     <>
         <EbayListboxButton
@@ -50,33 +46,28 @@ export const DefaultNoSelectedOption = () => (
     </>
 )
 
-DefaultNoSelectedOption.story = {
-    name: 'Default - no selected option'
-}
+export const DefaultWithA11YPrefix = {
+    render: () => {
+        const listboxBtnLabel = 'listbox-button__label'
 
-export const DefaultWithA11YPrefix = () => {
-    const listboxBtnLabel = 'listbox-button__label'
-
-    return (
-        <>
-            <label id={listboxBtnLabel}>Select these items:</label>
-            <br />
-            <br />
-            <EbayListboxButton
-                value="BB"
-                prefixId={listboxBtnLabel}
-                onChange={(e, props) => action('onChange')(e, props)}
-            >
-                <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
-                <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
-                <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
-            </EbayListboxButton>
-        </>
-    )
-}
-
-DefaultWithA11YPrefix.story = {
-    name: 'Default - with a11y prefix'
+        return (
+            <>
+                <label id={listboxBtnLabel}>Select these items:</label>
+                <br/>
+                <br/>
+                <EbayListboxButton
+                    value="BB"
+                    prefixId={listboxBtnLabel}
+                    onChange={(e, props) => action('onChange')(e, props)}
+                >
+                    <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
+                    <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
+                </EbayListboxButton>
+            </>
+        )
+    },
+    name: 'Default with A11y Prefix'
 }
 
 export const DisabledState = () => (
@@ -110,24 +101,20 @@ export const Borderless = () => (
 )
 
 export const Fluid = () => (
-    <>
+    <div style={{ width: '500px' }}>
         <EbayListboxButton value="BB" fluid>
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
         </EbayListboxButton>
-    </>
+    </div>
 )
 
 export const StatefullComponent = () => (
     <>
-        <StateFullTest />
+        <StateFullTest/>
     </>
 )
-
-StatefullComponent.story = {
-    name: 'Statefull component'
-}
 
 export const TooManyOptions = () => (
     <>
@@ -175,34 +162,22 @@ export const TooManyOptions = () => (
     </>
 )
 
-TooManyOptions.story = {
-    name: 'Too many options'
-}
-
 export const PrefixLabel = () => (
     <>
-        <EbayListboxButton prefixLabel="Selected:">
+        <EbayListboxButton prefixLabel="Selected:" value="BB">
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
         </EbayListboxButton>
     </>
 )
-
-PrefixLabel.story = {
-    name: 'Prefix label'
-}
 
 export const FloatingLabel = () => (
     <>
-        <EbayListboxButton floatingLabel="Select">
+        <EbayListboxButton floatingLabel="Select" value="BB">
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
             <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
         </EbayListboxButton>
     </>
 )
-
-FloatingLabel.story = {
-    name: 'Floating label'
-}

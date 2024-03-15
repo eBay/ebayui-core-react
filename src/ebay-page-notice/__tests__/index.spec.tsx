@@ -1,8 +1,6 @@
 import React from 'react';
-import requireContext from 'node-require-context'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbayNoticeContent, EbayPageNotice, EbayPageNoticeTitle } from '../index';
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
@@ -85,12 +83,4 @@ describe('<EbayPageNotice>', () => {
             expect(dismissMock).toHaveBeenCalled()
         })
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
 })

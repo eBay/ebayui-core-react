@@ -109,7 +109,6 @@ const EbayInfotip: FC<InfotipProps> = ({
                     {...contentProps}
                     open={isExpanded}
                     onClose={collapseTooltip}
-                    mode="mini"
                     a11yCloseText={a11yCloseText}
                     className="dialog--mini__overlay"
                     a11yMaximizeText={a11yMaximizeText}

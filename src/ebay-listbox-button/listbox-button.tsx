@@ -239,7 +239,8 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 : optionsByIndexRef.current.set(index, optionNode)
         }))
     const wrapperClassName = classNames('listbox-button', className, { 'listbox-button--fluid': fluid })
-    const buttonClassName = classNames('btn btn--form', {
+    const buttonClassName = classNames('btn', {
+        'btn--form': !borderless,
         'btn--borderless': borderless,
         'btn--floating-label': floatingLabel && selectedOption
     })

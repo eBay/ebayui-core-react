@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { act, renderHook } from '@testing-library/react-hooks'
+import { act, renderHook } from '@testing-library/react-hooks/dom'
 import { fireEvent } from '@testing-library/react'
 import useRovingIndex from '../use-roving-index'
 

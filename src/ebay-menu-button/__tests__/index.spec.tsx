@@ -1,11 +1,6 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-import initStoryshots from '@storybook/addon-storyshots'
 import { EbayMenuButton, EbayMenuButtonItem } from '../index'
-
-initStoryshots({
-    config: ({ configure }) => configure(() => require('./index.stories.tsx'), module)
-})
 
 const spy = jest.fn()
 

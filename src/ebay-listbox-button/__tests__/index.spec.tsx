@@ -1,7 +1,5 @@
 import React from 'react';
-import requireContext from 'node-require-context'
 import { fireEvent, render, screen } from '@testing-library/react';
-import initStoryshots from '@storybook/addon-storyshots';
 import { EbayListboxButton, EbayListboxButtonOption } from '..';
 
 const { getByRole, getAllByRole } = screen
@@ -224,11 +222,3 @@ describe("<EbayListboxButton>", () => {
         })
     })
 });
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-})
