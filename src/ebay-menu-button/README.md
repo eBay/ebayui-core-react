@@ -5,7 +5,7 @@
 
 ## Install
 ```
-yarn add ebayui-core-react
+yarn add @ebay/ui-core-react
 ```
 
 ## Usage
