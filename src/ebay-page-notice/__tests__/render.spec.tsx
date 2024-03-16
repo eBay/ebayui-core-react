@@ -55,7 +55,7 @@ describe('ebay-page-notice rendering', () => {
         expect(svg).toHaveClass('icon icon--attention-filled-16')
         expect(svg).toHaveAttribute('aria-label', 'Attention')
 
-        const main = pageNotice.querySelector('.page-notice__main')
+        const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
         expect(header).toHaveClass('page-notice__title')
         expect(header).toHaveTextContent('Error.')
@@ -76,7 +76,7 @@ describe('ebay-page-notice rendering', () => {
         expect(svg).toHaveClass('icon icon--confirmation-filled-16')
         expect(svg).toHaveAttribute('aria-label', 'Success')
 
-        const main = pageNotice.querySelector('.page-notice__main')
+        const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
         expect(header).toHaveClass('page-notice__title')
         expect(header).toHaveTextContent('Congrats!')
@@ -97,7 +97,7 @@ describe('ebay-page-notice rendering', () => {
         expect(svg).toHaveClass('icon icon--information-filled-16')
         expect(svg).toHaveAttribute('aria-label', 'Information')
 
-        const main = pageNotice.querySelector('.page-notice__main')
+        const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
         expect(header).toHaveClass('page-notice__title')
         expect(header).toHaveTextContent('Good news!')
@@ -118,17 +118,17 @@ describe('ebay-page-notice rendering', () => {
         expect(svg).toHaveClass('icon icon--information-filled-16')
         expect(svg).toHaveAttribute('aria-label', 'Congratulations')
 
-        const main = pageNotice.querySelector('.page-notice__main')
+        const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
         expect(header).toHaveClass('page-notice__title')
         expect(header).toHaveTextContent('Your order\'s in!')
         expect(main.querySelector('p')).toHaveTextContent('We\'ll email updates to jonsnow@gmail.com. You should get it by Thu, Sept 22.')
 
-        const cta = pageNotice.querySelector('.page-notice__cta')
+        const cta: HTMLElement = pageNotice.querySelector('.page-notice__cta')
         expect(within(cta).getByRole('link')).toHaveAttribute('href', 'https://ebay.com')
         expect(cta).toHaveTextContent('Action')
 
-        const footer = pageNotice.querySelector('.page-notice__footer')
+        const footer: HTMLElement = pageNotice.querySelector('.page-notice__footer')
         const buttonClose = within(footer).getByRole('button', { name: 'Close'})
         expect(buttonClose).toHaveClass('fake-link page-notice__dismiss')
         expect(buttonClose.querySelector('svg')).toHaveClass('icon icon--close-16')
@@ -148,13 +148,13 @@ describe('ebay-page-notice rendering', () => {
         expect(svg).toHaveClass('icon icon--confirmation-filled-16')
         expect(svg).toHaveAttribute('aria-label', 'Congratulations')
 
-        const main = pageNotice.querySelector('.page-notice__main')
+        const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
         expect(header).toHaveClass('page-notice__title')
         expect(header).toHaveTextContent('Your order\'s in!')
         expect(main.querySelector('p')).toHaveTextContent('We\'ll email updates to jonsnow@gmail.com. You should get it by Thu, Sept 22.')
 
-        const footer = pageNotice.querySelector('.page-notice__footer')
+        const footer: HTMLElement = pageNotice.querySelector('.page-notice__footer')
         const link = within(footer).getByRole('link', { name: 'Action'})
         expect(link).toHaveAttribute('href', 'https://ebay.com')
     })
@@ -173,7 +173,7 @@ describe('ebay-page-notice rendering', () => {
         expect(svg).toHaveClass('icon icon--information-filled-16')
         expect(svg).toHaveAttribute('aria-label', 'Information')
 
-        const main = pageNotice.querySelector('.page-notice__main')
+        const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
         expect(header).toHaveClass('page-notice__title')
         expect(header).toHaveTextContent('Good news!')

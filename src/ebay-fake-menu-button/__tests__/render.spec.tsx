@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAllByRole, getByRole, render, screen } from '@testing-library/react'
+import { getAllByRole, getByRole, render, screen, within } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
 import Meta, {
     Borderless,
@@ -30,7 +30,7 @@ const WithSeparatorStory = composeStory(WithSeparator, Meta);
 describe('ebay-fake-menu-button rendering', () => {
     it('renders default story correctly', () => {
         const { container } = render(<DefaultStory />);
-        const buttonContainer = container.querySelector('.fake-menu-button');
+        const buttonContainer: HTMLElement = container.querySelector('.fake-menu-button');
         const button = getByRole(buttonContainer, 'button');
         expect(button).toHaveAttribute('aria-expanded', 'false');
         expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -42,13 +42,13 @@ describe('ebay-fake-menu-button rendering', () => {
 
     it('renders expanded story correctly', () => {
         const { container } = render(<ExpandedStory />);
-        const buttonContainer = container.querySelector('.fake-menu-button');
+        const buttonContainer: HTMLElement = container.querySelector('.fake-menu-button');
         const button = getByRole(buttonContainer, 'button');
         expect(button).toHaveAttribute('aria-expanded', 'true');
         expect(button).toHaveAttribute('aria-haspopup', 'true');
         expect(button).toHaveClass('btn fake-menu-button__button btn--secondary');
         expect(button).toHaveTextContent('eBay Menu');
-        const menu = buttonContainer.querySelector('.fake-menu')
+        const menu: HTMLElement = buttonContainer.querySelector('.fake-menu')
         expect(menu).toHaveClass('fake-menu-button__menu');
         expect(menu).toHaveAttribute('tabindex', '-1');
         const itemList = getByRole(menu, 'list');
@@ -68,7 +68,7 @@ describe('ebay-fake-menu-button rendering', () => {
 
     it('renders disabled story correctly', () => {
         const { container } = render(<DisabledStory />);
-        const buttonContainer = container.querySelector('.fake-menu-button');
+        const buttonContainer: HTMLElement = container.querySelector('.fake-menu-button');
         const button = getByRole(buttonContainer, 'button');
         expect(button).toHaveAttribute('aria-expanded', 'false');
         expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -81,7 +81,7 @@ describe('ebay-fake-menu-button rendering', () => {
 
     it('renders borderless story correctly', () => {
         const { container } = render(<BorderlessStory />);
-        const buttonContainer = container.querySelector('.fake-menu-button');
+        const buttonContainer: HTMLElement = container.querySelector('.fake-menu-button');
         const button = getByRole(buttonContainer, 'button');
         expect(button).toHaveAttribute('aria-expanded', 'false');
         expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -93,7 +93,7 @@ describe('ebay-fake-menu-button rendering', () => {
 
     it('renders fixed width story correctly', () => {
         const { container } = render(<FixedWidthStory expanded />);
-        const buttonContainer = container.querySelector('.fake-menu-button');
+        const buttonContainer: HTMLElement = container.querySelector('.fake-menu-button');
         const button = getByRole(buttonContainer, 'button');
         expect(button).toHaveAttribute('aria-expanded', 'true');
         expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -126,8 +126,8 @@ describe('ebay-fake-menu-button rendering', () => {
         expect(buttonOverflow).toHaveClass('fake-menu-button__button icon-btn');
         expect(buttonOverflow).toHaveAttribute('aria-label', 'Menu');
         expect(buttonOverflow).toHaveAttribute('type', 'button');
-        expect(buttonOverflow).not.toHaveTextContent();
         expect(buttonOverflow.querySelector('svg')).toHaveClass('icon icon--overflow-horizontal-24');
+        expect(buttonOverflow).toHaveTextContent('');
     })
 
     it('renders with icon story correctly', () => {
@@ -155,11 +155,12 @@ describe('ebay-fake-menu-button rendering', () => {
         const button = screen.getByRole('button');
         expect(button).toHaveTextContent('Complex menu');
         const menu = screen.getByRole('list');
-        const [link1, link2, separator, link3] = getAllByRole(menu, 'listitem');
+        const [link1, link2, separatorItem, link3] = getAllByRole(menu, 'listitem');
         expect(link1).toHaveTextContent('Link 1');
         expect(link2).toHaveTextContent('Current link');
-        expect(separator).not.toHaveTextContent();
-        expect(separator.querySelector('hr')).toHaveRole('separator');
+        const separator = within(separatorItem).getByRole('separator')
+        expect(separator).toHaveClass('fake-menu-button__item menu-button__separator')
+        expect(separator).toHaveTextContent('');
         expect(link3).toHaveTextContent('Link 3 (disabled)');
     })
 })

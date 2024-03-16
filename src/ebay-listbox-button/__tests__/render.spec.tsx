@@ -19,7 +19,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders default listbox button correctly', () => {
         const { container } = render(<Default/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button', { name: 'Option 2' })
         expect(button).toHaveClass('btn btn--form')
         expect(button).toHaveAttribute('aria-expanded', 'false')
@@ -40,7 +40,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders preselected index correctly', () => {
         const { container } = render(<PreselectedIndex/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button', { name: 'Option 2' })
         expect(button).toHaveClass('btn btn--form')
         expect(button).toHaveAttribute('aria-expanded', 'false')
@@ -52,7 +52,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders default listbox button without selected option correctly', () => {
         const { container } = render(<DefaultNoSelectedOption/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button', { name: '-' })
         expect(button).toHaveClass('btn btn--form')
         expect(button).toHaveAttribute('aria-expanded', 'false')
@@ -64,7 +64,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders borderless listbox button correctly', () => {
         const { container } = render(<Borderless/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button', { name: 'Option 2' })
         expect(button).toHaveClass('btn btn--borderless')
         expect(button).toHaveAttribute('aria-expanded', 'false')
@@ -76,7 +76,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders fluid listbox button correctly', () => {
         const { container } = render(<Fluid/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         expect(listboxButton).toHaveClass('listbox-button--fluid')
         const button = within(listboxButton).getByRole('button', { name: 'Option 2' })
         expect(button).toHaveClass('btn btn--form')
@@ -89,7 +89,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders disabled state correctly', () => {
         const { container } = render(<DisabledState/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button', { name: 'Option 2' })
         expect(button).toHaveClass('btn btn--form')
         expect(button).toHaveAttribute('aria-expanded', 'false')
@@ -102,7 +102,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders invalid state correctly', () => {
         const { container } = render(<InvalidState/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button', { name: 'Option 2' })
         expect(button).toHaveClass('btn btn--form')
         expect(button).toHaveAttribute('aria-expanded', 'false')
@@ -115,7 +115,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders prefix label correctly', () => {
         const { container } = render(<PrefixLabel/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button', { name: 'Selected: Option 2' })
         expect(button).toHaveClass('btn btn--form')
         expect(button).toHaveAttribute('aria-expanded', 'false')
@@ -127,7 +127,7 @@ describe('ebay-listbox-button rendering', () => {
     it('renders floating label correctly', () => {
         const { container } = render(<FloatingLabel/>)
 
-        const listboxButton = container.querySelector('.listbox-button')
+        const listboxButton: HTMLElement = container.querySelector('.listbox-button')
         const button = within(listboxButton).getByRole('button')
         expect(button).toHaveClass('btn btn--form')
         expect(button).toHaveAttribute('aria-expanded', 'false')

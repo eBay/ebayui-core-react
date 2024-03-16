@@ -48,7 +48,7 @@ describe('ebay-tourtip rendering', () => {
         expect(overlay.querySelector('.tourtip__pointer.tourtip__pointer--bottom')).toBeInTheDocument()
         expect(overlay.querySelector('.tourtip__mask .tourtip__cell .tourtip__content p')).toHaveTextContent('Lorem ipsum dolor sit amet consectetur adipisicing elit.')
 
-        const footer = overlay.querySelector('.tourtip__footer')
+        const footer: HTMLElement = overlay.querySelector('.tourtip__footer')
         expect(footer.querySelector('.tourtip__index')).toHaveTextContent('1 / 3')
         expect(within(footer).getByRole('button', { name: 'Back' })).toHaveClass('fake-link')
         expect(within(footer).getByRole('button', { name: 'Next' })).toHaveClass('btn btn--primary')
@@ -72,7 +72,7 @@ describe('ebay-tourtip rendering', () => {
         const heading = overlay.querySelector('.tourtip__heading')
         expect(heading).toHaveTextContent('Title')
 
-        const footer = overlay.querySelector('.tourtip__footer')
+        const footer: HTMLElement = overlay.querySelector('.tourtip__footer')
         expect(footer.querySelector('.tourtip__index')).toHaveTextContent('1 / 3')
         expect(within(footer).getByRole('button', { name: 'Back' })).toHaveClass('fake-link')
         expect(within(footer).getByRole('button', { name: 'Next' })).toHaveClass('btn btn--primary')
@@ -115,7 +115,7 @@ describe('ebay-tourtip rendering', () => {
         ] = container.querySelectorAll('.tourtip')
         expect(tourtipTop).toHaveClass('tourtip--expanded')
 
-        const tourtipButtonTop = within(tourtipTop).getByRole('link', { name: 'top' })
+        const tourtipButtonTop = within(tourtipTop as HTMLElement).getByRole('link', { name: 'top' })
         expect(tourtipButtonTop).toHaveClass('tourtip__host')
         expect(tourtipButtonTop).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonTop).toHaveAttribute('href', 'https://www.ebay.com')
@@ -123,7 +123,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayTop = tourtipTop.querySelector('.tourtip__overlay')
         expect(overlayTop.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--top')
 
-        const tourtipButtonTopLeft = within(tourtipTopLeft).getByRole('link', { name: 'top-left' })
+        const tourtipButtonTopLeft = within(tourtipTopLeft as HTMLElement).getByRole('link', { name: 'top-left' })
         expect(tourtipButtonTopLeft).toHaveClass('tourtip__host')
         expect(tourtipButtonTopLeft).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonTopLeft).toHaveAttribute('href', 'https://www.ebay.com')
@@ -131,7 +131,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayTopLeft = tourtipTopLeft.querySelector('.tourtip__overlay')
         expect(overlayTopLeft.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--top-left')
 
-        const tourtipButtonTopRight = within(tourtipTopRight).getByRole('link', { name: 'top-right' })
+        const tourtipButtonTopRight = within(tourtipTopRight as HTMLElement).getByRole('link', { name: 'top-right' })
         expect(tourtipButtonTopRight).toHaveClass('tourtip__host')
         expect(tourtipButtonTopRight).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonTopRight).toHaveAttribute('href', 'https://www.ebay.com')
@@ -139,7 +139,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayTopRight = tourtipTopRight.querySelector('.tourtip__overlay')
         expect(overlayTopRight.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--top-right')
 
-        const tourtipButtonRight = within(tourtipRight).getByRole('link', { name: 'right' })
+        const tourtipButtonRight = within(tourtipRight as HTMLElement).getByRole('link', { name: 'right' })
         expect(tourtipButtonRight).toHaveClass('tourtip__host')
         expect(tourtipButtonRight).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonRight).toHaveAttribute('href', 'https://www.ebay.com')
@@ -147,7 +147,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayRight = tourtipRight.querySelector('.tourtip__overlay')
         expect(overlayRight.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--right')
 
-        const tourtipButtonRightBottom = within(tourtipRightBottom).getByRole('link', { name: 'right-bottom' })
+        const tourtipButtonRightBottom = within(tourtipRightBottom as HTMLElement).getByRole('link', { name: 'right-bottom' })
         expect(tourtipButtonRightBottom).toHaveClass('tourtip__host')
         expect(tourtipButtonRightBottom).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonRightBottom).toHaveAttribute('href', 'https://www.ebay.com')
@@ -155,7 +155,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayRightBottom = tourtipRightBottom.querySelector('.tourtip__overlay')
         expect(overlayRightBottom.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--right-bottom')
 
-        const tourtipButtonRightTop = within(tourtipRightTop).getByRole('link', { name: 'right-top' })
+        const tourtipButtonRightTop = within(tourtipRightTop as HTMLElement).getByRole('link', { name: 'right-top' })
         expect(tourtipButtonRightTop).toHaveClass('tourtip__host')
         expect(tourtipButtonRightTop).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonRightTop).toHaveAttribute('href', 'https://www.ebay.com')
@@ -163,7 +163,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayRightTop = tourtipRightTop.querySelector('.tourtip__overlay')
         expect(overlayRightTop.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--right-top')
 
-        const tourtipButtonBottom = within(tourtipBottom).getByRole('link', { name: 'bottom' })
+        const tourtipButtonBottom = within(tourtipBottom as HTMLElement).getByRole('link', { name: 'bottom' })
         expect(tourtipButtonBottom).toHaveClass('tourtip__host')
         expect(tourtipButtonBottom).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonBottom).toHaveAttribute('href', 'https://www.ebay.com')
@@ -171,7 +171,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayBottom = tourtipBottom.querySelector('.tourtip__overlay')
         expect(overlayBottom.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--bottom')
 
-        const tourtipButtonBottomLeft = within(tourtipBottomLeft).getByRole('link', { name: 'bottom-left' })
+        const tourtipButtonBottomLeft = within(tourtipBottomLeft as HTMLElement).getByRole('link', { name: 'bottom-left' })
         expect(tourtipButtonBottomLeft).toHaveClass('tourtip__host')
         expect(tourtipButtonBottomLeft).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonBottomLeft).toHaveAttribute('href', 'https://www.ebay.com')
@@ -179,7 +179,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayBottomLeft = tourtipBottomLeft.querySelector('.tourtip__overlay')
         expect(overlayBottomLeft.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--bottom-left')
 
-        const tourtipButtonBottomRight = within(tourtipBottomRight).getByRole('link', { name: 'bottom-right' })
+        const tourtipButtonBottomRight = within(tourtipBottomRight as HTMLElement).getByRole('link', { name: 'bottom-right' })
         expect(tourtipButtonBottomRight).toHaveClass('tourtip__host')
         expect(tourtipButtonBottomRight).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonBottomRight).toHaveAttribute('href', 'https://www.ebay.com')
@@ -187,7 +187,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayBottomRight = tourtipBottomRight.querySelector('.tourtip__overlay')
         expect(overlayBottomRight.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--bottom-right')
 
-        const tourtipButtonLeft = within(tourtipLeft).getByRole('link', { name: 'left' })
+        const tourtipButtonLeft = within(tourtipLeft as HTMLElement).getByRole('link', { name: 'left' })
         expect(tourtipButtonLeft).toHaveClass('tourtip__host')
         expect(tourtipButtonLeft).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonLeft).toHaveAttribute('href', 'https://www.ebay.com')
@@ -195,7 +195,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayLeft = tourtipLeft.querySelector('.tourtip__overlay')
         expect(overlayLeft.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--left')
 
-        const tourtipButtonLeftBottom = within(tourtipLeftBottom).getByRole('link', { name: 'left-bottom' })
+        const tourtipButtonLeftBottom = within(tourtipLeftBottom as HTMLElement).getByRole('link', { name: 'left-bottom' })
         expect(tourtipButtonLeftBottom).toHaveClass('tourtip__host')
         expect(tourtipButtonLeftBottom).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonLeftBottom).toHaveAttribute('href', 'https://www.ebay.com')
@@ -203,7 +203,7 @@ describe('ebay-tourtip rendering', () => {
         const overlayLeftBottom = tourtipLeftBottom.querySelector('.tourtip__overlay')
         expect(overlayLeftBottom.querySelector('.tourtip__pointer')).toHaveClass('tourtip__pointer--left-bottom')
 
-        const tourtipButtonLeftTop = within(tourtipLeftTop).getByRole('link', { name: 'left-top' })
+        const tourtipButtonLeftTop = within(tourtipLeftTop as HTMLElement).getByRole('link', { name: 'left-top' })
         expect(tourtipButtonLeftTop).toHaveClass('tourtip__host')
         expect(tourtipButtonLeftTop).toHaveAttribute('aria-expanded', 'true')
         expect(tourtipButtonLeftTop).toHaveAttribute('href', 'https://www.ebay.com')

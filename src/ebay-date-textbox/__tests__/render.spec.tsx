@@ -11,7 +11,7 @@ describe('ebay-date-textbox rendering', () => {
     it('renders default story correctly', () => {
         const { container } = render(<Default/>)
 
-        const dateTextbox = container.querySelector('.date-textbox')
+        const dateTextbox: HTMLElement = container.querySelector('.date-textbox')
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const textbox = dateTextbox.querySelector('.textbox')
@@ -48,19 +48,19 @@ describe('ebay-date-textbox rendering', () => {
         const [textboxStart, textboxEnd] = dateTextbox.querySelectorAll('.textbox')
         expect(textboxEnd).toHaveClass('ebay-date-textbox--main textbox--icon-end')
 
-        const inputStart = within(textboxStart).getByRole('textbox')
+        const inputStart = within(textboxStart as HTMLElement).getByRole('textbox')
         expect(inputStart).toHaveAttribute('type', 'text')
         expect(inputStart).toHaveAttribute('placeholder', 'YYYY-MM-DD')
         expect(inputStart).toHaveClass('textbox__control')
         expect(inputStart).toHaveValue('')
 
-        const inputEnd = within(textboxStart).getByRole('textbox')
+        const inputEnd = within(textboxStart as HTMLElement).getByRole('textbox')
         expect(inputEnd).toHaveAttribute('type', 'text')
         expect(inputEnd).toHaveAttribute('placeholder', 'YYYY-MM-DD')
         expect(inputEnd).toHaveClass('textbox__control')
         expect(inputEnd).toHaveValue('')
 
-        const button = within(textboxEnd).getByRole('button')
+        const button = within(textboxEnd as HTMLElement).getByRole('button')
         expect(button).toHaveClass('icon-btn icon-btn--transparent')
         expect(button).toHaveAttribute('aria-label', 'open calendar')
         expect(button).toHaveAttribute('type', 'button')
@@ -79,7 +79,7 @@ describe('ebay-date-textbox rendering', () => {
     it('renders controlled values story correctly', () => {
         const { container } = render(<ControlledValues value="2024-01-03" />)
 
-        const dateTextbox = container.querySelector('.date-textbox')
+        const dateTextbox: HTMLElement = container.querySelector('.date-textbox')
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const textbox = dateTextbox.querySelector('.textbox')

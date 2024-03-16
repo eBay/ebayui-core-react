@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es2015",
         "module": "commonjs",
         "lib": [
             "dom",
-            "es2019",
+            "es2020",
             "dom.iterable"
         ],
         "allowJs": false,
