@@ -67,7 +67,6 @@
     "@storybook/addon-storysource": "^7.6.12",
     "@storybook/react": "^7.6.12",
     "@storybook/react-webpack5": "^7.6.12",
-    "@storybook/storybook-deployer": "^2.8.11",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^12",
