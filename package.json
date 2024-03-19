@@ -15,7 +15,7 @@
     "format": "eslint . --fix 'src/**/*.{ts,tsx}'",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 9001 -c .storybook",
     "storybook-node16": "storybook dev -p 9001 -c .storybook",
-    "build-storybook": "yarn storybook build",
+    "build-storybook": "storybook build",
     "test": "yarn jest",
     "build": "yarn typecheck && yarn tsc",
     "typecheck": "tsc --project tsconfig.typecheck.json",
