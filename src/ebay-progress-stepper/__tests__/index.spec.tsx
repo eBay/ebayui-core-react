@@ -10,7 +10,7 @@ const VerticalColumnStory = composeStory(VerticalColumn, Meta)
 
 describe('ebay-progress-stepper rendering', () => {
     it('renders default story correctly', () => {
-        render(<DefaultStory/>)
+        render(<DefaultStory />)
         const stepper = screen.getByRole('list')
         expect(stepper).toHaveClass('progress-stepper__items')
 
@@ -59,7 +59,7 @@ describe('ebay-progress-stepper rendering', () => {
     })
 
     it('renders blocked story correctly', () => {
-        render(<BlockedStory/>)
+        render(<BlockedStory />)
 
         const [stepStarted, stepShipped, stepBlocked, stepDelivered] = screen.getAllByRole('listitem')
         expect(stepStarted).toHaveClass('progress-stepper__item')
@@ -91,7 +91,7 @@ describe('ebay-progress-stepper rendering', () => {
     })
 
     it('renders custom titles story correctly', () => {
-        render(<CustomTitlesStory/>)
+        render(<CustomTitlesStory />)
 
         const [step1, step2, step3] = screen.getAllByRole('listitem')
         expect(step1).toHaveClass('progress-stepper__item')
@@ -120,7 +120,7 @@ describe('ebay-progress-stepper rendering', () => {
     })
 
     it('renders vertical column story correctly', () => {
-        const { container } = render(<VerticalColumnStory/>)
+        const { container } = render(<VerticalColumnStory />)
 
         const stepper = container.querySelector('.progress-stepper')
         expect(stepper).toHaveClass('progress-stepper--vertical')

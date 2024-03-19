@@ -5,15 +5,15 @@ import { EbayTourtip, EbayTourtipContent, EbayTourtipFooter, EbayTourtipHeading,
 
 
 const renderComponent = (props?: any) => render(
-    <EbayTourtip a11yCloseText='close' pointer='bottom' {...props}>
+    <EbayTourtip a11yCloseText="close" pointer="bottom" {...props}>
         <EbayTourtipHost>
             <EbayButton>Info</EbayButton>
         </EbayTourtipHost>
-        <EbayTourtipHeading type='tourtip'>Title</EbayTourtipHeading>
+        <EbayTourtipHeading type="tourtip">Title</EbayTourtipHeading>
         <EbayTourtipContent>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </EbayTourtipContent>
-        <EbayTourtipFooter index='1 / 3'>
+        <EbayTourtipFooter index="1 / 3">
             <button className="fake-link">Back</button>
             <button className="btn btn--primary">Next</button>
         </EbayTourtipFooter>
@@ -71,16 +71,18 @@ describe('<EbayTourtip>', () => {
         it('should throw an error', () => {
             jest.spyOn(console, 'error').mockImplementation(() => null)
             expect(() => {
-                render(<EbayTourtip a11yCloseText='close' pointer='bottom' >
-                <EbayTourtipHeading type='tourtip'>Title</EbayTourtipHeading>
-                <EbayTourtipContent>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </EbayTourtipContent>
-                <EbayTourtipFooter index='1 / 3'>
-                    <button className="fake-link">Back</button>
-                    <button className="btn btn--primary">Next</button>
-                </EbayTourtipFooter>
-            </EbayTourtip>)
+                render(
+                    <EbayTourtip a11yCloseText="close" pointer="bottom" >
+                        <EbayTourtipHeading type="tourtip">Title</EbayTourtipHeading>
+                        <EbayTourtipContent>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </EbayTourtipContent>
+                        <EbayTourtipFooter index="1 / 3">
+                            <button className="fake-link">Back</button>
+                            <button className="btn btn--primary">Next</button>
+                        </EbayTourtipFooter>
+                    </EbayTourtip>
+                )
             }).toThrowError(`EbayTourtip: Please use a EbayTourtipHost that defines the host of the tourtip`);
             (console.error as jest.Mock).mockRestore()
         })

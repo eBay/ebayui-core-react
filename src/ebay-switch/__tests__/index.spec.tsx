@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { EbaySwitch } from '../index'
 
-var anySyntheticEvent = expect.objectContaining({ type: null });
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbaySwitch>', () => {
     describe('on switch-button click', () => {

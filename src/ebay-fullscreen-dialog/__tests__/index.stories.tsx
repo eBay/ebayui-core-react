@@ -45,7 +45,7 @@ export const Default = () => {
 export const AlwaysOpened = () => (
     <div>
         <p>Some outside content...</p>
-        <EbayFullscreenDialog open={true} a11yCloseText="Close dialog">
+        <EbayFullscreenDialog open a11yCloseText="Close dialog">
             <EbayDialogHeader>Heading</EbayDialogHeader>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

@@ -3,7 +3,7 @@ import { render, fireEvent, screen } from '@testing-library/react'
 import { act } from '@testing-library/react-hooks/dom'
 
 import { EbayMenu, EbayMenuItem } from '../index'
-import { WithBadges, WithSeparator, Radio } from './index.stories';
+import { WithBadges, WithSeparator, Radio } from './index.stories'
 
 const onKeyDownSpy = jest.fn()
 const onClickSpy = jest.fn()
@@ -14,7 +14,7 @@ describe('<EbayMenu>', () => {
     describe('rendering', () => {
         describe('with separators', () => {
             beforeEach(() => {
-                render(<WithSeparator/>)
+                render(<WithSeparator />)
             })
 
             it('should render the menu', () => {
@@ -32,7 +32,7 @@ describe('<EbayMenu>', () => {
 
         describe('with badges', () => {
             beforeEach(() => {
-                render(<WithBadges/>)
+                render(<WithBadges />)
             })
 
             it('should render the menu', () => {

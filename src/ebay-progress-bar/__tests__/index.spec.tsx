@@ -9,8 +9,8 @@ const FluidStory = composeStory(Fluid, Meta)
 
 describe('ebay-progress-bar rendering', () => {
     it('renders default story correctly', () => {
-        const { container } = render(<DefaultStory/>)
-        const [ progressNone, progressHalf, progressFull ] = container.querySelectorAll('progress')
+        const { container } = render(<DefaultStory />)
+        const [progressNone, progressHalf, progressFull] = container.querySelectorAll('progress')
         expect(progressNone).toHaveAttribute('value', '0')
         expect(progressNone).toHaveAttribute('max', '100')
         expect(progressNone).toHaveClass('progress-bar')
@@ -23,8 +23,8 @@ describe('ebay-progress-bar rendering', () => {
     })
 
     it('renders custom max story correctly', () => {
-        const { container } = render(<CustomMaxStory/>)
-        const [ progressHalf, progressFull ] = container.querySelectorAll('progress')
+        const { container } = render(<CustomMaxStory />)
+        const [progressHalf, progressFull] = container.querySelectorAll('progress')
         expect(progressHalf).toHaveAttribute('value', '50')
         expect(progressHalf).toHaveAttribute('max', '200')
         expect(progressFull).toHaveAttribute('value', '100')
@@ -32,11 +32,10 @@ describe('ebay-progress-bar rendering', () => {
     })
 
     it('renders fluid story correctly', () => {
-        const { container } = render(<FluidStory/>)
+        const { container } = render(<FluidStory />)
         const progress = container.querySelector('progress')
         expect(progress).toHaveAttribute('value', '50')
         expect(progress).toHaveAttribute('max', '100')
         expect(progress).toHaveClass('progress-bar--fluid')
     })
-
 })

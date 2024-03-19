@@ -7,7 +7,7 @@ const { BasicLinks, ArrowsDisabled, Buttons, Fluid } = composeStories(stories)
 
 describe('ebay-pagination rendering', () => {
     it('renders basic links story correctly', () => {
-        const { container } = render(<BasicLinks/>)
+        const { container } = render(<BasicLinks />)
 
         const pagination = screen.getByRole('navigation')
         expect(pagination).toHaveClass('pagination')
@@ -60,7 +60,7 @@ describe('ebay-pagination rendering', () => {
     })
 
     it('renders arrows disabled story correctly', () => {
-        const { container } = render(<ArrowsDisabled/>)
+        const { container } = render(<ArrowsDisabled />)
 
         const linkPrev = container.querySelector('.pagination__previous')
         expect(linkPrev).toHaveAttribute('aria-label', 'Previous page')
@@ -72,7 +72,7 @@ describe('ebay-pagination rendering', () => {
     })
 
     it('renders buttons story correctly', () => {
-        const { container } = render(<Buttons/>)
+        const { container } = render(<Buttons />)
 
         const pagination = screen.getByRole('navigation')
         expect(pagination).toHaveClass('pagination')
@@ -121,7 +121,7 @@ describe('ebay-pagination rendering', () => {
     })
 
     it('renders fluid story correctly', () => {
-        render(<Fluid/>)
+        render(<Fluid />)
 
         const pagination = screen.getAllByRole('navigation')[0]
         expect(pagination).toHaveClass('pagination pagination--fluid')

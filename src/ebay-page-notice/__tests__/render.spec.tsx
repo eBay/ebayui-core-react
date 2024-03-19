@@ -16,7 +16,7 @@ const {
 
 describe('ebay-page-notice rendering', () => {
     it('renders simple usage story correctly', () => {
-        render(<SimpleUsage/>)
+        render(<SimpleUsage />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice')
@@ -25,7 +25,7 @@ describe('ebay-page-notice rendering', () => {
     })
 
     it('renders simple usage with id story correctly', () => {
-        render(<SimpleUsageWithId/>)
+        render(<SimpleUsageWithId />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice page-notice--confirmation')
@@ -42,7 +42,7 @@ describe('ebay-page-notice rendering', () => {
     })
 
     it('renders attention message story correctly', () => {
-        render(<AttentionMessage/>)
+        render(<AttentionMessage />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice page-notice--attention')
@@ -63,7 +63,7 @@ describe('ebay-page-notice rendering', () => {
     })
 
     it('renders confirmation message story correctly', () => {
-        render(<ConfirmationMessage/>)
+        render(<ConfirmationMessage />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice page-notice--confirmation')
@@ -84,7 +84,7 @@ describe('ebay-page-notice rendering', () => {
     })
 
     it('renders information message story correctly', () => {
-        render(<InformationMessage/>)
+        render(<InformationMessage />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice page-notice--information')
@@ -105,7 +105,7 @@ describe('ebay-page-notice rendering', () => {
     })
 
     it('renders dismissible message with cta story correctly', () => {
-        render(<DismissibleMessageWithCta/>)
+        render(<DismissibleMessageWithCta />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice page-notice--information')
@@ -129,13 +129,13 @@ describe('ebay-page-notice rendering', () => {
         expect(cta).toHaveTextContent('Action')
 
         const footer: HTMLElement = pageNotice.querySelector('.page-notice__footer')
-        const buttonClose = within(footer).getByRole('button', { name: 'Close'})
+        const buttonClose = within(footer).getByRole('button', { name: 'Close' })
         expect(buttonClose).toHaveClass('fake-link page-notice__dismiss')
         expect(buttonClose.querySelector('svg')).toHaveClass('icon icon--close-16')
     })
 
     it('renders message with footer story correctly', () => {
-        render(<MessageWithFooter/>)
+        render(<MessageWithFooter />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice page-notice--confirmation')
@@ -155,12 +155,12 @@ describe('ebay-page-notice rendering', () => {
         expect(main.querySelector('p')).toHaveTextContent('We\'ll email updates to jonsnow@gmail.com. You should get it by Thu, Sept 22.')
 
         const footer: HTMLElement = pageNotice.querySelector('.page-notice__footer')
-        const link = within(footer).getByRole('link', { name: 'Action'})
+        const link = within(footer).getByRole('link', { name: 'Action' })
         expect(link).toHaveAttribute('href', 'https://ebay.com')
     })
 
     it('renders dismissible notice story correctly', () => {
-        render(<DismissibleNotice/>)
+        render(<DismissibleNotice />)
 
         const pageNotice = screen.getByRole('region')
         expect(pageNotice).toHaveClass('page-notice page-notice--information')

@@ -71,7 +71,7 @@ describe('<EbayMenuButton>', () => {
                 index: 1,
                 indexes: [1],
                 checked: [1],
-                checkedValues: ["second"],
+                checkedValues: ['second']
             }
             expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
@@ -95,7 +95,7 @@ describe('<EbayMenuButton>', () => {
                 index: 1,
                 indexes: [1],
                 checked: [1],
-                checkedValues: ["second"],
+                checkedValues: ['second']
             }
 
             expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)

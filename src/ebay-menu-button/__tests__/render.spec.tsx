@@ -24,7 +24,7 @@ const {
 describe('EbayMenuButton rendering', () => {
     describe('Default', () => {
         it('should render correctly', () => {
-            render(<Default/>)
+            render(<Default />)
             const [firstButton] = screen.getAllByRole('button')
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
@@ -37,7 +37,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('Expanded', () => {
         it('should render correctly', () => {
-            render(<Expanded/>)
+            render(<Expanded />)
             const [firstButton] = screen.getAllByRole('button')
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
@@ -49,7 +49,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('Disabled', () => {
         it('should render correctly', () => {
-            render(<Disabled/>)
+            render(<Disabled />)
             const [firstButton] = screen.getAllByRole('button')
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
@@ -63,7 +63,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('WithIcon', () => {
         it('should render correctly', () => {
-            render(<WithIcon/>)
+            render(<WithIcon />)
             const [firstButton] = screen.getAllByRole('button')
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
@@ -79,7 +79,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('WithoutToggleIcon', () => {
         it('should render correctly', () => {
-            render(<WithoutToggleIcon/>)
+            render(<WithoutToggleIcon />)
             const [firstButton] = screen.getAllByRole('button')
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
@@ -90,7 +90,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('Variants', () => {
         it('should render correctly', () => {
-            render(<Variants/>)
+            render(<Variants />)
             const [firstButton, secondButton, thirdButton] = screen.getAllByRole('button')
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
@@ -115,7 +115,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('Priorities', () => {
         it('should render correctly', () => {
-            render(<Priorities/>)
+            render(<Priorities />)
             const [firstButton, secondButton] = screen.getAllByRole('button')
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--primary')
@@ -134,16 +134,15 @@ describe('EbayMenuButton rendering', () => {
 
     describe('Borderless', () => {
         it('should render correctly', () => {
-            render(<Borderless/>)
+            render(<Borderless />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--borderless')
-
         })
     })
 
     describe('WithCustomLabel', () => {
         it('should render correctly', () => {
-            render(<WithCustomLabel/>)
+            render(<WithCustomLabel />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
 
@@ -155,7 +154,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('WithSeparator', () => {
         it('should render correctly', () => {
-            render(<WithSeparator expanded/>)
+            render(<WithSeparator expanded />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
 
@@ -166,7 +165,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('SingleSelectMenuButtonItemChecked', () => {
         it('should render correctly', () => {
-            render(<SingleSelectMenuButtonItemChecked expanded/>)
+            render(<SingleSelectMenuButtonItemChecked expanded />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
 
@@ -179,7 +178,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('SingleSelectMenuButtonMenuChecked', () => {
         it('should render correctly', () => {
-            render(<SingleSelectMenuButtonMenuChecked expanded/>)
+            render(<SingleSelectMenuButtonMenuChecked expanded />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
 
@@ -192,7 +191,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('MultiSelectMenuButton', () => {
         it('should render correctly', () => {
-            render(<MultiSelectMenuButton expanded/>)
+            render(<MultiSelectMenuButton expanded />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
 
@@ -205,7 +204,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('FixedWidth', () => {
         it('should render correctly', () => {
-            render(<FixedWidth expanded/>)
+            render(<FixedWidth expanded />)
             const menu = screen.getByRole('menu')
             expect(menu.parentElement).toHaveClass('menu-button__menu menu-button__menu--fix-width menu')
         })
@@ -213,7 +212,7 @@ describe('EbayMenuButton rendering', () => {
 
     describe('ReverseMenuGrowsToTheLeft', () => {
         it('should render correctly', () => {
-            render(<ReverseMenuGrowsToTheLeft expanded/>)
+            render(<ReverseMenuGrowsToTheLeft expanded />)
             const menu = screen.getByRole('menu')
             expect(menu.parentElement).toHaveClass('menu-button__menu menu-button__menu--reverse')
         })

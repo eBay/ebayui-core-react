@@ -1,18 +1,18 @@
 import React from 'react'
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react'
 import { EbayPagination, EbayPaginationItem as Item } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
 jest.mock('react-dom', () => {
-  const original = jest.requireActual('react-dom');
-  return {
-    ...original,
-    createPortal: node => node,
-  };
-});
+    const original = jest.requireActual('react-dom')
+    return {
+        ...original,
+        createPortal: node => node
+    }
+})
 
-var anySyntheticEvent = expect.objectContaining({ type: null });
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayPagination>', () => {
     describe('on page click', () => {

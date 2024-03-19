@@ -9,15 +9,17 @@ const openSpy = jest.fn()
 
 describe('<EbayAlertDialog>', () => {
     beforeEach(() => {
-        render(<EbayAlertDialog
-            confirmText="Confirm"
-            open
-            onOpen={openSpy}
-            onConfirm={closeSpy}
-            a11yCloseText="Close"
-        >
-            <p>Lorem ipsum dolor</p>
-        </EbayAlertDialog>)
+        render(
+            <EbayAlertDialog
+                confirmText="Confirm"
+                open
+                onOpen={openSpy}
+                onConfirm={closeSpy}
+                a11yCloseText="Close"
+            >
+                <p>Lorem ipsum dolor</p>
+            </EbayAlertDialog>
+        )
     })
     it('should trigger onOpen when dialog appears', () => {
         expect(openSpy).toBeCalled()

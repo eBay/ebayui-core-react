@@ -9,7 +9,7 @@ const {
     ExpandedByDefault,
     CustomIcon,
     TextInsteadOfIcon,
-    _PointerDirection,
+    _PointerDirection: PointerDirection,
     Modal
 } = composeStories(stories)
 
@@ -17,7 +17,7 @@ jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
 describe('ebay-infotip rendering', () => {
     it('renders default story correctly', () => {
-        const { container } = render(<Default/>)
+        const { container } = render(<Default />)
 
         const infotip = container.querySelector('.infotip')
         expect(infotip).not.toHaveClass('infotip--expanded')
@@ -39,7 +39,7 @@ describe('ebay-infotip rendering', () => {
     })
 
     it('renders disabled story correctly', () => {
-        render(<Disabled/>)
+        render(<Disabled />)
 
         const infotipButton = screen.getByRole('button', { name: 'Infotip' })
         expect(infotipButton).toHaveAttribute('aria-expanded', 'false')
@@ -47,7 +47,7 @@ describe('ebay-infotip rendering', () => {
     })
 
     it('renders expanded by default story correctly', () => {
-        const { container } = render(<ExpandedByDefault/>)
+        const { container } = render(<ExpandedByDefault />)
 
         const infotip = container.querySelector('.infotip')
         expect(infotip).toHaveClass('infotip--expanded')
@@ -57,14 +57,14 @@ describe('ebay-infotip rendering', () => {
     })
 
     it('renders custom icon story correctly', () => {
-        render(<CustomIcon/>)
+        render(<CustomIcon />)
 
         const infotipButton = screen.getByRole('button', { name: 'Infotip' })
         expect(infotipButton.querySelector('svg')).toHaveClass('icon icon--settings-16')
     })
 
     it('renders text instead of icon story correctly', () => {
-        render(<TextInsteadOfIcon/>)
+        render(<TextInsteadOfIcon />)
 
         const infotipButton = screen.getByRole('button', { name: 'Click for infotip' })
         expect(infotipButton).toHaveTextContent('Click for infotip')
@@ -72,7 +72,7 @@ describe('ebay-infotip rendering', () => {
     })
 
     it('renders pointer direction story correctly', () => {
-        const { container } = render(<_PointerDirection expanded />)
+        const { container } = render(<PointerDirection expanded />)
 
         const [
             infotipTop, infotipTopLeft,

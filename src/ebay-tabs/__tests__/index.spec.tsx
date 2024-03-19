@@ -14,18 +14,18 @@ describe('<EbayTabs>', () => {
             tabs = screen.getAllByRole('tab')
             userEvent.tab()
         })
-        it ('should focus on the first tab', () => {
+        it('should focus on the first tab', () => {
             expect(tabs[0]).toHaveFocus()
         })
-        it ('should focus on the next tab on Right Arrow key press', () => {
+        it('should focus on the next tab on Right Arrow key press', () => {
             fireEvent.keyDown(tabs[0], { key: 'ArrowRight' })
             expect(tabs[1]).toHaveFocus()
         })
-        it ('should focus on the previous tab on Left Arrow key press', () => {
+        it('should focus on the previous tab on Left Arrow key press', () => {
             fireEvent.keyDown(tabs[0], { key: 'ArrowLeft' })
             expect(tabs[2]).toHaveFocus()
         })
-        it ('should loop focus on the first tab on Right Arrow key press', () => {
+        it('should loop focus on the first tab on Right Arrow key press', () => {
             fireEvent.keyDown(tabs[0], { key: 'ArrowLeft' })
             fireEvent.keyDown(tabs[2], { key: 'ArrowRight' })
             expect(tabs[0]).toHaveFocus()

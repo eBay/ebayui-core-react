@@ -1,9 +1,9 @@
 import React from 'react'
 import { screen, render } from '@testing-library/react'
-import { composeStory } from '@storybook/react';
-import Meta, { DefaultInline } from './index.stories';
+import { composeStory } from '@storybook/react'
+import Meta, { DefaultInline } from './index.stories'
 
-const DefaultStory = composeStory(DefaultInline, Meta);
+const DefaultStory = composeStory(DefaultInline, Meta)
 
 describe('DefaultInline story', () => {
     beforeEach(() => {

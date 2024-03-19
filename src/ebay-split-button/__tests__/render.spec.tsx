@@ -9,7 +9,7 @@ jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
 describe('ebay-split-button rendering', () => {
     it('renders split button correctly', () => {
-        const { container } = render(<Default/>)
+        const { container } = render(<Default />)
 
         const [splitButton, splitButtonWithSeparator, splitButtonTertiary] = container.querySelectorAll('.split-button')
         const buttonSave = within(splitButton as HTMLElement).getByRole('button', { name: 'Save document' })
@@ -47,7 +47,7 @@ describe('ebay-split-button rendering', () => {
     })
 
     it('renders disabled split button correctly', () => {
-        const { container } = render(<Disabled/>)
+        const { container } = render(<Disabled />)
 
         const splitButton: HTMLElement = container.querySelector('.split-button')
         const buttonSave = within(splitButton).getByRole('button', { name: 'Disabled Split Button' })
@@ -59,7 +59,7 @@ describe('ebay-split-button rendering', () => {
     })
 
     it('renders split button with controls correctly', () => {
-        const { container } = render(<Controls/>)
+        const { container } = render(<Controls />)
 
         const splitButton: HTMLElement = container.querySelector('.split-button')
         const buttonSave = within(splitButton).getByRole('button', { name: 'Save document' })
@@ -107,7 +107,7 @@ describe('ebay-split-button rendering', () => {
     })
 
     it('renders split button with size correctly', () => {
-        const { container } = render(<Size/>)
+        const { container } = render(<Size />)
 
         const splitButton = container.querySelector('.split-button') as HTMLElement
         const buttonSave = within(splitButton).getByRole('button', { name: 'Primary multi-select' })
@@ -123,7 +123,7 @@ describe('ebay-split-button rendering', () => {
     })
 
     it('renders transparent split button correctly', () => {
-        const { container } = render(<Transparent/>)
+        const { container } = render(<Transparent />)
 
         const splitButton: HTMLElement = container.querySelector('.split-button')
         const buttonSave = within(splitButton).getByRole('button', { name: 'Transparent split button' })
@@ -153,5 +153,4 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
         expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
     })
-
 })

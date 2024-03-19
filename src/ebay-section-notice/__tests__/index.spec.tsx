@@ -1,10 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { EbayButton } from '../../ebay-button';
-import { EbayNoticeContent, EbaySectionNotice } from '../index';
-import userEvent from '@testing-library/user-event';
+import React from 'react'
+import { render } from '@testing-library/react'
+import { EbayButton } from '../../ebay-button'
+import { EbayNoticeContent, EbaySectionNotice } from '../index'
+import userEvent from '@testing-library/user-event'
 
-var anySyntheticEvent = expect.objectContaining({ type: null });
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbaySectionNotice>', () => {
     describe('when a button is added in the children of the main section notice', () => {
@@ -59,11 +59,11 @@ describe('<EbaySectionNotice>', () => {
     })
 
     describe('when allyDismissText is provided...', () => {
-        let wrapper;
-        let dismissButton;
+        let wrapper
+        let dismissButton
         const dismissMock = jest.fn()
 
-        beforeEach( async () => {
+        beforeEach(async () => {
             wrapper = render(
                 <EbaySectionNotice status="information" aria-label="Information" a11yDismissText="Close" onDismiss={dismissMock}>
                     <EbayNoticeContent>
@@ -71,14 +71,14 @@ describe('<EbaySectionNotice>', () => {
                     </EbayNoticeContent>
                 </EbaySectionNotice>
             )
-            dismissButton = await wrapper.getByRole('button', {name:'Close'});
+            dismissButton = await wrapper.getByRole('button', { name: 'Close' })
         })
 
-        it( 'should add a close button with the provided label.', () => {
-            expect( dismissButton ).not.toBeNull()
+        it('should add a close button with the provided label.', () => {
+            expect(dismissButton).not.toBeNull()
         })
 
-        it( 'should hide the notice when the dismiss button is clicked.', async () => {
+        it('should hide the notice when the dismiss button is clicked.', async () => {
             expect(wrapper.getByRole('region', { name: 'Information' })).toBeVisible()
             await dismissButton.click()
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()

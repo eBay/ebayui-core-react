@@ -1,8 +1,8 @@
-import React  from 'react'
-import { fireEvent, render } from '@testing-library/react';
+import React from 'react'
+import { fireEvent, render } from '@testing-library/react'
 import { EbayFakeMenu, EbayFakeMenuItem } from '../index'
 
-const anySyntheticEvent = expect.objectContaining( { type: null })
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayFakeMenu>', () => {
     describe('on menu item click', () => {
@@ -10,7 +10,7 @@ describe('<EbayFakeMenu>', () => {
             const onClickSpy = jest.fn()
             const wrapper = render(
                 <EbayFakeMenu>
-                    <EbayFakeMenuItem href="#" onClick={onClickSpy}/>
+                    <EbayFakeMenuItem href="#" onClick={onClickSpy} />
                 </EbayFakeMenu>
             )
 

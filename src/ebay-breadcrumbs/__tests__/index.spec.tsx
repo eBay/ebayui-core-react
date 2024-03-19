@@ -16,7 +16,7 @@ describe('<EbayBreadcrumbs>', () => {
             const button = wrapper.getByRole('button')
             userEvent.click(button)
 
-            const syntheticEvent = expect.objectContaining( { target: null })
+            const syntheticEvent = expect.objectContaining({ target: null })
             expect(spy).toBeCalledWith(syntheticEvent)
         })
     })

@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { composeStory } from '@storybook/react';
-import Meta, { Default } from './index.stories';
+import { composeStory } from '@storybook/react'
+import Meta, { Default } from './index.stories'
 
-const DefaultStory = composeStory(Default, Meta);
+const DefaultStory = composeStory(Default, Meta)
 
 describe('ebay-video rendering', () => {
     it('renders default story correctly', () => {
-        const { container } = render(<DefaultStory />);
+        const { container } = render(<DefaultStory />)
         const player = container.querySelector('.video-player')
         expect(player).toHaveClass('video-player--poster')
         expect(player).toHaveAttribute('style', 'width: 600px; height: 400px;')
@@ -47,7 +47,7 @@ describe('ebay-video rendering', () => {
         const clientSideAdContainer = player.querySelector('.shaka-client-side-ad-container')
         expect(clientSideAdContainer).toHaveClass('shaka-hidden')
 
-        const video = player.querySelector('video');
+        const video = player.querySelector('video')
         expect(video).toHaveClass('shaka-video')
         expect(video).toHaveAttribute('poster', 'https://ir.ebaystatic.com/cr/v/c1/ebayui/video/v1/iphone-thumbnail.jpg')
         expect(video).toHaveAttribute('style', 'width: 600px; height: 400px;')

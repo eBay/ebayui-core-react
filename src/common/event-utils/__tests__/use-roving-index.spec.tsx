@@ -63,7 +63,6 @@ describe('useRovingIndex', () => {
             fireEvent.keyDown(window, { key: 'ArrowDown' })
         })
         expect(result.current[0]).toEqual(2)
-
     })
 
     it('should update index on keyDown', () => {

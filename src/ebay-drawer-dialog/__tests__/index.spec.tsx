@@ -1,12 +1,12 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { EbayDrawerDialog } from '../index'
-import { EbayDialogHeader } from '../../ebay-dialog-base';
+import { EbayDialogHeader } from '../../ebay-dialog-base'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
 const classPrefix = 'drawer-dialog'
-let closeDrawerHandler = jest.fn()
+const closeDrawerHandler = jest.fn()
 let wrapper
 const renderComponent = (props?: any) => {
     wrapper = render(

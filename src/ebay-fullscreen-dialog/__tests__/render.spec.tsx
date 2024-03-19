@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
 import Meta, { Default, AlwaysOpened } from './index.stories'
 
-const DefaultStory = composeStory(Default, Meta);
-const AlwaysOpenedStory = composeStory(AlwaysOpened, Meta);
+const DefaultStory = composeStory(Default, Meta)
+const AlwaysOpenedStory = composeStory(AlwaysOpened, Meta)
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 

@@ -3,17 +3,17 @@ import { render, screen } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
 import Meta, { Default, Navigable, RangeSelected } from './index.stories'
 
-const DefaultStory = composeStory(Default, Meta);
-const NavigableStory = composeStory(Navigable, Meta);
-const RangeSelectedStory = composeStory(RangeSelected, Meta);
+const DefaultStory = composeStory(Default, Meta)
+const NavigableStory = composeStory(Navigable, Meta)
+const RangeSelectedStory = composeStory(RangeSelected, Meta)
 
 describe('ebay-calendar rendering', () => {
     it('renders default story correctly', () => {
-        const { container } = render(<DefaultStory />);
-        expect(container.querySelector('.calendar')).toBeInTheDocument();
-        expect(container.querySelector('.calendar__body')).toBeInTheDocument();
-        expect(container.querySelector('.calendar__cell--current').textContent.length).toBeGreaterThan(0);
-        expect(screen.getByRole('table')).toBeInTheDocument();
+        const { container } = render(<DefaultStory />)
+        expect(container.querySelector('.calendar')).toBeInTheDocument()
+        expect(container.querySelector('.calendar__body')).toBeInTheDocument()
+        expect(container.querySelector('.calendar__cell--current').textContent.length).toBeGreaterThan(0)
+        expect(screen.getByRole('table')).toBeInTheDocument()
         expect(screen.getByText('Sun')).toBeInTheDocument()
         expect(screen.getByText('Mon')).toBeInTheDocument()
         expect(screen.getByText('Tue')).toBeInTheDocument()
@@ -24,43 +24,43 @@ describe('ebay-calendar rendering', () => {
     })
 
     it('renders navigable story correctly', async () => {
-        const { container } = render(<NavigableStory />);
-        expect(container.querySelector('.calendar')).toBeInTheDocument();
+        const { container } = render(<NavigableStory />)
+        expect(container.querySelector('.calendar')).toBeInTheDocument()
 
         const buttonPrev = screen.getByLabelText('Show February 2024')
-        expect(buttonPrev).toHaveClass('icon-btn icon-btn--small icon-btn--transparent');
-        expect(buttonPrev).toHaveAttribute('type', 'button');
-        const svgPrev = buttonPrev.querySelector('svg');
+        expect(buttonPrev).toHaveClass('icon-btn icon-btn--small icon-btn--transparent')
+        expect(buttonPrev).toHaveAttribute('type', 'button')
+        const svgPrev = buttonPrev.querySelector('svg')
         expect(svgPrev).toHaveClass('icon icon--chevron-left-24')
         expect(svgPrev).toHaveAttribute('aria-hidden', 'true')
 
         const buttonNext = screen.getByLabelText('Show May 2024')
-        expect(buttonNext).toHaveClass('icon-btn icon-btn--small icon-btn--transparent');
-        expect(buttonNext).toHaveAttribute('type', 'button');
-        const svgNext = buttonNext.querySelector('svg');
+        expect(buttonNext).toHaveClass('icon-btn icon-btn--small icon-btn--transparent')
+        expect(buttonNext).toHaveAttribute('type', 'button')
+        const svgNext = buttonNext.querySelector('svg')
         expect(svgNext).toHaveClass('icon icon--chevron-right-24')
         expect(svgNext).toHaveAttribute('aria-hidden', 'true')
 
         const [month1, month2] = screen.getAllByRole('heading', { level: 3 })
-        expect(month1.textContent).toEqual('March 2024');
-        expect(month2.textContent).toEqual('April 2024');
+        expect(month1.textContent).toEqual('March 2024')
+        expect(month2.textContent).toEqual('April 2024')
 
-        expect(screen.getByRole('table', { name: 'March 2024' })).toBeInTheDocument();
-        expect(screen.getByRole('table', { name: 'April 2024' })).toBeInTheDocument();
+        expect(screen.getByRole('table', { name: 'March 2024' })).toBeInTheDocument()
+        expect(screen.getByRole('table', { name: 'April 2024' })).toBeInTheDocument()
 
         // todo: fix it in code
         // const selectedDate = screen.getByLabelText('3-selected');
 
         // await waitFor(() =>
-                // expect(selectedDate).toBeInTheDocument()
-                // expect(selectedDate).toHaveAttribute('data-iso', '2024-01-03')
+        // expect(selectedDate).toBeInTheDocument()
+        // expect(selectedDate).toHaveAttribute('data-iso', '2024-01-03')
         // , { timeout: 5000 })
     })
 
     // todo: finish after bug fix
     it.skip('renders range selected story correctly', () => {
-        const { container } = render(<RangeSelectedStory />);
-        expect(container.querySelector('.calendar')).toBeInTheDocument();
-        expect(screen.getByRole('table')).toBeInTheDocument();
+        const { container } = render(<RangeSelectedStory />)
+        expect(container.querySelector('.calendar')).toBeInTheDocument()
+        expect(screen.getByRole('table')).toBeInTheDocument()
     })
 })

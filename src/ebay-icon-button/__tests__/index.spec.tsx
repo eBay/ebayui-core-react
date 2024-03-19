@@ -1,8 +1,8 @@
 import React from 'react'
-import { fireEvent, render } from '@testing-library/react';
-import { EbayIconButton } from '../../ebay-icon-button';
+import { fireEvent, render } from '@testing-library/react'
+import { EbayIconButton } from '../../ebay-icon-button'
 
-const anySyntheticEvent = expect.objectContaining( { type: null })
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayIconButton>', () => {
     describe('on passing a ref', () => {

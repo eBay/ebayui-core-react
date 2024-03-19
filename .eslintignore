@@ -1,7 +1,6 @@
 /lib
 /config
 /.storybook
-**/__tests__/*
 /build-ebay
 jest.config.js
 /test

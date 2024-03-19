@@ -20,7 +20,7 @@ const WithBadgesInstance = composeStory(WithBadges, Meta)
 describe('EbayFakeMenu rendering', () => {
     describe('Default', () => {
         it('should render correctly', () => {
-            render(<DefaultInstance/>)
+            render(<DefaultInstance />)
             const item = screen.getByText('Item 1 that has very long text')
             expect(item.closest('a')).toHaveAttribute('href', '#')
         })
@@ -28,7 +28,7 @@ describe('EbayFakeMenu rendering', () => {
 
     describe('WithoutTickIcon', () => {
         it('should render correctly', () => {
-            render(<WithoutTickIconInstance/>)
+            render(<WithoutTickIconInstance />)
             const item = screen.getByText('Item 1 that has very long text')
             expect(item.closest('a')).toHaveAttribute('href', '#')
         })
@@ -36,7 +36,7 @@ describe('EbayFakeMenu rendering', () => {
 
     describe('WithSeparator', () => {
         it('should render correctly', () => {
-            render(<WithSeparatorInstance/>)
+            render(<WithSeparatorInstance />)
             const separator = screen.getByRole('separator')
             expect(separator).toBeInTheDocument()
         })
@@ -44,7 +44,7 @@ describe('EbayFakeMenu rendering', () => {
 
     describe('WithDisabledItem', () => {
         it('should render correctly', () => {
-            render(<WithDisabledItemInstance/>)
+            render(<WithDisabledItemInstance />)
             const disabledItem = screen.getByText('Disabled Item')
             expect(disabledItem.closest('a')).toHaveAttribute('aria-disabled', 'true')
         })
@@ -52,7 +52,7 @@ describe('EbayFakeMenu rendering', () => {
 
     describe('MixedWithButtons', () => {
         it('should render correctly', () => {
-            render(<MixedWithButtonsInstance/>)
+            render(<MixedWithButtonsInstance />)
             const button = screen.getByRole('button', { name: 'Button' })
             expect(button).toBeInTheDocument()
         })
@@ -60,7 +60,7 @@ describe('EbayFakeMenu rendering', () => {
 
     describe('WithBadges', () => {
         it('should render correctly', () => {
-            render(<WithBadgesInstance/>)
+            render(<WithBadgesInstance />)
             const badge = screen.getByText('item 1')
             expect(badge).toBeInTheDocument()
             const badgeNumber = screen.getByText('5')

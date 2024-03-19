@@ -16,7 +16,7 @@ const {
     FloatingLabel,
     FloatingLabelInvalid,
     FloatingLabelTypeDate
-} = composeStories(stories);
+} = composeStories(stories)
 
 describe('ebay-textbox rendering', () => {
     it('renders default story correctly', () => {
@@ -69,7 +69,7 @@ describe('ebay-textbox rendering', () => {
     })
 
     it('renders password story correctly', () => {
-        const { container} = render(<PasswordTextbox />)
+        const { container } = render(<PasswordTextbox />)
 
         const textbox = container.querySelector('input[type="password"]')
         expect(textbox).toHaveAttribute('value', '')
@@ -77,7 +77,7 @@ describe('ebay-textbox rendering', () => {
     })
 
     it('renders with icon story correctly', () => {
-        const { container} = render(<WithIcon />)
+        const { container } = render(<WithIcon />)
 
         const textbox = container.querySelector('input[type="text"]')
         expect(textbox).toHaveAttribute('value', '')
@@ -120,7 +120,7 @@ describe('ebay-textbox rendering', () => {
     })
 
     it('renders floating label type date story correctly', () => {
-        const { container} = render(<FloatingLabelTypeDate />)
+        const { container } = render(<FloatingLabelTypeDate />)
 
         const textbox = container.querySelector('input[type="date"]')
         expect(textbox).toHaveAttribute('value', '')

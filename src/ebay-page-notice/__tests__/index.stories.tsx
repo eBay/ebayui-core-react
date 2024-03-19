@@ -61,7 +61,7 @@ export const AttentionMessage = () => (
                 <EbayPageNoticeTitle>Error.</EbayPageNoticeTitle>
                 <p>
                     Please take another look at the following:
-                    <br/>
+                    <br />
                     <a href="#">Card number</a>, <a href="#">Expiration date</a> &amp;{' '}
                     <a href="#">Security code</a>.
                 </p>

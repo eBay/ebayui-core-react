@@ -1,9 +1,9 @@
 import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { EbayTextbox, EbayTextboxPostfixIcon } from '../index'
 
-var anySyntheticEvent = expect.objectContaining({ type: null });
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayTextbox>', () => {
     describe('on textbox change', () => {
@@ -56,15 +56,15 @@ describe('<EbayTextbox>', () => {
             expect(spy).toBeCalledWith(anySyntheticEvent, { value })
         })
         it('should have "inline" class after blur event when no value is present', () => {
-            const { container } = render(<EbayTextbox floatingLabel="Test label" />);
-            fireEvent.blur(screen.getByRole('textbox'), { target: { value:'' } })
-            expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline');
-        });
+            const { container } = render(<EbayTextbox floatingLabel="Test label" />)
+            fireEvent.blur(screen.getByRole('textbox'), { target: { value: '' } })
+            expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline')
+        })
         it('should not have "inline" class after blur event when value is present', () => {
-            const { container } = render(<EbayTextbox floatingLabel="Test label" />);
-            fireEvent.blur(screen.getByRole('textbox'), { target: { value:'New Value' } })
-            expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline');
-        });
+            const { container } = render(<EbayTextbox floatingLabel="Test label" />)
+            fireEvent.blur(screen.getByRole('textbox'), { target: { value: 'New Value' } })
+            expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline')
+        })
     })
 
     describe('on textbox key down', () => {
@@ -93,7 +93,7 @@ describe('<EbayTextbox>', () => {
         it('should fire an onKeyPress event', () => {
             const spy = jest.fn()
             const value = `It's a spy!`
-            render(<EbayTextbox onKeyPress={spy} defaultValue={value}/>)
+            render(<EbayTextbox onKeyPress={spy} defaultValue={value} />)
 
             const textbox = screen.getByRole('textbox')
             userEvent.type(textbox, 'a')

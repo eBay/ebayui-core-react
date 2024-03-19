@@ -3,14 +3,14 @@ import React from 'react'
 import { waitFor, fireEvent, render, screen } from '@testing-library/react'
 import { EbayCalendar } from '../index'
 
-const anySyntheticEvent = expect.objectContaining( { target: null })
+const anySyntheticEvent = expect.objectContaining({ target: null })
 
 jest
     .useFakeTimers()
     .setSystemTime(new Date('2024-01-05').getTime())
 
 describe('<EbayCalendar />', () => {
-    it('should change day focused as we navigate with keyboard', async() => {
+    it('should change day focused as we navigate with keyboard', async () => {
         render(<EbayCalendar interactive selected="2024-01-01" />)
         const day = screen.getByText('1')
         day.focus()
@@ -24,7 +24,7 @@ describe('<EbayCalendar />', () => {
         await waitFor(() => expect(screen.getByText('1')).toHaveFocus())
     })
 
-    it('should call onFocus with the date that has focus', async() => {
+    it('should call onFocus with the date that has focus', async () => {
         const onFocus = jest.fn()
         render(<EbayCalendar interactive selected="2024-01-01" onFocus={onFocus} />)
         const day = screen.getByText('1')
@@ -44,7 +44,7 @@ describe('<EbayCalendar />', () => {
 
     it('should call onSelect with event and passed iso date on selection', () => {
         const onSelect = jest.fn()
-        render(<EbayCalendar interactive onSelect={onSelect} selected="2024-01-05"/>)
+        render(<EbayCalendar interactive onSelect={onSelect} selected="2024-01-05" />)
         const day = screen.getByText('1')
         fireEvent.click(day)
         expect(onSelect).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-01' })
@@ -66,14 +66,14 @@ describe('<EbayCalendar />', () => {
         expect(screen.getByText('December 2023')).toBeInTheDocument()
     })
 
-    it('should focus on first day of the month on home', async() => {
+    it('should focus on first day of the month on home', async () => {
         render(<EbayCalendar interactive selected="2024-01-15" />)
         const day = screen.getByText('15')
         fireEvent.keyDown(day, { key: 'Home' })
         await waitFor(() => expect(screen.getByText('1')).toHaveFocus())
     })
 
-    it('should focus on last day of the month on end', async() => {
+    it('should focus on last day of the month on end', async () => {
         render(<EbayCalendar interactive selected="2024-02-15" />)
         const day = screen.getByText('15')
         fireEvent.keyDown(day, { key: 'End' })

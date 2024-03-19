@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
 import Meta, { Default, WithAnimation } from './index.stories'
 
-const DefaultStory = composeStory(Default, Meta);
-const AnimationStory = composeStory(WithAnimation, Meta);
+const DefaultStory = composeStory(Default, Meta)
+const AnimationStory = composeStory(WithAnimation, Meta)
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -31,7 +31,6 @@ describe('ebay-confirm-dialog rendering', () => {
         expect(buttonOkay).toHaveAttribute('aria-describedby', 'confirm-dialog-main')
         expect(buttonOkay).toHaveAttribute('id', 'confirm-dialog-confirm')
         expect(buttonOkay).toHaveClass('btn confirm-dialog__confirm btn--primary')
-
     })
 
     it('renders animation story correctly', () => {

@@ -1,8 +1,8 @@
 import React from 'react'
-import { screen, fireEvent, render } from '@testing-library/react';
+import { screen, fireEvent, render } from '@testing-library/react'
 import { EbayFakeMenuButton, EbayFakeMenuButtonItem } from '..'
 
-const anySyntheticEvent = expect.objectContaining( { type: null })
+const anySyntheticEvent = expect.objectContaining({ type: null })
 jest.useFakeTimers()
 
 describe('<EbayFakeMenuButton>', () => {

@@ -93,7 +93,7 @@ export const NoHover = () => (
     <div style={{ width: '100%', textAlign: 'center', marginTop: 100 }}>
         <EbayTooltip noHover pointer="bottom">
             <EbayTooltipHost>
-                <EbayTextbox placeholder="Email address"/>
+                <EbayTextbox placeholder="Email address" />
             </EbayTooltipHost>
 
             <EbayTooltipContent>

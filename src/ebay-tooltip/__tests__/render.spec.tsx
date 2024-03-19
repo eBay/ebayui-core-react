@@ -1,13 +1,13 @@
 import React from 'react'
 import { screen, render } from '@testing-library/react'
-import { composeStory } from '@storybook/react';
-import Meta, { DefaultTooltip, AnchorHost, PointersWithAllDirections, PointerWithCustomLocation, NoHover } from './index.stories';
+import { composeStory } from '@storybook/react'
+import Meta, { DefaultTooltip, AnchorHost, PointersWithAllDirections, PointerWithCustomLocation, NoHover } from './index.stories'
 
-const DefaultTooltipStory = composeStory(DefaultTooltip, Meta);
-const AnchorHostStory = composeStory(AnchorHost, Meta);
-const PointerDirectionStory = composeStory(PointersWithAllDirections, Meta);
-const PointerWithCustomLocationStory = composeStory(PointerWithCustomLocation, Meta);
-const NoHoverStory = composeStory(NoHover, Meta);
+const DefaultTooltipStory = composeStory(DefaultTooltip, Meta)
+const AnchorHostStory = composeStory(AnchorHost, Meta)
+const PointerDirectionStory = composeStory(PointersWithAllDirections, Meta)
+const PointerWithCustomLocationStory = composeStory(PointerWithCustomLocation, Meta)
+const NoHoverStory = composeStory(NoHover, Meta)
 
 describe('ebay-tooltip rendering', () => {
     describe('DefaultTooltip story', () => {

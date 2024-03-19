@@ -53,8 +53,8 @@ export const DefaultWithA11YPrefix = {
         return (
             <>
                 <label id={listboxBtnLabel}>Select these items:</label>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <EbayListboxButton
                     value="BB"
                     prefixId={listboxBtnLabel}
@@ -112,7 +112,7 @@ export const Fluid = () => (
 
 export const StatefullComponent = () => (
     <>
-        <StateFullTest/>
+        <StateFullTest />
     </>
 )
 

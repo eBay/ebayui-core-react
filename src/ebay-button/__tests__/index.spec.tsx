@@ -1,15 +1,15 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
-import Meta, { Default, Size, Priority, DestructiveVariant } from './index.stories';
+import Meta, { Default, Size, Priority, DestructiveVariant } from './index.stories'
 import { EbayButton } from '../index'
 
-const DefaultStory = composeStory(Default, Meta);
-const SizeStory = composeStory(Size, Meta);
-const PriorityStory = composeStory(Priority, Meta);
-const DestructiveVariantStory = composeStory(DestructiveVariant, Meta);
+const DefaultStory = composeStory(Default, Meta)
+const SizeStory = composeStory(Size, Meta)
+const PriorityStory = composeStory(Priority, Meta)
+const DestructiveVariantStory = composeStory(DestructiveVariant, Meta)
 
-const anySyntheticEvent = expect.objectContaining( { target: null })
+const anySyntheticEvent = expect.objectContaining({ target: null })
 
 describe('<EbayButton>', () => {
     describe('Default story', () => {

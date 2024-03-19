@@ -9,7 +9,7 @@ jest.mock('makeup-next-id', () => (el) => el.setAttribute('id', 'testid'))
 
 describe('ebay-date-textbox rendering', () => {
     it('renders default story correctly', () => {
-        const { container } = render(<Default/>)
+        const { container } = render(<Default />)
 
         const dateTextbox: HTMLElement = container.querySelector('.date-textbox')
         expect(dateTextbox).toHaveAttribute('id', 'testid')
@@ -40,7 +40,7 @@ describe('ebay-date-textbox rendering', () => {
     })
 
     it('renders range story correctly', () => {
-        const { container } = render(<Range/>)
+        const { container } = render(<Range />)
 
         const dateTextbox = container.querySelector('.date-textbox')
         expect(dateTextbox).toHaveAttribute('id', 'testid')

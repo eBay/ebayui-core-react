@@ -1,6 +1,6 @@
 import { pageNumbersAround } from '../helpers'
 import { ItemState } from '../types'
-import { MAX_PAGES } from '../const';
+import { MAX_PAGES } from '../const'
 
 describe('pageNumbersAround()', () => {
     it('on empty input should return 0/0 items', () => {
@@ -30,7 +30,7 @@ describe('pageNumbersAround()', () => {
     })
     it('on total=3 should return 3/9 items', () => {
         expect(pageNumbersAround(9, 0, 3)).toEqual(['visible', 'visible', 'visible', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden'])
-        expect(pageNumbersAround(9, 2, 3)).toEqual(['hidden', 'visible', 'visible', 'visible', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden',])
+        expect(pageNumbersAround(9, 2, 3)).toEqual(['hidden', 'visible', 'visible', 'visible', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden'])
     })
 })
 
@@ -166,6 +166,6 @@ describe('pageNumbersAroundWithOverflowDots()', () => {
         expect(pageNumbersAroundWithOverflowDots(15, 0)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
         expect(pageNumbersAroundWithOverflowDots(15, 4)).toEqual(['visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible'])
         expect(pageNumbersAroundWithOverflowDots(15, 8)).toEqual(['visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'visible', 'visible', 'visible', 'visible', 'visible', 'hidden', 'hidden', 'dots', 'visible'])
-        expect(pageNumbersAroundWithOverflowDots(15, 15)).toEqual(['visible', 'dots', 'hidden',  'hidden', 'hidden',  'hidden', 'hidden',  'hidden', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
+        expect(pageNumbersAroundWithOverflowDots(15, 15)).toEqual(['visible', 'dots', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'hidden', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible', 'visible'])
     })
 })
