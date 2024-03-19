@@ -109,6 +109,7 @@
   },
   "resolutions": {
     "@types/react": "^16.14.2",
-    "@storybook/addon-actions": "~7.5.3"
+    "@storybook/addon-actions": "~7.5.3",
+    "string-width": "4.2.3"
   }
 }
