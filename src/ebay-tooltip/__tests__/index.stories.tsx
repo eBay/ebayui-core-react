@@ -36,10 +36,6 @@ export const DefaultTooltip = () => (
     </div>
 )
 
-DefaultTooltip.story = {
-    name: 'Default tooltip'
-}
-
 export const AnchorHost = () => (
     <div style={{ width: '100%', textAlign: 'center', marginTop: 100 }}>
         <EbayTooltip>
@@ -54,11 +50,7 @@ export const AnchorHost = () => (
     </div>
 )
 
-AnchorHost.story = {
-    name: 'Anchor host'
-}
-
-export const _PointerDirection = () => (
+export const PointersWithAllDirections = () => (
     <div>
         {allPointers.map((pointerType, index) => (
             <div
@@ -83,10 +75,6 @@ export const _PointerDirection = () => (
     </div>
 )
 
-_PointerDirection.story = {
-    name: 'Pointer direction'
-}
-
 export const PointerWithCustomLocation = () => (
     <div style={{ width: '100%', textAlign: 'center', marginTop: 100 }}>
         <EbayTooltip pointer="top-left" overlayStyle={{ top: 40, left: -16 }}>
@@ -101,10 +89,6 @@ export const PointerWithCustomLocation = () => (
     </div>
 )
 
-PointerWithCustomLocation.story = {
-    name: 'Pointer with custom location'
-}
-
 export const NoHover = () => (
     <div style={{ width: '100%', textAlign: 'center', marginTop: 100 }}>
         <EbayTooltip noHover pointer="bottom">
@@ -118,7 +102,3 @@ export const NoHover = () => (
         </EbayTooltip>
     </div>
 )
-
-NoHover.story = {
-    name: 'No hover'
-}

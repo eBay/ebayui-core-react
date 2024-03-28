@@ -1,8 +1,6 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { render } from '@testing-library/react'
 import { EbayInlineNotice, EbayNoticeContent } from '../index'
-import { initStoryshots } from '../../../config/jest/storyshots'
 
 describe('<EbayInlineNotice>', () => {
     describe('when hidden', () => {
@@ -60,7 +58,7 @@ describe('<EbayInlineNotice>', () => {
         it('should throw an error', () => {
             jest.spyOn(console, 'error').mockImplementation(() => null)
             expect(() => {
-                render(<EbayInlineNotice aria-label="error"/>)
+                render(<EbayInlineNotice aria-label="error" />)
             }).toThrowError(`EbayInlineNotice: Please use a EbayNoticeContent that defines the content of the notice`);
             (console.error as jest.Mock).mockRestore()
         })
@@ -68,11 +66,3 @@ describe('<EbayInlineNotice>', () => {
 })
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-})

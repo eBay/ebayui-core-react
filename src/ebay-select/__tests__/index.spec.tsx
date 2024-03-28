@@ -1,18 +1,8 @@
 import React from 'react'
-import requireContext from 'node-require-context'
-import { fireEvent, render } from '@testing-library/react';
-import { initStoryshots } from '../../../config/jest/storyshots';
+import { fireEvent, render } from '@testing-library/react'
 import { EbaySelect, EbaySelectOption } from '../index'
 
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-})
-
-const anySyntheticEvent = expect.objectContaining( { type: null })
+const anySyntheticEvent = expect.objectContaining({ type: null })
 const EbaySelectWith3Options = (props) => (
     <EbaySelect {...props}>
         <EbaySelectOption value="">Please Select</EbaySelectOption>
@@ -35,15 +25,15 @@ describe('<EbaySelect>', () => {
     })
     describe('on blur events', () => {
         it('should have "inline" class after blur event when no value is present', () => {
-            const { container, getByRole } = render(<EbaySelectWith3Options floatingLabel="Test label" />);
-            fireEvent.blur(getByRole('combobox'));
-            expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline');
-        });
+            const { container, getByRole } = render(<EbaySelectWith3Options floatingLabel="Test label" />)
+            fireEvent.blur(getByRole('combobox'))
+            expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline')
+        })
         it('should not have "inline" class after blur event when no value is present', () => {
-            const { container, getByRole } = render(<EbaySelectWith3Options floatingLabel="Test label" defaultValue="1" />);
-            fireEvent.blur(getByRole('combobox'));
-            expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline');
-        });
+            const { container, getByRole } = render(<EbaySelectWith3Options floatingLabel="Test label" defaultValue="1" />)
+            fireEvent.blur(getByRole('combobox'))
+            expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline')
+        })
     })
     describe('on select-dropdown change', () => {
         it('should fire onChange event', () => {
@@ -84,7 +74,7 @@ describe('<EbaySelect>', () => {
 
         beforeEach(() => {
             spy = jest.fn()
-            wrapper = render(<EbaySelectWith3Options name="foo" value="2" onChange={spy}  />)
+            wrapper = render(<EbaySelectWith3Options name="foo" value="2" onChange={spy} />)
         })
 
         it('should set initial selected value', () => {

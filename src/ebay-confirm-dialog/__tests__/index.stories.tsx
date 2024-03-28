@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import { EbayConfirmDialog } from '../index';
+import { EbayConfirmDialog } from '../index'
 import { EbayDialogHeader } from '../../ebay-dialog-base'
-import { action } from '../../../.storybook/action'
-import { Meta, Story } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import { StoryFn, Meta } from '@storybook/react'
 
 const story: Meta<typeof EbayConfirmDialog> = {
     component: EbayConfirmDialog,
     title: 'dialogs/ebay-confirm-dialog'
 }
 
-export const _Default: Story<typeof EbayConfirmDialog> = () => {
+export const Default: StoryFn<typeof EbayConfirmDialog> = (args) => {
     const [open, setOpen] = useState(true)
     const close = () => setOpen(false)
 
@@ -32,17 +32,18 @@ export const _Default: Story<typeof EbayConfirmDialog> = () => {
                 }}
                 confirmText="Okay"
                 rejectText="Cancel"
+                {...args}
             >
                 <EbayDialogHeader>Delete Address?</EbayDialogHeader>
                 <p>You will permanently lose this address.</p>
             </EbayConfirmDialog>
         </div>
     )
-};
+}
 
-export const _WithAnimation: Story<typeof EbayConfirmDialog> = () => {
-    const [open, setOpen] = useState(false);
-    const close = () => setOpen(false);
+export const WithAnimation: StoryFn<typeof EbayConfirmDialog> = () => {
+    const [open, setOpen] = useState(false)
+    const close = () => setOpen(false)
 
     return (
         <div>
@@ -64,6 +65,6 @@ export const _WithAnimation: Story<typeof EbayConfirmDialog> = () => {
             </EbayConfirmDialog>
         </div>
     )
-};
+}
 
-export default story;
+export default story

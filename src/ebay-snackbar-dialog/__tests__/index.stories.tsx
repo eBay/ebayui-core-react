@@ -27,57 +27,57 @@ export const Default = () => {
     )
 }
 
-export const WithAction = () => {
-    const TestComponent = () => {
-        const [open, setOpen] = useState(false)
+export const WithAction = {
+    render: () => {
+        const TestComponent = () => {
+            const [open, setOpen] = useState(false)
+
+            return (
+                <>
+                    <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
+                    <EbaySnackbarDialog open={open} onClose={() => setOpen(false)}>
+                        <p>1 item deleted from watch list.</p>
+                        <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
+                    </EbaySnackbarDialog>
+                </>
+            )
+        }
 
         return (
             <>
-                <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
-                <EbaySnackbarDialog open={open} onClose={() => setOpen(false)}>
-                    <p>1 item deleted from watch list.</p>
-                    <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
-                </EbaySnackbarDialog>
+                <TestComponent />
             </>
         )
-    }
+    },
 
-    return (
-        <>
-            <TestComponent />
-        </>
-    )
-}
-
-WithAction.story = {
     name: 'With action'
 }
 
-export const WithColumnLayout = () => {
-    const TestComponent = () => {
-        const [open, setOpen] = useState(false)
+export const WithColumnLayout = {
+    render: () => {
+        const TestComponent = () => {
+            const [open, setOpen] = useState(false)
+
+            return (
+                <>
+                    <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
+                    <EbaySnackbarDialog open={open} onClose={() => setOpen(false)} layout="column">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
+                    </EbaySnackbarDialog>
+                </>
+            )
+        }
 
         return (
             <>
-                <EbayButton onClick={() => setOpen(!open)}>Open Snackbar</EbayButton>
-                <EbaySnackbarDialog open={open} onClose={() => setOpen(false)} layout="column">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <EbaySnackbarDialogAction accessKey="U">Undo</EbaySnackbarDialogAction>
-                </EbaySnackbarDialog>
+                <TestComponent />
             </>
         )
-    }
+    },
 
-    return (
-        <>
-            <TestComponent />
-        </>
-    )
-}
-
-WithColumnLayout.story = {
     name: 'With column layout'
 }

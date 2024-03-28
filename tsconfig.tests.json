@@ -1,0 +1,19 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "rootDir": "./",
+        "noEmit": true,
+        "strict": false,
+        "strictFunctionTypes": false
+    },
+    "exclude": [
+        "lib",
+        "node_modules"
+    ],
+    "include": [
+        "src/**/__tests__",
+        "scripts/__tests__",
+        "test",
+        "config/jest/setup-tests.ts"
+    ]
+}

@@ -1,10 +1,8 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { render } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
+import userEvent from '@testing-library/user-event'
 
 import { EbayBreadcrumbs, EbayBreadcrumbItem } from '../index'
-import userEvent from '@testing-library/user-event'
 
 describe('<EbayBreadcrumbs>', () => {
     describe('on category click', () => {
@@ -18,7 +16,7 @@ describe('<EbayBreadcrumbs>', () => {
             const button = wrapper.getByRole('button')
             userEvent.click(button)
 
-            const syntheticEvent = expect.objectContaining( { target: null })
+            const syntheticEvent = expect.objectContaining({ target: null })
             expect(spy).toBeCalledWith(syntheticEvent)
         })
     })
@@ -39,12 +37,4 @@ describe('<EbayBreadcrumbs>', () => {
             })
         })
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
 })

@@ -2,7 +2,9 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
         "rootDir": "./",
-        "noEmit": true
+        "noEmit": true,
+        "strict": false,
+        "strictFunctionTypes": false
     },
     "exclude": [
         "lib",

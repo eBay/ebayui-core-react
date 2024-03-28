@@ -1,6 +1,6 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import { action } from '../../../.storybook/action'
+import { StoryObj, StoryFn, Meta } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import { EbayIcon } from '../../ebay-icon'
 import {
     EbayFakeMenuButton,
@@ -16,7 +16,7 @@ const meta: Meta<typeof EbayFakeMenuButton> = {
 
 export default meta
 
-export const Default: Story<typeof EbayFakeMenuButton> = () => (
+export const Default: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton
             text="eBay Menu"
@@ -39,17 +39,17 @@ export const Default: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const Expanded: Story<typeof EbayFakeMenuButton> = () => (
+export const Expanded: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton expanded text="eBay Menu">
             <Item href="http://ebay.com">item 1 that has very long text</Item>
-            <Item href="http://ebay.com">item 2</Item>
-            <Item href="http://ebay.com">item 3</Item>
+            <Item href="http://ebay.de">item 2</Item>
+            <Item href="http://ebay.co.uk">item 3</Item>
         </EbayFakeMenuButton>
     </>
 )
 
-export const Disabled: Story<typeof EbayFakeMenuButton> = () => (
+export const Disabled: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton text="eBay Menu" disabled>
             <Item href="http://ebay.com">item 1 that has very long text</Item>
@@ -59,7 +59,7 @@ export const Disabled: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const WithIcon: Story<typeof EbayFakeMenuButton> = () => (
+export const WithIcon: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton text="Settings">
             <EbayIcon name="settings16" />
@@ -70,7 +70,7 @@ export const WithIcon: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const WithoutToggleIcon: Story<typeof EbayFakeMenuButton> = () => (
+export const WithoutToggleIcon: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton noToggleIcon text="Menu">
             <Item href="http://ebay.com">item 1 that has very long text</Item>
@@ -80,10 +80,10 @@ export const WithoutToggleIcon: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const Variants: Story<typeof EbayFakeMenuButton> = () => (
+export const Variants: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <h3>Button</h3>
-        <EbayFakeMenuButton variant="button" text="Button" a11yText="Menu inside the form">
+        <EbayFakeMenuButton variant="button" text="Button" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
@@ -105,7 +105,7 @@ export const Variants: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const Priorities: Story<typeof EbayFakeMenuButton> = () => (
+export const Priorities: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton variant="button" priority="primary" text="Primary" a11yText="Menu">
             <Item href="http://ebay.com">item 1</Item>
@@ -120,7 +120,7 @@ export const Priorities: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const Borderless: Story<typeof EbayFakeMenuButton> = () => (
+export const Borderless: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton text="eBay Menu without borders!" borderless>
             <Item href="http://ebay.com">item 1</Item>
@@ -130,7 +130,7 @@ export const Borderless: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const WithCustomLabel: Story<typeof EbayFakeMenuButton> = () => (
+export const WithCustomLabel: StoryFn<typeof EbayFakeMenuButton> = () => (
     <>
         <EbayFakeMenuButton>
             <EbayFakeMenuButtonLabel>
@@ -153,9 +153,10 @@ export const WithCustomLabel: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const WithSeparator: Story<typeof EbayFakeMenuButton> = () => (
+export const WithSeparator: StoryFn<typeof EbayFakeMenuButton> = (args) => (
     <>
         <EbayFakeMenuButton
+            {...args}
             text="Complex menu"
             onExpand={action('Menu expanded!')}
             onCollapse={action('Menu collapsed!')}
@@ -176,9 +177,9 @@ export const WithSeparator: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const FixedWidth: Story<typeof EbayFakeMenuButton> = () => (
+export const FixedWidth: StoryFn<typeof EbayFakeMenuButton> = (args) => (
     <>
-        <EbayFakeMenuButton text="Menu has a button width" fixWidth>
+        <EbayFakeMenuButton {...args} text="Menu has a button width" fixWidth>
             <Item href="http://ebay.com">item 1 that has very very long text</Item>
             <Item href="http://ebay.com">item 2</Item>
             <Item href="http://ebay.com">item 3</Item>
@@ -186,16 +187,16 @@ export const FixedWidth: Story<typeof EbayFakeMenuButton> = () => (
     </>
 )
 
-export const ReverseMenuGrowsToTheLeft: Story<typeof EbayFakeMenuButton> = () => (
-    <div style={{ marginLeft: '100px' }}>
-        <EbayFakeMenuButton text="Menu grows to the left" reverse>
-            <Item href="http://ebay.com">item 1 that has very very long text</Item>
-            <Item href="http://ebay.com">item 2</Item>
-            <Item href="http://ebay.com">item 3</Item>
-        </EbayFakeMenuButton>
-    </div>
-)
+export const ReverseMenuGrowsToTheLeft: StoryObj<typeof EbayFakeMenuButton> = {
+    render: () => (
+        <div style={{ marginLeft: '100px' }}>
+            <EbayFakeMenuButton text="Menu grows to the left" reverse>
+                <Item href="http://ebay.com">item 1 that has very very long text</Item>
+                <Item href="http://ebay.com">item 2</Item>
+                <Item href="http://ebay.com">item 3</Item>
+            </EbayFakeMenuButton>
+        </div>
+    ),
 
-ReverseMenuGrowsToTheLeft.story = {
     name: 'Reverse (Menu grows to the left)'
 }

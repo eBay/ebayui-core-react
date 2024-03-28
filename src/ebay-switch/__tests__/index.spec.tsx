@@ -1,10 +1,8 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { render, fireEvent } from '@testing-library/react'
 import { EbaySwitch } from '../index'
-import { initStoryshots } from '../../../config/jest/storyshots'
 
-var anySyntheticEvent = expect.objectContaining({ type: null });
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbaySwitch>', () => {
     describe('on switch-button click', () => {
@@ -29,11 +27,3 @@ describe('<EbaySwitch>', () => {
         })
     })
 })
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-});

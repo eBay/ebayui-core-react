@@ -1,11 +1,9 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { fireEvent, render, screen } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayCheckbox } from '../index'
 
 const { getByRole } = screen
-const anySyntheticEvent = expect.objectContaining( { type: null })
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayCheckbox>', () => {
     describe('on checkbox-button click', () => {
@@ -13,7 +11,7 @@ describe('<EbayCheckbox>', () => {
             const spy = jest.fn()
             render(<EbayCheckbox aria-label="checkbox" value="123" onChange={spy} />)
             const input = getByRole('checkbox')
-            fireEvent.click(input);
+            fireEvent.click(input)
             expect(spy).toBeCalledWith(anySyntheticEvent, { value: '123', checked: true })
         })
     })
@@ -22,7 +20,7 @@ describe('<EbayCheckbox>', () => {
             const spy = jest.fn()
             render(<EbayCheckbox aria-label="checkbox" value="123" onFocus={spy} />)
             const input = getByRole('checkbox')
-            fireEvent.focus(input);
+            fireEvent.focus(input)
             expect(spy).toBeCalledWith(anySyntheticEvent, { value: '123', checked: false })
         })
     })
@@ -31,16 +29,8 @@ describe('<EbayCheckbox>', () => {
             const spy = jest.fn()
             render(<EbayCheckbox aria-label="checkbox" value="123" onKeyDown={spy} />)
             const input = getByRole('checkbox')
-            fireEvent.keyDown(input);
+            fireEvent.keyDown(input)
             expect(spy).toBeCalledWith(anySyntheticEvent, { value: '123', checked: false })
         })
     })
 })
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-});

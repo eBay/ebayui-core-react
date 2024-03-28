@@ -2,26 +2,25 @@ import React from 'react'
 import { EbayStarRatingSelect } from '../'
 import { IsolatedDefaultProps, FieldsetDefaultProps } from './mocks'
 
-
 export default {
     component: EbayStarRatingSelect,
     title: 'form input/ebay-star-rating-select',
     argTypes: {
         disabled: {
-            control: { type: 'boolean' },
+            control: { type: 'boolean' }
         },
         value: {
             control: { type: 'number' },
             description:
-                '1 - 5, depending on how many stars are selected. If 0 or null defaults to no stars selected',
+        '1 - 5, depending on how many stars are selected. If 0 or null defaults to no stars selected'
         },
         a11yStarText: {
             control: 'object',
-            description: 'Array object which sets the aria label for each star',
+            description: 'Array object which sets the aria label for each star'
         },
         a11yText: {
             control: { type: 'text' },
-            description: 'The aria label for the outer container. Only used on isolated case.',
+            description: 'The aria label for the outer container. Only used on isolated case.'
         },
 
         onChange: {
@@ -30,9 +29,9 @@ export default {
             table: {
                 category: 'Events',
                 defaultValue: {
-                    summary: '{ originalEvent }, value',
-                },
-            },
+                    summary: '{ originalEvent }, value'
+                }
+            }
         },
         onFocus: {
             action: 'onFocus',
@@ -40,9 +39,9 @@ export default {
             table: {
                 category: 'Events',
                 defaultValue: {
-                    summary: '{ originalEvent }, value',
-                },
-            },
+                    summary: '{ originalEvent }, value'
+                }
+            }
         },
         onKeydown: {
             action: 'onKeydown',
@@ -50,19 +49,25 @@ export default {
             table: {
                 category: 'Events',
                 defaultValue: {
-                    summary: '{ originalEvent }, value',
-                },
-            },
-        },
-    },
-};
+                    summary: '{ originalEvent }, value'
+                }
+            }
+        }
+    }
+}
 
-export const Isolated = (args) => (<EbayStarRatingSelect {...IsolatedDefaultProps} {...args} />)
-Isolated.args = IsolatedDefaultProps
-export const Fieldset = (args) => (
-    <fieldset>
-        <legend>Rate Product</legend>
-        <EbayStarRatingSelect {...FieldsetDefaultProps} {...args} />
-    </fieldset>
-)
-Fieldset.args = FieldsetDefaultProps
+export const Isolated = {
+    render: (args) => <EbayStarRatingSelect {...IsolatedDefaultProps} {...args} />,
+    args: IsolatedDefaultProps
+}
+
+export const Fieldset = {
+    render: (args) => (
+        <fieldset>
+            <legend>Rate Product</legend>
+            <EbayStarRatingSelect {...FieldsetDefaultProps} {...args} />
+        </fieldset>
+    ),
+
+    args: FieldsetDefaultProps
+}

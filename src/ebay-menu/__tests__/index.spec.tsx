@@ -1,12 +1,9 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-import { act } from '@testing-library/react-hooks'
-import { initStoryshots } from '../../../config/jest/storyshots'
-import { EbayMenu, EbayMenuItem } from '../index'
+import { act } from '@testing-library/react-hooks/dom'
 
-initStoryshots({
-    config: ({ configure }) => configure(() => require('./index.stories'), module)
-})
+import { EbayMenu, EbayMenuItem } from '../index'
+import { WithBadges, WithSeparator, Radio } from './index.stories'
 
 const onKeyDownSpy = jest.fn()
 const onClickSpy = jest.fn()
@@ -14,7 +11,60 @@ const onSelectSpy = jest.fn()
 const onChangeSpy = jest.fn()
 
 describe('<EbayMenu>', () => {
-    describe('menu item', () => {
+    describe('rendering', () => {
+        describe('with separators', () => {
+            beforeEach(() => {
+                render(<WithSeparator />)
+            })
+
+            it('should render the menu', () => {
+                expect(screen.getByRole('menu')).toBeInTheDocument()
+            })
+
+            it('should render the menu items', () => {
+                expect(screen.getAllByRole('menuitem')).toHaveLength(5)
+            })
+
+            it('should render the menu separators', () => {
+                expect(screen.getAllByRole('separator')).toHaveLength(1)
+            })
+        })
+
+        describe('with badges', () => {
+            beforeEach(() => {
+                render(<WithBadges />)
+            })
+
+            it('should render the menu', () => {
+                expect(screen.getByRole('menu')).toBeInTheDocument()
+            })
+
+            it('should render the menu items', () => {
+                expect(screen.getAllByRole('menuitem')).toHaveLength(3)
+            })
+
+            it('should render the menu badges', () => {
+                expect(screen.getByLabelText('item 1 (5 unread items)')).toBeInTheDocument()
+                expect(screen.getByLabelText('item 2 (23 unread items)')).toBeInTheDocument()
+            })
+        })
+
+        describe('with radio buttons', () => {
+            beforeEach(() => {
+                render(<Radio />)
+            })
+
+            it('should render the menu', () => {
+                expect(screen.getByRole('menu')).toBeInTheDocument()
+            })
+
+            it('should render the menu radio buttons', () => {
+                expect(screen.getAllByRole('menuitemradio')).toHaveLength(3)
+            })
+        })
+    })
+
+    describe('interaction', () => {
         beforeEach(() => {
             render(
                 <EbayMenu onClick={onClickSpy} onSelect={onSelectSpy} onKeyDown={onKeyDownSpy}>

@@ -26,33 +26,33 @@ export const WithSubtitle = () => (
     </>
 )
 
-export const WithTitleButWOSubtitle = () => (
-    <>
-        <EbaySectionTitle>
-            <Title>Missing subtitle shouldn't throw</Title>
-        </EbaySectionTitle>
-    </>
-)
+export const WithTitleButWOSubtitle = {
+    render: () => (
+        <>
+            <EbaySectionTitle>
+                <Title>Missing subtitle shouldn't throw</Title>
+            </EbaySectionTitle>
+        </>
+    ),
 
-WithTitleButWOSubtitle.story = {
     name: 'With Title But W/O Subtitle'
 }
 
-export const WithCta = () => (
-    <>
-        <EbaySectionTitle href="https://www.ebay.com">
-            <Title>Today’s Deals – All With Free Shipping</Title>
-            <Subtitle>Plus, guaranteed best prices.</Subtitle>
-        </EbaySectionTitle>
+export const WithCta = {
+    render: () => (
+        <>
+            <EbaySectionTitle href="https://www.ebay.com">
+                <Title>Today’s Deals – All With Free Shipping</Title>
+                <Subtitle>Plus, guaranteed best prices.</Subtitle>
+            </EbaySectionTitle>
 
-        <EbaySectionTitle href="https://www.ebay.com" ctaText="See All">
-            <Title>Today’s Deals – All With Free Shipping</Title>
-            <Subtitle>Plus, guaranteed best prices.</Subtitle>
-        </EbaySectionTitle>
-    </>
-)
+            <EbaySectionTitle href="https://www.ebay.com" ctaText="See All">
+                <Title>Today’s Deals – All With Free Shipping</Title>
+                <Subtitle>Plus, guaranteed best prices.</Subtitle>
+            </EbaySectionTitle>
+        </>
+    ),
 
-WithCta.story = {
     name: 'With CTA'
 }
 

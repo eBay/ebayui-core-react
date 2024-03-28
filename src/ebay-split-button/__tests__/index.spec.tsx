@@ -1,21 +1,11 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { fireEvent, render, screen } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayMenuButtonItem as Item } from '../../ebay-menu-button'
 import { EbaySplitButton, Props } from '../index'
 
-const values = ["first", "second", "third"]
+const values = ['first', 'second', 'third']
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
-})
 
 describe('<EbaySplitButton>', () => {
     describe('on button click', () => {
@@ -114,7 +104,7 @@ describe('<EbaySplitButton>', () => {
                 index: indexToCheck,
                 indexes: [indexToCheck],
                 checked: [indexToCheck],
-                checkedValues: [values[indexToCheck]],
+                checkedValues: [values[indexToCheck]]
             }
             expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
             spy.mockClear()
@@ -126,10 +116,9 @@ describe('<EbaySplitButton>', () => {
                 index: anotherIndexToCheck,
                 indexes: [anotherIndexToCheck],
                 checked: [anotherIndexToCheck],
-                checkedValues: [values[anotherIndexToCheck]],
+                checkedValues: [values[anotherIndexToCheck]]
             }
             expect(spy).toBeCalledWith(expect.any(Object), newerExpectedEventProps)
-
         })
     })
 
@@ -150,7 +139,7 @@ describe('<EbaySplitButton>', () => {
                 index: indexToCheck,
                 indexes: [indexToCheck],
                 checked: [indexToCheck],
-                checkedValues: [values[indexToCheck]],
+                checkedValues: [values[indexToCheck]]
             }
             expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
             spy.mockClear()
@@ -162,17 +151,18 @@ describe('<EbaySplitButton>', () => {
                 index: anotherIndexToCheck,
                 indexes: [indexToCheck, anotherIndexToCheck],
                 checked: [indexToCheck, anotherIndexToCheck],
-                checkedValues: [values[indexToCheck], values[anotherIndexToCheck]],
+                checkedValues: [values[indexToCheck], values[anotherIndexToCheck]]
             }
             expect(spy).toBeCalledWith(expect.any(Object), newerExpectedEventProps)
-
         })
     })
 })
 
 function splitButton(props: Props) {
-    return <EbaySplitButton {...props}>
-        Split Button
-        {[0,1,2].map((n, i) => <Item value={values[n]} key={i}>Item {n+1}</Item>)}
-    </EbaySplitButton>
+    return (
+        <EbaySplitButton {...props}>
+            Split Button
+            {[0, 1, 2].map((n, i) => <Item value={values[n]} key={i}>Item {n + 1}</Item>)}
+        </EbaySplitButton>
+    )
 }

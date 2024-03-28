@@ -1,11 +1,6 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-import initStoryshots from '@storybook/addon-storyshots'
 import { EbayMenuButton, EbayMenuButtonItem } from '../index'
-
-initStoryshots({
-    config: ({ configure }) => configure(() => require('./index.stories.tsx'), module)
-})
 
 const spy = jest.fn()
 
@@ -76,7 +71,7 @@ describe('<EbayMenuButton>', () => {
                 index: 1,
                 indexes: [1],
                 checked: [1],
-                checkedValues: ["second"],
+                checkedValues: ['second']
             }
             expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
         })
@@ -100,7 +95,7 @@ describe('<EbayMenuButton>', () => {
                 index: 1,
                 indexes: [1],
                 checked: [1],
-                checkedValues: ["second"],
+                checkedValues: ['second']
             }
 
             expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)

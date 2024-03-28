@@ -1,9 +1,7 @@
 import React from 'react'
-import requireContext from 'node-require-context'
 import { screen, render, fireEvent } from '@testing-library/react'
-import { initStoryshots } from '../../../config/jest/storyshots';
 import { EbayDialogHeader } from '../../ebay-dialog-base'
-import { EbayConfirmDialog } from '../index';
+import { EbayConfirmDialog } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -32,7 +30,7 @@ const showDialog = () =>
             <p><a href="http://www.ebay.com">www.ebay.com</a></p>
             <input placeholder="Enter a value" />
         </EbayConfirmDialog>
-    );
+    )
 
 describe('<EbayConfirmDialog>', () => {
     it('should focus on Confirm button', () => {
@@ -58,12 +56,4 @@ describe('<EbayConfirmDialog>', () => {
         expect(button).toBeInTheDocument()
         expect(rejectSpy).toBeCalled()
     })
-
 })
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-});

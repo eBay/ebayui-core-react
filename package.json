@@ -13,8 +13,9 @@
     "eslint-local": "eslint . --ext ts,tsx",
     "eslint": "eslint . --ext .ts,.tsx -f checkstyle -o ./lint/checkstyle-result.xml",
     "format": "eslint . --fix 'src/**/*.{ts,tsx}'",
-    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 9001 -c .storybook",
-    "storybook-node16": "start-storybook -p 9001 -c .storybook",
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 9001 -c .storybook",
+    "storybook-node16": "storybook dev -p 9001 -c .storybook",
+    "build-storybook": "storybook build",
     "test": "yarn jest",
     "build": "yarn typecheck && yarn tsc",
     "typecheck": "tsc --project tsconfig.typecheck.json",
@@ -55,21 +56,24 @@
     "react-remove-scroll": "^2.2.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.0.0",
     "@ebay/skin": "^17.0.0",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
-    "@storybook/addon-a11y": "^6.5.6",
-    "@storybook/addon-essentials": "^6.5.6",
-    "@storybook/addon-knobs": "^6.0.28",
-    "@storybook/addon-storyshots": "^6.5.6",
-    "@storybook/react": "^6.5.6",
-    "@storybook/storybook-deployer": "^2.8.11",
+    "@storybook/addon-a11y": "^7.6.12",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-storysource": "^7.6.12",
+    "@storybook/react": "^7.6.12",
+    "@storybook/react-webpack5": "^7.6.12",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^12",
     "@testing-library/react-hooks": "^7",
     "@testing-library/user-event": "^12",
     "@types/classnames": "^2.2.11",
+    "@types/jest": "^29.5.12",
     "@types/react": "^16.0",
     "@types/react-dom": "^16.0",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
@@ -96,7 +100,7 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.0.0",
     "shaka-player": "^4.3.2",
-    "storybook-addon-jsx": "^7.3.14",
+    "storybook": "^7.5.1",
     "style-loader": "^2.0.0",
     "svgson": "^4.0.0",
     "ts-jest": "^29.1.1",
@@ -104,6 +108,8 @@
     "typescript": "4"
   },
   "resolutions": {
-    "@types/react": "^16.14.2"
+    "@types/react": "^16.14.2",
+    "@storybook/addon-actions": "~7.5.3",
+    "string-width": "4.2.3"
   }
 }

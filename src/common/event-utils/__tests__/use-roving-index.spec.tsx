@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { act, renderHook } from '@testing-library/react-hooks'
+import { act, renderHook } from '@testing-library/react-hooks/dom'
 import { fireEvent } from '@testing-library/react'
 import useRovingIndex from '../use-roving-index'
 
@@ -63,7 +63,6 @@ describe('useRovingIndex', () => {
             fireEvent.keyDown(window, { key: 'ArrowDown' })
         })
         expect(result.current[0]).toEqual(2)
-
     })
 
     it('should update index on keyDown', () => {

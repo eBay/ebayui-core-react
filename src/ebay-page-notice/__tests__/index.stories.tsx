@@ -6,7 +6,7 @@ import {
     EbayPageNoticeFooter,
     EbayPageNoticeCTA
 } from '..'
-import { action } from '../../../.storybook/action'
+import { action } from '@storybook/addon-actions'
 
 export default {
     title: 'notices & tips/ebay-page-notice'
@@ -20,10 +20,6 @@ export const SimpleUsage = () => (
     </>
 )
 
-SimpleUsage.story = {
-    name: 'Simple usage'
-}
-
 export const SimpleUsageWithId = () => (
     <>
         <EbayPageNotice status="confirmation" aria-label="Success" id="main-page-notice">
@@ -31,10 +27,6 @@ export const SimpleUsageWithId = () => (
         </EbayPageNotice>
     </>
 )
-
-SimpleUsageWithId.story = {
-    name: 'Simple usage with id'
-}
 
 export const ConfirmationMessage = () => (
     <>
@@ -49,10 +41,6 @@ export const ConfirmationMessage = () => (
     </>
 )
 
-ConfirmationMessage.story = {
-    name: 'Confirmation message'
-}
-
 export const InformationMessage = () => (
     <>
         <EbayPageNotice status="information" aria-label="Information">
@@ -65,10 +53,6 @@ export const InformationMessage = () => (
         </EbayPageNotice>
     </>
 )
-
-InformationMessage.story = {
-    name: 'Information message'
-}
 
 export const AttentionMessage = () => (
     <>
@@ -86,10 +70,6 @@ export const AttentionMessage = () => (
     </>
 )
 
-AttentionMessage.story = {
-    name: 'Attention message'
-}
-
 export const MessageWithFooter = () => (
     <>
         <EbayPageNotice status="confirmation" aria-label="Congratulations">
@@ -103,10 +83,6 @@ export const MessageWithFooter = () => (
         </EbayPageNotice>
     </>
 )
-
-MessageWithFooter.story = {
-    name: 'Message with footer'
-}
 
 export const DismissibleNotice = () => (
     <>
@@ -126,10 +102,6 @@ export const DismissibleNotice = () => (
     </>
 )
 
-DismissibleNotice.story = {
-    name: 'Dismissible notice'
-}
-
 export const DismissibleMessageWithCta = () => (
     <>
         <EbayPageNotice status="information" aria-label="Congratulations" a11yDismissText="Close">
@@ -143,7 +115,3 @@ export const DismissibleMessageWithCta = () => (
         </EbayPageNotice>
     </>
 )
-
-DismissibleMessageWithCta.story = {
-    name: 'Dismissible message with CTA'
-}

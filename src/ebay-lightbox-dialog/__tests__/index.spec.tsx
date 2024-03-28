@@ -1,7 +1,5 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import requireContext from 'node-require-context';
-import { initStoryshots } from '../../../config/jest/storyshots'
 import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayLightboxDialog } from '../index'
 
@@ -52,10 +50,3 @@ describe('<EbayLightboxDialog>', () => {
         expect(closeSpy).toBeCalled()
     })
 })
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-});

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react'
-import { action } from '../../../.storybook/action'
+import { StoryFn, Meta } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import {
     EbayFakeMenu,
     EbayFakeMenuItem as Item,
@@ -14,7 +14,7 @@ const meta: Meta<typeof EbayFakeMenu> = {
 
 export default meta
 
-export const Default: Story<typeof EbayFakeMenu> = () => (
+export const Default: StoryFn<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu
             onClick={(event) => {
@@ -44,7 +44,7 @@ export const Default: Story<typeof EbayFakeMenu> = () => (
     </>
 )
 
-export const WithoutTickIcon: Story<typeof EbayFakeMenu> = () => (
+export const WithoutTickIcon: StoryFn<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu
             itemMatchesUrl={false}
@@ -75,7 +75,7 @@ export const WithoutTickIcon: Story<typeof EbayFakeMenu> = () => (
     </>
 )
 
-export const WithSeparator: Story<typeof EbayFakeMenu> = () => (
+export const WithSeparator: StoryFn<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
@@ -88,7 +88,7 @@ export const WithSeparator: Story<typeof EbayFakeMenu> = () => (
     </>
 )
 
-export const WithDisabledItem: Story<typeof EbayFakeMenu> = () => (
+export const WithDisabledItem: StoryFn<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="#">item 1 that has very long text</Item>
@@ -99,18 +99,20 @@ export const WithDisabledItem: Story<typeof EbayFakeMenu> = () => (
     </>
 )
 
-export const MixedWithButtons: Story<typeof EbayFakeMenu> = () => (
+export const MixedWithButtons: StoryFn<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="#">Link 1</Item>
             <Item type="button">Button</Item>
             <Item href="#">Link 2</Item>
-            <Item type="button" disabled>Disabled Button</Item>
+            <Item type="button" disabled>
+                Disabled Button
+            </Item>
         </EbayFakeMenu>
     </>
 )
 
-export const WithBadges: Story<typeof EbayFakeMenu> = () => (
+export const WithBadges: StoryFn<typeof EbayFakeMenu> = () => (
     <>
         <EbayFakeMenu>
             <Item href="" badgeNumber={5} badgeAriaLabel="item 1 (5 unread items)">

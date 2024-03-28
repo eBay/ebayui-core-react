@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { ComponentMeta } from '@storybook/react'
-import { action } from '../../../.storybook/action'
+import { Meta } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import { EbayIcon } from '../../ebay-icon'
 import {
     EbayMenuButtonItem as Item,
@@ -16,15 +16,15 @@ export default {
     title: 'buttons/ebay-split-button'
 }
 
-export const Controls = (args) => (
-    <EbaySplitButton {...args}>
-        Save document
-        <Item>Save as...</Item>
-        <Item>Export</Item>
-    </EbaySplitButton>
-)
+export const Controls = {
+    render: (args) => (
+        <EbaySplitButton {...args}>
+            Save document
+            <Item>Save as...</Item>
+            <Item>Export</Item>
+        </EbaySplitButton>
+    ),
 
-Controls.story = {
     parameters: {
         component: EbaySplitButton,
         args: {
@@ -45,7 +45,7 @@ Controls.story = {
             onExpand: { action: 'expanded' },
             onSelect: { action: 'selected' }
         }
-    } as ComponentMeta<typeof EbaySplitButton>
+    } as Meta<typeof EbaySplitButton>
 }
 
 export const Default = () => (
@@ -178,7 +178,7 @@ export const Truncated = () => (
     </>
 )
 
-export const Loading = () => {
+export const Loading = (args) => {
     const [loading, setLoading] = useState(false)
 
     return (
@@ -193,6 +193,7 @@ export const Loading = () => {
                         const value = [true, false][index]
                         setLoading(value)
                     }}
+                    {...args}
                 >
                     Load
                     <Item disabled={loading}>Start loading</Item>

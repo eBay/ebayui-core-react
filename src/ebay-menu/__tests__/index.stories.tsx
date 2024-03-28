@@ -1,12 +1,14 @@
 import React from 'react'
-import { action } from '../../../.storybook/action'
+import { action } from '@storybook/addon-actions'
+import { Meta } from '@storybook/react'
 import { EbayIcon } from '../../ebay-icon'
 import { EbayTab, EbayTabPanel, EbayTabs } from '../../ebay-tabs'
 import { EbayMenu, EbayMenuItem as Item, EbayMenuSeparator as Separator } from '../index'
 
-export default {
+const story = {
+    component: EbayMenu,
     title: 'building blocks/ebay-menu'
-}
+} satisfies Meta<typeof EbayMenu>
 
 export const Default = () => (
     <>
@@ -141,16 +143,18 @@ export const WithIcons = () => (
     </>
 )
 
-export const DivContainer = () => (
-    <>
-        <EbayMenu baseEl="div">
-            <Item>Item 1 that has very long text</Item>
-            <Item>Item 2</Item>
-            <Item>Item 3</Item>
-        </EbayMenu>
-    </>
-)
+export const DivContainer = {
+    render: () => (
+        <>
+            <EbayMenu baseEl="div">
+                <Item>Item 1 that has very long text</Item>
+                <Item>Item 2</Item>
+                <Item>Item 3</Item>
+            </EbayMenu>
+        </>
+    ),
 
-DivContainer.story = {
     name: 'Div container'
 }
+
+export default story

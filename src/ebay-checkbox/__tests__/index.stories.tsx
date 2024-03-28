@@ -1,6 +1,6 @@
 import React, { useState, useRef, ChangeEvent } from 'react'
-import { Meta, Story } from '@storybook/react'
-import { action } from '../../../.storybook/action'
+import { StoryFn, Meta } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import { EbayLabel } from '../../ebay-field'
 import { EbayCheckbox } from '../index'
 
@@ -11,7 +11,7 @@ const meta: Meta<typeof EbayCheckbox> = {
 
 export default meta
 
-export const DefaultCheckboxButton: Story<typeof EbayCheckbox> = () => (
+export const DefaultCheckboxButton: StoryFn<typeof EbayCheckbox> = () => (
     <>
         <p>
             <EbayCheckbox
@@ -32,7 +32,7 @@ export const DefaultCheckboxButton: Story<typeof EbayCheckbox> = () => (
     </>
 )
 
-export const SelectedCheckboxButton: Story<typeof EbayCheckbox> = () => (
+export const SelectedCheckboxButton: StoryFn<typeof EbayCheckbox> = () => (
     <>
         <p>
             <EbayCheckbox checked value="123" id="checkbox-21">
@@ -47,7 +47,7 @@ export const SelectedCheckboxButton: Story<typeof EbayCheckbox> = () => (
     </>
 )
 
-export const DisabledCheckboxButton: Story<typeof EbayCheckbox> = () => (
+export const DisabledCheckboxButton: StoryFn<typeof EbayCheckbox> = () => (
     <>
         <p>
             <EbayCheckbox disabled value="123" id="checkbox-31">
@@ -62,7 +62,7 @@ export const DisabledCheckboxButton: Story<typeof EbayCheckbox> = () => (
     </>
 )
 
-export const GroupedCheckboxButtons: Story<typeof EbayCheckbox> = () => (
+export const GroupedCheckboxButtons: StoryFn<typeof EbayCheckbox> = () => (
     <fieldset>
         <legend>Choose an Option</legend>
         <span className="field">
@@ -98,7 +98,7 @@ export const GroupedCheckboxButtons: Story<typeof EbayCheckbox> = () => (
     </fieldset>
 )
 
-export const StyledCheckboxButton: Story<typeof EbayCheckbox> = () => (
+export const StyledCheckboxButton: StoryFn<typeof EbayCheckbox> = () => (
     <span className="checkbox">
         <style
             dangerouslySetInnerHTML={{
@@ -114,19 +114,21 @@ export const StyledCheckboxButton: Story<typeof EbayCheckbox> = () => (
     </span>
 )
 
-export const ControlValueFromOutside: Story<typeof EbayCheckbox> = () => {
+export const ControlValueFromOutside: StoryFn<typeof EbayCheckbox> = () => {
     const Controller = () => {
         const [isChecked, setChecked] = useState(true)
         const [isDisabled, setDisabled] = useState(false)
         const counter = useRef(0)
         const handleOnChange = (
-            e: ChangeEvent<HTMLInputElement>, {
+            e: ChangeEvent<HTMLInputElement>,
+            {
                 value,
                 checked
-            } : {
-            value: string | number,
-            checked: boolean
-        }) => {
+            }: {
+                value: string | number;
+                checked: boolean;
+            }
+        ) => {
             if (counter.current < 4) {
                 setChecked(checked)
             } else {

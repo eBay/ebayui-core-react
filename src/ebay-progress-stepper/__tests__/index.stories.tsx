@@ -22,45 +22,45 @@ export const Default = () => (
     </div>
 )
 
-export const DefaultStateUpcoming = () => (
-    <div style={{ padding: 50 }}>
-        <EbayProgressStepper defaultState="upcoming">
-            <Step>
-                <Title>Paid</Title>
-                July 3rd
-            </Step>
-            <Step>
-                <Title>Shipped</Title>
-                July 4th
-            </Step>
-            <Step>
-                <Title>Transit</Title>
-                July 5th
-            </Step>
-            <Step>
-                <Title>Delivered</Title>
-                July 6th
-            </Step>
-        </EbayProgressStepper>
-    </div>
-)
+export const DefaultStateUpcoming = {
+    render: () => (
+        <div style={{ padding: 50 }}>
+            <EbayProgressStepper defaultState="upcoming">
+                <Step>
+                    <Title>Paid</Title>
+                    July 3rd
+                </Step>
+                <Step>
+                    <Title>Shipped</Title>
+                    July 4th
+                </Step>
+                <Step>
+                    <Title>Transit</Title>
+                    July 5th
+                </Step>
+                <Step>
+                    <Title>Delivered</Title>
+                    July 6th
+                </Step>
+            </EbayProgressStepper>
+        </div>
+    ),
 
-DefaultStateUpcoming.story = {
     name: 'Default state: upcoming'
 }
 
-export const DefaultStateComplete = () => (
-    <div style={{ padding: 50 }}>
-        <EbayProgressStepper defaultState="complete">
-            <Step>Started</Step>
-            <Step>Shipped</Step>
-            <Step>Transit</Step>
-            <Step>Delivered</Step>
-        </EbayProgressStepper>
-    </div>
-)
+export const DefaultStateComplete = {
+    render: () => (
+        <div style={{ padding: 50 }}>
+            <EbayProgressStepper defaultState="complete">
+                <Step>Started</Step>
+                <Step>Shipped</Step>
+                <Step>Transit</Step>
+                <Step>Delivered</Step>
+            </EbayProgressStepper>
+        </div>
+    ),
 
-DefaultStateComplete.story = {
     name: 'Default state: complete'
 }
 
@@ -93,27 +93,27 @@ export const CustomTitles = () => (
     </div>
 )
 
-export const VerticalColumn = () => (
-    <div style={{ padding: 50 }}>
-        <EbayProgressStepper direction="column">
-            <Step>
-                <Title>Order placed</Title>
-                <p>New Mens Addidas Ultra Boost</p>
-                <p>Order total $220</p>
-            </Step>
-            <Step current>
-                <Title>Preparing for shipment</Title>
-                <p>We will notify you once it ships.</p>
-            </Step>
-            <Step>
-                <Title>Delivered</Title>
-                <p>Guaranteed Wednesday, October 09.</p>
-            </Step>
-        </EbayProgressStepper>
-    </div>
-)
+export const VerticalColumn = {
+    render: () => (
+        <div style={{ padding: 50 }}>
+            <EbayProgressStepper direction="column">
+                <Step>
+                    <Title>Order placed</Title>
+                    <p>New Mens Addidas Ultra Boost</p>
+                    <p>Order total $220</p>
+                </Step>
+                <Step current>
+                    <Title>Preparing for shipment</Title>
+                    <p>We will notify you once it ships.</p>
+                </Step>
+                <Step>
+                    <Title>Delivered</Title>
+                    <p>Guaranteed Wednesday, October 09.</p>
+                </Step>
+            </EbayProgressStepper>
+        </div>
+    ),
 
-VerticalColumn.story = {
     name: 'Vertical (column)'
 }
 

@@ -1,57 +1,44 @@
 import React from 'react'
-import requireContext from 'node-require-context'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { initStoryshots } from '../../../config/jest/storyshots'
-import { EbayTabs, EbayTab, EbayTabPanel } from '../index'
+
+import { DefaultTabs, ManuallyActivatedTabs } from './index.stories'
 
 describe('<EbayTabs>', () => {
     describe('on `tab` key press', () => {
-        let wrapper, tabs
+        let tabs
 
         beforeEach(() => {
-            wrapper = render(
-                <EbayTabs>
-                    <EbayTab key="0">tab1</EbayTab>,
-                    <EbayTab key="1">tab2</EbayTab>,
-                    <EbayTabPanel key="0">Tab panel 1</EbayTabPanel>,
-                    <EbayTabPanel key="1">Tab panel 2</EbayTabPanel>
-                </EbayTabs>
-            )
-            tabs = wrapper.getAllByRole('tab')
+            render(<DefaultTabs />)
+
+            tabs = screen.getAllByRole('tab')
             userEvent.tab()
         })
-        it ('should focus on the first tab', () => {
+        it('should focus on the first tab', () => {
             expect(tabs[0]).toHaveFocus()
         })
-        it ('should focus on the next tab on Right Arrow key press', () => {
+        it('should focus on the next tab on Right Arrow key press', () => {
             fireEvent.keyDown(tabs[0], { key: 'ArrowRight' })
             expect(tabs[1]).toHaveFocus()
         })
-        it ('should loop focus on the first tab on Right Arrow key press', () => {
-            fireEvent.keyDown(tabs[0], { key: 'ArrowRight' })
-            fireEvent.keyDown(tabs[1], { key: 'ArrowRight' })
-            expect(tabs[0]).toHaveFocus()
-        })
-        it ('should focus on the previous tab on Left Arrow key press', () => {
+        it('should focus on the previous tab on Left Arrow key press', () => {
             fireEvent.keyDown(tabs[0], { key: 'ArrowLeft' })
-            expect(tabs[1]).toHaveFocus()
+            expect(tabs[2]).toHaveFocus()
+        })
+        it('should loop focus on the first tab on Right Arrow key press', () => {
+            fireEvent.keyDown(tabs[0], { key: 'ArrowLeft' })
+            fireEvent.keyDown(tabs[2], { key: 'ArrowRight' })
+            expect(tabs[0]).toHaveFocus()
         })
     })
 
     describe('after losing focus', () => {
-        let wrapper, tabs
+        let tabs
 
         beforeEach(() => {
-            wrapper = render(
-                <EbayTabs>
-                    <EbayTab key="0">tab1</EbayTab>,
-                    <EbayTab key="1">tab2</EbayTab>,
-                    <EbayTabPanel key="0">Tab panel 1</EbayTabPanel>,
-                    <EbayTabPanel key="1">Tab panel 2</EbayTabPanel>
-                </EbayTabs>
-            )
-            tabs = wrapper.getAllByRole('tab')
+            render(<DefaultTabs />)
+
+            tabs = screen.getAllByRole('tab')
             userEvent.tab()
         })
 
@@ -71,20 +58,14 @@ describe('<EbayTabs>', () => {
     })
 
     describe('on tab click', () => {
-        let wrapper, spy, oldSpy, tabs
+        let spy, oldSpy, tabs
 
         beforeEach(() => {
             oldSpy = jest.fn()
             spy = jest.fn()
-            wrapper = render(
-                <EbayTabs onTabSelect={oldSpy} onSelect={spy}>
-                    <EbayTab key="0">tab1</EbayTab>,
-                    <EbayTab key="1">tab2</EbayTab>,
-                    <EbayTabPanel key="0">Tab panel 1</EbayTabPanel>,
-                    <EbayTabPanel key="1">Tab panel 2</EbayTabPanel>
-                </EbayTabs>
-            )
-            tabs = wrapper.getAllByRole('tab')
+
+            render(<DefaultTabs onTabSelect={oldSpy} onSelect={spy} />)
+            tabs = screen.getAllByRole('tab')
         })
 
         it('should fire an event', () => {
@@ -98,8 +79,9 @@ describe('<EbayTabs>', () => {
             fireEvent.click(tabs[1])
 
             expect(tabs[1]).not.toHaveFocus()
-            expect(wrapper.getByText('Tab panel 1')).not.toBeVisible()
-            expect(wrapper.getByText('Tab panel 2')).toBeVisible()
+            expect(screen.getByText('Panel 1')).not.toBeVisible()
+            expect(screen.getByText('Panel 2')).toBeVisible()
+            expect(screen.getByText('Panel 3')).not.toBeVisible()
         })
 
         it('should change the selected/focused tab with keyboard', () => {
@@ -114,19 +96,12 @@ describe('<EbayTabs>', () => {
 
     describe('in `manual` mode', () => {
         describe('on tab click', () => {
-            let wrapper, spy, tabs
+            let spy, tabs
 
             beforeEach(() => {
                 spy = jest.fn()
-                wrapper = render(
-                    <EbayTabs activation="manual" onTabSelect={spy}>
-                        <EbayTab key="0">tab1</EbayTab>,
-                        <EbayTab key="1">tab2</EbayTab>,
-                        <EbayTabPanel key="0">Tab panel 1</EbayTabPanel>,
-                        <EbayTabPanel key="1">Tab panel 2</EbayTabPanel>
-                    </EbayTabs>
-                )
-                tabs = wrapper.getAllByRole('tab')
+                render(<ManuallyActivatedTabs onSelect={spy} />)
+                tabs = screen.getAllByRole('tab')
             })
 
             it('should fire an event', () => {
@@ -139,49 +114,49 @@ describe('<EbayTabs>', () => {
 
                 expect(tabs[0]).not.toHaveFocus()
                 expect(tabs[1]).not.toHaveFocus()
-                expect(wrapper.getByText('Tab panel 1')).not.toBeVisible()
-                expect(wrapper.getByText('Tab panel 2')).toBeVisible()
+                expect(tabs[2]).not.toHaveFocus()
+                expect(screen.getByText('Panel 1')).not.toBeVisible()
+                expect(screen.getByText('Panel 2')).toBeVisible()
+                expect(screen.getByText('Panel 3')).not.toBeVisible()
             })
 
             it('should change the selected/focused tab with keyboard', () => {
                 expect(tabs[0]).not.toHaveFocus()
-                expect(wrapper.getByText('Tab panel 1')).toBeVisible()
+                expect(screen.getByText('Panel 1')).toBeVisible()
 
                 fireEvent.click(tabs[1])
-                expect(wrapper.getByText('Tab panel 2')).toBeVisible()
+                expect(screen.getByText('Panel 2')).toBeVisible()
                 expect(tabs[0]).not.toHaveFocus()
                 expect(tabs[1]).not.toHaveFocus()
+                expect(tabs[2]).not.toHaveFocus()
 
                 fireEvent.keyDown(tabs[1], { key: 'ArrowLeft' })
-                expect(wrapper.getByText('Tab panel 2')).toBeVisible()
-                expect(wrapper.getByText('Tab panel 1')).not.toBeVisible()
+                expect(screen.getByText('Panel 1')).not.toBeVisible()
+                expect(screen.getByText('Panel 2')).toBeVisible()
+                expect(screen.getByText('Panel 3')).not.toBeVisible()
 
                 expect(tabs[0]).toHaveFocus()
                 fireEvent.keyDown(tabs[0], { key: 'Enter' })
-                expect(wrapper.getByText('Tab panel 1')).toBeVisible()
+                expect(screen.getByText('Panel 1')).toBeVisible()
+                expect(screen.getByText('Panel 2')).not.toBeVisible()
+                expect(screen.getByText('Panel 3')).not.toBeVisible()
 
                 expect(tabs[0]).toHaveFocus()
                 fireEvent.keyDown(tabs[0], { key: 'ArrowLeft' })
-                expect(tabs[1]).toHaveFocus()
-                fireEvent.keyDown(tabs[1], { key: ' ' })
-                expect(wrapper.getByText('Tab panel 2')).toBeVisible()
-                expect(wrapper.getByText('Tab panel 1')).not.toBeVisible()
+                expect(tabs[2]).toHaveFocus()
+                fireEvent.keyDown(tabs[2], { key: ' ' })
+                expect(screen.getByText('Panel 1')).not.toBeVisible()
+                expect(screen.getByText('Panel 2')).not.toBeVisible()
+                expect(screen.getByText('Panel 3')).toBeVisible()
             })
         })
 
         describe('on `tab` key press', () => {
-            let wrapper, tabs
+            let tabs
 
             beforeEach(() => {
-                wrapper = render(
-                    <EbayTabs activation="manual">
-                        <EbayTab key="0">tab1</EbayTab>,
-                        <EbayTab key="1">tab2</EbayTab>,
-                        <EbayTabPanel key="0">Tab panel 1</EbayTabPanel>,
-                        <EbayTabPanel key="1">Tab panel 2</EbayTabPanel>
-                    </EbayTabs>
-                )
-                tabs = wrapper.getAllByRole('tab')
+                render(<ManuallyActivatedTabs />)
+                tabs = screen.getAllByRole('tab')
                 userEvent.tab()
             })
             it('should focus on the first tab', () => {
@@ -194,27 +169,21 @@ describe('<EbayTabs>', () => {
             it('should loop focus on the first tab on Right Arrow key press', () => {
                 fireEvent.keyDown(tabs[0], { key: 'ArrowRight' })
                 fireEvent.keyDown(tabs[1], { key: 'ArrowRight' })
+                fireEvent.keyDown(tabs[2], { key: 'ArrowRight' })
                 expect(tabs[0]).toHaveFocus()
             })
             it('should focus on the previous tab on Left Arrow key press', () => {
                 fireEvent.keyDown(tabs[0], { key: 'ArrowLeft' })
-                expect(tabs[1]).toHaveFocus()
+                expect(tabs[2]).toHaveFocus()
             })
         })
 
         describe('after losing focus', () => {
-            let wrapper, tabs
+            let tabs
 
             beforeEach(() => {
-                wrapper = render(
-                    <EbayTabs activation="manual">
-                        <EbayTab key="0">tab1</EbayTab>,
-                        <EbayTab key="1">tab2</EbayTab>,
-                        <EbayTabPanel key="0">Tab panel 1</EbayTabPanel>,
-                        <EbayTabPanel key="1">Tab panel 2</EbayTabPanel>
-                    </EbayTabs>
-                )
-                tabs = wrapper.getAllByRole('tab')
+                render(<ManuallyActivatedTabs />)
+                tabs = screen.getAllByRole('tab')
                 userEvent.tab()
             })
 
@@ -233,12 +202,4 @@ describe('<EbayTabs>', () => {
             })
         })
     })
-})
-
-initStoryshots({
-    config: ({ configure }) => {
-        const req = requireContext('./', false, /\.stories\.tsx$/);
-        return configure(req, module)
-    }
-
 })

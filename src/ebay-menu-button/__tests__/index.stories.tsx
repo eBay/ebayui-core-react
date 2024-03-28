@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { action } from '../../../.storybook/action'
+import { action } from '@storybook/addon-actions'
 import { EbayIcon } from '../../ebay-icon'
 import {
     EbayMenuButton,
@@ -49,32 +49,32 @@ export const Disabled = () => (
     </>
 )
 
-export const WithIcon = () => (
-    <>
-        <EbayMenuButton text="Settings">
-            <EbayIcon name="settings16" />
-            <Item>item 1 that has very long text</Item>
-            <Item>item 2</Item>
-            <Item>item 3</Item>
-        </EbayMenuButton>
-    </>
-)
+export const WithIcon = {
+    render: () => (
+        <>
+            <EbayMenuButton text="Settings">
+                <EbayIcon name="settings16" />
+                <Item>item 1 that has very long text</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </>
+    ),
 
-WithIcon.story = {
     name: 'With icon'
 }
 
-export const WithoutToggleIcon = () => (
-    <>
-        <EbayMenuButton noToggleIcon text="Menu">
-            <Item>item 1 that has very long text</Item>
-            <Item>item 2</Item>
-            <Item>item 3</Item>
-        </EbayMenuButton>
-    </>
-)
+export const WithoutToggleIcon = {
+    render: () => (
+        <>
+            <EbayMenuButton noToggleIcon text="Menu">
+                <Item>item 1 that has very long text</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </>
+    ),
 
-WithoutToggleIcon.story = {
     name: 'Without toggle icon'
 }
 
@@ -151,7 +151,8 @@ export const WithCustomLabel = () => (
             <Item>item 3</Item>
         </EbayMenuButton>
 
-        <br /><br />
+        <br />
+        <br />
 
         <h2 id="external-label">External label</h2>
         <EbayMenuButton prefixId="external-label">
@@ -161,7 +162,8 @@ export const WithCustomLabel = () => (
             <Item>item 3</Item>
         </EbayMenuButton>
 
-        <br /><br />
+        <br />
+        <br />
 
         <h2>Prefix Label</h2>
         <EbayMenuButton prefixLabel="Prefix:">
@@ -171,7 +173,8 @@ export const WithCustomLabel = () => (
             <Item>item 3</Item>
         </EbayMenuButton>
 
-        <br /><br />
+        <br />
+        <br />
 
         <h2>No Label</h2>
         <EbayMenuButton split="end">
@@ -182,9 +185,10 @@ export const WithCustomLabel = () => (
     </>
 )
 
-export const WithSeparator = () => (
+export const WithSeparator = (args) => (
     <>
         <EbayMenuButton
+            {...args}
             text="Complex menu"
             onExpand={action('Menu expanded!')}
             onCollapse={action('Menu collapsed!')}
@@ -201,71 +205,32 @@ export const WithSeparator = () => (
     </>
 )
 
-export const SingleSelectMenuButtonItemChecked = () => (
-    <>
-        <EbayMenuButton text="Sort order" type="radio">
-            <Item>Date</Item>
-            <Item checked>Price</Item>
-            <Item>Relevance</Item>
-        </EbayMenuButton>
-    </>
-)
+export const SingleSelectMenuButtonItemChecked = {
+    render: (args) => (
+        <>
+            <EbayMenuButton {...args} text="Sort order" type="radio">
+                <Item>Date</Item>
+                <Item checked>Price</Item>
+                <Item>Relevance</Item>
+            </EbayMenuButton>
+        </>
+    ),
 
-SingleSelectMenuButtonItemChecked.story = {
     name: 'Single-Select Menu Button (item.checked)'
 }
 
-export const SingleSelectMenuButtonCollapseOnClick = () => {
-    const defaultSortIndex = 1
-    const sortItems = ['Date', 'Price', 'Relevance']
-    const [checkedSort, setCheckedSort] = useState(defaultSortIndex)
+export const SingleSelectMenuButtonCollapseOnClick = {
+    render: () => {
+        const defaultSortIndex = 1
+        const sortItems = ['Date', 'Price', 'Relevance']
+        const [checkedSort, setCheckedSort] = useState(defaultSortIndex)
 
-    return (
-        <EbayMenuButton
-            prefixLabel="Sort order:"
-            text={sortItems[checkedSort]}
-            type="radio"
-            collapseOnSelect
-            checked={defaultSortIndex}
-            onChange={(e, { index }) => setCheckedSort(index)}
-        >
-            {sortItems.map((item, i) => (
-                <Item key={i}>{item}</Item>
-            ))}
-        </EbayMenuButton>
-    )
-}
-
-SingleSelectMenuButtonCollapseOnClick.story = {
-    name: 'Single-Select Menu Button (collapse on click)'
-}
-
-export const SingleSelectMenuButtonMenuChecked = () => {
-    const defaultSortIndex = 2
-    const defaultTopicIndex = 1
-    const sortItems = ['Date', 'Price', 'Relevance']
-    const topicItems = ['Cars', 'Phones', 'Computers']
-    const [checkedSort, setCheckedSort] = useState(defaultSortIndex)
-    const [checkedTopic, setCheckedTopic] = useState(defaultTopicIndex)
-
-    return (
-        <>
-            <EbayMenuButton
-              prefixLabel="Topic:"
-                text={topicItems[checkedTopic]}
-                type="radio"
-                checked={defaultTopicIndex}
-                onChange={(e, { index }) => setCheckedTopic(index)}
-            >
-                {topicItems.map((item, i) => (
-                    <Item key={i}>{item}</Item>
-                ))}
-            </EbayMenuButton>
-      &nbsp;
+        return (
             <EbayMenuButton
                 prefixLabel="Sort order:"
                 text={sortItems[checkedSort]}
                 type="radio"
+                collapseOnSelect
                 checked={defaultSortIndex}
                 onChange={(e, { index }) => setCheckedSort(index)}
             >
@@ -273,31 +238,71 @@ export const SingleSelectMenuButtonMenuChecked = () => {
                     <Item key={i}>{item}</Item>
                 ))}
             </EbayMenuButton>
-        </>
-    )
+        )
+    },
+
+    name: 'Single-Select Menu Button (collapse on click)'
 }
 
-SingleSelectMenuButtonMenuChecked.story = {
+export const SingleSelectMenuButtonMenuChecked = {
+    render: (args) => {
+        const defaultSortIndex = 2
+        const defaultTopicIndex = 1
+        const sortItems = ['Date', 'Price', 'Relevance']
+        const topicItems = ['Cars', 'Phones', 'Computers']
+        const [checkedSort, setCheckedSort] = useState(defaultSortIndex)
+        const [checkedTopic, setCheckedTopic] = useState(defaultTopicIndex)
+
+        return (
+            <>
+                <EbayMenuButton
+                    {...args}
+                    prefixLabel="Topic:"
+                    text={topicItems[checkedTopic]}
+                    type="radio"
+                    checked={defaultTopicIndex}
+                    onChange={(e, { index }) => setCheckedTopic(index)}
+                >
+                    {topicItems.map((item, i) => (
+                        <Item key={i}>{item}</Item>
+                    ))}
+                </EbayMenuButton>
+        &nbsp;
+                <EbayMenuButton
+                    prefixLabel="Sort order:"
+                    text={sortItems[checkedSort]}
+                    type="radio"
+                    checked={defaultSortIndex}
+                    onChange={(e, { index }) => setCheckedSort(index)}
+                >
+                    {sortItems.map((item, i) => (
+                        <Item key={i}>{item}</Item>
+                    ))}
+                </EbayMenuButton>
+            </>
+        )
+    },
+
     name: 'Single-Select Menu Button (menu.checked)'
 }
 
-export const MultiSelectMenuButton = () => (
-    <>
-        <EbayMenuButton text="Filter" type="checkbox">
-            <Item checked>Snickers</Item>
-            <Item>T-Shirts</Item>
-            <Item checked>Pants</Item>
-        </EbayMenuButton>
-    </>
-)
+export const MultiSelectMenuButton = {
+    render: (args) => (
+        <>
+            <EbayMenuButton {...args} text="Filter" type="checkbox">
+                <Item checked>Snickers</Item>
+                <Item>T-Shirts</Item>
+                <Item checked>Pants</Item>
+            </EbayMenuButton>
+        </>
+    ),
 
-MultiSelectMenuButton.story = {
     name: 'Multi-Select Menu Button'
 }
 
-export const FixedWidth = () => (
+export const FixedWidth = (args) => (
     <>
-        <EbayMenuButton text="Menu has a button width" fixWidth>
+        <EbayMenuButton {...args} text="Menu has a button width" fixWidth>
             <Item>item 1 that has very long text</Item>
             <Item>item 2</Item>
             <Item>item 3</Item>
@@ -305,16 +310,16 @@ export const FixedWidth = () => (
     </>
 )
 
-export const ReverseMenuGrowsToTheLeft = () => (
-    <div style={{ marginLeft: '100px' }}>
-        <EbayMenuButton text="Menu grows to the left" reverse>
-            <Item>item 1 that has very very long text</Item>
-            <Item>item 2</Item>
-            <Item>item 3</Item>
-        </EbayMenuButton>
-    </div>
-)
+export const ReverseMenuGrowsToTheLeft = {
+    render: (args) => (
+        <div style={{ marginLeft: '100px' }}>
+            <EbayMenuButton {...args} text="Menu grows to the left" reverse>
+                <Item>item 1 that has very very long text</Item>
+                <Item>item 2</Item>
+                <Item>item 3</Item>
+            </EbayMenuButton>
+        </div>
+    ),
 
-ReverseMenuGrowsToTheLeft.story = {
     name: 'Reverse (Menu grows to the left)'
 }

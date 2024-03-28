@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { action } from '../../../.storybook/action'
+import { action } from '@storybook/addon-actions'
 import { EbayButton } from '../../ebay-button'
 import { EbayInlineNotice, EbayNoticeContent } from '../index'
 
@@ -17,58 +17,58 @@ export const Default = () => (
     </>
 )
 
-export const ConfirmationMessage = () => (
-    <>
-        <EbayInlineNotice status="confirmation" aria-label="Confirmation">
-            <EbayNoticeContent>
-                <p>Delivered on May 1, 2017</p>
-                <p>
-                    Tracking number: <a href="http://www.ebay.com">93878473859376898908657567</a>
-                </p>
-            </EbayNoticeContent>
-        </EbayInlineNotice>
-    </>
-)
+export const ConfirmationMessage = {
+    render: () => (
+        <>
+            <EbayInlineNotice status="confirmation" aria-label="Confirmation">
+                <EbayNoticeContent>
+                    <p>Delivered on May 1, 2017</p>
+                    <p>
+                        Tracking number: <a href="http://www.ebay.com">93878473859376898908657567</a>
+                    </p>
+                </EbayNoticeContent>
+            </EbayInlineNotice>
+        </>
+    ),
 
-ConfirmationMessage.story = {
     name: 'Confirmation message'
 }
 
-export const InformationMessage = () => (
-    <>
-        <EbayInlineNotice status="information" aria-label="Information">
-            <EbayNoticeContent>
-                <p>Global Shipping Program transaction.</p>
-            </EbayNoticeContent>
-        </EbayInlineNotice>
-    </>
-)
+export const InformationMessage = {
+    render: () => (
+        <>
+            <EbayInlineNotice status="information" aria-label="Information">
+                <EbayNoticeContent>
+                    <p>Global Shipping Program transaction.</p>
+                </EbayNoticeContent>
+            </EbayInlineNotice>
+        </>
+    ),
 
-InformationMessage.story = {
     name: 'Information message'
 }
 
-export const AttentionMessage = () => (
-    <>
-        <EbayInlineNotice status="attention" aria-label="Attention">
-            <EbayNoticeContent>
-                <p>Update your credit card.</p>
-            </EbayNoticeContent>
-        </EbayInlineNotice>
-    </>
-)
+export const AttentionMessage = {
+    render: () => (
+        <>
+            <EbayInlineNotice status="attention" aria-label="Attention">
+                <EbayNoticeContent>
+                    <p>Update your credit card.</p>
+                </EbayNoticeContent>
+            </EbayInlineNotice>
+        </>
+    ),
 
-AttentionMessage.story = {
     name: 'Attention message'
 }
 
-export const NoticeToggle = () => (
-    <>
-        <NoticeToggleStory />
-    </>
-)
+export const NoticeToggle = {
+    render: () => (
+        <>
+            <NoticeToggleStory />
+        </>
+    ),
 
-NoticeToggle.story = {
     name: 'Notice toggle'
 }
 

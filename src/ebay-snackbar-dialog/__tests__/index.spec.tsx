@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '../index'
 

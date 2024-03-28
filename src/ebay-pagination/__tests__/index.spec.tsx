@@ -1,20 +1,18 @@
 import React from 'react'
-import { fireEvent, render } from '@testing-library/react';
-import { snapshotWithOptions } from '@storybook/addon-storyshots'
-import { initStoryshots } from '../../../config/jest/storyshots';
+import { fireEvent, render } from '@testing-library/react'
 import { EbayPagination, EbayPaginationItem as Item } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
 jest.mock('react-dom', () => {
-  const original = jest.requireActual('react-dom');
-  return {
-    ...original,
-    createPortal: node => node,
-  };
-});
+    const original = jest.requireActual('react-dom')
+    return {
+        ...original,
+        createPortal: node => node
+    }
+})
 
-var anySyntheticEvent = expect.objectContaining({ type: null });
+const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayPagination>', () => {
     describe('on page click', () => {
@@ -122,18 +120,6 @@ describe('<EbayPagination>', () => {
             expect(wrapper.container.querySelectorAll('li')[1]).not.toHaveAttribute('hidden')
         })
     })
-})
-
-
-initStoryshots({
-    test: snapshotWithOptions({
-        // @ts-ignore: This method exists on storybook but no on type definitions
-        createNodeMock: (element) => document.createElement(element.type)
-    }),
-    config: ({ configure }) =>
-        configure(() => {
-            require('./index.stories')
-        }, module)
 })
 
 function resizeWindow(x, y) {
