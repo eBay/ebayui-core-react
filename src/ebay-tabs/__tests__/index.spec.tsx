@@ -71,8 +71,8 @@ describe('<EbayTabs>', () => {
         it('should fire an event', () => {
             const selectedIndex = 0
             fireEvent.click(tabs[selectedIndex])
-            expect(oldSpy).toBeCalledWith(selectedIndex)
-            expect(spy).toBeCalledWith({ selectedIndex })
+            expect(oldSpy).toHaveBeenCalledWith(selectedIndex)
+            expect(spy).toHaveBeenCalledWith({ selectedIndex })
         })
 
         it('should select the new tab on click', () => {
@@ -106,7 +106,7 @@ describe('<EbayTabs>', () => {
 
             it('should fire an event', () => {
                 fireEvent.click(tabs[0])
-                expect(spy).toBeCalled()
+                expect(spy).toHaveBeenCalled()
             })
 
             it('should select the new tab on click', () => {

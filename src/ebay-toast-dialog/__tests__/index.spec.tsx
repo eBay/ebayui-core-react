@@ -36,6 +36,6 @@ describe('<EbayToast>', () => {
 
     it('should trigger onClose when close button is clicked', () => {
         fireEvent.click(document.querySelector('button.toast-dialog__close'))
-        expect(closeToastHandler).toBeCalled()
+        expect(closeToastHandler).toHaveBeenCalled()
     })
 })

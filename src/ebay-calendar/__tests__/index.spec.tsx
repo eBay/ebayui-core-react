@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { waitFor, fireEvent, render, screen } from '@testing-library/react'
+import { waitFor, fireEvent, render, screen, act } from '@testing-library/react'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayCalendar } from '../index'
-
-const anySyntheticEvent = expect.objectContaining({ target: null })
 
 jest
     .useFakeTimers()
@@ -13,7 +12,7 @@ describe('<EbayCalendar />', () => {
     it('should change day focused as we navigate with keyboard', async () => {
         render(<EbayCalendar interactive selected="2024-01-01" />)
         const day = screen.getByText('1')
-        day.focus()
+        act(() => { day.focus() })
         fireEvent.keyDown(day, { key: 'ArrowRight' })
         await waitFor(() => expect(screen.getByText('2')).toHaveFocus())
         fireEvent.keyDown(day, { key: 'ArrowDown' })
@@ -29,15 +28,15 @@ describe('<EbayCalendar />', () => {
         render(<EbayCalendar interactive selected="2024-01-01" onFocus={onFocus} />)
         const day = screen.getByText('1')
         day.focus()
-        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-01' }))
+        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(eventOfType('focus'), { iso: '2024-01-01' }))
         fireEvent.keyDown(day, { key: 'ArrowRight' })
-        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-02' }))
+        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(eventOfType('focus'), { iso: '2024-01-02' }))
         fireEvent.keyDown(day, { key: 'ArrowDown' })
-        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-09' }))
+        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(eventOfType('focus'), { iso: '2024-01-09' }))
         fireEvent.keyDown(day, { key: 'ArrowLeft' })
-        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-08' }))
+        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(eventOfType('focus'), { iso: '2024-01-08' }))
         fireEvent.keyDown(day, { key: 'ArrowUp' })
-        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-01' }))
+        await waitFor(() => expect(onFocus).toHaveBeenCalledWith(eventOfType('focus'), { iso: '2024-01-01' }))
 
         await waitFor(() => expect(onFocus).toHaveBeenCalledTimes(5))
     })
@@ -47,7 +46,7 @@ describe('<EbayCalendar />', () => {
         render(<EbayCalendar interactive onSelect={onSelect} selected="2024-01-05" />)
         const day = screen.getByText('1')
         fireEvent.click(day)
-        expect(onSelect).toHaveBeenCalledWith(anySyntheticEvent, { iso: '2024-01-01' })
+        expect(onSelect).toHaveBeenCalledWith(eventOfType('click'), { iso: '2024-01-01' })
     })
 
     it('should go to next month on page down', () => {

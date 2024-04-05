@@ -1,4 +1,5 @@
 import { ChangeEvent, KeyboardEvent, MouseEvent, FocusEvent, SyntheticEvent } from 'react'
+import { EventType } from '@testing-library/react'
 
 type ModifierKeys = 'Alt' | 'AltGraph' | 'Control' | 'Shift' | 'CapsLock' | 'Meta'
 // | 'Fn' | 'FnLock' | 'Hyper' | 'NumLock' | 'ScrollLock' | 'Super' | 'Symbol' | 'SymbolLock'

@@ -14,7 +14,7 @@ describe('<EbayMenuButton>', () => {
             )
             fireEvent.click(wrapper.container.querySelector('button'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
         it('should fire onCollapse event', () => {
             const wrapper = render(
@@ -27,7 +27,7 @@ describe('<EbayMenuButton>', () => {
             fireEvent.click(button)
             fireEvent.click(button)
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 
@@ -49,7 +49,7 @@ describe('<EbayMenuButton>', () => {
                 index: 1,
                 checked: [1]
             }
-            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 
@@ -73,7 +73,7 @@ describe('<EbayMenuButton>', () => {
                 checked: [1],
                 checkedValues: ['second']
             }
-            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 
@@ -98,7 +98,7 @@ describe('<EbayMenuButton>', () => {
                 checkedValues: ['second']
             }
 
-            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 })

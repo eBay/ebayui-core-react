@@ -40,7 +40,7 @@ describe('<EbayInlineNotice>', () => {
                     </EbayNoticeContent>
                 </EbayInlineNotice>
             )
-            expect(spy).not.toBeCalled()
+            expect(spy).not.toHaveBeenCalled()
 
             rerender(
                 <EbayInlineNotice hidden={false} aria-label="notice" onNoticeShow={spy}>
@@ -49,7 +49,7 @@ describe('<EbayInlineNotice>', () => {
                     </EbayNoticeContent>
                 </EbayInlineNotice>
             )
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 

@@ -1,10 +1,9 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { act, render } from '@testing-library/react'
 import { EbayButton } from '../../ebay-button'
 import { EbayNoticeContent, EbaySectionNotice } from '../index'
 import userEvent from '@testing-library/user-event'
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
 describe('<EbaySectionNotice>', () => {
     describe('when a button is added in the children of the main section notice', () => {
@@ -82,13 +81,13 @@ describe('<EbaySectionNotice>', () => {
             expect(wrapper.getByRole('region', { name: 'Information' })).toBeVisible()
             await dismissButton.click()
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
-            expect(dismissMock).toHaveBeenCalledWith(anySyntheticEvent)
+            expect(dismissMock).toHaveBeenCalledWith(eventOfType('click'))
         })
 
         it('should hide the notice when the user focuses the dismiss button and presses space', async () => {
             expect(wrapper.getByRole('region', { name: 'Information' })).toBeVisible()
             await dismissButton.focus()
-            userEvent.type(dismissButton, ' ')
+            act(() => { userEvent.type(dismissButton, ' ') })
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
             expect(dismissMock).toHaveBeenCalled()
         })

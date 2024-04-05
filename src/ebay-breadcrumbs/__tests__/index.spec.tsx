@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayBreadcrumbs, EbayBreadcrumbItem } from '../index'
 
 describe('<EbayBreadcrumbs>', () => {
@@ -16,8 +17,7 @@ describe('<EbayBreadcrumbs>', () => {
             const button = wrapper.getByRole('button')
             userEvent.click(button)
 
-            const syntheticEvent = expect.objectContaining({ target: null })
-            expect(spy).toBeCalledWith(syntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'))
         })
     })
 

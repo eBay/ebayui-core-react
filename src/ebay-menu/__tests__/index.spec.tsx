@@ -84,8 +84,8 @@ describe('<EbayMenu>', () => {
                 checked: [1]
             }
 
-            expect(onClickSpy).toBeCalledWith(expect.any(Object))
-            expect(onSelectSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onClickSpy).toHaveBeenCalledWith(expect.any(Object))
+            expect(onSelectSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
         })
 
         it('should fire onKeyDown event', async () => {
@@ -100,7 +100,7 @@ describe('<EbayMenu>', () => {
                 checked: []
             }
 
-            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onKeyDownSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
         })
 
         it('should fire onKeyDown, onSelect event', async () => {
@@ -115,8 +115,8 @@ describe('<EbayMenu>', () => {
                 checked: [1]
             }
 
-            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
-            expect(onSelectSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onKeyDownSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
+            expect(onSelectSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
         })
     })
 
@@ -151,8 +151,8 @@ describe('<EbayMenu>', () => {
                 checkedValues: ['2']
             }
 
-            expect(onClickSpy).toBeCalledWith(expect.any(Object))
-            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onClickSpy).toHaveBeenCalledWith(expect.any(Object))
+            expect(onChangeSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
 
             expect(item1).toHaveAttribute('aria-checked', 'false')
             expect(item2).toHaveAttribute('aria-checked', 'true')
@@ -172,7 +172,7 @@ describe('<EbayMenu>', () => {
                 checkedValues: ['1']
             }
 
-            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onKeyDownSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
         })
 
         it('should fire onKeyDown, onChange event', async () => {
@@ -189,8 +189,8 @@ describe('<EbayMenu>', () => {
                 checkedValues: ['2']
             }
 
-            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
-            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onKeyDownSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
+            expect(onChangeSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
         })
     })
 
@@ -225,8 +225,8 @@ describe('<EbayMenu>', () => {
                 checkedValues: ['1', '2']
             }
 
-            expect(onClickSpy).toBeCalledWith(expect.any(Object))
-            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onClickSpy).toHaveBeenCalledWith(expect.any(Object))
+            expect(onChangeSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
 
             expect(item1).toHaveAttribute('aria-checked', 'true')
             expect(item2).toHaveAttribute('aria-checked', 'true')
@@ -242,8 +242,8 @@ describe('<EbayMenu>', () => {
                 checkedValues: ['2']
             }
 
-            expect(onClickSpy).toBeCalledWith(expect.any(Object))
-            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onClickSpy).toHaveBeenCalledWith(expect.any(Object))
+            expect(onChangeSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
 
             expect(item1).toHaveAttribute('aria-checked', 'false')
             expect(item2).toHaveAttribute('aria-checked', 'true')
@@ -263,7 +263,7 @@ describe('<EbayMenu>', () => {
                 checkedValues: ['1']
             }
 
-            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onKeyDownSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
         })
 
         it('should fire onKeyDown, onChange event', async () => {
@@ -280,8 +280,8 @@ describe('<EbayMenu>', () => {
                 checkedValues: ['1', '2']
             }
 
-            expect(onKeyDownSpy).toBeCalledWith(expect.any(Object), expectedProps)
-            expect(onChangeSpy).toBeCalledWith(expect.any(Object), expectedProps)
+            expect(onKeyDownSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
+            expect(onChangeSpy).toHaveBeenCalledWith(expect.any(Object), expectedProps)
         })
     })
 })

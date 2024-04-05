@@ -135,7 +135,7 @@ type bodyContentOptions = {
     isExpand: boolean;
 }
 
-function getBodyContent(children:ReactNode, { isLoading, isExpand }: bodyContentOptions) {
+function getBodyContent(children: ReactNode, { isLoading, isExpand }: bodyContentOptions) {
     switch (true) {
         case isLoading:
             return <EbayButtonLoading />

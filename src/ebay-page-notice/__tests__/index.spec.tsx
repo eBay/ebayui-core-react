@@ -1,11 +1,12 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { act, render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { EbayNoticeContent, EbayPageNotice, EbayPageNoticeTitle } from '../index'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
-const anySyntheticEvent = expect.objectContaining({ type: null })
+const clickEvent = expect.objectContaining({ type: 'click' })
+const keyDownEvent = expect.objectContaining({ type: 'keydown' })
 
 describe('<EbayPageNotice>', () => {
     describe('when a page title exists', () => {
@@ -70,15 +71,19 @@ describe('<EbayPageNotice>', () => {
 
         it('should hide the notice when the dismiss button is clicked.', async () => {
             expect(wrapper.getByRole('region', { name: 'Information' })).toBeVisible()
-            await dismissButton.click()
+            act(() => {
+                dismissButton.click()
+            })
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
-            expect(dismissMock).toHaveBeenCalledWith(anySyntheticEvent)
+            expect(dismissMock).toHaveBeenCalledWith(clickEvent)
         })
 
         it('should hide the notice when the user focuses the dismiss button and presses space', async () => {
             expect(wrapper.getByRole('region', { name: 'Information' })).toBeVisible()
             await dismissButton.focus()
-            userEvent.type(dismissButton, ' ')
+            act(() => {
+                userEvent.type(dismissButton, ' ')
+            })
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
             expect(dismissMock).toHaveBeenCalled()
         })

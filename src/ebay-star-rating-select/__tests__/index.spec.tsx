@@ -1,6 +1,7 @@
 import React from 'react'
 import { render, fireEvent, cleanup } from '@testing-library/react'
 import { Isolated, Fieldset } from './mocks'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
 const htmlSnap = async (ui: React.ReactElement): Promise<void> => {
     const { asFragment } = await render(ui)
@@ -11,8 +12,6 @@ let component
 const onChangeSpy = jest.fn()
 const onFocusSpy = jest.fn()
 const onKeyDownSpy = jest.fn()
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('star-rating-select', () => {
     it('renders defaults', async () => {
@@ -45,8 +44,8 @@ describe('star-rating-select', () => {
         })
 
         it('should emit the onChange event with 2', () => {
-            expect(onChangeSpy).toBeCalledTimes(1)
-            expect(onChangeSpy).toBeCalledWith(anySyntheticEvent, { value: 2 })
+            expect(onChangeSpy).toHaveBeenCalledTimes(1)
+            expect(onChangeSpy).toHaveBeenCalledWith(eventOfType('click'), { value: 2 })
         })
 
         describe('when star is clicked', () => {
@@ -55,8 +54,8 @@ describe('star-rating-select', () => {
             })
 
             it('should emit the onChange event with 4', () => {
-                expect(onChangeSpy).toBeCalledTimes(2)
-                expect(onChangeSpy).toBeCalledWith(anySyntheticEvent, { value: 4 })
+                expect(onChangeSpy).toHaveBeenCalledTimes(2)
+                expect(onChangeSpy).toHaveBeenCalledWith(eventOfType('click'), { value: 4 })
             })
         })
     })
@@ -73,7 +72,7 @@ describe('star-rating-select', () => {
             })
 
             it('should not emit the change event', () => {
-                expect(onChangeSpy).toBeCalledTimes(0)
+                expect(onChangeSpy).toHaveBeenCalledTimes(0)
             })
         })
     })
@@ -86,8 +85,8 @@ describe('star-rating-select', () => {
         })
 
         it('should emit the focus event', () => {
-            expect(onFocusSpy).toBeCalledTimes(1)
-            expect(onFocusSpy).toBeCalledWith(anySyntheticEvent, { value: 2 })
+            expect(onFocusSpy).toHaveBeenCalledTimes(1)
+            expect(onFocusSpy).toHaveBeenCalledWith(eventOfType('focus'), { value: 2 })
         })
     })
 
@@ -99,8 +98,8 @@ describe('star-rating-select', () => {
         })
 
         it('should emit the onKeyDown event', () => {
-            expect(onKeyDownSpy).toBeCalledTimes(1)
-            expect(onKeyDownSpy).toBeCalledWith(anySyntheticEvent, { value: 5 })
+            expect(onKeyDownSpy).toHaveBeenCalledTimes(1)
+            expect(onKeyDownSpy).toHaveBeenCalledWith(eventOfType('keydown'), { value: 5 })
         })
     })
 })

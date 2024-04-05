@@ -256,9 +256,7 @@ const EbayVideo: FC<EbayVideoProps> = ({
                     onVolumeChange={handleVolumeChange}
                     {...rest}
                 >
-                    {sources.map((source, i) => {
-                        <source key={i} {...source} />
-                    })}
+                    {sources.map((source, i) => <source key={i} {...source} />)}
                 </video>
             </div>
             <div className={classNames('video-player__overlay', { 'video-player__overlay--hidden': !failed })}>

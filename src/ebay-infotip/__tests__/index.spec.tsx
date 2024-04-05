@@ -46,7 +46,7 @@ describe('<EbayInfotip>', () => {
             const wrapper = renderComponent({ onExpand: spy })
             fireEvent.click(wrapper.container.querySelector('button.infotip__host'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 
@@ -57,7 +57,7 @@ describe('<EbayInfotip>', () => {
             fireEvent.click(wrapper.container.querySelector('button.infotip__host'))
             fireEvent.click(wrapper.container.querySelector('button.infotip__close'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 

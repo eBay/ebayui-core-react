@@ -4,7 +4,7 @@ import { EbayIcon, Icon } from '../ebay-icon'
 import { withForwardRef } from '../common/component-utils/forwardRef'
 import { Variant } from './types'
 
-type InfotipHostProps = ComponentProps<'button'> & {
+type InfotipHostProps = Omit<ComponentProps<'button'>, 'children'> & {
     icon?: Icon;
     forwardedRef?: RefObject<HTMLAnchorElement & HTMLButtonElement>;
     variant?: Variant;
@@ -21,11 +21,7 @@ const EbayInfotipHost: FC<InfotipHostProps> = ({
 }) => {
     const classPrefix = variant === 'modal' ? 'dialog--mini' : 'infotip'
     const buttonIcon = <EbayIcon name={icon} />
-    let buttonContent = children
-
-    if (children instanceof Function) {
-        buttonContent = children({ icon: buttonIcon })
-    }
+    const buttonContent = children instanceof Function ? children({ icon: buttonIcon }) : children
 
     return (
         <button

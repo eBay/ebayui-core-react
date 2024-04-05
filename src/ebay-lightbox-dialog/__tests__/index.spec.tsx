@@ -31,7 +31,7 @@ const openDialog = () =>
 describe('<EbayLightboxDialog>', () => {
     it('should trigger onOpen when dialog appears', () => {
         openDialog()
-        expect(openSpy).toBeCalled()
+        expect(openSpy).toHaveBeenCalled()
     })
 
     it('should have close button', () => {
@@ -47,6 +47,6 @@ describe('<EbayLightboxDialog>', () => {
     it('should trigger onClose when close button is clicked', () => {
         openDialog()
         fireEvent.click(document.querySelector(`button.lightbox-dialog__close`))
-        expect(closeSpy).toBeCalled()
+        expect(closeSpy).toHaveBeenCalled()
     })
 })

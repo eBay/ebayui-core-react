@@ -1,21 +1,28 @@
-import React, { ReactElement } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
+import { createRoot } from 'react-dom/client'
 // need that for broken definitions workaround
 // @ts-ignore
 import { ui } from 'shaka-player/dist/shaka-player.ui'
 import { ReportButton } from './reportButton'
 
-export function customControls(onReport = () => {}): { Report } {
+export function customControls(onReport = () => {}): { Report: any } {
     // Have to contain in order to not execute until shaka is downloaded
     // eslint-disable-next-line no-extra-parens
     const Report = class extends (ui.Element as any) {
         constructor(parent, controls, text) {
             super(parent, controls)
 
-            appendChild(parent, <ReportButton>{text}</ReportButton>, button => {
+
+            const tempEl: HTMLElement = document.createElement('div')
+            const buttonCallback = () => {
+                const reportButton = tempEl.firstChild
+                parent.appendChild(reportButton)
+                tempEl.remove()
+
                 // have to listen to clicks this way (React onClick will not work):
-                this.eventManager.listen(button, 'click', onReport)
-            })
+                this.eventManager.listen(reportButton, 'click', onReport)
+            }
+            createRoot(tempEl).render(<ReportButton callback={buttonCallback}>{text}</ReportButton>)
         }
     }
 
@@ -32,14 +39,4 @@ export function customControls(onReport = () => {}): { Report } {
     }
 
     return { Report }
-}
-
-function appendChild(container: HTMLElement, reactElement: ReactElement, callback: (child: ChildNode) => void): void {
-    const tempEl: HTMLElement = document.createElement('div')
-
-    ReactDOM.render(reactElement, tempEl, () => {
-        const child = tempEl.firstChild
-        container.appendChild(child)
-        callback(child)
-    })
 }

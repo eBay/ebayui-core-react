@@ -1,9 +1,8 @@
 import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { act, fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayTextbox, EbayTextboxPostfixIcon } from '../index'
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayTextbox>', () => {
     describe('on textbox change', () => {
@@ -15,7 +14,7 @@ describe('<EbayTextbox>', () => {
             const textbox = screen.getByRole('textbox')
 
             fireEvent.change(textbox, { target: { value } })
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value })
         })
     })
 
@@ -28,10 +27,10 @@ describe('<EbayTextbox>', () => {
             const textbox = screen.getByRole('textbox')
 
             fireEvent.change(textbox, { target: { value } })
-            expect(spy).not.toBeCalled()
+            expect(spy).not.toHaveBeenCalled()
 
             fireEvent.blur(textbox, { target: { value } })
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('blur'), { value })
         })
     })
 
@@ -42,7 +41,7 @@ describe('<EbayTextbox>', () => {
             const value = `It's a spy!`
 
             fireEvent.focus(screen.getByRole('textbox'), { target: { value } })
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('focus'), { value })
         })
     })
 
@@ -53,7 +52,7 @@ describe('<EbayTextbox>', () => {
             const value = `It's a spy!`
 
             fireEvent.blur(screen.getByRole('textbox'), { target: { value } })
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('blur'), { value })
         })
         it('should have "inline" class after blur event when no value is present', () => {
             const { container } = render(<EbayTextbox floatingLabel="Test label" />)
@@ -74,7 +73,7 @@ describe('<EbayTextbox>', () => {
             const value = `It's a spy!`
 
             fireEvent.keyDown(screen.getByRole('textbox'), { target: { value } })
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('keydown'), { value })
         })
     })
 
@@ -85,7 +84,7 @@ describe('<EbayTextbox>', () => {
             const value = `It's a spy!`
 
             fireEvent.keyUp(screen.getByRole('textbox'), { target: { value } })
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('keyup'), { value })
         })
     })
 
@@ -96,8 +95,8 @@ describe('<EbayTextbox>', () => {
             render(<EbayTextbox onKeyPress={spy} defaultValue={value} />)
 
             const textbox = screen.getByRole('textbox')
-            userEvent.type(textbox, 'a')
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            act(() => { userEvent.type(textbox, 'a') })
+            expect(spy).toHaveBeenCalledWith(eventOfType('keypress'), { value })
         })
     })
 
@@ -108,7 +107,7 @@ describe('<EbayTextbox>', () => {
             render(<form ref={ref}><EbayTextbox onInvalid={spy} required /></form>)
 
             ref.current?.reportValidity()
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value: '' })
+            expect(spy).toHaveBeenCalledWith(eventOfType('invalid'), { value: '' })
         })
     })
 
@@ -124,8 +123,8 @@ describe('<EbayTextbox>', () => {
             )
             fireEvent.click(wrapper.getByRole('button'))
 
-            expect(textboxSpy).toBeCalledWith(anySyntheticEvent, { value })
-            expect(iconSpy).toBeCalledWith(anySyntheticEvent)
+            expect(textboxSpy).toHaveBeenCalledWith(eventOfType('click'), { value })
+            expect(iconSpy).toHaveBeenCalledWith(eventOfType('click'))
         })
 
         it('button should fire an event', () => {
@@ -141,7 +140,7 @@ describe('<EbayTextbox>', () => {
             )
             fireEvent.click(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'))
         })
     })
 

@@ -1,9 +1,8 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayRadio } from '../index'
 import { EbayLabel } from '../../ebay-field'
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayRadio>', () => {
     describe('on radio-button click', () => {
@@ -17,7 +16,7 @@ describe('<EbayRadio>', () => {
             )
             fireEvent.click(screen.getByLabelText('radio'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value })
         })
         it('should fire onFocus event', () => {
             const value = 'test'
@@ -29,7 +28,7 @@ describe('<EbayRadio>', () => {
             )
             fireEvent.focus(screen.getByLabelText('radio'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('focus'), { value })
         })
     })
     describe('on radio-button key down', () => {
@@ -43,7 +42,7 @@ describe('<EbayRadio>', () => {
             )
             fireEvent.keyDown(screen.getByLabelText('radio'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value })
+            expect(spy).toHaveBeenCalledWith(eventOfType('keydown'), { value })
         })
     })
 })

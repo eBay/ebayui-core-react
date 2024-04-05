@@ -53,7 +53,7 @@ describe('<EbayTourtip>', () => {
             const wrapper = renderComponent({ onCollapse: spy })
             fireEvent.click(wrapper.container.querySelector('button.tourtip__host'))
             fireEvent.click(wrapper.container.querySelector('button.tourtip__close'))
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 

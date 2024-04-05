@@ -35,7 +35,7 @@ describe('<EbayDrawerDialog>', () => {
     it('should trigger onClose when close button is clicked', () => {
         const closeButton = document.querySelector(`button.${classPrefix}__close`)
         fireEvent.click(closeButton)
-        expect(closeDrawerHandler).toBeCalled()
+        expect(closeDrawerHandler).toHaveBeenCalled()
     })
 
     it('should not render close button when buttonPosition is set to hidden', () => {

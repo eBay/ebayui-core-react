@@ -1,6 +1,7 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import Meta, { Default, Size, Priority, DestructiveVariant } from './index.stories'
 import { EbayButton } from '../index'
 
@@ -8,8 +9,6 @@ const DefaultStory = composeStory(Default, Meta)
 const SizeStory = composeStory(Size, Meta)
 const PriorityStory = composeStory(Priority, Meta)
 const DestructiveVariantStory = composeStory(DestructiveVariant, Meta)
-
-const anySyntheticEvent = expect.objectContaining({ target: null })
 
 describe('<EbayButton>', () => {
     describe('Default story', () => {
@@ -102,7 +101,7 @@ describe('<EbayButton>', () => {
 
             fireEvent.click(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'))
         })
         it('on escape', () => {
             const spy = jest.fn()
@@ -110,7 +109,7 @@ describe('<EbayButton>', () => {
 
             fireEvent.keyDown(wrapper.getByRole('button'), { key: 'Escape' })
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('keydown'))
         })
         it('on focus', () => {
             const spy = jest.fn()
@@ -118,7 +117,7 @@ describe('<EbayButton>', () => {
 
             fireEvent.focus(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('focus'))
         })
         it('on blur', () => {
             const spy = jest.fn()
@@ -126,7 +125,7 @@ describe('<EbayButton>', () => {
 
             fireEvent.blur(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('blur'))
         })
     })
 })

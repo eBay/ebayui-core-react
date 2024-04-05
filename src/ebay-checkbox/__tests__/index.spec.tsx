@@ -1,9 +1,9 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayCheckbox } from '../index'
 
 const { getByRole } = screen
-const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayCheckbox>', () => {
     describe('on checkbox-button click', () => {
@@ -12,7 +12,7 @@ describe('<EbayCheckbox>', () => {
             render(<EbayCheckbox aria-label="checkbox" value="123" onChange={spy} />)
             const input = getByRole('checkbox')
             fireEvent.click(input)
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value: '123', checked: true })
+            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value: '123', checked: true })
         })
     })
     describe('on checkbox-button focus', () => {
@@ -21,7 +21,7 @@ describe('<EbayCheckbox>', () => {
             render(<EbayCheckbox aria-label="checkbox" value="123" onFocus={spy} />)
             const input = getByRole('checkbox')
             fireEvent.focus(input)
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value: '123', checked: false })
+            expect(spy).toHaveBeenCalledWith(eventOfType('focus'), { value: '123', checked: false })
         })
     })
     describe('on checkbox-button key down', () => {
@@ -30,7 +30,7 @@ describe('<EbayCheckbox>', () => {
             render(<EbayCheckbox aria-label="checkbox" value="123" onKeyDown={spy} />)
             const input = getByRole('checkbox')
             fireEvent.keyDown(input)
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value: '123', checked: false })
+            expect(spy).toHaveBeenCalledWith(eventOfType('keydown'), { value: '123', checked: false })
         })
     })
 })
