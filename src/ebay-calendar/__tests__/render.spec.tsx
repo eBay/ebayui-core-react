@@ -3,6 +3,10 @@ import { render, screen } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
 import Meta, { Default, Navigable, RangeSelected } from './index.stories'
 
+jest
+    .useFakeTimers()
+    .setSystemTime(new Date('2024-03-05').getTime())
+
 const DefaultStory = composeStory(Default, Meta)
 const NavigableStory = composeStory(Navigable, Meta)
 const RangeSelectedStory = composeStory(RangeSelected, Meta)
