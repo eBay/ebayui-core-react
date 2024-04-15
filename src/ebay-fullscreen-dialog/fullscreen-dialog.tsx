@@ -19,7 +19,7 @@ const EbayFullscreenDialog: FC<Props> = ({
     <DialogBaseWithState
         {...rest}
         classPrefix={classPrefix}
-        buttonPosition="left"
+        buttonPosition="right"
         onCloseBtnClick={onClose}
         transitionElement="window"
         animated={animated}
