@@ -27,8 +27,7 @@ describe('ebay-calendar rendering', () => {
         expect(screen.getByText('Sat')).toBeInTheDocument()
     })
 
-    // todo: fix it in code, content jumps :)
-    it.skip('renders navigable story correctly', async () => {
+    it('renders navigable story correctly', async () => {
         const { container } = render(<NavigableStory />)
         expect(container.querySelector('.calendar')).toBeInTheDocument()
 
