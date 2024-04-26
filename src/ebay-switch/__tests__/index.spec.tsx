@@ -1,8 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbaySwitch } from '../index'
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbaySwitch>', () => {
     describe('on switch-button click', () => {
@@ -14,7 +13,7 @@ describe('<EbaySwitch>', () => {
             )
             fireEvent.click(wrapper.container.querySelector('input'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent, { value, checked: true })
+            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value, checked: true })
         })
 
         it('should not change when controlled', () => {

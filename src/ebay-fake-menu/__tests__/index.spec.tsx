@@ -2,7 +2,8 @@ import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 import { EbayFakeMenu, EbayFakeMenuItem } from '../index'
 
-const anySyntheticEvent = expect.objectContaining({ type: null })
+const clickEvent = expect.objectContaining({ type: 'click' })
+const keyDownEvent = expect.objectContaining({ type: 'keydown' })
 
 describe('<EbayFakeMenu>', () => {
     describe('on menu item click', () => {
@@ -16,7 +17,7 @@ describe('<EbayFakeMenu>', () => {
 
             fireEvent.click(wrapper.container.querySelectorAll('.fake-menu__item')[0])
 
-            expect(onClickSpy).toBeCalled()
+            expect(onClickSpy).toHaveBeenCalled()
         })
     })
     describe('on key down', () => {
@@ -31,7 +32,7 @@ describe('<EbayFakeMenu>', () => {
             const index = 0
             fireEvent.keyDown(wrapper.container.querySelectorAll('.fake-menu__item')[index])
 
-            expect(onKeyDownSpy).toBeCalledWith(anySyntheticEvent, { index })
+            expect(onKeyDownSpy).toHaveBeenCalledWith(keyDownEvent, { index })
         })
     })
     describe('on item select', () => {
@@ -47,7 +48,7 @@ describe('<EbayFakeMenu>', () => {
             const index = 1
             fireEvent.click(wrapper.container.querySelectorAll('.fake-menu__item')[index])
 
-            expect(onSelectSpy).toBeCalledWith(anySyntheticEvent, { index })
+            expect(onSelectSpy).toHaveBeenCalledWith(clickEvent, { index })
         })
     })
 

@@ -44,8 +44,8 @@
   "license": "ISC",
   "peerDependencies": {
     "@ebay/skin": "^17.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": ">= 16.0.0",
+    "react-dom": ">= 16.0.0",
     "shaka-player": "^4.3.2"
   },
   "dependencies": {
@@ -69,13 +69,13 @@
     "@storybook/react-webpack5": "^7.6.12",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^12",
+    "@testing-library/react": "^14.2.2",
     "@testing-library/react-hooks": "^7",
     "@testing-library/user-event": "^12",
     "@types/classnames": "^2.2.11",
     "@types/jest": "^29.5.12",
-    "@types/react": "^16.0",
-    "@types/react-dom": "^16.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.10.0",
     "babel-loader": "^8.1.0",
@@ -96,9 +96,9 @@
     "jest-pnp-resolver": "^1.2.3",
     "lint-staged": "^10.5.3",
     "node-require-context": "^1.0.0",
-    "react": "^16.0.0",
+    "react": "^18",
     "react-docgen-typescript-loader": "^3.7.2",
-    "react-dom": "^16.0.0",
+    "react-dom": "^18",
     "shaka-player": "^4.3.2",
     "storybook": "^7.5.1",
     "style-loader": "^2.0.0",
@@ -108,7 +108,6 @@
     "typescript": "4"
   },
   "resolutions": {
-    "@types/react": "^16.14.2",
     "@storybook/addon-actions": "~7.5.3",
     "string-width": "4.2.3"
   }

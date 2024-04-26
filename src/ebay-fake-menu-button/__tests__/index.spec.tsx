@@ -1,8 +1,8 @@
 import React from 'react'
 import { screen, fireEvent, render } from '@testing-library/react'
 import { EbayFakeMenuButton, EbayFakeMenuButtonItem } from '..'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
-const anySyntheticEvent = expect.objectContaining({ type: null })
 jest.useFakeTimers()
 
 describe('<EbayFakeMenuButton>', () => {
@@ -23,7 +23,7 @@ describe('<EbayFakeMenuButton>', () => {
             )
             fireEvent.click(screen.getByRole('button'))
 
-            expect(expandSpy).toBeCalled()
+            expect(expandSpy).toHaveBeenCalled()
         })
         it('should fire onCollapse event', () => {
             render(
@@ -36,7 +36,7 @@ describe('<EbayFakeMenuButton>', () => {
             fireEvent.click(button)
             fireEvent.click(button)
 
-            expect(expandSpy).toBeCalled()
+            expect(expandSpy).toHaveBeenCalled()
         })
     })
 
@@ -71,29 +71,29 @@ describe('<EbayFakeMenuButton>', () => {
             fireEvent.mouseDown(link)
             fireEvent.click(link)
 
-            expect(mouseDownSpy).toBeCalledWith(anySyntheticEvent, { index: 1 })
-            expect(selectSpy).toBeCalledWith(anySyntheticEvent, { index: 1 })
+            expect(mouseDownSpy).toHaveBeenCalledWith(eventOfType('mousedown'), { index: 1 })
+            expect(selectSpy).toHaveBeenCalledWith(eventOfType('click'), { index: 1 })
         })
 
         it('should close on button click', () => {
             fireEvent.click(button)
 
-            expect(collapseSpy).toBeCalled()
+            expect(collapseSpy).toHaveBeenCalled()
         })
 
         it('should close on Esc press', () => {
             fireEvent.focus(button)
             fireEvent.keyDown(button, { key: 'Escape' })
 
-            expect(keyDownSpy).toBeCalledWith(anySyntheticEvent)
-            expect(collapseSpy).toBeCalled()
+            expect(keyDownSpy).toHaveBeenCalledWith(eventOfType('keydown'))
+            expect(collapseSpy).toHaveBeenCalled()
         })
 
         it('should close on BG click', () => {
             jest.runAllTimers()
             document.body.click()
 
-            expect(collapseSpy).toBeCalled()
+            expect(collapseSpy).toHaveBeenCalled()
         })
     })
 })

@@ -1,8 +1,8 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 import { EbaySelect, EbaySelectOption } from '../index'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
-const anySyntheticEvent = expect.objectContaining({ type: null })
 const EbaySelectWith3Options = (props) => (
     <EbaySelect {...props}>
         <EbaySelectOption value="">Please Select</EbaySelectOption>
@@ -43,8 +43,8 @@ describe('<EbaySelect>', () => {
             const selectedValue = '3'
             simulateSelectChange(wrapper, selectedValue, index)
 
-            expect(spy).toBeCalledTimes(1)
-            expect(spy).toBeCalledWith(anySyntheticEvent, { index, selected: [selectedValue] })
+            expect(spy).toHaveBeenCalledTimes(1)
+            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { index, selected: [selectedValue] })
         })
     })
 

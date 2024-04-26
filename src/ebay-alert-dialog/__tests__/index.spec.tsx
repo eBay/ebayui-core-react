@@ -22,7 +22,7 @@ describe('<EbayAlertDialog>', () => {
         )
     })
     it('should trigger onOpen when dialog appears', () => {
-        expect(openSpy).toBeCalled()
+        expect(openSpy).toHaveBeenCalled()
     })
 
     it('should have close button', () => {
@@ -31,6 +31,6 @@ describe('<EbayAlertDialog>', () => {
 
     it('should trigger onClose when close button is clicked', () => {
         fireEvent.click(screen.getByText('Confirm'))
-        expect(closeSpy).toBeCalled()
+        expect(closeSpy).toHaveBeenCalled()
     })
 })

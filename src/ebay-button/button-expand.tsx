@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import EbayButtonCell from './button-cell'
 import EbayButtonText from './button-text'
 import { EbayIcon } from '../ebay-icon'
 
-const EbayButtonExpand: FC = ({ children }) =>
+const EbayButtonExpand: FC<{ children?: ReactNode }> = ({ children }) =>
     children ? (
         <EbayButtonCell>
             <EbayButtonText>

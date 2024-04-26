@@ -33,7 +33,7 @@ describe('<EbayTooltip>', () => {
             const { getByText } = renderComponent({ onMouseEnter: spy })
             fireEvent.mouseEnter(getByText('Info content'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
 
         it('should expand the tooltip', () => {
@@ -55,7 +55,7 @@ describe('<EbayTooltip>', () => {
             const wrapper = renderComponent({ onMouseLeave: spy })
             fireEvent.mouseLeave(wrapper.getByText('Info content'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
 
         it('should collapse the tooltip', () => {
@@ -80,7 +80,7 @@ describe('<EbayTooltip>', () => {
             const wrapper = renderComponent({ onFocus: spy })
             fireEvent.focus(wrapper.getByText('Info'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
 
         it('should expand the tooltip', () => {
@@ -102,7 +102,7 @@ describe('<EbayTooltip>', () => {
             const wrapper = renderComponent({ onBlur: spy })
             fireEvent.blur(wrapper.getByText('Info'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
 
         it('should collapse the tooltip', () => {
@@ -118,7 +118,7 @@ describe('<EbayTooltip>', () => {
             const wrapper = renderComponent({ onExpand: spy })
             fireEvent.focus(wrapper.getByText('Info'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 
@@ -128,7 +128,7 @@ describe('<EbayTooltip>', () => {
             const wrapper = renderComponent({ onCollapse: spy })
             fireEvent.blur(wrapper.getByText('Info'))
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 

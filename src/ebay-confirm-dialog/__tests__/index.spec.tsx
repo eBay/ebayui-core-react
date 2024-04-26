@@ -41,12 +41,12 @@ describe('<EbayConfirmDialog>', () => {
     it('should trigger onConfirm when Confirm button is clicked', () => {
         showDialog()
         fireEvent.click(screen.getByText('Confirm'))
-        expect(confirmSpy).toBeCalled()
+        expect(confirmSpy).toHaveBeenCalled()
     })
 
     it('should trigger onOpen when dialog appears', () => {
         showDialog()
-        expect(openSpy).toBeCalled()
+        expect(openSpy).toHaveBeenCalled()
     })
 
     it('should trigger onReject when Reject button is clicked', () => {
@@ -54,6 +54,6 @@ describe('<EbayConfirmDialog>', () => {
         const button = screen.getByText('Reject')
         fireEvent.click(button)
         expect(button).toBeInTheDocument()
-        expect(rejectSpy).toBeCalled()
+        expect(rejectSpy).toHaveBeenCalled()
     })
 })

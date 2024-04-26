@@ -30,7 +30,7 @@ const openDialog = () =>
 describe('<EbayFullscreenDialog>', () => {
     it('should trigger onOpen when dialog appears', () => {
         openDialog()
-        expect(openSpy).toBeCalled()
+        expect(openSpy).toHaveBeenCalled()
     })
 
     it('should have close button', () => {
@@ -47,6 +47,6 @@ describe('<EbayFullscreenDialog>', () => {
         openDialog()
         const dialogClose = document.querySelector(`button.fullscreen-dialog__close`)
         fireEvent.click(dialogClose)
-        expect(closeSpy).toBeCalled()
+        expect(closeSpy).toHaveBeenCalled()
     })
 })

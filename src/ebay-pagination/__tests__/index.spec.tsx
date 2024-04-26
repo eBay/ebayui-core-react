@@ -1,6 +1,7 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 import { EbayPagination, EbayPaginationItem as Item } from '../index'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
 jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
 
@@ -11,8 +12,6 @@ jest.mock('react-dom', () => {
         createPortal: node => node
     }
 })
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
 
 describe('<EbayPagination>', () => {
     describe('on page click', () => {
@@ -32,7 +31,7 @@ describe('<EbayPagination>', () => {
             )
             fireEvent.click(wrapper.getAllByRole('link')[1])
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
 
@@ -63,25 +62,25 @@ describe('<EbayPagination>', () => {
         it('should trigger onPrevious() on clicking prev arrow', () => {
             fireEvent.click(wrapper.getByLabelText('Previous page'))
 
-            expect(spyOnSelect).not.toBeCalled()
-            expect(spyOnPrev).toBeCalledWith(anySyntheticEvent)
-            expect(spyOnNext).not.toBeCalled()
+            expect(spyOnSelect).not.toHaveBeenCalled()
+            expect(spyOnPrev).toHaveBeenCalledWith(eventOfType('click'))
+            expect(spyOnNext).not.toHaveBeenCalled()
         })
 
         it('should trigger onNext() on clicking next arrow', () => {
             fireEvent.click(wrapper.getByLabelText('Next page'))
 
-            expect(spyOnSelect).not.toBeCalled()
-            expect(spyOnPrev).not.toBeCalled()
-            expect(spyOnNext).toBeCalledWith(anySyntheticEvent)
+            expect(spyOnSelect).not.toHaveBeenCalled()
+            expect(spyOnPrev).not.toHaveBeenCalled()
+            expect(spyOnNext).toHaveBeenCalledWith(eventOfType('click'))
         })
 
         it('should trigger onSelect() on clicking pagination item', () => {
             fireEvent.click(wrapper.getAllByRole('link')[1])
 
-            expect(spyOnSelect).toBeCalledWith(anySyntheticEvent, { value: '', index: 2 })
-            expect(spyOnPrev).not.toBeCalled()
-            expect(spyOnNext).not.toBeCalled()
+            expect(spyOnSelect).toHaveBeenCalledWith(eventOfType('click'), { value: '', index: 2 })
+            expect(spyOnPrev).not.toHaveBeenCalled()
+            expect(spyOnNext).not.toHaveBeenCalled()
         })
     })
 

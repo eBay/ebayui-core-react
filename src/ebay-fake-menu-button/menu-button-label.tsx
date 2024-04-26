@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
-const EbayFakeMenuButtonLabel: FC = ({ children }) => (
+const EbayFakeMenuButtonLabel: FC<{ children?: ReactNode }> = ({ children }) => (
     <>{children}</>
 )
 

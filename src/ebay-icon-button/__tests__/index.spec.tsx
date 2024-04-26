@@ -1,8 +1,7 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 import { EbayIconButton } from '../../ebay-icon-button'
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
 describe('<EbayIconButton>', () => {
     describe('on passing a ref', () => {
@@ -21,7 +20,7 @@ describe('<EbayIconButton>', () => {
             )
             fireEvent.click(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'))
         })
     })
     describe('on focus', () => {
@@ -32,7 +31,7 @@ describe('<EbayIconButton>', () => {
             )
             fireEvent.focus(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('focus'))
         })
     })
     describe('on blur', () => {
@@ -43,7 +42,7 @@ describe('<EbayIconButton>', () => {
             )
             fireEvent.blur(wrapper.getByRole('button'))
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('blur'))
         })
     })
     describe('on Esc press', () => {
@@ -54,7 +53,7 @@ describe('<EbayIconButton>', () => {
             )
             fireEvent.keyDown(wrapper.getByRole('button'), { key: 'Escape' })
 
-            expect(spy).toBeCalledWith(anySyntheticEvent)
+            expect(spy).toHaveBeenCalledWith(eventOfType('keydown'))
         })
     })
 })

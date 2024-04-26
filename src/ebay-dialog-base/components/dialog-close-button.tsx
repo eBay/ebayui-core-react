@@ -4,6 +4,6 @@ type EbayDialogCloseButtonProps = {
     children?: ReactNode;
 }
 
-const EbayDialogCloseButton: FC = ({ children }: EbayDialogCloseButtonProps) => <>{children}</>
+const EbayDialogCloseButton: FC<EbayDialogCloseButtonProps> = ({ children }) => <>{children}</>
 
 export default EbayDialogCloseButton

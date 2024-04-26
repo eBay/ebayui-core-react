@@ -14,7 +14,7 @@ describe('<EbaySplitButton>', () => {
             const wrapper = render(splitButton({ onClick: spy }))
             fireEvent.click(wrapper.getAllByRole('button')[0])
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
     describe('on escape keydown', () => {
@@ -24,7 +24,7 @@ describe('<EbaySplitButton>', () => {
 
             fireEvent.keyDown(wrapper.getAllByRole('button')[0], { key: 'Escape' })
 
-            expect(spy).toBeCalled()
+            expect(spy).toHaveBeenCalled()
         })
     })
     describe('on expand/collapse', () => {
@@ -36,15 +36,15 @@ describe('<EbaySplitButton>', () => {
             const dropdownButton = screen.getAllByRole('button')[1]
             fireEvent.click(dropdownButton)
 
-            expect(expandSpy).toBeCalled()
-            expect(collapseSpy).not.toBeCalled()
+            expect(expandSpy).toHaveBeenCalled()
+            expect(collapseSpy).not.toHaveBeenCalled()
 
             expandSpy.mockReset()
             collapseSpy.mockReset()
             fireEvent.click(dropdownButton)
 
-            expect(expandSpy).not.toBeCalled()
-            expect(collapseSpy).toBeCalled()
+            expect(expandSpy).not.toHaveBeenCalled()
+            expect(collapseSpy).toHaveBeenCalled()
         })
     })
 
@@ -57,15 +57,15 @@ describe('<EbaySplitButton>', () => {
             const [mainButton] = screen.getAllByRole('button')
             fireEvent.focus(mainButton)
 
-            expect(focusSpy).toBeCalled()
-            expect(blurSpy).not.toBeCalled()
+            expect(focusSpy).toHaveBeenCalled()
+            expect(blurSpy).not.toHaveBeenCalled()
 
             focusSpy.mockReset()
             blurSpy.mockReset()
             fireEvent.blur(mainButton)
 
-            expect(focusSpy).not.toBeCalled()
-            expect(blurSpy).toBeCalled()
+            expect(focusSpy).not.toHaveBeenCalled()
+            expect(blurSpy).toHaveBeenCalled()
         })
     })
 
@@ -83,7 +83,7 @@ describe('<EbaySplitButton>', () => {
                 index: indexToSelect,
                 checked: [indexToSelect]
             }
-            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), expectedEventProps)
         })
     })
 
@@ -106,7 +106,7 @@ describe('<EbaySplitButton>', () => {
                 checked: [indexToCheck],
                 checkedValues: [values[indexToCheck]]
             }
-            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), expectedEventProps)
             spy.mockClear()
 
             const anotherMenuItem = menuItems[anotherIndexToCheck]
@@ -118,7 +118,7 @@ describe('<EbaySplitButton>', () => {
                 checked: [anotherIndexToCheck],
                 checkedValues: [values[anotherIndexToCheck]]
             }
-            expect(spy).toBeCalledWith(expect.any(Object), newerExpectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), newerExpectedEventProps)
         })
     })
 
@@ -141,7 +141,7 @@ describe('<EbaySplitButton>', () => {
                 checked: [indexToCheck],
                 checkedValues: [values[indexToCheck]]
             }
-            expect(spy).toBeCalledWith(expect.any(Object), expectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), expectedEventProps)
             spy.mockClear()
 
             const anotherMenuItem = menuItems[anotherIndexToCheck]
@@ -153,7 +153,7 @@ describe('<EbaySplitButton>', () => {
                 checked: [indexToCheck, anotherIndexToCheck],
                 checkedValues: [values[indexToCheck], values[anotherIndexToCheck]]
             }
-            expect(spy).toBeCalledWith(expect.any(Object), newerExpectedEventProps)
+            expect(spy).toHaveBeenCalledWith(expect.any(Object), newerExpectedEventProps)
         })
     })
 })

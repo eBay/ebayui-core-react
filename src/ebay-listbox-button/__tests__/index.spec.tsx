@@ -1,8 +1,7 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
+import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayListboxButton, EbayListboxButtonOption } from '..'
-
-const anySyntheticEvent = expect.objectContaining({ type: null })
 
 jest.useFakeTimers()
 describe('<EbayListboxButton>', () => {
@@ -160,7 +159,7 @@ describe('<EbayListboxButton>', () => {
             fireEvent.mouseDown(screen.getAllByRole('option')[index])
             fireEvent.click(screen.getAllByRole('option')[index])
 
-            expect(spy).toBeCalledWith(anySyntheticEvent, { index, selected: ['AA'], wasClicked: true })
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index, selected: ['AA'], wasClicked: true })
         })
 
         it(`should pass the current selected value`, () => {
@@ -176,15 +175,15 @@ describe('<EbayListboxButton>', () => {
 
             fireEvent.mouseDown(screen.getAllByRole('option')[0])
             fireEvent.click(screen.getAllByRole('option')[0])
-            expect(spy).toBeCalledWith(anySyntheticEvent, { index: 0, selected: ['AA'], wasClicked: true })
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index: 0, selected: ['AA'], wasClicked: true })
 
             fireEvent.mouseDown(screen.getAllByRole('option')[1])
             fireEvent.click(screen.getAllByRole('option')[1])
-            expect(spy).toBeCalledWith(anySyntheticEvent, { index: 1, selected: ['BB'], wasClicked: true })
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index: 1, selected: ['BB'], wasClicked: true })
 
             fireEvent.mouseDown(screen.getAllByRole('option')[2])
             fireEvent.click(screen.getAllByRole('option')[2])
-            expect(spy).toBeCalledWith(anySyntheticEvent, { index: 2, selected: ['CC'], wasClicked: true })
+            expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index: 2, selected: ['CC'], wasClicked: true })
         })
     })
     describe('on expand', () => {
@@ -199,7 +198,7 @@ describe('<EbayListboxButton>', () => {
             )
             fireEvent.click(screen.getByRole('button'))
 
-            expect(spy).toBeCalledWith()
+            expect(spy).toHaveBeenCalledWith()
         })
     })
     describe('on collapse', () => {
@@ -216,7 +215,7 @@ describe('<EbayListboxButton>', () => {
             fireEvent.click(button)
             fireEvent.click(button)
 
-            expect(spy).toBeCalledWith()
+            expect(spy).toHaveBeenCalledWith()
         })
     })
 })
