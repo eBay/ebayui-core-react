@@ -16,7 +16,7 @@
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 9001 -c .storybook",
     "storybook-node16": "storybook dev -p 9001 -c .storybook",
     "build-storybook": "storybook build",
-    "storybook:publish": "NODE_OPTIONS=--openssl-legacy-provider yarn build-storybook --output-dir storybook-static/$(git branch --show-current) && gh-pages -d --add storybook-static",
+    "storybook:publish": "NODE_OPTIONS=--openssl-legacy-provider yarn build-storybook --output-dir storybook-static/$(git branch --show-current) && gh-pages --add --message=\"Deploying to gh-pages from @ $(git rev-parse --short HEAD) 🚀\" -d storybook-static",
     "test": "yarn jest",
     "build": "yarn typecheck && yarn tsc",
     "typecheck": "tsc --project tsconfig.typecheck.json",
