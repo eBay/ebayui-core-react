@@ -1,6 +1,10 @@
 # ebay-video
+
 Video player. Supports either MPD or M3U8 playlist formats.
 Natively uses `shaka` player under the hood. For resizing, `ebay-video` supports fixed width or variable width. If no width is provided the video tag will resize based on the container size.
+
+## Demo
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/media-ebay-video--default)
 
 ## Usage
 ```bash
@@ -37,6 +41,7 @@ import 'shaka-player/dist/controls.css'
 | a11yPlayText | String   | Yes      | a11y text for the play button                                                                                   |
 | errorText    | String   | Yes      | content for error when an either the library or video cannot load                                               |
 | reportText   | String   | Yes      | text for report button                                                                                          |
+
 ## Callbacks
 | Name           | Required | Description                                                      | Arguments                                   |
 |----------------|----------|------------------------------------------------------------------|---------------------------------------------|
@@ -44,7 +49,6 @@ import 'shaka-player/dist/controls.css'
 | onPlay         | No       | triggered when playback starts                                   | (Event, { player })                         |
 | onVolumeChange | No       | triggered when volume is changed                                 | (Event, { volume: number, muted: boolean }) |
 | onReport       | No       | triggered when report button is clicked                          |                                             |
-
 
 ## EbayVideoSource Props
 | Name | Type   | Required | Description                                                                                                     |
