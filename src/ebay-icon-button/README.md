@@ -2,7 +2,7 @@
 This is a circular button with an icon only.
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-icon-button--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/buttons-ebay-icon-button--default)
 
 ## Usage
 

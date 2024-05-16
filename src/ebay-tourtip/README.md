@@ -1,8 +1,7 @@
 # ebay-tourtip
 
 ## Demo
-
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-tourtip--default-tourtip)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/notices-tips-ebay-tourtip--default-tourtip)
 
 ## Import JS
 

@@ -1,7 +1,7 @@
 # ebay-menu-button
 
 ## Demo
-[Storybook](https://pages.github.corp.ebay.com/React/ebayui-core-react/master/?path=/story/ebay-menu-button--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/buttons-ebay-menu-button--default)
 
 ## Install
 ```

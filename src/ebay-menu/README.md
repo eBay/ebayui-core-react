@@ -1,7 +1,7 @@
 # ebay-menu
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-menu--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/building-blocks-ebay-menu--default)
 
 ## Install
 ```

@@ -2,7 +2,7 @@
 The progress bar gives an immediate, real-time visualisation of the current task completion status. The progress bar's value does not include its min, so giving a value <= min will set the value to min + 1.
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-progress-bar--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/progress-ebay-progress-bar--default)
 
 ## Usage
 

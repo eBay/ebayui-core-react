@@ -1,8 +1,7 @@
 # ebay-textbox
 
 ## Demo
-
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-textbox--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-input-ebay-textbox--default-textbox)
 
 ## Usage
 

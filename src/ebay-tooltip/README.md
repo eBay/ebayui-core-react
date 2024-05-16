@@ -1,8 +1,7 @@
 # ebay-tooltip
 
 ## Demo
-
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-tooltip--default-tooltip)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/notices-tips-ebay-tooltip--default-tooltip)
 
 ## Import JS
 

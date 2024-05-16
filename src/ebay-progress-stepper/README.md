@@ -1,8 +1,7 @@
 # ebay-progress-stepper
 
 ## Demo
-
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-progress-stepper--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/progress-ebay-progress-stepper--default)
 
 ## Usage
 

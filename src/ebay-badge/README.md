@@ -1,7 +1,7 @@
 # ebay-badge
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-badge--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/graphics-icons-ebay-badge--default)
 
 ## Usage
 ```

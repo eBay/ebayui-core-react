@@ -1,7 +1,7 @@
 # ebay-fake-tabs
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-fake-tabs--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/navigation-disclosure-ebay-fake-tabs--default-tabs)
 
 ## Import JS
 ```jsx harmony

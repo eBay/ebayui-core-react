@@ -1,7 +1,7 @@
 # ebay-tab
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-tabs--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/navigation-disclosure-ebay-tabs--default-tabs)
 
 ## Import JS
 ```jsx harmony
