@@ -1,4 +1,4 @@
-# ebay-star-rating-select
+# EbayStarRatingSelect
 use (rating from 0-5)
 
 ## Demo

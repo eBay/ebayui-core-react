@@ -1,4 +1,4 @@
-# ebay-signal
+# EbaySignal
 
 ##Description
 Signals are data-backed recommendations to help customers make more informed decisions. There are four signal statuses, each corresponding to a specific color: `trustworthy`, `recent`, `time-sensitive` & `neutral`. Defaults to `neutral` if none specified.

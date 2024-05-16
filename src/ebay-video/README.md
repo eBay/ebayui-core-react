@@ -1,4 +1,4 @@
-# ebay-video
+# EbayVideo
 
 Video player. Supports either MPD or M3U8 playlist formats.
 Natively uses `shaka` player under the hood. For resizing, `ebay-video` supports fixed width or variable width. If no width is provided the video tag will resize based on the container size.

@@ -1,4 +1,4 @@
-# ebay-menu-button
+# EbayMenuButton
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/buttons-ebay-menu-button--default)

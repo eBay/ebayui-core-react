@@ -1,4 +1,4 @@
-# ebay-field
+# EbayField
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-input-ebay-field--default-inline)

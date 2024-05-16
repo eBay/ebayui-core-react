@@ -1,4 +1,4 @@
-# ebay-badge
+# EbayBadge
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/graphics-icons-ebay-badge--default)

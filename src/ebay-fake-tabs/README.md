@@ -1,4 +1,4 @@
-# ebay-fake-tabs
+# EbayFakeTab
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/navigation-disclosure-ebay-fake-tabs--default-tabs)

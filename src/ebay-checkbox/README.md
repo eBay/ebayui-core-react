@@ -1,4 +1,4 @@
-# ebay-checkbox
+# EbayCheckbox
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-input-ebay-checkbox--default-checkbox-button)

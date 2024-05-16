@@ -1,4 +1,4 @@
-# ebay-tourtip
+# EbayTourtip
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/notices-tips-ebay-tourtip--default-tourtip)

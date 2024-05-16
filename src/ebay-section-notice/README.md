@@ -1,4 +1,4 @@
-# ebay-section-notice
+# EbaySectionNotice
 
 ## Demo
 [Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/notices-tips-ebay-section-notice--default-message-with-no-action)
