@@ -4,7 +4,11 @@
     "exclude": ["test/**", "docs/**", "build/**"],
 
     "react": {
-      "importPaths": {},
+      "importPaths": {
+        "src/ebay-badge/*": "@ebay/ui-core-react/ebay-badge",
+        "src/ebay-breadcrumbs/*": "@ebay/ui-core-react/ebay-breadcrumbs",
+        "src/ebay-button/*": "@ebay/ui-core-react/ebay-button"
+      },
       "paths": {}
     }
   }
