@@ -5,9 +5,13 @@
 
     "react": {
       "importPaths": {
+        "src/ebay-alert-dialog/*": "@ebay/ui-core-react/ebay-alert-dialog",
         "src/ebay-badge/*": "@ebay/ui-core-react/ebay-badge",
         "src/ebay-breadcrumbs/*": "@ebay/ui-core-react/ebay-breadcrumbs",
-        "src/ebay-button/*": "@ebay/ui-core-react/ebay-button"
+        "src/ebay-button/*": "@ebay/ui-core-react/ebay-button",
+        "src/ebay-dialog-base/*": "@ebay/ui-core-react/ebay-dialog-base",
+        "src/ebay-page-notice/*": "@ebay/ui-core-react/ebay-page-notice",
+        "src/ebay-select/*": "@ebay/ui-core-react/ebay-select"
       },
       "paths": {}
     }
