@@ -7,6 +7,9 @@ figma.connect(
     EbayBadge,
     'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=38612-44629&m=dev',
     {
-        example: () => <EbayBadge number={22} />
+        props: {
+            label: figma.string('label')
+        },
+        example: ({ label }) => <EbayBadge number={label} />
     }
 )
