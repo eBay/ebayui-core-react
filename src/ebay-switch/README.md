@@ -1,16 +1,18 @@
-# ebay-switch
+# EbaySwitch
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-switch--default-switch-button)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-input-ebay-switch--default-switch-button)
 
 ## Import JS
 ```jsx harmony
 import { EbaySwitch } from '@ebay/ui-core-react/ebay-switch';
 ```
+
 ## Import following styles from SKIN
 ```jsx harmony
 import '@ebay/skin/switch';
 ```
+
 ## Usage
 ```
 yarn add @ebay/ui-core-react

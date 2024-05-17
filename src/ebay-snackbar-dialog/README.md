@@ -6,6 +6,9 @@ The user usually will want to manage the state of the snackbar, and so should pr
 
 In the case where the application developer only wants to manage the initial state of the snackbar, the dev can choose to provide only the open state as a boolean. This is useful when a dev wants the snackbar to appear only once on initial render and then disappear.
 
+## Demo
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/dialogs-ebay-snackbar-dialog--default)
+
 ## Import JS
 ```jsx harmony
 import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '@ebay/ui-core-react/ebay-snackbar-dialog';

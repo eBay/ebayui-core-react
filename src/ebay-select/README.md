@@ -2,7 +2,7 @@
 This component is used to create a native `<select>` form element with default browser styling.
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-select--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-input-ebay-select--basic)
 
 ## Import JS
 ```jsx harmony

@@ -1,7 +1,7 @@
 # EbaySplitButton
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-split-button--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/buttons-ebay-split-button--controls)
 
 ## Usage
 

@@ -1,5 +1,8 @@
 # EbayPagination
 
+## Demo
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/navigation-disclosure-ebay-pagination--basic-links)
+
 The `<EbayPagination>` is a tag used to create a pagination navigation. It will display up to 9 page links.
 If pagination doesn't fit the page it will adjust to the available width.
 
