@@ -3,7 +3,7 @@
 ## Usage
 
 ```react
-<EbayAlertDialog open a11yClosetext="Close">
+<EbayAlertDialog open a11yCloseText="Close">
     <EbayDialogHeader>Heading</EbayDialogHeader>
     <p>Body content</p>
 </EbayAlertDialog>
