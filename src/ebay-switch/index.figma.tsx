@@ -2,6 +2,7 @@ import figma from '@figma/code-connect'
 
 import React from 'react'
 import { EbaySwitch } from '.'
+/* @ts-ignore: this is only to help code connect */
 import { EbayLabel } from '@ebay/ui-core-react/ebay-field'
 
 // selection field

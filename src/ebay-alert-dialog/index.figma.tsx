@@ -2,6 +2,7 @@ import figma from '@figma/code-connect'
 
 import React from 'react'
 import { EbayAlertDialog } from '.'
+/* @ts-ignore: this is only to help code connect */
 import { EbayDialogHeader } from '@ebay/ui-core-react/ebay-dialog-base'
 
 figma.connect(
