@@ -2,6 +2,7 @@ import figma from '@figma/code-connect'
 
 import React from 'react'
 import { EbayPageNotice, EbayNoticeContent, EbayPageNoticeTitle, EbayPageNoticeFooter } from '.'
+/* @ts-ignore: this is only to help code connect */
 import { EbayButton } from '@ebay/ui-core-react/ebay-button'
 
 figma.connect(
