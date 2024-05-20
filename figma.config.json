@@ -9,12 +9,13 @@
         "src/ebay-badge/*": "@ebay/ui-core-react/ebay-badge",
         "src/ebay-breadcrumbs/*": "@ebay/ui-core-react/ebay-breadcrumbs",
         "src/ebay-button/*": "@ebay/ui-core-react/ebay-button",
+        "src/ebay-calendar/*": "@ebay/ui-core-react/ebay-calendar",
         "src/ebay-checkbox/*": "@ebay/ui-core-react/ebay-checkbox",
-        "src/ebay-dialog-base/*": "@ebay/ui-core-react/ebay-dialog-base",
         "src/ebay-page-notice/*": "@ebay/ui-core-react/ebay-page-notice",
         "src/ebay-radio/*": "@ebay/ui-core-react/ebay-radio",
         "src/ebay-select/*": "@ebay/ui-core-react/ebay-select",
-        "src/ebay-switch/*": "@ebay/ui-core-react/ebay-switch"
+        "src/ebay-switch/*": "@ebay/ui-core-react/ebay-switch",
+        "src/ebay-textbox/*": "@ebay/ui-core-react/ebay-textbox"
       },
       "paths": {}
     }

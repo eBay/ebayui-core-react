@@ -16,3 +16,17 @@ figma.connect(
         )
     }
 )
+
+figma.connect(
+    EbaySelect,
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10031-217&m=dev',
+    {
+        example: () => (
+            <EbaySelect name="formSelect">
+                <EbaySelectOption value="1">Option 1</EbaySelectOption>
+                <EbaySelectOption value="2">Option 2</EbaySelectOption>
+                <EbaySelectOption value="3">Option 3</EbaySelectOption>
+            </EbaySelect>
+        )
+    }
+)

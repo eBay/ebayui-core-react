@@ -25,7 +25,7 @@ figma.connect(
     'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10407-293&m=dev',
     {
         example: () => (
-            <EbayCheckbox id="checkbox-1" />
+            <EbayCheckbox id="checkbox-2" />
         )
     }
 )
