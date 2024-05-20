@@ -14,7 +14,7 @@ figma.connect(
             Body: figma.string('Body')
         },
         example: ({ Body, Title }) => (
-            <EbayAlertDialog open a11yCloseText="Close">
+            <EbayAlertDialog open a11yCloseText="Close" confirmText="Confirm">
                 <EbayDialogHeader>{Title}</EbayDialogHeader>
                 <p>{Body}</p>
             </EbayAlertDialog>
