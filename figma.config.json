@@ -14,8 +14,11 @@
         "src/ebay-page-notice/*": "@ebay/ui-core-react/ebay-page-notice",
         "src/ebay-radio/*": "@ebay/ui-core-react/ebay-radio",
         "src/ebay-select/*": "@ebay/ui-core-react/ebay-select",
+        "src/ebay-snackbar-dialog/*": "@ebay/ui-core-react/ebay-snackbar-dialog",
         "src/ebay-switch/*": "@ebay/ui-core-react/ebay-switch",
+        "src/ebay-tabs/*": "@ebay/ui-core-react/ebay-tabs",
         "src/ebay-textbox/*": "@ebay/ui-core-react/ebay-textbox",
+        "src/ebay-tooltip/*": "@ebay/ui-core-react/ebay-tooltip",
         "src/ebay-tourtip/*": "@ebay/ui-core-react/ebay-tourtip",
         "src/ebay-video/*": "@ebay/ui-core-react/ebay-video"
       },
