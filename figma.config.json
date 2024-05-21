@@ -15,7 +15,9 @@
         "src/ebay-radio/*": "@ebay/ui-core-react/ebay-radio",
         "src/ebay-select/*": "@ebay/ui-core-react/ebay-select",
         "src/ebay-switch/*": "@ebay/ui-core-react/ebay-switch",
-        "src/ebay-textbox/*": "@ebay/ui-core-react/ebay-textbox"
+        "src/ebay-textbox/*": "@ebay/ui-core-react/ebay-textbox",
+        "src/ebay-tourtip/*": "@ebay/ui-core-react/ebay-tourtip",
+        "src/ebay-video/*": "@ebay/ui-core-react/ebay-video"
       },
       "paths": {}
     }
