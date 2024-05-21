@@ -20,7 +20,6 @@ figma.connect(
     }
 )
 
-
 // has action set
 figma.connect(
     EbaySnackbarDialog,
