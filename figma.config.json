@@ -11,6 +11,7 @@
         "src/ebay-button/*": "@ebay/ui-core-react/ebay-button",
         "src/ebay-calendar/*": "@ebay/ui-core-react/ebay-calendar",
         "src/ebay-checkbox/*": "@ebay/ui-core-react/ebay-checkbox",
+        "src/ebay-icon-button/*": "@ebay/ui-core-react/ebay-icon-button",
         "src/ebay-page-notice/*": "@ebay/ui-core-react/ebay-page-notice",
         "src/ebay-pagination/*": "@ebay/ui-core-react/ebay-pagination",
         "src/ebay-progress-stepper/*": "@ebay/ui-core-react/ebay-progress-stepper",
