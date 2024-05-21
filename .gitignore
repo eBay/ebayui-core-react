@@ -26,4 +26,3 @@ junit.xml
 coverage
 /.vscode
 /storybook-static
-*.env
