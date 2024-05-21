@@ -12,6 +12,8 @@
         "src/ebay-calendar/*": "@ebay/ui-core-react/ebay-calendar",
         "src/ebay-checkbox/*": "@ebay/ui-core-react/ebay-checkbox",
         "src/ebay-page-notice/*": "@ebay/ui-core-react/ebay-page-notice",
+        "src/ebay-pagination/*": "@ebay/ui-core-react/ebay-pagination",
+        "src/ebay-progress-stepper/*": "@ebay/ui-core-react/ebay-progress-stepper",
         "src/ebay-radio/*": "@ebay/ui-core-react/ebay-radio",
         "src/ebay-select/*": "@ebay/ui-core-react/ebay-select",
         "src/ebay-section-title/*": "@ebay/ui-core-react/ebay-section-title",
