@@ -1,8 +1,8 @@
-# ebay-inline-notice
+# EbayInlineNotice
 
 ## Demo
 
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-inline-notice--confirmation-message)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/notices-tips-ebay-inline-notice--default)
 
 ## Use
 

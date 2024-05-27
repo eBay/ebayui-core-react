@@ -1,4 +1,4 @@
-# ebay-svg
+# EbaySvg
 This is a helper component which holds all the SVG icons for your other `@ebay/ui-core-react` components.
 
 ## Install

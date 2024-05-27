@@ -1,7 +1,7 @@
-# ebay-fake-menu
+# EbayFakeMenu
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-fake-menu--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/building-blocks-ebay-fake-menu--default)
 
 ## Install
 ```

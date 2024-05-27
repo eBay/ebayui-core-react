@@ -1,7 +1,7 @@
 # EbayCtaButton
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-cta-button--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/buttons-ebay-cta-button--default)
 
 ## Usage
 

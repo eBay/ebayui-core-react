@@ -1,8 +1,7 @@
-# ebay-page-notice
+# EbayPageNotice
 
 ## Demo
-
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-page-notice--confirmation-message)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/notices-tips-ebay-page-notice--simple-usage)
 
 ## Import JS
 

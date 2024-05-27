@@ -1,5 +1,8 @@
 # EbayConfirmDialog
 
+## Demo
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/dialogs-ebay-confirm-dialog--default)
+
 ## Usage
 
 ```react

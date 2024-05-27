@@ -1,7 +1,7 @@
-# ebay-fake-menu-button
+# EbayFakeMenuButton
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/ebay-fake-menu-button--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/buttons-ebay-fake-menu-button--default)
 
 
 ## Install
