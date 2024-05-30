@@ -15,7 +15,7 @@ import { EbayCalendar } from '@ebay/ui-core-react/ebay-calendar'
 import "@ebay/skin/calendar";
 ```
 
-```react
+```jsx
 <EbayCalendar />
 ```
 

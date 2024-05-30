@@ -5,7 +5,7 @@
 
 ## Usage
 
-```react
+```jsx
 <EbayCarousel>
     <CarouselItem>
         Item 1

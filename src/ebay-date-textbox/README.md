@@ -18,7 +18,7 @@ import "@ebay/skin/calendar";
 import "@ebay/skin/date-textbox";
 ```
 
-```react
+```jsx
 <EbayDateTextbox value="2024-01-05" />
 
 <EbayDateTextbox range value="2024-01-05" rangeEnd="2024-02-04" />

@@ -5,7 +5,7 @@
 
 ## EbayToast Usage
 
-```react
+```jsx
 <EbayToast open a11yClosetext="Close EbayToast">
     <h1>Hello World</h1>
 </EbayToast>

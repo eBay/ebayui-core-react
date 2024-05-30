@@ -5,7 +5,7 @@
 
 ## Usage
 
-```JSX
+```jsx
 <EbayPanelDialog open a11yClosetext="Close">
     <EbayDialogHeader>Heading</EbayDialogHeader>
     <p>Body content</p>
