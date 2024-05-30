@@ -59,7 +59,10 @@ https://reactjs.org/docs/forms.html#the-select-tag. Notice that the selected val
 | `invalid`       | Boolean  | No       | Indicates a field-level error with red border if true        |
 
 ## Callbacks
-| `onChange`      | Function | No       | Called on option change with arguments: `(ChangeEvent, { index: number, selected: string[] }`                                      |
+
+| Name            | Type     | Required | Description                                                                                   |
+| --------------- | -------- | -------- | --------------------------------------------------------------------------------------------- |
+| `onChange`      | Function | No       | Called on option change with arguments: `(ChangeEvent, { index: number, selected: string[] }` |
 
 ## EbaySelectOption Attributes
 
