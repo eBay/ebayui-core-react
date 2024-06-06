@@ -2,7 +2,7 @@
 
 ## DialogBase Usage
 
-```react
+```jsx
 <DialogBase
   open
   a11yCloseText="Close Dialog Base"

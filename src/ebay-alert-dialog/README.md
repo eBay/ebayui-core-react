@@ -5,7 +5,7 @@
 
 ## Usage
 
-```react
+```jsx
 <EbayAlertDialog open a11yClosetext="Close">
     <EbayDialogHeader>Heading</EbayDialogHeader>
     <p>Body content</p>
