@@ -62,6 +62,7 @@ export type Icon =
     'autoAdjust24' |
     'avatarSignedOut' |
     'backgroundRemoval24' |
+    'bank16' |
     'bank24' |
     'bank64' |
     'bankAccount12Colored' |
@@ -76,6 +77,8 @@ export type Icon =
     'book24' |
     'bookmark16' |
     'bookmark24' |
+    'bookmarkFilled16' |
+    'bookmarkFilled24' |
     'brandAuthorizedSeller16' |
     'brandAuthorizedSeller24' |
     'brightness16' |
@@ -134,6 +137,7 @@ export type Icon =
     'chineseCoin16' |
     'chineseCoin24' |
     'clear16' |
+    'clear20' |
     'clear24' |
     'clickToCall16' |
     'clickToCall24' |
@@ -200,6 +204,7 @@ export type Icon =
     'ebayForCharity24' |
     'ebayInternationalShipping16' |
     'ebayInternationalShipping24' |
+    'ebayInternationalShipping64' |
     'ebayLive16' |
     'ebayLive24' |
     'ebayMastercard12Colored' |
@@ -224,6 +229,8 @@ export type Icon =
     'escrowCard32Colored' |
     'euro16' |
     'euro24' |
+    'exclude16' |
+    'exclude24' |
     'expand16' |
     'externalLink16' |
     'externalLink20' |
@@ -238,6 +245,7 @@ export type Icon =
     'facebookMessenger24' |
     'fastAndFree16' |
     'fastAndFree24' |
+    'fastAndFree64' |
     'feedback16' |
     'feedback20' |
     'feedback24' |
@@ -289,6 +297,8 @@ export type Icon =
     'googlePay32Colored' |
     'graph16' |
     'graph24' |
+    'graphDynamic16' |
+    'graphDynamic24' |
     'gridView16' |
     'gridView24' |
     'gridViewFilled16' |
@@ -324,6 +334,7 @@ export type Icon =
     'informationFilled24' |
     'inspect16' |
     'inspect24' |
+    'inspect64' |
     'instagram24' |
     'jcb12Colored' |
     'jcb18Colored' |
@@ -379,12 +390,14 @@ export type Icon =
     'location24' |
     'location64' |
     'locked16' |
+    'locked20' |
     'locked24' |
     'maestro12Colored' |
     'maestro18Colored' |
     'maestro24Colored' |
     'maestro32Colored' |
     'mail16' |
+    'mail20' |
     'mail24' |
     'mail64' |
     'mailMove16' |
@@ -440,6 +453,9 @@ export type Icon =
     'package16' |
     'package24' |
     'package64' |
+    'passkey16' |
+    'passkey24' |
+    'passkey64' |
     'pause16' |
     'pause24' |
     'pauseFilled64Colored' |
@@ -480,6 +496,7 @@ export type Icon =
     'postepay32Colored' |
     'pound16' |
     'pound24' |
+    'print16' |
     'print24' |
     'profile20' |
     'profile24' |
@@ -555,6 +572,10 @@ export type Icon =
     'shareIos20' |
     'shareIos24' |
     'sharpen24' |
+    'shipAndLocal16' |
+    'shipAndLocal24' |
+    'shirt16' |
+    'shirt24' |
     'shoeBox24' |
     'show16' |
     'show24' |
@@ -605,7 +626,10 @@ export type Icon =
     'storeFilled24' |
     'suitcase24' |
     'support24' |
+    'swap24' |
     'switchCamera24' |
+    'target16' |
+    'target24' |
     'textMessaging16' |
     'textMessaging20' |
     'textMessaging24' |
