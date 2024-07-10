@@ -5,7 +5,7 @@ import { DialogBaseProps, DialogBaseWithState } from '../ebay-dialog-base'
 const classPrefix = 'lightbox-dialog'
 
 type Mode = 'default' | 'mini'
-type Size = 'wide' | 'narrow'
+type Size = 'wide' | 'narrow' | 'fullscreen' | 'large'
 
 export type Props<T = any> = Omit<DialogBaseProps<T>, 'size'> & {
   open?: boolean;
