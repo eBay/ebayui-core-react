@@ -26,7 +26,7 @@ describe('ebay-select rendering', () => {
         expect(option3).toHaveAttribute('value', '3')
         expect(option3).toHaveTextContent('Option 3')
         const svg = selectContainer.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--chevron-down-12')
+        expect(svg).toMatchSnapshot()
     })
 
     it('renders invalid select story correctly', () => {

@@ -40,8 +40,10 @@ const EbayIcon: FC<EbayIconProps> = ({
         'aria-hidden': true
     }
     const kebabName = kebabCased(name)
+    const size = getIconSize(kebabName) || kebabName
+
     const className = classNames(extraClass,
-        { [`icon icon--${kebabName}`]: !noSkinClasses }
+        { [`icon icon--${size}`]: !noSkinClasses }
     )
 
     return (
@@ -59,6 +61,27 @@ const EbayIcon: FC<EbayIconProps> = ({
     )
 }
 
+// This function extract the size of the icon name.
+// The icon can have these name structures:
+// - icon-name-24
+// - icon-name-24-colored
+// - icon-name-filled-24
+// - icon-name-filled-24-colored
+// - icon-name
+function getIconSize(iconName: string) {
+    const iconNameArray = iconName.split('-')
+    const size = iconNameArray[iconNameArray.length - 1]
+
+    if (size === 'colored') {
+        return iconNameArray[iconNameArray.length - 2]
+    }
+
+    if (isNaN(Number(size))) {
+        return ''
+    }
+
+    return size
+}
 function kebabCased(str: string) {
     return str
         .replace(/([0-9]+)/g, (s, n) => `-${n}`)

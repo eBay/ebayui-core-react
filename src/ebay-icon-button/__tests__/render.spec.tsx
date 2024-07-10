@@ -17,7 +17,7 @@ describe('EbayIconButton rendering', () => {
             expect(firstButton).toHaveClass('icon-btn')
             expect(firstButton).toHaveAttribute('type', 'button')
             const svg = firstButton.querySelector('svg')
-            expect(svg).toHaveClass('icon icon--menu-20')
+            expect(svg).toHaveClass('icon icon--20')
             expect(svg).toHaveAttribute('aria-hidden', 'true')
             expect(svg).toHaveAttribute('focusable', 'false')
         })
@@ -33,7 +33,7 @@ describe('EbayIconButton rendering', () => {
             expect(firstButton).toHaveAttribute('type', 'button')
 
             const svg = firstButton.querySelector('svg')
-            expect(svg).toHaveClass('icon icon--menu-20')
+            expect(svg).toHaveClass('icon icon--20')
             expect(svg).toHaveAttribute('aria-hidden', 'true')
             expect(svg).toHaveAttribute('focusable', 'false')
 
@@ -53,7 +53,7 @@ describe('EbayIconButton rendering', () => {
             expect(firstButton).toHaveAttribute('type', 'button')
 
             const svg = firstButton.querySelector('svg')
-            expect(svg).toHaveClass('icon icon--menu-20')
+            expect(svg).toHaveClass('icon icon--20')
             expect(svg).toHaveAttribute('aria-hidden', 'true')
             expect(svg).toHaveAttribute('focusable', 'false')
         })

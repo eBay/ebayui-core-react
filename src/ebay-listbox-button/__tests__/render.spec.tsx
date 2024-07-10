@@ -25,7 +25,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('type', 'button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
 
         const select = listboxButton.querySelector('select')
         expect(select).toHaveClass('listbox-button__native')
@@ -46,7 +46,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('type', 'button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders default listbox button without selected option correctly', () => {
@@ -58,7 +58,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('type', 'button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders borderless listbox button correctly', () => {
@@ -70,7 +70,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('type', 'button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders fluid listbox button correctly', () => {
@@ -83,7 +83,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('type', 'button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders disabled state correctly', () => {
@@ -96,7 +96,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('type', 'button')
         expect(button).toHaveAttribute('disabled')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders invalid state correctly', () => {
@@ -109,7 +109,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('aria-invalid', 'true')
         expect(button).toHaveAttribute('type', 'button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders prefix label correctly', () => {
@@ -121,7 +121,7 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-haspopup', 'listbox')
         expect(button).toHaveAttribute('type', 'button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders floating label correctly', () => {
@@ -135,6 +135,6 @@ describe('ebay-listbox-button rendering', () => {
         expect(button).toHaveAttribute('type', 'button')
         expect(button.querySelector('.btn__floating-label')).toHaveTextContent('Select')
         expect(button.querySelector('.btn__text')).toHaveTextContent('Option 2')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(button.querySelector('svg')).toMatchSnapshot()
     })
 })
