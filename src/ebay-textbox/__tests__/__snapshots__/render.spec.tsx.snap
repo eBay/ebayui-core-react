@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ebay-textbox rendering renders with icon story correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--16"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-mail-16"
+  />
+</svg>
+`;
+
 exports[`ebay-textbox rendering renders with pre/post fix text correctly 1`] = `
 <div>
   <div>

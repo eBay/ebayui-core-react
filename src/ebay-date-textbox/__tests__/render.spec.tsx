@@ -29,7 +29,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(button).toHaveAttribute('type', 'button')
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-controls', 'testid-content')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--calendar-24')
+        expect(button.querySelector('svg')).toMatchSnapshot()
 
         const popover = dateTextbox.querySelector('.date-textbox__popover')
         expect(popover).toHaveAttribute('hidden', '')
@@ -66,7 +66,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(button).toHaveAttribute('type', 'button')
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-controls', 'testid-content')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--calendar-24')
+        expect(button.querySelector('svg')).toMatchSnapshot()
 
         const popover = dateTextbox.querySelector('.date-textbox__popover')
         expect(popover).toHaveAttribute('hidden', '')

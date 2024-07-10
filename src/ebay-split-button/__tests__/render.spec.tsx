@@ -21,7 +21,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenu).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenu.querySelector('svg')).toMatchSnapshot()
 
         const buttonWithSeparator = within(splitButtonWithSeparator as HTMLElement).getByRole('button', { name: 'Split Button Menu with Separator' })
         expect(buttonWithSeparator).toHaveClass('btn btn--secondary btn--split-start')
@@ -32,7 +32,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenuWithSeparator).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenuWithSeparator).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenuWithSeparator).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenuWithSeparator.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenuWithSeparator.querySelector('svg')).toMatchSnapshot()
 
         const buttonTertiary = within(splitButtonTertiary as HTMLElement).getByRole('button', { name: 'Tertiary button menu with icons' })
         expect(buttonTertiary).toHaveClass('btn btn--tertiary btn--split-start')
@@ -43,7 +43,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenuTertiary).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenuTertiary).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenuTertiary).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenuTertiary.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenuTertiary.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders disabled split button correctly', () => {
@@ -71,7 +71,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenu).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenu.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders split button with pre-loading state correctly', () => {
@@ -87,7 +87,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenu).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenu.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders split button with loading state correctly', () => {
@@ -103,7 +103,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenu).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenu.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders split button with size correctly', () => {
@@ -119,7 +119,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenu).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenu.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders transparent split button correctly', () => {
@@ -135,7 +135,7 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenu).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenu.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders truncated split button correctly', () => {
@@ -151,6 +151,6 @@ describe('ebay-split-button rendering', () => {
         expect(buttonMenu).toHaveAttribute('aria-expanded', 'false')
         expect(buttonMenu).toHaveAttribute('aria-haspopup', 'true')
         expect(buttonMenu).toHaveAttribute('aria-controls', 'abc123')
-        expect(buttonMenu.querySelector('svg')).toHaveClass('icon icon--chevron-down-12')
+        expect(buttonMenu.querySelector('svg')).toMatchSnapshot()
     })
 })

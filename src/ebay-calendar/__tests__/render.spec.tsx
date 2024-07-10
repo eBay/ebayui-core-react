@@ -35,15 +35,13 @@ describe('ebay-calendar rendering', () => {
         expect(buttonPrev).toHaveClass('icon-btn icon-btn--small icon-btn--transparent')
         expect(buttonPrev).toHaveAttribute('type', 'button')
         const svgPrev = buttonPrev.querySelector('svg')
-        expect(svgPrev).toHaveClass('icon icon--chevron-left-24')
-        expect(svgPrev).toHaveAttribute('aria-hidden', 'true')
+        expect(svgPrev).toMatchSnapshot()
 
         const buttonNext = screen.getByLabelText('Show May 2024')
         expect(buttonNext).toHaveClass('icon-btn icon-btn--small icon-btn--transparent')
         expect(buttonNext).toHaveAttribute('type', 'button')
         const svgNext = buttonNext.querySelector('svg')
-        expect(svgNext).toHaveClass('icon icon--chevron-right-24')
-        expect(svgNext).toHaveAttribute('aria-hidden', 'true')
+        expect(svgNext).toMatchSnapshot()
 
         const [month1, month2] = screen.getAllByRole('heading', { level: 3 })
         expect(month1.textContent).toEqual('March 2024')

@@ -37,7 +37,7 @@ describe('ebay-fake-menu-button rendering', () => {
         expect(button).toHaveClass('btn fake-menu-button__button btn--secondary')
         expect(button).toHaveTextContent('eBay Menu')
         const svg = buttonContainer.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--chevron-down-12')
+        expect(svg).toMatchSnapshot()
     })
 
     it('renders expanded story correctly', () => {
@@ -59,7 +59,7 @@ describe('ebay-fake-menu-button rendering', () => {
         expect(link1).toHaveClass('fake-menu-button__item fake-menu__item')
         expect(link1).toHaveTextContent('item 1 that has very long text')
         const svg = link1.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--tick-16')
+        expect(svg).toMatchSnapshot()
         expect(link2).toHaveAttribute('href', 'http://ebay.de')
         expect(link2).toHaveTextContent('item 2')
         expect(link3).toHaveAttribute('href', 'http://ebay.co.uk')
@@ -76,7 +76,7 @@ describe('ebay-fake-menu-button rendering', () => {
         expect(button).toHaveClass('btn fake-menu-button__button btn--secondary')
         expect(button).toHaveTextContent('eBay Menu')
         const svg = buttonContainer.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--chevron-down-12')
+        expect(svg).toMatchSnapshot()
     })
 
     it('renders borderless story correctly', () => {
@@ -88,7 +88,7 @@ describe('ebay-fake-menu-button rendering', () => {
         expect(button).toHaveClass('btn fake-menu-button__button btn--borderless')
         expect(button).toHaveTextContent('eBay Menu')
         const svg = buttonContainer.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--chevron-down-12')
+        expect(svg).toMatchSnapshot()
     })
 
     it('renders fixed width story correctly', () => {
@@ -126,14 +126,14 @@ describe('ebay-fake-menu-button rendering', () => {
         expect(buttonOverflow).toHaveClass('fake-menu-button__button icon-btn')
         expect(buttonOverflow).toHaveAttribute('aria-label', 'Menu')
         expect(buttonOverflow).toHaveAttribute('type', 'button')
-        expect(buttonOverflow.querySelector('svg')).toHaveClass('icon icon--overflow-horizontal-24')
+        expect(buttonOverflow.querySelector('svg')).toMatchSnapshot()
         expect(buttonOverflow).toHaveTextContent('')
     })
 
     it('renders with icon story correctly', () => {
         render(<WithIconStory />)
         const button = screen.getByRole('button')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--settings-16')
+        expect(button.querySelector('svg')).toMatchSnapshot()
         expect(button).toHaveTextContent('Settings')
     })
 

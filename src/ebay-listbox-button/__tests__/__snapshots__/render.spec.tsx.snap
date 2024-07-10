@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ebay-listbox-button rendering renders borderless listbox button correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders default listbox button correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders default listbox button without selected option correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders disabled state correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders floating label correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders fluid listbox button correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders invalid state correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders prefix label correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`ebay-listbox-button rendering renders preselected index correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
