@@ -25,7 +25,7 @@ describe('ebay-infotip rendering', () => {
         const infotipButton = screen.getByRole('button', { name: 'Infotip' })
         expect(infotipButton).toHaveClass('icon-btn icon-btn--transparent infotip__host')
         expect(infotipButton).toHaveAttribute('aria-expanded', 'false')
-        expect(infotipButton.querySelector('svg')).toHaveClass('icon icon--information-16')
+        expect(infotipButton.querySelector('svg')).toMatchSnapshot()
 
         const overlay = container.querySelector('.infotip__overlay')
         expect(overlay.querySelector('.infotip__pointer.infotip__pointer--bottom')).toBeInTheDocument()
@@ -35,7 +35,7 @@ describe('ebay-infotip rendering', () => {
 
         const closeButton = screen.getByRole('button', { name: 'Close' })
         expect(closeButton).toHaveClass('icon-btn icon-btn--transparent infotip__close')
-        expect(closeButton.querySelector('svg')).toHaveClass('icon icon--close-16')
+        expect(closeButton.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders disabled story correctly', () => {
@@ -60,7 +60,7 @@ describe('ebay-infotip rendering', () => {
         render(<CustomIcon />)
 
         const infotipButton = screen.getByRole('button', { name: 'Infotip' })
-        expect(infotipButton.querySelector('svg')).toHaveClass('icon icon--settings-16')
+        expect(infotipButton.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders text instead of icon story correctly', () => {

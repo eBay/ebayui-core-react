@@ -30,7 +30,7 @@ describe('ebay-tourtip rendering', () => {
         const closeButton = screen.getByRole('button', { name: 'close' })
         expect(closeButton).toHaveClass('tourtip__close')
         expect(closeButton).toHaveAttribute('type', 'button')
-        expect(closeButton.querySelector('svg')).toHaveClass('icon icon--close-16')
+        expect(closeButton.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders footer tourtip story correctly', () => {

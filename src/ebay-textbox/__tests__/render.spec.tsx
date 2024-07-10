@@ -85,7 +85,7 @@ describe('ebay-textbox rendering', () => {
         expect(textbox).toHaveClass('textbox__control')
 
         const icon = container.querySelector('svg')
-        expect(icon).toHaveClass('icon icon--mail-16')
+        expect(icon).toMatchSnapshot()
     })
 
     it('renders placeholder story correctly', () => {
