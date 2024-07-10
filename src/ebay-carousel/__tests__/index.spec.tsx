@@ -18,10 +18,8 @@ describe('ebay-carousel rendering', () => {
         expect(carousel).toBeInTheDocument()
 
         const [buttonPrev, buttonNext] = screen.getAllByRole('button')
-        expect(buttonPrev).toHaveClass('carousel__control carousel__control--prev')
-        expect(buttonPrev.querySelector('svg')).toHaveClass('icon icon--chevron-left-12')
-        expect(buttonNext).toHaveClass('carousel__control carousel__control--next')
-        expect(buttonNext.querySelector('svg')).toHaveClass('icon icon--chevron-right-12')
+        expect(buttonPrev).toMatchSnapshot()
+        expect(buttonNext).toMatchSnapshot()
 
         expect(carousel.querySelector('.carousel__viewport')).toBeInTheDocument()
         const itemList = screen.getByRole('list')
