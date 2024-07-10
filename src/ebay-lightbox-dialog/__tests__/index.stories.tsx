@@ -229,4 +229,46 @@ export const _WithWideSize = () => (
     </div>
 )
 
+export const _WithNarrowSize = () => (
+    <div>
+        <p>Some outside content...</p>
+        <EbayLightboxDialog open a11yCloseText="Close dialog" size="narrow">
+            <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
+            <EbayDialogHeader>Heading</EbayDialogHeader>
+            {textParagraph}
+            <p>
+                <a href="http://www.ebay.com">www.ebay.com</a>
+            </p>
+        </EbayLightboxDialog>
+    </div>
+)
+
+export const _WithFullscreenSize = () => (
+    <div>
+        <p>Some outside content...</p>
+        <EbayLightboxDialog open a11yCloseText="Close dialog" size="fullscreen">
+            <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
+            <EbayDialogHeader>Heading</EbayDialogHeader>
+            {textParagraph}
+            <p>
+                <a href="http://www.ebay.com">www.ebay.com</a>
+            </p>
+        </EbayLightboxDialog>
+    </div>
+)
+
+export const _WithLargeSize = () => (
+    <div>
+        <p>Some outside content...</p>
+        <EbayLightboxDialog open a11yCloseText="Close dialog" size="large">
+            <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
+            <EbayDialogHeader>Heading</EbayDialogHeader>
+            {textParagraph}
+            <p>
+                <a href="http://www.ebay.com">www.ebay.com</a>
+            </p>
+        </EbayLightboxDialog>
+    </div>
+)
+
 export default story
