@@ -35,8 +35,7 @@ describe('ebay-page-notice rendering', () => {
         expect(header).toHaveAttribute('id', 'main-page-notice')
 
         const svg = header.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--confirmation-filled-16')
-        expect(svg).toHaveAttribute('aria-label', 'Success')
+        expect(svg).toMatchSnapshot()
 
         expect(pageNotice.querySelector('.page-notice__main')).toHaveTextContent('text message')
     })
@@ -52,8 +51,7 @@ describe('ebay-page-notice rendering', () => {
         expect(pageNoticeHeader).toHaveAttribute('id', 'attention-status')
 
         const svg = pageNoticeHeader.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--attention-filled-16')
-        expect(svg).toHaveAttribute('aria-label', 'Attention')
+        expect(svg).toMatchSnapshot()
 
         const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
@@ -73,8 +71,7 @@ describe('ebay-page-notice rendering', () => {
         expect(pageNoticeHeader).toHaveAttribute('id', 'confirmation-status')
 
         const svg = pageNoticeHeader.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--confirmation-filled-16')
-        expect(svg).toHaveAttribute('aria-label', 'Success')
+        expect(svg).toMatchSnapshot()
 
         const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
@@ -94,8 +91,7 @@ describe('ebay-page-notice rendering', () => {
         expect(pageNoticeHeader).toHaveAttribute('id', 'information-status')
 
         const svg = pageNoticeHeader.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--information-filled-16')
-        expect(svg).toHaveAttribute('aria-label', 'Information')
+        expect(svg).toMatchSnapshot()
 
         const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
@@ -115,8 +111,7 @@ describe('ebay-page-notice rendering', () => {
         expect(pageNoticeHeader).toHaveAttribute('id', 'information-status')
 
         const svg = pageNoticeHeader.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--information-filled-16')
-        expect(svg).toHaveAttribute('aria-label', 'Congratulations')
+        expect(svg).toMatchSnapshot()
 
         const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
@@ -131,7 +126,7 @@ describe('ebay-page-notice rendering', () => {
         const footer: HTMLElement = pageNotice.querySelector('.page-notice__footer')
         const buttonClose = within(footer).getByRole('button', { name: 'Close' })
         expect(buttonClose).toHaveClass('fake-link page-notice__dismiss')
-        expect(buttonClose.querySelector('svg')).toHaveClass('icon icon--close-16')
+        expect(buttonClose.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders message with footer story correctly', () => {
@@ -145,8 +140,7 @@ describe('ebay-page-notice rendering', () => {
         expect(pageNoticeHeader).toHaveAttribute('id', 'confirmation-status')
 
         const svg = pageNoticeHeader.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--confirmation-filled-16')
-        expect(svg).toHaveAttribute('aria-label', 'Congratulations')
+        expect(svg).toMatchSnapshot()
 
         const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })
@@ -170,8 +164,7 @@ describe('ebay-page-notice rendering', () => {
         expect(pageNoticeHeader).toHaveAttribute('id', 'information-status')
 
         const svg = pageNoticeHeader.querySelector('svg')
-        expect(svg).toHaveClass('icon icon--information-filled-16')
-        expect(svg).toHaveAttribute('aria-label', 'Information')
+        expect(svg).toMatchSnapshot()
 
         const main: HTMLElement = pageNotice.querySelector('.page-notice__main')
         const header = within(main).getByRole('heading', { level: 2 })

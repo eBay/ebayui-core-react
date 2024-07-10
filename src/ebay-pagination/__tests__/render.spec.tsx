@@ -25,7 +25,7 @@ describe('ebay-pagination rendering', () => {
         expect(linkPrev).toHaveStyle({ minWidth: '40px' })
         expect(linkPrev).toHaveAttribute('aria-label', 'Previous page')
         expect(linkPrev).toHaveAttribute('aria-disabled', 'true')
-        expect(linkPrev.querySelector('svg')).toHaveClass('icon icon--arrow-left-16')
+        expect(linkPrev.querySelector('svg')).toMatchSnapshot()
 
         const linkNext = (container as Element).querySelector('.pagination__next')
         expect(linkNext).toHaveClass('icon-link')
@@ -33,7 +33,7 @@ describe('ebay-pagination rendering', () => {
         expect(linkNext).toHaveAttribute('aria-label', 'Next page')
         expect(linkNext).not.toHaveAttribute('aria-disabled')
         expect(linkNext).toHaveAttribute('href', 'https://www.ebay.com/sch/i.html?_from=R40&_nkw=iphone&_sacat=0&_pgn=10')
-        expect(linkNext.querySelector('svg')).toHaveClass('icon icon--arrow-right-16')
+        expect(linkNext.querySelector('svg')).toMatchSnapshot()
 
         const items = screen.getByRole('list')
         expect(items).toHaveClass('pagination__items')
@@ -90,14 +90,14 @@ describe('ebay-pagination rendering', () => {
         expect(linkPrev).toHaveStyle({ minWidth: '40px' })
         expect(linkPrev).toHaveAttribute('aria-label', 'Previous page')
         expect(linkPrev).not.toHaveAttribute('aria-disabled')
-        expect(linkPrev.querySelector('svg')).toHaveClass('icon icon--arrow-left-16')
+        expect(linkPrev.querySelector('svg')).toMatchSnapshot()
 
         const linkNext = container.querySelector('.pagination__next')
         expect(linkNext).toHaveClass('icon-btn')
         expect(linkNext).toHaveStyle({ minWidth: '40px' })
         expect(linkNext).toHaveAttribute('aria-label', 'Next page')
         expect(linkNext).not.toHaveAttribute('aria-disabled')
-        expect(linkNext.querySelector('svg')).toHaveClass('icon icon--arrow-right-16')
+        expect(linkNext.querySelector('svg')).toMatchSnapshot()
 
         const items = screen.getByRole('list')
         expect(items).toHaveClass('pagination__items')
