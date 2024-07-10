@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ebay-textbox rendering renders with pre/post fix text correctly 1`] = `
+<div>
+  <div>
+    <p>
+      <span
+        class="textbox"
+      >
+        <span
+          id="prefix"
+        >
+          $
+        </span>
+        <input
+          aria-describedby="prefix"
+          class="textbox__control"
+          placeholder="0.00"
+          type="text"
+          value=""
+        />
+      </span>
+    </p>
+    <p>
+      <span
+        class="textbox"
+      >
+        <input
+          aria-describedby="postfix"
+          class="textbox__control"
+          placeholder="0"
+          type="text"
+          value=""
+        />
+        <span
+          id="postfix"
+        >
+          in.
+        </span>
+      </span>
+    </p>
+  </div>
+</div>
+`;

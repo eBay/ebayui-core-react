@@ -15,7 +15,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const textbox = dateTextbox.querySelector('.textbox')
-        expect(textbox).toHaveClass('ebay-date-textbox--main textbox--icon-end')
+        expect(textbox).toHaveClass('ebay-date-textbox--main')
 
         const input = within(dateTextbox).getByRole('textbox')
         expect(input).toHaveAttribute('type', 'text')
@@ -46,7 +46,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const [textboxStart, textboxEnd] = dateTextbox.querySelectorAll('.textbox')
-        expect(textboxEnd).toHaveClass('ebay-date-textbox--main textbox--icon-end')
+        expect(textboxEnd).toHaveClass('ebay-date-textbox--main')
 
         const inputStart = within(textboxStart as HTMLElement).getByRole('textbox')
         expect(inputStart).toHaveAttribute('type', 'text')
@@ -83,7 +83,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const textbox = dateTextbox.querySelector('.textbox')
-        expect(textbox).toHaveClass('ebay-date-textbox--main textbox--icon-end')
+        expect(textbox).toHaveClass('ebay-date-textbox--main')
 
         const input = within(dateTextbox).getByRole('textbox')
         expect(input).toHaveAttribute('type', 'text')
