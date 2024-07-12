@@ -5,7 +5,10 @@ import React, {
 } from 'react'
 import classNames from 'classnames'
 import { findComponent, withForwardRef } from '../common/component-utils'
-import { EbayTextboxPostfixIcon, EbayTextboxPrefixIcon, Size } from './index'
+import EbayTextboxPostfixIcon from './postfix-icon'
+import EbayTextboxPostfixText from './postfix-text'
+import EbayTextboxPrefixIcon from './prefix-icon'
+import EbayTextboxPrefixText from './prefix-text'
 import { useFloatingLabel } from '../common/floating-label-utils/hooks'
 import {
     EbayChangeEventHandler,
@@ -13,6 +16,7 @@ import {
     EbayFocusEventHandler,
     EbayKeyboardEventHandler, EbayMouseEventHandler
 } from '../common/event-utils/types'
+import type { Size } from './types'
 
 export const isControlled = (value?: unknown): boolean => typeof value !== 'undefined'
 
@@ -148,14 +152,20 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
     const Wrapper = fluid ? 'div' : 'span'
 
     const prefixIcon = findComponent(children, EbayTextboxPrefixIcon)
+    const prefixText = findComponent(children, EbayTextboxPrefixText)
+    const prefixId = prefixText?.props?.id
     const postfixIcon = findComponent(children, EbayTextboxPostfixIcon)
+    const postfixText = findComponent(children, EbayTextboxPostfixText)
+    const postfixId = postfixText?.props?.id
 
-    const inputClassName = classNames('textbox__control', {
-        'textbox__control--fluid': fluid,
-        'textbox__control--large': inputSize === 'large'
-    })
     const wrapperClassName = classNames('textbox', rest.className, {
-        'textbox--icon-end': postfixIcon
+        'textbox--fluid': fluid,
+        'textbox--large': inputSize === 'large',
+        /** start remove after `:has` support */
+        'textbox--disabled': rest.disabled,
+        'textbox--invalid': invalid,
+        'textbox--readonly': rest.readOnly
+        /** end remove after `:has` support */
     })
 
     return (
@@ -163,9 +173,11 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
             {label}
             <Wrapper className={wrapperClassName}>
                 {prefixIcon}
+                {prefixText}
                 <Input
+                    aria-describedby={[prefixId, postfixId].filter(Boolean).join(' ') || undefined}
                     {...rest}
-                    className={inputClassName}
+                    className="textbox__control"
                     type={type}
                     aria-invalid={invalid}
                     value={isControlled(controlledValue) ? controlledValue : inputValue}
@@ -180,6 +192,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
                     ref={ref}
                     placeholder={floatingLabelPlaceholder}
                 />
+                {postfixText}
                 {postfixIcon && cloneElement(postfixIcon, {
                     ...postfixIcon.props,
                     onClick: (e) => {

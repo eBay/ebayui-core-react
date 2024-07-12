@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, useState, KeyboardEvent, MouseEvent } from 'react'
 import { action } from '@storybook/addon-actions'
 import { EbayButton } from '../../ebay-button'
-import { EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPrefixIcon } from '../index'
+import { EbayTextbox, EbayTextboxPostfixIcon, EbayTextboxPostfixText, EbayTextboxPrefixIcon, EbayTextboxPrefixText } from '../index'
 
 export default {
     title: 'form input/ebay-textbox'
@@ -192,6 +192,25 @@ export const WithIcon = {
     ),
 
     name: 'With icon'
+}
+
+export const WithPrePostfixText = {
+    render: () => (
+        <div>
+            <p>
+                <EbayTextbox placeholder="0.00">
+                    <EbayTextboxPrefixText id="prefix">$</EbayTextboxPrefixText>
+                </EbayTextbox>
+            </p>
+            <p>
+                <EbayTextbox placeholder="0">
+                    <EbayTextboxPostfixText id="postfix">in.</EbayTextboxPostfixText>
+                </EbayTextbox>
+            </p>
+        </div>
+    ),
+
+    name: 'With Pre/Post fix text'
 }
 
 export const ControlValueFromOutside = {

@@ -8,3 +8,11 @@ export type EbayTextboxIconProps = ComponentProps<'button'> & ComponentProps<'a'
     buttonAriaLabel?: string
     onClick?: (e: KeyboardEvent | MouseEvent) => void
 }
+
+export type EbayTextboxPrefixTextProps = ComponentProps<'span'> & {
+    id: string
+}
+
+export type EbayTextboxPostfixTextProps = ComponentProps<'span'> & {
+    id: string
+}
