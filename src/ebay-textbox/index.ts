@@ -1,4 +1,6 @@
 export { default as EbayTextbox, EbayTextboxProps } from './textbox'
 export { default as EbayTextboxPrefixIcon } from './prefix-icon'
+export { default as EbayTextboxPrefixText } from './prefix-text'
 export { default as EbayTextboxPostfixIcon } from './postfix-icon'
+export { default as EbayTextboxPostfixText } from './postfix-text'
 export { Size } from './types'

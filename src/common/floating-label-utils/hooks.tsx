@@ -116,13 +116,14 @@ export function useFloatingLabel({
         if (!label) {
             return
         }
-        setFloating(isFocused || hasValue(inputRef()?.current) || isAutofilled(inputRef()?.current))
+        setFloating(isFocused || hasValue(inputRef()?.current) || isAutofilled(inputRef()?.current?.parentNode))
     }, [isFocused, inputValue])
 
     const labelClassName = classNames(className, classPrefix, {
         [`${classPrefix}--disabled`]: disabled,
         [`${classPrefix}--animate`]: shouldAnimate,
         [`${classPrefix}--inline`]: !isFloating && type !== 'date',
+        [`${classPrefix}--focus`]: isFocused,
         [`${classPrefix}--invalid`]: invalid
     })
 
