@@ -42,8 +42,9 @@ const EbayIcon: FC<EbayIconProps> = ({
     const kebabName = kebabCased(name)
     const size = getIconSize(kebabName) || kebabName
 
+    const skinClassName = [`icon`, `icon--${size}`, getFilledIconName(kebabName)].filter(Boolean).join(' ')
     const className = classNames(extraClass,
-        { [`icon icon--${size}`]: !noSkinClasses }
+        { [skinClassName]: !noSkinClasses }
     )
 
     return (
@@ -82,6 +83,18 @@ function getIconSize(iconName: string) {
 
     return size
 }
+
+function getFilledIconName(iconName: string) {
+    const iconNameArray = iconName.split('-')
+    const filledIndex = iconNameArray.indexOf('filled')
+
+    if (filledIndex === -1) {
+        return ''
+    }
+
+    return `icon--${iconNameArray.slice(0, filledIndex + 1).join('-')}`
+}
+
 function kebabCased(str: string) {
     return str
         .replace(/([0-9]+)/g, (s, n) => `-${n}`)
