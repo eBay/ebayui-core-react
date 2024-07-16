@@ -1,6 +1,6 @@
 {
   "name": "@ebay/ui-core-react",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Skin components build off React",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -23,7 +23,7 @@
     "update-icons": "node ./scripts/update-icons",
     "copy": "copyfiles package.json README.md lib; yarn copy:rest",
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' lib",
-    "prepublishOnly": "yarn build && yarn copy",
+    "release": "yarn build && yarn copy && CI=1 npm publish lib/ --access public",
     "prerelease": "npm version prerelease --preid rc && yarn clean && yarn build && yarn copy && CI=1 npm publish --tag rc lib/",
     "prepare": "node scripts/husky-install || node ../scripts/husky-install"
   },
