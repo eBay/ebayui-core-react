@@ -47,8 +47,7 @@ const EbayPageNotice: FC<Props> = ({
         <section
             {...rest}
             aria-labelledby={id || `${status}-status`}
-            className={`page-notice ${status !== `general` ? `page-notice--${status}` : ``}`}
-            role="region">
+            className={`page-notice ${status !== `general` ? `page-notice--${status}` : ``}`}>
             {status !== `general` ? (
                 <div className="page-notice__header" id={id || `${status}-status`}>
                     <EbayIcon
