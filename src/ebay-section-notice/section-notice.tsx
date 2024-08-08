@@ -71,7 +71,6 @@ const EbaySectionNotice: FC<Props> = ({
                 'section-notice--education': isEducational && prominent,
                 'section-notice--large-icon': isEducational
             })}
-            role="region"
             aria-label={!hasStatus ? ariaLabel : null}
             aria-labelledby={hasStatus ? `section-notice-${status}` : null}
             aria-roledescription={ariaRoleDescription}>
