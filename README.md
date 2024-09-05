@@ -114,11 +114,13 @@ Example of usage:
 <EbayButton id="my-button" />
 ```
 
-### Issues
+## Issues
 
-Create an issue on github
+Create an [issue](/issues) on github
 
-## [Contributing](CONTRIBUTING.md)
+## Contributing
+
+View [contributing docs](CONTRIBUTING.md)
 
 ## Figma Code Connect
 
