@@ -120,6 +120,23 @@ Create an issue on github
 
 ## [Contributing](CONTRIBUTING.md)
 
+## Figma Code Connect
+
+**Publishing**
+
+```
+npx figma connect publish --token <token>
+```
+
+**Unpublishing**
+
+```
+npx figma connect unpublish --token <token>
+```
+
+- [React Docs](https://github.com/figma/code-connect/blob/main/cli/README.md)
+- [SwiftUI Docs](https://github.com/figma/code-connect/blob/main/swiftui/README.md)
+
 ## Changelog
 
 `@ebay/ui-core-react`
