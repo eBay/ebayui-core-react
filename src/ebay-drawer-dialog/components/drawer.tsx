@@ -105,7 +105,7 @@ const EbayDrawerDialog: FC<EbayDrawerProps<any>> = ({
             classPrefix={classPrefix}
             onCloseBtnClick={onClose}
             className={classNames(rest.className, `${classPrefix}--mask-fade-slow`)}
-            windowClass={classNames(`${classPrefix}__window`, `${classPrefix}__window--slide`, {
+            windowClass={classNames(rest.windowClass, `${classPrefix}__window`, `${classPrefix}__window--slide`, {
                 [`${classPrefix}__window--expanded`]: expanded
             })}
             onBackgroundClick={onClose}

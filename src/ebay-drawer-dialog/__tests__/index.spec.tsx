@@ -43,4 +43,11 @@ describe('<EbayDrawerDialog>', () => {
         const closeButton = wrapper.container.querySelector(`button.${classPrefix}__close`)
         expect(closeButton).toBeNull()
     })
+
+    it('should apply custom dialog window class', () => {
+        const windowClass = 'windowClassName'
+        renderComponent({ windowClass })
+        const dialogWindow = wrapper.container.querySelector('.drawer-dialog__window')
+        expect(dialogWindow.classList).toContain(windowClass)
+    })
 })
