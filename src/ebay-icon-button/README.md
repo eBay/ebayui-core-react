@@ -13,11 +13,13 @@ import { EbayIconButton } from '@ebay/ui-core-react/ebay-icon-button'
 
 ### Import following styles from SKIN
 ```jsx harmony
+import "@ebay/skin/icon"
 import "@ebay/skin/icon-button"
 ```
 
 ### Or import styles using SCSS/CSS
 ```jsx harmony
+import '@ebay/skin/icon.css'
 import '@ebay/skin/icon-button.css'
 ```
 
