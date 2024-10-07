@@ -5,7 +5,7 @@ import React, {
     KeyboardEventHandler,
     MouseEvent,
     MouseEventHandler,
-    ReactElement, useState
+    ReactElement, useId, useState
 } from 'react'
 import cx from 'classnames'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
@@ -39,6 +39,7 @@ const EbaySectionNotice: FC<Props> = ({
     onDismiss = () => {},
     ...rest
 }) => {
+    const headerId = useId()
     const [dismissed, setDismissed] = useState(false)
     const childrenArray = React.Children.toArray(children) as ReactElement[]
     const content = childrenArray.find(({ type }) => type === EbayNoticeContent)
@@ -73,10 +74,10 @@ const EbaySectionNotice: FC<Props> = ({
             })}
             role="region"
             aria-label={!hasStatus ? ariaLabel : null}
-            aria-labelledby={hasStatus ? `section-notice-${status}` : null}
+            aria-labelledby={hasStatus ? `section-notice-${status}-${headerId}` : null}
             aria-roledescription={ariaRoleDescription}>
             {iconName && (
-                <div className="section-notice__header" id={`section-notice-${status}`}>
+                <div className="section-notice__header" id={`section-notice-${status}-${headerId}`}>
                     <EbayIcon className={iconClass} name={iconName} a11yText={ariaLabel} a11yVariant="label" />
                 </div>
             )}
