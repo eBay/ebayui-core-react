@@ -92,4 +92,18 @@ describe('<EbaySectionNotice>', () => {
             expect(dismissMock).toHaveBeenCalled()
         })
     })
+
+    describe('id generation', () => {
+        test('should generate unique id for aria-labelledby and header', () => {
+            const wrapper = render(
+                <EbaySectionNotice status="information" aria-label="Important notice">
+                    <EbayNoticeContent>Test notice content</EbayNoticeContent>
+                </EbaySectionNotice>
+            );
+
+            const section = wrapper.getByRole('region');
+            const header = wrapper.container.querySelector('.section-notice__header');
+            expect(header).toHaveAttribute('id', section.getAttribute('aria-labelledby'));
+        });
+    })
 })
