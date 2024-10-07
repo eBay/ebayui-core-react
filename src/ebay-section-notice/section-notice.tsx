@@ -5,13 +5,14 @@ import React, {
     KeyboardEventHandler,
     MouseEvent,
     MouseEventHandler,
-    ReactElement, useState
+    ReactElement, useEffect, useState
 } from 'react'
 import cx from 'classnames'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { EbayIcon, Icon } from '../ebay-icon'
 import { EbaySectionNoticeFooter } from './index'
+import { randomId } from '../common/random-id'
 
 export type SectionNoticeStatus = 'general' | 'none' | 'attention' | 'confirmation' | 'information' | 'education'
 export type Props = ComponentProps<'section'> & {
@@ -40,6 +41,13 @@ const EbaySectionNotice: FC<Props> = ({
     ...rest
 }) => {
     const [dismissed, setDismissed] = useState(false)
+
+    const [rId, setRandomId] = useState('')
+
+    useEffect(() => {
+        setRandomId(randomId())
+    }, [])
+
     const childrenArray = React.Children.toArray(children) as ReactElement[]
     const content = childrenArray.find(({ type }) => type === EbayNoticeContent)
     const hasStatus = status !== 'general' && status !== 'none'
@@ -73,10 +81,10 @@ const EbaySectionNotice: FC<Props> = ({
             })}
             role="region"
             aria-label={!hasStatus ? ariaLabel : null}
-            aria-labelledby={hasStatus ? `section-notice-${status}` : null}
+            aria-labelledby={hasStatus ? `section-notice-${status}-${rId}` : null}
             aria-roledescription={ariaRoleDescription}>
             {iconName && (
-                <div className="section-notice__header" id={`section-notice-${status}`}>
+                <div className="section-notice__header" id={`section-notice-${status}-${rId}`}>
                     <EbayIcon className={iconClass} name={iconName} a11yText={ariaLabel} a11yVariant="label" />
                 </div>
             )}
