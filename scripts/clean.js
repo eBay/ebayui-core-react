@@ -1,5 +1,5 @@
 require('del')([
-    'lib',
+    'dist',
     'coverage',
     'lint',
     'src/**/*.js',

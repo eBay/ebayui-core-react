@@ -5,6 +5,13 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./*/index.d.ts",
+      "default": "./*.js"
+    }
+  },
   "scripts": {
     "clean": "node scripts/clean",
     "lint": "eslint . --ext ts,tsx",
@@ -18,13 +25,13 @@
     "build-storybook": "storybook build",
     "storybook:publish": "NODE_OPTIONS=--openssl-legacy-provider yarn build-storybook --output-dir storybook-static/$(git branch --show-current) && gh-pages --add --message=\"Deploying to gh-pages from @ eBay/ebayui-core-react@$(git rev-parse --short HEAD) 🚀\" -d storybook-static",
     "test": "yarn jest",
-    "build": "yarn typecheck && yarn tsc",
-    "typecheck": "tsc --project tsconfig.typecheck.json",
+    "build": "yarn type:check && vite build",
+    "type:check": "tsc --noEmit",
     "update-icons": "node ./scripts/update-icons",
-    "copy": "copyfiles package.json README.md lib; yarn copy:rest",
-    "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' lib",
-    "release": "yarn build && yarn copy && CI=1 npm publish lib/ --access public",
-    "release:rc": "npm version prerelease --preid rc && yarn clean && yarn build && yarn copy && CI=1 npm publish --tag rc lib/",
+    "copy": "copyfiles package.json README.md dist; yarn copy:rest",
+    "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' dist",
+    "release": "yarn clean && yarn build && yarn copy && CI=1 npm publish dist/ --access public",
+    "release:rc": "yarn clean && yarn build && yarn copy && CI=1 npm publish --tag rc dist/",
     "prepare": "node scripts/husky-install || node ../scripts/husky-install"
   },
   "lint-staged": {
@@ -63,11 +70,12 @@
     "@babel/register": "^7.0.0",
     "@ebay/skin": "^18.0.0",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-a11y": "^7.6.12",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-storysource": "^7.6.12",
     "@storybook/react": "^7.6.12",
-    "@storybook/react-webpack5": "^7.6.12",
+    "@storybook/react-vite": "^7.6.12",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.2.2",
@@ -101,13 +109,15 @@
     "react": "^18",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^18",
+    "rollup-plugin-node-externals": "^7.1.3",
     "shaka-player": "^4.3.2",
     "storybook": "^7.5.1",
     "style-loader": "^2.0.0",
     "svgson": "^4.0.0",
     "ts-jest": "^29.1.1",
     "ts-loader": "^8.0.7",
-    "typescript": "4"
+    "typescript": "4",
+    "vite": "^5.4.7"
   },
   "resolutions": {
     "@storybook/addon-actions": "~7.5.3",
