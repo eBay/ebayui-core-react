@@ -1,3 +1,3 @@
-export { default as EbayButton, EbayButtonProps } from './button'
+export { default as EbayButton, type EbayButtonProps } from './button'
 export { default as EbayButtonCell } from './button-cell'
-export { Size, Priority } from './types'
+export type { Size, Priority } from './types'
