@@ -1,41 +1,42 @@
 {
-    "compilerOptions": {
-        "target": "es2015",
-        "module": "commonjs",
-        "lib": [
-            "dom",
-            "es2020",
-            "dom.iterable"
-        ],
-        "allowJs": false,
-        "checkJs": false,
-        "jsx": "react",
-        "rootDir": "./src",
-        "outDir": "./lib",
-        "declaration": true,
-        "declarationMap": true,
-        "strict": true,
-        "strictBindCallApply": true,
-        "strictFunctionTypes": false, // 21 errors
-        "strictNullChecks": false, // 150+ errors
-        "strictPropertyInitialization": false,
-        "useUnknownInCatchVariables": true,
-        "noImplicitAny": false, // 300+ errors
-        "noImplicitThis": true,
-        "alwaysStrict": true,
-        "moduleResolution": "node",
-        "baseUrl": "./",
-        "types": ["@testing-library/jest-dom"],
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true
-    },
-    "exclude": [
-        "lib",
-        "node_modules",
-        "src/**/__tests__"
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+        "dom",
+        "es2020",
+        "dom.iterable"
     ],
-    "include": [
-        "src"
-    ]
+    "allowJs": false,
+    "checkJs": false,
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": false, // 21 errors
+    "strictNullChecks": false, // 150+ errors
+    "strictPropertyInitialization": false,
+    "useUnknownInCatchVariables": true,
+    "noImplicitAny": false, // 300+ errors
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "types": ["@testing-library/jest-dom"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/__tests__/*"
+  ]
 }
