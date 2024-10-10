@@ -12,8 +12,9 @@ import classNames from 'classnames'
 import useRovingIndex from '../common/event-utils/use-roving-index'
 import { isActionKey } from '../common/event-utils'
 import { withForwardRef } from '../common/component-utils'
-import { EbayMenuItem, MenuItemProps, EbayMenuProps } from './index'
+import EbayMenuItem, { MenuItemProps } from './menu-item'
 import { Key } from '../common/event-utils/types'
+import type { EbayMenuProps } from './types'
 
 const EbayMenu: FC<EbayMenuProps> = ({
     baseEl: Container = 'span',

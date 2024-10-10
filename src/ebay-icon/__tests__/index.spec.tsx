@@ -13,10 +13,10 @@ describe('ebay-icon rendering', () => {
             const { container } = render(<AllIcons />)
             const [icon] = container.querySelectorAll('svg')
             expect(icon).toHaveAttribute('aria-hidden', 'true')
-            expect(icon).toHaveClass('icon icon--16')
+            expect(icon).toHaveClass('icon icon--12')
             expect(icon).toHaveAttribute('focusable', 'false')
             const useElement = icon.querySelector('use')
-            expect(useElement).toHaveAttribute('xlink:href', '#icon-add-16')
+            expect(useElement).toHaveAttribute('xlink:href', '#icon-add-12')
         })
     })
 

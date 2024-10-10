@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { range } from '../common/range'
 
-type Props = ComponentProps<'div'> & {
+export type Props = ComponentProps<'div'> & {
     a11yText?: string;
     value?: string;
 }
