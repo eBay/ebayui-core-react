@@ -1,2 +1,5 @@
 export { default as EbaySplitButton } from './split-button'
-export * from './types'
+export type {
+    EbaySplitButtonProps,
+    Props
+} from './types'

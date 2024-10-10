@@ -13,6 +13,10 @@ import { EbayButton } from '@ebay/ui-core-react/ebay-button'
 ```jsx harmony
 import "@ebay/skin/button"
 ```
+### If tokens haven't been added to the project at a higher level, make sure to import
+```jsx harmony
+import '@ebay/skin/tokens';
+```
 ### Or import styles using SCSS/CSS
 ```jsx harmony
 import '@ebay/skin/button.css'
