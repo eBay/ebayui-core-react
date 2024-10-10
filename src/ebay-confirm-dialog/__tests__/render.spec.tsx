@@ -6,7 +6,7 @@ import Meta, { Default, WithAnimation } from './index.stories'
 const DefaultStory = composeStory(Default, Meta)
 const AnimationStory = composeStory(WithAnimation, Meta)
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 describe('ebay-confirm-dialog rendering', () => {
     it('renders default story correctly', () => {
