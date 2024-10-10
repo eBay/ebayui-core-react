@@ -1,4 +1,4 @@
-import { ComponentProps, ReactNode } from 'react'
+import { ComponentProps } from 'react'
 import { EbayMouseEventHandler } from '../common/event-utils/types'
 
 export interface SegmentedButtonProps extends Omit<ComponentProps<'button'>, 'onClick'> {
