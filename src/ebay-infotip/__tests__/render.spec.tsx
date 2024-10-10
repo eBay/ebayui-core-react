@@ -13,7 +13,7 @@ const {
     Modal
 } = composeStories(stories)
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 describe('ebay-infotip rendering', () => {
     it('renders default story correctly', () => {

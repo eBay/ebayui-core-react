@@ -2,7 +2,7 @@ import React from 'react'
 import { screen, fireEvent, render } from '@testing-library/react'
 import { EbayAlertDialog } from '../index'
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 const closeSpy = jest.fn()
 const openSpy = jest.fn()

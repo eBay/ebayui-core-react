@@ -65,4 +65,4 @@ describe('<EbayInlineNotice>', () => {
     })
 })
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')

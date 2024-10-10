@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent, RenderResult } from '@testing-library/react'
 import { EbayInfotip, EbayInfotipContent, EbayInfotipHeading } from '../index'
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 const renderComponent = (props?: any) => render(
     <EbayInfotip {...props}>

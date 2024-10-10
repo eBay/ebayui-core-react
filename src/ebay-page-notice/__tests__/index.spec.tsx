@@ -3,7 +3,7 @@ import { act, render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { EbayNoticeContent, EbayPageNotice, EbayPageNoticeTitle } from '../index'
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 const clickEvent = expect.objectContaining({ type: 'click' })
 const keyDownEvent = expect.objectContaining({ type: 'keydown' })

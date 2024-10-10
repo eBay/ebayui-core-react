@@ -5,7 +5,7 @@ import { EbaySplitButton, Props } from '../index'
 
 const values = ['first', 'second', 'third']
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 describe('<EbaySplitButton>', () => {
     describe('on button click', () => {

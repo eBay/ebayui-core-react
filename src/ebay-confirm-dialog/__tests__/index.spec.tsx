@@ -3,7 +3,7 @@ import { screen, render, fireEvent } from '@testing-library/react'
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayConfirmDialog } from '../index'
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 const openSpy = jest.fn()
 const confirmSpy = jest.fn()

@@ -3,7 +3,7 @@ import { fireEvent, render } from '@testing-library/react'
 import { EbayPagination, EbayPaginationItem as Item } from '../index'
 import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 jest.mock('react-dom', () => {
     const original = jest.requireActual('react-dom')

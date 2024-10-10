@@ -5,7 +5,7 @@ import * as stories from './index.stories'
 
 const { AllIcons, CustomColor, NonDecorative } = composeStories(stories)
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 describe('ebay-icon rendering', () => {
     describe('AllIcons story', () => {
