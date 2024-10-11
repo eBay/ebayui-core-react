@@ -6,9 +6,9 @@ eBayUI React components
 
 ### Requirements
 
-* [Node.js](https://nodejs.org/en/) (v18.13)
-* [React](https://reactjs.org/) (v16.8+)
-* [eBay Skin](https://ebay.github.io/skin/) (v16)
+* [Node.js](https://nodejs.org/en/) (v20.12.2)
+* [React](https://reactjs.org/) (v18+, v16.8+ in maintenance mode)
+* [eBay Skin](https://ebay.github.io/skin/) (v18+)
 
 ### eBayUI Components
 * [ ] `ebay-3d-viewer`
@@ -17,13 +17,13 @@ eBayUI React components
 * [x] [ebay-badge](src/ebay-badge)
 * [x] [ebay-breadcrumbs](src/ebay-breadcrumbs)
 * [x] [ebay-button](src/ebay-button)
-* [ ] `ebay-calendar`
+* [x] [ebay-calendar](src/ebay-calendar)
 * [x] [ebay-carousel](src/ebay-carousel)
 * [x] [ebay-checkbox](src/ebay-checkbox)
 * [ ] `ebay-combobox`
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-cta-button](src/ebay-cta-button)
-* [ ] `ebay-date-textbox`
+* [x] [ebay-date-textbox](src/ebay-date-textbox)
 * [ ] `ebay-details`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
 * [x] [ebay-eek](src/ebay-eek)
@@ -33,7 +33,7 @@ eBayUI React components
 * [x] [ebay-fake-menu-button](src/ebay-fake-menu-button)
 * [x] [ebay-fake-tabs](src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
-* [ ] `ebay-filter` (in progress...)
+* [ ] `ebay-filter`
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
 * [x] [ebay-icon-button](src/ebay-icon-button)
@@ -55,6 +55,7 @@ eBayUI React components
 * [x] [ebay-radio](src/ebay-radio)
 * [x] [ebay-section-title](src/ebay-section-title)
 * [x] [ebay-section-notice](src/ebay-section-notice)
+* [x] [ebay-segmented-buttons](src/ebay-segmented-buttons)
 * [x] [ebay-select](src/ebay-select)
 * [x] [ebay-signal](src/ebay-signal)
 * [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
@@ -123,16 +124,18 @@ Create an issue on github
 ## Changelog
 
 `@ebay/ui-core-react`
+### version 7.x (Skin 18, breaking changes in icon names)
+### version 6.x (Skin 17, breaking changes in icon names)
 ### version 5.x (Skin 16, breaking changes in event callbacks)
 ### version 4.x (Skin 16, breaking changes in icon names)
 ### version 3.x (Skin 15, some breaking changes in dialog components)
 ### version 2.x (Skin 15)
 
-`@ebay/ebayui-core-react`
+`@ebay/ebayui-core-react` (obsolete)
 ### version 10.x (Skin 14)
 ### version 9.x (skin 13)
 
-`ebayui-core-react`
+`ebayui-core-react` (obsolete)
 ### version 8.x (skin 12)
 ### version 6.x (skin 10)
 ### version 5.x (removed less, changed imports to minimize bundle size)
