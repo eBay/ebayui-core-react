@@ -11,8 +11,8 @@ yarn add @ebay/ui-core-react @ebay/skin
 ## Usage
 ```
 import React from 'react'
-import EbaySegmentedButtons, EbaySegmentedButtons as Button from './segmented-buttons'
-import { EbayIcon } from '../ebay-icon'
+import { EbaySegmentedButtons, EbaySegmentedButtons as Button } from '@ebay/ui-core-react/ebay-segmented-buttons'
+import { EbayIcon } from '@ebay/ui-core-react/ebay-icon'
 import '@ebay/skin/segmented-buttons'
 
 export const Example = () => (
