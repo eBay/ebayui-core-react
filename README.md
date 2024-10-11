@@ -96,18 +96,9 @@ These react components are available as `@ebay/ui-core-react` package on [NPM](h
 Use npm or yarn to add the package dependency to your project:
 
 ```sh
-yarn add @ebay/ui-core-react
+yarn add @ebay/ui-core-react @ebay/skin
 ```
 
-### for quick development/POC
-```jsx
-import { EbayTextbox, EbayButton } from '@ebay/ui-core-react'
-
-<EbayTextbox placeholder="Enter text here" />
-<EbayButton>Submit</EbayButton>
-```
-
-### for smaller bundle size
 ```jsx harmony
 import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
 import { EbayButton } from '@ebay/ui-core-react/ebay-button'
