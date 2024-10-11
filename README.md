@@ -13,21 +13,28 @@ eBayUI React components
 ### eBayUI Components
 * [ ] `ebay-3d-viewer`
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
+* [ ] `ebay-area-chart`
 * [ ] `ebay-avatar`
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-badge](src/ebay-badge)
+* [ ] `ebay-bar-chart`
 * [x] [ebay-breadcrumbs](src/ebay-breadcrumbs)
 * [x] [ebay-button](src/ebay-button)
 * [x] [ebay-calendar](src/ebay-calendar)
+* [ ] `ebay-character-count`
 * [x] [ebay-carousel](src/ebay-carousel)
+* [ ] `ebay-chart-legend`
 * [x] [ebay-checkbox](src/ebay-checkbox)
+* [ ] `ebay-chip`
+* [ ] `ebay-chips-combobox`
 * [ ] `ebay-combobox`
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-cta-button](src/ebay-cta-button)
 * [x] [ebay-date-textbox](src/ebay-date-textbox)
 * [ ] `ebay-details`
+* [ ] `ebay-donut-chart`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
-* [ ] `ebay-chip`
+* [ ] `ebay-education-notice`
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
@@ -38,8 +45,11 @@ eBayUI React components
 * [ ] `ebay-filter`
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
+* [ ] `ebay-flag`
+* [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [x] [ebay-icon-button](src/ebay-icon-button)
 * [x] [ebay-icon](src/ebay-icon)
+* [ ] `ebay-image-placeholder`
 * [x] [ebay-infotip](src/ebay-infotip)
 * [x] [ebay-inline-notice](src/ebay-inline-notice)
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
@@ -51,7 +61,9 @@ eBayUI React components
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
+* [ ] `ebay-phone-input`
 * [x] [ebay-progress-bar](src/ebay-progress-bar)
+* [ ] `ebay-progress-bar-expressive`
 * [x] [ebay-progress-spinner](src/ebay-progress-spinner)
 * [x] [ebay-progress-stepper](src/ebay-progress-stepper)
 * [x] [ebay-radio](src/ebay-radio)
@@ -60,8 +72,9 @@ eBayUI React components
 * [x] [ebay-segmented-buttons](src/ebay-segmented-buttons)
 * [x] [ebay-select](src/ebay-select)
 * [x] [ebay-signal](src/ebay-signal)
-* [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
 * [ ] `ebay-skeleton`
+* [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
+* [ ] `ebay-spark-line`
 * [x] [ebay-split-button](src/ebay-split-button)
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
@@ -69,6 +82,8 @@ eBayUI React components
 * [x] [ebay-tabs](src/ebay-tabs)
 * [x] [ebay-textbox](src/ebay-textbox)
 * [x] [ebay-toast-dialog](src/ebay-toast-dialog)
+* [ ] `ebay-toggle-button`
+* [ ] `ebay-toggle-button-group`
 * [x] [ebay-tooltip](src/ebay-tooltip)
 * [x] [ebay-tourtip](src/ebay-tourtip)
 * [ ] `ebay-tri-state-checkbox`
