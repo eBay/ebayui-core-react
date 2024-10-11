@@ -7,6 +7,7 @@ import { SegmentedButtonProps } from './types'
 const SegmentedButton: FC<SegmentedButtonProps> = ({
     selected,
     children,
+    className,
     onClick,
     ...rest
 }) => {
@@ -26,7 +27,7 @@ const SegmentedButton: FC<SegmentedButtonProps> = ({
     return (
         <li>
             <button
-                className={classNames('segmented-buttons__button')}
+                className={classNames('segmented-buttons__button', className)}
                 aria-current={selected || undefined}
                 onClick={onClick}
                 {...rest}
