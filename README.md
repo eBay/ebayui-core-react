@@ -13,6 +13,7 @@ eBayUI React components
 ### eBayUI Components
 * [ ] `ebay-3d-viewer`
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
+* [ ] `ebay-avatar`
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-badge](src/ebay-badge)
 * [x] [ebay-breadcrumbs](src/ebay-breadcrumbs)
@@ -26,6 +27,7 @@ eBayUI React components
 * [x] [ebay-date-textbox](src/ebay-date-textbox)
 * [ ] `ebay-details`
 * [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
+* [ ] `ebay-chip`
 * [x] [ebay-eek](src/ebay-eek)
 * [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
@@ -59,6 +61,7 @@ eBayUI React components
 * [x] [ebay-select](src/ebay-select)
 * [x] [ebay-signal](src/ebay-signal)
 * [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
+* [ ] `ebay-skeleton`
 * [x] [ebay-split-button](src/ebay-split-button)
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
