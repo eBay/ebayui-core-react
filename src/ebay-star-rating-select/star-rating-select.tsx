@@ -2,8 +2,8 @@ import React, { ComponentProps, FC, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { range } from '../common/range'
-import { randomId } from '../common/random-id'
 import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
+import { useRandomId } from '../common/random-id'
 
 export type EventProps = { value: number }
 type Props = ComponentProps<'div'> & {
@@ -33,9 +33,11 @@ const EbayStarRatingSelect: FC<Props> = ({
     onChange = () => {},
     onFocus = () => {},
     onKeyDown = () => {},
-    name = `star-rating-${randomId()}`,
+    name,
     ...rest
 }) => {
+    const rId = useRandomId()
+    const inputName = name || `star-rating-${rId}`
     const [checkedValue, setChecked] = useState(getValue(value))
     useEffect(() => {
         setChecked(getValue(value))
@@ -74,7 +76,7 @@ const EbayStarRatingSelect: FC<Props> = ({
                             { 'star-rating-select__control--filled': i <= checkedValue })
                         }
                         type="radio"
-                        name={name}
+                        name={inputName}
                         value={i}
                         disabled={disabled}
                         defaultChecked={checkedValue === i}

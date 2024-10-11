@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayToast } from '../index'
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 describe('<EbayToast>', () => {
     const closeToastHandler = jest.fn()
