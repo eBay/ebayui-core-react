@@ -7,7 +7,8 @@ import { SegmentedButtonProps } from './types'
 const SegmentedButton: FC<SegmentedButtonProps> = ({
     selected,
     children,
-    onClick
+    onClick,
+    ...rest
 }) => {
     const icon = findComponent(children, EbayIcon)
 
@@ -28,6 +29,7 @@ const SegmentedButton: FC<SegmentedButtonProps> = ({
                 className={classNames('segmented-buttons__button')}
                 aria-current={selected || undefined}
                 onClick={onClick}
+                {...rest}
             >
                 {icon ? iconWithText() : children}
             </button>

@@ -1,14 +1,15 @@
 import { ComponentProps } from 'react'
-import { EbayMouseEventHandler } from '../common/event-utils/types'
+import { EbayChangeEventHandler, EbayMouseEventHandler } from '../common/event-utils/types'
 
-export interface SegmentedButtonProps extends Omit<ComponentProps<'button'>, 'onClick'> {
+export type SegmentedButtonProps = Omit<ComponentProps<'button'>, 'onClick'> & {
     value?: string;
     selected?: boolean;
     onClick?: EbayMouseEventHandler<HTMLButtonElement>;
 }
 
-export interface SegmentedButtonsProps extends Omit<ComponentProps<'div'>, 'onChange'> {
-    buttons?: SegmentedButtonProps[];
-    size?: 'large' | 'regular';
-    onChange?: EbayMouseEventHandler<HTMLButtonElement, { index: number, value?: string }>;
+export type SegmentedButtonSize = 'large' | 'regular'
+
+export type SegmentedButtonsProps = Omit<ComponentProps<'div'>, 'onChange'> & {
+    size?: SegmentedButtonSize;
+    onChange?: EbayChangeEventHandler<HTMLButtonElement, { index: number, value?: string }>;
 }

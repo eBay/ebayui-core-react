@@ -16,7 +16,7 @@ const EbaySegmentedButtons: FC<SegmentedButtonsProps> = ({
         buttons.findIndex(button => button.props.selected) || 0
     )
 
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>, index: number, value: string) => {
+    const handleClick = (e, index: number, value: string) => {
         setSelectedIndex(index)
         onChange(e, { index, value })
     }

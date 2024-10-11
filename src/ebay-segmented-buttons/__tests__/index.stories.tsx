@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { EbaySegmentedButtons, SegmentedButtonsProps, EbaySegmentedButton as Button } from '..'
+import { EbaySegmentedButtons, EbaySegmentedButton as Button } from '..'
 import { EbayIcon } from '../../ebay-icon'
 
 export default {
@@ -31,7 +31,7 @@ export default {
     }
 } as Meta<typeof EbaySegmentedButtons>
 
-export const Default: StoryObj<SegmentedButtonsProps> = {
+export const Default: StoryObj<typeof EbaySegmentedButtons> = {
     render: args => (
         <EbaySegmentedButtons onChange={action('change')} {...args}>
             <Button selected value="quarter1">Q1</Button>
@@ -42,7 +42,7 @@ export const Default: StoryObj<SegmentedButtonsProps> = {
     )
 }
 
-export const WithIcons: StoryObj<SegmentedButtonsProps> = {
+export const WithIcons: StoryObj<typeof EbaySegmentedButtons> = {
     render: args => (
         <EbaySegmentedButtons onChange={action('change')} {...args}>
             <Button selected><EbayIcon name="fullView24"/> Desktop</Button>
