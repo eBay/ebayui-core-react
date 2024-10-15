@@ -95,7 +95,7 @@ function getFilledIconName(iconName: string) {
     return `icon--${iconNameArray.slice(0, filledIndex + 1).join('-')}`
 }
 
-function kebabCased(str: string) {
+export function kebabCased(str: string): string {
     return str
         .replace(/([0-9]+)/g, (s, n) => `-${n}`)
         .replace(/([A-Z])/g, (s, c) => `-${c.toLowerCase()}`)
