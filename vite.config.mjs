@@ -37,7 +37,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: componentEntries,
-            fileName: "[name]",
+            fileName: "[name]/index",
             // Use CommonJS only until we upgrade all packages that uses ui-core-react to use ESM.
             // If we use ESM, the bundle might have both ESM and CJS, which will increase the bundle size,
             // and might cause reference issues.

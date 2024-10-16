@@ -1,6 +1,6 @@
 {
   "name": "@ebay/ui-core-react",
-  "version": "7.2.1",
+  "version": "7.2.2",
   "description": "Skin components build off React",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -8,79 +8,79 @@
   "exports": {
     "./ebay-dialog-base/components/animation": {
         "types": "./ebay-dialog-base/components/animation.d.ts",
-        "default": "./ebay-dialog-base/components/animation.js"
+        "default": "./ebay-dialog-base/components/animation/index.js"
     },
     "./ebay-dialog-base/components/dialog-header": {
         "types": "./ebay-dialog-base/components/dialog-header.d.ts",
-        "default": "./ebay-dialog-base/components/dialog-header.js"
+        "default": "./ebay-dialog-base/components/dialog-header/index.js"
     },
     "./ebay-dialog-base/components/dialog-footer": {
         "types": "./ebay-dialog-base/components/dialog-footer.d.ts",
-        "default": "./ebay-dialog-base/components/dialog-footer.js"
+        "default": "./ebay-dialog-base/components/dialog-footer/index.js"
     },
     "./ebay-notice-base/components/*": {
         "types": "./ebay-notice-base/index.d.ts",
-        "default": "./ebay-notice-base.js"
+        "default": "./ebay-notice-base/index.js"
     },
     "./common/component-utils/forwardRef": {
       "types": "./common/component-utils/forwardRef.d.ts",
-      "default": "./common/component-utils/forwardRef.js"
+      "default": "./common/component-utils/forwardRef/index.js"
     },
     "./common/component-utils/utils": {
       "types": "./common/component-utils/utils.d.ts",
-      "default": "./common/component-utils/utils.js"
+      "default": "./common/component-utils/utils/index.js"
     },
     "./common/component-utils": {
       "types": "./common/component-utils/index.d.ts",
-      "default": "./common/component-utils.js"
+      "default": "./common/component-utils/index.js"
     },
     "./common/event-utils/types": {
-      "types": "./common/event-utils/event-utils/types.d.ts"
+      "types": "./common/event-utils/types.d.ts"
     },
     "./common/event-utils": {
-      "types": "./common/event-utils/event-utils/index.d.ts",
-      "default": "./common/event-utils/event-utils.js"
+      "types": "./common/event-utils/index.d.ts",
+      "default": "./common/event-utils/index.js"
     },
     "./common/floating-label-utils": {
       "types": "./common/floating-label-utils/hooks.d.ts",
-      "default": "./common/floating-label-utils/hooks.js"
+      "default": "./common/floating-label-utils/hooks/index.js"
     },
     "./common/notice-utils/notice-cta": {
       "types": "./common/notice-utils/notice-cta.d.ts",
-      "default": "./common/notice-utils/notice-cta.js"
+      "default": "./common/notice-utils/notice-cta/index.js"
     },
     "./common/random-id": {
       "types": "./common/random-id.d.ts",
-      "default": "./common/random-id.js"
+      "default": "./common/random-id/index.js"
     },
     "./common/tooltip-utils/constants": {
       "types": "./common/tooltip-utils/constants.d.ts",
-      "default": "./common/tooltip-utils/constants.js"
+      "default": "./common/tooltip-utils/constants/index.js"
     },
     "./common/tooltip-utils/types": {
       "types": "./common/tooltip-utils/types.d.ts"
     },
     "./common/tooltip-utils": {
       "types": "./common/tooltip-utils/index.d.ts",
-      "default": "./common/tooltip-utils.js"
+      "default": "./common/tooltip-utils/index.js"
     },
     "./ebay-radio/radio": {
       "types": "./ebay-radio/radio.d.ts",
-      "default": "./ebay-radio/radio.js"
+      "default": "./ebay-radio/radio/index.js"
     },
     "./ebay-fake-menu-button/menu-button": {
       "types": "./ebay-fake-menu-button/menu-button.d.ts",
-      "default": "./ebay-fake-menu-button/menu-button.js"
+      "default": "./ebay-fake-menu-button/menu-button/index.js"
     },
     "./ebay-fake-menu/menu-item": {
       "types": "./ebay-fake-menu/menu-item.d.ts",
-      "default": "./ebay-fake-menu/menu-item.js"
+      "default": "./ebay-fake-menu/menu-item/index.js"
     },
 
     "./package.json": "./package.json",
     "./*": {
       "types": "./*/index.d.ts",
-      "default": "./*.js"
+      "default": "./*/index.js"
     }
   },
   "scripts": {
