@@ -75,6 +75,8 @@ function generateEbaySVG(svgSymbols) {
     return `/* eslint-disable */
 // @ts-nocheck
 ${fileHeader}\n
+import React from 'react'
+
 export const symbols = [
     ${symbolStrings.join(',\n    ')}
 ]
