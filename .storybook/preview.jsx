@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {StrictMode} from 'react'
 import { EbaySvg } from '../src/ebay-svg'
 
 import "@ebay/skin"
@@ -8,10 +8,10 @@ import "@ebay/skin/marketsans"
 export default {
     decorators: [
         Story => (
-            <>
+            <StrictMode>
                 <EbaySvg/>
                 <Story/>
-            </>
+            </StrictMode>
         )
     ],
     parameters: {
