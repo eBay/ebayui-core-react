@@ -7,20 +7,20 @@
   },
   "exports": {
     "./ebay-dialog-base/components/animation": {
-        "types": "./ebay-dialog-base/components/animation.d.ts",
-        "default": "./ebay-dialog-base/components/animation/index.js"
+      "types": "./ebay-dialog-base/components/animation.d.ts",
+      "default": "./ebay-dialog-base/components/animation/index.js"
     },
     "./ebay-dialog-base/components/dialog-header": {
-        "types": "./ebay-dialog-base/components/dialog-header.d.ts",
-        "default": "./ebay-dialog-base/components/dialog-header/index.js"
+      "types": "./ebay-dialog-base/components/dialog-header.d.ts",
+      "default": "./ebay-dialog-base/components/dialog-header/index.js"
     },
     "./ebay-dialog-base/components/dialog-footer": {
-        "types": "./ebay-dialog-base/components/dialog-footer.d.ts",
-        "default": "./ebay-dialog-base/components/dialog-footer/index.js"
+      "types": "./ebay-dialog-base/components/dialog-footer.d.ts",
+      "default": "./ebay-dialog-base/components/dialog-footer/index.js"
     },
     "./ebay-notice-base/components/*": {
-        "types": "./ebay-notice-base/index.d.ts",
-        "default": "./ebay-notice-base/index.js"
+      "types": "./ebay-notice-base/index.d.ts",
+      "default": "./ebay-notice-base/index.js"
     },
     "./common/component-utils/forwardRef": {
       "types": "./common/component-utils/forwardRef.d.ts",
@@ -76,7 +76,6 @@
       "types": "./ebay-fake-menu/menu-item.d.ts",
       "default": "./ebay-fake-menu/menu-item/index.js"
     },
-
     "./package.json": "./package.json",
     "./*": {
       "types": "./*/index.d.ts",
@@ -139,7 +138,7 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.0.0",
-    "@ebay/skin": "^18.0.0",
+    "@ebay/skin": "^18.4.0",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-a11y": "^7.6.12",

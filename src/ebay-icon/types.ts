@@ -80,6 +80,7 @@ export type Icon =
     'bankAccount32Colored' |
     'barChart16' |
     'barChart24' |
+    'bids16' |
     'bids24' |
     'bids64' |
     'boat16' |
@@ -256,6 +257,8 @@ export type Icon =
     'exclude16' |
     'exclude24' |
     'expand16' |
+    'explore16' |
+    'explore24' |
     'externalLink16' |
     'externalLink20' |
     'externalLink24' |
@@ -353,6 +356,7 @@ export type Icon =
     'helpOutline24' |
     'hide16' |
     'hide24' |
+    'history16' |
     'history24' |
     'history64' |
     'home24' |
@@ -370,6 +374,9 @@ export type Icon =
     'inspect24' |
     'inspect64' |
     'instagram24' |
+    'itemList16' |
+    'itemList20' |
+    'itemList24' |
     'jcb12Colored' |
     'jcb18Colored' |
     'jcb24Colored' |
@@ -465,6 +472,8 @@ export type Icon =
     'moneyBackGuarantee24' |
     'moneyBackGuaranteeFilled16Colored' |
     'moneyBackGuaranteeFilled24Colored' |
+    'moneyStack16' |
+    'moneyStack24' |
     'monthlyInvoice12Colored' |
     'monthlyInvoice18Colored' |
     'monthlyInvoice24Colored' |
@@ -677,8 +686,10 @@ export type Icon =
     'starDynamic' |
     'starEmpty16' |
     'starEmpty24' |
+    'starEmpty40' |
     'starFilled16' |
     'starFilled24' |
+    'starFilled40' |
     'starHalf16Colored' |
     'starHalf24Colored' |
     'starHalfDark16Colored' |
@@ -728,6 +739,9 @@ export type Icon =
     'tradingCard16' |
     'tradingCard24' |
     'transaction24' |
+    'translate16' |
+    'translate20' |
+    'translate24' |
     'trendDown16Fit' |
     'trendUp16Fit' |
     'trophy16' |
