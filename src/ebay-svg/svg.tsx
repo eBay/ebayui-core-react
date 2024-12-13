@@ -13,7 +13,7 @@ const EbaySvg: FC<EbaySvgProps> = ({ icons }: EbaySvgProps) => {
     // Use position absolute and height/width 0px instead of display none
     // so <defs> element for spectrum icons are shown
     return (
-        <svg style={{ position: 'absolute', height: '0px', width: '0px' }}>
+        <svg style={{ position: 'absolute', height: '0px', width: '0px' }} focusable={false} aria-hidden="true">
             {!iconIds ? symbols : symbols
                 .filter(({ props, type }) => type === 'defs' || iconIds.has(props.id))}
         </svg>
