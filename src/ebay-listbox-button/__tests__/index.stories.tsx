@@ -13,9 +13,9 @@ export const Default = () => (
     <>
         <EbayListboxButton
             value="BB"
-            onChange={(e: ChangeEvent, props: ChangeEventProps) => action('onChange')(e, props)}
-            onCollapse={() => action('onCollapse')()}
-            onExpand={() => action('onExpand')()}
+            onChange={action('onChange')}
+            onCollapse={action('onCollapse')}
+            onExpand={action('onExpand')}
         >
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -37,7 +37,7 @@ export const PreselectedIndex = () => (
 export const DefaultNoSelectedOption = () => (
     <>
         <EbayListboxButton
-            onChange={(e: ChangeEvent, props: ChangeEventProps) => action('onChange')(e, props)}
+            onChange={(e: ChangeEvent, props?: ChangeEventProps) => action('onChange')(e, props)}
         >
             <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
             <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -143,7 +143,7 @@ export const TooManyOptions = () => (
             <EbayListboxButtonOption value="VV">Option 22</EbayListboxButtonOption>
             <EbayListboxButtonOption value="YY">Option 23</EbayListboxButtonOption>
             <EbayListboxButtonOption value="XX">Option 24</EbayListboxButtonOption>
-            <EbayListboxButtonOption value="YY">Option 25</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="WW">Option 25</EbayListboxButtonOption>
             <EbayListboxButtonOption value="ZZ">Option 26</EbayListboxButtonOption>
             <EbayListboxButtonOption value="11">Option 27</EbayListboxButtonOption>
             <EbayListboxButtonOption value="22">Option 28</EbayListboxButtonOption>
@@ -157,7 +157,7 @@ export const TooManyOptions = () => (
             <EbayListboxButtonOption value="100">Option 36</EbayListboxButtonOption>
             <EbayListboxButtonOption value="101">Option 37</EbayListboxButtonOption>
             <EbayListboxButtonOption value="102">Option 38</EbayListboxButtonOption>
-            <EbayListboxButtonOption value="102">Option 39</EbayListboxButtonOption>
+            <EbayListboxButtonOption value="103">Option 39</EbayListboxButtonOption>
         </EbayListboxButton>
     </>
 )

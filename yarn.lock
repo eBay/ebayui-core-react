@@ -8167,26 +8167,44 @@ makeerror@1.0.12:
   dependencies:
     tmpl "1.0.5"
 
-makeup-exit-emitter@~0.4.0:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/makeup-exit-emitter/-/makeup-exit-emitter-0.4.1.tgz#99a6db81c44a7465658b89d5f4e9324d21755190"
-  integrity sha512-KZJRxx/eiGxMs0qHOw5lbNQn+BOv0GZb/sKQ02vNRFuqAGS2KGXQH+lWYZDrwwDKvexgln/kE+8xf1mjArpDgw==
+makeup-active-descendant@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/makeup-active-descendant/-/makeup-active-descendant-0.7.3.tgz#6f55b2240b1b3710c39d05135a3aec6fe479c19e"
+  integrity sha512-2mj2sRYU9FjqqjaKa9KzeMHn9iIw29ly6POjymJGuPblvp9P7STJfJrfNg/BFJ2jL6vTm7Zadr3itC1qgYxBgQ==
   dependencies:
-    makeup-next-id "~0.4.0"
+    makeup-navigation-emitter "^0.7.2"
+    makeup-next-id "^0.5.2"
 
-makeup-expander@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/makeup-expander/-/makeup-expander-0.10.1.tgz#5ba44f8a142625a885dde2bab1d6177b4d07672a"
-  integrity sha512-auGubmGHsxRTOSvraLBwSYvSouzOlMNR6aXpE5GHi29p0z/IoMCH+Pb8IAXUPSv3ABXSh0bdSjaCrNIH0VNAVw==
+makeup-exit-emitter@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/makeup-exit-emitter/-/makeup-exit-emitter-0.5.2.tgz#0647fda95166c49a89833bf5f82bba45cdf3f764"
+  integrity sha512-fyol56GWzoyTLuxWhF7RJ7pnMyB/5w83mwNth0Kfexd9rtLe8RxC/sSNAeia1RbNGSlZACOxKKOpG0L56nRUyQ==
   dependencies:
-    makeup-exit-emitter "~0.4.0"
-    makeup-focusables "~0.3.0"
-    makeup-next-id "~0.4.0"
+    makeup-next-id "^0.5.2"
+
+makeup-expander@^0.11.3:
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/makeup-expander/-/makeup-expander-0.11.3.tgz#857ba10fb6be2872842298a52e1a5e5c861c381a"
+  integrity sha512-1pWnF4v855UfpBzraAAElfHw84WNL4OGuZAZBzqH1tB0fFZ4Z/3fSk3vMzhL7QT6LFC/1ygli9mGeZl1PYXlag==
+  dependencies:
+    makeup-exit-emitter "^0.5.2"
+    makeup-focusables "^0.4.3"
+    makeup-next-id "^0.5.2"
+
+makeup-focusables@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/makeup-focusables/-/makeup-focusables-0.4.3.tgz#3e92964ea136e962a2f841de34b507d15e088f51"
+  integrity sha512-00od3RjRDRlyzKNMkZKyfEUY7USfnn0JJJAKWpt7RinzA+v1Yjd0LIMPwTBqsPOcpcquQaRRwDjGolEjZyFq+w==
 
 makeup-focusables@~0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/makeup-focusables/-/makeup-focusables-0.3.1.tgz#60a6917094b6b79e1f29e48369d1560052f625c8"
   integrity sha512-SHL/VBBA6aqTGGay6/6rQvZjlAKmp/VASL46bHdEUfDxWhALzV3xquctr3C3WxdlnFwd4qxbIS3nv1Um9MSJhw==
+
+makeup-key-emitter@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/makeup-key-emitter/-/makeup-key-emitter-0.4.2.tgz#1edc5f9890d90c38d7f4b41968f90540a7854bc7"
+  integrity sha512-8xB/0qwMfSvtxGRB1rx74DIqd+dgqMFbSosOS9DK5FkbXYeGSU8TA5rIsmyZDSnlDdCA6UZKg1Hfajl7EvI5SQ==
 
 makeup-keyboard-trap@^0.4.1:
   version "0.4.1"
@@ -8195,15 +8213,33 @@ makeup-keyboard-trap@^0.4.1:
   dependencies:
     makeup-focusables "~0.3.0"
 
-makeup-next-id@~0.4.0:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/makeup-next-id/-/makeup-next-id-0.4.1.tgz#7530470175360e836af66c6d421349abf612738c"
-  integrity sha512-5s1caaRFSkvAu6Vhh1ZGkMyycf6bwEfZWwd0qEXzJj2P1aF+8baLo5sPZlMnfSao/SeUD6le0J8CaOzlt4KZSA==
+makeup-navigation-emitter@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/makeup-navigation-emitter/-/makeup-navigation-emitter-0.7.2.tgz#036f87f5e738c1961b72775f96eebb7ed19a2515"
+  integrity sha512-E6Ooao2DGd3/trPSsWcYQPgSLS/ZrsnqEskfn62xZkhJve9BF7eP4kcm0LbHerzAJUoecmcjokwu5Huu/5PnGQ==
+  dependencies:
+    makeup-exit-emitter "^0.5.2"
+    makeup-key-emitter "^0.4.2"
+
+makeup-next-id@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/makeup-next-id/-/makeup-next-id-0.5.2.tgz#683a335f22462b791e47f500d10de486d4f01adb"
+  integrity sha512-4uHgSbHcAfGURj3ob/Zvw8bKEsZgbFYxwV6sIP3CerPxVqyHD+ORaCEG8zgu+l+2+/N+CiCBIgZGFuXfE+sBug==
+
+makeup-prevent-scroll-keys@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/makeup-prevent-scroll-keys/-/makeup-prevent-scroll-keys-0.3.2.tgz#23bddc0a281e32fdab4574595eeefea5fd972994"
+  integrity sha512-8LgXafS2L5aLA3TFzWMO5XAWNV9flKZdkg9xM59MXrgIRFO3yc0PVhX5gyMY4xallnjLAgJaGC4z6vKa5cnnHg==
 
 makeup-screenreader-trap@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/makeup-screenreader-trap/-/makeup-screenreader-trap-0.4.1.tgz#6ef87b33735a609be5444c0562a1834bf45dc39b"
   integrity sha512-64x5elJZlImluq2DFmHZnW4YEt6jvRZGnI4mD37RFVDpE7I2S3DvLrCp1WvaX7j0DNpzZHP7pv4ZM5ru7CJ0Bw==
+
+makeup-typeahead@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/makeup-typeahead/-/makeup-typeahead-0.3.2.tgz#c9597fd8f5c61256f83c169ae711858732753b63"
+  integrity sha512-5wkLzlkNG9W7OJjhpTHD33YF9aDQzbPCeIezm2ftejNI5W7lAvib2y0yQ1vW2qMehYXZThilM7mryzjRqY8lFQ==
 
 map-or-similar@^1.5.0:
   version "1.5.0"
@@ -9953,16 +9989,7 @@ string-length@^4.0.1:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
 
-"string-width-cjs@npm:string-width@^4.2.0":
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
-  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
-  dependencies:
-    emoji-regex "^8.0.0"
-    is-fullwidth-code-point "^3.0.0"
-    strip-ansi "^6.0.1"
-
-string-width@4.2.3, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3, string-width@^5.0.1, string-width@^5.1.2:
+"string-width-cjs@npm:string-width@^4.2.0", string-width@4.2.3, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3, string-width@^5.0.1, string-width@^5.1.2:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -10042,7 +10069,7 @@ stringify-object@^3.3.0:
     is-obj "^1.0.1"
     is-regexp "^1.0.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -10055,13 +10082,6 @@ strip-ansi@^4.0.0:
   integrity sha512-4XaJ2zQdCzROZDivEVIDPkcQn8LMFSa8kj8Gxb/Lnwzv9A8VctNZ+lfivC/sV3ivW8ElJTERXZoPBRrZKkNKow==
   dependencies:
     ansi-regex "^3.0.0"
-
-strip-ansi@^6.0.0, strip-ansi@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
-  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
-  dependencies:
-    ansi-regex "^5.0.1"
 
 strip-ansi@^7.0.1:
   version "7.1.0"
@@ -10898,7 +10918,8 @@ wordwrap@^1.0.0:
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -10911,15 +10932,6 @@ wrap-ansi@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-6.2.0.tgz#e9393ba07102e6c91a3b221478f0257cd2856e53"
   integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
-  dependencies:
-    ansi-styles "^4.0.0"
-    string-width "^4.1.0"
-    strip-ansi "^6.0.0"
-
-wrap-ansi@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
-  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   dependencies:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"

@@ -1,5 +1,8 @@
+/// <reference types="@testing-library/jest-dom" />
+
 import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { act, render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayListboxButton, EbayListboxButtonOption } from '..'
 
@@ -20,7 +23,7 @@ describe('<EbayListboxButton>', () => {
                 </>
             )
             const buttonElement = screen.getByRole('button')
-            const expandBtnTextId = screen.getByText('Option 2').id
+            const expandBtnTextId = screen.getAllByText('Option 2')[0].id
 
             return { buttonElement, expandBtnTextId }
         }
@@ -115,7 +118,7 @@ describe('<EbayListboxButton>', () => {
 
         describe('when the button is clicked', () => {
             beforeEach(async () => {
-                await fireEvent.click(screen.getByRole('button'))
+                await userEvent.click(screen.getByRole('button'))
             })
             it('then it has expanded the listbox', () => {
                 expect(screen.getByRole('button')).toHaveAttribute('aria-expanded', `true`)
@@ -130,12 +133,12 @@ describe('<EbayListboxButton>', () => {
             })
             describe('when the button is clicked again', () => {
                 beforeEach(async () => {
-                    await fireEvent.click(screen.getByRole('button'))
+                    await userEvent.click(screen.getByRole('button'))
                 })
                 it('then it has collapsed the listbox', () => {
                     expect(screen.getByRole('button')).toHaveAttribute('aria-expanded', `false`)
                 })
-                xit('focus should move to button', () => {
+                it('focus should move to button', () => {
                     const button = screen.getByRole('button')
                     jest.runAllTimers()
                     expect(button).toHaveFocus()
@@ -154,10 +157,14 @@ describe('<EbayListboxButton>', () => {
                     <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
                 </EbayListboxButton>
             )
-            fireEvent.click(screen.getByRole('button'))
+            act(() => {
+                userEvent.click(screen.getByRole('button'))
+            })
+            
             const index = 0
-            fireEvent.mouseDown(screen.getAllByRole('option')[index])
-            fireEvent.click(screen.getAllByRole('option')[index])
+            act(() => {
+                userEvent.click(screen.getAllByRole('option')[index])
+            })
 
             expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index, selected: ['AA'], wasClicked: true })
         })
@@ -171,18 +178,24 @@ describe('<EbayListboxButton>', () => {
                     <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
                 </EbayListboxButton>
             )
-            fireEvent.click(screen.getByRole('button'))
 
-            fireEvent.mouseDown(screen.getAllByRole('option')[0])
-            fireEvent.click(screen.getAllByRole('option')[0])
+            act(() => {
+                userEvent.click(screen.getByRole('button'))
+                userEvent.click(screen.getAllByRole('option')[0])
+            })
+            
             expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index: 0, selected: ['AA'], wasClicked: true })
 
-            fireEvent.mouseDown(screen.getAllByRole('option')[1])
-            fireEvent.click(screen.getAllByRole('option')[1])
+            act(() => {
+                userEvent.click(screen.getAllByRole('option')[1])
+            })
+            
             expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index: 1, selected: ['BB'], wasClicked: true })
 
-            fireEvent.mouseDown(screen.getAllByRole('option')[2])
-            fireEvent.click(screen.getAllByRole('option')[2])
+            act(() => {
+                userEvent.click(screen.getAllByRole('option')[2])
+            })
+            
             expect(spy).toHaveBeenCalledWith(eventOfType('click'), { index: 2, selected: ['CC'], wasClicked: true })
         })
     })
@@ -196,7 +209,10 @@ describe('<EbayListboxButton>', () => {
                     <EbayListboxButtonOption value="CC">Option 3</EbayListboxButtonOption>
                 </EbayListboxButton>
             )
-            fireEvent.click(screen.getByRole('button'))
+
+            act(() => {
+                userEvent.click(screen.getByRole('button'))
+            })
 
             expect(spy).toHaveBeenCalledWith()
         })
@@ -212,8 +228,11 @@ describe('<EbayListboxButton>', () => {
                 </EbayListboxButton>
             )
             const button = screen.getByRole('button')
-            fireEvent.click(button)
-            fireEvent.click(button)
+
+            act(() => {
+                userEvent.click(button)
+                userEvent.click(button)
+            })
 
             expect(spy).toHaveBeenCalledWith()
         })
