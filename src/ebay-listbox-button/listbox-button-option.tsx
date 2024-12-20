@@ -17,7 +17,6 @@ const ListboxOption: FC<EbayListboxButtonOptionProps> = ({
     index,
     innerRef,
     className,
-    id,
     ...rest
 }) => {
     const wrapperClassName = classNames(`listbox-button__option`, className,
@@ -27,7 +26,6 @@ const ListboxOption: FC<EbayListboxButtonOptionProps> = ({
             {...rest}
             className={wrapperClassName}
             role="option"
-            id={id || `listbox_btn_${value}_${index}`}
             aria-selected={selected}
             ref={innerRef}
             onClick={(e) => {onClick(e, value, index)}}
