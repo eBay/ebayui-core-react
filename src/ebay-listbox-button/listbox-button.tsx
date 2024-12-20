@@ -14,7 +14,7 @@ export type ChangeEventProps = {
     wasClicked: boolean;
 }
 
-export type EbayListboxButtonProps = Omit<ComponentProps<'input'>, 'onChange'> & {
+export type EbayListboxButtonProps = Omit<ComponentProps<'button'>, 'onChange'> & {
     selected?: number;
     borderless?: boolean;
     fluid?: boolean;
@@ -89,10 +89,6 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     const getIndexByValue = useCallback((selectedValue) =>
         childrenArray.findIndex(({ props }) => props.value === selectedValue), [childrenArray])
     const getSelectedOption = (currentIndex: number) => optionsByIndexRef.current.get(currentIndex)
-    const setActiveDescendant = (index: number) => {
-        const optionsContainerEle = optionsContainerRef.current
-        optionsContainerEle?.setAttribute(`aria-activedescendant`, getSelectedOption(index).id)
-    }
 
     const collapseListbox = () => {
         setExpanded(false)
@@ -117,7 +113,6 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         setSelectedOption(childrenArray[index])
         setSelectedIndex(index)
         collapseListbox()
-        setActiveDescendant(index)
         buttonRef.current.focus()
         onChange(e, { index, selected: [getSelectedValueByIndex(index)], wasClicked })
         setWasClicked(false)
@@ -160,7 +155,6 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         makeOptionActive(selectedIndex === undefined || updatedIndex === -1 ? 0 : updatedIndex)
         makeOptionInActive(selectedIndex === undefined || selectedIndex === -1 ? 0 : selectedIndex)
         scrollOptions(updatedIndex)
-        setActiveDescendant(updatedIndex)
         setSelectedIndex(updatedIndex)
         setSelectedOption(childrenArray[updatedIndex])
     }
@@ -169,7 +163,6 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         setTimeout(() => optionsContainerRef?.current?.focus(focusOptions), 0)
     const onButtonClick = () => {
         toggleListbox()
-        setOptionsOpened(true)
         focusOptionsContainer({ preventScroll: true })
     }
     const onButtonKeyup = (e: KeyboardEvent<HTMLButtonElement>) => {
@@ -233,6 +226,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
             index,
             key: index,
             selected: selectedOption && child.props.value === selectedOption.props.value,
+            id: child.props.id || `listbox_btn_${child.props.value}_${index}`,
             onClick: (e) => onOptionsSelect(e, index),
             innerRef: optionNode => !optionNode
                 ? optionsByIndexRef.current.delete(index)
@@ -261,6 +255,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
         <span className={wrapperClassName}>
             <button
                 {...rest}
+                onFocus={() => setOptionsOpened(true)}
                 type="button"
                 className={buttonClassName}
                 aria-expanded={!!expanded}
@@ -287,6 +282,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                         role="listbox"
                         tabIndex={expanded ? 0 : -1}
                         ref={optionsContainerRef}
+                        aria-activedescendant={updateListBoxButtonOptions[selectedIndex]?.props.id}
                         onKeyDown={(e) => onOptionContainerKeydown(e)}
                         // adding onMouseDown preventDefault b/c on IE the onClick event is not being fired on each
                         // option https://stackoverflow.com/questions/17769005/onclick-and-onblur-ordering-issue
