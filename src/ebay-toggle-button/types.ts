@@ -1,25 +1,5 @@
 import { ComponentProps } from 'react'
-import {
-    EbayChangeEventHandler,
-    EbayMouseEventHandler
-} from '../common/event-utils/types'
 import { Icon } from '../ebay-icon/types'
-
-export type SegmentedButtonProps = Omit<ComponentProps<'button'>, 'onClick'> & {
-    value?: string
-    selected?: boolean
-    onClick?: EbayMouseEventHandler<HTMLButtonElement>
-}
-
-export type SegmentedButtonSize = 'large' | 'regular'
-
-export type SegmentedButtonsProps = Omit<ComponentProps<'div'>, 'onChange'> & {
-    size?: SegmentedButtonSize
-    onChange?: EbayChangeEventHandler<
-        HTMLButtonElement,
-        { index: number; value?: string }
-    >
-}
 
 export type ToggleButtonEvent = {
     originalEvent: React.MouseEvent
@@ -33,7 +13,7 @@ export type ToggleButtonImge = {
 }
 
 export type ToggleButtonProps = Omit<ComponentProps<'button'>, 'onClick'> & {
-    pressed?: boolean
+    pressed: boolean
     title?: string
     subtitle?: string | string[]
     layoutType?: 'minimal' | 'list' | 'gallery'
