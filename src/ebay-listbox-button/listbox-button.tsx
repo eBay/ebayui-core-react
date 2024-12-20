@@ -264,9 +264,11 @@ export const EbayListboxButton: FC<EbayListboxButtonProps> = ({
                     <EbayIcon name="chevronDown12" />
                 </span>
             </button>
+            {/* Both classes "listbox-button__listbox" and "listbox-button__options" is for backward compatibility */}
             <EbayListbox
-                className="listbox-button__listbox"
+                className="listbox-button__listbox listbox-button__options"
                 selectClassName="listbox-button__native"
+                activeClassName="listbox-button__option--active"
                 tabIndex={-1}
                 listSelection={listSelection}
                 name={name}
@@ -276,9 +278,10 @@ export const EbayListboxButton: FC<EbayListboxButtonProps> = ({
             >
                 {options.map((option, index) => (
                     <EbayListboxOption
+                        {...option.props}
                         key={option.props.value || index}
                         selected={index === selectedIndex}
-                        {...option.props} />
+                        className={classNames('listbox-button__option', option.props.className)} />
                 ))}
             </EbayListbox>
         </Container>

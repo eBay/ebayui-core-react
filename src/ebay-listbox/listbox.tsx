@@ -24,6 +24,7 @@ export type EbayListboxProps = Omit<ComponentProps<'div'>, 'onChange'> & {
     typeaheadTimeoutLength?: number;
     maxHeight?: string | number;
     selectClassName?: string;
+    activeClassName?: string;
     onChange?: EbayChangeEventHandler<HTMLSpanElement, ChangeEventProps>;
     onEscape?: () => void
 };
@@ -38,6 +39,7 @@ export const EbayListbox: FC<EbayListboxProps> = ({
     maxHeight,
     typeaheadTimeoutLength,
     selectClassName,
+    activeClassName,
     onChange = () => {},
     onEscape = () => {},
     ...rest
@@ -140,7 +142,7 @@ export const EbayListbox: FC<EbayListboxProps> = ({
                 optionsContainer,
                 '.listbox__option[role=option]',
                 {
-                    activeDescendantClassName: 'listbox__option--active',
+                    activeDescendantClassName: activeClassName || 'listbox__option--active',
                     autoInit: selectedIndex,
                     autoReset: null,
                     autoScroll: listSelection !== 'auto'
@@ -207,7 +209,7 @@ export const EbayListbox: FC<EbayListboxProps> = ({
                 onChange={/* NO-OP, this is to hide React warnings */ () => {}}>
                 {options.map((option, index) => (
                     <option
-                        key={option.props.value || index}
+                        key={index}
                         value={option.props.value}
                         disabled={option.props.disabled} />
                 ))}

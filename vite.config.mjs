@@ -44,7 +44,10 @@ export default defineConfig({
             formats: ["cjs"],
         },
         rollupOptions: {
-            plugins: [nodeExternals(), typescript()],
+            plugins: [nodeExternals({
+                // Makeup packages are not properly bundled with ESM, so we exclude them from the external list.
+                exclude: [/^makeup-/]
+            }), typescript()],
         },
     },
 });
