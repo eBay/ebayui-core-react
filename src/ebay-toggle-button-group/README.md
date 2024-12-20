@@ -20,27 +20,27 @@ import '@ebay/skin/toggle-button-group'
 
 export const Example = () => (
     <EbayToggleButtonGroup onChange={action('change')} {...args}>
-                <EbayToggleButton pressed title="Button1" />
-                <EbayToggleButton>Child Button</EbayToggleButton>
-                <EbayToggleButton title="Button2" subtitle="subtitle" />
-                <EbayToggleButton
-                    icon="settings24"
-                    title="Button3"
-                    subtitle="subtitle"
-                ></EbayToggleButton>
-                <EbayToggleButton
-                    title="Button4"
-                    subtitle="subtitle"
-                    img={{
-                        src: 'https://cloudfront.slrlounge.com/wp-content/uploads/2012/07/01-SLRLounge-Holding-Standing-Wrong.jpg',
-                        alt: 'image alt'
-                    }}
-                ></EbayToggleButton>
-            </EbayToggleButtonGroup>
+        <EbayToggleButton pressed title="Button1" />
+        <EbayToggleButton>Child Button</EbayToggleButton>
+        <EbayToggleButton title="Button2" subtitle="subtitle" />
+        <EbayToggleButton
+            icon="settings24"
+            title="Button3"
+            subtitle="subtitle"
+        ></EbayToggleButton>
+        <EbayToggleButton
+            title="Button4"
+            subtitle="subtitle"
+            img={{
+                src: 'https://cloudfront.slrlounge.com/wp-content/uploads/2012/07/01-SLRLounge-Holding-Standing-Wrong.jpg',
+                alt: 'image alt'
+            }}
+        ></EbayToggleButton>
+    </EbayToggleButtonGroup>
 );
 ```
 
-## EbaySegmentedButtons Props
+## EbayToggleButtonGroup Props
 
 | Name         | Type     | Required | Description                                                                            |
 | ------------ | -------- | -------- | -------------------------------------------------------------------------------------- |
