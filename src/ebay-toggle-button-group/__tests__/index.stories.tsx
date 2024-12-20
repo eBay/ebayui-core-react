@@ -3,7 +3,6 @@ import { Meta, StoryObj } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { EbayToggleButtonGroup } from '..'
 import { EbayToggleButton } from '../../ebay-toggle-button'
-import { EbayIcon } from '../../ebay-icon'
 
 export default {
     title: 'Buttons/ebay-toggle-button-group',
