@@ -57,6 +57,20 @@ export default {
             },
             description:
                 'Enforced layout type of all buttons. May be `minimal` (default), `list`, or `gallery`. Gallery layout may only be used when there is also an icon or an image, and minimal layout may not be used when there is an icon or an image'
+        },
+        icon: {
+            description: 'Name of EbayIcon for the component',
+            table: {
+                type: { summary: 'EbayIcon' }
+            }
+        },
+        img: {
+            description: 'Image for the component',
+            table: {
+                type: {
+                    summary: `ToggleButtonImge = {src: string; alt: string; fillPlacement?: string}`
+                }
+            }
         }
     }
 } as Meta<typeof EbayToggleButton>
