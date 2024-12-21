@@ -1,7 +1,7 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
+import { act } from '@testing-library/react-hooks/dom'
 import EbayToggleButton from '../index'
-import { toggleButtonProp } from './fixtures'
 import { composeStories } from '@storybook/react'
 import * as stories from './index.stories'
 
@@ -44,16 +44,18 @@ describe('<EbayToggleButton />', () => {
         const snapshot = asFragment()
         expect(snapshot).toMatchSnapshot()
     })
-    it('should render component', async () => {
+    it('should fire onToggle when clicking', async () => {
         const mockOnToggle = jest.fn()
 
         const { getByRole } = render(<Default onToggle={mockOnToggle} />)
 
         const button = getByRole('button', { name: /title/i })
-        await button.click()
+        await act(() => {
+            fireEvent.click(button)
+        })
         expect(mockOnToggle).toHaveBeenCalledTimes(1)
     })
-    it('should render component', async () => {
+    it('should not click if disabled', async () => {
         const mockOnToggle = jest.fn()
 
         const { getByRole } = render(<Default disabled={true} />)
@@ -61,7 +63,9 @@ describe('<EbayToggleButton />', () => {
         const button = getByRole('button', { name: /title/i })
         expect(button).toBeDisabled()
 
-        await button.click()
+        await act(() => {
+            fireEvent.click(button)
+        })
 
         // Assert that the onToggle callback was not called
         expect(mockOnToggle).not.toHaveBeenCalled()
