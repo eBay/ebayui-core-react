@@ -29,13 +29,13 @@ export default {
                 'Id of the element that labels the group. Required for a11y compliance. Cannot be used together with `a11yText`'
         },
         variant: {
-            options: ['radio', 'radio-toggle', 'checkbox'],
+            options: ['checkbox', 'radio', 'radio-toggle'],
             control: {
                 type: 'select'
             },
             table: {
                 defaultValue: {
-                    summary: 'radio'
+                    summary: 'checkbox'
                 },
                 type: { summary: 'string' }
             },
