@@ -1,4 +1,10 @@
-import React, { ReactElement, cloneElement, useState, useCallback } from 'react'
+import React, {
+    ReactElement,
+    cloneElement,
+    useState,
+    useCallback,
+    useEffect
+} from 'react'
 import cx from 'classnames'
 import { filterByType } from '../common/component-utils'
 import {
@@ -13,7 +19,7 @@ const EbayToggleButtonGroup: React.FC<ToggleButtonGroupProps> = ({
     a11yText,
     a11yLabelId,
     layoutType = 'minimal',
-    variant = 'radio',
+    variant = 'checkbox',
     children,
     columnsMin,
     columnsXS,
@@ -51,6 +57,15 @@ const EbayToggleButtonGroup: React.FC<ToggleButtonGroupProps> = ({
         },
         [variant, onChange]
     )
+
+    useEffect(() => {
+        setPressedButtons(
+            buttons.reduce((acc, button, i) => {
+                acc[i] = button.props.pressed || false
+                return acc
+            }, {})
+        )
+    }, [])
 
     return (
         <div
