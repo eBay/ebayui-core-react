@@ -1,6 +1,6 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
-import { act } from '@testing-library/react-hooks/dom'
+import { render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import EbayToggleButton from '../index'
 import { composeStories } from '@storybook/react'
 import * as stories from './index.stories'
@@ -50,9 +50,8 @@ describe('<EbayToggleButton />', () => {
         const { getByRole } = render(<Default onToggle={mockOnToggle} />)
 
         const button = getByRole('button', { name: /title/i })
-        await act(() => {
-            fireEvent.click(button)
-        })
+        await userEvent.click(button)
+
         expect(mockOnToggle).toHaveBeenCalledTimes(1)
     })
     it('should not click if disabled', async () => {
@@ -63,10 +62,7 @@ describe('<EbayToggleButton />', () => {
         const button = getByRole('button', { name: /title/i })
         expect(button).toBeDisabled()
 
-        await act(() => {
-            fireEvent.click(button)
-        })
-
+        await userEvent.click(button)
         // Assert that the onToggle callback was not called
         expect(mockOnToggle).not.toHaveBeenCalled()
     })
