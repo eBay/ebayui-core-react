@@ -1,5 +1,14 @@
 import { ComponentProps } from 'react'
-import { ToggleButtonEvent } from '../ebay-toggle-button/types'
+import { EbayMouseEventHandler } from '../common/event-utils/types'
+
+type PressedGroupEventData = {
+    pressedButtonsIndex: Record<number, boolean>
+}
+
+export type ToggleButtonGroupEvent = EbayMouseEventHandler<
+    HTMLButtonElement,
+    PressedGroupEventData
+>
 
 export type ToggleButtonGroupProps = Omit<ComponentProps<'div'>, 'onChange'> & {
     a11yText?: string
@@ -11,8 +20,5 @@ export type ToggleButtonGroupProps = Omit<ComponentProps<'div'>, 'onChange'> & {
     columnsSM?: number
     columnsMD?: number
     columnsXL?: number
-    onChange?: (
-        event: ToggleButtonEvent,
-        pressed: Record<number, boolean>
-    ) => void
+    onChange?: ToggleButtonGroupEvent
 }

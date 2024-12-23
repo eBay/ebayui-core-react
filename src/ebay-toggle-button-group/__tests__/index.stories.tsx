@@ -149,7 +149,7 @@ export default {
 export const Default: StoryObj<typeof EbayToggleButtonGroup> = {
     render: (args) => {
         return (
-            <EbayToggleButtonGroup onChange={action('change')} {...args}>
+            <EbayToggleButtonGroup {...args}>
                 <EbayToggleButton pressed title="Button1" />
                 <EbayToggleButton>Child Button</EbayToggleButton>
                 <EbayToggleButton title="Button2" subtitle={'subtitle'} />

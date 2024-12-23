@@ -1,10 +1,15 @@
 import { ComponentProps } from 'react'
+import { EbayMouseEventHandler } from '../common/event-utils/types'
 import { Icon } from '../ebay-icon/types'
 
-export type ToggleButtonEvent = {
-    originalEvent: React.MouseEvent
+type PressedEventData = {
     pressed: boolean
 }
+
+export type ToggleButtonEvent = EbayMouseEventHandler<
+    HTMLButtonElement,
+    PressedEventData
+>
 
 export type ToggleButtonImge = {
     src: string
@@ -19,5 +24,5 @@ export type ToggleButtonProps = Omit<ComponentProps<'button'>, 'onClick'> & {
     layoutType?: 'minimal' | 'list' | 'gallery'
     icon?: Icon
     img?: ToggleButtonImge
-    onToggle?: (event: ToggleButtonEvent) => void
+    onToggle?: ToggleButtonEvent
 }

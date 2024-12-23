@@ -1,10 +1,7 @@
 import React, { ReactElement, cloneElement, useState, useCallback } from 'react'
 import cx from 'classnames'
 import { filterByType } from '../common/component-utils'
-import {
-    ToggleButtonEvent,
-    ToggleButtonProps
-} from '../ebay-toggle-button/types'
+import { ToggleButtonProps } from '../ebay-toggle-button/types'
 
 import { EbayToggleButton } from '../ebay-toggle-button'
 import { ToggleButtonGroupProps } from './types'
@@ -36,7 +33,7 @@ const EbayToggleButtonGroup: React.FC<ToggleButtonGroupProps> = ({
     >(getInitialPressedButtons)
 
     const handleToggle = useCallback(
-        (toggleEvent: ToggleButtonEvent, index: number) => {
+        (toggleEvent: React.MouseEvent<HTMLButtonElement>, index: number) => {
             setPressedButtons((prevState: Record<number, boolean>) => {
                 let newState: Record<number, boolean> = {}
 
@@ -54,8 +51,9 @@ const EbayToggleButtonGroup: React.FC<ToggleButtonGroupProps> = ({
                     default:
                         break
                 }
+
                 if (onChange) {
-                    onChange(toggleEvent, newState)
+                    onChange(toggleEvent, { pressedButtonsIndex: newState })
                 }
                 return newState
             })
@@ -74,21 +72,17 @@ const EbayToggleButtonGroup: React.FC<ToggleButtonGroupProps> = ({
             {...rest}
         >
             <ul aria-label={a11yText} aria-labelledby={a11yLabelId}>
-                {buttons.map((button: ReactElement, i: number) => {
-                    const { ...buttonRest }: ToggleButtonProps = button.props
-
-                    return (
-                        <li key={i}>
-                            {cloneElement(button, {
-                                layoutType,
-                                ...buttonRest,
-                                pressed: pressedButtons[i],
-                                onClick: (e: ToggleButtonEvent) =>
-                                    handleToggle(e, i)
-                            } as ToggleButtonProps)}
-                        </li>
-                    )
-                })}
+                {buttons.map((button: ReactElement, i: number) => (
+                    <li key={i}>
+                        {cloneElement(button, {
+                            layoutType,
+                            pressed: pressedButtons[i],
+                            onToggle: (e) => {
+                                handleToggle(e, i)
+                            }
+                        } as ToggleButtonProps)}
+                    </li>
+                ))}
             </ul>
         </div>
     )

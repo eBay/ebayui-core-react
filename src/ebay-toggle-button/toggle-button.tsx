@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, MouseEvent } from 'react'
 import cx from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { ToggleButtonProps } from './types'
@@ -15,9 +15,9 @@ const ToggleButton: FC<ToggleButtonProps> = ({
     onToggle,
     ...rest
 }) => {
-    const handleClick = (e: React.MouseEvent) => {
+    const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
         if (onToggle) {
-            onToggle({ originalEvent: e, pressed: !pressed })
+            onToggle(event, { pressed: !pressed })
         }
     }
 
