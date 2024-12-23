@@ -16,7 +16,9 @@ const ToggleButton: FC<ToggleButtonProps> = ({
     ...rest
 }) => {
     const handleClick = (e: React.MouseEvent) => {
-        onToggle({ originalEvent: e, pressed: !pressed })
+        if (onToggle) {
+            onToggle({ originalEvent: e, pressed: !pressed })
+        }
     }
 
     const getButtonContent = () => {
