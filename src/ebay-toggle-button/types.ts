@@ -13,7 +13,7 @@ export type ToggleButtonImge = {
 }
 
 export type ToggleButtonProps = Omit<ComponentProps<'button'>, 'onClick'> & {
-    pressed: boolean
+    pressed?: boolean
     title?: string
     subtitle?: string | string[]
     layoutType?: 'minimal' | 'list' | 'gallery'

@@ -32,7 +32,10 @@ export default {
             description: 'Pressed state of the button',
             type: 'boolean',
             table: {
-                type: { summary: 'boolean' }
+                type: { summary: 'boolean' },
+                defaultValue: {
+                    summary: 'false'
+                }
             }
         },
         disabled: {

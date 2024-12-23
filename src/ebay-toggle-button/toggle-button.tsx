@@ -4,7 +4,7 @@ import { EbayIcon } from '../ebay-icon'
 import { ToggleButtonProps } from './types'
 
 const ToggleButton: FC<ToggleButtonProps> = ({
-    pressed,
+    pressed = false,
     children,
     className,
     title,
