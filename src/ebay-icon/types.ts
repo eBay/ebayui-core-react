@@ -117,6 +117,9 @@ export type Icon =
     'cb18Colored' |
     'cb24Colored' |
     'cb32Colored' |
+    'ccdChargerIncluded' |
+    'ccdChargerNotIncluded' |
+    'ccdTop' |
     'certifiedRecycled16' |
     'certifiedRecycled24' |
     'chair16' |
@@ -165,6 +168,7 @@ export type Icon =
     'closedCaption16' |
     'closedCaptionFilled16' |
     'coin24' |
+    'coinBattery48' |
     'collections16' |
     'collections24' |
     'condensedGrid24' |
@@ -254,6 +258,7 @@ export type Icon =
     'escrowCard32Colored' |
     'euro16' |
     'euro24' |
+    'europeanConformity48' |
     'exclude16' |
     'exclude24' |
     'expand16' |
@@ -295,6 +300,8 @@ export type Icon =
     'flashOff24' |
     'folder16' |
     'folder24' |
+    'folderAdd16' |
+    'folderAdd24' |
     'franc16' |
     'franc24' |
     'freeWarranty16' |
@@ -492,6 +499,7 @@ export type Icon =
     'negativeFilled24' |
     'neutral16' |
     'neutral24' |
+    'noChildrenZeroThree48' |
     'notification16' |
     'notification20' |
     'notification24' |
@@ -499,6 +507,7 @@ export type Icon =
     'notificationFilled24' |
     'onTheWay16' |
     'onTheWay24' |
+    'outOfReach48' |
     'overflowHorizontal16' |
     'overflowHorizontal20' |
     'overflowHorizontal24' |
@@ -514,9 +523,15 @@ export type Icon =
     'panelClose16' |
     'panelClose20' |
     'panelClose24' |
+    'panelCloseVertical16' |
+    'panelCloseVertical20' |
+    'panelCloseVertical24' |
     'panelOpen16' |
     'panelOpen20' |
     'panelOpen24' |
+    'panelOpenVertical16' |
+    'panelOpenVertical20' |
+    'panelOpenVertical24' |
     'passkey16' |
     'passkey24' |
     'passkey64' |
@@ -572,6 +587,8 @@ export type Icon =
     'progressUpcoming24' |
     'promotion16' |
     'promotion24' |
+    'psaVault16' |
+    'psaVault16Colored' |
     'qrCode16' |
     'qrCode24' |
     'radioChecked18' |
@@ -738,6 +755,8 @@ export type Icon =
     'topService24' |
     'tradingCard16' |
     'tradingCard24' |
+    'tradingCardGrade16' |
+    'tradingCardGrade24' |
     'transaction24' |
     'translate16' |
     'translate20' |

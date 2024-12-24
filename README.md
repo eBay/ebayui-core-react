@@ -82,8 +82,8 @@ eBayUI React components
 * [x] [ebay-tabs](src/ebay-tabs)
 * [x] [ebay-textbox](src/ebay-textbox)
 * [x] [ebay-toast-dialog](src/ebay-toast-dialog)
-* [ ] `ebay-toggle-button`
-* [ ] `ebay-toggle-button-group`
+* [x] [ebay-toggle-button](src/ebay-toast-dialog)
+* [x] [ebay-toggle-button-group](src/ebay-toast-dialog)
 * [x] [ebay-tooltip](src/ebay-tooltip)
 * [x] [ebay-tourtip](src/ebay-tourtip)
 * [ ] `ebay-tri-state-checkbox`

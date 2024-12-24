@@ -1,5 +1,7 @@
+/// <reference types="@testing-library/jest-dom" />
 import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { act, fireEvent, render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayListboxButton, EbayListboxButtonOption } from '..'
 
@@ -36,6 +38,30 @@ describe('<EbayListboxButton>', () => {
             const { buttonElement } = await renderListbox()
 
             expect(buttonElement).not.toHaveAttribute('aria-labelledby')
+        })
+
+        it('should render aria-activedescendant with selected option id', async () => {
+            await renderListbox()
+
+            act(() => {
+                userEvent.click(screen.getByRole('button'))
+            })
+
+            act(() => {
+                userEvent.click(screen.getAllByRole('option')[1])
+            })
+
+            expect(screen.getByRole('listbox')).toHaveAttribute('aria-activedescendant', screen.getAllByRole('option')[1].id)
+        })
+
+        it('should render aria-activedescendant on focus of the button', async () => {
+            await renderListbox()
+
+            expect(screen.queryByRole('listbox')).not.toBeInTheDocument()
+
+            fireEvent.focus(screen.getByRole('button'))
+
+            expect(screen.getByRole('listbox')).toHaveAttribute('aria-activedescendant', screen.getAllByRole('option')[1].id)
         })
     })
 
