@@ -46,7 +46,6 @@ jobs:
             pages: write # to deploy to Pages
             id-token: write # to verify the deployment originates from an appropriate source
         runs-on: ubuntu-latest
-        if: "${{ github.repository_owner == 'ebay' && github.event_name == 'push' }}"
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
@@ -62,7 +61,6 @@ jobs:
             pull-requests: write
             issues: read
         runs-on: ubuntu-latest
-        if: "${{ github.repository_owner == 'ebay' && github.event_name == 'push' }}"
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
