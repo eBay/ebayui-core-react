@@ -28,8 +28,8 @@ jobs:
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/analyze
     deploy:
-        needs: analyze
         name: Deploy
+        needs: build-test
         runs-on: ubuntu-latest
         # Deploy storybook only on branches, ignoring forks
         if: "${{ github.repository_owner == 'ebay' }}"
