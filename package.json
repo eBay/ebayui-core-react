@@ -3,7 +3,8 @@
   "version": "7.4.0",
   "description": "Skin components build off React",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "directory": "dist"
   },
   "exports": {
     "./ebay-dialog-base/components/animation": {
@@ -87,6 +88,7 @@
     "lint": "eslint . --ext ts,tsx",
     "lint:ci": "eslint . --ext .ts,.tsx -f @microsoft/eslint-formatter-sarif -o eslint-results.sarif",
     "coverage": "yarn clean && yarn test --coverage --ci",
+    "change": "changeset add",
     "eslint-local": "eslint . --ext ts,tsx",
     "eslint": "eslint . --ext .ts,.tsx -f checkstyle -o ./lint/checkstyle-result.xml",
     "format": "eslint . --fix 'src/**/*.{ts,tsx}'",
@@ -100,9 +102,11 @@
     "update-icons": "node ./scripts/update-icons",
     "copy": "copyfiles package.json README.md dist; yarn copy:rest",
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' dist",
-    "release": "yarn clean && yarn build && yarn copy && CI=1 npm publish dist/ --access public",
-    "release:rc": "yarn clean && yarn build && yarn copy && CI=1 npm publish --tag rc dist/",
-    "prepare": "node scripts/husky-install || node ../scripts/husky-install"
+    "release": "yarn clean && yarn build && yarn copy && CI=1 changeset publish",
+    "prerelease:end": "changeset pre exit || :",
+    "prerelease:start": "changeset pre enter next || :",
+    "prepare": "node scripts/husky-install || node ../scripts/husky-install",
+    "version": "yarn update-icons && git add -A src && changeset version"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -138,6 +142,7 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.0.0",
+    "@changesets/cli": "^2.27.11",
     "@ebay/skin": "^18.4.0",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@rollup/plugin-typescript": "^11.1.6",

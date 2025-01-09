@@ -1,0 +1,32 @@
+name: 'Action: 🦋 Changesets Release'
+description: 'Release a new version of the package using changesets'
+
+runs:
+    using: "composite"
+
+    steps:
+        - name: Enter prerelease mode
+          shell: sh
+          if: ${{ github.ref != 'refs/heads/main' }}
+          run: yarn prerelease:start
+
+        - name: Exit prerelease mode
+          shell: sh
+          if: ${{ github.ref == 'refs/heads/main' }}
+          run: yarn prerelease:end
+
+        - name: Release
+          id: changesets
+          uses: changesets/action@v1
+          with:
+            version: yarn version
+            publish: yarn release
+            commit: "ci: release"
+            title: "ci: release"
+          env:
+            # Disable husky
+            HUSKY: 0
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
