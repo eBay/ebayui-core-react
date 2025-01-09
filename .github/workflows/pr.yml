@@ -30,10 +30,6 @@ jobs:
     deploy:
         needs: analyze
         name: Deploy
-        # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-        permissions:
-            pages: write # to deploy to Pages
-            id-token: write # to verify the deployment originates from an appropriate source
         runs-on: ubuntu-latest
         # Deploy storybook only on branches, ignoring forks
         if: "${{ github.repository_owner == 'ebay' }}"
