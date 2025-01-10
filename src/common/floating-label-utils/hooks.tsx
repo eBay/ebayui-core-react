@@ -30,8 +30,7 @@ const classPrefix = 'floating-label__label'
 
 // input background in Skin 12, used for autofill detection
 const textboxElementBackgroundRGB = [
-    'rgb(245, 245, 245)', // DEPRECATED
-    'rgb(247, 247, 247)' // From skin version 12.6.0
+    'rgb(247, 247, 247)'
 ]
 
 // check for computed background color because of Chrome autofill bug
