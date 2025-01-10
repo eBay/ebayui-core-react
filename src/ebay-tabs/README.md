@@ -37,8 +37,7 @@ Name | Type | Stateful | Description
 
 | Event         | Data                                      | Description                                                                                             |
 |---------------|-------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| `onTabSelect` | `({ index: number })`                     | Triggered on tab selected. Deprecated, use onSelect instead. Will be removed in the next major release. |
-| `onSelect`    | `(ChangeEvent, { selectedIndex:number })` | Triggered on tab selected.                                                                              |
+| `onSelect`    | `({ selectedIndex:number })` | Triggered on tab selected.                                                                              |
 
 ## EbayTab
 

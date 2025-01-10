@@ -14,7 +14,6 @@ const Tabs: FC<TabsProps> = ({
     size = 'medium',
     activation = 'auto',
     onSelect = () => {},
-    onTabSelect = () => {},
     children
 }) => {
     const headings: HTMLElement[] = []
@@ -24,7 +23,6 @@ const Tabs: FC<TabsProps> = ({
 
     const handleSelect = (i: number): void => {
         onSelect({ selectedIndex: i })
-        onTabSelect(i)
         setSelectedIndex(i)
     }
 

@@ -58,20 +58,18 @@ describe('<EbayTabs>', () => {
     })
 
     describe('on tab click', () => {
-        let spy, oldSpy, tabs
+        let spy, tabs
 
         beforeEach(() => {
-            oldSpy = jest.fn()
             spy = jest.fn()
 
-            render(<DefaultTabs onTabSelect={oldSpy} onSelect={spy} />)
+            render(<DefaultTabs onSelect={spy} />)
             tabs = screen.getAllByRole('tab')
         })
 
         it('should fire an event', () => {
             const selectedIndex = 0
             fireEvent.click(tabs[selectedIndex])
-            expect(oldSpy).toHaveBeenCalledWith(selectedIndex)
             expect(spy).toHaveBeenCalledWith({ selectedIndex })
         })
 

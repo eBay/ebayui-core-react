@@ -11,7 +11,7 @@ const story = {
 
 export const DefaultTabs: StoryFn<typeof EbayTabs> = (args) => (
     <>
-        <EbayTabs onTabSelect={action('tab selected')} onSelect={action('onSelect(props')} {...args}>
+        <EbayTabs onSelect={action('onSelect(props')} {...args}>
             <Tab>Tab 1</Tab>
             <Tab>Tab 2</Tab>
             <Tab>Tab 3</Tab>

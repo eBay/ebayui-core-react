@@ -12,8 +12,4 @@ export type TabsProps = ComponentProps<'div'> & {
   size?: Size;
   activation?: Activation;
   onSelect?: (props: OnSelectProps) => void;
-  /**
-   * @deprecated Use onSelect instead
-   */
-  onTabSelect?: (index: number) => void;
 }
