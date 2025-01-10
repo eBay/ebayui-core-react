@@ -10,7 +10,7 @@ import type { TabsProps } from './types'
 const Tabs: FC<TabsProps> = ({
     id,
     className,
-    index = 0,
+    selectedIndex: index = 0,
     size = 'medium',
     activation = 'auto',
     onSelect = () => {},

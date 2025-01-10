@@ -28,7 +28,6 @@ import '@ebay/skin/tabs';
 
 Name | Type | Stateful | Description
 --- | --- | --- | ---
-`index` |Number | Yes | Deprecated, use `selectedIndex` instead. 0-based index of selected tab heading and panel
 `selectedIndex` |Number | Yes | 0-based index of selected tab heading and panel
 `activation` | Enum | Yes | whether to use automatic or manual activation when navigating by keyboard, can be `auto` (default) or `manual`
 `size` | Enum | No | Whether to opt into larger font-size for tab headings, can be `medium` (default) or `large`
