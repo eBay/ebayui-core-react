@@ -22,7 +22,6 @@ export const _Default: StoryFn<typeof EbayDrawerDialog> = () => {
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
             <EbayDrawerDialog
                 open={open}
-                onShow={action('onShow')}
                 onOpen={action('onOpen')}
                 onClose={() => {
                     action('onClose')()
