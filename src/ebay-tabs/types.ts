@@ -7,7 +7,7 @@ export type OnSelectProps = {
   selectedIndex: number;
 }
 
-export type TabsProps = ComponentProps<'div'> & {
+export type TabsProps = Omit<ComponentProps<'div'>, 'onSelect'> & {
   selectedIndex?: number;
   size?: Size;
   activation?: Activation;
