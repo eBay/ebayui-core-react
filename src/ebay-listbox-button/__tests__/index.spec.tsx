@@ -8,8 +8,8 @@ import { EbayListboxButton, EbayListboxButtonOption } from '..'
 jest.useFakeTimers()
 describe('<EbayListboxButton>', () => {
     describe('a11y prefix', () => {
-        const renderListbox = async (listboxBtnLabel?) => {
-            await render(
+        const renderListbox = (listboxBtnLabel?) => {
+            render(
                 <>
                     <label id={listboxBtnLabel}>Select these items</label>
                     <br />
@@ -27,35 +27,30 @@ describe('<EbayListboxButton>', () => {
             return { buttonElement, expandBtnTextId }
         }
 
-        it('should render with correct aria-labelledby if received prefix id', async () => {
+        it('should render with correct aria-labelledby if received prefix id', () => {
             const listboxBtnLabel = 'listbox-button__label'
-            const { buttonElement, expandBtnTextId } = await renderListbox(listboxBtnLabel)
+            const { buttonElement, expandBtnTextId } = renderListbox(listboxBtnLabel)
 
             expect(buttonElement).toHaveAttribute('aria-labelledby', `${listboxBtnLabel} ${expandBtnTextId}`)
         })
 
-        it('should render without aria-labelledby if NOT received prefix id', async () => {
-            const { buttonElement } = await renderListbox()
+        it('should render without aria-labelledby if NOT received prefix id', () => {
+            const { buttonElement } = renderListbox()
 
             expect(buttonElement).not.toHaveAttribute('aria-labelledby')
         })
 
-        it('should render aria-activedescendant with selected option id', async () => {
-            await renderListbox()
+        it('should render aria-activedescendant with selected option id', () => {
+            renderListbox()
 
-            act(() => {
-                userEvent.click(screen.getByRole('button'))
-            })
-
-            act(() => {
-                userEvent.click(screen.getAllByRole('option')[1])
-            })
+            fireEvent.click(screen.getByRole('button'))
+            fireEvent.click(screen.getAllByRole('option')[1])
 
             expect(screen.getByRole('listbox')).toHaveAttribute('aria-activedescendant', screen.getAllByRole('option')[1].id)
         })
 
-        it('should render aria-activedescendant on focus of the button', async () => {
-            await renderListbox()
+        it('should render aria-activedescendant on focus of the button', () => {
+            renderListbox()
 
             expect(screen.queryByRole('listbox')).not.toBeInTheDocument()
 
@@ -66,8 +61,8 @@ describe('<EbayListboxButton>', () => {
     })
 
     describe('on render', () => {
-        it('should display default button label', async () => {
-            const component = await render(
+        it('should display default button label', () => {
+            const component = render(
                 <EbayListboxButton>
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -75,8 +70,8 @@ describe('<EbayListboxButton>', () => {
             )
             expect(component.getByRole('button')).toHaveTextContent('-')
         })
-        it('should display custom button label', async () => {
-            const component = await render(
+        it('should display custom button label', () => {
+            const component = render(
                 <EbayListboxButton unselectedText="Select">
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -84,8 +79,8 @@ describe('<EbayListboxButton>', () => {
             )
             expect(component.getByRole('button')).toHaveTextContent('Select')
         })
-        it('should display button label with selected option', async () => {
-            const component = await render(
+        it('should display button label with selected option', () => {
+            const component = render(
                 <EbayListboxButton value="BB">
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -93,8 +88,8 @@ describe('<EbayListboxButton>', () => {
             )
             expect(component.getByRole('button')).toHaveTextContent('Option 2')
         })
-        it('should display button label with prefix', async () => {
-            const component = await render(
+        it('should display button label with prefix', () => {
+            const component = render(
                 <EbayListboxButton prefixLabel="Selected:">
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -102,8 +97,8 @@ describe('<EbayListboxButton>', () => {
             )
             expect(component.getByRole('button')).toHaveTextContent('Selected:-')
         })
-        it('should display button label with prefix and selected option', async () => {
-            const component = await render(
+        it('should display button label with prefix and selected option', () => {
+            const component = render(
                 <EbayListboxButton prefixLabel="Selected:" selected={1}>
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -111,8 +106,8 @@ describe('<EbayListboxButton>', () => {
             )
             expect(component.getByRole('button')).toHaveTextContent('Selected:Option 2')
         })
-        it('should preselect option by index', async () => {
-            const component = await render(
+        it('should preselect option by index', () => {
+            const component = render(
                 <EbayListboxButton selected={1}>
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -123,8 +118,8 @@ describe('<EbayListboxButton>', () => {
     })
 
     describe('given the listbox with 3 items', () => {
-        beforeEach(async () => {
-            await render(
+        beforeEach(() => {
+            render(
                 <EbayListboxButton prefixId="listboxBtnLabel" name="listbox-button-name">
                     <EbayListboxButtonOption value="AA">Option 1</EbayListboxButtonOption>
                     <EbayListboxButtonOption value="BB">Option 2</EbayListboxButtonOption>
@@ -140,8 +135,8 @@ describe('<EbayListboxButton>', () => {
         })
 
         describe('when the button is clicked', () => {
-            beforeEach(async () => {
-                await fireEvent.click(screen.getByRole('button'))
+            beforeEach(() => {
+                fireEvent.click(screen.getByRole('button'))
             })
             it('then it has expanded the listbox', () => {
                 expect(screen.getByRole('button')).toHaveAttribute('aria-expanded', `true`)
@@ -155,8 +150,8 @@ describe('<EbayListboxButton>', () => {
                 expect(listbox).toHaveFocus()
             })
             describe('when the button is clicked again', () => {
-                beforeEach(async () => {
-                    await fireEvent.click(screen.getByRole('button'))
+                beforeEach(() => {
+                    fireEvent.click(screen.getByRole('button'))
                 })
                 it('then it has collapsed the listbox', () => {
                     expect(screen.getByRole('button')).toHaveAttribute('aria-expanded', `false`)
