@@ -11,7 +11,7 @@ const story = {
 
 export const DefaultTabs: StoryFn<typeof EbayTabs> = (args) => (
     <>
-        <EbayTabs onTabSelect={action('tab selected')} onSelect={action('onSelect(props')} {...args}>
+        <EbayTabs onSelect={action('onSelect(props')} {...args}>
             <Tab>Tab 1</Tab>
             <Tab>Tab 2</Tab>
             <Tab>Tab 3</Tab>
@@ -43,7 +43,7 @@ export const DefaultTabs: StoryFn<typeof EbayTabs> = (args) => (
 export const PreSelectedTab = {
     render: () => (
         <>
-            <EbayTabs index={2}>
+            <EbayTabs selectedIndex={2}>
                 <Tab>Tab 1</Tab>
                 <Tab>Tab 2</Tab>
                 <Tab>Tab 3</Tab>
@@ -87,7 +87,7 @@ export const ProgrammaticallySelectedTabs = {
                             Select Tab {i + 1}
                         </button>
                     ))}
-                    <EbayTabs index={selectedTab}>
+                    <EbayTabs selectedIndex={selectedTab}>
                         <Tab>Tab 1</Tab>
                         <Tab>Tab 2</Tab>
                         <Tab>Tab 3</Tab>

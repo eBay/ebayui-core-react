@@ -44,7 +44,7 @@ Name | Type     | Required | Description
 `reverse` | Boolean  | No | expand menu flyout to the left
 `fixWidth` | Boolean  | No | Constrain items container width to button width
 `borderless` | Boolean  | No | Whether button has borders
-`size` | String   | No | button size: `large` or `regular` (default)
+`size` | String   | No | button size: `small` or `large`
 `priority` | String   | No | button size: `primary`, `secondary` (default), `tertiary`, `none`
 `checked` | Number   | No | will set the corresponding index item to checked state and use the `aria-checked` attribute in markup
 `disabled` | Boolean  | No | will disable the entire dropdown (disables the ebay-button label) if set to true
