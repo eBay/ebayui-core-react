@@ -49,7 +49,7 @@ Name | Type | Required | Description
 `reverse` | Boolean  | No | expand menu flyout to the left
 `fixWidth` | Boolean  | No | Constrain items container width to button width
 `borderless` | Boolean | No | Whether button has borders
-`size` | String   | No | button size: `large` or `regular` (default)
+`size` | String   | No | button size: `small` or `large`
 
 ## EbayFakeMenuButtonItem Attributes
 

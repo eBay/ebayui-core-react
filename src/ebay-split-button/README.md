@@ -34,7 +34,7 @@ Name | Type    | Stateful | Required | Description | Data
 --- |---------| -- | --- | --- | ---
 `a11yMenuText` | String  | No | Yes | aria label for menu button part
 `href` | String  | No | No | url for link behaviour (switches to anchor tag)
-`size` | String | No | No | button size: `regular` (default) or `large`
+`size` | String | No | No | button size: `small` or `large`
 `priority` | String  | No | No | `primary`, `secondary` (default), `tertiary`, `none`
 `bodyState` | String  | No | No | `loading` adds progress spinner, when user interacts with button, `reset` should be called to reset `aria-live` state, default is `none`
 `a11yButtonLoadingText` | String  | No | No | `aria-label` for button when `bodyState` is `loading`

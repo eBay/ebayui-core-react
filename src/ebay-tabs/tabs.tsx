@@ -10,11 +10,10 @@ import type { TabsProps } from './types'
 const Tabs: FC<TabsProps> = ({
     id,
     className,
-    index = 0,
+    selectedIndex: index = 0,
     size = 'medium',
     activation = 'auto',
     onSelect = () => {},
-    onTabSelect = () => {},
     children
 }) => {
     const headings: HTMLElement[] = []
@@ -24,7 +23,6 @@ const Tabs: FC<TabsProps> = ({
 
     const handleSelect = (i: number): void => {
         onSelect({ selectedIndex: i })
-        onTabSelect(i)
         setSelectedIndex(i)
     }
 

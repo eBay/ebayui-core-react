@@ -41,10 +41,10 @@ export const Size: StoryFn<typeof EbayButton> = () => (
             </EbayButton>
         </p>
         <p>
-            <EbayButton size="default">Default Size Button</EbayButton>
+            <EbayButton>Default Size Button</EbayButton>
         </p>
         <p>
-            <EbayButton size="default" href="https://ebay.com">
+            <EbayButton href="https://ebay.com">
                 Default Size Link
             </EbayButton>
         </p>
