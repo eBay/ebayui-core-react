@@ -8,12 +8,12 @@ exports[`ebay-carousel rendering renders continuous story correctly 1`] = `
 >
   <svg
     aria-hidden="true"
-    class="icon icon--carousel-prev icon icon--12"
+    class="icon icon--carousel-prev icon icon--16"
     focusable="false"
     xmlns="http://www.w3.org/2000/svg"
   >
     <use
-      xlink:href="#icon-chevron-left-12"
+      xlink:href="#icon-chevron-left-16"
     />
   </svg>
 </button>
@@ -27,12 +27,12 @@ exports[`ebay-carousel rendering renders continuous story correctly 2`] = `
 >
   <svg
     aria-hidden="true"
-    class="icon icon--carousel-next icon icon--12"
+    class="icon icon--carousel-next icon icon--16"
     focusable="false"
     xmlns="http://www.w3.org/2000/svg"
   >
     <use
-      xlink:href="#icon-chevron-right-12"
+      xlink:href="#icon-chevron-right-16"
     />
   </svg>
 </button>
