@@ -8,11 +8,11 @@ describe('<EbayTabs>', () => {
     describe('on `tab` key press', () => {
         let tabs
 
-        beforeEach(() => {
+        beforeEach(async() => {
             render(<DefaultTabs />)
 
             tabs = screen.getAllByRole('tab')
-            userEvent.tab()
+            await userEvent.tab()
         })
         it('should focus on the first tab', () => {
             expect(tabs[0]).toHaveFocus()
@@ -35,24 +35,24 @@ describe('<EbayTabs>', () => {
     describe('after losing focus', () => {
         let tabs
 
-        beforeEach(() => {
+        beforeEach(async() => {
             render(<DefaultTabs />)
 
             tabs = screen.getAllByRole('tab')
-            userEvent.tab()
+            await userEvent.tab()
         })
 
-        it('should refocus on the latest focused tab', () => {
+        it('should refocus on the latest focused tab', async() => {
             expect(tabs[0]).toHaveFocus()
             fireEvent.keyDown(tabs[0], { key: 'ArrowRight' })
 
             expect(tabs[1]).toHaveFocus()
-            userEvent.tab()
+            await userEvent.tab()
 
             expect(tabs[0]).not.toHaveFocus()
             expect(tabs[1]).not.toHaveFocus()
 
-            userEvent.tab({ shift: true })
+            await userEvent.tab({ shift: true })
             expect(tabs[1]).toHaveFocus()
         })
     })
@@ -152,10 +152,10 @@ describe('<EbayTabs>', () => {
         describe('on `tab` key press', () => {
             let tabs
 
-            beforeEach(() => {
+            beforeEach(async() => {
                 render(<ManuallyActivatedTabs />)
                 tabs = screen.getAllByRole('tab')
-                userEvent.tab()
+                await userEvent.tab()
             })
             it('should focus on the first tab', () => {
                 expect(tabs[0]).toHaveFocus()
@@ -179,23 +179,23 @@ describe('<EbayTabs>', () => {
         describe('after losing focus', () => {
             let tabs
 
-            beforeEach(() => {
+            beforeEach(async() => {
                 render(<ManuallyActivatedTabs />)
                 tabs = screen.getAllByRole('tab')
-                userEvent.tab()
+                await userEvent.tab()
             })
 
-            it('should refocus on the latest focused tab', () => {
+            it('should refocus on the latest focused tab', async() => {
                 expect(tabs[0]).toHaveFocus()
                 fireEvent.keyDown(tabs[0], { key: 'ArrowRight' })
 
                 expect(tabs[1]).toHaveFocus()
-                userEvent.tab()
+                await userEvent.tab()
 
                 expect(tabs[0]).not.toHaveFocus()
                 expect(tabs[1]).not.toHaveFocus()
 
-                userEvent.tab({ shift: true })
+                await userEvent.tab({ shift: true })
                 expect(tabs[1]).toHaveFocus()
             })
         })
