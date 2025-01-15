@@ -1,4 +1,4 @@
-# EbayButton
+# EbayDetails
 
 ## Demo
 
