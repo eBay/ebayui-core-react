@@ -89,13 +89,13 @@ describe('<EbayTextbox>', () => {
     })
 
     describe('on textbox key press', () => {
-        it('should fire an onKeyPress event', () => {
+        it('should fire an onKeyPress event', async() => {
             const spy = jest.fn()
             const value = `It's a spy!`
             render(<EbayTextbox onKeyPress={spy} defaultValue={value} />)
 
             const textbox = screen.getByRole('textbox')
-            act(() => { userEvent.type(textbox, 'a') })
+            await userEvent.type(textbox, 'a')
             expect(spy).toHaveBeenCalledWith(eventOfType('keypress'), { value })
         })
     })
