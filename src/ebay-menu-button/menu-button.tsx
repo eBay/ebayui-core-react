@@ -1,4 +1,4 @@
-import React, { cloneElement, FC, useEffect, useRef, useState } from 'react'
+import React, { cloneElement, FC, Fragment, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
 import { filterByType, findComponent } from '../common/component-utils'
 
@@ -156,14 +156,10 @@ const EbayMenuButton: FC<MenuButtonProps> = ({
 
 function labelWithPrefixAndIcon({ text, prefixId, prefixLabel, menuButtonLabel, icon }: LabelProps) {
     const textLabelElement = text.length ? <span>{text}</span> : null
-    const prefixLabelElement = !prefixId && prefixLabel && [
-        <span className="menu-button-prefix-label">{prefixLabel}</span>,
-        <>&nbsp;</>
-    ]
-    const labelWithPrefix = [prefixLabelElement, menuButtonLabel || textLabelElement]
-    const labelArray = [icon, labelWithPrefix].flat().filter(Boolean) as JSX.Element[]
-
-    return labelArray.length ? labelArray : null
+    const prefixLabelElement = !prefixId && prefixLabel &&
+        <><span className="menu-button-prefix-label" key="prefix-label">{prefixLabel}</span>&nbsp;</>
+    const labelArray = [icon, prefixLabelElement, menuButtonLabel || textLabelElement].filter(Boolean) as JSX.Element[]
+    return labelArray.map((item, i) => cloneElement(item, { ...item.props, key: i }))
 }
 
 export default EbayMenuButton
