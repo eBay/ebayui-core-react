@@ -1,6 +1,5 @@
 import React, {StrictMode} from 'react'
 import { EbaySvg } from '../src/ebay-svg'
-import '@storybook/addon-console';
 
 import "@ebay/skin"
 import "@ebay/skin/tokens"

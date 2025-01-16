@@ -142,7 +142,6 @@
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-a11y": "^7.6.12",
-    "@storybook/addon-console": "3.0.0",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-storysource": "^7.6.12",
     "@storybook/react": "^7.6.12",
