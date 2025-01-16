@@ -68,8 +68,8 @@ function saveSvgIcons(collection, ebaySvgFile) {
 }
 
 function generateEbaySVG(svgSymbols) {
-    const symbolStrings = svgSymbols.map(symbol => stringify(symbol, {
-        transformAttr: transformSVGtoReact
+    const symbolStrings = svgSymbols.map((symbol) => stringify(symbol, {
+        transformAttr: transformSVGtoReact,
     }));
 
     return `/* eslint-disable */
@@ -78,9 +78,13 @@ ${fileHeader}\n
 import React from 'react'
 
 export const symbols = [
-    ${symbolStrings.join(',\n    ')}
+    ${symbolStrings.map(addKeyToSymbol).join(',\n    ')}
 ]
 `
+}
+
+function addKeyToSymbol(symbol, key) {
+    return symbol.replace(/(<\w+)/, `$1 key={${key}}`)
 }
 
 function transformSVGtoReact(key, value, escape) {
