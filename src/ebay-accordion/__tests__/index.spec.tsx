@@ -33,6 +33,29 @@ describe('<EbayAccordion />', () => {
         expect(onToggle).toHaveBeenCalledTimes(2)
     })
 
+    it('should trigger the onToggle on the EbayDetails component', async() => {
+        const onToggle = jest.fn()
+        const { getByText } = render(
+            <EbayAccordion>
+                <EbayDetails text="Summary 1" onToggle={onToggle}>
+                    Details 1
+                </EbayDetails>
+
+                <EbayDetails text="Summary 2" onToggle={onToggle}>
+                    Details 1
+                </EbayDetails>
+            </EbayAccordion>
+        )
+
+        await userEvent.click(getByText('Summary 1'))
+
+        expect(onToggle).toHaveBeenCalledWith(eventOfType('toggle'), {
+            open: true
+        })
+
+        expect(onToggle).toHaveBeenCalledTimes(1)
+    })
+
     describe('given autoCollapse is true', () => {
         it('should close other details elements when one is opened', async() => {
             const { getByText } = render(

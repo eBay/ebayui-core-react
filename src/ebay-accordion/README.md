@@ -9,8 +9,7 @@
 ### Import JS
 
 ```jsx harmony
-import { EbayAccordion } from "@ebay/ui-core-react/ebay-accordion";
-import { EbayDetails } from "@ebay/ui-core-react/ebay-details";
+import { EbayAccordion, EbayDetails } from "@ebay/ui-core-react/ebay-accordion";
 ```
 
 ### Import following styles from SKIN

@@ -12,7 +12,7 @@ type ToggleProps = {
 export type EbayAccordionProps = ComponentProps<'ul'> & {
     size?: 'regular' | 'large'
     autoCollapse?: boolean
-    children: ReactElement<EbayDetailsProps>[]
+    children: ReactElement<EbayDetailsProps> | ReactElement<EbayDetailsProps>[]
     onToggle?: EbayEventHandler<HTMLDetailsElement, ToggleProps>
 }
 
@@ -33,18 +33,19 @@ const EbayAccordion: FC<EbayAccordionProps> = ({
         EbayDetails that defines the sections of the accordion`)
     }
 
-    const detailsWithAccordionProps = details.map((child, detailsIndex) =>
-        React.cloneElement(child as ReactElement<EbayDetailsProps>, {
+    const detailsWithAccordionProps = details.map((detailComponent, detailsIndex) =>
+        React.cloneElement(detailComponent as ReactElement<EbayDetailsProps>, {
             onToggle: (event, { open }) => {
                 if (autoCollapse && open) {
                     const detailsElements = listRef.current?.querySelectorAll('details')
-                    detailsElements?.forEach((detail, elementIndex) => {
+                    detailsElements?.forEach((detailElement, elementIndex) => {
                         if (elementIndex !== detailsIndex) {
-                            detail.open = false
+                            detailElement.open = false
                         }
                     })
                 }
 
+                detailComponent.props.onToggle?.(event, { open })
                 onToggle?.(event, {
                     open,
                     index: detailsIndex
