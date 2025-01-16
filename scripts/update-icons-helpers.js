@@ -78,7 +78,7 @@ ${fileHeader}\n
 import React from 'react'
 
 export const symbols = [
-    ${symbolStrings.map((s, i) => addKeyToSymbol(s, i)).join(',\n    ')}
+    ${symbolStrings.map(addKeyToSymbol).join(',\n    ')}
 ]
 `
 }
