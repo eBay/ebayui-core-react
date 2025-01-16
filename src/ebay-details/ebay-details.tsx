@@ -47,7 +47,7 @@ const EbayDetails: FC<EbayDetailsProps> = ({
                     {layout === 'accordion' ? (
                         <>
                             <EbayIcon className="details__expand" name="add16" />
-                            <EbayIcon className="details_collapse" name="remove16" />
+                            <EbayIcon className="details__collapse" name="remove16" />
                         </>
                     ) : (
                         <EbayIcon name="chevronDown16" />
