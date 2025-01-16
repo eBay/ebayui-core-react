@@ -1,4 +1,4 @@
-import React, { cloneElement, FC, useEffect, useRef, useState } from 'react'
+import React, { cloneElement, FC, useEffect, useRef, useState, Fragment } from 'react'
 import classnames from 'classnames'
 import { filterByType, findComponent } from '../common/component-utils'
 
@@ -162,8 +162,7 @@ function labelWithPrefixAndIcon({ text, prefixId, prefixLabel, menuButtonLabel, 
     ]
     const labelWithPrefix = [prefixLabelElement, menuButtonLabel || textLabelElement]
     const labelArray = [icon, labelWithPrefix].flat().filter(Boolean) as JSX.Element[]
-
-    return labelArray.length ? labelArray : null
+    return labelArray.map((item, i) => cloneElement(item, { ...item.props, key: i }))
 }
 
 export default EbayMenuButton
