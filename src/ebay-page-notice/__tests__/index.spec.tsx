@@ -54,7 +54,7 @@ describe('<EbayPageNotice>', () => {
         let dismissButton
         const dismissMock = jest.fn()
 
-        beforeEach(async () => {
+        beforeEach(() => {
             wrapper = render(
                 <EbayPageNotice status="information" aria-label="Information" a11yDismissText="Close" onDismiss={dismissMock}>
                     <EbayNoticeContent>
@@ -62,7 +62,7 @@ describe('<EbayPageNotice>', () => {
                     </EbayNoticeContent>
                 </EbayPageNotice>
             )
-            dismissButton = await wrapper.getByRole('button', { name: 'Close' })
+            dismissButton = wrapper.getByRole('button', { name: 'Close' })
         })
 
         it('should add a close button with the provided label.', () => {
@@ -80,10 +80,9 @@ describe('<EbayPageNotice>', () => {
 
         it('should hide the notice when the user focuses the dismiss button and presses space', async () => {
             expect(wrapper.getByRole('region', { name: 'Information' })).toBeVisible()
-            await dismissButton.focus()
-            act(() => {
-                userEvent.type(dismissButton, ' ')
-            })
+            dismissButton.focus()
+
+            await userEvent.type(dismissButton, ' ')
             expect(wrapper.queryByRole('region', { name: 'Information' })).toBeNull()
             expect(dismissMock).toHaveBeenCalled()
         })

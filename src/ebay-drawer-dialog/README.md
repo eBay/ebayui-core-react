@@ -41,7 +41,6 @@ import '@ebay/skin/drawer-dialog.css'
 
 | Event         | Data             | Description                                                                                                                                                    |
 |---------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `onShow`      | `(event: Event)` | Deprecated, use `onOpen` instead. drawer opened                                                                                                                |
 | `onOpen`      | `(event: Event)` | drawer opened                                                                                                                                                  |
 | `onClose`     | `(event: Event)` | drawer closed. Triggered also when user drags down on handle (touch only) when dialog is not expanded                                                          |
 | `onExpanded`  | `(event: Event)` | drawer expanded to full page height. Event is triggered on drag up of handle (touch only), clicks, or when user scrolls in content when dialog is not expanded |

@@ -7,7 +7,7 @@ import { EbayBreadcrumbs, EbayBreadcrumbItem } from '../index'
 
 describe('<EbayBreadcrumbs>', () => {
     describe('on category click', () => {
-        it('should fire an event', () => {
+        it('should fire an event', async() => {
             const spy = jest.fn()
             const wrapper = render(
                 <EbayBreadcrumbs onSelect={spy}>
@@ -15,7 +15,7 @@ describe('<EbayBreadcrumbs>', () => {
                 </EbayBreadcrumbs>
             )
             const button = wrapper.getByRole('button')
-            userEvent.click(button)
+            await userEvent.click(button)
 
             expect(spy).toHaveBeenCalledWith(eventOfType('click'))
         })
