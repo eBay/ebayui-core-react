@@ -32,7 +32,7 @@ jobs:
         needs: build-test
         runs-on: ubuntu-latest
         # Deploy storybook only on branches, ignoring forks
-        if: "${{ github.repository_owner == 'ebay' }}"
+        if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
