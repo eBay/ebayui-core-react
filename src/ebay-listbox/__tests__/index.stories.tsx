@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 import { action } from '@storybook/addon-actions'
 
 import { EbayListbox, EbayListboxOption, EbayListboxOptionDescription } from '../index'
