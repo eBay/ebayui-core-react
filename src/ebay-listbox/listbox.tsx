@@ -89,7 +89,7 @@ export const EbayListbox: FC<EbayListboxProps> = ({
                 handleChange(event, activeDescendantRef.current.index, false)
                 break
             default:
-                return
+                break
         }
 
         const itemIndex = typeaheadRef.current.getIndex(
@@ -202,6 +202,7 @@ export const EbayListbox: FC<EbayListboxProps> = ({
                 hidden
                 className={classNames('listbox__native', selectClassName)}
                 name={name}
+                disabled={disabled}
                 value={options[selectedIndex]?.props.value}
                 onChange={/* NO-OP, this is to hide React warnings */ () => {}}>
                 {options.map((option, index) => (

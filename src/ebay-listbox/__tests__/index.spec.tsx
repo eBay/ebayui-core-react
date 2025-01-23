@@ -50,6 +50,18 @@ describe('<EbayListbox />', () => {
 
             expect(onChange).toHaveBeenCalledWith(expect.any(Object), { index: 0, selected: ['1'], wasClicked: false });
         })
+
+        it('should not select the option on filtering by typing', async() => {
+            const onChange = jest.fn();
+            renderListbox({ listSelection: 'auto', onChange });
+
+            const listbox = screen.getByRole('listbox');
+            listbox.focus();
+
+            await userEvent.keyboard('Option 3');
+
+            expect(onChange).not.toHaveBeenCalled();
+        })
     })
 
     describe('when listSelection=manual', () => {
@@ -115,6 +127,18 @@ describe('<EbayListbox />', () => {
             await userEvent.click(screen.getByText('Option 2'));
 
             expect(onChange).toHaveBeenCalledWith(expect.any(Object), { index: 1, selected: ['2'], wasClicked: true });
+        })
+
+        it('should select the option on filtering by typing', async() => {
+            const onChange = jest.fn();
+            renderListbox({ listSelection: 'manual', onChange });
+
+            const listbox = screen.getByRole('listbox');
+            listbox.focus();
+
+            await userEvent.keyboard('Option 3{enter}');
+
+            expect(onChange).toHaveBeenCalledWith(expect.any(Object), { index: 2, selected: ['3'], wasClicked: false });
         })
     })
 
