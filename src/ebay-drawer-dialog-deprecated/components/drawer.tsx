@@ -17,7 +17,7 @@ export interface EbayDrawerProps<T> extends DialogBaseProps<T> {
     onCollapsed?: () => void;
 }
 
-const EbayDrawerDialog: FC<EbayDrawerProps<any>> = ({
+const EbayDrawerDialogDeprecated: FC<EbayDrawerProps<any>> = ({
     expanded: controlledExpanded = false,
     noHandle,
     onClose = () => {},
@@ -113,4 +113,4 @@ const EbayDrawerDialog: FC<EbayDrawerProps<any>> = ({
     )
 }
 
-export default EbayDrawerDialog
+export default EbayDrawerDialogDeprecated

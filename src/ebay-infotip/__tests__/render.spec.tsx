@@ -100,20 +100,18 @@ describe('ebay-infotip rendering', () => {
         const { container } = render(<Modal initialExpanded />)
 
         const dialog = screen.getByRole('dialog')
-        expect(dialog).toHaveClass('drawer-dialog dialog--mini__overlay drawer-dialog--mask-fade-slow')
+        expect(dialog).toHaveClass('lightbox-dialog dialog--mini__overlay lightbox-dialog--mask-fade lightbox-dialog--show-init')
         expect(dialog).toHaveAttribute('aria-modal', 'true')
         expect(dialog).toHaveAttribute('aria-labelledby', 'dialog-title-abc123')
         expect(dialog).not.toHaveAttribute('hidden')
-
-        expect(screen.getByRole('button', { name: 'Maximize Text Label' })).toHaveClass('drawer-dialog__handle')
 
         const h2 = screen.getByRole('heading', { level: 2 })
         expect(h2).toHaveAttribute('id', 'dialog-title-abc123')
         expect(h2).toHaveTextContent('Title')
 
-        expect(screen.getByRole('button', { name: 'Close' })).toHaveClass('icon-btn drawer-dialog__close')
+        expect(screen.getByRole('button', { name: 'Close' })).toHaveClass('icon-btn lightbox-dialog__close')
 
-        expect(dialog.querySelector('.drawer-dialog__main')).toHaveTextContent('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        expect(dialog.querySelector('.lightbox-dialog__main')).toHaveTextContent('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
         const infotip = container.querySelector('.infotip')
         expect(infotip).toHaveClass('dialog--mini infotip--expanded')

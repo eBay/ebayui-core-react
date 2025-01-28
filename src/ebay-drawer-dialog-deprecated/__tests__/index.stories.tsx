@@ -2,25 +2,25 @@ import React, { createRef, useState } from 'react'
 import { EbayButton } from '../../ebay-button'
 import { action } from '@storybook/addon-actions'
 import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
-import { EbayDrawerDialog } from '../index'
+import { EbayDrawerDialogDeprecated } from '../index'
 import { StoryFn, Meta } from '@storybook/react'
 
-const story: Meta<typeof EbayDrawerDialog> = {
-    component: EbayDrawerDialog,
-    title: 'dialogs/ebay-drawer-dialog'
+const story: Meta<typeof EbayDrawerDialogDeprecated> = {
+    component: EbayDrawerDialogDeprecated,
+    title: 'deprecated/ebay-drawer-dialog-deprecated'
 }
 
 const numbers = Array(100)
     .fill(1)
     .map((x, i) => <p key={i}>{i + 1}</p>)
 
-export const _Default: StoryFn<typeof EbayDrawerDialog> = () => {
+export const _Default: StoryFn<typeof EbayDrawerDialogDeprecated> = () => {
     const [open, setOpen] = useState(false)
 
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog
+            <EbayDrawerDialogDeprecated
                 open={open}
                 onOpen={action('onOpen')}
                 onClose={() => {
@@ -44,14 +44,14 @@ export const _Default: StoryFn<typeof EbayDrawerDialog> = () => {
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
-            </EbayDrawerDialog>
+            </EbayDrawerDialogDeprecated>
         </>
     )
 }
 
-export const _Opened: StoryFn<typeof EbayDrawerDialog> = () => (
+export const _Opened: StoryFn<typeof EbayDrawerDialogDeprecated> = () => (
     <>
-        <EbayDrawerDialog
+        <EbayDrawerDialogDeprecated
             open
             onClose={action('Close button clicked.')}
             a11yCloseText="Close drawer"
@@ -68,17 +68,17 @@ export const _Opened: StoryFn<typeof EbayDrawerDialog> = () => (
             <p>
                 <a href="http://www.ebay.com">www.ebay.com</a>
             </p>
-        </EbayDrawerDialog>
+        </EbayDrawerDialogDeprecated>
     </>
 )
 
-export const _WithoutHandle: StoryFn<typeof EbayDrawerDialog> = () => {
+export const _WithoutHandle: StoryFn<typeof EbayDrawerDialogDeprecated> = () => {
     const [open, setOpen] = useState(false)
 
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog
+            <EbayDrawerDialogDeprecated
                 noHandle
                 open={open}
                 onClose={() => setOpen(false)}
@@ -97,18 +97,18 @@ export const _WithoutHandle: StoryFn<typeof EbayDrawerDialog> = () => {
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
-            </EbayDrawerDialog>
+            </EbayDrawerDialogDeprecated>
         </>
     )
 }
 
-export const _WithoutHandleAndCloseButton: StoryFn<typeof EbayDrawerDialog> = () => {
+export const _WithoutHandleAndCloseButton: StoryFn<typeof EbayDrawerDialogDeprecated> = () => {
     const [open, setOpen] = useState(false)
 
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog noHandle buttonPosition="hidden" open={open} onClose={() => setOpen(false)}>
+            <EbayDrawerDialogDeprecated noHandle buttonPosition="hidden" open={open} onClose={() => setOpen(false)}>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -120,19 +120,19 @@ export const _WithoutHandleAndCloseButton: StoryFn<typeof EbayDrawerDialog> = ()
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
-            </EbayDrawerDialog>
+            </EbayDrawerDialogDeprecated>
         </>
     )
 }
 
-export const _LotsOfContent: StoryFn<typeof EbayDrawerDialog> = () => {
+export const _LotsOfContent: StoryFn<typeof EbayDrawerDialogDeprecated> = () => {
     const [open, setOpen] = useState(false)
 
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
             {numbers}
-            <EbayDrawerDialog
+            <EbayDrawerDialogDeprecated
                 open={open}
                 onClose={() => setOpen(false)}
                 a11yMaximizeText="Maximize"
@@ -144,19 +144,19 @@ export const _LotsOfContent: StoryFn<typeof EbayDrawerDialog> = () => {
                 <EbayDialogFooter>
                     <EbayButton onClick={() => setOpen(false)}>Close</EbayButton>
                 </EbayDialogFooter>
-            </EbayDrawerDialog>
+            </EbayDrawerDialogDeprecated>
         </>
     )
 }
 
-export const _CustomFocus: StoryFn<typeof EbayDrawerDialog> = () => {
+export const _CustomFocus: StoryFn<typeof EbayDrawerDialogDeprecated> = () => {
     const [open, setOpen] = useState(false)
     const focusRef = createRef() as any
 
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog
+            <EbayDrawerDialogDeprecated
                 open={open}
                 focus={focusRef}
                 onClose={() => setOpen(false)}
@@ -180,18 +180,18 @@ export const _CustomFocus: StoryFn<typeof EbayDrawerDialog> = () => {
                         Close
                     </EbayButton>
                 </EbayDialogFooter>
-            </EbayDrawerDialog>
+            </EbayDrawerDialogDeprecated>
         </>
     )
 }
 
-export const _WithoutAnimation: StoryFn<typeof EbayDrawerDialog> = () => {
+export const _WithoutAnimation: StoryFn<typeof EbayDrawerDialogDeprecated> = () => {
     const [open, setOpen] = useState(false)
 
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog
+            <EbayDrawerDialogDeprecated
                 open={open}
                 onClose={() => setOpen(false)}
                 animated={false}
@@ -210,19 +210,19 @@ export const _WithoutAnimation: StoryFn<typeof EbayDrawerDialog> = () => {
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
-            </EbayDrawerDialog>
+            </EbayDrawerDialogDeprecated>
         </>
     )
 }
 
-export const _TriggerExpanded: StoryFn<typeof EbayDrawerDialog> = () => {
+export const _TriggerExpanded: StoryFn<typeof EbayDrawerDialogDeprecated> = () => {
     const [open, setOpen] = useState(false)
     const [expanded, setExpanded] = useState(false)
 
     return (
         <>
             <EbayButton onClick={() => setOpen(!open)}>Open Drawer</EbayButton>
-            <EbayDrawerDialog
+            <EbayDrawerDialogDeprecated
                 open={open}
                 onClose={() => setOpen(false)}
                 expanded={expanded}
@@ -235,7 +235,7 @@ export const _TriggerExpanded: StoryFn<typeof EbayDrawerDialog> = () => {
                 <EbayButton onClick={() => setExpanded(!expanded)} priority="secondary">
                     {expanded ? 'Collapse Drawer' : 'Expand Drawer'}
                 </EbayButton>
-            </EbayDrawerDialog>
+            </EbayDrawerDialogDeprecated>
         </>
     )
 }
