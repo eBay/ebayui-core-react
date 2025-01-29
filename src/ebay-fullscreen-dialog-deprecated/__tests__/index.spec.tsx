@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { EbayDialogHeader } from '../../ebay-dialog-base'
-import { EbayFullscreenDialog } from '../index'
+import { EbayFullscreenDialogDeprecated } from '../index'
 
 jest.mock('../../common/random-id')
 
@@ -9,7 +9,7 @@ const closeSpy = jest.fn()
 const openSpy = jest.fn()
 const openDialog = () =>
     render(
-        <EbayFullscreenDialog
+        <EbayFullscreenDialogDeprecated
             animated={false}
             open
             onOpen={openSpy}
@@ -24,10 +24,10 @@ const openDialog = () =>
             </p>
             <p><a href="http://www.ebay.com">www.ebay.com</a></p>
             <input placeholder="Enter a value" />
-        </EbayFullscreenDialog>
+        </EbayFullscreenDialogDeprecated>
     )
 
-describe('<EbayFullscreenDialog>', () => {
+describe('<EbayFullscreenDialogDeprecated>', () => {
     it('should trigger onOpen when dialog appears', () => {
         openDialog()
         expect(openSpy).toHaveBeenCalled()

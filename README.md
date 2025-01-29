@@ -33,10 +33,8 @@ eBayUI React components
 * [x] [ebay-date-textbox](src/ebay-date-textbox)
 * [ ] `ebay-details`
 * [ ] `ebay-donut-chart`
-* [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
 * [ ] `ebay-education-notice`
 * [x] [ebay-eek](src/ebay-eek)
-* [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
 * [x] [ebay-fake-menu](src/ebay-fake-menu)
 * [x] [ebay-fake-menu-button](src/ebay-fake-menu-button)
@@ -46,7 +44,6 @@ eBayUI React components
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
 * [ ] `ebay-flag`
-* [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [x] [ebay-icon-button](src/ebay-icon-button)
 * [x] [ebay-icon](src/ebay-icon)
 * [ ] `ebay-image-placeholder`

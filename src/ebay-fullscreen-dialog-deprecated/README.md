@@ -1,16 +1,18 @@
-# EbayFullscreenDialog
+# EbayFullscreenDialogDeprecated
+
+**Deprecated will be removed next major** (Use `EbayLightboxDialog` instead)
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/dialogs-ebay-fullscreen-dialog--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/deprecated-ebay-fullscreen-dialog-deprecated--default)
 
 ## Usage
 
 ```jsx
-<EbayFullscreenDialog open a11yClosetext = "Close">
+<EbayFullscreenDialogDeprecated open a11yClosetext = "Close">
     <EbayDialogHeader>Heading</EbayDialogHeader>
     <p>Body content</p>
     <EbayDialogFooter>Heading</EbayDialogHeader>
-</EbayFullscreenDialog>
+</EbayFullscreenDialogDeprecated>
 ```
 
 ## Attributes

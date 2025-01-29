@@ -8,7 +8,7 @@ const AlwaysOpenedStory = composeStory(AlwaysOpened, Meta)
 
 jest.mock('../../common/random-id')
 
-describe('ebay-fullscreen-dialog rendering', () => {
+describe('ebay-fullscreen-dialog-deprecated rendering', () => {
     it('renders default story correctly', () => {
         render(<DefaultStory />)
 

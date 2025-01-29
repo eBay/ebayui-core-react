@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import { EbayDrawerDialog } from '../index'
+import { EbayDrawerDialogDeprecated } from '../index'
 import { EbayDialogHeader } from '../../ebay-dialog-base'
 
 jest.mock('../../common/random-id')
@@ -10,7 +10,7 @@ const closeDrawerHandler = jest.fn()
 let wrapper
 const renderComponent = (props?: any) => {
     wrapper = render(
-        <EbayDrawerDialog open onClose={closeDrawerHandler} {...props}>
+        <EbayDrawerDialogDeprecated open onClose={closeDrawerHandler} {...props}>
             <EbayDialogHeader>Heading</EbayDialogHeader>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -19,11 +19,11 @@ const renderComponent = (props?: any) => {
             </p>
             <p><a href="http://www.ebay.com">www.ebay.com</a></p>
             <input placeholder="Enter a value" />
-        </EbayDrawerDialog>
+        </EbayDrawerDialogDeprecated>
     )
 }
 
-describe('<EbayDrawerDialog>', () => {
+describe('<EbayDrawerDialogDeprecated>', () => {
     beforeEach(() => {
         renderComponent()
     })

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { EbayFullscreenDialog } from '../index'
+import { EbayFullscreenDialogDeprecated } from '../index'
 import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
 import { action } from '@storybook/addon-actions'
 
 const story: any = {
-    component: EbayFullscreenDialog,
-    title: 'dialogs/ebay-fullscreen-dialog'
+    component: EbayFullscreenDialogDeprecated,
+    title: 'deprecated/ebay-fullscreen-dialog-deprecated'
 }
 
 export const Default = () => {
@@ -16,7 +16,7 @@ export const Default = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayFullscreenDialog
+            <EbayFullscreenDialogDeprecated
                 open={open}
                 onOpen={() => action('onOpen')()}
                 onClose={() => {
@@ -37,7 +37,7 @@ export const Default = () => {
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
-            </EbayFullscreenDialog>
+            </EbayFullscreenDialogDeprecated>
         </div>
     )
 }
@@ -45,7 +45,7 @@ export const Default = () => {
 export const AlwaysOpened = () => (
     <div>
         <p>Some outside content...</p>
-        <EbayFullscreenDialog open a11yCloseText="Close dialog">
+        <EbayFullscreenDialogDeprecated open a11yCloseText="Close dialog">
             <EbayDialogHeader>Heading</EbayDialogHeader>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -58,7 +58,7 @@ export const AlwaysOpened = () => (
                 <a href="http://www.ebay.com">www.ebay.com</a>
             </p>
             <EbayDialogFooter>©2021 eBay</EbayDialogFooter>
-        </EbayFullscreenDialog>
+        </EbayFullscreenDialogDeprecated>
     </div>
 )
 
@@ -70,7 +70,7 @@ export const WithAnimation = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayFullscreenDialog
+            <EbayFullscreenDialogDeprecated
                 open={open}
                 onClose={() => setOpen(false)}
                 animated
@@ -88,7 +88,7 @@ export const WithAnimation = () => {
                 <p>
                     <a href="http://www.ebay.com">www.ebay.com</a>
                 </p>
-            </EbayFullscreenDialog>
+            </EbayFullscreenDialogDeprecated>
         </div>
     )
 }
