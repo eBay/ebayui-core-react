@@ -2,7 +2,7 @@
 The component will include the actual SVG markup in the HTML and then reference the chosen icon.
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/dialogs-ebay-fullscreen-dialog--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/docs/graphics-icons-ebay-icon--docs)
 
 ## Usage
 ```jsx

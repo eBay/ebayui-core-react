@@ -15,7 +15,6 @@ export default {
         )
     ],
     parameters: {
-        layout: "centered",
         controls: { expanded: true },
         options: {
             storySort: {
