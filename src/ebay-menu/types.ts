@@ -26,5 +26,6 @@ export type EbayMenuProps = ContainerDivProps & ContainerSpanProps & {
     onKeyDown?: EbayMenuKeyDownEventHandler;
     onChange?: EbayMenuChangeEventHandler;
     onSelect?: EbayMenuSelectEventHandler;
-    forwardedRef?: Ref<HTMLDivElement>;
+    forwardedRef?: Ref<HTMLDivElement | HTMLSpanElement>;
+    menuRef?: Ref<HTMLDivElement>;
 }
