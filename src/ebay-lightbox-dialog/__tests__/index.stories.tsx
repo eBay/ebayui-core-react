@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Meta, StoryFn } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import {
     EbayDialogFooter,
     EbayDialogHeader,
@@ -8,12 +10,72 @@ import { EbayButton } from '../../ebay-button'
 import { EbayCheckbox } from '../../ebay-checkbox'
 import { EbayLabel } from '../../ebay-field'
 import { EbayLightboxDialog } from '../index'
-import { action } from '@storybook/addon-actions'
 
-const story: any = {
+
+const story: Meta<typeof EbayLightboxDialog> = {
+    title: 'dialogs/ebay-lightbox-dialog',
     component: EbayLightboxDialog,
-    title: 'dialogs/ebay-lightbox-dialog'
-}
+
+    argTypes: {
+        open: {
+            type: "boolean",
+            control: { type: "boolean" },
+            description: "Whether dialog is open.",
+        },
+        focus: {
+            control: { type: "text" },
+            description:
+                "An id for an element which will receive focus when the dialog opens (defaults to close button).",
+        },
+        a11yCloseText: {
+            control: { type: "text" },
+            description: "A11y text for close button and mask.",
+        },
+        bannerImgSrc: {
+            control: { type: "text" },
+            description: "Image source for the expressive variant",
+        },
+        bannerImgPosition: {
+            control: { type: "text" },
+            description:
+                "Position of the image within the given bounds using the CSS `background-position` property. Options include [keywords, lengths, and edge distances](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)",
+        },
+        a11yBannerText: {
+            control: { type: "text" },
+            description: "A11y text for the banner image.",
+        },
+        size: {
+            options: ["regular", "wide", "narrow", "large"],
+            description: "The size of the dialog",
+            table: {
+                defaultValue: {
+                    summary: "regular",
+                },
+            },
+            type: { category: "Options" },
+        },
+        onOpen: {
+            action: "onOpen",
+            description: "Triggered on dialog opened",
+            table: {
+                category: "Events",
+                defaultValue: {
+                    summary: "",
+                },
+            },
+        },
+        onClose: {
+            action: "onClose",
+            description: "Triggered on dialog closed.",
+            table: {
+                category: "Events",
+                defaultValue: {
+                    summary: "",
+                },
+            },
+        },
+    },
+};
 
 const textParagraph = (
     <p>
@@ -25,7 +87,7 @@ const textParagraph = (
     </p>
 )
 
-export const _Default = () => {
+export const Default: StoryFn<typeof EbayLightboxDialog> = (args) => {
     const [open, setOpen] = useState(false)
     const close = () => setOpen(false)
     return (
@@ -35,11 +97,12 @@ export const _Default = () => {
             </button>
             <p>Some outside content...</p>
             <EbayLightboxDialog
+                {...args}
                 open={open}
                 onOpen={() => action('onOpen')()}
                 onClose={() => {
                     action('onClose')()
-                    setOpen(false)
+                    close()
                 }}
                 a11yCloseText="Close"
             >
@@ -59,10 +122,10 @@ export const _Default = () => {
     )
 }
 
-export const _AlwaysOpened = () => (
+export const AlwaysOpened: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open a11yCloseText="Close dialog">
+        <EbayLightboxDialog {...args} open a11yCloseText="Close dialog">
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
             <p>
@@ -72,10 +135,10 @@ export const _AlwaysOpened = () => (
     </div>
 )
 
-export const _ScrollingContent = () => (
+export const ScrollingContent: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open a11yCloseText="Close">
+        <EbayLightboxDialog {...args} open a11yCloseText="Close">
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
             {textParagraph}
@@ -94,10 +157,10 @@ export const _ScrollingContent = () => (
     </div>
 )
 
-export const _MiniDialog = () => (
+export const MiniDialog: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog mode="mini" open a11yCloseText="Close">
+        <EbayLightboxDialog {...args} mode="mini" open a11yCloseText="Close">
             <EbayDialogHeader />
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -107,7 +170,7 @@ export const _MiniDialog = () => (
     </div>
 )
 
-export const _DisableDialogClose = () => {
+export const DisableDialogClose: StoryFn<typeof EbayLightboxDialog> = (args) => {
     const [showDialog, setShowDialog] = useState(false)
     const [dialogCloseable, setDialogCloseable] = useState(true)
     const closeDialog = () => {
@@ -120,7 +183,7 @@ export const _DisableDialogClose = () => {
         <div>
             <EbayButton onClick={() => setShowDialog(!showDialog)}>Show Dialog</EbayButton>
 
-            <EbayLightboxDialog open={showDialog} onClose={closeDialog} a11yCloseText="Close">
+            <EbayLightboxDialog {...args} open={showDialog} onClose={closeDialog} a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
 
                 <p>Unselect the following checkbox to prevent user to close the dialog</p>
@@ -150,7 +213,7 @@ export const _DisableDialogClose = () => {
     )
 }
 
-export const _WithAnimation = () => {
+export const WithAnimation: StoryFn<typeof EbayLightboxDialog> = (args) => {
     const [open, setOpen] = useState(false)
     const close = () => setOpen(false)
     return (
@@ -159,7 +222,7 @@ export const _WithAnimation = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayLightboxDialog open={open} onClose={close} animated a11yCloseText="Close">
+            <EbayLightboxDialog {...args} open={open} onClose={close} animated a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p>
@@ -175,7 +238,7 @@ export const _WithAnimation = () => {
         </div>
     )
 }
-export const _WithNoBackgroundClick = () => {
+export const WithNoBackgroundClick: StoryFn<typeof EbayLightboxDialog> = (args) => {
     const [open, setOpen] = useState(false)
     const close = () => setOpen(false)
     return (
@@ -184,7 +247,7 @@ export const _WithNoBackgroundClick = () => {
                 Open Dialog
             </button>
             <p>Some outside content...</p>
-            <EbayLightboxDialog open={open} onClose={close} buttonPosition="hidden" a11yCloseText="Close">
+            <EbayLightboxDialog {...args} open={open} onClose={close} buttonPosition="hidden" a11yCloseText="Close">
                 <EbayDialogHeader>Heading</EbayDialogHeader>
                 {textParagraph}
                 <p>
@@ -201,10 +264,10 @@ export const _WithNoBackgroundClick = () => {
     )
 }
 
-export const _WithPreviousButton = () => (
+export const WithPreviousButton: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open a11yCloseText="Close dialog">
+        <EbayLightboxDialog {...args} open a11yCloseText="Close dialog">
             <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
@@ -215,10 +278,10 @@ export const _WithPreviousButton = () => (
     </div>
 )
 
-export const _WithWideSize = () => (
+export const WithWideSize: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open a11yCloseText="Close dialog" size="wide">
+        <EbayLightboxDialog {...args} open a11yCloseText="Close dialog" size="wide">
             <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
@@ -229,10 +292,10 @@ export const _WithWideSize = () => (
     </div>
 )
 
-export const _WithNarrowSize = () => (
+export const WithNarrowSize: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open a11yCloseText="Close dialog" size="narrow">
+        <EbayLightboxDialog {...args} open a11yCloseText="Close dialog" size="narrow">
             <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
@@ -243,10 +306,10 @@ export const _WithNarrowSize = () => (
     </div>
 )
 
-export const _WithFullscreenSize = () => (
+export const WithFullscreenSize: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open a11yCloseText="Close dialog" size="fullscreen">
+        <EbayLightboxDialog {...args} open a11yCloseText="Close dialog" size="fullscreen">
             <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
@@ -257,10 +320,10 @@ export const _WithFullscreenSize = () => (
     </div>
 )
 
-export const _WithLargeSize = () => (
+export const WithLargeSize: StoryFn<typeof EbayLightboxDialog> = (args) => (
     <div>
         <p>Some outside content...</p>
-        <EbayLightboxDialog open a11yCloseText="Close dialog" size="large">
+        <EbayLightboxDialog {...args} open a11yCloseText="Close dialog" size="large">
             <EbayDialogPreviousButton aria-label="Previous" onClick={action('previous button click')} />
             <EbayDialogHeader>Heading</EbayDialogHeader>
             {textParagraph}
@@ -270,5 +333,35 @@ export const _WithLargeSize = () => (
         </EbayLightboxDialog>
     </div>
 )
+
+export const Expressive: StoryFn<typeof EbayLightboxDialog> = (args) => {
+    const [open, setOpen] = useState(false)
+
+    return (
+        <div>
+            <button className="btn btn--secondary" onClick={() => setOpen(!open)}>
+                Open Dialog
+            </button>
+            <EbayLightboxDialog
+                {...args}
+                bannerImgSrc="http://ir.ebaystatic.com/cr/v/c1/skin/image-treatment/mountain.jpeg"
+                bannerImgPosition="top"
+                open={open}
+                onOpen={() => action('onOpen')()}
+                onClose={() => {
+                    action('onClose')()
+                    setOpen(false)
+                }}
+                a11yCloseText="Close"
+            >
+                <EbayDialogHeader>Heading Text</EbayDialogHeader>
+                {textParagraph}
+                <p>
+                    <a href="http://www.ebay.com">www.ebay.com</a>
+                </p>
+            </EbayLightboxDialog>
+        </div>
+    )
+}
 
 export default story
