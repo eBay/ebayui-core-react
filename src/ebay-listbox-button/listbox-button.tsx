@@ -7,6 +7,7 @@ import { EbayIcon } from '../ebay-icon'
 import { EbayChangeEventHandler, Key } from '../common/event-utils/types'
 import { filterByType } from '../common/component-utils'
 import EbayListboxButtonOption from './listbox-button-option'
+import { useFloatingDropdown } from '../common/dropdown'
 
 export type ChangeEventProps = {
     index: number;
@@ -47,9 +48,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     ...rest
 }) => {
     const optionsContainerRef = useRef<HTMLDivElement>(null)
-    const optionsParentContainerRef = useRef<HTMLDivElement>()
     const optionsByIndexRef = useRef(new Map())
-    const buttonRef = useRef<HTMLButtonElement>()
 
     const listBoxButtonOptions = filterByType(children, EbayListboxButtonOption)
     if (!listBoxButtonOptions.length) {
@@ -79,6 +78,13 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
     // Additional flag to avoid multiple re-render when users tries to open and close
     const [optionsOpened, setOptionsOpened] = useState(false)
     const [wasClicked, setWasClicked] = useState<boolean>()
+
+    const { overlayStyles, refs } = useFloatingDropdown({
+        open: expanded
+    })
+
+    const buttonRef = refs.host as React.MutableRefObject<HTMLButtonElement>
+    const optionsParentContainerRef = refs.overlay as React.MutableRefObject<HTMLDivElement>
 
     useEffect(() => {
         setSelectedOption(selectedOptionFromValue)
@@ -265,7 +271,7 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
                 // https://stackoverflow.com/questions/17769005/onclick-and-onblur-ordering-issue
                 onMouseDown={(e) => e.preventDefault()}
                 onKeyUp={onButtonKeyup}
-                ref={buttonRef}
+                ref={refs.setHost}
             >
                 <span className="btn__cell">
                     {buttonLabel}
@@ -275,8 +281,8 @@ const ListboxButton: FC<EbayListboxButtonProps> = ({
             {(expanded || optionsOpened) &&
                 <div
                     className="listbox-button__listbox"
-                    ref={optionsParentContainerRef}
-                    style={{ maxHeight: maxHeight }}>
+                    ref={refs.setOverlay}
+                    style={{ ...overlayStyles, maxHeight: maxHeight }}>
                     <div
                         className="listbox-button__options"
                         role="listbox"

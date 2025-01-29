@@ -59,6 +59,7 @@
     "shaka-player": "^4.3.2"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.3",
     "classnames": "^2.2.6",
     "makeup-expander": "^0.10.1",
     "makeup-keyboard-trap": "^0.4.1",

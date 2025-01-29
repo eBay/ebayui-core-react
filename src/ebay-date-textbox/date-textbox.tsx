@@ -1,11 +1,12 @@
 import React, { ChangeEvent, FC, FocusEvent, MouseEvent, useEffect, useRef, useState } from 'react'
 import Expander from 'makeup-expander'
+import classNames from 'classnames'
 import EbayCalendar, { EbayCalendarProps } from '../ebay-calendar/calendar'
 import { EbayTextbox, EbayTextboxPostfixIcon } from '../ebay-textbox'
 import { DayISO, dateArgToISO, toISO } from '../ebay-calendar/date-utils'
 import { EbayChangeEventHandler, EbayFocusEventHandler, EbayMouseEventHandler } from '../common/event-utils/types'
 import { isControlled } from '../ebay-textbox/textbox'
-import classNames from 'classnames'
+import { useFloatingDropdown } from '../common/dropdown'
 
 type EventData = {
     selected?: string;
@@ -48,7 +49,6 @@ const EbayDateTextbox: FC<EbayDateTextboxProps> = ({
     ...rest
 }) => {
     const expander = useRef<typeof Expander>()
-    const containerRef = useRef<HTMLSpanElement>(null)
     const [internalValue, setInternalValue] = useState<string>(defaultValue || '')
     const [internalRangeEnd, setInternalRangeEnd] = useState<string>(defaultRangeEnd || '')
     const valueToRender = isControlled(controlledValue) ? controlledValue : internalValue
@@ -62,6 +62,12 @@ const EbayDateTextbox: FC<EbayDateTextboxProps> = ({
     )
     const [isPopoverOpen, setIsPopoverOpen] = useState<boolean>(false)
     const [numMonths, setNumMonths] = useState(1)
+
+    const { overlayStyles, refs } = useFloatingDropdown({
+        open: isPopoverOpen
+    })
+
+    const containerRef = refs.host as React.MutableRefObject<HTMLSpanElement>
 
     const openPopover = () => {
         setIsPopoverOpen(true)
@@ -189,7 +195,9 @@ const EbayDateTextbox: FC<EbayDateTextboxProps> = ({
         : [inputPlaceholderText, inputPlaceholderText]
 
     return (
-        <span className={classNames('date-textbox', className)} ref={containerRef}>
+        <span
+            className={classNames('date-textbox', className)}
+            ref={refs.setHost}>
             {range && (
                 <EbayTextbox
                     value={valueToRender}
@@ -208,7 +216,11 @@ const EbayDateTextbox: FC<EbayDateTextboxProps> = ({
                 <EbayTextboxPostfixIcon name="calendar24" buttonAriaLabel={a11yOpenPopoverText} />
             </EbayTextbox>
 
-            <div hidden={!isPopoverOpen} className="date-textbox__popover">
+            <div
+                hidden={!isPopoverOpen}
+                ref={refs.setOverlay}
+                style={overlayStyles}
+                className="date-textbox__popover">
                 <EbayCalendar
                     {...rest}
                     range={range}

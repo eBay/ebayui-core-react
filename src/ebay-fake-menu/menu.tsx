@@ -1,16 +1,19 @@
 import React, {
     Children, cloneElement,
-    ComponentProps, FC, ReactElement
+    ComponentProps, FC, ReactElement,
+    RefObject
 } from 'react'
 import classNames from 'classnames'
 import { EbayFakeMenuItemProps } from './index'
 import { EbayKeyboardEventHandler, EbayMouseEventHandler } from '../common/event-utils/types'
+import { withForwardRef } from '../utils'
 
 type SpanProps = Omit<ComponentProps<'div'>, 'onKeyDown' | 'onSelect'>
 type Props = SpanProps & {
     itemMatchesUrl?: boolean;
     onKeyDown?: EbayKeyboardEventHandler<HTMLElement, { index: number }>;
     onSelect?: EbayMouseEventHandler<HTMLAnchorElement, { index: number }>;
+    forwardedRef?: RefObject<HTMLDivElement>;
 }
 
 const EbayFakeMenu: FC<Props> = ({
@@ -19,13 +22,14 @@ const EbayFakeMenu: FC<Props> = ({
     onKeyDown = () => {},
     onSelect = () => {},
     children,
+    forwardedRef,
     ...rest
 }) => {
     const childrenArray = Children.toArray(children)
     const defaultAriaCurrent = itemMatchesUrl === false ? 'true' : 'page'
 
     return (
-        <div {...rest} className={classNames(className, 'fake-menu')}>
+        <div {...rest} ref={forwardedRef} className={classNames(className, 'fake-menu')}>
             <ul className="fake-menu__items" tabIndex={-1}>
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
@@ -55,4 +59,4 @@ const EbayFakeMenu: FC<Props> = ({
     )
 }
 
-export default EbayFakeMenu
+export default withForwardRef(EbayFakeMenu)
