@@ -8467,6 +8467,21 @@ makeerror@1.0.12:
   dependencies:
     tmpl "1.0.5"
 
+makeup-active-descendant@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/makeup-active-descendant/-/makeup-active-descendant-0.7.4.tgz#8c0803d37f0b2a3dea57cbf8eb2e3bd3dd476c8d"
+  integrity sha512-4Lz6LCOQBp/0ikTGUXb1ErC53oCbXkRsZTiVpbuA4bzUTPIJrmf/xdDW32b1i0PJ34BQwz6IOddOc3nVJLlOMw==
+  dependencies:
+    makeup-navigation-emitter "^0.7.3"
+    makeup-next-id "^0.5.3"
+
+makeup-exit-emitter@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/makeup-exit-emitter/-/makeup-exit-emitter-0.5.3.tgz#b33365f551f797a2a5e794a3cfbcc628b2b6205f"
+  integrity sha512-v8UTl8xZ8f5xFTSlbre4pJyakbbwC/2crqLWsS/u+kMrVt1ckq7nily6AowvZ1pCAyTKSzAYSHqWIQWiNmqlmA==
+  dependencies:
+    makeup-next-id "^0.5.3"
+
 makeup-exit-emitter@~0.4.0:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/makeup-exit-emitter/-/makeup-exit-emitter-0.4.1.tgz#99a6db81c44a7465658b89d5f4e9324d21755190"
@@ -8493,12 +8508,30 @@ makeup-focusables@~0.3.0:
   resolved "https://registry.yarnpkg.com/makeup-focusables/-/makeup-focusables-0.3.1.tgz#60a6917094b6b79e1f29e48369d1560052f625c8"
   integrity sha512-SHL/VBBA6aqTGGay6/6rQvZjlAKmp/VASL46bHdEUfDxWhALzV3xquctr3C3WxdlnFwd4qxbIS3nv1Um9MSJhw==
 
+makeup-key-emitter@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/makeup-key-emitter/-/makeup-key-emitter-0.4.3.tgz#56f6871e6b47cc43ec2057b24ae4d1b6e0b050e6"
+  integrity sha512-AVcLVjHxmB6KK5eiPxb0KkLfHpEMtIVc72KukLZFSS1wpva1LP4cTdeukyKFz45SseWwlg+V/S3DdfQ9ZWhgyA==
+
 makeup-keyboard-trap@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/makeup-keyboard-trap/-/makeup-keyboard-trap-0.4.2.tgz#3bfea7dec1138ca5a711ebfbd436cca16548f196"
   integrity sha512-x1NQ7QEwS0V5GcZv7pWMJrobtCGgiydEa3AL5o6fWNlXBNhZuvPqSvhtfJcrX/8LASdmBpnsfX3XPYSr5vWmUw==
   dependencies:
     makeup-focusables "^0.3.2"
+
+makeup-navigation-emitter@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/makeup-navigation-emitter/-/makeup-navigation-emitter-0.7.3.tgz#c2df19c9618ade1f9b66e19f03c9e9ada3b22983"
+  integrity sha512-0S/5n5rdrPZG4NOFkftj/W+YJf1D7GaCxb4h16t98+LEaiY/PoIF5j222+hGIsCeB02ZrG6RsTsCpeDgGnOk6A==
+  dependencies:
+    makeup-exit-emitter "^0.5.3"
+    makeup-key-emitter "^0.4.3"
+
+makeup-next-id@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/makeup-next-id/-/makeup-next-id-0.5.3.tgz#030ba8122b38d32ae96bf23e1d8ca72bcc128ed5"
+  integrity sha512-FBxUdgW32y8bW9Qcz/5zqqhvh7dn2rJGcRphB9QUdCMswWq4F1zzYITX8K0Xm9hrDwlPAlznjJNWl5xlXwoVUw==
 
 makeup-next-id@~0.4.0:
   version "0.4.1"
@@ -8509,6 +8542,11 @@ makeup-screenreader-trap@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/makeup-screenreader-trap/-/makeup-screenreader-trap-0.4.1.tgz#6ef87b33735a609be5444c0562a1834bf45dc39b"
   integrity sha512-64x5elJZlImluq2DFmHZnW4YEt6jvRZGnI4mD37RFVDpE7I2S3DvLrCp1WvaX7j0DNpzZHP7pv4ZM5ru7CJ0Bw==
+
+makeup-typeahead@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/makeup-typeahead/-/makeup-typeahead-0.3.3.tgz#57f4ef7a3895a1e4f84ea2234bfd6957a5b6f4ea"
+  integrity sha512-ChBTGUaP1kW+vbO8WBS6c6WK2eY1UEJHmlGgG/kljRLZwrX27JJDTvgpBXEUM7iD2NZ4/V5zupPRFRQ9+AHNgw==
 
 map-or-similar@^1.5.0:
   version "1.5.0"
