@@ -59,6 +59,7 @@
     "shaka-player": "^4.3.2"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.3",
     "classnames": "^2.2.6",
     "makeup-expander": "^0.10.1",
     "makeup-keyboard-trap": "^0.4.1",
@@ -72,7 +73,6 @@
     "@babel/register": "^7.0.0",
     "@changesets/cli": "^2.27.11",
     "@ebay/skin": "^18.4.0",
-    "@floating-ui/react": "^0.27.3",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-a11y": "^7.6.12",
