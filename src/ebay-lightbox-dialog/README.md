@@ -24,7 +24,6 @@ Name | Type | Stateful | Required | Description
 `animated` | Boolean | Yes | No | Renders the dialog with an animation. Note that the dialog will always be present in the DOM
 `bannerImgSrc` | String | No | No | Image source for the expressive variant
 `bannerImgPosition` | String | No | No | Position of the image within the given bounds using the CSS `background-position` property. Options include [keywords, lengths, and edge distances](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
-`a11yBannerText` | String | No | No | A11y text for the banner image
 
 ## Events
 

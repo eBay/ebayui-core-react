@@ -40,10 +40,6 @@ const story: Meta<typeof EbayLightboxDialog> = {
             description:
                 "Position of the image within the given bounds using the CSS `background-position` property. Options include [keywords, lengths, and edge distances](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)",
         },
-        a11yBannerText: {
-            control: { type: "text" },
-            description: "A11y text for the banner image.",
-        },
         size: {
             options: ["regular", "wide", "narrow", "large"],
             description: "The size of the dialog",

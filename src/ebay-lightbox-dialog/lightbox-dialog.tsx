@@ -11,7 +11,6 @@ export type Props<T = any> = Omit<DialogBaseProps<T>, 'size'> & {
   size?: Size;
   bannerImgSrc?: string;
   bannerImgPosition?: CSSProperties['backgroundPosition'];
-  a11yBannerText?: string;
   onClose?: () => void;
 }
 
@@ -21,15 +20,12 @@ const EbayLightboxDialog: FC<Props> = ({
     size,
     bannerImgSrc,
     bannerImgPosition,
-    a11yBannerText,
     onClose = () => {},
     ...rest
 }) => {
     const top = bannerImgSrc ? (
         <div
             className="lightbox-dialog__image"
-            role="img"
-            aria-label={a11yBannerText}
             style={{
                 backgroundImage: `url(${bannerImgSrc})`,
                 backgroundPosition: bannerImgPosition
