@@ -87,8 +87,6 @@ export const Modal = (args) => (
             variant="modal"
             a11yCloseText="Close"
             aria-label="Infotip"
-            a11yMaximizeText="Maximize Text Label"
-            a11yMinimizeText="Minimize Text Label"
             {...args}
         >
             <EbayInfotipHeading>Title</EbayInfotipHeading>

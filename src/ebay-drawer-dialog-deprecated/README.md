@@ -1,13 +1,15 @@
-# EbayDrawerDialog
+# EbayDrawerDialogDeprecated
+
+**Deprecated will be removed next major** (Use `EbayLightboxDialog` instead)
 
 ## Demo
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/dialogs-ebay-drawer-dialog--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/deprecated-ebay-drawer-dialog-deprecated--default)
 
 ## Usage
 
 ### Import JS
 ```jsx harmony
-import { EbayDrawerDialog } from '@ebay/ui-core-react/ebay-drawer-dialog'
+import { EbayDrawerDialogDeprecated } from '@ebay/ui-core-react/ebay-drawer-dialog-deprecated'
 ```
 ### Import following styles from SKIN
 ```jsx harmony
@@ -19,9 +21,9 @@ import '@ebay/skin/drawer-dialog.css'
 ```
 ### Simple opened dialog
 ```jsx
-<EbayDrawerDialog open a11yClosetext="Close Drawer">
+<EbayDrawerDialogDeprecated open a11yClosetext="Close Drawer">
     Hello World
-</EbayDrawerDialog>
+</EbayDrawerDialogDeprecated>
 ```
 
 ## Props
@@ -55,9 +57,9 @@ Will render a header content for the dialog. Will always render the header eleme
 Will render the footer content for the dialog. If not present then will not have any footer.
 
 ```jsx
-<EbayDrawerDialog>
+<EbayDrawerDialogDeprecated>
     <EbayDialogHeader>Title</EbayDialogHeader>
     Some text
     <EbayDialogFooter>(c)2021 eBay Inc.</EbayDialogFooter>
-</EbayDrawerDialog>
+</EbayDrawerDialogDeprecated>
 ```

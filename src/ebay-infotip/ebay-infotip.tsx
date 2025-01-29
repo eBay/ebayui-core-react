@@ -2,10 +2,10 @@ import React, { cloneElement, createElement, CSSProperties, FC, useRef, ReactNod
 import classNames from 'classnames'
 import { findComponent } from '../common/component-utils'
 import { Tooltip, TooltipHost, TooltipContent, PointerDirection, useTooltip } from '../common/tooltip-utils'
-import { EbayDrawerDialog } from '../ebay-drawer-dialog'
 import { EbayDialogHeader } from '../ebay-dialog-base'
 import EbayInfotipHost from './ebay-infotip-host'
 import { Icon } from '../ebay-icon'
+import { EbayLightboxDialog } from '../ebay-lightbox-dialog'
 import { Variant } from './types'
 import { EbayInfotipHeading, EbayInfotipContent } from './index'
 
@@ -22,8 +22,6 @@ type InfotipProps = {
     'aria-label'?: string;
     className?: string;
     children?: ReactNode;
-    a11yMaximizeText?:string;
-    a11yMinimizeText?:string;
 };
 
 const EbayInfotip: FC<InfotipProps> = ({
@@ -38,9 +36,7 @@ const EbayInfotip: FC<InfotipProps> = ({
     icon = 'information16',
     a11yCloseText,
     'aria-label': ariaLabel,
-    className,
-    a11yMaximizeText,
-    a11yMinimizeText
+    className
 }: InfotipProps) => {
     const buttonRef = useRef()
     const {
@@ -105,18 +101,16 @@ const EbayInfotip: FC<InfotipProps> = ({
                 )}
             </Tooltip>
             {isModal && (
-                <EbayDrawerDialog
+                <EbayLightboxDialog
                     {...contentProps}
                     open={isExpanded}
                     onClose={collapseTooltip}
                     a11yCloseText={a11yCloseText}
                     className="dialog--mini__overlay"
-                    a11yMaximizeText={a11yMaximizeText}
-                    a11yMinimizeText={a11yMinimizeText}
                 >
                     <EbayDialogHeader>{heading}</EbayDialogHeader>
                     {contentChildren}
-                </EbayDrawerDialog>
+                </EbayLightboxDialog>
             )}
         </>
     )

@@ -9,7 +9,7 @@ export interface Props<T = any> extends DialogBaseProps<T> {
   onClose?: () => void;
 }
 
-const EbayFullscreenDialog: FC<Props> = ({
+const EbayFullscreenDialogDeprecated: FC<Props> = ({
     open,
     onClose = () => {},
     className,
@@ -29,4 +29,4 @@ const EbayFullscreenDialog: FC<Props> = ({
     />
 )
 
-export default EbayFullscreenDialog
+export default EbayFullscreenDialogDeprecated
