@@ -53,9 +53,11 @@
   "author": "tmanyanov@ebay.com",
   "license": "ISC",
   "peerDependencies": {
-    "@ebay/skin": "^18.0.0",
+    "@ebay/skin": "^19.0.0",
     "react": ">= 16.0.0",
-    "react-dom": ">= 16.0.0",
+    "react-dom": ">= 16.0.0"
+  },
+  "optionalDependencies": {
     "shaka-player": "^4.3.2"
   },
   "dependencies": {
@@ -74,7 +76,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.0.0",
     "@changesets/cli": "^2.27.11",
-    "@ebay/skin": "^18.4.0",
+    "@ebay/skin": "^19",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-a11y": "^7.6.12",
