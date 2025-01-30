@@ -1493,10 +1493,10 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@ebay/skin@^18.4.0":
-  version "18.6.0"
-  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-18.6.0.tgz#f3f7990fbe92547afb39f7657bd62863f883796a"
-  integrity sha512-BV6snxlYH/hZaUlUqTY4JMER3a5rZokk49W30Fi+FfrckPP04Lf+s5EE2WPfskVPchlidrszp8svc+JYKm1VEg==
+"@ebay/skin@^19":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-19.0.0.tgz#e00ee6fb2c868bcdfcea08fc62206f7d976ab5a1"
+  integrity sha512-0ZsmUTy7gLKKHDZvKSGBbsr3ERRQBuDtu9MR6iVh2suPXaKtu2IPM7wi8pIw1FrigCZ8/dhQeeDjsz0oHdcDEA==
 
 "@emotion/use-insertion-effect-with-fallbacks@^1.0.0":
   version "1.0.1"
@@ -11289,6 +11289,7 @@ wordwrap@^1.0.0:
   integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
