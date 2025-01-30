@@ -131,10 +131,10 @@ const EbayMenuButton: FC<MenuButtonProps> = ({
                 <EbayIconButton icon="overflowVertical16" {...buttonProps} /> :
                 <EbayButton
                     variant={variant === 'form' ? 'form' : undefined}
-                    bodyState={noToggleIcon ? undefined : 'expand'}
                     {...buttonProps}
                 >
                     {label}
+                    {!noToggleIcon ? <EbayIcon name="chevronDown12" /> : null}
                 </EbayButton>
             }
             {expanded &&
