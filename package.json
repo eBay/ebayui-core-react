@@ -34,7 +34,7 @@
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' dist",
     "release": "yarn clean && yarn build && yarn copy && CI=1 changeset publish",
     "prepare": "node scripts/husky-install || node ../scripts/husky-install",
-    "version": "changeset version"
+    "version": "yarn update-icons && git add -A src && changeset version"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
