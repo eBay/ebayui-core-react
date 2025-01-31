@@ -50,8 +50,8 @@ jobs:
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/deploy
     release:
-        needs: deploy
         name: Release
+        needs: deploy
         # Sets permissions of the GITHUB_TOKEN to allow opening release PR
         permissions:
             id-token: write
@@ -63,7 +63,16 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
-            - uses: ./.github/actions/release
+            - name: Release
+              id: changesets
+              uses: changesets/action@v1
+              with:
+                version: yarn version
+                publish: yarn release
+                commit: "ci: release"
+                title: "ci: release"
               env:
+                # Disable husky
+                HUSKY: 0
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
