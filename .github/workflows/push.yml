@@ -5,7 +5,18 @@ on:
         branches: [ main ]
 
 permissions:
+    actions: write
+    checks: write
     contents: write
+    deployments: write
+    discussions: write
+    issues: write
+    packages: write
+    id-token: write
+    pull-requests: write
+    repository-projects: write
+    security-events: write
+    statuses: write
 
 jobs:
     build-test:
