@@ -39,13 +39,15 @@ jobs:
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/build
     deploy:
-        needs: build
         name: Deploy
+        needs: build
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/deploy
+              with:
+                    branch: ${{ github.head_ref }}
     release:
         needs: deploy
         name: Release
