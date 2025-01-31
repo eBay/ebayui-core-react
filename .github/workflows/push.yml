@@ -5,24 +5,12 @@ on:
         branches: [ main ]
 
 permissions:
-    actions: write
-    checks: write
     contents: write
-    deployments: write
-    discussions: write
-    issues: write
-    packages: write
-    id-token: write
-    pull-requests: write
-    repository-projects: write
-    security-events: write
-    statuses: write
 
 jobs:
     build-test:
         strategy:
             matrix:
-#                os: [ubuntu-latest, windows-latest]
                 os: [ubuntu-latest]
         name: Build & Test  @ ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
@@ -44,17 +32,9 @@ jobs:
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/analyze
 
-    build:
-        needs: analyze
-        name: Build
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: ./.github/actions/setup-node
-            - uses: ./.github/actions/build
     deploy:
         name: Deploy
-        needs: build
+        needs: build-test
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -62,7 +42,7 @@ jobs:
             - uses: ./.github/actions/deploy
     release:
         name: Release
-        needs: deploy
+        needs: build-test
         # Sets permissions of the GITHUB_TOKEN to allow opening release PR
         permissions:
             id-token: write
