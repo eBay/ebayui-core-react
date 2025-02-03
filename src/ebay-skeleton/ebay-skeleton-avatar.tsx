@@ -1,4 +1,4 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { FC } from 'react'
 import classNames from 'classnames'
 import { NativeTags } from './nativeTags'
 
