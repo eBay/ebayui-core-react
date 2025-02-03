@@ -1,3 +1,0 @@
-try{
-(()=>{var b=__STORYBOOK_ADDONS__,{addons:r,types:u,mockChannel:g}=__STORYBOOK_ADDONS__;var x=__STORYBOOK_THEMING__,{CacheProvider:v,ClassNames:_,Global:O,ThemeProvider:j,background:S,color:T,convert:D,create:o,createCache:C,createGlobal:E,createReset:I,css:N,darken:R,ensure:B,ignoreSsrWarning:P,isPropValid:w,jsx:A,keyframes:G,lighten:K,styled:Y,themes:H,typography:M,useTheme:$,withTheme:U}=__STORYBOOK_THEMING__;var a="7.1.0";r.setConfig({theme:o({base:"light",brandTitle:`eBayUI Core React v.${a}`})});})();
-}catch(e){ console.error("[Storybook] One of your manager-entries failed: " + import.meta.url, e); }
