@@ -1,26 +1,26 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ReactNode } from 'react'
 import classNames from 'classnames'
+import { BaseSkeletonComponentProps, SupportedElements } from './types'
 
-export type Props = ComponentProps<'div'> & {
+export type EbaySkeletonTextProps<T extends SupportedElements> = BaseSkeletonComponentProps<T> & {
     size?: 'small' | 'large';
     multiline?: boolean;
 }
 
-const EbaySkeletonText: FC<Props> = ({
-    className,
-    size,
-    multiline,
-    ...rest
-}) => (
-    <div
-        className={classNames(
-            'skeleton__text',
-            multiline && 'skeleton__text--multiline',
-            size === 'large' && `skeleton__text--large`,
-            className
-        )}
-        {...rest}
-    />
-)
+const EbaySkeletonText = <T extends SupportedElements = 'div'>(props: EbaySkeletonTextProps<T>): ReactNode => {
+    const { as: Component = 'div', className, size, multiline, ...rest } = props
+
+    return (
+        <Component
+            className={classNames(
+                'skeleton__text',
+                multiline && 'skeleton__text--multiline',
+                size === 'large' && `skeleton__text--large`,
+                className
+            )}
+            {...rest}
+        />
+    )
+}
 
 export default EbaySkeletonText

@@ -1,20 +1,14 @@
-import React, { FC } from 'react'
+import React, { ReactNode } from 'react'
 import classNames from 'classnames'
-import { NativeTags } from './nativeTags'
+import { BaseSkeletonComponentProps, SupportedElements } from './types'
 
-export type Props = {
-    as?: NativeTags,
-    className?: string
-}
+export type EbaySkeletonAvatarProps<T extends SupportedElements> = BaseSkeletonComponentProps<T>
 
-const EbaySkeletonAvatar: FC<Props> = ({
-    as = 'div',
-    className,
-    ...rest
-}) => {
-    const NativeTag = as
+const EbaySkeletonAvatar = <T extends SupportedElements = 'div'>(props: EbaySkeletonAvatarProps<T>): ReactNode => {
+    const { as: Component = 'div', className, ...rest } = props
+
     return (
-        <NativeTag className={classNames('skeleton__avatar', className)} {...rest} />
+        <Component className={classNames('skeleton__avatar', className)} {...rest} />
     )
 }
 

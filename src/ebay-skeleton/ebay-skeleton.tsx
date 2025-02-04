@@ -1,20 +1,21 @@
 import React, { ComponentProps, FC } from 'react'
 import classNames from 'classnames'
 
-export type Props = ComponentProps<'div'> & {
-    a11yText?: string;
+export type EbaySkeletonProps = ComponentProps<'div'> & {
+    color?: 'purple' | 'green' | 'blue'
 }
 
-const EbaySkeleton: FC<Props> = ({
+const EbaySkeleton: FC<EbaySkeletonProps> = ({
     children,
-    a11yText = 'Loading...',
     className,
+    'aria-label': ariaLabel = 'Loading...',
+    color,
     ...rest
 }) => (
     <div
         role="img"
-        aria-label={a11yText}
-        className={classNames('skeleton', className)}
+        className={classNames('skeleton', color && `skeleton--${color}`, className)}
+        aria-label={ariaLabel}
         {...rest}
     >
         {children}
