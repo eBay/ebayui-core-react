@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import { nodeExternals } from "rollup-plugin-node-externals";
 import typescript from "@rollup/plugin-typescript";
+import { cjsInterop } from "vite-plugin-cjs-interop"
 
 // find directories in src that starts with 'ebay-'
 let componentEntries = fs
@@ -17,6 +18,18 @@ let componentEntries = fs
     });
 
 export default defineConfig({
+    plugins: [
+        // This plugin will automatically unwrap the default export from CJS dependencies that are specified in the list.
+        // https://github.com/eBay/ebayui-core-react/issues/420
+        cjsInterop({
+            // By default this plugin is only for SSR vite build, here we are in library mode, so we enable "client"
+            client: true,
+            dependencies: [
+                'makeup-expander',
+                'makeup-typeahead',
+            ]
+        })
+    ],
     build: {
         lib: {
             entry: componentEntries,
