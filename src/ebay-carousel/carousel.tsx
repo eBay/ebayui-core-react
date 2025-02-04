@@ -5,6 +5,7 @@ import CarouselList from './carousel-list'
 import { ListItemRef } from './types'
 import { getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
 import { debounce } from '../common/debounce'
+import { EbayIcon } from '../ebay-icon'
 
 export type CarouselProps = ComponentProps<'div'> & {
     className?: string;
@@ -14,6 +15,9 @@ export type CarouselProps = ComponentProps<'div'> & {
     itemsPerSlide?: number; // number of slides to be displayed
     a11yPreviousText?: string;
     a11yNextText?: string;
+    a11yPauseText?: string;
+    a11yPlayText?: string;
+    autoplay?: boolean | number;
     onNext?: (event: React.SyntheticEvent) => void;
     onPrevious?: (event: React.SyntheticEvent) => void;
     onScroll?: ({ index }) => void;
@@ -32,10 +36,15 @@ const EbayCarousel: FC<CarouselProps> = ({
     itemsPerSlide: _itemsPerSlide,
     a11yPreviousText,
     a11yNextText,
+    a11yPauseText,
+    a11yPlayText,
+    autoplay,
     onScroll = () => {},
     onNext = () => {},
     onPrevious = () => {},
     onSlide = () => {},
+    onPlay = () => {},
+    onPause = () => {},
     className,
     children,
     ...rest
@@ -86,16 +95,55 @@ const EbayCarousel: FC<CarouselProps> = ({
         setSlideWidth(containerWidth)
     }, [containerRef.current])
 
+    const [paused, setPaused] = useState(false)
+    useEffect(() => {
+        const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        setPaused(isReducedMotion)
+    }, [])
+
+    const togglePlayback = (event) => {
+        setPaused(!paused)
+        if (paused) {
+            onPlay(event)
+        } else {
+            onPause(event)
+        }
+    }
+
+    const updateActiveIndex = (direction, itemsToShow) => {
+        setActiveIndex((prevIndex) => {
+            const nextIndex = getNextIndex(
+                direction, prevIndex, itemsRef.current, slideWidth, itemsToShow)
+            const slide = getSlide(prevIndex, itemsToShow, nextIndex)
+            onSlide({ slide })
+            return nextIndex
+        })
+    }
+
+    const autoplayTimeout = typeof autoplay === 'number' ? autoplay : 4000
+    const isAutoplayEnabled =
+        typeof autoplay === 'boolean' ? autoplay : typeof autoplay === 'number'
+
+    useEffect(() => {
+        if (!isAutoplayEnabled || paused) {
+            return
+        }
+
+        const interval = setInterval(() => {
+            updateActiveIndex('RIGHT', itemsPerSlide)
+        }, autoplayTimeout)
+
+        return () => clearInterval(interval)
+    }, [isAutoplayEnabled, paused, itemsPerSlide])
+
     const handleControlClick = (event: SyntheticEvent<HTMLButtonElement>, { direction }) => {
-        const nextIndex = getNextIndex(direction, activeIndex, itemsRef.current, slideWidth, itemsPerSlide)
-        const slide = getSlide(activeIndex, itemsPerSlide, nextIndex)
-        setActiveIndex(nextIndex)
+        updateActiveIndex(direction, itemsPerSlide)
+
         if (direction === 'LEFT') {
             onPrevious(event)
         } else {
             onNext(event)
         }
-        onSlide({ slide })
     }
 
     return (
@@ -103,7 +151,8 @@ const EbayCarousel: FC<CarouselProps> = ({
             className={classNames('carousel', className,
                 {
                     'carousel--slides': itemsPerSlide,
-                    'carousel--peek': itemsPerSlide % 1 === 0
+                    'carousel--peek': itemsPerSlide % 1 === 0,
+                    'carousel__autoplay': isAutoplayEnabled
                 })}
             {...rest}>
             <div ref={containerRef} className="carousel__container">
@@ -118,6 +167,7 @@ const EbayCarousel: FC<CarouselProps> = ({
                     gap={gap}
                     itemsPerSlide={itemsPerSlide}
                     nextControlDisabled={nextControlDisabled}
+                    isAutoplayEnabled={isAutoplayEnabled}
                     activeIndex={activeIndex}
                     onScroll={onScroll}
                     onSetActiveIndex={setActiveIndex}
@@ -129,6 +179,16 @@ const EbayCarousel: FC<CarouselProps> = ({
                     label={a11yNextText}
                     disabled={nextControlDisabled}
                     onClick={handleControlClick} />
+
+                {isAutoplayEnabled ? (
+                    <button
+                        className="carousel__playback"
+                        type="button"
+                        onClick={togglePlayback}
+                        aria-label={paused ? a11yPlayText : a11yPauseText}>
+                        <EbayIcon name={paused ? 'play24' : 'pause24'} />
+                    </button>
+                ) : null}
             </div>
         </div>
     )

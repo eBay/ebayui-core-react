@@ -50,7 +50,6 @@ export const alterChildren = (
     const isStartOfSlide = itemsPerSlide ? index % itemsPerSlide === 0 : true
 
     return cloneElement(item, {
-        ...item.props,
         slideWidth,
         offset,
         ref: el => {
