@@ -8,14 +8,12 @@ export type EbaySkeletonProps = ComponentProps<'div'> & {
 const EbaySkeleton: FC<EbaySkeletonProps> = ({
     children,
     className,
-    'aria-label': ariaLabel = 'Loading...',
     color,
     ...rest
 }) => (
     <div
         role="img"
         className={classNames('skeleton', color && `skeleton--${color}`, className)}
-        aria-label={ariaLabel}
         {...rest}
     >
         {children}
