@@ -16,6 +16,7 @@ const meta: Meta<typeof EbayAccordion> = {
                 },
             },
             options: ["regular", "large"],
+            control: { type: 'select'}
         },
         autoCollapse: {
             type: "boolean",
