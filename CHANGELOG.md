@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.0.1
+
+### Patch Changes
+
+- [#421](https://github.com/eBay/ebayui-core-react/pull/421) [`aa31be6`](https://github.com/eBay/ebayui-core-react/commit/aa31be6e97508737ce62080d80da27c391e8312d) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - fix: use cjs interop to properly bundle makeup-js packages inside vite
+
 ## 8.0.0
 
 ### Major Changes
