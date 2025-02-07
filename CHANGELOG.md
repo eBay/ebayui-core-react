@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.0.2
+
+### Patch Changes
+
+- [#440](https://github.com/eBay/ebayui-core-react/pull/440) [`dbc5f54`](https://github.com/eBay/ebayui-core-react/commit/dbc5f545f5afcaa1362703bcc2196983b34b668d) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - fix(EbayFakeMenuButton): use btn-cell to add margin with chevron and action content
+
 ## 8.0.1
 
 ### Patch Changes
