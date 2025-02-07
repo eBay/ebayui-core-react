@@ -2,6 +2,7 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
 import Meta, { Continuous, ItemsPerSlide } from './index.stories'
+import { EbayCarousel, EbayCarouselItem } from '..'
 
 const ContinuousStory = composeStory(Continuous, Meta)
 const ItemsPerSlideStory = composeStory(ItemsPerSlide, Meta)
@@ -51,5 +52,32 @@ describe('ebay-carousel rendering', () => {
         const visibleItems = items.filter(item => item.getAttribute('aria-hidden'))
         // expect(visibleItems.length).toBe(3)
         expect(visibleItems.length).toBe(items.length)
+    })
+
+    describe('autoplay', () => {
+        jest.useFakeTimers()
+
+        it('should autoplay the carousel', () => {
+            render(
+                <div style={{ width: `300px`, maxWidth: `300px` }}>
+                    <EbayCarousel autoplay itemsPerSlide={1}>
+                        <EbayCarouselItem style={{ width: `300px` }}>Item 1</EbayCarouselItem>
+                        <EbayCarouselItem style={{ width: `300px` }}>Item 2</EbayCarouselItem>
+                        <EbayCarouselItem style={{ width: `300px` }}>Item 3</EbayCarouselItem>
+                    </EbayCarousel>
+                </div>
+            )
+            const firstItem = screen.getByText('Item 1')
+            const secondItem = screen.getByText('Item 2')
+
+            expect(firstItem.closest('li')).toHaveAttribute('aria-hidden', 'false')
+
+            // TODO: Update when using vitest browser mode as getBoundingClientRect() is not supported in JSDOM
+            // expect(secondItem.closest('li')).toHaveAttribute('aria-hidden', 'true')
+
+            jest.advanceTimersByTime(4000)
+            // expect(firstItem.closest('li')).toHaveAttribute('aria-hidden', 'true')
+            expect(secondItem.closest('li')).toHaveAttribute('aria-hidden', 'false')
+        })
     })
 })

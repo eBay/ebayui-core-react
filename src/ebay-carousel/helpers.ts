@@ -1,3 +1,4 @@
+import React from 'react'
 import { Children, cloneElement, ReactElement, ReactNode, RefObject } from 'react'
 import { ListItemRef, MovementDirection, RelativeRect } from './types'
 
@@ -155,4 +156,103 @@ export const getClosestIndex = (
     }
 
     return closest
+}
+
+/**
+ * This function will animate the carousel to loop back to the first slide and vice versa
+ */
+export function animateCarouselLoop({
+    direction,
+    nextIndex,
+    currentIndex,
+    itemsRef,
+    slideWidth,
+    gap,
+    onAnimationStart,
+    onAnimationEnd
+}: {
+    direction: 'RIGHT' | 'LEFT'
+    nextIndex: number
+    currentIndex: number
+    itemsRef: React.MutableRefObject<ListItemRef[]>
+    slideWidth: number
+    gap: number
+    onAnimationStart: () => void
+    onAnimationEnd: () => void
+}): void {
+    // When the next slide is the first one, we loop the carousel to the last slide
+    if (direction === 'RIGHT' && nextIndex < currentIndex) {
+        const lastSlide = itemsRef.current[currentIndex].element
+        let carouselList = lastSlide.closest('ul')
+
+        // Remove the animation first before moving the slides
+        carouselList.style.transition = 'none'
+
+        // Move all the slides before the first slide position
+        const lastSlideTranslate = getMaxOffset(itemsRef.current, slideWidth) + slideWidth + gap
+        for (let i = currentIndex; i > nextIndex; i--) {
+            itemsRef.current[i].element.style.transform = `translateX(${-lastSlideTranslate}px)`
+        }
+
+        // Move the focus of the carousel to the new position of the last slide
+        carouselList.style.transform = `translate3d(${slideWidth + gap}px, 0, 0)`
+
+        onAnimationStart()
+
+        requestAnimationFrame(() => {
+            // Re-enable the animation
+            carouselList.style.transition = ''
+
+            // Focus the carousel back to the first slide
+            carouselList.style.transform = `translate3d(0, 0, 0)`
+            carouselList = null
+        })
+
+        // When the animation ends, we remove the temporary position of the slides
+        carouselList.addEventListener('transitionend', () => {
+            requestAnimationFrame(() => {
+                for (let i = currentIndex; i > nextIndex; i--) {
+                    itemsRef.current[i].element.style.transform = ``
+                }
+                onAnimationEnd()
+            })
+        }, { once: true })
+    // When the next slide is the last one, we loop the carousel
+    } else if (direction === 'LEFT' && nextIndex > currentIndex) {
+        const firstSlide = itemsRef.current[currentIndex].element
+        let carouselList = firstSlide.closest('ul')
+
+        // Remove the animation first, before moving the slides
+        carouselList.style.transition = 'none'
+
+        // Move all the slides after the last slide
+        const firstSlideTranslate = getMaxOffset(itemsRef.current, slideWidth) + slideWidth + gap
+        for (let i = currentIndex; i < nextIndex; i++) {
+            itemsRef.current[i].element.style.transform = `translateX(${firstSlideTranslate}px)`
+        }
+
+        // Move the focus of the carousel to the new position of the first slide
+        carouselList.style.transform = `translate3d(${-firstSlideTranslate}px, 0, 0)`
+
+        onAnimationStart()
+
+        requestAnimationFrame(() => {
+            // Re-enable the animation
+            carouselList.style.transition = ''
+
+            // Focus the carousel back to the last slide
+            carouselList.style.transform = `translate3d(${-firstSlideTranslate + slideWidth + gap}px, 0, 0)`
+            carouselList = null
+        })
+
+        // When the animation ends, we remove the temporary position of the slides
+        carouselList.addEventListener('transitionend', () => {
+            requestAnimationFrame(() => {
+                for (let i = currentIndex; i < nextIndex; i++) {
+                    itemsRef.current[i].element.style.transform = ''
+                }
+                onAnimationEnd()
+            })
+        }, { once: true })
+    }
 }

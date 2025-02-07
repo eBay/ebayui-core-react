@@ -67,8 +67,8 @@ export const ItemsPerSlide: StoryObj<typeof EbayCarousel> = {
 
 export const Autoplay: StoryObj<typeof EbayCarousel> = {
     render: (args) => (
-        <EbayCarousel gap={16} autoplay {...args} itemsPerSlide={1}>
-            {Array(10)
+        <EbayCarousel gap={16} autoplay {...args} itemsPerSlide={args.itemsPerSlide || 1}>
+            {Array(3)
                 .fill(0)
                 .map((_, i) => (
                     <EbayCarouselItem

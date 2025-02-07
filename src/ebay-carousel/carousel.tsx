@@ -3,9 +3,13 @@ import classNames from 'classnames'
 import CarouselControlButton from './carousel-control-button'
 import CarouselList from './carousel-list'
 import { ListItemRef } from './types'
-import { getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
+import { animateCarouselLoop, getMaxOffset, getNextIndex, getOffset, getSlide } from './helpers'
 import { debounce } from '../common/debounce'
 import { EbayIcon } from '../ebay-icon'
+import reactDom from 'react-dom'
+
+// Make sure to support React 16
+const flushSync = reactDom.flushSync || (callback => callback())
 
 export type CarouselProps = ComponentProps<'div'> & {
     className?: string;
@@ -25,10 +29,6 @@ export type CarouselProps = ComponentProps<'div'> & {
     onPlay?: (event: React.SyntheticEvent) => void
     onPause?: (event: React.SyntheticEvent) => void
 };
-
-// TO-DO:
-// Image slides
-// Auto play (+ onPlay/onPause callbacks)
 
 const EbayCarousel: FC<CarouselProps> = ({
     gap = 16,
@@ -57,9 +57,10 @@ const EbayCarousel: FC<CarouselProps> = ({
     const itemCount = Children.count(children)
     const itemsPerSlide = Math.floor(_itemsPerSlide) || undefined
     const isSingleSlide = itemCount <= itemsPerSlide
-    const prevControlDisabled = isSingleSlide || offset === 0
+    const isAutoplayEnabled = Boolean(autoplay)
+    const prevControlDisabled = isSingleSlide || (offset === 0 && !isAutoplayEnabled)
     const nextControlDisabled =
-        isSingleSlide || (offset === getMaxOffset(itemsRef.current, slideWidth))
+        isSingleSlide || (offset === getMaxOffset(itemsRef.current, slideWidth) && !isAutoplayEnabled)
 
     const handleResize = () => {
         if (!containerRef.current) return
@@ -76,9 +77,15 @@ const EbayCarousel: FC<CarouselProps> = ({
         }
     }, [])
 
+    // During autoplay animation, we manually set the offset positions, so we temporarily disable
+    // until the animation is complete
+    const [disableOffsetCalculation, setDisableOffsetCalculation] = useState(false)
+
     useEffect(() => {
-        setOffset(getOffset(itemsRef.current, activeIndex, slideWidth))
-    }, [activeIndex, slideWidth])
+        if (!disableOffsetCalculation) {
+            setOffset(getOffset(itemsRef.current, activeIndex, slideWidth))
+        }
+    }, [activeIndex, slideWidth, disableOffsetCalculation])
 
     useEffect(() => {
         if (index >= 0 && index <= itemCount - 1) {
@@ -97,7 +104,7 @@ const EbayCarousel: FC<CarouselProps> = ({
 
     const [paused, setPaused] = useState(false)
     useEffect(() => {
-        const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        const isReducedMotion = Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches)
         setPaused(isReducedMotion)
     }, [])
 
@@ -110,25 +117,40 @@ const EbayCarousel: FC<CarouselProps> = ({
         }
     }
 
-    const updateActiveIndex = (direction, itemsToShow) => {
-        setActiveIndex((prevIndex) => {
-            const nextIndex = getNextIndex(
-                direction, prevIndex, itemsRef.current, slideWidth, itemsToShow)
-            const slide = getSlide(prevIndex, itemsToShow, nextIndex)
-            onSlide({ slide })
-            return nextIndex
-        })
-    }
+    // Use ref to keep track of the active index inside the interval callback
+    const activeIndexRef = useRef(activeIndex)
+    activeIndexRef.current = activeIndex
 
-    const autoplayTimeout = typeof autoplay === 'number' ? autoplay : 4000
-    const isAutoplayEnabled =
-        typeof autoplay === 'boolean' ? autoplay : typeof autoplay === 'number'
+    const updateActiveIndex = (direction, itemsToShow) => {
+        const currentIndex = activeIndexRef.current
+        const nextIndex = getNextIndex(
+            direction, currentIndex, itemsRef.current, slideWidth, itemsToShow)
+        const slide = getSlide(currentIndex, itemsToShow, nextIndex)
+        onSlide({ slide })
+
+        if (isAutoplayEnabled) {
+            animateCarouselLoop({
+                direction,
+                nextIndex,
+                currentIndex,
+                itemsRef,
+                slideWidth,
+                gap,
+                onAnimationStart: () => setDisableOffsetCalculation(true),
+                onAnimationEnd: () => setDisableOffsetCalculation(false)
+            })
+        }
+
+        // Use flushSync to update the active index synchronously so it properly trigger the animation on autoplay
+        flushSync(() => setActiveIndex(nextIndex))
+    }
 
     useEffect(() => {
         if (!isAutoplayEnabled || paused) {
             return
         }
 
+        const autoplayTimeout = typeof autoplay === 'number' ? autoplay : 4000
         const interval = setInterval(() => {
             updateActiveIndex('RIGHT', itemsPerSlide)
         }, autoplayTimeout)
