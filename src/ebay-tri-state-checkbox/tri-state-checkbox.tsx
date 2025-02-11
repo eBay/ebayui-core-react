@@ -10,7 +10,6 @@ type CheckboxState = 'true' | 'false' | 'mixed'
 type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'>
 type EbayTristateCheckboxProps = {
     checked?: CheckboxState,
-    indeterminate?: boolean,
     skipMixed?: boolean,
     size?: Size;
     onChange?: EbayChangeEventHandler<HTMLInputElement, { value: string | number, checked: CheckboxState }>;
@@ -33,60 +32,59 @@ const EbayTristateCheckbox: FC<InputProps & EbayTristateCheckboxProps> = ({
     inputRef,
     ...rest
 }) => {
-    const [isChecked, setChecked] = useState<CheckboxState>(checked || 'false')
+    const [checkboxState, setCheckboxState] = useState<CheckboxState>(checked || 'false')
     const onTriggerChange = () => {
-        if (isChecked === 'true') {
-            setChecked('false')
-        } else if (isChecked === 'false' && !skipMixed) {
-            setChecked('mixed')
+        if (checkboxState === 'true') {
+            setCheckboxState('false')
+        } else if (checkboxState === 'false' && !skipMixed) {
+            setCheckboxState('mixed')
         } else {
-            setChecked('true')
+            setCheckboxState('true')
         }
     }
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const input = e.target as EventTarget & HTMLInputElement
         onTriggerChange()
-        onChange(e, { value: input?.value, checked: isChecked })
+        onChange(e, { value: input?.value, checked: checkboxState })
     }
     const handleFocus = (e: FocusEvent<HTMLInputElement>) =>
-        onFocus(e, { value: e.target?.value, checked: isChecked })
+        onFocus(e, { value: e.target?.value, checked: checkboxState })
 
     const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
         const input = e.target as EventTarget & HTMLInputElement
-        onKeyDown(e, { value: input.value, checked: isChecked })
+        onKeyDown(e, { value: input.value, checked: checkboxState })
     }
 
     const containerClass = classNames('checkbox', className, { 'checkbox--large': size === 'large' })
 
-    const iconChecked = size === 'large' ?
-        <EbayIcon name="checkboxChecked24" className="checkbox__checked" /> :
-        <EbayIcon name="checkboxChecked18" className="checkbox__checked" />
-    const iconUnChecked = size === 'large' ?
-        <EbayIcon name="checkboxUnchecked24" className="checkbox__unchecked" /> :
-        <EbayIcon name="checkboxUnchecked18" className="checkbox__unchecked" />
-    const iconMixed = size === 'large' ?
-        <EbayIcon name="checkboxMixed24" /> :
-        <EbayIcon name="checkboxMixed18" />
+    let iconChecked = <EbayIcon name="checkboxChecked18" className="checkbox__checked" />
+    let iconUnchecked = <EbayIcon name="checkboxUnchecked18" className="checkbox__unchecked" />
+    let iconMixed = <EbayIcon name="checkboxMixed18" />
+    if (size === 'large') {
+        iconChecked = <EbayIcon name="checkboxChecked24" className="checkbox__checked" />
+        iconUnchecked = <EbayIcon name="checkboxUnchecked24" className="checkbox__unchecked" />
+        iconMixed = <EbayIcon name="checkboxMixed24" />
+    }
     const ebayLabel = findComponent(children, EbayLabel)
 
     const renderCheckboxIcon = () => {
-        if (isChecked === 'true') {
+        if (checkboxState === 'true') {
             return iconChecked
-        } else if (isChecked === 'mixed') {
+        } else if (checkboxState === 'mixed') {
             return iconMixed
         }
-        return iconUnChecked
+        return iconUnchecked
     }
     return (
         <>
             <span className={containerClass} style={{ ...style, alignItems: 'center' }}>
                 <input
                     {...rest}
-                    aria-checked={isChecked}
+                    aria-checked={checkboxState}
                     id={id}
                     className="checkbox__control"
                     type="checkbox"
-                    checked={isChecked === 'true'}
+                    checked={checkboxState === 'true'}
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onKeyDown={handleKeyDown}
