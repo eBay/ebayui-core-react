@@ -11,8 +11,8 @@ describe('<EbayCheckbox>', () => {
             const spy = jest.fn()
             render(<EbayTristateCheckbox aria-label="checkbox" value="123" onChange={spy} />)
             const input = getByRole('checkbox')
-            fireEvent.click(input)
-            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value: '123', checked: "mixed" })
+            fireEvent.click(input);
+            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value: '123', checked: "false" })
         })
     })
     describe('on checkbox-button focus', () => {

@@ -82,6 +82,7 @@ const EbayTristateCheckbox: FC<InputProps & EbayTristateCheckboxProps> = ({
             <span className={containerClass} style={{ ...style, alignItems: 'center' }}>
                 <input
                     {...rest}
+                    aria-checked={isChecked}
                     id={id}
                     className="checkbox__control"
                     type="checkbox"
