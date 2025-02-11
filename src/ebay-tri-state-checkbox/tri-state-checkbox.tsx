@@ -8,7 +8,7 @@ import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler
 type Size = 'default' | 'large'
 type CheckboxState = 'true' | 'false' | 'mixed'
 type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'>
-type EbayTristateCheckboxProps = {
+type EbayTriStateCheckboxProps = {
     checked?: CheckboxState,
     skipMixed?: boolean,
     size?: Size;
@@ -18,7 +18,7 @@ type EbayTristateCheckboxProps = {
     inputRef?: React.LegacyRef<HTMLInputElement>;
 }
 
-const EbayTristateCheckbox: FC<InputProps & EbayTristateCheckboxProps> = ({
+const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     id,
     size = 'default',
     className,
@@ -106,4 +106,4 @@ const EbayTristateCheckbox: FC<InputProps & EbayTristateCheckboxProps> = ({
     )
 }
 
-export default EbayTristateCheckbox
+export default EbayTriStateCheckbox
