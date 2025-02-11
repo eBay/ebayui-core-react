@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.0.3
+
+### Patch Changes
+
+- [#443](https://github.com/eBay/ebayui-core-react/pull/443) [`fda4f90`](https://github.com/eBay/ebayui-core-react/commit/fda4f90dbffbac58e6efb5e0e8975cc0512e0343) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - fix: use target es2015 instead of esnext for better compatibility
+
 ## 8.0.2
 
 ### Patch Changes
