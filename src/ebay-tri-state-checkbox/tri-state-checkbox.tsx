@@ -1,8 +1,6 @@
-import React, { ChangeEvent, cloneElement, ComponentProps, FC, FocusEvent, KeyboardEvent, useState } from 'react'
+import React, { ChangeEvent, ComponentProps, FC, FocusEvent, KeyboardEvent, useState } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
-import { EbayLabel, EbayLabelProps } from '../ebay-field'
-import { findComponent } from '../common/component-utils'
 import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
 
 type Size = 'default' | 'large'
@@ -10,6 +8,7 @@ type CheckboxState = 'true' | 'false' | 'mixed'
 type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'>
 type EbayTriStateCheckboxProps = {
     checked?: CheckboxState,
+    defaultChecked?: CheckboxState,
     skipMixed?: boolean,
     size?: Size;
     onChange?: EbayChangeEventHandler<HTMLInputElement, { value: string | number, checked: CheckboxState }>;
@@ -24,6 +23,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     className,
     style,
     checked,
+    defaultChecked = 'false' as CheckboxState,
     skipMixed = false,
     onChange = () => {},
     onFocus = () => {},
@@ -32,7 +32,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     inputRef,
     ...rest
 }) => {
-    const [checkboxState, setCheckboxState] = useState<CheckboxState>(checked || 'false')
+    const [checkboxState, setCheckboxState] = useState<CheckboxState>(checked || defaultChecked)
     const onTriggerChange = () => {
         if (checkboxState === 'true') {
             setCheckboxState('false')
@@ -43,7 +43,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
         }
     }
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const input = e.target as EventTarget & HTMLInputElement
+        const input = e.target
         onTriggerChange()
         onChange(e, { value: input?.value, checked: checkboxState })
     }
@@ -65,7 +65,6 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
         iconUnchecked = <EbayIcon name="checkboxUnchecked24" className="checkbox__unchecked" />
         iconMixed = <EbayIcon name="checkboxMixed24" />
     }
-    const ebayLabel = findComponent(children, EbayLabel)
 
     const renderCheckboxIcon = () => {
         if (checkboxState === 'true') {
@@ -76,33 +75,23 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
         return iconUnchecked
     }
     return (
-        <>
-            <span className={containerClass} style={{ ...style, alignItems: 'center' }}>
-                <input
-                    {...rest}
-                    aria-checked={checkboxState}
-                    id={id}
-                    className="checkbox__control"
-                    type="checkbox"
-                    checked={checkboxState === 'true'}
-                    onChange={handleChange}
-                    onFocus={handleFocus}
-                    onKeyDown={handleKeyDown}
-                    ref={inputRef}
-                />
-                <span className="checkbox__icon" hidden>
-                    {renderCheckboxIcon()}
-                </span>
+        <span className={containerClass} style={{ ...style }}>
+            <input
+                {...rest}
+                aria-checked={checkboxState}
+                id={id}
+                className="checkbox__control"
+                type="checkbox"
+                checked={checkboxState === 'true'}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onKeyDown={handleKeyDown}
+                ref={inputRef}
+            />
+            <span className="checkbox__icon" hidden>
+                {renderCheckboxIcon()}
             </span>
-            {ebayLabel ?
-                cloneElement<EbayLabelProps>(ebayLabel, {
-                    ...ebayLabel.props,
-                    position: 'end',
-                    htmlFor: id
-                }) :
-                children
-            }
-        </>
+        </span>
     )
 }
 
