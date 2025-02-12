@@ -52,6 +52,7 @@ const EbayCarousel: FC<CarouselProps> = ({
     const [activeIndex, setActiveIndex] = useState(index)
     const [slideWidth, setSlideWidth] = useState(0)
     const [offset, setOffset] = useState(0)
+    const [isUserInteracting, setIsUserInteracting] = useState(false)
     const containerRef = useRef<HTMLDivElement | null>(null)
     const itemsRef = useRef<Array<ListItemRef | null>>([])
     const itemCount = Children.count(children)
@@ -146,7 +147,7 @@ const EbayCarousel: FC<CarouselProps> = ({
     }
 
     useEffect(() => {
-        if (!isAutoplayEnabled || paused) {
+        if (!isAutoplayEnabled || paused || isUserInteracting) {
             return
         }
 
@@ -156,7 +157,7 @@ const EbayCarousel: FC<CarouselProps> = ({
         }, autoplayTimeout)
 
         return () => clearInterval(interval)
-    }, [isAutoplayEnabled, paused, itemsPerSlide])
+    }, [isAutoplayEnabled, paused, itemsPerSlide, isUserInteracting])
 
     const handleControlClick = (event: SyntheticEvent<HTMLButtonElement>, { direction }) => {
         updateActiveIndex(direction, itemsPerSlide)
@@ -168,6 +169,9 @@ const EbayCarousel: FC<CarouselProps> = ({
         }
     }
 
+    const handleStartInteraction = () => setIsUserInteracting(true)
+    const handleEndInteraction = () => setIsUserInteracting(false)
+
     return (
         <div
             className={classNames('carousel', className,
@@ -177,7 +181,15 @@ const EbayCarousel: FC<CarouselProps> = ({
                     'carousel__autoplay': isAutoplayEnabled
                 })}
             {...rest}>
-            <div ref={containerRef} className="carousel__container">
+            <div
+                ref={containerRef}
+                className="carousel__container"
+                onFocusCapture={handleStartInteraction}
+                onMouseEnter={handleStartInteraction}
+                onTouchStartCapture={handleStartInteraction}
+                onBlurCapture={handleEndInteraction}
+                onMouseLeave={handleEndInteraction}
+                onTouchEndCapture={handleEndInteraction}>
                 <CarouselControlButton
                     label={a11yPreviousText}
                     type="prev"
