@@ -6,7 +6,7 @@ import { EbayTriStateCheckbox } from '../index'
 
 const meta: Meta<typeof EbayTriStateCheckbox> = {
     component: EbayTriStateCheckbox,
-    title: 'form input/ebay-tristate-checkbox',
+    title: 'form input/ebay-tri-state-checkbox',
     argTypes: {
         checked: {
             options: ["false", "mixed", "true"],
