@@ -1,7 +1,6 @@
 import React, { useState, useRef, ChangeEvent } from 'react'
 import { StoryFn, Meta } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
-import { EbayLabel } from '../../ebay-field'
+import { EbayField, EbayLabel } from '../../ebay-field'
 import { EbayTriStateCheckbox } from '../index'
 
 const meta: Meta<typeof EbayTriStateCheckbox> = {
@@ -37,82 +36,68 @@ const meta: Meta<typeof EbayTriStateCheckbox> = {
             },
         },
         onChange: {
-            action: "on-change",
+            action: "onChange",
             description: "Triggered on change",
             table: {
                 category: "Events",
                 defaultValue: {
-                    summary: "{ originalEvent, value, checked }",
+                    summary: "originalEvent, { value, checked }",
                 },
-            },
+            }
         },
         onFocus: {
-            action: "on-focus",
+            action: "onFocus",
             description: "Triggered on focus",
             table: {
                 category: "Events",
                 defaultValue: {
-                    summary: "{ originalEvent, value }",
+                    summary: "originalEvent, { value, checked }",
                 },
-            },
+            }
         },
+        onKeyDown: {
+            action: "onKeydown",
+            description: "Triggered on key down",
+            table: {
+                category: "Events",
+                defaultValue: {
+                    summary: "originalEvent, { value, checked }",
+                },
+            }
+        }
     },
 }
 
 export default meta
 
 export const Default: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
-    <>
-        <p style={{ alignItems : "center" }}>
-            <EbayTriStateCheckbox
-                {...args}
-                value="123"
-                checked="mixed"
-                id="checkbox-11"
-                onChange={(e, props) => action('onChange')(e, props)}
-                onFocus={(e, props) => action('onFocus')(e, props)}
-                onKeyDown={(e, props) => action('onKeyDown')(e, props)}
-            />
-        </p>
-        <p style={{ alignItems : "center" }}>
-            <EbayTriStateCheckbox {...args} value="123" id="checkbox-12" size="large" />
-        </p>
-    </>
-)
-
-export const WithLabel: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
-    <>
-    <p style={{ alignItems : "center" }}>
         <EbayTriStateCheckbox
-            {...args}
             value="123"
             checked="mixed"
             id="checkbox-11"
-            onChange={(e, props) => action('onChange')(e, props)}
-            onFocus={(e, props) => action('onFocus')(e, props)}
-            onKeyDown={(e, props) => action('onKeyDown')(e, props)}
         />
-        <EbayLabel className="field__label field__label--end" htmlFor="checkbox-11">Default</EbayLabel>
-    </p>
-    <p style={{ alignItems : "center" }}>
-        <EbayTriStateCheckbox {...args} value="123" id="checkbox-12" size="large" />
-        <EbayLabel className="field__label field__label--end" htmlFor="checkbox-12">Large</EbayLabel>
-    </p>
-</>
+)
+
+export const WithLabel: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
+        <EbayField>
+            <EbayTriStateCheckbox
+                {...args}
+                value="123"
+                id="checkbox-11"
+            />
+            <EbayLabel className="field__label field__label--end" htmlFor="checkbox-11">Default</EbayLabel>
+        </EbayField>
 )
 
 export const Disabled: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
-    <p style={{ alignItems : "center" }}>
+    <EbayField>
         <EbayTriStateCheckbox
             {...args}
             value="123"
             disabled
             id="checkbox-11"
-            onChange={(e, props) => action('onChange')(e, props)}
-            onFocus={(e, props) => action('onFocus')(e, props)}
-            onKeyDown={(e, props) => action('onKeyDown')(e, props)}
         />
         <EbayLabel className="field__label--disabled" style={{ marginLeft: "8px" }} htmlFor="checkbox-11">Default</EbayLabel>
-    </p>
+    </EbayField>
 )
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import "@testing-library/jest-dom"
 import { fireEvent, render, screen } from '@testing-library/react'
 import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 import { EbayTriStateCheckbox } from '../index'
@@ -7,12 +8,17 @@ const { getByRole } = screen
 
 describe('<EbayCheckbox>', () => {
     describe('on checkbox-button click', () => {
-        it('should fire an event', () => {
+        it('should fire an event and check which icon is rendered', async() => {
             const spy = jest.fn()
-            render(<EbayTriStateCheckbox aria-label="checkbox" value="123" onChange={spy} />)
+            const { container } = render(<EbayTriStateCheckbox aria-label="checkbox" value="123" onChange={spy} />)
             const input = getByRole('checkbox')
             fireEvent.click(input);
             expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value: '123', checked: "false" })
+            expect(input).toHaveAttribute('aria-checked', 'mixed')
+            fireEvent.click(input)
+            expect(input).toHaveAttribute('aria-checked', 'true')
+            const iconSVG = container.querySelector(`.checkbox__checked`)
+            expect(iconSVG).toBeInTheDocument()
         })
     })
     describe('on checkbox-button focus', () => {

@@ -17,6 +17,8 @@ type EbayTriStateCheckboxProps = {
     inputRef?: React.LegacyRef<HTMLInputElement>;
 }
 
+const isControlled = (checked: CheckboxState | undefined): checked is CheckboxState => checked !== undefined
+
 const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     id,
     size = 'default',
@@ -32,7 +34,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     inputRef,
     ...rest
 }) => {
-    const [checkboxState, setCheckboxState] = useState<CheckboxState>(checked || defaultChecked)
+    const [checkboxState, setCheckboxState] = useState<CheckboxState>(defaultChecked)
     const onTriggerChange = () => {
         if (checkboxState === 'true') {
             setCheckboxState('false')
@@ -67,9 +69,10 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     }
 
     const renderCheckboxIcon = () => {
-        if (checkboxState === 'true') {
+        const currentCheckboxState = isControlled(checked) ? checked : checkboxState
+        if (currentCheckboxState === 'true') {
             return iconChecked
-        } else if (checkboxState === 'mixed') {
+        } else if (currentCheckboxState === 'mixed') {
             return iconMixed
         }
         return iconUnchecked
@@ -82,7 +85,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
                 id={id}
                 className="checkbox__control"
                 type="checkbox"
-                checked={checkboxState === 'true'}
+                checked={isControlled(checked) ? checked === 'true' : checkboxState === 'true'}
                 onChange={handleChange}
                 onFocus={handleFocus}
                 onKeyDown={handleKeyDown}
