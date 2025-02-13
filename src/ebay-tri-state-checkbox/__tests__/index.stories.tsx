@@ -9,7 +9,7 @@ const meta: Meta<typeof EbayTriStateCheckbox> = {
     argTypes: {
         checked: {
             options: ["false", "mixed", "true"],
-            type: { category: "Options" },
+            control: { type: 'select'},
             description:
                 'Either "true", "false" or "mixed". Defaults to "false". Changes the checkbox state to the given one depdending on the checked state.',
             table: {
@@ -26,7 +26,7 @@ const meta: Meta<typeof EbayTriStateCheckbox> = {
         },
         size: {
             options: ["default", "large"],
-            type: { category: "Options" },
+            control: { type: 'select'},
             description:
                 'Either "large" or "default". Sets the checkbox icon. Default is regular. For mweb this should be set to large. (Note: The dimensions of the checkbox will not change, but only the icon)',
             table: {
