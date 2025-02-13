@@ -85,7 +85,7 @@ export const WithLabel: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
                 value="123"
                 id="checkbox-11"
             />
-            <EbayLabel className="field__label field__label--end" htmlFor="checkbox-11">Default</EbayLabel>
+            <EbayLabel className="field__label field__label--end" htmlFor="checkbox-11">Label</EbayLabel>
         </EbayField>
 )
 

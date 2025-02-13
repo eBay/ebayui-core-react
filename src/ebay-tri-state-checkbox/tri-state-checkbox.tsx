@@ -35,18 +35,18 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     ...rest
 }) => {
     const [checkboxState, setCheckboxState] = useState<CheckboxState>(defaultChecked)
-    const onTriggerChange = () => {
-        if (checkboxState === 'true') {
-            setCheckboxState('false')
-        } else if (checkboxState === 'false' && !skipMixed) {
-            setCheckboxState('mixed')
-        } else {
-            setCheckboxState('true')
-        }
-    }
+    const currentCheckboxState = isControlled(checked) ? checked : checkboxState
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const input = e.target
-        onTriggerChange()
+        let newCheckboxState: CheckboxState = checkboxState
+        if (checkboxState === 'true') {
+            newCheckboxState = 'false'
+        } else if (checkboxState === 'false' && !skipMixed) {
+            newCheckboxState = 'mixed'
+        } else {
+            newCheckboxState = 'true'
+        }
+        setCheckboxState(newCheckboxState)
         onChange(e, { value: input?.value, checked: checkboxState })
     }
     const handleFocus = (e: FocusEvent<HTMLInputElement>) =>
@@ -69,7 +69,6 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     }
 
     const renderCheckboxIcon = () => {
-        const currentCheckboxState = isControlled(checked) ? checked : checkboxState
         if (currentCheckboxState === 'true') {
             return iconChecked
         } else if (currentCheckboxState === 'mixed') {
@@ -85,7 +84,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
                 id={id}
                 className="checkbox__control"
                 type="checkbox"
-                checked={isControlled(checked) ? checked === 'true' : checkboxState === 'true'}
+                checked={currentCheckboxState === 'true'}
                 onChange={handleChange}
                 onFocus={handleFocus}
                 onKeyDown={handleKeyDown}
