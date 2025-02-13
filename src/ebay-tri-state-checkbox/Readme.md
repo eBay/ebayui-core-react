@@ -36,9 +36,7 @@ import { EbaySvg } from "@ebay/ui-core-react/ebay-svg";
 ```jsx
 import { EbayLabel } from '@ebay/ui-core-react/ebay-field';
 
-<EbayTristateCheckbox id="checkbox-1">
-    <EbayLabel>Remember me!</EbayLabel>
-</EbayTristateCheckbox>
+<EbayTristateCheckbox id="checkbox-1" size="large">
 ```
 
 ## Attributes
