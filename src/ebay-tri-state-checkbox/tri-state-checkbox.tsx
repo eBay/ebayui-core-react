@@ -38,9 +38,9 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const input = e.target
         let newCheckboxState: CheckboxState = checkboxState
-        if (checkboxState === 'true') {
+        if (currentCheckboxState === 'true') {
             newCheckboxState = 'false'
-        } else if (checkboxState === 'false' && !skipMixed) {
+        } else if (currentCheckboxState === 'false' && !skipMixed) {
             newCheckboxState = 'mixed'
         } else {
             newCheckboxState = 'true'
@@ -49,11 +49,11 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
         setCheckboxState(newCheckboxState)
     }
     const handleFocus = (e: FocusEvent<HTMLInputElement>) =>
-        onFocus(e, { value: e.target?.value, checked: checkboxState })
+        onFocus(e, { value: e.target?.value, checked: currentCheckboxState })
 
     const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
         const input = e.target as EventTarget & HTMLInputElement
-        onKeyDown(e, { value: input.value, checked: checkboxState })
+        onKeyDown(e, { value: input.value, checked: currentCheckboxState })
     }
 
     const containerClass = classNames('checkbox', className, { 'checkbox--large': size === 'large' })
