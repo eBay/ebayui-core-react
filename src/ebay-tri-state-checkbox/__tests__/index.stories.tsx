@@ -73,18 +73,16 @@ export const Default: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
     />
 )
 
-export const DefaultControlled: StoryFn<typeof EbayTriStateCheckbox> = (args) => {
-    return (
-        <EbayTriStateCheckbox
-            {...args}
-            checked="mixed"
-            value="123"
-            id="checkbox-11"
-        />
-    )
-}
+export const DefaultControlled: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
+    <EbayTriStateCheckbox
+        {...args}
+        checked="mixed"
+        value="123"
+        id="checkbox-11"
+    />
+)
 DefaultControlled.argTypes = {
-    checked: { table: { disable: true } }, // Disabling `checked` in controls panel
+    checked: { table: { disable: true } }, // Disabling `checked` in controls panel for controlled component
 };
 
 export const WithLabel: StoryFn<typeof EbayTriStateCheckbox> = (args) => (

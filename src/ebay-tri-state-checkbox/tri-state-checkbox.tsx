@@ -2,9 +2,8 @@ import React, { ChangeEvent, ComponentProps, FC, FocusEvent, KeyboardEvent, useS
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
+import { CheckboxState, Size } from './types'
 
-type Size = 'default' | 'large'
-type CheckboxState = 'true' | 'false' | 'mixed'
 type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'>
 type EbayTriStateCheckboxProps = {
     checked?: CheckboxState,
@@ -46,8 +45,8 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
         } else {
             newCheckboxState = 'true'
         }
-        setCheckboxState(newCheckboxState)
         onChange(e, { value: input?.value, checked: newCheckboxState })
+        setCheckboxState(newCheckboxState)
     }
     const handleFocus = (e: FocusEvent<HTMLInputElement>) =>
         onFocus(e, { value: e.target?.value, checked: checkboxState })
