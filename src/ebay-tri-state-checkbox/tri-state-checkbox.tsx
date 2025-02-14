@@ -47,7 +47,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
             newCheckboxState = 'true'
         }
         setCheckboxState(newCheckboxState)
-        onChange(e, { value: input?.value, checked: checkboxState })
+        onChange(e, { value: input?.value, checked: newCheckboxState })
     }
     const handleFocus = (e: FocusEvent<HTMLInputElement>) =>
         onFocus(e, { value: e.target?.value, checked: checkboxState })

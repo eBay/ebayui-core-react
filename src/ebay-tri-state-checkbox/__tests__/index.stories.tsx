@@ -11,12 +11,7 @@ const meta: Meta<typeof EbayTriStateCheckbox> = {
             options: ["false", "mixed", "true"],
             control: { type: 'select'},
             description:
-                'Either "true", "false" or "mixed". Defaults to "false". Changes the checkbox state to the given one depdending on the checked state.',
-            table: {
-                defaultValue: {
-                    summary: "false",
-                },
-            },
+                'Either "true", "false" or "mixed". Changes the checkbox state to the given one depdending on the checked state.'
         },
         skipMixed: {
             type: "boolean",
@@ -71,22 +66,36 @@ const meta: Meta<typeof EbayTriStateCheckbox> = {
 export default meta
 
 export const Default: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
-        <EbayTriStateCheckbox
-            value="123"
-            checked="mixed"
-            id="checkbox-11"
-        />
+    <EbayTriStateCheckbox
+        {...args}
+        value="123"
+        id="checkbox-11"
+    />
 )
 
+export const DefaultControlled: StoryFn<typeof EbayTriStateCheckbox> = (args) => {
+    return (
+        <EbayTriStateCheckbox
+            {...args}
+            checked="mixed"
+            value="123"
+            id="checkbox-11"
+        />
+    )
+}
+DefaultControlled.argTypes = {
+    checked: { table: { disable: true } }, // Disabling `checked` in controls panel
+};
+
 export const WithLabel: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
-        <EbayField>
-            <EbayTriStateCheckbox
-                {...args}
-                value="123"
-                id="checkbox-11"
-            />
-            <EbayLabel className="field__label field__label--end" htmlFor="checkbox-11">Label</EbayLabel>
-        </EbayField>
+    <EbayField>
+        <EbayTriStateCheckbox
+            {...args}
+            value="123"
+            id="checkbox-11"
+        />
+        <EbayLabel className="field__label field__label--end" htmlFor="checkbox-11">Label</EbayLabel>
+    </EbayField>
 )
 
 export const Disabled: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
@@ -97,7 +106,7 @@ export const Disabled: StoryFn<typeof EbayTriStateCheckbox> = (args) => (
             disabled
             id="checkbox-11"
         />
-        <EbayLabel className="field__label--disabled" style={{ marginLeft: "8px" }} htmlFor="checkbox-11">Default</EbayLabel>
+        <EbayLabel className="field__label--disabled" style={{ marginLeft: "8px" }} htmlFor="checkbox-11">Label</EbayLabel>
     </EbayField>
 )
 

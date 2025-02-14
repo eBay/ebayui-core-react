@@ -13,7 +13,7 @@ describe('<EbayCheckbox>', () => {
             const { container } = render(<EbayTriStateCheckbox aria-label="checkbox" value="123" onChange={spy} />)
             const input = getByRole('checkbox')
             fireEvent.click(input);
-            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value: '123', checked: "false" })
+            expect(spy).toHaveBeenCalledWith(eventOfType('change'), { value: '123', checked: "mixed" })
             expect(input).toHaveAttribute('aria-checked', 'mixed')
             fireEvent.click(input)
             expect(input).toHaveAttribute('aria-checked', 'true')
@@ -37,6 +37,16 @@ describe('<EbayCheckbox>', () => {
             const input = getByRole('checkbox')
             fireEvent.keyDown(input)
             expect(spy).toHaveBeenCalledWith(eventOfType('keydown'), { value: '123', checked: "false" })
+        })
+    })
+    describe('on checkbox-button click', () => {
+        it('should fire an event and check which icon is rendered for controlled component', async() => {
+            const spy = jest.fn()
+            const { container } = render(<EbayTriStateCheckbox aria-label="checkbox" checked="false" value="123" onChange={spy} />)
+            const input = getByRole('checkbox')
+            fireEvent.click(input);
+            const iconSVG = container.querySelector(`.checkbox__unchecked`)
+            expect(iconSVG).toBeInTheDocument()
         })
     })
 })
