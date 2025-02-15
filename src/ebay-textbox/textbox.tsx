@@ -1,7 +1,7 @@
 import React, {
     cloneElement, ComponentProps, FC, Ref,
     ChangeEvent, FocusEvent, KeyboardEvent, MouseEvent, SyntheticEvent,
-    useEffect, useState
+    useEffect, useState, LegacyRef
 } from 'react'
 import classNames from 'classnames'
 import { findComponent, withForwardRef } from '../common/component-utils'
@@ -65,7 +65,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
     value: controlledValue,
     forwardedRef,
     inputSize = 'default',
-    floatingLabel,
+    floatingLabel: floatingLabelText,
     children,
     placeholder,
     opaqueLabel,
@@ -73,22 +73,10 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
 }) => {
     const [value, setValue] = useState(defaultValue)
     const [inputValue, setInputValue] = useState(defaultValue)
-    const {
-        label,
-        Container,
-        onBlur: onFloatingLabelBlur,
-        onFocus: onFloatingLabelFocus,
-        ref,
-        placeholder: floatingLabelPlaceholder
-    } = useFloatingLabel({
-        ref: forwardedRef,
-        inputId: rest.id,
-        className: rest.className,
+    const floatingLabel = useFloatingLabel({
+        text: floatingLabelText,
         disabled: rest.disabled,
-        label: floatingLabel,
-        inputSize,
-        inputValue: controlledValue || inputValue,
-        placeholder,
+        size: inputSize,
         invalid,
         type,
         opaqueLabel,
@@ -97,7 +85,6 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
 
     const handleFocus = (event?: FocusEvent<HTMLInputElement & HTMLTextAreaElement>) => {
         onFocus(event, { value: event?.target?.value || defaultValue })
-        onFloatingLabelFocus()
     }
 
     const handleBlur = (event: FocusEvent<HTMLInputElement & HTMLTextAreaElement>) => {
@@ -107,7 +94,6 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
             onChange(event, { value: newValue })
             setValue(newValue)
         }
-        onFloatingLabelBlur()
     }
 
     const handleKeyPress = (event?: KeyboardEvent<HTMLInputElement & HTMLTextAreaElement>) => {
@@ -169,8 +155,8 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
     })
 
     return (
-        <Container>
-            {label}
+        <floatingLabel.Container>
+            <floatingLabel.Label htmlFor={rest.id} />
             <Wrapper className={wrapperClassName}>
                 {prefixIcon}
                 {prefixText}
@@ -189,8 +175,8 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
                     onKeyDown={handleKeyDown}
                     onInvalid={handleInvalid}
                     autoFocus={autoFocus}
-                    ref={ref}
-                    placeholder={floatingLabelPlaceholder}
+                    ref={forwardedRef as LegacyRef<HTMLTextAreaElement> & LegacyRef<HTMLInputElement>}
+                    placeholder={placeholder}
                 />
                 {postfixText}
                 {postfixIcon && cloneElement(postfixIcon, {
@@ -202,7 +188,7 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
                     }
                 })}
             </Wrapper>
-        </Container>
+        </floatingLabel.Container>
     )
 }
 
