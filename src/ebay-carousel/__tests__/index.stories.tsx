@@ -59,8 +59,34 @@ export const Continuous: StoryObj<typeof EbayCarousel> = {
 
 export const ItemsPerSlide: StoryObj<typeof EbayCarousel> = {
     render: (args) => (
-        <EbayCarousel gap={16} {...args} itemsPerSlide={3}>
+        <EbayCarousel gap={16} {...args}>
             {items}
+        </EbayCarousel>
+    )
+}
+
+export const Autoplay: StoryObj<typeof EbayCarousel> = {
+    render: (args) => (
+        <EbayCarousel gap={16} autoplay {...args} itemsPerSlide={args.itemsPerSlide || 1}>
+            {Array(3)
+                .fill(0)
+                .map((_, i) => (
+                    <EbayCarouselItem
+                        style={{
+                            color: '#cdf4fd',
+                            background: '#a1208b',
+                            fontSize: '36px',
+                            fontWeight: 'bold',
+                            width: '330px',
+                            height: '330px',
+                            lineHeight: '330px',
+                            textAlign: 'center'
+                        }}
+                        key={i}
+                    >
+                        Card {i + 1}
+                    </EbayCarouselItem>
+                ))}
         </EbayCarousel>
     )
 }

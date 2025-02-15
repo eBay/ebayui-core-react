@@ -33,6 +33,7 @@ const EbayCarouselItem: FC<CarouselItemProps> = ({ slideWidth, offset, forwarded
         setIsVisible(fullyVisible)
 
         return {
+            element: itemRef.current,
             left,
             right,
             fullyVisible

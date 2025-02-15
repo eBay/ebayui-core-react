@@ -15,6 +15,7 @@ type CarouselListProps = {
     offset: number;
     activeIndex: number;
     nextControlDisabled?: boolean;
+    isAutoplayEnabled?: boolean;
     className?: string;
     itemsRef?: RefObject<Array<ListItemRef | null>>;
     children: ReactNode;
@@ -29,6 +30,7 @@ const CarouselList: FC<CarouselListProps> = ({
     offset,
     activeIndex,
     nextControlDisabled,
+    isAutoplayEnabled,
     className,
     itemsRef,
     children,
@@ -86,7 +88,7 @@ const CarouselList: FC<CarouselListProps> = ({
 
     return (
         <div className={classNames('carousel__viewport', {
-            'carousel__viewport--mask': !nextControlDisabled
+            'carousel__viewport--mask': !nextControlDisabled && !isAutoplayEnabled
         }, className)}>
             <ul
                 className="carousel__list"
