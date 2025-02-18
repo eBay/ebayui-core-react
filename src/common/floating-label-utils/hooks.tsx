@@ -41,12 +41,10 @@ export function useFloatingLabel({
     // This effect needs to be defined before the initialization effect
     // as it is only intended for subsequent updates
     useLayoutEffect(() => {
-        if (floatingLabel.current) {
-            floatingLabel.current.refresh()
-        }
+        floatingLabel.current?.refresh()
     })
 
-    // Use layout effect to avoid flicker of floating label
+    // Use layout effect to avoid flickering of floating label
     useLayoutEffect(() => {
         if (!text || type === 'date') {
             return
@@ -54,13 +52,14 @@ export function useFloatingLabel({
 
         if (containerRef.current) {
             floatingLabel.current = new FloatingLabel(containerRef.current)
+
             onMount()
         }
 
         return () => {
             floatingLabel.current?.destroy()
         }
-    }, [])
+    }, [text, type])
 
     const containerClassName = classNames(`floating-label`, {
         'floating-label--large': size === `large`,
@@ -98,7 +97,7 @@ export function useFloatingLabel({
         ({ className, ...props }) => (
             <label {...props} className={classNames(className, labelClassName)}>{text}</label>
         ),
-        [labelClassName]
+        [labelClassName, text]
     )
 
     if (!text) {

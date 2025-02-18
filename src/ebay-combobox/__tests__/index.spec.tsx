@@ -141,6 +141,41 @@ describe('<EbayCombobox />', () => {
         expect(option2).toHaveAttribute('aria-selected', 'false')
     })
 
+    it('should render the floating label', () => {
+        renderCombobox({ floatingLabel: 'Label' })
+        expect(screen.getByText('Label')).toBeInTheDocument()
+    })
+
+    it('should render the floating label on update', () => {
+        const { rerender } = renderCombobox({ floatingLabel: 'Label' })
+        expect(screen.getByText('Label')).toBeInTheDocument()
+
+        const input = screen.getByRole('combobox')
+        userEvent.click(input)
+
+        rerender(<EbayCombobox floatingLabel="New Label" />)
+        expect(screen.getByText('New Label')).toBeInTheDocument()
+    })
+
+    it('should render the floating label on update when initial value is not set', () => {
+        const { rerender } = renderCombobox()
+
+        rerender(<EbayCombobox floatingLabel="New Label" />)
+        expect(screen.getByText('New Label')).toBeInTheDocument()
+    })
+
+    it('should add the "floating-label__label--focus" class on focus after a floatingLabel update', async() => {
+        const { rerender } = renderCombobox()
+
+        rerender(<EbayCombobox floatingLabel="Label" />)
+        rerender(<EbayCombobox floatingLabel="New Label" />)
+        const input = screen.getByRole('combobox')
+        await userEvent.tab()
+        expect(document.activeElement).toBe(input)
+
+        expect(screen.getByText('New Label')).toHaveClass('floating-label__label--focus')
+    })
+
     describe('event handlers', () => {
         it('should call EbayComboboxButton onClick event handler when clicked', async() => {
             const onClick = jest.fn()
@@ -410,6 +445,15 @@ describe('<EbayCombobox />', () => {
             await userEvent.click(option)
 
             expect(onClick).toHaveBeenCalledTimes(1)
+        })
+
+        it('should call onFloatingLabelInit on floating label init and update', () => {
+            const onFloatingLabelInit = jest.fn()
+            const { rerender } = renderCombobox({ floatingLabel: 'Label', onFloatingLabelInit })
+
+            expect(onFloatingLabelInit).toHaveBeenCalledTimes(1)
+            rerender(<EbayCombobox floatingLabel="New Label" onFloatingLabelInit={onFloatingLabelInit} />)
+            expect(onFloatingLabelInit).toHaveBeenCalledTimes(2)
         })
     })
 })
