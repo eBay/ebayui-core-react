@@ -5,7 +5,7 @@ import { EbayCombobox, EbayComboboxButton } from '../index';
 import { EbayIcon } from '../../ebay-icon';
 import EbayComboboxOption from '../combobox-option';
 import countries from './countries.json';
-import { OnSelectHandler } from '../types';
+import { ComboboxSelectHandler } from '../types';
 
 const meta: Meta<typeof EbayCombobox> = {
     component: EbayCombobox,
@@ -191,7 +191,7 @@ export const SearchFiltering: StoryFn<typeof EbayCombobox> = (args) => {
         setAutocomplete('list')
     }
 
-    const handleSelect: OnSelectHandler = (event, data) => {
+    const handleSelect: ComboboxSelectHandler = (event, data) => {
         setValue(data.currentInputValue)
     }
 

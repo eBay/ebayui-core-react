@@ -144,14 +144,14 @@ export function useExpander<T extends HTMLElement>({
 type AutoIndexType =
     'none' | 'current' | 'interactive' | 'ariaChecked' | 'ariaSelected' | 'ariaSelectedOrInteractive' | number
 
-export type ActiveDescendantOnChangeHandler = (event: ActiveDeschendantChangeEvent, data: { toIndex: number }) => void
+export type ActiveDescendantChangeHandler = (event: ActiveDescendantChangeEvent, data: { toIndex: number }) => void
 
 export type ActiveDescendantHookArgs = {
     ref: React.MutableRefObject<HTMLElement>,
     focusElementRef?: React.MutableRefObject<HTMLElement>,
     itemContainerRef?: React.MutableRefObject<HTMLElement>,
     disabled?: boolean,
-    onChange?: ActiveDescendantOnChangeHandler,
+    onChange?: ActiveDescendantChangeHandler,
     options: {
         activeDescendantClassName: string;
         autoInit?: AutoIndexType;
@@ -168,7 +168,7 @@ export type ActiveDescendantHookReturn = {
     getIndex: () => number;
 }
 
-export interface ActiveDeschendantChangeEvent extends Event {
+export interface ActiveDescendantChangeEvent extends Event {
     detail: {
         toIndex: number
     }
@@ -185,7 +185,7 @@ export function useActiveDescendant({
     const activeDescendantRef = useRef<typeof createLinear>()
 
     useEffect(() => {
-        const handleChange = (event: ActiveDeschendantChangeEvent) => {
+        const handleChange = (event: ActiveDescendantChangeEvent) => {
             const data = {
                 toIndex: event.detail.toIndex
             }

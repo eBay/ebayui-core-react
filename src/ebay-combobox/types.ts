@@ -15,14 +15,14 @@ export type EventData = {
     };
 }
 
-export type OnSelectEventArgs =
+export type ComboboxSelectEventArgs =
     | SyntheticEvent<HTMLElement>
     | KeyboardEvent<HTMLInputElement>
 
-export type OnSelectHandler= (event: OnSelectEventArgs, data: EventData) => void
+export type ComboboxSelectHandler= (event: ComboboxSelectEventArgs, data: EventData) => void
 
-export type OnFocusHandler= EbayFocusEventHandler<HTMLInputElement, EventData>
-export type OnClickHandler= EbayMouseEventHandler<HTMLInputElement, EventData>
-export type OnInputChangeHandler = EbayChangeEventHandler<HTMLInputElement, EventData>
-export type OnChangeHandler= EbayChangeEventHandler<HTMLInputElement, EventData>
+export type ComboboxFocusHandler= EbayFocusEventHandler<HTMLInputElement, EventData>
+export type ComboboxClickHandler= EbayMouseEventHandler<HTMLInputElement, EventData>
+export type ComboboxInputChangeHandler = EbayChangeEventHandler<HTMLInputElement, EventData>
+export type ComboboxChangeHandler= EbayChangeEventHandler<HTMLInputElement, EventData>
 

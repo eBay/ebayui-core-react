@@ -13,7 +13,7 @@ import { filterByType, findComponent } from '../utils'
 import EbayComboboxButton from './combobox-button'
 import EbayComboboxOption from './combobox-option'
 import {
-    ActiveDescendantOnChangeHandler,
+    ActiveDescendantChangeHandler,
     useActiveDescendant,
     useExpander,
     useFloatingDropdown
@@ -22,12 +22,12 @@ import {
     Autocomplete,
     EventData,
     ListSelection,
-    OnSelectHandler,
-    OnSelectEventArgs,
-    OnFocusHandler,
-    OnClickHandler,
-    OnInputChangeHandler,
-    OnChangeHandler
+    ComboboxSelectHandler,
+    ComboboxSelectEventArgs,
+    ComboboxFocusHandler,
+    ComboboxClickHandler,
+    ComboboxInputChangeHandler,
+    ComboboxChangeHandler
 } from './types'
 
 export type EbayComboboxProps =
@@ -44,14 +44,14 @@ export type EbayComboboxProps =
         listSelection?: ListSelection;
         forwardedRef?: Ref<HTMLInputElement>;
         opaqueLabel?: boolean;
-        onFocus?: OnFocusHandler;
-        onClick?: OnClickHandler;
+        onFocus?: ComboboxFocusHandler;
+        onClick?: ComboboxClickHandler;
         onExpand?: () => void;
         onCollapse?: () => void;
-        onInputChange?: OnInputChangeHandler;
+        onInputChange?: ComboboxInputChangeHandler;
         onFloatingLabelInit?: () => void;
-        onChange?: OnChangeHandler;
-        onSelect?: OnSelectHandler;
+        onChange?: ComboboxChangeHandler;
+        onSelect?: ComboboxSelectHandler;
     }
 
 const EbayCombobox: FC<EbayComboboxProps> = ({
@@ -114,7 +114,7 @@ const EbayCombobox: FC<EbayComboboxProps> = ({
         )
     }
 
-    const setComboboxValueFromSelection = (event: OnSelectEventArgs, text: string) => {
+    const setComboboxValueFromSelection = (event: ComboboxSelectEventArgs, text: string) => {
         if (currentValue !== text) {
             setUncontrolledValue(text)
 
@@ -146,7 +146,7 @@ const EbayCombobox: FC<EbayComboboxProps> = ({
         options
     ])
 
-    const handleActiveDescendantChange = useCallback<ActiveDescendantOnChangeHandler>((event, { toIndex }) => {
+    const handleActiveDescendantChange = useCallback<ActiveDescendantChangeHandler>((event, { toIndex }) => {
         if (listSelection === 'automatic') {
             const selected = visibleOptions[toIndex]
 
