@@ -30,7 +30,7 @@ const EbayLightboxDialog: FC<Props> = ({
                 backgroundImage: `url(${bannerImgSrc})`,
                 backgroundPosition: bannerImgPosition
             }} />
-    ) : null
+    ) : rest.top
 
     return (
         <DialogBaseWithState
