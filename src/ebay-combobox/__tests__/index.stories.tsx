@@ -145,7 +145,7 @@ export const Default: StoryFn<typeof EbayCombobox> = (args) => (
 )
 
 export const FloatingLabel: StoryFn<typeof EbayCombobox> = (args) => (
-    <EbayCombobox {...args} floatingLabel="Default Label">
+    <EbayCombobox {...args} floatingLabel={args.floatingLabel || "Default Label"}>
         <EbayComboboxOption text="August Campaign" />
         <EbayComboboxOption text="4th of July Sale (paused)" />
         <EbayComboboxOption text="Basic Offer" />
