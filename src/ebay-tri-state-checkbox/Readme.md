@@ -10,7 +10,12 @@ yarn add @ebay/ui-core-react
 ```
 ### Import JS
 ```jsx harmony
-import { EbayTriStateCheckbox } from '@ebay/ui-core-react/ebay-tri-state-checkbox'
+import {
+    EbayTriStateCheckbox,
+    type TriStateCheckboxChangeHandler,
+    type TriStateCheckboxFocusHandler,
+    type TriStateCheckboxKeyDownHandler
+} from '@ebay/ui-core-react/ebay-tri-state-checkbox'
 ```
 
 ## Import following styles from Skin
@@ -23,15 +28,25 @@ import '@ebay/skin/checkbox'
 import '@ebay/skin/checkbox.css'
 ```
 
-## Import EbaySvg
+### Import icons
 
-After you render the EbayTriStateCheckbox component in your application, if you do not see the checkbox svg, you should add import and render EbaySvg component once at the root level of your application (usually layout file).
+Add the bellow icons to the `EbaySvg` component.
 
-```jsx
-import { EbaySvg } from "@ebay/ui-core-react/ebay-svg";
+Note: Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
 
-// Render this in your layout or root level component.
-<EbaySvg /> 
+```tsx
+<EbaySvg
+    icons={[
+        "checkboxChecked18",
+        "checkboxUnchecked18",
+        "checkboxMixed18",
+
+        // If using large checkboxes
+        "checkboxChecked24",
+        "checkboxUnchecked24",
+        "checkboxMixed24",
+    ]}
+/>
 ```
 
 
