@@ -29,7 +29,7 @@ import '@ebay/skin/checkbox.css'
 
 ### Import icons
 
-Add the bellow icons to the `EbaySvg` component.
+Add the below icons to the `EbaySvg` component.
 
 Note: Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
 
