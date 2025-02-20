@@ -1,24 +1,30 @@
 import React, { ChangeEvent, ComponentProps, FC, FocusEvent, KeyboardEvent, useState } from 'react'
 import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
-import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
-import { CheckboxState, Size } from './types'
+import {
+    CheckboxState,
+    TriStateCheckboxChangeHandler,
+    TriStateCheckboxFocusHandler,
+    TriStateCheckboxKeyDownHandler,
+    Size
+} from './types'
 
-type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'>
-type EbayTriStateCheckboxProps = {
-    checked?: CheckboxState,
-    defaultChecked?: CheckboxState,
-    skipMixed?: boolean,
-    size?: Size;
-    onChange?: EbayChangeEventHandler<HTMLInputElement, { value: string | number, checked: CheckboxState }>;
-    onFocus?: EbayFocusEventHandler<HTMLInputElement, { value: string | number, checked: CheckboxState }>;
-    onKeyDown?: EbayKeyboardEventHandler<HTMLInputElement, { value: string | number, checked: CheckboxState }>;
-    inputRef?: React.LegacyRef<HTMLInputElement>;
-}
+export type EbayTriStateCheckboxProps =
+    Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown' | 'checked' | 'defaultChecked' | 'ref'>
+    & {
+        checked?: CheckboxState,
+        defaultChecked?: CheckboxState,
+        skipMixed?: boolean,
+        size?: Size;
+        onChange?: TriStateCheckboxChangeHandler;
+        onFocus?: TriStateCheckboxFocusHandler;
+        onKeyDown?: TriStateCheckboxKeyDownHandler;
+        inputRef?: React.LegacyRef<HTMLInputElement>;
+    }
 
 const isControlled = (checked: CheckboxState | undefined): checked is CheckboxState => checked !== undefined
 
-const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
+const EbayTriStateCheckbox: FC<EbayTriStateCheckboxProps> = ({
     id,
     size = 'default',
     className,
@@ -79,7 +85,7 @@ const EbayTriStateCheckbox: FC<InputProps & EbayTriStateCheckboxProps> = ({
         <span className={containerClass} style={{ ...style }}>
             <input
                 {...rest}
-                aria-checked={checkboxState}
+                aria-checked={currentCheckboxState}
                 id={id}
                 className="checkbox__control"
                 type="checkbox"

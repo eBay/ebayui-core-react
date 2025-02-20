@@ -25,7 +25,7 @@ yarn add @ebay/ui-core-react
     <EbayTextbox placeholder="placeholder text" id="field1" />
     <EbayFieldDescription
         type="confirmation"
-        position="bellow">
+        position="below">
             Some description Text
     </EbayFieldDescription>
 </EbayField>
@@ -50,4 +50,4 @@ Name | Type | Stateful | Required | Description
 Name | Type | Stateful | Required | Description
 --- | --- | --- | --- | ---
 `type` | String | No | No | `confirmation`, `default`(Default), `attention`, `information`
-`position` | String | No | No | `bellow` (Default), `inline`, `above`
+`position` | String | No | No | `below` (Default), `inline`, `above`

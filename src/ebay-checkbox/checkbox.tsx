@@ -3,21 +3,20 @@ import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayLabel, EbayLabelProps } from '../ebay-field'
 import { findComponent } from '../common/component-utils'
-import { EbayChangeEventHandler, EbayFocusEventHandler, EbayKeyboardEventHandler } from '../common/event-utils/types'
+import { CheckboxChangeHandler, CheckboxFocusHandler, CheckboxKeyDownHandler, Size } from './types'
 
-type Size = 'default' | 'large'
-type InputProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'>
-type EbayCheckboxProps = {
+
+export type EbayCheckboxProps = Omit<ComponentProps<'input'>, 'size' | 'onChange' | 'onFocus' | 'onKeyDown'> & {
     size?: Size;
-    onChange?: EbayChangeEventHandler<HTMLInputElement, { value: string | number, checked: boolean }>;
-    onFocus?: EbayFocusEventHandler<HTMLInputElement, { value: string | number, checked: boolean }>;
-    onKeyDown?: EbayKeyboardEventHandler<HTMLInputElement, { value: string | number, checked: boolean }>;
+    onChange?: CheckboxChangeHandler;
+    onFocus?: CheckboxFocusHandler;
+    onKeyDown?: CheckboxKeyDownHandler;
     inputRef?: React.LegacyRef<HTMLInputElement>;
 }
 
 const isControlled = checked => typeof checked !== 'undefined'
 
-const EbayCheckbox: FC<InputProps & EbayCheckboxProps> = ({
+const EbayCheckbox: FC<EbayCheckboxProps> = ({
     id,
     size = 'default',
     className,
