@@ -1,5 +1,6 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { EbaySelect, EbaySelectOption } from '../index'
 import { eventOfType } from '../../common/event-utils/__tests__/helpers'
 
@@ -29,9 +30,11 @@ describe('<EbaySelect>', () => {
             fireEvent.blur(getByRole('combobox'))
             expect(container.querySelector('.floating-label__label')).toHaveClass('floating-label__label--inline')
         })
-        it('should not have "inline" class after blur event when no value is present', () => {
+        it('should not have "inline" class after blur event when no value is present', async() => {
             const { container, getByRole } = render(<EbaySelectWith3Options floatingLabel="Test label" defaultValue="1" />)
-            fireEvent.blur(getByRole('combobox'))
+            await userEvent.click(getByRole('combobox'))
+            await userEvent.tab()
+
             expect(container.querySelector('.floating-label__label')).not.toHaveClass('floating-label__label--inline')
         })
     })

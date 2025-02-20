@@ -65,6 +65,7 @@
     "classnames": "^2.2.6",
     "makeup-active-descendant": "^0.7.4",
     "makeup-expander": "^0.10.1",
+    "makeup-floating-label": "^0.4.5",
     "makeup-keyboard-trap": "^0.4.1",
     "makeup-screenreader-trap": "^0.4.1",
     "makeup-typeahead": "^0.3.3",

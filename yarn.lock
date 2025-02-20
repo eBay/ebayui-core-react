@@ -8544,6 +8544,11 @@ makeup-expander@^0.10.1:
     makeup-focusables "~0.3.0"
     makeup-next-id "~0.4.0"
 
+makeup-floating-label@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/makeup-floating-label/-/makeup-floating-label-0.4.5.tgz#45caa989183ae317ae6c07d9d63d7e20c4de4af8"
+  integrity sha512-sbvAqAT50VJCnGxDDXhpbMN8gH9ye9iBwUcjVvz04NAF/nGyOdJnpT9zMFR51fzb+Yw9VCA1p95aWP96kUOm7w==
+
 makeup-focusables@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/makeup-focusables/-/makeup-focusables-0.3.2.tgz#6eda5b9212fbbada6b24a2a0c248eb703725f1bc"

@@ -9,7 +9,12 @@ yarn add @ebay/ui-core-react
 ```
 ### Import JS
 ```jsx harmony
-import { EbayCheckbox } from '@ebay/ui-core-react/ebay-checkbox'
+import {
+    EbayCheckbox,
+    type CheckboxChangeHandler,
+    type CheckboxFocusHandler,
+    type CheckboxKeyDownHandler
+} from '@ebay/ui-core-react/ebay-checkbox'
 ```
 
 ## Import following styles from Skin
@@ -22,17 +27,24 @@ import '@ebay/skin/checkbox'
 import '@ebay/skin/checkbox.css'
 ```
 
-## Import EbaySvg
+### Import icons
 
-After you render the EbayCheckbox component in your application, if you do not see the checkbox svg, you should add import and render EbaySvg component once at the root level of your application (usually layout file).
+Add the below icons to the `EbaySvg` component.
 
-```jsx
-import { EbaySvg } from "@ebay/ui-core-react/ebay-svg";
+Note: Make sure that `EbaySvg` is only rendered on the server so it does not affect the client bundle size.
 
-// Render this in your layout or root level component.
-<EbaySvg /> 
+```tsx
+<EbaySvg
+    icons={[
+        "checkboxChecked18",
+        "checkboxUnchecked18",
+
+        // If using large checkboxes
+        "checkboxChecked24",
+        "checkboxUnchecked24",
+    ]}
+/>
 ```
-
 
 ```jsx
 import { EbayLabel } from '@ebay/ui-core-react/ebay-field';

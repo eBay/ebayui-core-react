@@ -20,6 +20,7 @@ export default {
             storySort: {
                 order: [
                     "buttons",
+                    "data display",
                     "dialogs",
                     "form input",
                     "graphics & icons",
