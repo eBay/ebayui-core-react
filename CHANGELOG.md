@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.0.4
+
+### Patch Changes
+
+- [#447](https://github.com/eBay/ebayui-core-react/pull/447) [`84b78de`](https://github.com/eBay/ebayui-core-react/commit/84b78de4da25b4b288bc74ab29537a826e479810) Thanks [@montoya332](https://github.com/montoya332)! - fix: top passthrough prop on light box
+
 ## 8.0.3
 
 ### Patch Changes
