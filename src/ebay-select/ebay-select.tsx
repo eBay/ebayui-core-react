@@ -30,7 +30,7 @@ const EbaySelect: FC<EbaySelectProps> = ({
     onChange = () => {},
     onBlur = () => {},
     onFocus = () => {},
-    floatingLabel,
+    floatingLabel: floatingLabelText,
     forwardedRef,
     children,
     inputSize,
@@ -39,20 +39,10 @@ const EbaySelect: FC<EbaySelectProps> = ({
 }) => {
     const isFieldInvalid = invalid || rest['aria-invalid'] === 'true'
     const [value, setValue] = useState<SelectValue>(defaultValue)
-    const {
-        label,
-        Container,
-        onBlur: onFloatingLabelBlur,
-        onFocus: onFloatingLabelFocus,
-        ref
-    } = useFloatingLabel({
-        ref: forwardedRef,
-        inputId: rest.id,
-        className: className,
+    const floatingLabel = useFloatingLabel({
+        text: floatingLabelText,
         disabled: disabled,
-        label: floatingLabel,
-        inputValue: controlledValue,
-        inputSize: inputSize,
+        size: inputSize,
         invalid: isFieldInvalid
     })
 
@@ -68,12 +58,10 @@ const EbaySelect: FC<EbaySelectProps> = ({
 
     const handleBlur = (event: FocusEvent<HTMLSelectElement>) => {
         onBlur(event)
-        onFloatingLabelBlur()
     }
 
     const handleFocus = (event: FocusEvent<HTMLSelectElement>) => {
         onFocus(event)
-        onFloatingLabelFocus()
     }
 
     const selectClassName = classNames('select', className, {
@@ -82,8 +70,8 @@ const EbaySelect: FC<EbaySelectProps> = ({
     })
 
     return (
-        <Container>
-            {label}
+        <floatingLabel.Container>
+            <floatingLabel.Label htmlFor={rest.id} />
             <span className={selectClassName}>
                 <select
                     {...rest}
@@ -93,13 +81,13 @@ const EbaySelect: FC<EbaySelectProps> = ({
                     onChange={handleSelectChange}
                     onBlur={handleBlur}
                     onFocus={handleFocus}
-                    ref={ref}
+                    ref={forwardedRef}
                 >
                     {options(children)}
                 </select>
                 <EbayIcon name="chevronDown12" height="8" width="8" />
             </span>
-        </Container>
+        </floatingLabel.Container>
     )
 }
 
