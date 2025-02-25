@@ -1,5 +1,23 @@
 # @ebay/ui-core-react
 
+## 8.1.0
+
+### Minor Changes
+
+- [#419](https://github.com/eBay/ebayui-core-react/pull/419) [`1907560`](https://github.com/eBay/ebayui-core-react/commit/1907560637d52eaf6f642a8c8153578c8fda070c) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(EbayCarousel): add support for autoplay behavior
+
+- [#419](https://github.com/eBay/ebayui-core-react/pull/419) [`643359f`](https://github.com/eBay/ebayui-core-react/commit/643359fd141336b5c50223cc53de8c9a339e3026) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(EbayAvatar): add support for aspect ratio auto placement
+
+- [#419](https://github.com/eBay/ebayui-core-react/pull/419) [`6d6d3eb`](https://github.com/eBay/ebayui-core-react/commit/6d6d3eb52bb037a8a4e29a6041dfa1f13ae73609) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(EbayCombobox): add new combobox component
+
+- [#419](https://github.com/eBay/ebayui-core-react/pull/419) [`e6163d3`](https://github.com/eBay/ebayui-core-react/commit/e6163d3063f1a7bd36a16dd6ff94667397ce9ebb) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(EbaySkeleton): add new skeleton component
+
+- [#419](https://github.com/eBay/ebayui-core-react/pull/419) [`a566c8b`](https://github.com/eBay/ebayui-core-react/commit/a566c8bae14b3bf104f9eba0e797c4fcaad3f3f2) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(EbayTable): Add new ebay table component
+
+- [#419](https://github.com/eBay/ebayui-core-react/pull/419) [`b692c10`](https://github.com/eBay/ebayui-core-react/commit/b692c10972c213b4bc7ae5030ac9b38ddbb8489d) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(EbayAvatar): add new avatar component
+
+- [#419](https://github.com/eBay/ebayui-core-react/pull/419) [`dd5653a`](https://github.com/eBay/ebayui-core-react/commit/dd5653a1615d181c18d8c2c0c16045e28629da51) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - This change introduces the tri-state-checkbox which will have 3 states: "true", "false" and "mixed".
+
 ## 8.0.4
 
 ### Patch Changes
