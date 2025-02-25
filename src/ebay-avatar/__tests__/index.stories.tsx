@@ -43,6 +43,11 @@ const meta: Meta<typeof EbayAvatar> = {
             description:
                 "The username to display. If there is no body, then this will deternmine what the content is. If there is no username passed, then user is signed out. Based on the username, the icon will change colors and show the first letter if there is no user profile pic.",
         },
+        knownAspectRatio: {
+            control: { type: "number" },
+            description:
+                "Optional, as aspect ratio will be calculated when the image loads on the client. This can be passed to help prevent a flash of incorrectly styled content before the image loads",
+        },
     },
 };
 
