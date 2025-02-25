@@ -52,7 +52,7 @@ exports[`<EbayAvatar /> rendering renders signed out story correctly 1`] = `
 <div>
   <div
     aria-label="Signed out"
-    class="avatar avatar--teal"
+    class="avatar"
     role="img"
   >
     <svg
@@ -65,6 +65,19 @@ exports[`<EbayAvatar /> rendering renders signed out story correctly 1`] = `
         xlink:href="#icon-avatar-signed-out"
       />
     </svg>
+  </div>
+</div>
+`;
+
+exports[`<EbayAvatar /> rendering renders the image-fit correctly 1`] = `
+<div>
+  <div
+    class="avatar avatar--fit"
+    role="img"
+  >
+    <img
+      src="http://example.com/picture.jpg"
+    />
   </div>
 </div>
 `;
@@ -91,12 +104,25 @@ exports[`<EbayAvatar /> rendering renders with image story correctly 1`] = `
 <div>
   <div
     aria-label="Signed in as Elizabeth"
-    class="avatar avatar--teal"
+    class="avatar"
     role="img"
   >
     <img
       alt="my photo"
       src="https://ir.ebaystatic.com/cr/v/c01/skin/docs/dog_profile.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`<EbayAvatar /> rendering should automatically define image-fit on image load 1`] = `
+<div>
+  <div
+    class="avatar avatar--fit"
+    role="img"
+  >
+    <img
+      src="http://example.com/picture.jpg"
     />
   </div>
 </div>
