@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta, StoryFn } from "@storybook/react";
-import { EbayAvatar } from "../index";
+import { EbayAvatar, EbayAvatarImage } from "../index";
 
 const meta: Meta<typeof EbayAvatar> = {
     title: "graphics & icons/ebay-avatar",
@@ -43,6 +43,11 @@ const meta: Meta<typeof EbayAvatar> = {
             description:
                 "The username to display. If there is no body, then this will deternmine what the content is. If there is no username passed, then user is signed out. Based on the username, the icon will change colors and show the first letter if there is no user profile pic.",
         },
+        knownAspectRatio: {
+            control: { type: "number" },
+            description:
+                "Optional, as aspect ratio will be calculated when the image loads on the client. This can be passed to help prevent a flash of incorrectly styled content before the image loads",
+        },
     },
 };
 
@@ -54,7 +59,7 @@ export const Default: StoryFn<typeof EbayAvatar> = (args) => (
 
 export const WithImage: StoryFn<typeof EbayAvatar> = (args) => (
     <EbayAvatar {...args} aria-label="Signed in as Elizabeth" username={args.username || 'Elizabeth'}>
-        <img src="https://ir.ebaystatic.com/cr/v/c01/skin/docs/dog_profile.png" alt="my photo" />
+        <EbayAvatarImage src="https://ir.ebaystatic.com/cr/v/c01/skin/docs/dog_profile.png" alt="my photo" />
     </EbayAvatar>
 )
 
@@ -68,5 +73,27 @@ export const WithCustomBody: StoryFn<typeof EbayAvatar> = (args) => (
             <span>EB</span>
         </div>
     </EbayAvatar>
+)
+
+export const WithAutoPlacement: StoryFn<typeof EbayAvatar> = (args) => (
+    <>
+        <div>
+            <EbayAvatar {...args} aria-label="Signed in as Doggy">
+                <EbayAvatarImage src="https://ir.ebaystatic.com/cr/v/c01/skin/docs/dog_profile2.png" alt="my photo" />
+            </EbayAvatar>
+        </div>
+
+        <div>
+            <EbayAvatar {...args} aria-label="Signed in as Doggy">
+                <EbayAvatarImage src="https://ir.ebaystatic.com/cr/v/c01/skin/docs/dog_profile3.png" alt="my photo" />
+            </EbayAvatar>
+        </div>
+
+        <div>
+            <EbayAvatar {...args} aria-label="Signed in as Doggy">
+                <EbayAvatarImage src="https://ir.ebaystatic.com/cr/v/c01/skin/docs/dog_profile4.png" alt="my photo" />
+            </EbayAvatar>
+        </div>
+    </>
 )
 
