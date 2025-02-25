@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.1.1
+
+### Patch Changes
+
+- [#453](https://github.com/eBay/ebayui-core-react/pull/453) [`e02c13a`](https://github.com/eBay/ebayui-core-react/commit/e02c13a7cefc537d9a3754c25f759e51502f25d9) Thanks [@montoya332](https://github.com/montoya332)! - ebay-toggle-button passthrough classname prop
+
 ## 8.1.0
 
 ### Minor Changes
