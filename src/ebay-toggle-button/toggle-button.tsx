@@ -72,7 +72,7 @@ const ToggleButton: FC<ToggleButtonProps> = ({
     return (
         <button
             onClick={handleClick}
-            className={cx('toggle-button', {
+            className={cx('toggle-button', className, {
                 'toggle-button--minimal-layout': layoutType === 'minimal',
                 'toggle-button--list-layout': layoutType === 'list',
                 'toggle-button--gallery-layout': layoutType === 'gallery'
