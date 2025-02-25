@@ -1511,9 +1511,9 @@
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
 "@ebay/skin@^19":
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-19.0.0.tgz#e00ee6fb2c868bcdfcea08fc62206f7d976ab5a1"
-  integrity sha512-0ZsmUTy7gLKKHDZvKSGBbsr3ERRQBuDtu9MR6iVh2suPXaKtu2IPM7wi8pIw1FrigCZ8/dhQeeDjsz0oHdcDEA==
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/@ebay/skin/-/skin-19.1.0.tgz#62ea57a02fa3169d25fbe519c1e840e2a581cafb"
+  integrity sha512-ZRjieIk0Z6yswG2LBp5+cxawt5H+Vs/8RhKrqoArcGxXqNXBGrnOet+C/fdO7shL3pA7scV617RcuKNqCxI0kw==
 
 "@emotion/use-insertion-effect-with-fallbacks@^1.0.0":
   version "1.0.1"

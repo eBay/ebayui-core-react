@@ -1,10 +1,12 @@
 import React from 'react'
 import { composeStories } from '@storybook/react'
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 
 import * as stories from './index.stories'
+import EbayAvatar from '../avatar'
+import { EbayAvatarImage } from '..'
 
-const { Default, SignedOut, WithCustomBody, WithImage } = composeStories(stories)
+const { Default, SignedOut, WithCustomBody, WithImage, WithAutoPlacement } = composeStories(stories)
 
 describe('<EbayAvatar /> rendering', () => {
     it('renders default story correctly', () => {
@@ -35,6 +37,31 @@ describe('<EbayAvatar /> rendering', () => {
 
     it('renders with image story correctly', () => {
         const { container } = render(<WithImage />)
+        expect(container).toMatchSnapshot()
+    })
+
+    it('renders the image-fit correctly', () => {
+        const { container } = render(
+            <EbayAvatar knownAspectRatio={0.5}>
+                <EbayAvatarImage src="http://example.com/picture.jpg" />
+            </EbayAvatar>
+        )
+
+        expect(container).toMatchSnapshot()
+    })
+
+    it('should automatically define image-fit on image load', () => {
+        const { container } = render(
+            <EbayAvatar>
+                <EbayAvatarImage src="http://example.com/picture.jpg" />
+            </EbayAvatar>
+        )
+
+        const img = container.querySelector('img') as HTMLImageElement
+        Object.defineProperty(img, 'naturalWidth', { value: 3 })
+        Object.defineProperty(img, 'naturalHeight', { value: 5 })
+        fireEvent.load(img)
+
         expect(container).toMatchSnapshot()
     })
 })
