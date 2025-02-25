@@ -4,7 +4,7 @@ exports[`<EbayToggleButton /> should render component - <Default /> 1`] = `
 <DocumentFragment>
   <button
     aria-pressed="false"
-    class="toggle-button toggle-button--minimal-layout"
+    class="toggle-button toggle-button--custom-modifier toggle-button--minimal-layout"
   >
     <div
       class="toggle-button__content"

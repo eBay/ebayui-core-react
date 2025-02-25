@@ -83,6 +83,7 @@ export const Default: StoryObj<typeof EbayToggleButton> = {
         const [isPressed, setIsPressed] = useState(false)
         return (
             <EbayToggleButton
+                className="toggle-button--custom-modifier"
                 pressed={isPressed}
                 onToggle={() => setIsPressed(!isPressed)}
                 title={'Button 1'}
