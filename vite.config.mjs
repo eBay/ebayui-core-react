@@ -27,6 +27,7 @@ export default defineConfig({
             dependencies: [
                 'makeup-expander',
                 'makeup-typeahead',
+                'makeup-floating-label'
             ]
         })
     ],
