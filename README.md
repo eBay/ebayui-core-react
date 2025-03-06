@@ -121,11 +121,32 @@ Example of usage:
 <EbayButton id="my-button" />
 ```
 
-### Issues
+## Issues
 
-Create an issue on github
+Create an [issue](/issues) on github
 
-## [Contributing](CONTRIBUTING.md)
+## Contributing
+
+View [contributing docs](CONTRIBUTING.md)
+
+## Figma Code Connect
+
+**Publishing**
+
+```
+npx figma connect publish --token <token>
+```
+
+**Unpublishing**
+
+```
+npx figma connect unpublish --token <token>
+```
+
+**Helpful links:**
+
+- [React Docs](https://github.com/figma/code-connect/blob/main/cli/README.md)
+- [SwiftUI Docs](https://github.com/figma/code-connect/blob/main/swiftui/README.md)
 
 ## Changelog
 

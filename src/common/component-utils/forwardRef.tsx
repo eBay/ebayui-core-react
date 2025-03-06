@@ -7,6 +7,7 @@ const getDisplayName = <Props, >(Component: FC<Props>) => Component.displayName 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const withForwardRef = <Props, >(Component: FC<Props>) => {
     const ForwardRef = forwardRef<FC<Props>, Props>((props, ref) =>
+        // @ts-ignore
         <Component {...props} forwardedRef={ref} />)
 
     ForwardRef.displayName = getDisplayName<Props>(Component)
