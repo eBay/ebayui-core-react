@@ -25,7 +25,11 @@ export default defineConfig({
             // By default this plugin is only for SSR vite build, here we are in library mode, so we enable "client"
             client: true,
             dependencies: [
+                'makeup-active-descendant',
                 'makeup-expander',
+                'makeup-floating-label',
+                'makeup-keyboard-trap',
+                'makeup-screenreader-trap',
                 'makeup-typeahead',
             ]
         })
