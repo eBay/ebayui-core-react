@@ -12,8 +12,9 @@ import classNames from 'classnames'
 import useRovingIndex from '../common/event-utils/use-roving-index'
 import { isActionKey } from '../common/event-utils'
 import { withForwardRef } from '../common/component-utils'
-import { EbayMenuItem, MenuItemProps, EbayMenuProps } from './index'
+import EbayMenuItem, { MenuItemProps } from './menu-item'
 import { Key } from '../common/event-utils/types'
+import type { EbayMenuProps } from './types'
 
 const EbayMenu: FC<EbayMenuProps> = ({
     baseEl: Container = 'span',
@@ -27,6 +28,7 @@ const EbayMenu: FC<EbayMenuProps> = ({
     onChange = () => {},
     onSelect = () => {},
     forwardedRef,
+    menuRef,
     children,
     ...rest
 }) => {
@@ -134,8 +136,8 @@ const EbayMenu: FC<EbayMenuProps> = ({
     }
 
     return (
-        <Container {...rest} className={classNames(className, 'menu')}>
-            <div className="menu__items" role="menu" ref={forwardedRef}>
+        <Container {...rest} className={classNames(className, 'menu')} ref={forwardedRef as any}>
+            <div className="menu__items" role="menu" ref={menuRef}>
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
                         onClick: onItemClick = () => {},

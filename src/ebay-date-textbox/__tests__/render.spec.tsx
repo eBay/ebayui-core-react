@@ -15,7 +15,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const textbox = dateTextbox.querySelector('.textbox')
-        expect(textbox).toHaveClass('ebay-date-textbox--main textbox--icon-end')
+        expect(textbox).toHaveClass('ebay-date-textbox--main')
 
         const input = within(dateTextbox).getByRole('textbox')
         expect(input).toHaveAttribute('type', 'text')
@@ -29,7 +29,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(button).toHaveAttribute('type', 'button')
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-controls', 'testid-content')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--calendar-24')
+        expect(button.querySelector('svg')).toMatchSnapshot()
 
         const popover = dateTextbox.querySelector('.date-textbox__popover')
         expect(popover).toHaveAttribute('hidden', '')
@@ -46,7 +46,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const [textboxStart, textboxEnd] = dateTextbox.querySelectorAll('.textbox')
-        expect(textboxEnd).toHaveClass('ebay-date-textbox--main textbox--icon-end')
+        expect(textboxEnd).toHaveClass('ebay-date-textbox--main')
 
         const inputStart = within(textboxStart as HTMLElement).getByRole('textbox')
         expect(inputStart).toHaveAttribute('type', 'text')
@@ -66,7 +66,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(button).toHaveAttribute('type', 'button')
         expect(button).toHaveAttribute('aria-expanded', 'false')
         expect(button).toHaveAttribute('aria-controls', 'testid-content')
-        expect(button.querySelector('svg')).toHaveClass('icon icon--calendar-24')
+        expect(button.querySelector('svg')).toMatchSnapshot()
 
         const popover = dateTextbox.querySelector('.date-textbox__popover')
         expect(popover).toHaveAttribute('hidden', '')
@@ -83,7 +83,7 @@ describe('ebay-date-textbox rendering', () => {
         expect(dateTextbox).toHaveAttribute('id', 'testid')
 
         const textbox = dateTextbox.querySelector('.textbox')
-        expect(textbox).toHaveClass('ebay-date-textbox--main textbox--icon-end')
+        expect(textbox).toHaveClass('ebay-date-textbox--main')
 
         const input = within(dateTextbox).getByRole('textbox')
         expect(input).toHaveAttribute('type', 'text')

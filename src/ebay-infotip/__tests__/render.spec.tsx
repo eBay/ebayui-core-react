@@ -13,7 +13,7 @@ const {
     Modal
 } = composeStories(stories)
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 describe('ebay-infotip rendering', () => {
     it('renders default story correctly', () => {
@@ -25,7 +25,7 @@ describe('ebay-infotip rendering', () => {
         const infotipButton = screen.getByRole('button', { name: 'Infotip' })
         expect(infotipButton).toHaveClass('icon-btn icon-btn--transparent infotip__host')
         expect(infotipButton).toHaveAttribute('aria-expanded', 'false')
-        expect(infotipButton.querySelector('svg')).toHaveClass('icon icon--information-16')
+        expect(infotipButton.querySelector('svg')).toMatchSnapshot()
 
         const overlay = container.querySelector('.infotip__overlay')
         expect(overlay.querySelector('.infotip__pointer.infotip__pointer--bottom')).toBeInTheDocument()
@@ -35,7 +35,7 @@ describe('ebay-infotip rendering', () => {
 
         const closeButton = screen.getByRole('button', { name: 'Close' })
         expect(closeButton).toHaveClass('icon-btn icon-btn--transparent infotip__close')
-        expect(closeButton.querySelector('svg')).toHaveClass('icon icon--close-16')
+        expect(closeButton.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders disabled story correctly', () => {
@@ -60,7 +60,7 @@ describe('ebay-infotip rendering', () => {
         render(<CustomIcon />)
 
         const infotipButton = screen.getByRole('button', { name: 'Infotip' })
-        expect(infotipButton.querySelector('svg')).toHaveClass('icon icon--settings-16')
+        expect(infotipButton.querySelector('svg')).toMatchSnapshot()
     })
 
     it('renders text instead of icon story correctly', () => {
@@ -100,20 +100,18 @@ describe('ebay-infotip rendering', () => {
         const { container } = render(<Modal initialExpanded />)
 
         const dialog = screen.getByRole('dialog')
-        expect(dialog).toHaveClass('drawer-dialog dialog--mini__overlay drawer-dialog--mask-fade-slow')
+        expect(dialog).toHaveClass('lightbox-dialog dialog--mini__overlay lightbox-dialog--mask-fade lightbox-dialog--show-init')
         expect(dialog).toHaveAttribute('aria-modal', 'true')
         expect(dialog).toHaveAttribute('aria-labelledby', 'dialog-title-abc123')
         expect(dialog).not.toHaveAttribute('hidden')
-
-        expect(screen.getByRole('button', { name: 'Maximize Text Label' })).toHaveClass('drawer-dialog__handle')
 
         const h2 = screen.getByRole('heading', { level: 2 })
         expect(h2).toHaveAttribute('id', 'dialog-title-abc123')
         expect(h2).toHaveTextContent('Title')
 
-        expect(screen.getByRole('button', { name: 'Close' })).toHaveClass('icon-btn drawer-dialog__close')
+        expect(screen.getByRole('button', { name: 'Close' })).toHaveClass('icon-btn lightbox-dialog__close')
 
-        expect(dialog.querySelector('.drawer-dialog__main')).toHaveTextContent('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+        expect(dialog.querySelector('.lightbox-dialog__main')).toHaveTextContent('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
         const infotip = container.querySelector('.infotip')
         expect(infotip).toHaveClass('dialog--mini infotip--expanded')

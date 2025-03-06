@@ -6,38 +6,47 @@ eBayUI React components
 
 ### Requirements
 
-* [Node.js](https://nodejs.org/en/) (v18.13)
-* [React](https://reactjs.org/) (v16.8+)
-* [eBay Skin](https://ebay.github.io/skin/) (v16)
+* [Node.js](https://nodejs.org/en/) (v20.12.2)
+* [React](https://reactjs.org/) (v18+, v16.8+ in maintenance mode)
+* [eBay Skin](https://ebay.github.io/skin/) (v18+)
 
 ### eBayUI Components
 * [ ] `ebay-3d-viewer`
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
+* [ ] `ebay-area-chart`
+* [ ] `ebay-avatar`
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-badge](src/ebay-badge)
+* [ ] `ebay-bar-chart`
 * [x] [ebay-breadcrumbs](src/ebay-breadcrumbs)
 * [x] [ebay-button](src/ebay-button)
-* [ ] `ebay-calendar`
+* [x] [ebay-calendar](src/ebay-calendar)
+* [ ] `ebay-character-count`
 * [x] [ebay-carousel](src/ebay-carousel)
+* [ ] `ebay-chart-legend`
 * [x] [ebay-checkbox](src/ebay-checkbox)
+* [ ] `ebay-chip`
+* [ ] `ebay-chips-combobox`
 * [ ] `ebay-combobox`
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-cta-button](src/ebay-cta-button)
-* [ ] `ebay-date-textbox`
+* [x] [ebay-date-textbox](src/ebay-date-textbox)
 * [ ] `ebay-details`
-* [x] [ebay-drawer-dialog](src/ebay-drawer-dialog)
+* [ ] `ebay-donut-chart`
+* [ ] `ebay-education-notice`
 * [x] [ebay-eek](src/ebay-eek)
-* [x] [ebay-fullscreen-dialog](src/ebay-fullscreen-dialog)
 * [ ] `ebay-fake-link`
 * [x] [ebay-fake-menu](src/ebay-fake-menu)
 * [x] [ebay-fake-menu-button](src/ebay-fake-menu-button)
 * [x] [ebay-fake-tabs](src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
-* [ ] `ebay-filter` (in progress...)
+* [ ] `ebay-filter`
 * [ ] `ebay-filter-menu`
 * [ ] `ebay-filter-menu-button`
+* [ ] `ebay-flag`
 * [x] [ebay-icon-button](src/ebay-icon-button)
 * [x] [ebay-icon](src/ebay-icon)
+* [ ] `ebay-image-placeholder`
 * [x] [ebay-infotip](src/ebay-infotip)
 * [x] [ebay-inline-notice](src/ebay-inline-notice)
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
@@ -49,15 +58,20 @@ eBayUI React components
 * [x] [ebay-page-notice](src/ebay-page-notice)
 * [x] [ebay-pagination](src/ebay-pagination)
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
+* [ ] `ebay-phone-input`
 * [x] [ebay-progress-bar](src/ebay-progress-bar)
+* [ ] `ebay-progress-bar-expressive`
 * [x] [ebay-progress-spinner](src/ebay-progress-spinner)
 * [x] [ebay-progress-stepper](src/ebay-progress-stepper)
 * [x] [ebay-radio](src/ebay-radio)
 * [x] [ebay-section-title](src/ebay-section-title)
 * [x] [ebay-section-notice](src/ebay-section-notice)
+* [x] [ebay-segmented-buttons](src/ebay-segmented-buttons)
 * [x] [ebay-select](src/ebay-select)
 * [x] [ebay-signal](src/ebay-signal)
+* [ ] `ebay-skeleton`
 * [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
+* [ ] `ebay-spark-line`
 * [x] [ebay-split-button](src/ebay-split-button)
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
@@ -65,6 +79,8 @@ eBayUI React components
 * [x] [ebay-tabs](src/ebay-tabs)
 * [x] [ebay-textbox](src/ebay-textbox)
 * [x] [ebay-toast-dialog](src/ebay-toast-dialog)
+* [x] [ebay-toggle-button](src/ebay-toast-dialog)
+* [x] [ebay-toggle-button-group](src/ebay-toast-dialog)
 * [x] [ebay-tooltip](src/ebay-tooltip)
 * [x] [ebay-tourtip](src/ebay-tourtip)
 * [ ] `ebay-tri-state-checkbox`
@@ -77,18 +93,9 @@ These react components are available as `@ebay/ui-core-react` package on [NPM](h
 Use npm or yarn to add the package dependency to your project:
 
 ```sh
-yarn add @ebay/ui-core-react
+yarn add @ebay/ui-core-react @ebay/skin
 ```
 
-### for quick development/POC
-```jsx
-import { EbayTextbox, EbayButton } from '@ebay/ui-core-react'
-
-<EbayTextbox placeholder="Enter text here" />
-<EbayButton>Submit</EbayButton>
-```
-
-### for smaller bundle size
 ```jsx harmony
 import { EbayTextbox } from '@ebay/ui-core-react/ebay-textbox'
 import { EbayButton } from '@ebay/ui-core-react/ebay-button'
@@ -144,16 +151,18 @@ npx figma connect unpublish --token <token>
 ## Changelog
 
 `@ebay/ui-core-react`
+### version 7.x (Skin 18, breaking changes in icon names)
+### version 6.x (Skin 17, breaking changes in icon names)
 ### version 5.x (Skin 16, breaking changes in event callbacks)
 ### version 4.x (Skin 16, breaking changes in icon names)
 ### version 3.x (Skin 15, some breaking changes in dialog components)
 ### version 2.x (Skin 15)
 
-`@ebay/ebayui-core-react`
+`@ebay/ebayui-core-react` (obsolete)
 ### version 10.x (Skin 14)
 ### version 9.x (skin 13)
 
-`ebayui-core-react`
+`ebayui-core-react` (obsolete)
 ### version 8.x (skin 12)
 ### version 6.x (skin 10)
 ### version 5.x (removed less, changed imports to minimize bundle size)

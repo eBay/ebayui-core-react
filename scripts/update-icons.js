@@ -8,11 +8,11 @@ const { saveIconType, saveIconConstants, saveSvgIcons, parseSVG, parseSVGSymbols
 const skinIconsFile = resolve(process.cwd(), 'node_modules/@ebay/skin/dist/svg/icons.svg')
 const typesFile = resolve(__dirname, `../src/ebay-icon/types.ts`)
 const constFile = resolve(__dirname, `../src/ebay-icon/__tests__/constants.ts`)
-const ebaySvgFile = resolve(__dirname, `../src/ebay-svg/svg.tsx`)
+const ebaySymbolsFile = resolve(__dirname, `../src/ebay-svg/symbols.tsx`)
 
 const skinSVG = parseSVG(skinIconsFile)
 
-saveSvgIcons(skinSVG, ebaySvgFile)
+saveSvgIcons(skinSVG, ebaySymbolsFile)
 
 const skinSVGSymbols = parseSVGSymbols(skinIconsFile)
 console.log(`Found ${skinSVGSymbols.length} icons in Skin.`)

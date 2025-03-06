@@ -5,7 +5,7 @@
 
 ## Usage
 
-```react
+```jsx
 <EbayLightboxDialog open a11yClosetext="Close">
     <EbayDialogHeader>Heading</EbayDialogHeader>
     <p>Body content</p>
@@ -22,6 +22,8 @@ Name | Type | Stateful | Required | Description
 `focus` | String | No | No | An id for an element which will receive focus when the drawer opens (defaults to close button).
 `a11yCloseText` | String | No | Yes | A11y text for close button and mask.
 `animated` | Boolean | Yes | No | Renders the dialog with an animation. Note that the dialog will always be present in the DOM
+`bannerImgSrc` | String | No | No | Image source for the expressive variant
+`bannerImgPosition` | String | No | No | Position of the image within the given bounds using the CSS `background-position` property. Options include [keywords, lengths, and edge distances](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
 
 ## Events
 

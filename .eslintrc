@@ -15,11 +15,12 @@
         "./.eslint.react.js"
     ],
     "ignorePatterns": [
+        "dist/",
         "**/__tests__/**"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": "./tsconfig.typecheck.json",
+        "project": "./tsconfig.json",
         "ecmaFeatures": {
             "jsx": true
         },
@@ -49,7 +50,7 @@
         "@typescript-eslint/no-empty-function": "off",
         // Ignore unused function arguments
         "@typescript-eslint/no-unused-vars": [
-            "warn",
+            "error",
             {
                 "args": "none"
             }

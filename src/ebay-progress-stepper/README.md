@@ -18,7 +18,7 @@ import { EbayProgressStepper, EbayProgressStep as Step } from '@ebay/ui-core-rea
 ### Import styles from Skin
 
 ```jsx
-import '@ebay/skin/stepper'
+import '@ebay/skin/progress-stepper'
 ```
 
 ```jsx

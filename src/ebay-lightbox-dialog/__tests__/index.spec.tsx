@@ -3,11 +3,11 @@ import { render, fireEvent } from '@testing-library/react'
 import { EbayDialogFooter, EbayDialogHeader } from '../../ebay-dialog-base'
 import { EbayLightboxDialog } from '../index'
 
-jest.mock('../../common/random-id', () => ({ randomId: () => 'abc123' }))
+jest.mock('../../common/random-id')
 
 const closeSpy = jest.fn()
 const openSpy = jest.fn()
-const openDialog = () =>
+const openDialog = (props = {}) =>
     render(
         <EbayLightboxDialog
             animated={false}
@@ -15,6 +15,7 @@ const openDialog = () =>
             onOpen={openSpy}
             onClose={closeSpy}
             a11yCloseText="Close"
+            {...props}
         >
             <EbayDialogHeader>Heading</EbayDialogHeader>
             <p>
@@ -48,5 +49,18 @@ describe('<EbayLightboxDialog>', () => {
         openDialog()
         fireEvent.click(document.querySelector(`button.lightbox-dialog__close`))
         expect(closeSpy).toHaveBeenCalled()
+    })
+
+    it('should render custom top content', () => {
+        openDialog({
+            top: <div className="custom-top">Top</div>
+        })
+        expect(document.querySelector('.custom-top')).toBeInTheDocument()
+    })
+    it('should render banner image', () => {
+        openDialog({
+            bannerImgSrc:"http://ir.ebaystatic.com/cr/v/c1/skin/image-treatment/mountain.jpeg",
+        })
+        expect(document.querySelector('.lightbox-dialog__image')).toBeInTheDocument()
     })
 })

@@ -13,6 +13,10 @@ import { EbayButton } from '@ebay/ui-core-react/ebay-button'
 ```jsx harmony
 import "@ebay/skin/button"
 ```
+### If tokens haven't been added to the project at a higher level, make sure to import
+```jsx harmony
+import '@ebay/skin/tokens';
+```
 ### Or import styles using SCSS/CSS
 ```jsx harmony
 import '@ebay/skin/button.css'
@@ -46,7 +50,7 @@ Name | Type | Stateful | Required | Description | Data
 --- | --- | --- | --- | --- | ---
 `priority` | String | No | No | `primary`, `secondary` (default), `tertiary`, `none`
 `variant` | String | Yes | No | `standard` (default), `destructive`, `form`
-`size` | String | No | No | `regular` (default), `large`
+`size` | String | No | No | `small` or `large`
 `bodyState` | String | No | No | `loading`, `expand`
 `href` | String | No | No | for link that looks like a button
 `fluid` | Boolean | No | No | takes the whole width of the parent element

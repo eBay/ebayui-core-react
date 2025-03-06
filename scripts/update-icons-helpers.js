@@ -68,24 +68,23 @@ function saveSvgIcons(collection, ebaySvgFile) {
 }
 
 function generateEbaySVG(svgSymbols) {
-    const symbolStrings = svgSymbols.map(symbol => stringify(symbol, {
-        transformAttr: transformSVGtoReact
+    const symbolStrings = svgSymbols.map((symbol) => stringify(symbol, {
+        transformAttr: transformSVGtoReact,
     }));
 
-    // Use position absolute and height/width 0px instead of display none
-    // so <defs> element for spectrum icons are shown
     return `/* eslint-disable */
 // @ts-nocheck
 ${fileHeader}\n
-import React, { FC } from 'react'
+import React from 'react'
 
-const EbaySvg: FC = () => (
-    <svg style={{ position: 'absolute', height: '0px', width: '0px' }}>
-        ${symbolStrings.join('\n        ')}
-    </svg>)
-
-export default EbaySvg
+export const symbols = [
+    ${symbolStrings.map(addKeyToSymbol).join(',\n    ')}
+]
 `
+}
+
+function addKeyToSymbol(symbol, key) {
+    return symbol.replace(/(<\w+)/, `$1 key={${key}}`)
 }
 
 function transformSVGtoReact(key, value, escape) {

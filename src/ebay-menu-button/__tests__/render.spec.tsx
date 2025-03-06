@@ -29,9 +29,7 @@ describe('EbayMenuButton rendering', () => {
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
             const svg = firstButton.querySelector('svg')
-            expect(svg).toHaveClass('icon icon--chevron-down-12')
-            expect(svg).toHaveAttribute('aria-hidden', 'true')
-            expect(svg).toHaveAttribute('focusable', 'false')
+            expect(svg).toMatchSnapshot()
         })
     })
 
@@ -55,9 +53,7 @@ describe('EbayMenuButton rendering', () => {
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
             expect(firstButton).toHaveAttribute('disabled', '')
             const svg = firstButton.querySelector('svg')
-            expect(svg).toHaveClass('icon icon--chevron-down-12')
-            expect(svg).toHaveAttribute('aria-hidden', 'true')
-            expect(svg).toHaveAttribute('focusable', 'false')
+            expect(svg).toMatchSnapshot()
         })
     })
 
@@ -68,12 +64,8 @@ describe('EbayMenuButton rendering', () => {
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
             const [iconSvg, chevronSvg] = firstButton.querySelectorAll('svg')
-            expect(iconSvg).toHaveClass('icon icon--settings-16')
-            expect(iconSvg).toHaveAttribute('aria-hidden', 'true')
-            expect(iconSvg).toHaveAttribute('focusable', 'false')
-            expect(chevronSvg).toHaveClass('icon icon--chevron-down-12')
-            expect(chevronSvg).toHaveAttribute('aria-hidden', 'true')
-            expect(chevronSvg).toHaveAttribute('focusable', 'false')
+            expect(iconSvg).toMatchSnapshot()
+            expect(chevronSvg).toMatchSnapshot()
         })
     })
 
@@ -95,21 +87,15 @@ describe('EbayMenuButton rendering', () => {
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
             const firstSvg = firstButton.querySelector('svg')
-            expect(firstSvg).toHaveClass('icon icon--chevron-down-12')
-            expect(firstSvg).toHaveAttribute('aria-hidden', 'true')
-            expect(firstSvg).toHaveAttribute('focusable', 'false')
+            expect(firstSvg).toMatchSnapshot()
 
             expect(secondButton).toHaveClass('btn menu-button__button btn--form')
             const secondSvg = secondButton.querySelector('svg')
-            expect(secondSvg).toHaveClass('icon icon--chevron-down-12')
-            expect(secondSvg).toHaveAttribute('aria-hidden', 'true')
-            expect(secondSvg).toHaveAttribute('focusable', 'false')
+            expect(secondSvg).toMatchSnapshot()
 
             expect(thirdButton).toHaveClass('menu-button__button icon-btn')
             const thirdSvg = thirdButton.querySelector('svg')
-            expect(thirdSvg).toHaveClass('icon icon--overflow-vertical-16')
-            expect(thirdSvg).toHaveAttribute('aria-hidden', 'true')
-            expect(thirdSvg).toHaveAttribute('focusable', 'false')
+            expect(thirdSvg).toMatchSnapshot()
         })
     })
 
@@ -120,15 +106,11 @@ describe('EbayMenuButton rendering', () => {
 
             expect(firstButton).toHaveClass('btn menu-button__button btn--primary')
             const firstSvg = firstButton.querySelector('svg')
-            expect(firstSvg).toHaveClass('icon icon--chevron-down-12')
-            expect(firstSvg).toHaveAttribute('aria-hidden', 'true')
-            expect(firstSvg).toHaveAttribute('focusable', 'false')
+            expect(firstSvg).toMatchSnapshot()
 
             expect(secondButton).toHaveClass('btn menu-button__button btn--tertiary')
             const secondSvg = secondButton.querySelector('svg')
-            expect(secondSvg).toHaveClass('icon icon--chevron-down-12')
-            expect(secondSvg).toHaveAttribute('aria-hidden', 'true')
-            expect(secondSvg).toHaveAttribute('focusable', 'false')
+            expect(secondSvg).toMatchSnapshot()
         })
     })
 
@@ -145,10 +127,7 @@ describe('EbayMenuButton rendering', () => {
             render(<WithCustomLabel />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
-
-
-            const label = firstButton.querySelector('.btn__text')
-            expect(label).toHaveTextContent('Fun with flags!')
+            expect(firstButton).toHaveTextContent('Fun with flags!')
         })
     })
 

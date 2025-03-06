@@ -12,6 +12,7 @@ const {
     MultilineTextbox,
     PasswordTextbox,
     WithIcon,
+    WithPrePostfixText,
     PlaceholderTextbox,
     FloatingLabel,
     FloatingLabelInvalid,
@@ -41,7 +42,8 @@ describe('ebay-textbox rendering', () => {
 
         const textbox = screen.getByRole('textbox')
         expect(textbox).toHaveAttribute('value', '')
-        expect(textbox).toHaveClass('textbox__control textbox__control--fluid')
+        expect(textbox).toHaveClass('textbox__control')
+        expect(textbox.parentNode).toHaveClass('textbox--fluid')
     })
 
     it('renders invalid story correctly', () => {
@@ -57,7 +59,8 @@ describe('ebay-textbox rendering', () => {
 
         const textbox = screen.getByRole('textbox')
         expect(textbox).toHaveAttribute('value', '')
-        expect(textbox).toHaveClass('textbox__control textbox__control--large')
+        expect(textbox).toHaveClass('textbox__control')
+        expect(textbox.parentNode).toHaveClass('textbox--large')
     })
 
     it('renders multiline story correctly', () => {
@@ -85,7 +88,12 @@ describe('ebay-textbox rendering', () => {
         expect(textbox).toHaveClass('textbox__control')
 
         const icon = container.querySelector('svg')
-        expect(icon).toHaveClass('icon icon--mail-16')
+        expect(icon).toMatchSnapshot()
+    })
+
+    it('renders with pre/post fix text correctly', () => {
+        const { container } = render(<WithPrePostfixText />)
+        expect(container).toMatchSnapshot()
     })
 
     it('renders placeholder story correctly', () => {

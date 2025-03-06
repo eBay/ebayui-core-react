@@ -25,7 +25,7 @@ import '@ebay/skin/utility.css'
 
 ### EbayPagination Usage
 
-```React
+```jsx
 <EbayPagination a11yPreviousText="Previous page" a11yNextText="Next page" a11yCurrentText="Results Pagination - Page 2">
     <EbayPaginationItem href="#" type="previous" disabled/>
     <EbayPaginationItem href="#" current>item 1</EbayPaginationItem>
@@ -57,7 +57,7 @@ Name | Type | Stateful | Description
 
 ### EbayPaginationItem Usage
 
-```React
+```jsx
 <EbayPaginationItem>1</EbayPaginationItem>
 ```
 

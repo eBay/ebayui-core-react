@@ -1,2 +1,1 @@
-export { default as EbayStarRating } from './star-rating'
-export * from './star-rating'
+export { default as EbayStarRating, type Props as EbayStarRatingProps } from './star-rating'

@@ -1,14 +1,19 @@
-import React, { cloneElement, FC, useEffect, useRef, useState } from 'react'
+import React, { cloneElement, ComponentProps, FC, useEffect, useState } from 'react'
 import classnames from 'classnames'
 import { filterByType, findComponent } from '../common/component-utils'
 
 import { EbayMenu, EbayMenuChangeEventHandler } from '../ebay-menu'
-import { EbayButton } from '../ebay-button'
+import { EbayButton, EbayButtonProps } from '../ebay-button'
 import { EbayIconButton } from '../ebay-icon-button'
 import { EbayIcon } from '../ebay-icon'
 import { EbayMenuButtonItem, EbayMenuButtonLabel, EbayMenuButtonSeparator, LabelProps, MenuButtonProps } from './index'
 import { randomId } from '../common/random-id'
 import { handleEscapeKeydown } from '../common/event-utils'
+import { useFloatingDropdown } from '../common/dropdown'
+
+type ButtonProps = Omit<EbayButtonProps, 'variant' | 'onKeyDown' | 'onMouseDown'> &
+    Omit<ComponentProps<'button'>, 'onKeyDown' | 'onMouseDown' | 'onSelect'> &
+    Omit<ComponentProps<'a'>, 'onKeyDown' | 'onMouseDown' | 'onSelect'>
 
 const EbayMenuButton: FC<MenuButtonProps> = ({
     type,
@@ -34,8 +39,14 @@ const EbayMenuButton: FC<MenuButtonProps> = ({
 }) => {
     const [expanded, setExpanded] = useState(defaultExpanded)
     const [menuId, setMenuId] = useState<string | undefined>()
-    const buttonRef = useRef(null)
-    const menuRef = useRef()
+
+    const { overlayStyles, refs } = useFloatingDropdown({
+        open: expanded,
+        options: { reverse }
+    })
+
+    const buttonRef = refs.host as React.MutableRefObject<HTMLButtonElement>
+    const menuRef = refs.overlay
 
     const menuItems = filterByType(children, [EbayMenuButtonItem, EbayMenuButtonSeparator])
     const defaultIndexes = menuItems.map((item) => Boolean(item.props.checked))
@@ -86,8 +97,8 @@ const EbayMenuButton: FC<MenuButtonProps> = ({
         })
     }
 
-    const buttonProps = {
-        ref: buttonRef as any,
+    const buttonProps: Omit<ButtonProps, 'type' | 'ref'> = {
+        ref: refs.setHost,
         className: 'menu-button__button',
         'aria-expanded': !!expanded,
         'aria-haspopup': true,
@@ -120,16 +131,16 @@ const EbayMenuButton: FC<MenuButtonProps> = ({
                 <EbayIconButton icon="overflowVertical16" {...buttonProps} /> :
                 <EbayButton
                     variant={variant === 'form' ? 'form' : undefined}
-                    bodyState={noToggleIcon ? undefined : 'expand'}
                     {...buttonProps}
                 >
                     {label}
+                    {!noToggleIcon ? <EbayIcon name="chevronDown12" /> : null}
                 </EbayButton>
             }
             {expanded &&
                 <EbayMenu
                     baseEl="div"
-                    ref={menuRef}
+                    ref={refs.setOverlay as any /* TODO: Update @types/react version to fix the type */}
                     type={type}
                     className={menuClasses}
                     tabIndex={-1}
@@ -139,6 +150,7 @@ const EbayMenuButton: FC<MenuButtonProps> = ({
                     onKeyDown={handleMenuKeydown}
                     onChange={handleOnChange}
                     onSelect={onSelect}
+                    style={overlayStyles}
                 >
                     {menuItems.map((item, i) =>
                         cloneElement(item, {
@@ -156,14 +168,10 @@ const EbayMenuButton: FC<MenuButtonProps> = ({
 
 function labelWithPrefixAndIcon({ text, prefixId, prefixLabel, menuButtonLabel, icon }: LabelProps) {
     const textLabelElement = text.length ? <span>{text}</span> : null
-    const prefixLabelElement = !prefixId && prefixLabel && [
-        <span className="menu-button-prefix-label">{prefixLabel}</span>,
-        <>&nbsp;</>
-    ]
-    const labelWithPrefix = [prefixLabelElement, menuButtonLabel || textLabelElement]
-    const labelArray = [icon, labelWithPrefix].flat().filter(Boolean) as JSX.Element[]
-
-    return labelArray.length ? labelArray : null
+    const prefixLabelElement = !prefixId && prefixLabel &&
+        <><span className="menu-button-prefix-label" key="prefix-label">{prefixLabel}</span>&nbsp;</>
+    const labelArray = [icon, prefixLabelElement, menuButtonLabel || textLabelElement].filter(Boolean) as JSX.Element[]
+    return labelArray.map((item, i) => cloneElement(item, { ...item.props, key: i }))
 }
 
 export default EbayMenuButton

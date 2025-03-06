@@ -30,7 +30,7 @@ export function useDialogAnimation({
     enabled,
     onTransitionEnd
 }: DialogAnimationHookProps): void {
-    const firstRender = useRef(true)
+    const previousOpenValue = useRef(open)
 
     useLayoutEffect(() => {
         if (!enabled) {
@@ -54,7 +54,9 @@ export function useDialogAnimation({
                 classPrefix,
                 onTransitionEnd
             })
-        } else if (!firstRender.current) {
+        // Trigger the hide animation only when that "open" value changed to make sure it doesn't flicker the dialog.
+        // The error was visible in StrictMode where the component renders twice.
+        } else if (previousOpenValue.current !== open) {
             cancelCurrentAnimation = hideAnimation({
                 dialog: dialogRef,
                 waitFor: transitionElements,
@@ -63,7 +65,7 @@ export function useDialogAnimation({
             })
         }
 
-        firstRender.current = false
+        previousOpenValue.current = open
 
         return () => {
             if (cancelCurrentAnimation) {

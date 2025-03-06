@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EbayMenuButton rendering Default should render correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering Disabled should render correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering Priorities should render correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering Priorities should render correctly 2`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering Variants should render correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering Variants should render correctly 2`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering Variants should render correctly 3`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--16"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-overflow-vertical-16"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering WithIcon should render correctly 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--16"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-settings-16"
+  />
+</svg>
+`;
+
+exports[`EbayMenuButton rendering WithIcon should render correctly 2`] = `
+<svg
+  aria-hidden="true"
+  class="icon icon--12"
+  focusable="false"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <use
+    xlink:href="#icon-chevron-down-12"
+  />
+</svg>
+`;
