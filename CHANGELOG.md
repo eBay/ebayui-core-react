@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.1.2
+
+### Patch Changes
+
+- [#457](https://github.com/eBay/ebayui-core-react/pull/457) [`eb245e5`](https://github.com/eBay/ebayui-core-react/commit/eb245e5fb7b63d6a8784f4f407ce856cde49d6cc) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - fix: add makeup to cjsInterop plugin for better comptability
+
 ## 8.1.1
 
 ### Patch Changes
