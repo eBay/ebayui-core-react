@@ -15,7 +15,6 @@ figma.connect(
             }),
             title: figma.string('Title'),
             size: figma.enum('Size', {
-                medium: 'regular',
                 small: 'small',
                 large: 'large'
             })
@@ -40,7 +39,6 @@ figma.connect(
             }),
             title: figma.string('Title'),
             size: figma.enum('Size', {
-                medium: 'regular',
                 small: 'small',
                 large: 'large'
             })
@@ -61,7 +59,6 @@ figma.connect(
         props: {
             title: figma.string('Title'),
             size: figma.enum('Size', {
-                medium: 'regular',
                 small: 'small',
                 large: 'large'
             })
@@ -82,7 +79,6 @@ figma.connect(
         props: {
             title: figma.string('Title'),
             size: figma.enum('Size', {
-                medium: 'regular',
                 small: 'small',
                 large: 'large'
             })
