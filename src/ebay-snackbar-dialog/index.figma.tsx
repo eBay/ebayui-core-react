@@ -8,7 +8,6 @@ figma.connect(
     EbaySnackbarDialog,
     'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=15902-21578&m=dev',
     {
-        variant: { 'action': 'none' },
         props: {
             Body: figma.string('Body')
         },

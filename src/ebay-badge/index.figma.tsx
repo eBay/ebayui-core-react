@@ -5,11 +5,11 @@ import { EbayBadge } from '.'
 
 figma.connect(
     EbayBadge,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=38612-44629&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=38612-44629&t=vTwME7f7yohLIppj-4',
     {
         props: {
-            label: figma.string('label')
+            number: figma.string('Number')
         },
-        example: ({ label }) => <EbayBadge number={label} />
+        example: ({ number }) => <EbayBadge number={number} />
     }
 )

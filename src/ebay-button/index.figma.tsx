@@ -6,15 +6,15 @@ import { EbayButton } from '.'
 // button
 figma.connect(
     EbayButton,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=65849-91206&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=65849-91206&t=vTwME7f7yohLIppj-4',
     {
         props: {
-            state: figma.enum('state', {
+            state: figma.enum('State', {
                 disabled: true,
                 enabled: false
             }),
             title: figma.string('Title'),
-            size: figma.enum('size', {
+            size: figma.enum('Size', {
                 medium: 'regular',
                 small: 'small',
                 large: 'large'
@@ -31,15 +31,15 @@ figma.connect(
 // button destructive
 figma.connect(
     EbayButton,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=129298-738861&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=260004-7740&t=vTwME7f7yohLIppj-4',
     {
         props: {
-            state: figma.enum('state', {
+            state: figma.enum('State', {
                 disabled: true,
                 enabled: false
             }),
             title: figma.string('Title'),
-            size: figma.enum('size', {
+            size: figma.enum('Size', {
                 medium: 'regular',
                 small: 'small',
                 large: 'large'
@@ -60,7 +60,7 @@ figma.connect(
     {
         props: {
             title: figma.string('Title'),
-            size: figma.enum('size', {
+            size: figma.enum('Size', {
                 medium: 'regular',
                 small: 'small',
                 large: 'large'
@@ -81,7 +81,7 @@ figma.connect(
     {
         props: {
             title: figma.string('Title'),
-            size: figma.enum('size', {
+            size: figma.enum('Size', {
                 medium: 'regular',
                 small: 'small',
                 large: 'large'

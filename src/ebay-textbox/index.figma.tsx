@@ -8,7 +8,7 @@ figma.connect(
     'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=25465-6418&m=dev',
     {
         props: {
-            Value: figma.string('Value')
+            Value: figma.string('Input text')
         },
         example: ({ Value }) => (
             <EbayTextbox value={Value} />

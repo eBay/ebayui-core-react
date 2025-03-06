@@ -8,7 +8,7 @@ figma.connect(
     'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10051-5&m=dev',
     {
         props: {
-            type: figma.string('type')
+            type: figma.string('Type')
         },
         example: ({ type }) => (
             <EbaySignal status="trustworthy">{type}</EbaySignal>
