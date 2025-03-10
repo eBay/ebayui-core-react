@@ -5,11 +5,13 @@
 
     "react": {
       "importPaths": {
+        "src/ebay-accordion/*": "@ebay/ui-core-react/ebay-accordion",
         "src/ebay-alert-dialog/*": "@ebay/ui-core-react/ebay-alert-dialog",
         "src/ebay-badge/*": "@ebay/ui-core-react/ebay-badge",
         "src/ebay-breadcrumbs/*": "@ebay/ui-core-react/ebay-breadcrumbs",
         "src/ebay-button/*": "@ebay/ui-core-react/ebay-button",
         "src/ebay-calendar/*": "@ebay/ui-core-react/ebay-calendar",
+        "src/ebay-carousel/*": "@ebay/ui-core-react/ebay-carousel",
         "src/ebay-icon-button/*": "@ebay/ui-core-react/ebay-icon-button",
         "src/ebay-page-notice/*": "@ebay/ui-core-react/ebay-page-notice",
         "src/ebay-pagination/*": "@ebay/ui-core-react/ebay-pagination",
@@ -18,6 +20,7 @@
         "src/ebay-select/*": "@ebay/ui-core-react/ebay-select",
         "src/ebay-section-title/*": "@ebay/ui-core-react/ebay-section-title",
         "src/ebay-signal/*": "@ebay/ui-core-react/ebay-signal",
+        "src/ebay-skeleton/*": "@ebay/ui-core-react/ebay-skeleton",
         "src/ebay-snackbar-dialog/*": "@ebay/ui-core-react/ebay-snackbar-dialog",
         "src/ebay-switch/*": "@ebay/ui-core-react/ebay-switch",
         "src/ebay-tabs/*": "@ebay/ui-core-react/ebay-tabs",
