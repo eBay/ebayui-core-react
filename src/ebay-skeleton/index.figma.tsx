@@ -11,6 +11,7 @@ figma.connect(
     {
         example: () => (
             <EbaySkeleton aria-label="Loading...">
+                {/* @ts-ignore */}
                 <EbaySkeletonImage style={{ width: '220px', height: '220px' }} />
             </EbaySkeleton>
         )
@@ -23,6 +24,7 @@ figma.connect(
     {
         example: () => (
             <EbaySkeleton aria-label="Loading...">
+                {/* @ts-ignore */}
                 <EbaySkeletonText multiline />
             </EbaySkeleton>
         )
@@ -35,6 +37,7 @@ figma.connect(
     {
         example: () => (
             <EbaySkeleton aria-label="Loading...">
+                {/* @ts-ignore */}
                 <EbaySkeletonButton />
             </EbaySkeleton>
         )
@@ -47,6 +50,7 @@ figma.connect(
     {
         example: () => (
             <EbaySkeleton aria-label="Loading...">
+                {/* @ts-ignore */}
                 <EbaySkeletonAvatar />
             </EbaySkeleton>
         )
@@ -64,12 +68,14 @@ figma.connect(
                     width: '220px'
                 }}
             >
+                {/* @ts-ignore */}
                 <EbaySkeletonImage
                     style={{
                         height: '220px',
                         width: '220px'
                     }}
                 />
+                {/* @ts-ignore */}
                 <EbaySkeletonText
                     multiline
                     size="large"
