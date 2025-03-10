@@ -3,8 +3,8 @@ import figma from '@figma/code-connect'
 import React from 'react'
 import {
     EbaySectionTitle,
-    EbaySectionTitleTitle as Title,
-    EbaySectionTitleSubtitle as Subtitle
+    EbaySectionTitleTitle,
+    EbaySectionTitleSubtitle
 } from '.'
 
 // has both button and subtitle set
@@ -17,7 +17,7 @@ figma.connect(
         },
         example: ({ titleText }) => (
             <EbaySectionTitle href="https://www.ebay.com" ctaText="See All">
-                <Title>{titleText}</Title>
+                <EbaySectionTitleTitle>{titleText}</EbaySectionTitleTitle>
             </EbaySectionTitle>
         )
     }
@@ -34,8 +34,8 @@ figma.connect(
         },
         example: ({ titleText, subTitleText }) => (
             <EbaySectionTitle>
-                <Title>{titleText}</Title>
-                <Subtitle>{subTitleText}</Subtitle>
+                <EbaySectionTitleTitle>{titleText}</EbaySectionTitleTitle>
+                <EbaySectionTitleSubtitle>{subTitleText}</EbaySectionTitleSubtitle>
             </EbaySectionTitle>
         )
     }
