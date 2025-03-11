@@ -23,7 +23,6 @@
     "eslint": "eslint . --ext .ts,.tsx -f checkstyle -o ./lint/checkstyle-result.xml",
     "format": "eslint . --fix 'src/**/*.{ts,tsx}'",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider storybook dev -p 9001 -c .storybook",
-    "storybook-node16": "storybook dev -p 9001 -c .storybook",
     "build-storybook": "storybook build",
     "storybook:publish": "NODE_OPTIONS=--openssl-legacy-provider yarn build-storybook --output-dir storybook-static/$(git branch --show-current) && gh-pages --add --message=\"Deploying to gh-pages from @ eBay/ebayui-core-react@$(git rev-parse --short HEAD) 🚀\" -d storybook-static",
     "test": "yarn jest",
