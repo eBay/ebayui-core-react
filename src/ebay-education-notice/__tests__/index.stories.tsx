@@ -194,7 +194,6 @@ export const DefaultEducationNoticeFooter = {
                 <EbayEducationNotice
                     educationIcon="lightbulb24"
                     a11yDismissText="dismiss text"
-                    onDismiss={}
                 >
                     <EbayEducationNoticeTitle>
                         Education notice title
