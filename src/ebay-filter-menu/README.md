@@ -40,11 +40,18 @@ import "@ebay/skin/filter-menu.css";
 
 ## Attributes
 
-| Name              | Type     | Required | Description                                                                 | Data                                      |
-| ----------------- | -------- | -------- | --------------------------------------------------------------------------- | ----------------------------------------- |
-| `variant`         | String   | No       | Variant of the filter menu, `form` or `default`                             |                                           |
-| `type`            | String   | No       | Type of the filter menu, `checkbox` or `radio`                              |                                           |
-| `onFormSubmit`    | Function | No       | Triggered on form submit                                                    | `(event: Event, { checked, checkedIndex })` |
-| `onFooterClick`   | Function | No       | Triggered on footer button click                                            | `(event: Event, { checked, checkedIndex })` |
-| `onChange`        | Function | No       | Triggered on item change                                                    | `(event: Event, { checked, checkedIndex })` |
-| `onSearchChange`  | Function | No       | Triggered on search input change                                            | `(event: Event, { searchTerm })`            |
+| Name                          | Type     | Required | Description                                                | Data                                        |
+| ----------------------------- | -------- | -------- | ---------------------------------------------------------- | ------------------------------------------- |
+| `classPrefix`                 | String   | No       | Modifies the base prefix for all Skin classes in the menu  | `"filter-menu"` (default)                   |
+| `formName`                    | String   | No       | Name attribute for the form                                |                                             |
+| `formAction`                  | String   | No       | Action attribute for the form                              |                                             |
+| `formMethod`                  | String   | No       | Method attribute for the form                              |                                             |
+| `variant`                     | String   | No       | Variant of the filter menu, `form` or `default`            |                                             |
+| `type`                        | String   | No       | Type of the filter menu, `checkbox` or `radio`             |                                             |
+| `searchHeaderValue`           | String   | No       | Optional value override for the input in the search header |                                             |
+| `searchHeaderPlaceholderText` | String   | No       | Enables the search header and populates placeholder text   |                                             |
+| `a11ySearchHeaderClearText`   | String   | No       | Accessibility text for the search header clear button      |                                             |
+| `onFormSubmit`                | Function | No       | Triggered on form submit                                   | `(event: Event, { checked, checkedIndex })` |
+| `onFooterClick`               | Function | No       | Triggered on footer button click                           | `(event: Event, { checked, checkedIndex })` |
+| `onChange`                    | Function | No       | Triggered on item change                                   | `(event: Event, { checked, checkedIndex })` |
+| `onSearchChange`              | Function | No       | Triggered on search input change                           | `(event: Event, { searchTerm })`            |
