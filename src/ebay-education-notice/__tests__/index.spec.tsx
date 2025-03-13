@@ -13,8 +13,10 @@ import { act } from 'react-dom/test-utils'
 describe('<EbayEducationNotice>', () => {
     it('should render notice snapshot', () => {
         const { asFragment } = render(
-            <EbayEducationNotice a11yText="a11y notice">
-                <EbayIcon name="theEbayVault24" />
+            <EbayEducationNotice
+                a11yText="a11y notice"
+                educationIcon={<EbayIcon name="theEbayVault24" />}
+            >
                 <EbayEducationNoticeTitle>
                     Recommended title format
                 </EbayEducationNoticeTitle>
@@ -39,8 +41,8 @@ describe('<EbayEducationNotice>', () => {
                 variant="prominent"
                 iconVariant="prominent"
                 a11yDismissText="dismiss notice"
+                educationIcon={<EbayIcon name="theEbayVault24" />}
             >
-                <EbayIcon name="theEbayVault24" />
                 <EbayEducationNoticeTitle>
                     Recommended title format
                 </EbayEducationNoticeTitle>
@@ -63,8 +65,8 @@ describe('<EbayEducationNotice>', () => {
                     variant="prominent"
                     iconVariant="prominent"
                     a11yDismissText="dismiss notice"
+                    educationIcon={<EbayIcon name="theEbayVault24" />}
                 >
-                    <EbayIcon name="theEbayVault24" />
                     <EbayNoticeContent>
                         <p>
                             Follow the order below to optimize market valuation
@@ -76,7 +78,7 @@ describe('<EbayEducationNotice>', () => {
                 </EbayEducationNotice>
             )
         }).toThrow(
-            'EbayEducationNoticeTitle: Please use a EbayEducationNoticeTitle that defines the content of the notice'
+            '<EbayEducationNoticeTitle>: Please use a <EbayEducationNoticeTitle> that defines the content of the notice'
         )
     })
 
@@ -84,11 +86,10 @@ describe('<EbayEducationNotice>', () => {
         const onDismissMock = jest.fn()
         const { getByRole } = render(
             <EbayEducationNotice
-                educationIcon="lightbulb24"
                 a11yDismissText="notice dismiss"
                 onDismiss={onDismissMock}
+                educationIcon={<EbayIcon name="theEbayVault24" />}
             >
-                <EbayIcon name="theEbayVault24" />
                 <EbayEducationNoticeTitle>
                     Recommended title format
                 </EbayEducationNoticeTitle>

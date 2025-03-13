@@ -141,8 +141,10 @@ export default {
 export const Default: StoryObj<typeof EbayEducationNotice> = {
     render: (args) => {
         return (
-            <EbayEducationNotice {...args}>
-                <EbayIcon name="theEbayVault24" />
+            <EbayEducationNotice
+                educationIcon={<EbayIcon name="theEbayVault24" />}
+                {...args}
+            >
                 <EbayEducationNoticeTitle>
                     Recommended title format
                 </EbayEducationNoticeTitle>
@@ -164,8 +166,7 @@ export const Default: StoryObj<typeof EbayEducationNotice> = {
 export const EducationNoticeOnlyTitle = {
     render: () => (
         <>
-            <EbayEducationNotice>
-                <EbayIcon name="car24" />
+            <EbayEducationNotice educationIcon={<EbayIcon name="car24" />}>
                 <EbayEducationNoticeTitle>
                     Only With Title
                 </EbayEducationNoticeTitle>
@@ -180,7 +181,7 @@ export const DefaultEducationNotice = {
     render: () => (
         <>
             <EbayEducationNotice
-                educationIcon="lightbulb24"
+                educationIcon={<EbayIcon name="lightbulb24" />}
                 iconVariant="prominent"
             >
                 <EbayEducationNoticeTitle>
@@ -205,7 +206,7 @@ export const DefaultEducationNoticeFooter = {
         return (
             <>
                 <EbayEducationNotice
-                    educationIcon="lightbulb24"
+                    educationIcon={<EbayIcon name="creditCard24" />}
                     a11yDismissText="dismiss text"
                 >
                     <EbayEducationNoticeTitle>

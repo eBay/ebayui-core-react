@@ -1,4 +1,4 @@
-# EbaySectionNotice
+# EbayEducationNotice
 
 ## Demo
 
