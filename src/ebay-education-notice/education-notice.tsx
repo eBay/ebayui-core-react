@@ -18,7 +18,7 @@ import { EbayEducationNoticeTitle } from './index'
 import { EbayEducationNoticeFooter } from './index'
 
 export type Props = ComponentProps<'section'> & {
-    a11yText?: string
+    a11yIconText?: string
     a11yDismissText?: string
     onDismiss?: MouseEventHandler & KeyboardEventHandler
     dismissed?: boolean
@@ -31,7 +31,7 @@ export type Props = ComponentProps<'section'> & {
 const EbayEducationNotice: FC<Props> = ({
     children,
     className,
-    a11yText,
+    a11yIconText,
     variant = 'none',
     iconVariant = 'none',
     a11yDismissText,
@@ -43,8 +43,7 @@ const EbayEducationNotice: FC<Props> = ({
 }) => {
     const [isDismissed, setIsDismissed] = useState(dismissed)
 
-    const childrenArray = React.Children.toArray(children) as ReactElement[]
-    const content = childrenArray.find(({ type }) => type === EbayNoticeContent)
+    const content = findComponent(children, EbayNoticeContent)
     const titleComponent = findComponent(children, EbayEducationNoticeTitle)
     const footerComponent = findComponent(children, EbayEducationNoticeFooter)
 
@@ -76,7 +75,7 @@ const EbayEducationNotice: FC<Props> = ({
             <div className="education-notice__header">
                 {cloneElement(educationIcon as ReactElement, {
                     className: isIconProminent && 'icon--prominent',
-                    a11yText,
+                    a11yText: a11yIconText,
                     a11yVariant: 'label'
                 })}
 

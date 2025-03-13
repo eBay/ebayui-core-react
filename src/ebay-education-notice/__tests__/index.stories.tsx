@@ -12,7 +12,7 @@ export default {
     title: 'notices & tips/ebay-education-notice',
     component: EbayEducationNotice,
     argTypes: {
-        a11yText: {
+        a11yIconText: {
             control: {
                 type: 'text'
             },
