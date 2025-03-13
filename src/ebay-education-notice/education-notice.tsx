@@ -1,6 +1,4 @@
 import React, {
-    MouseEventHandler,
-    KeyboardEventHandler,
     ComponentProps,
     FC,
     ReactElement,
@@ -14,13 +12,14 @@ import NoticeContent from '../common/notice-utils/notice-content'
 import { findComponent } from '../common/component-utils'
 import EbayIcon from '../ebay-icon/icon'
 import { EbayIconButton } from '../ebay-icon-button'
-import { EbayEducationNoticeTitle } from './index'
-import { EbayEducationNoticeFooter } from './index'
+import { EducationDismissHandler } from './types'
+
+import { EbayEducationNoticeTitle, EbayEducationNoticeFooter } from './index'
 
 export type Props = ComponentProps<'section'> & {
     a11yIconText?: string
     a11yDismissText?: string
-    onDismiss?: MouseEventHandler & KeyboardEventHandler
+    onDismiss?: EducationDismissHandler
     dismissed?: boolean
     prominent?: boolean
     educationIcon?: ReactNode
@@ -50,9 +49,7 @@ const EbayEducationNotice: FC<Props> = ({
     const isProminent = variant === 'prominent'
     const isIconProminent = iconVariant === 'prominent'
 
-    const handleDismissed: MouseEventHandler & KeyboardEventHandler = (
-        event
-    ) => {
+    const handleDismissed: EducationDismissHandler = (event) => {
         setIsDismissed(true)
         onDismiss(event)
     }
