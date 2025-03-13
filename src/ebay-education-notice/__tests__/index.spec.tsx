@@ -4,61 +4,13 @@ import EbayIcon from '../../ebay-icon/icon'
 import {
     EbayEducationNotice,
     EbayNoticeContent,
-    EbayEducationNoticeTitle,
-    EbayEducationNoticeFooter
+    EbayEducationNoticeTitle
 } from '../index'
 import userEvent from '@testing-library/user-event'
 import { act } from 'react-dom/test-utils'
 
 describe('<EbayEducationNotice>', () => {
-    it('should render notice snapshot', () => {
-        const { asFragment } = render(
-            <EbayEducationNotice
-                a11yIconText="a11y notice"
-                educationIcon={<EbayIcon name="theEbayVault24" />}
-            >
-                <EbayEducationNoticeTitle>
-                    Recommended title format
-                </EbayEducationNoticeTitle>
-                <EbayNoticeContent>
-                    <p>
-                        Follow the order below to optimize market valuation from
-                        Price Guide. Player + Set or Season + Manufacturer +
-                        Card number + Variant + Grader + Grade
-                    </p>
-                </EbayNoticeContent>
-                <EbayEducationNoticeFooter>
-                    Education footer
-                </EbayEducationNoticeFooter>
-            </EbayEducationNotice>
-        )
-
-        expect(asFragment()).toMatchSnapshot()
-    })
-    it('should render notice prominent snapshot', () => {
-        const { asFragment } = render(
-            <EbayEducationNotice
-                variant="prominent"
-                iconVariant="prominent"
-                a11yDismissText="dismiss notice"
-                educationIcon={<EbayIcon name="theEbayVault24" />}
-            >
-                <EbayEducationNoticeTitle>
-                    Recommended title format
-                </EbayEducationNoticeTitle>
-                <EbayNoticeContent>
-                    <p>
-                        Follow the order below to optimize market valuation from
-                        Price Guide. Player + Set or Season + Manufacturer +
-                        Card number + Variant + Grader + Grade
-                    </p>
-                </EbayNoticeContent>
-            </EbayEducationNotice>
-        )
-
-        expect(asFragment()).toMatchSnapshot()
-    })
-    it('should no render without title', () => {
+    it('should not render without title', () => {
         expect(() => {
             render(
                 <EbayEducationNotice

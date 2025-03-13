@@ -17,7 +17,7 @@ exports[`<EbayEducationNotice> should render notice prominent snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <use
-          xlink:href="#icon-the-ebay-vault-24"
+          xlink:href="#icon-lightbulb-24"
         />
       </svg>
       <h2
