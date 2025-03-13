@@ -14,7 +14,7 @@ describe('<EbayEducationNotice>', () => {
     it('should render notice snapshot', () => {
         const { asFragment } = render(
             <EbayEducationNotice
-                a11yText="a11y notice"
+                a11yIconText="a11y notice"
                 educationIcon={<EbayIcon name="theEbayVault24" />}
             >
                 <EbayEducationNoticeTitle>
