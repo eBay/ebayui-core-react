@@ -19,7 +19,7 @@ export default {
             table: {
                 type: { summary: 'string' }
             },
-            description: 'adding description for the notice for a11y users'
+            description: 'Add description the notice icon for a11y users'
         },
         variant: {
             options: ['none', 'prominent'],
@@ -49,7 +49,7 @@ export default {
             description:
                 'Either none or prominent. If prominent, the notice will be more prominent'
         },
-        a11yRoleDescription: {
+        'aria-roledescription': {
             control: {
                 type: 'text'
             },
@@ -61,6 +61,19 @@ export default {
             },
             description:
                 'The roledescription to announce the component type for a11y users.'
+        },
+        'aria-label': {
+            control: {
+                type: 'text'
+            },
+            table: {
+                defaultValue: {
+                    summary: 'Notice'
+                },
+                type: { summary: 'string' }
+            },
+            description:
+                'The description of the notice itself for screen readers.'
         },
         a11yDismissText: {
             control: {
