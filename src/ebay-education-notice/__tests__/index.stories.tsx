@@ -21,7 +21,7 @@ export default {
                 },
                 type: { summary: 'Icon' }
             },
-            description: 'Add description the notice icon for a11y users'
+            description: 'EbayIcon that will show in the notice'
         },
         iconClass: {
             control: {
