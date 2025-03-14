@@ -1,6 +1,5 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import EbayIcon from '../../ebay-icon/icon'
 import {
     EbayEducationNotice,
     EbayNoticeContent,
@@ -13,7 +12,7 @@ describe('<EbayEducationNotice>', () => {
         const { asFragment } = render(
             <EbayEducationNotice
                 a11yIconText="a11y notice"
-                educationIcon={<EbayIcon name="theEbayVault24" />}
+                educationIcon="theEbayVault24"
             >
                 <EbayEducationNoticeTitle>
                     Recommended title format

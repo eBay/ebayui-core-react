@@ -1,6 +1,5 @@
 import React from 'react'
 import { StoryObj } from '@storybook/react'
-import EbayIcon from '../../ebay-icon/icon'
 import {
     EbayEducationNotice,
     EbayNoticeContent,
@@ -12,6 +11,27 @@ export default {
     title: 'notices & tips/ebay-education-notice',
     component: EbayEducationNotice,
     argTypes: {
+        educationIcon: {
+            control: {
+                type: 'text'
+            },
+            table: {
+                defaultValue: {
+                    summary: 'lightbulb24'
+                },
+                type: { summary: 'Icon' }
+            },
+            description: 'Add description the notice icon for a11y users'
+        },
+        iconClass: {
+            control: {
+                type: 'text'
+            },
+            table: {
+                type: { summary: 'string' }
+            },
+            description: 'Add class name to icon'
+        },
         a11yIconText: {
             control: {
                 type: 'text'
@@ -67,9 +87,6 @@ export default {
                 type: 'text'
             },
             table: {
-                defaultValue: {
-                    summary: 'Notice'
-                },
                 type: { summary: 'string' }
             },
             description:
@@ -141,10 +158,7 @@ export default {
 export const Default: StoryObj<typeof EbayEducationNotice> = {
     render: (args) => {
         return (
-            <EbayEducationNotice
-                educationIcon={<EbayIcon name="theEbayVault24" />}
-                {...args}
-            >
+            <EbayEducationNotice {...args}>
                 <EbayEducationNoticeTitle>
                     Recommended title format
                 </EbayEducationNoticeTitle>
@@ -166,7 +180,7 @@ export const Default: StoryObj<typeof EbayEducationNotice> = {
 export const EducationNoticeOnlyTitle = {
     render: () => (
         <>
-            <EbayEducationNotice educationIcon={<EbayIcon name="car24" />}>
+            <EbayEducationNotice educationIcon="car24">
                 <EbayEducationNoticeTitle>
                     Only With Title
                 </EbayEducationNoticeTitle>
@@ -180,10 +194,7 @@ export const EducationNoticeOnlyTitle = {
 export const DefaultEducationNotice = {
     render: () => (
         <>
-            <EbayEducationNotice
-                educationIcon={<EbayIcon name="lightbulb24" />}
-                iconVariant="prominent"
-            >
+            <EbayEducationNotice iconVariant="prominent">
                 <EbayEducationNoticeTitle>
                     Education notice title
                 </EbayEducationNoticeTitle>
@@ -206,7 +217,7 @@ export const DefaultEducationNoticeFooter = {
         return (
             <>
                 <EbayEducationNotice
-                    educationIcon={<EbayIcon name="creditCard24" />}
+                    educationIcon="creditCard24"
                     a11yDismissText="dismiss text"
                 >
                     <EbayEducationNoticeTitle>

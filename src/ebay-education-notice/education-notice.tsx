@@ -1,16 +1,10 @@
-import React, {
-    ComponentProps,
-    FC,
-    ReactElement,
-    useState,
-    ReactNode,
-    cloneElement
-} from 'react'
+import React, { ComponentProps, FC, useState } from 'react'
 import cx from 'classnames'
 import { EbayNoticeContent } from '../ebay-notice-base/components/ebay-notice-content'
 import NoticeContent from '../common/notice-utils/notice-content'
 import { findComponent } from '../common/component-utils'
 import EbayIcon from '../ebay-icon/icon'
+import { Icon } from '../ebay-icon/types'
 import { EbayIconButton } from '../ebay-icon-button'
 import { EducationDismissHandler } from './types'
 
@@ -22,7 +16,8 @@ export type Props = ComponentProps<'section'> & {
     onDismiss?: EducationDismissHandler
     dismissed?: boolean
     prominent?: boolean
-    educationIcon?: ReactNode
+    educationIcon?: Icon
+    iconClass?: string
     variant?: 'prominent' | 'none'
     iconVariant?: 'prominent' | 'none'
 }
@@ -34,7 +29,8 @@ const EbayEducationNotice: FC<Props> = ({
     variant = 'none',
     iconVariant = 'none',
     a11yDismissText,
-    educationIcon = <EbayIcon name="lightbulb24" />,
+    educationIcon = 'lightbulb24',
+    iconClass,
     prominent,
     dismissed = false,
     onDismiss = () => {},
@@ -70,11 +66,14 @@ const EbayEducationNotice: FC<Props> = ({
             role="region"
         >
             <div className="education-notice__header">
-                {cloneElement(educationIcon as ReactElement, {
-                    className: isIconProminent && 'icon--prominent',
-                    a11yText: a11yIconText,
-                    a11yVariant: 'label'
-                })}
+                <EbayIcon
+                    name={educationIcon}
+                    className={cx(iconClass, {
+                        'icon--prominent': isIconProminent
+                    })}
+                    a11yText={a11yIconText}
+                    a11yVariant="label"
+                />
 
                 {titleComponent}
                 {a11yDismissText && (

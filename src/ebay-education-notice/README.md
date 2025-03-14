@@ -24,9 +24,7 @@ import '@ebay/skin/education-notice'
 ## Use
 
 ```jsx harmony
-<EbayEducationNotice
-    educationIcon={<EbayIcon name="theEbayVault24" />}
->
+<EbayEducationNotice educationIcon={<EbayIcon name="theEbayVault24" />}>
     <EbayEducationNoticeTitle>
         Recommended title format
     </EbayEducationNoticeTitle>
@@ -45,7 +43,7 @@ import '@ebay/skin/education-notice'
 
 | Name                   | Type                             | Stateful | Description                                                                                                                                 | Default    |
 | ---------------------- | -------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `a11yText`             | String                           | No       | Determines the style and type of notice to be displayed                                                                                     | -          |
+| `a11yIconText`         | String                           | No       | adding description for the notice icon for a11y users                                                                                       | -          |
 | `aria-label`           | String                           | No       | The description of the notice itself for screen readers. Check out [this issue](https://github.com/eBay/skin/issues/1001) for more context. | -          |
 | `aria-roledescription` | String                           | No       | Adds role description attribute to the section notice                                                                                       | `"Notice"` |
 | `children`             | React Node                       | No       | The content to be displayed within the notice. **Must have the EbayEducationNoticeTitle within the children!**                              | -          |

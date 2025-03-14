@@ -1,6 +1,5 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import EbayIcon from '../../ebay-icon/icon'
 import {
     EbayEducationNotice,
     EbayNoticeContent,
@@ -17,7 +16,7 @@ describe('<EbayEducationNotice>', () => {
                     variant="prominent"
                     iconVariant="prominent"
                     a11yDismissText="dismiss notice"
-                    educationIcon={<EbayIcon name="theEbayVault24" />}
+                    educationIcon="theEbayVault24"
                 >
                     <EbayNoticeContent>
                         <p>
@@ -40,7 +39,7 @@ describe('<EbayEducationNotice>', () => {
             <EbayEducationNotice
                 a11yDismissText="notice dismiss"
                 onDismiss={onDismissMock}
-                educationIcon={<EbayIcon name="theEbayVault24" />}
+                educationIcon="theEbayVault24"
             >
                 <EbayEducationNoticeTitle>
                     Recommended title format
