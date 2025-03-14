@@ -33,7 +33,7 @@ eBayUI React components
 * [x] [ebay-date-textbox](src/ebay-date-textbox)
 * [ ] `ebay-details`
 * [ ] `ebay-donut-chart`
-* [ ] `ebay-education-notice`
+* [x] [ebay-education-notice](src/ebay-education-notice)
 * [x] [ebay-eek](src/ebay-eek)
 * [ ] `ebay-fake-link`
 * [x] [ebay-fake-menu](src/ebay-fake-menu)

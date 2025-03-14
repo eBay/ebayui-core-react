@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import cx from 'classnames'
 
 type Props = React.HTMLProps<HTMLHeadingElement> & {
-    type: 'window' | 'section' | 'page';
+    type: 'window' | 'section' | 'page' | 'education';
     as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     className?: string;
 }
