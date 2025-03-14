@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-ebay-chip--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/docs/building-blocks-ebay-chip--docs)
 
 ## Usage
 
