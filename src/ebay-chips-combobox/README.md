@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/story/form-ebay-chips-combobox--default)
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/docs/form-input-ebay-chips-combobox--docs)
 
 ## Usage
 
