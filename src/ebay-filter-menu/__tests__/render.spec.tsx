@@ -5,6 +5,8 @@ import { render } from '@testing-library/react';
 
 const { Default, WithSearch, WithFooterButton } = composeStories(stories);
 
+jest.mock('../../common/random-id')
+
 describe('<EbayFilterMenu /> rendering', () => {
     it('renders Default story correctly', () => {
         const { container } = render(<Default />);

@@ -8589,6 +8589,18 @@ makeup-next-id@~0.4.0:
   resolved "https://registry.yarnpkg.com/makeup-next-id/-/makeup-next-id-0.4.1.tgz#7530470175360e836af66c6d421349abf612738c"
   integrity sha512-5s1caaRFSkvAu6Vhh1ZGkMyycf6bwEfZWwd0qEXzJj2P1aF+8baLo5sPZlMnfSao/SeUD6le0J8CaOzlt4KZSA==
 
+makeup-prevent-scroll-keys@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/makeup-prevent-scroll-keys/-/makeup-prevent-scroll-keys-0.3.3.tgz#3f95496c49e8e408aed9bf88beed995a2c67cbf8"
+  integrity sha512-x6LaY0D3oGHbV3sl7AVcrPtAT256FCI1RtuELCi+Ta/IkHbj3u8t5JsKCH+9FApl3u0mz2xR+mI3zG5mlnqUgQ==
+
+makeup-roving-tabindex@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/makeup-roving-tabindex/-/makeup-roving-tabindex-0.7.3.tgz#48700535eb5fe776628ca30b880d607515cb1be6"
+  integrity sha512-DSKbELv8JE0SxRLpgkBDSR1oIyLCPhbuUM/7E7BFJtvfeMBxdu7cEtArogf7wGiymJKllkvu0pPXy3JDGWdHJA==
+  dependencies:
+    makeup-navigation-emitter "^0.7.3"
+
 makeup-screenreader-trap@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/makeup-screenreader-trap/-/makeup-screenreader-trap-0.4.1.tgz#6ef87b33735a609be5444c0562a1834bf45dc39b"
