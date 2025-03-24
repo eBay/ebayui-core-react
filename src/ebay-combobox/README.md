@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/docs/form-input-ebay-combobox--docs
+[Storybook](https://opensource.ebay.com/ebayui-core-react/main/?path=/docs/form-input-ebay-combobox--docs)
 
 ## Usage
 
