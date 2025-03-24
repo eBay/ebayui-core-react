@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.1.3
+
+### Patch Changes
+
+- [#459](https://github.com/eBay/ebayui-core-react/pull/459) [`9834896`](https://github.com/eBay/ebayui-core-react/commit/9834896484ec82d0ea1c57fe073d85d6430cce34) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - fix(Select): remove floating-label inline class on first render"
+
 ## 8.1.2
 
 ### Patch Changes

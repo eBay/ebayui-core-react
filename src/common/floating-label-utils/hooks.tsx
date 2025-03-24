@@ -89,7 +89,6 @@ export function useFloatingLabel({
 
     const labelClassName = classNames('floating-label__label', {
         'floating-label__label--disabled': disabled,
-        'floating-label__label--inline': type !== 'date',
         'floating-label__label--invalid': invalid
     })
 
