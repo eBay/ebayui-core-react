@@ -10,7 +10,7 @@ import {
 // has both button and subtitle set
 figma.connect(
     EbaySectionTitle,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=78903-90028&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=78903-90028',
     {
         props: {
             titleText: figma.string('Title')
@@ -26,7 +26,7 @@ figma.connect(
 // only subtitle set
 figma.connect(
     EbaySectionTitle,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=78903-90028&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=78903-90028',
     {
         props: {
             titleText: figma.string('Title'),

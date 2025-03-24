@@ -5,7 +5,7 @@ import { EbayBreadcrumbs, EbayBreadcrumbItem } from '.'
 
 figma.connect(
     EbayBreadcrumbs,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=67603-81724&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=67603-81724',
     {
         example: () => (
             <EbayBreadcrumbs a11yHeadingText="Page navigation">

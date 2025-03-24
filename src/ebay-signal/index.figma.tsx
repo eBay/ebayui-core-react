@@ -5,7 +5,7 @@ import { EbaySignal } from '.'
 
 figma.connect(
     EbaySignal,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10051-5&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10051-5',
     {
         props: {
             type: figma.string('Type')

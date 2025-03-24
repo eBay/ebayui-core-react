@@ -6,7 +6,7 @@ import { EbayButton } from '.'
 // button
 figma.connect(
     EbayButton,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=65849-91206&t=vTwME7f7yohLIppj-4',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=65849-91206',
     {
         props: {
             state: figma.enum('State', {
@@ -30,7 +30,7 @@ figma.connect(
 // button destructive
 figma.connect(
     EbayButton,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=260004-7740&t=vTwME7f7yohLIppj-4',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=260004-7740',
     {
         props: {
             state: figma.enum('State', {
@@ -54,7 +54,7 @@ figma.connect(
 // button branded
 figma.connect(
     EbayButton,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=129776-224141&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=129776-224141',
     {
         props: {
             title: figma.string('Title'),
@@ -74,7 +74,7 @@ figma.connect(
 // button link (borderless)
 figma.connect(
     EbayButton,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=109500-131885&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=109500-131885',
     {
         props: {
             title: figma.string('Title'),

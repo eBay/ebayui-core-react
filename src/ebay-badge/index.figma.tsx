@@ -5,7 +5,7 @@ import { EbayBadge } from '.'
 
 figma.connect(
     EbayBadge,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=38612-44629&t=vTwME7f7yohLIppj-4',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Evo-Design-System?node-id=38612-44629',
     {
         props: {
             number: figma.string('Number')

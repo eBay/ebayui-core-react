@@ -7,7 +7,7 @@ import { EbayButton } from '@ebay/ui-core-react/ebay-button'
 
 figma.connect(
     EbayPageNotice,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=64873-99272&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=64873-99272',
     {
         props: {
             Body: figma.string('Body')

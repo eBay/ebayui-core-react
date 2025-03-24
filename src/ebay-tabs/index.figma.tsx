@@ -5,7 +5,7 @@ import { EbayTabs, EbayTab, EbayTabPanel } from '.'
 
 figma.connect(
     EbayTabs,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=30493-33853&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=30493-33853',
     {
         example: () => (
             <EbayTabs>

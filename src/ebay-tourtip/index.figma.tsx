@@ -13,7 +13,7 @@ import { EbayButton } from '@ebay/ui-core-react/ebay-button'
 
 figma.connect(
     EbayTourtip,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=54797-91102&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=54797-91102',
     {
         example: () => (
             <EbayTourtip a11yCloseText="close" pointer="bottom">

@@ -5,7 +5,7 @@ import { EbayPagination, EbayPaginationItem } from '.'
 
 figma.connect(
     EbayPagination,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=30164-31155&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=30164-31155',
     {
         example: () => (
             <EbayPagination

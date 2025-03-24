@@ -7,7 +7,7 @@ import { EbayDialogHeader } from '@ebay/ui-core-react/ebay-dialog-base'
 
 figma.connect(
     EbayAlertDialog,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=16420-100&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=16420-100',
     {
         props: {
             Title: figma.string('Title'),

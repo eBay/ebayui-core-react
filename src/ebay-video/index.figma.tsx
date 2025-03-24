@@ -5,7 +5,7 @@ import { EbayVideo, EbayVideoSource } from '.'
 
 figma.connect(
     EbayVideo,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=128145-216829&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=128145-216829',
     {
         example: () => (
             <EbayVideo

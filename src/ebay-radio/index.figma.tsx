@@ -8,7 +8,7 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field'
 // selection field
 figma.connect(
     EbayRadio,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=13789-23765&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=13789-23765',
     {
         variant: { 'control type': 'radio' },
         example: () => (
@@ -22,7 +22,7 @@ figma.connect(
 // radio only
 figma.connect(
     EbayRadio,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10385-1&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10385-1',
     {
         example: () => (
             <EbayRadio id="radio-1" />

@@ -5,7 +5,7 @@ import { EbayProgressStepper, EbayProgressStep as Step } from '.'
 
 figma.connect(
     EbayProgressStepper,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=72990-81100&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=72990-81100',
     {
         example: () => (
             <EbayProgressStepper>

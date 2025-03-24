@@ -6,7 +6,7 @@ import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '.'
 // no action needed
 figma.connect(
     EbaySnackbarDialog,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=15902-21578&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=15902-21578',
     {
         props: {
             Body: figma.string('Body')
@@ -22,7 +22,7 @@ figma.connect(
 // has action set
 figma.connect(
     EbaySnackbarDialog,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=15902-21578&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=15902-21578',
     {
         props: {
             Body: figma.string('Body'),

@@ -8,7 +8,7 @@ import { EbayLabel } from '@ebay/ui-core-react/ebay-field'
 // selection field
 figma.connect(
     EbaySwitch,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=13789-23765&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=13789-23765',
     {
         variant: { 'control type': 'switch' },
         example: () => (
@@ -22,7 +22,7 @@ figma.connect(
 // switch only
 figma.connect(
     EbaySwitch,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10385-3&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=10385-3',
     {
         example: () => (
             <EbaySwitch id="switch-1" />

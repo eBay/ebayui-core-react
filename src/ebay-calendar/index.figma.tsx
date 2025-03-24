@@ -6,7 +6,7 @@ import { EbayCalendar } from '.'
 // single month
 figma.connect(
     EbayCalendar,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=68524-79110&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=68524-79110',
     {
         example: () => (
             <EbayCalendar />
@@ -17,7 +17,7 @@ figma.connect(
 // multi-month
 figma.connect(
     EbayCalendar,
-    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=68524-79119&m=dev',
+    'https://www.figma.com/design/zEBdEhbonrBOGzZ0fXzWvM/eBay-Design-System?node-id=68524-79119',
     {
         example: () => (
             <EbayCalendar numMonths={2} />
