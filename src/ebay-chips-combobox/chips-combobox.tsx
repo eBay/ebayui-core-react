@@ -5,7 +5,7 @@ import { EbayCombobox, EbayComboboxOption, EbayComboboxProps } from '../ebay-com
 import { filterByType } from '../utils'
 import { EbayChip } from '../ebay-chip'
 
-export type EbayChipsComboboxProps = EbayComboboxProps & {
+export type EbayChipsComboboxProps = Omit<EbayComboboxProps, 'onChange'> & {
   error?: boolean
   selected? : string[]
   defaultSelected?: string[]
