@@ -58,7 +58,7 @@ export type ExpanderHookArgs<T extends HTMLElement> = {
     options: {
         contentSelector: string
         hostSelector: string
-        expandedClass: string
+        expandedClass?: string
         autoCollapse?: boolean
         expandOnFocus?: boolean
         expandOnClick?: boolean

@@ -1,5 +1,17 @@
-import React, { ComponentProps, FC, Fragment, MouseEvent, useState } from 'react'
-import { filterByType, findComponent } from '../utils'
+import React, {
+    ComponentProps,
+    FC,
+    Fragment,
+    KeyboardEvent,
+    MouseEvent,
+    RefObject,
+    useEffect,
+    useRef,
+    useState
+} from 'react'
+import * as scrollKeyPreventer from 'makeup-prevent-scroll-keys'
+import { createLinear } from 'makeup-roving-tabindex'
+import { filterByType, findComponent, useRandomId, withForwardRef } from '../utils'
 import EbayFilterMenuFooterButton, { EbayFilterMenuFooterButtonProps } from './filter-menu-footer-button'
 import EbayFilterMenuItem, { EbayFilterMenuItemProps } from './filter-menu-item'
 import {
@@ -15,7 +27,7 @@ import classNames from 'classnames'
 import { EbayIcon } from '../ebay-icon'
 import { EbayButton } from '../ebay-button'
 
-export type EbayFilterMenuProps = ComponentProps<'span'> & {
+export type EbayFilterMenuProps = Omit<ComponentProps<'span'>, 'onChange'> & {
     classPrefix?: string;
     formName?: string;
     formAction?: string;
@@ -25,6 +37,7 @@ export type EbayFilterMenuProps = ComponentProps<'span'> & {
     searchHeaderValue?: string;
     searchHeaderPlaceholderText?: string;
     a11ySearchHeaderClearText?: string;
+    forwardedRef?: RefObject<HTMLSpanElement>;
     onSearchChange?: FilterMenuSearchChange
     onFormSubmit?: FilterMenuFormSubmit
     onFooterClick?: FilterMenuFooterClick
@@ -43,6 +56,7 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
     searchHeaderValue,
     searchHeaderPlaceholderText,
     a11ySearchHeaderClearText,
+    forwardedRef,
     onSearchChange,
     onFormSubmit,
     onFooterClick,
@@ -51,11 +65,13 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
     'aria-labelledby': ariaLabelledBy,
     ...rest
 }) => {
+    const menuRef = useRef<HTMLDivElement>(null)
     const isForm = variant === 'form'
     const isRadio = type === 'radio'
     const baseClass = classPrefix || 'filter-menu'
     const footerButton = findComponent(children, EbayFilterMenuFooterButton)
     const items = filterByType(children, EbayFilterMenuItem)
+    const menuId = useRandomId()
     const [searchTerm, setSearchTerm] = useState(searchHeaderValue || '')
     const [checkedIndex, setCheckedIndex] = useState<number>(() =>
         items
@@ -63,6 +79,24 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
             .find((value) => typeof value === 'number')
     )
     const [checkedItems, setCheckedItems] = useState<boolean[]>(() => items.map(item => Boolean(item.props.checked)))
+
+    useEffect(() => {
+        let rovingTabIndex: ReturnType<typeof createLinear>
+
+        if (!isForm) {
+            rovingTabIndex = createLinear(menuRef.current, `div`, {
+                autoInit: 'interactive'
+            })
+            scrollKeyPreventer.add(menuRef.current)
+        }
+
+        return () => {
+            if (rovingTabIndex) {
+                rovingTabIndex.destroy()
+                rovingTabIndex = null
+            }
+        }
+    }, [isForm])
 
     const buildCurrentEventData: (() => FilterMenuEventData) = () => ({
         checked: items
@@ -108,10 +142,11 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
         onSubmit: handleFormSubmit
     } : {}
 
-    const handleItemClick = (event: MouseEvent<HTMLLabelElement | HTMLDivElement>, {
-        checked,
-        index: indexToToggle
-    }: {
+    const handleItemClick = (
+        event: KeyboardEvent<HTMLLabelElement | HTMLDivElement> | MouseEvent<HTMLLabelElement | HTMLDivElement>, {
+            checked,
+            index: indexToToggle
+        }: {
         checked?: boolean,
         index: number
     }) => {
@@ -157,6 +192,7 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
     return (
         <span
             {...rest}
+            ref={forwardedRef}
             className={classNames(className, `${classPrefix ? `${baseClass}__menu` : baseClass}`)}>
             {searchHeaderPlaceholderText ? (
                 <div className="filter-menu__header">
@@ -178,12 +214,13 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
             ) : null}
             <Container {...containerProps}>
                 <div
+                    id={menuId}
+                    ref={menuRef}
                     className={`${baseClass}__items`}
                     role={!isForm ? 'menu' : undefined}
                     aria-label={ariaLabel}
                     aria-labelledby={ariaLabelledBy}>
                     {items.map((item, index) => React.cloneElement<EbayFilterMenuItemProps>(item, {
-                        key: item.props.key || index,
                         __classPrefix: baseClass,
                         __type: type,
                         __variant: variant,
@@ -194,6 +231,16 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
                                 checked,
                                 index
                             })
+                        },
+                        onKeyDown: (event: KeyboardEvent<HTMLLabelElement | HTMLDivElement>) => {
+                            item.props.onKeyDown?.(event)
+                            if (event.key === 'Enter' || event.key === ' ') {
+                                const currentChecked = isRadio ? index === checkedIndex : checkedItems[index]
+                                handleItemClick(event, {
+                                    checked: !currentChecked,
+                                    index
+                                })
+                            }
                         }
                     }))}
                 </div>
@@ -208,4 +255,4 @@ const EbayFilterMenu: FC<EbayFilterMenuProps> = ({
     )
 }
 
-export default EbayFilterMenu
+export default withForwardRef(EbayFilterMenu)

@@ -67,6 +67,8 @@
     "makeup-expander": "^0.10.1",
     "makeup-floating-label": "^0.4.5",
     "makeup-keyboard-trap": "^0.4.1",
+    "makeup-prevent-scroll-keys": "^0.3.3",
+    "makeup-roving-tabindex": "^0.7.3",
     "makeup-screenreader-trap": "^0.4.1",
     "makeup-typeahead": "^0.3.3",
     "react-remove-scroll": "^2.2.0"
