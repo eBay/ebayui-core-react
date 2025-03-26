@@ -1,5 +1,11 @@
 # @ebay/ui-core-react
 
+## 8.2.1
+
+### Patch Changes
+
+- [#468](https://github.com/eBay/ebayui-core-react/pull/468) [`fd4c0e1`](https://github.com/eBay/ebayui-core-react/commit/fd4c0e16530c41674df69b5e4d6ebe4a6cdb119e) Thanks [@bruno2kd](https://github.com/bruno2kd)! - fix: ebay-textbox fluid floating label
+
 ## 8.2.0
 
 ### Minor Changes
