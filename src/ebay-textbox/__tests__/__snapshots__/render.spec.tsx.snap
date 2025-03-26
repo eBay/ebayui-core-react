@@ -1,5 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ebay-textbox rendering renders floating label fluid story correctly 1`] = `
+<div>
+  <div
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Floating label
+    </label>
+    <div
+      class="textbox textbox--fluid"
+    >
+      <input
+        class="textbox__control"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ebay-textbox rendering renders floating label story correctly 1`] = `
+<div>
+  <span
+    class="floating-label"
+  >
+    <label
+      class="floating-label__label"
+    >
+      Floating label
+    </label>
+    <span
+      class="textbox"
+    >
+      <input
+        class="textbox__control"
+        type="text"
+        value=""
+      />
+    </span>
+  </span>
+</div>
+`;
+
 exports[`ebay-textbox rendering renders with icon story correctly 1`] = `
 <svg
   aria-hidden="true"
