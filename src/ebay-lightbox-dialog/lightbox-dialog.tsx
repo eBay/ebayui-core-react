@@ -1,4 +1,9 @@
-import React, { CSSProperties, FC } from 'react'
+import React, {
+    CSSProperties,
+    FC,
+    MouseEventHandler,
+    KeyboardEventHandler
+} from 'react'
 import classNames from 'classnames'
 import { DialogBaseProps, DialogBaseWithState } from '../ebay-dialog-base'
 
@@ -11,7 +16,7 @@ export type Props<T = any> = Omit<DialogBaseProps<T>, 'size'> & {
   size?: Size;
   bannerImgSrc?: string;
   bannerImgPosition?: CSSProperties['backgroundPosition'];
-  onClose?: () => void;
+  onClose?: MouseEventHandler & KeyboardEventHandler;
 }
 
 const EbayLightboxDialog: FC<Props> = ({
