@@ -1,11 +1,11 @@
 import React, {
     CSSProperties,
-    FC,
-    MouseEventHandler,
-    KeyboardEventHandler
+    FC
 } from 'react'
 import classNames from 'classnames'
 import { DialogBaseProps, DialogBaseWithState } from '../ebay-dialog-base'
+import { DialogCloseEventHandler } from '../ebay-dialog-base/types'
+
 
 type Mode = 'default' | 'mini'
 type Size = 'wide' | 'narrow' | 'fullscreen' | 'large'
@@ -16,7 +16,7 @@ export type Props<T = any> = Omit<DialogBaseProps<T>, 'size'> & {
   size?: Size;
   bannerImgSrc?: string;
   bannerImgPosition?: CSSProperties['backgroundPosition'];
-  onClose?: MouseEventHandler & KeyboardEventHandler;
+  onClose?: DialogCloseEventHandler;
 }
 
 const EbayLightboxDialog: FC<Props> = ({
