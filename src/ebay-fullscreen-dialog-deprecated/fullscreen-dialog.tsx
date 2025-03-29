@@ -1,12 +1,13 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
 import { DialogBaseProps, DialogBaseWithState } from '../ebay-dialog-base'
+import { DialogCloseEventHandler } from '../ebay-dialog-base/types'
 
 const classPrefix = 'fullscreen-dialog'
 
 export interface Props<T = any> extends DialogBaseProps<T> {
   open?: boolean;
-  onClose?: () => void;
+  onClose?: DialogCloseEventHandler;
 }
 
 const EbayFullscreenDialogDeprecated: FC<Props> = ({
