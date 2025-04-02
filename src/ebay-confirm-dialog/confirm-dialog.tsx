@@ -1,6 +1,7 @@
 import React, { FC, useRef } from 'react'
 import classNames from 'classnames'
 import { DialogBaseProps, DialogBaseWithState, EbayDialogFooter } from '../ebay-dialog-base'
+import { DialogCloseEventHandler } from '../ebay-dialog-base/types'
 import { EbayButton } from '../ebay-button'
 
 const classPrefix = 'confirm-dialog'
@@ -9,7 +10,7 @@ export interface Props<T = any> extends DialogBaseProps<T> {
     open?: boolean;
     confirmText: string;
     rejectText: string;
-    onReject?: () => void;
+    onReject?: DialogCloseEventHandler;
     onConfirm?: () => void;
 }
 
