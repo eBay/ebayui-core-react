@@ -264,6 +264,20 @@ export const FloatingLabel = {
     name: 'Floating label'
 }
 
+export const FloatingLabelFluid = {
+    render: () => (
+        <EbayTextbox
+            fluid
+            floatingLabel="Floating label"
+            onChange={action('onChange')}
+            onInputChange={action('onInputChange')}
+            onFloatingLabelInit={() => action('onFloatingLabelInit')()}
+        />
+    ),
+
+    name: 'Floating label fluid'
+}
+
 export const FloatingLabelTypeDate = {
     render: () => (
         <EbayTextbox

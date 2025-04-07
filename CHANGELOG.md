@@ -1,5 +1,17 @@
 # @ebay/ui-core-react
 
+## 8.2.2
+
+### Patch Changes
+
+- [#471](https://github.com/eBay/ebayui-core-react/pull/471) [`e68676a`](https://github.com/eBay/ebayui-core-react/commit/e68676a9663d837cfeb8c0c4b4661ca56bc3410f) Thanks [@bruno2kd](https://github.com/bruno2kd)! - fix: onClose type on ebay lightbox dialog
+
+## 8.2.1
+
+### Patch Changes
+
+- [#468](https://github.com/eBay/ebayui-core-react/pull/468) [`fd4c0e1`](https://github.com/eBay/ebayui-core-react/commit/fd4c0e16530c41674df69b5e4d6ebe4a6cdb119e) Thanks [@bruno2kd](https://github.com/bruno2kd)! - fix: ebay-textbox fluid floating label
+
 ## 8.2.0
 
 ### Minor Changes
