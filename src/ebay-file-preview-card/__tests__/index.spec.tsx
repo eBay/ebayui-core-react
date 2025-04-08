@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { EbayFilePreviewCard } from '../'
@@ -7,7 +7,7 @@ import { EbayFilePreviewCard } from '../'
 describe('<EbayFilePreviewCard>', () => {
     it('should call onCancel', async () => {
         const onCancelClick = jest.fn()
-        const { getByRole } = render(
+        render(
             <EbayFilePreviewCard
                 status="uploading"
                 a11yCancelUploadText="Cancel upload"
@@ -15,14 +15,14 @@ describe('<EbayFilePreviewCard>', () => {
             />
         )
 
-        const buttonEl = getByRole('button', { name: 'Cancel upload' })
+        const buttonEl = screen.getByRole('button', { name: 'Cancel upload' })
         expect(buttonEl).toBeInTheDocument()
         await userEvent.click(buttonEl)
         expect(onCancelClick).toHaveBeenCalled()
     })
     it('should call onDelete', async () => {
         const onDeleteClick = jest.fn()
-        const { getByRole } = render(
+        render(
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
                 deleteText="Delete text"
@@ -35,7 +35,7 @@ describe('<EbayFilePreviewCard>', () => {
             />
         )
 
-        const buttonEl = getByRole('button', { name: 'Delete text' })
+        const buttonEl = screen.getByRole('button', { name: 'Delete text' })
         expect(buttonEl).toBeInTheDocument()
         await userEvent.click(buttonEl)
         expect(onDeleteClick).toHaveBeenCalled()
@@ -43,7 +43,7 @@ describe('<EbayFilePreviewCard>', () => {
     it('should call multi action menu delete call', async () => {
         const onDeleteClick = jest.fn()
         const onMenuAction = jest.fn()
-        const { getByRole } = render(
+        render(
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
                 deleteText="Delete"
@@ -67,10 +67,10 @@ describe('<EbayFilePreviewCard>', () => {
             />
         )
 
-        const buttonEl = getByRole('button')
+        const buttonEl = screen.getByRole('button')
         expect(buttonEl).toBeInTheDocument()
         await userEvent.click(buttonEl)
-        const deleteEl = getByRole('menuitem', { name: 'Delete' })
+        const deleteEl = screen.getByRole('menuitem', { name: 'Delete' })
         await userEvent.click(deleteEl)
         expect(onDeleteClick).toHaveBeenCalled()
         expect(onMenuAction).not.toHaveBeenCalled()
@@ -78,7 +78,7 @@ describe('<EbayFilePreviewCard>', () => {
     it('should call multi action menu delete call', async () => {
         const onDeleteClick = jest.fn()
         const onMenuAction = jest.fn()
-        const { getByRole } = render(
+        render(
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
                 deleteText="Delete"
@@ -102,10 +102,10 @@ describe('<EbayFilePreviewCard>', () => {
             />
         )
 
-        const buttonEl = getByRole('button')
+        const buttonEl = screen.getByRole('button')
         expect(buttonEl).toBeInTheDocument()
         await userEvent.click(buttonEl)
-        const editEl = getByRole('menuitem', { name: 'Edit' })
+        const editEl = screen.getByRole('menuitem', { name: 'Edit' })
         await userEvent.click(editEl)
         expect(onMenuAction).toHaveBeenCalledWith(
             expect.any(Object),

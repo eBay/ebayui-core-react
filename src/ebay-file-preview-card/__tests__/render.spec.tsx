@@ -12,6 +12,23 @@ describe('<EbayFilePreviewCard>', () => {
         )
         expect(asFragment()).toMatchSnapshot()
     })
+    it('renders as span element', () => {
+        const { asFragment } = render(
+            <EbayFilePreviewCard
+                as='span'
+                a11yCancelUploadText="Cancel upload"
+                deleteText="Delete"
+                file={{
+                    name: 'file-name.jpg',
+                    type: 'image',
+                    src: 'https://ir.ebaystatic.com/cr/v/c01/skin/docs/tb-real-square-pic.jpg'
+                }}
+                footerTitle="file-name.csv"
+                footerSubtitle="English, German, Spanish, French, Polish, Dutch, Italian, Japanese, Portuguese, Arabic"
+            />
+        )
+        expect(asFragment()).toMatchSnapshot()
+    })
     it('renders with image, delete button and footer', () => {
         const { asFragment } = render(
             <EbayFilePreviewCard
