@@ -12,11 +12,6 @@ export default {
             control: { type: 'text' },
             description: 'a11y text for cancel upload button'
         },
-        deleteText: {
-            type: 'string',
-            control: { type: 'text' },
-            description: 'Text for delete button'
-        },
         file: {
             type: 'object',
             description:
@@ -35,6 +30,11 @@ export default {
             type: 'string',
             control: { type: 'text' },
             description: 'Text to display in the label'
+        },
+        infoText: {
+            type: 'string',
+            control: { type: 'text' },
+            description: 'Text to display info in file if not image'
         },
         menuActions: {
             type: 'array',
@@ -118,7 +118,7 @@ export const Default: StoryObj<typeof EbayFilePreviewCard> = {
 }
 
 export const Image = {
-    render: () => (
+    render: (args) => (
         <>
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
@@ -130,6 +130,7 @@ export const Image = {
                 }}
                 onCancel={(e) => action('onCancel')(e)}
                 onDelete={(e) => action('onDelete')(e)}
+                {...args}
             />
         </>
     ),
@@ -138,7 +139,7 @@ export const Image = {
 }
 
 export const ImageFooter = {
-    render: () => (
+    render: (args) => (
         <>
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
@@ -164,6 +165,7 @@ export const ImageFooter = {
                         label: 'Download'
                     }
                 ]}
+                {...args}
             />
         </>
     ),
@@ -172,7 +174,7 @@ export const ImageFooter = {
 }
 
 export const Video = {
-    render: () => (
+    render: (args) => (
         <>
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
@@ -183,6 +185,7 @@ export const Video = {
                     type: 'video/quicktime',
                     src: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4'
                 }}
+                {...args}
             />
         </>
     ),
@@ -191,7 +194,7 @@ export const Video = {
 }
 
 export const Document = {
-    render: () => (
+    render: (args) => (
         <>
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
@@ -212,6 +215,7 @@ export const Document = {
                         label: 'Edit'
                     }
                 ]}
+                {...args}
             />
         </>
     ),
@@ -220,7 +224,7 @@ export const Document = {
 }
 
 export const MultipleActions = {
-    render: () => (
+    render: (args) => (
         <>
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
@@ -244,6 +248,7 @@ export const MultipleActions = {
                         label: 'Download'
                     }
                 ]}
+                {...args}
             />
         </>
     ),
@@ -252,7 +257,7 @@ export const MultipleActions = {
 }
 
 export const SeeMore = {
-    render: () => (
+    render: (args) => (
         <>
             <EbayFilePreviewCard
                 a11yCancelUploadText="Cancel upload"
@@ -265,6 +270,7 @@ export const SeeMore = {
                     type: 'image/jpeg',
                     src: 'https://ir.ebaystatic.com/cr/v/c01/skin/docs/tb-real-square-pic.jpg'
                 }}
+                {...args}
             />
         </>
     ),
