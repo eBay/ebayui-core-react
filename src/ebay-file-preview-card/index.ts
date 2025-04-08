@@ -1,2 +1,2 @@
-export { default as EbayFilePreviewCard } from './file-preview-card'
+export { default as EbayFilePreviewCard, type EbayFilePreviewCardProps } from './file-preview-card'
 export * from './types'

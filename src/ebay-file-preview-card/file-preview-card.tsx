@@ -1,14 +1,43 @@
-import React, { FC, useMemo } from 'react'
+import React, { FC, useMemo, ComponentProps, ElementType } from 'react'
 import cx from 'classnames'
+import { EbayEventHandler } from '../common/event-utils/types'
 import { EbayProgressSpinner } from '../ebay-progress-spinner'
 import { EbayIconButton } from '../ebay-icon-button'
 import { EbayIcon } from '../ebay-icon'
 import { EbayMenuButton, EbayMenuButtonItem } from '../ebay-menu-button'
-import { FilePreviewCardInput, EbayMenuSelectEventHandler } from './types'
+import {
+    FilePreviewCardMenuAction,
+    FilePreviewCardMenuActionHandler
+} from './types'
 
-const EbayFileInput: FC<FilePreviewCardInput> = ({
+export type EbayFilePreviewCardProps = ComponentProps<'div'> & {
+    a11yCancelUploadText?: string
+    as?: ElementType
+    deleteText?: string
+    file?:
+        | File
+        | {
+              name: string
+              type?: File['type']
+              src?: string
+          }
+    status?: 'uploading'
+    infoText?: string
+    menuActions?: FilePreviewCardMenuAction[]
+    seeMore?: number
+    a11ySeeMoreText?: string
+    footerTitle?: string
+    footerSubtitle?: string
+    onMenuAction?: FilePreviewCardMenuActionHandler
+    onSeeMore?: EbayEventHandler
+    onDelete?: EbayEventHandler
+    onCancel?: EbayEventHandler
+}
+
+const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
     a11yCancelUploadText,
     status,
+    as: CardEl = 'div',
     file: rawFile,
     seeMore,
     deleteText,
@@ -25,7 +54,7 @@ const EbayFileInput: FC<FilePreviewCardInput> = ({
 }) => {
     const previewFile = useMemo(() => {
         if (!rawFile) return undefined
-        let file = (rawFile || {}) as Exclude<typeof rawFile, File | undefined>
+        let file = rawFile as Exclude<typeof rawFile, File | undefined>
         let type
         if (rawFile?.type?.startsWith('image')) {
             type = 'image'
@@ -43,7 +72,7 @@ const EbayFileInput: FC<FilePreviewCardInput> = ({
         return file
     }, [rawFile])
 
-    const handleMenuSelect: EbayMenuSelectEventHandler = (e, selectedProps) => {
+    const handleMenuSelect: FilePreviewCardMenuActionHandler = (e, selectedProps) => {
         if (selectedProps) {
             const index = selectedProps.checked?.[0]
             const eventName =
@@ -109,7 +138,7 @@ const EbayFileInput: FC<FilePreviewCardInput> = ({
                             </EbayMenuButtonItem>
                         ))}
 
-                        <EbayMenuButtonItem value="delete">
+                        <EbayMenuButtonItem key="delete" value="delete">
                             {deleteText}
                         </EbayMenuButtonItem>
                     </EbayMenuButton>
@@ -175,7 +204,7 @@ const EbayFileInput: FC<FilePreviewCardInput> = ({
         )
     }
     return (
-        <div className="file-preview-card" {...rest}>
+        <CardEl className="file-preview-card" {...rest}>
             <div className="file-preview-card__body">{previewCardBody}</div>
 
             {footerTitle && (
@@ -184,7 +213,7 @@ const EbayFileInput: FC<FilePreviewCardInput> = ({
                     {footerSubtitle && <span>{footerSubtitle}</span>}
                 </div>
             )}
-        </div>
+        </CardEl>
     )
 }
 
