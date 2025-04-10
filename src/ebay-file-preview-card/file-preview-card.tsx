@@ -72,7 +72,10 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
         return file
     }, [rawFile])
 
-    const handleMenuSelect: FilePreviewCardMenuActionHandler = (e, selectedProps) => {
+    const handleMenuSelect: FilePreviewCardMenuActionHandler = (
+        e,
+        selectedProps
+    ) => {
         if (selectedProps) {
             const index = selectedProps.checked?.[0]
             const eventName =
@@ -90,7 +93,7 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
         }
     }
 
-    const getActionIcon = () => {
+    const getSeeMore = () => {
         if (seeMore) {
             return (
                 <button
@@ -103,10 +106,11 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
                 </button>
             )
         }
+    }
 
-        let fileLabel
-        if (previewFile && previewFile?.type !== 'image') {
-            fileLabel = (
+    const getFileLabel = () => {
+        if (previewFile && previewFile.type !== 'image') {
+            return (
                 <div className="file-preview-card__info">
                     {previewFile.type === 'video' && (
                         <EbayIcon
@@ -120,6 +124,13 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
                             .toUpperCase()}
                 </div>
             )
+        }
+    }
+
+    const getPreviewCardAction = () => {
+        // in the marko implementation, when there is seeMore prop, there is no menu action button or delete button
+        if (seeMore) {
+            return getSeeMore()
         }
         if (menuActions?.length) {
             return (
@@ -142,7 +153,6 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
                             {deleteText}
                         </EbayMenuButtonItem>
                     </EbayMenuButton>
-                    {fileLabel}
                 </>
             )
         }
@@ -154,14 +164,13 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
                     icon="delete16"
                     onClick={onDelete}
                 />
-                {fileLabel}
             </>
         )
     }
 
-    let previewCardBody
+    let previewCardContent
     if (status === 'uploading') {
-        previewCardBody = (
+        previewCardContent = (
             <>
                 <EbayProgressSpinner className="file-preview-card__asset" />
                 <EbayIconButton
@@ -170,43 +179,48 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
                     className="file-preview-card__action"
                     icon="close16"
                 />
+                {getSeeMore()}
             </>
         )
     } else if (previewFile?.type === 'image') {
-        previewCardBody = (
+        previewCardContent = (
             <>
                 <img
                     className={cx('file-preview-card__asset', {
-                        'file-preview-card__asset--fade': seeMore !== undefined
+                        'file-preview-card__asset--fade': seeMore && seeMore > 0
                     })}
                     src={previewFile?.src}
                     alt={previewFile?.name}
                 />
-                {getActionIcon()}
+                {getPreviewCardAction()}
+                {getFileLabel()}
             </>
         )
     } else if (previewFile?.type === 'video') {
-        previewCardBody = (
+        // in marko implementation, file-preview-card__asset--fade class
+        // is added only for image, not for videos or files
+        previewCardContent = (
             <>
                 <video
                     className="file-preview-card__asset"
                     src={previewFile.src}
                 />
-                {getActionIcon()}
+                {getPreviewCardAction()}
+                {getFileLabel()}
             </>
         )
     } else {
-        previewCardBody = (
+        previewCardContent = (
             <>
                 <EbayIcon name="file24" className="file-preview-card__asset" />
-                {getActionIcon()}
+                {getPreviewCardAction()}
+                {getFileLabel()}
             </>
         )
     }
     return (
         <CardEl className="file-preview-card" {...rest}>
-            <div className="file-preview-card__body">{previewCardBody}</div>
-
+            <div className="file-preview-card__body">{previewCardContent}</div>
             {footerTitle && (
                 <div className="file-preview-card__footer">
                     <span>{footerTitle}</span>
