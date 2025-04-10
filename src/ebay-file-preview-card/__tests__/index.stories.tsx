@@ -95,6 +95,7 @@ const meta: Meta<typeof EbayFilePreviewCard> = {
         }
     }
 }
+export default meta
 
 export const Default: StoryFn<typeof EbayFilePreviewCard> = (args) => (
     <EbayFilePreviewCard
