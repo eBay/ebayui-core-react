@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EbayProgressBarExpressive /> rendering renders default story correctly 1`] = `
+<div>
+  <div
+    class="progress-bar-expressive"
+  >
+    <div
+      aria-describedby="abc123"
+      class="progress-bar-expressive__progress"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar-expressive__lines"
+      >
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<EbayProgressBarExpressive /> rendering renders with custom timing story correctly 1`] = `
+<div>
+  <div
+    class="progress-bar-expressive"
+  >
+    <div
+      class="progress-bar-expressive__messages"
+    >
+      <div
+        aria-hidden="true"
+        class="progress-bar-expressive__message"
+        duration="2000"
+      >
+        Message with 2s duration
+      </div>
+    </div>
+    <div
+      aria-describedby="abc123"
+      class="progress-bar-expressive__progress"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar-expressive__lines"
+      >
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<EbayProgressBarExpressive /> rendering renders with long message story correctly 1`] = `
+<div>
+  <div
+    class="progress-bar-expressive"
+  >
+    <div
+      class="progress-bar-expressive__messages"
+    >
+      <div
+        aria-hidden="true"
+        class="progress-bar-expressive__message"
+      >
+        Messages should be one line...
+      </div>
+    </div>
+    <div
+      aria-describedby="abc123"
+      class="progress-bar-expressive__progress"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar-expressive__lines"
+      >
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<EbayProgressBarExpressive /> rendering renders with medium size story correctly 1`] = `
+<div>
+  <div
+    class="progress-bar-expressive"
+  >
+    <div
+      class="progress-bar-expressive__messages progress-bar-expressive__messages--medium"
+    >
+      <div
+        aria-hidden="true"
+        class="progress-bar-expressive__message"
+      >
+        Medium Size Message
+      </div>
+      <div
+        class="progress-bar-expressive__message progress-bar-expressive__message--in progress-bar-expressive__message--initial"
+        id="abc123"
+        role="status"
+      >
+        Medium Size Message
+      </div>
+    </div>
+    <div
+      aria-describedby="abc123"
+      class="progress-bar-expressive__progress"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar-expressive__lines"
+      >
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<EbayProgressBarExpressive /> rendering renders with messages story correctly 1`] = `
+<div>
+  <div
+    class="progress-bar-expressive"
+  >
+    <div
+      class="progress-bar-expressive__messages"
+    >
+      <div
+        aria-hidden="true"
+        class="progress-bar-expressive__message"
+      >
+        Hang tight
+      </div>
+    </div>
+    <div
+      aria-describedby="abc123"
+      class="progress-bar-expressive__progress"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar-expressive__lines"
+      >
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<EbayProgressBarExpressive /> rendering renders with single message story correctly 1`] = `
+<div>
+  <div
+    class="progress-bar-expressive"
+  >
+    <div
+      class="progress-bar-expressive__messages"
+    >
+      <div
+        aria-hidden="true"
+        class="progress-bar-expressive__message"
+      >
+        Single Message
+      </div>
+    </div>
+    <div
+      aria-describedby="abc123"
+      class="progress-bar-expressive__progress"
+      role="progressbar"
+    >
+      <div
+        class="progress-bar-expressive__lines"
+      >
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+        <div
+          class="progress-bar-expressive__line"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
