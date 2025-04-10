@@ -34,7 +34,7 @@ const EbayAlertDialog: FC<Props> = ({
             windowClass={`${classPrefix}__window ${classPrefix}__window--fade`}
         >
             {rest.children}
-            <EbayDialogFooter>
+            <EbayDialogFooter classPrefix={classPrefix}>
                 <EbayButton
                     priority="primary"
                     aria-describedby={mainId}
