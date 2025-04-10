@@ -18,14 +18,13 @@ import * as keyboardTrap from 'makeup-keyboard-trap'
 import { EbayIcon } from '../../ebay-icon'
 import { randomId } from '../../common/random-id'
 import { useDialogAnimation, TransitionElement } from './animation'
+import { ClassPrefix } from './types'
+import EbayDialogFooter from './dialog-footer'
 
 
 export type WindowType = 'compact'
-type ClassPrefix = 'fullscreen-dialog' | 'lightbox-dialog' | 'panel-dialog'
-    | 'drawer-dialog' | 'toast-dialog' | 'alert-dialog' | 'confirm-dialog'
-    | 'snackbar-dialog'
-type ButtonPosition = 'top' | 'right' | 'bottom' | 'left' | 'hidden'
 
+type ButtonPosition = 'right' | 'left' | 'hidden'
 
 export interface DialogBaseProps<T> extends HTMLProps<T> {
     baseEl?: 'div' | 'span' | 'aside';
@@ -207,9 +206,9 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
                 {dialogHeader && (
                     <div className={`${classPrefix}__header`}>
                         {previousButton}
-                        {buttonPosition === 'right' && dialogHeader}
-                        {buttonPosition !== 'bottom' && closeButtonContent}
-                        {(buttonPosition === 'left' || buttonPosition === 'hidden') && dialogHeader}
+                        {buttonPosition === 'left' && closeButtonContent}
+                        {dialogHeader}
+                        {buttonPosition === 'right' && closeButtonContent}
                     </div>
                 )}
                 <div id={mainId} className={`${classPrefix}__main`} onScroll={onScroll}>
@@ -220,11 +219,10 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
                         {actions}
                     </div>
                 ) : null}
-                {footer || buttonPosition === 'bottom' ? (
-                    <div className={`${classPrefix}__footer`}>
+                {footer ? (
+                    <EbayDialogFooter classPrefix={classPrefix}>
                         {footer}
-                        {buttonPosition === 'bottom' && closeButtonContent}
-                    </div>
+                    </EbayDialogFooter>
                 ) : null}
             </div>
         </Container>
