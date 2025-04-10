@@ -1,6 +1,5 @@
 import * as React from 'react'
 import DialogBase from '../components/dialogBase'
-import EbayDialogFooter from '../components/dialog-footer'
 import EbayDialogHeader from '../components/dialog-header'
 
 export const DialogDefaultProps = {
@@ -24,7 +23,7 @@ export const HeaderFooterDialogDefaultProps = {
     className: 'lightbox-dialog--mask-fade',
     windowClass: 'lightbox-dialog__window--fade',
     a11yCloseText: 'close',
-    footer: <EbayDialogFooter>footer content</EbayDialogFooter>,
+    footer: "footer content",
     header: <EbayDialogHeader>title content</EbayDialogHeader>,
     children: 'body content'
 }

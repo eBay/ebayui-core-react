@@ -18,7 +18,7 @@ describe('dialog-base', () => {
         expect(getByLabelText(HeaderFooterDialogDefaultProps.a11yCloseText)).toHaveClass('lightbox-dialog__close')
         expect(getByText(HeaderFooterDialogDefaultProps.children)).toHaveClass('lightbox-dialog__main')
         expect(container.querySelector('.lightbox-dialog__header')).toHaveTextContent(HeaderFooterDialogDefaultProps.header.props.children)
-        expect(getByText(HeaderFooterDialogDefaultProps.footer.props.children)).toHaveClass('lightbox-dialog__footer')
+        expect(getByText(HeaderFooterDialogDefaultProps.footer)).toHaveClass('lightbox-dialog__footer')
     })
 
     it('renders in open state', async () => {
