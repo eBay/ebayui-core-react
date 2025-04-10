@@ -7,3 +7,4 @@ export {
     filterByType,
     findComponent
 } from '../common/component-utils/utils'
+export { scroll } from './scroll'

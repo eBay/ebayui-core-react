@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 import cx from 'classnames'
 
 type Props = React.HTMLProps<HTMLDivElement> & {
-    type: 'window' | 'section' | 'page';
-    className?: string;
+    type: 'window' | 'section' | 'page' | 'education'
+    className?: string
 }
 
 const NoticeFooter: FC<Props> = ({ className, type, children, ...rest }) => (

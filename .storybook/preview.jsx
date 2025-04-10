@@ -15,12 +15,12 @@ export default {
         )
     ],
     parameters: {
-        layout: "centered",
         controls: { expanded: true },
         options: {
             storySort: {
                 order: [
                     "buttons",
+                    "data display",
                     "dialogs",
                     "form input",
                     "graphics & icons",

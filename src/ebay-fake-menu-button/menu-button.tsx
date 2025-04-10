@@ -1,4 +1,4 @@
-import React, { cloneElement, ComponentProps, FC, useEffect, useRef, useState } from 'react'
+import React, { cloneElement, ComponentProps, FC, useEffect, useState } from 'react'
 import classnames from 'classnames'
 
 import { filterByType, findComponent } from '../common/component-utils'
@@ -10,6 +10,7 @@ import { EbayIcon } from '../ebay-icon'
 import { EbayIconButton } from '../ebay-icon-button'
 import { EbayFakeMenu, EbayFakeMenuItemProps } from '../ebay-fake-menu'
 import { EbayFakeMenuButtonItem, EbayFakeMenuButtonLabel, EbayFakeMenuButtonSeparator } from '.'
+import { useFloatingDropdown } from '../common/dropdown'
 
 export type EbayFakeMenuButtonVariant = 'overflow' | 'form' | 'button'
 
@@ -52,15 +53,21 @@ const EbayMenuButton: FC<Props> = ({
 }) => {
     const [expanded, setExpanded] = useState(defaultExpanded)
     const [menuId, setMenuId] = useState<string|undefined>()
-    const ref = useRef<HTMLButtonElement>()
 
     const icon = findComponent(children, EbayIcon)
     const label = findComponent(children, EbayFakeMenuButtonLabel) || (icon ? <span>{text}</span> : text)
     const menuItems = filterByType(children, [EbayFakeMenuButtonItem, EbayFakeMenuButtonSeparator])
 
+    const { overlayStyles, refs } = useFloatingDropdown({
+        open: expanded,
+        options: { reverse }
+    })
+
+    const buttonRef = refs.host as React.MutableRefObject<HTMLButtonElement>
+
     useEffect(() => {
         const handleBackgroundClick = (e: React.MouseEvent) => {
-            if (ref.current && !ref.current.contains(e.currentTarget)) {
+            if (buttonRef.current && !buttonRef.current.contains(e.currentTarget)) {
                 setExpanded(false)
             }
         }
@@ -87,7 +94,7 @@ const EbayMenuButton: FC<Props> = ({
     const handleMenuKeydown = e => {
         handleEscapeKeydown(e, () => {
             setExpanded(false)
-            ref.current?.focus()
+            buttonRef.current?.focus()
         })
     }
 
@@ -97,7 +104,7 @@ const EbayMenuButton: FC<Props> = ({
     })
 
     const buttonProps: Omit<ButtonProps, 'type' | 'ref'> = {
-        ref: ref as any,
+        ref: refs.setHost,
         className: 'fake-menu-button__button',
         'aria-expanded': !!expanded,
         'aria-haspopup': true,
@@ -113,7 +120,7 @@ const EbayMenuButton: FC<Props> = ({
                 <EbayIconButton icon="overflowHorizontal24" {...buttonProps} /> :
                 <EbayButton
                     variant={variant === 'form' ? 'form' : undefined}
-                    bodyState={noToggleIcon ? undefined : 'expand'}
+                    bodyState={!noToggleIcon ? 'expand' : undefined}
                     {...buttonProps}
                 >
                     {icon}{label}
@@ -121,11 +128,13 @@ const EbayMenuButton: FC<Props> = ({
             }
             {expanded &&
                 <EbayFakeMenu
+                    ref={refs.setOverlay as any /* TODO: Update @types/react version to fix the type */}
                     className={menuClasses}
                     id={menuId}
                     tabIndex={-1}
                     onKeyDown={handleMenuKeydown}
                     onSelect={onSelect}
+                    style={overlayStyles}
                 >
                     {menuItems.map((item, i) =>
                         cloneElement<EbayFakeMenuItemProps>(item, {

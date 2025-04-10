@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
 import { DialogBaseProps, DialogBaseWithState } from '../ebay-dialog-base'
+import { DialogCloseEventHandler } from '../ebay-dialog-base/types'
 
 const classPrefix = 'panel-dialog'
 
@@ -10,7 +11,7 @@ export interface Props<T = any> extends DialogBaseProps<T> {
   open?: boolean;
   animated?: boolean;
   position?: Position;
-  onClose?: () => void;
+  onClose?: DialogCloseEventHandler;
 }
 
 const EbayPanelDialog: FC<Props> = ({

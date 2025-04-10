@@ -1,81 +1,12 @@
 {
   "name": "@ebay/ui-core-react",
-  "version": "7.4.0",
+  "version": "8.2.2",
   "description": "Skin components build off React",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "directory": "dist"
   },
   "exports": {
-    "./ebay-dialog-base/components/animation": {
-      "types": "./ebay-dialog-base/components/animation.d.ts",
-      "default": "./ebay-dialog-base/components/animation/index.js"
-    },
-    "./ebay-dialog-base/components/dialog-header": {
-      "types": "./ebay-dialog-base/components/dialog-header.d.ts",
-      "default": "./ebay-dialog-base/components/dialog-header/index.js"
-    },
-    "./ebay-dialog-base/components/dialog-footer": {
-      "types": "./ebay-dialog-base/components/dialog-footer.d.ts",
-      "default": "./ebay-dialog-base/components/dialog-footer/index.js"
-    },
-    "./ebay-notice-base/components/*": {
-      "types": "./ebay-notice-base/index.d.ts",
-      "default": "./ebay-notice-base/index.js"
-    },
-    "./common/component-utils/forwardRef": {
-      "types": "./common/component-utils/forwardRef.d.ts",
-      "default": "./common/component-utils/forwardRef/index.js"
-    },
-    "./common/component-utils/utils": {
-      "types": "./common/component-utils/utils.d.ts",
-      "default": "./common/component-utils/utils/index.js"
-    },
-    "./common/component-utils": {
-      "types": "./common/component-utils/index.d.ts",
-      "default": "./common/component-utils/index.js"
-    },
-    "./common/event-utils/types": {
-      "types": "./common/event-utils/types.d.ts"
-    },
-    "./common/event-utils": {
-      "types": "./common/event-utils/index.d.ts",
-      "default": "./common/event-utils/index.js"
-    },
-    "./common/floating-label-utils": {
-      "types": "./common/floating-label-utils/hooks.d.ts",
-      "default": "./common/floating-label-utils/hooks/index.js"
-    },
-    "./common/notice-utils/notice-cta": {
-      "types": "./common/notice-utils/notice-cta.d.ts",
-      "default": "./common/notice-utils/notice-cta/index.js"
-    },
-    "./common/random-id": {
-      "types": "./common/random-id.d.ts",
-      "default": "./common/random-id/index.js"
-    },
-    "./common/tooltip-utils/constants": {
-      "types": "./common/tooltip-utils/constants.d.ts",
-      "default": "./common/tooltip-utils/constants/index.js"
-    },
-    "./common/tooltip-utils/types": {
-      "types": "./common/tooltip-utils/types.d.ts"
-    },
-    "./common/tooltip-utils": {
-      "types": "./common/tooltip-utils/index.d.ts",
-      "default": "./common/tooltip-utils/index.js"
-    },
-    "./ebay-radio/radio": {
-      "types": "./ebay-radio/radio.d.ts",
-      "default": "./ebay-radio/radio/index.js"
-    },
-    "./ebay-fake-menu-button/menu-button": {
-      "types": "./ebay-fake-menu-button/menu-button.d.ts",
-      "default": "./ebay-fake-menu-button/menu-button/index.js"
-    },
-    "./ebay-fake-menu/menu-item": {
-      "types": "./ebay-fake-menu/menu-item.d.ts",
-      "default": "./ebay-fake-menu/menu-item/index.js"
-    },
     "./package.json": "./package.json",
     "./*": {
       "types": "./*/index.d.ts",
@@ -87,6 +18,7 @@
     "lint": "eslint . --ext ts,tsx",
     "lint:ci": "eslint . --ext .ts,.tsx -f @microsoft/eslint-formatter-sarif -o eslint-results.sarif",
     "coverage": "yarn clean && yarn test --coverage --ci",
+    "change": "changeset add",
     "eslint-local": "eslint . --ext ts,tsx",
     "eslint": "eslint . --ext .ts,.tsx -f checkstyle -o ./lint/checkstyle-result.xml",
     "format": "eslint . --fix 'src/**/*.{ts,tsx}'",
@@ -100,9 +32,9 @@
     "update-icons": "node ./scripts/update-icons",
     "copy": "copyfiles package.json README.md dist; yarn copy:rest",
     "copy:rest": "yarn copyfiles -u 1 'src/**/*.md' dist",
-    "release": "yarn clean && yarn build && yarn copy && CI=1 npm publish dist/ --access public",
-    "release:rc": "yarn clean && yarn build && yarn copy && CI=1 npm publish --tag rc dist/",
-    "prepare": "node scripts/husky-install || node ../scripts/husky-install"
+    "release": "yarn clean && yarn build && yarn copy && CI=1 changeset publish",
+    "prepare": "node scripts/husky-install || node ../scripts/husky-install",
+    "version": "yarn update-icons && git add -A src && changeset version"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -121,16 +53,24 @@
   "author": "tmanyanov@ebay.com",
   "license": "ISC",
   "peerDependencies": {
-    "@ebay/skin": "^18.0.0",
+    "@ebay/skin": "^19.0.0",
     "react": ">= 16.0.0",
-    "react-dom": ">= 16.0.0",
+    "react-dom": ">= 16.0.0"
+  },
+  "optionalDependencies": {
     "shaka-player": "^4.3.2"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.3",
     "classnames": "^2.2.6",
+    "makeup-active-descendant": "^0.7.4",
     "makeup-expander": "^0.10.1",
+    "makeup-floating-label": "^0.4.5",
     "makeup-keyboard-trap": "^0.4.1",
+    "makeup-prevent-scroll-keys": "^0.3.3",
+    "makeup-roving-tabindex": "^0.7.3",
     "makeup-screenreader-trap": "^0.4.1",
+    "makeup-typeahead": "^0.3.3",
     "react-remove-scroll": "^2.2.0"
   },
   "devDependencies": {
@@ -138,7 +78,9 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.0.0",
-    "@ebay/skin": "^18.4.0",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.11",
+    "@ebay/skin": "^19",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-a11y": "^7.6.12",
@@ -146,11 +88,10 @@
     "@storybook/addon-storysource": "^7.6.12",
     "@storybook/react": "^7.6.12",
     "@storybook/react-vite": "^7.6.12",
-    "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.2.2",
     "@testing-library/react-hooks": "^7",
-    "@testing-library/user-event": "^12",
+    "@testing-library/user-event": "^14",
     "@types/classnames": "^2.2.11",
     "@types/jest": "^29.5.12",
     "@types/react": "^18",
@@ -187,7 +128,8 @@
     "ts-jest": "^29.1.1",
     "ts-loader": "^8.0.7",
     "typescript": "4",
-    "vite": "^5.4.7"
+    "vite": "^5.4.7",
+    "vite-plugin-cjs-interop": "^2.1.6"
   },
   "resolutions": {
     "@storybook/addon-actions": "~7.5.3",

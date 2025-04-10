@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import { ClassPrefix } from './types'
+import { ClassPrefix } from '../types'
 
 type EbayDialogFooterProps = {
     classPrefix?: ClassPrefix;

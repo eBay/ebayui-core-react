@@ -28,6 +28,7 @@ const EbayMenu: FC<EbayMenuProps> = ({
     onChange = () => {},
     onSelect = () => {},
     forwardedRef,
+    menuRef,
     children,
     ...rest
 }) => {
@@ -135,8 +136,8 @@ const EbayMenu: FC<EbayMenuProps> = ({
     }
 
     return (
-        <Container {...rest} className={classNames(className, 'menu')}>
-            <div className="menu__items" role="menu" ref={forwardedRef}>
+        <Container {...rest} className={classNames(className, 'menu')} ref={forwardedRef as any}>
+            <div className="menu__items" role="menu" ref={menuRef}>
                 {childrenArray.map((child: ReactElement, i) => {
                     const {
                         onClick: onItemClick = () => {},

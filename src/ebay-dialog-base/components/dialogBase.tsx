@@ -7,10 +7,8 @@ import React, {
     useState,
     ReactElement,
     cloneElement,
-    MouseEventHandler,
     ReactNode,
-    KeyboardEvent,
-    KeyboardEventHandler
+    KeyboardEvent
 } from 'react'
 import classNames from 'classnames'
 import * as screenreaderTrap from 'makeup-screenreader-trap'
@@ -18,9 +16,9 @@ import * as keyboardTrap from 'makeup-keyboard-trap'
 import { EbayIcon } from '../../ebay-icon'
 import { randomId } from '../../common/random-id'
 import { useDialogAnimation, TransitionElement } from './animation'
-import { ClassPrefix } from './types'
+import { ClassPrefix } from '../types'
 import EbayDialogFooter from './dialog-footer'
-
+import { DialogCloseEventHandler } from '../types'
 
 export type WindowType = 'compact'
 
@@ -41,8 +39,8 @@ export interface DialogBaseProps<T> extends HTMLProps<T> {
     ariaLabelledby?: string;
     a11yCloseText?: string;
     onOpen?: () => void;
-    onCloseBtnClick?: MouseEventHandler & KeyboardEventHandler;
-    onBackgroundClick?: MouseEventHandler;
+    onCloseBtnClick?: DialogCloseEventHandler;
+    onBackgroundClick?: DialogCloseEventHandler;
     mainId?: string;
     ignoreEscape?: boolean;
     closeButton?: ReactElement;
@@ -96,7 +94,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
 
     useEffect(() => {
         let timeout: number
-        const handleBackgroundClick = (e: React.MouseEvent) => {
+        const handleBackgroundClick = (e: React.MouseEvent<HTMLElement>) => {
             if (drawerBaseEl.current && !drawerBaseEl.current.contains(e.target)) {
                 onBackgroundClick(e)
             }
@@ -140,7 +138,7 @@ export const DialogBase: FC<DialogBaseProps<HTMLElement>> = ({
         onTransitionEnd: () => handleFocus(open)
     })
 
-    const onKeyDown = (event: KeyboardEvent) => {
+    const onKeyDown = (event: KeyboardEvent<HTMLElement>) => {
         if (!ignoreEscape && event.key === 'Escape') {
             event.stopPropagation()
             onCloseBtnClick(event)

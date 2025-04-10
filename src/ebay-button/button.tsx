@@ -38,7 +38,7 @@ type Props = ComponentProps<'button'> & ComponentProps<'a'> & EbayButtonProps;
 const EbayButton:FC<Props> = ({
     priority = 'secondary',
     variant = 'standard',
-    size = 'regular',
+    size,
     bodyState,
     split,
     transparent = false,
@@ -65,9 +65,7 @@ const EbayButton:FC<Props> = ({
     }
     const sizeStyles: { [key in Size]: string } = {
         large: `${classPrefix}--large`,
-        small: `${classPrefix}--small`,
-        regular: '',
-        default: ''
+        small: `${classPrefix}--small`
     }
     const splitStyles: { [key in Split]: string } = {
         start: `${classPrefix}--split-start`,

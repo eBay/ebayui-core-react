@@ -127,10 +127,7 @@ describe('EbayMenuButton rendering', () => {
             render(<WithCustomLabel />)
             const [firstButton] = screen.getAllByRole('button')
             expect(firstButton).toHaveClass('btn menu-button__button btn--secondary')
-
-
-            const label = firstButton.querySelector('.btn__text')
-            expect(label).toHaveTextContent('Fun with flags!')
+            expect(firstButton).toHaveTextContent('Fun with flags!')
         })
     })
 

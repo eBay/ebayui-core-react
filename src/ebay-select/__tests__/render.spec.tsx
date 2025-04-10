@@ -2,6 +2,8 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { composeStory } from '@storybook/react'
 import Meta, { Basic, InvalidSelect, BorderlessSelect, DisabledSelect, LargeSelect, FloatingLabel, InvalidFloatingLabelSelect, GroupedOptions } from './index.stories'
+import EbaySelect from '../ebay-select'
+import EbaySelectOption from '../ebay-select-option'
 
 const BasicStory = composeStory(Basic, Meta)
 const InvalidSelectStory = composeStory(InvalidSelect, Meta)
@@ -71,6 +73,32 @@ describe('ebay-select rendering', () => {
         const select = selectContainer.querySelector('select')
         const options = select.querySelectorAll('option')
         expect(options.length).toBe(4)
+    })
+
+    it('should not have "floating-label__label--inline" when there is a value', () => {
+        const { container } = render(
+            <EbaySelect value="1" floatingLabel="Label">
+                <EbaySelectOption value="">Choose</EbaySelectOption>
+                <EbaySelectOption value="1">1</EbaySelectOption>
+            </EbaySelect>
+        )
+
+        const label = container.querySelector('.floating-label__label')
+        expect(label).toHaveTextContent('Label')
+        expect(label).not.toHaveClass('floating-label__label--inline')
+    })
+
+    it('should have "floating-label__label--inline" when there is no value', () => {
+        const { container } = render(
+            <EbaySelect floatingLabel="Label">
+                <EbaySelectOption value="">Choose</EbaySelectOption>
+                <EbaySelectOption value="1">1</EbaySelectOption>
+            </EbaySelect>
+        )
+
+        const label = container.querySelector('.floating-label__label')
+        expect(label).toHaveTextContent('Label')
+        expect(label).toHaveClass('floating-label__label--inline')
     })
 
     it('renders invalid floating label select story correctly', () => {

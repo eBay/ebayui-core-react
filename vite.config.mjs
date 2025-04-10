@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import { nodeExternals } from "rollup-plugin-node-externals";
 import typescript from "@rollup/plugin-typescript";
+import { cjsInterop } from "vite-plugin-cjs-interop"
 
 // find directories in src that starts with 'ebay-'
 let componentEntries = fs
@@ -14,26 +15,22 @@ let componentEntries = fs
     }, {
         events: resolve(__dirname, 'src/events/index.ts'),
         utils: resolve(__dirname, 'src/utils/index.ts'),
-
-        // DEPRECATED (should be used internally only)
-        'common/component-utils': resolve(__dirname, 'src/common/component-utils/index.ts'),
-        'common/component-utils/forwardRef': resolve(__dirname, 'src/common/component-utils/forwardRef.tsx'),
-        'common/component-utils/utils': resolve(__dirname, 'src/common/component-utils/utils.ts'),
-        'common/event-utils': resolve(__dirname, 'src/common/event-utils/index.ts'),
-        'common/floating-label-utils/hooks': resolve(__dirname, 'src/common/floating-label-utils/hooks.tsx'),
-        'common/notice-utils/notice-cta': resolve(__dirname, 'src/common/notice-utils/notice-cta.tsx'),
-        'common/random-id': resolve(__dirname, 'src/common/random-id.ts'),
-        'common/tooltip-utils': resolve(__dirname, 'src/common/tooltip-utils/index.ts'),
-        'common/tooltip-utils/constants': resolve(__dirname, 'src/common/tooltip-utils/constants.ts'),
-        'ebay-radio/radio': resolve(__dirname, 'src/ebay-radio/radio.tsx'),
-        'ebay-fake-menu-button/menu-button': resolve(__dirname, 'src/ebay-fake-menu-button/menu-button.tsx'),
-        'ebay-fake-menu/menu-item': resolve(__dirname, 'src/ebay-fake-menu/menu-item.tsx'),
-        'ebay-dialog-base/components/animation': resolve(__dirname, 'src/ebay-dialog-base/components/animation.ts'),
-        'ebay-dialog-base/components/dialog-footer': resolve(__dirname, 'src/ebay-dialog-base/components/dialog-footer.tsx'),
-        'ebay-dialog-base/components/dialog-header': resolve(__dirname, 'src/ebay-dialog-base/components/dialog-header.tsx'),
     });
 
 export default defineConfig({
+    plugins: [
+        // This plugin will automatically unwrap the default export from CJS dependencies that are specified in the list.
+        // https://github.com/eBay/ebayui-core-react/issues/420
+        cjsInterop({
+            // By default this plugin is only for SSR vite build, here we are in library mode, so we enable "client"
+            client: true,
+            dependencies: [
+                'makeup-expander',
+                'makeup-typeahead',
+                'makeup-floating-label'
+            ]
+        })
+    ],
     build: {
         lib: {
             entry: componentEntries,

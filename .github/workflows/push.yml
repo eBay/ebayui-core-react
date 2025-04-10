@@ -4,11 +4,13 @@ on:
     push:
         branches: [ main ]
 
+permissions:
+    contents: write
+
 jobs:
     build-test:
         strategy:
             matrix:
-#                os: [ubuntu-latest, windows-latest]
                 os: [ubuntu-latest]
         name: Build & Test  @ ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
@@ -30,11 +32,38 @@ jobs:
             - uses: ./.github/actions/setup-node
             - uses: ./.github/actions/analyze
 
-    build:
-        needs: analyze
-        name: Build
+    deploy:
+        name: Deploy
+        needs: build-test
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
             - uses: ./.github/actions/setup-node
-            - uses: ./.github/actions/build
+            - uses: ./.github/actions/deploy
+    release:
+        name: Release
+        needs: build-test
+        # Sets permissions of the GITHUB_TOKEN to allow opening release PR
+        permissions:
+            id-token: write
+            contents: write
+            packages: write
+            pull-requests: write
+            issues: read
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: ./.github/actions/setup-node
+            - name: Release
+              id: changesets
+              uses: changesets/action@v1
+              with:
+                version: yarn run version
+                publish: yarn run release
+                commit: "ci: release"
+                title: "ci: release"
+              env:
+                # Disable husky
+                HUSKY: 0
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

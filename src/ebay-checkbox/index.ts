@@ -1,1 +1,2 @@
-export { default as EbayCheckbox } from './checkbox'
+export { default as EbayCheckbox, type EbayCheckboxProps } from './checkbox'
+export * from './types'
