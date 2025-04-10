@@ -8,3 +8,7 @@ export {
     findComponent
 } from '../common/component-utils/utils'
 export { scroll } from './scroll'
+export {
+    useReducedMotion,
+    isReducedMotion
+} from './reduced-motion'
