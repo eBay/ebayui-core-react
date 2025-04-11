@@ -5,6 +5,12 @@ export type FilePreviewCardMenuAction = {
     label: string
 }
 
+export type FilePreviewType = {
+    name: string
+    type?: File['type']
+    src?: string
+}
+
 type MenuActionEventData = {
     index: number
     checked: number[]

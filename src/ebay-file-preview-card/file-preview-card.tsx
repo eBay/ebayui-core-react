@@ -1,26 +1,19 @@
 import React, { FC, useMemo, ComponentProps, ElementType } from 'react'
-import cx from 'classnames'
 import { EbayEventHandler } from '../common/event-utils/types'
-import { EbayProgressSpinner } from '../ebay-progress-spinner'
-import { EbayIconButton } from '../ebay-icon-button'
-import { EbayIcon } from '../ebay-icon'
-import { EbayMenuButton, EbayMenuButtonItem } from '../ebay-menu-button'
+import EbayFilePreviewAction from './file-preview-action'
+import EbayFilePreviewContent from './file-preview-content'
+import EbayFilePreviewLabel from './file-preview-label'
 import {
     FilePreviewCardMenuAction,
-    FilePreviewCardMenuActionHandler
+    FilePreviewCardMenuActionHandler,
+    FilePreviewType
 } from './types'
 
 export type EbayFilePreviewCardProps = ComponentProps<'div'> & {
     a11yCancelUploadText?: string
     as?: ElementType
     deleteText?: string
-    file?:
-        | File
-        | {
-              name: string
-              type?: File['type']
-              src?: string
-          }
+    file?: File | FilePreviewType
     status?: 'uploading'
     infoText?: string
     menuActions?: FilePreviewCardMenuAction[]
@@ -93,134 +86,40 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
         }
     }
 
-    const getSeeMore = () => {
-        if (seeMore) {
-            return (
-                <button
-                    type="button"
-                    className="file-preview-card__see-more"
-                    onClick={onSeeMore}
-                    aria-label={a11ySeeMoreText}
-                >
-                    <span>+{seeMore}</span>
-                </button>
-            )
-        }
-    }
-
-    const getFileLabel = () => {
-        if (previewFile && previewFile.type !== 'image') {
-            return (
-                <div className="file-preview-card__info">
-                    {previewFile.type === 'video' && (
-                        <EbayIcon
-                            name="play16"
-                            className="file-preview-card__video-icon"
-                        />
-                    )}
-                    {infoText ||
-                        previewFile.name
-                            .substring(previewFile.name.lastIndexOf('.') + 1)
-                            .toUpperCase()}
-                </div>
-            )
-        }
-    }
-
-    const getPreviewCardAction = () => {
-        // in the marko implementation, when there is seeMore prop, there is no menu action button or delete button
-        if (seeMore) {
-            return getSeeMore()
-        }
-        if (menuActions?.length) {
-            return (
-                <>
-                    <EbayMenuButton
-                        variant="overflow"
-                        className="file-preview-card__action"
-                        onSelect={handleMenuSelect}
-                    >
-                        {menuActions.map((action) => (
-                            <EbayMenuButtonItem
-                                value={action.event}
-                                key={action.label}
-                            >
-                                {action.label}
-                            </EbayMenuButtonItem>
-                        ))}
-
-                        <EbayMenuButtonItem key="delete" value="delete">
-                            {deleteText}
-                        </EbayMenuButtonItem>
-                    </EbayMenuButton>
-                </>
-            )
-        }
-        return (
-            <>
-                <EbayIconButton
-                    aria-label={deleteText}
-                    className="file-preview-card__action"
-                    icon="delete16"
-                    onClick={onDelete}
-                />
-            </>
-        )
-    }
-
-    let previewCardContent
-    if (status === 'uploading') {
-        previewCardContent = (
-            <>
-                <EbayProgressSpinner className="file-preview-card__asset" />
-                <EbayIconButton
-                    aria-label={a11yCancelUploadText}
-                    onClick={onCancel}
-                    className="file-preview-card__action"
-                    icon="close16"
-                />
-                {getSeeMore()}
-            </>
-        )
-    } else if (previewFile?.type === 'image') {
-        previewCardContent = (
-            <>
-                <img
-                    className={cx('file-preview-card__asset', {
-                        'file-preview-card__asset--fade': seeMore && seeMore > 0
-                    })}
-                    src={previewFile?.src}
-                    alt={previewFile?.name}
-                />
-                {getPreviewCardAction()}
-                {getFileLabel()}
-            </>
-        )
-    } else if (previewFile?.type === 'video') {
-        // in marko implementation, file-preview-card__asset--fade class
-        // is added only for image, not for videos or files
-        previewCardContent = (
-            <>
-                <video
-                    className="file-preview-card__asset"
-                    src={previewFile.src}
-                />
-                {getPreviewCardAction()}
-                {getFileLabel()}
-            </>
-        )
-    } else {
-        previewCardContent = (
-            <>
-                <EbayIcon name="file24" className="file-preview-card__asset" />
-                {getPreviewCardAction()}
-                {getFileLabel()}
-            </>
-        )
-    }
     return (
         <CardEl className="file-preview-card" {...rest}>
-            <div className="file-preview-card__body">{previewCardContent}</div>
+            <div className="file-preview-card__body">
+                <EbayFilePreviewContent
+                    file={previewFile}
+                    status={status}
+                    seeMore={seeMore}
+                />
+                {/*
+                    in Marko implementation, when there is seeMore prop,
+                    there is no menu action button or delete button
+                 */}
+                {seeMore && seeMore > 0 ? (
+                    <button
+                        type="button"
+                        className="file-preview-card__see-more"
+                        onClick={onSeeMore}
+                        aria-label={a11ySeeMoreText}
+                    >
+                        <span>+{seeMore}</span>
+                    </button>
+                ) : (
+                    <EbayFilePreviewAction
+                        a11yCancelUploadText={a11yCancelUploadText}
+                        status={status}
+                        menuActions={menuActions}
+                        handleMenuSelect={handleMenuSelect}
+                        deleteText={deleteText}
+                        onCancel={onCancel}
+                        onDelete={onDelete}
+                    />
+                )}
+                <EbayFilePreviewLabel file={previewFile} infoText={infoText} />
+            </div>
             {footerTitle && (
                 <div className="file-preview-card__footer">
                     <span>{footerTitle}</span>
