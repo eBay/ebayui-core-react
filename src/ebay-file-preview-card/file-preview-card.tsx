@@ -65,27 +65,6 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
         return file
     }, [rawFile])
 
-    const handleMenuSelect: FilePreviewCardMenuActionHandler = (
-        e,
-        selectedProps
-    ) => {
-        if (selectedProps) {
-            const index = selectedProps.checked?.[0]
-            const eventName =
-                menuActions && index !== undefined && index in menuActions
-                    ? menuActions[index].event
-                    : null
-
-            if (eventName && onMenuAction) {
-                onMenuAction(e, { ...selectedProps, eventName })
-            } else if (onDelete) {
-                // on multiple action menu click, the Delete click will trigger onDelete, not onMenuAction.
-                // This is the current behavior on marko's ebay-ui
-                onDelete(e)
-            }
-        }
-    }
-
     return (
         <CardEl className="file-preview-card" {...rest}>
             <div className="file-preview-card__body">
@@ -112,7 +91,7 @@ const EbayFileInput: FC<EbayFilePreviewCardProps> = ({
                         a11yCancelUploadText={a11yCancelUploadText}
                         status={status}
                         menuActions={menuActions}
-                        handleMenuSelect={handleMenuSelect}
+                        onMenuAction={onMenuAction}
                         deleteText={deleteText}
                         onCancel={onCancel}
                         onDelete={onDelete}

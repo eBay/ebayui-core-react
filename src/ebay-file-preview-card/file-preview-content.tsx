@@ -2,13 +2,10 @@ import React, { FC } from 'react'
 import cx from 'classnames'
 import { EbayProgressSpinner } from '../ebay-progress-spinner'
 import { EbayIcon } from '../ebay-icon'
+import { FilePreviewType } from './types'
 
 export type EbayFilePreviewContentProps = {
-    file?: {
-        name: string
-        type?: File['type']
-        src?: string
-    }
+    file?: FilePreviewType
     status?: 'uploading'
     seeMore?: number
 }

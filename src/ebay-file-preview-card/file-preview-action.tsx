@@ -9,10 +9,10 @@ import {
 
 export type EbayFilePreviewActionProps = {
     menuActions?: FilePreviewCardMenuAction[]
-    handleMenuSelect: FilePreviewCardMenuActionHandler
     deleteText?: string
     status?: 'uploading'
     a11yCancelUploadText?: string
+    onMenuAction?: FilePreviewCardMenuActionHandler
     onCancel?: EbayEventHandler
     onDelete?: EbayEventHandler
 }
@@ -20,12 +20,33 @@ export type EbayFilePreviewActionProps = {
 const EbayFilePreviewAction: FC<EbayFilePreviewActionProps> = ({
     status,
     menuActions,
-    handleMenuSelect,
+    onMenuAction,
     deleteText,
     onCancel,
     onDelete,
     a11yCancelUploadText
 }) => {
+    const handleMenuSelect: FilePreviewCardMenuActionHandler = (
+        e,
+        selectedProps
+    ) => {
+        if (selectedProps) {
+            const index = selectedProps.checked?.[0]
+            const eventName =
+                menuActions && index !== undefined && index in menuActions
+                    ? menuActions[index].event
+                    : null
+
+            if (eventName && onMenuAction) {
+                onMenuAction(e, { ...selectedProps, eventName })
+            } else if (onDelete) {
+                // on multiple action menu click, the Delete click will trigger onDelete, not onMenuAction.
+                // This is the current behavior on marko's ebay-ui
+                onDelete(e)
+            }
+        }
+    }
+
     if (status === 'uploading') {
         return (
             <EbayIconButton
