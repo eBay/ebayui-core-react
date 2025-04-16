@@ -39,7 +39,7 @@ const EbayConfirmDialog: FC<Props> = ({
             onCloseBtnClick={onReject}
         >
             {rest.children}
-            <EbayDialogFooter>
+            <EbayDialogFooter classPrefix={classPrefix}>
                 <EbayButton
                     onClick={onReject}
                     className="confirm-dialog__reject"
