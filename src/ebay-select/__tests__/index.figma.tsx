@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbaySelect, EbaySelectOption } from '.'
+import { EbaySelect, EbaySelectOption } from '..'
 
 figma.connect(
     EbaySelect,

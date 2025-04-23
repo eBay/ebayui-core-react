@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbayCalendar } from '.'
+import { EbayCalendar } from '..'
 
 // single month
 figma.connect(

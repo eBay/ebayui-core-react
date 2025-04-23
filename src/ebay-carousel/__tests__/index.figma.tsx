@@ -1,9 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import {
-    EbayCarousel, EbayCarouselItem
-} from '.'
+import { EbayCarousel, EbayCarouselItem } from '..'
 
 figma.connect(
     EbayCarousel,

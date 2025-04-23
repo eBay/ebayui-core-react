@@ -1,9 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import {
-    EbaySkeleton, EbaySkeletonAvatar, EbaySkeletonButton, EbaySkeletonImage, EbaySkeletonText
-} from '.'
+import { EbaySkeleton, EbaySkeletonAvatar, EbaySkeletonButton, EbaySkeletonImage, EbaySkeletonText } from '..'
 
 figma.connect(
     EbaySkeleton,

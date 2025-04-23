@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbayProgressStepper, EbayProgressStep as Step } from '.'
+import { EbayProgressStepper, EbayProgressStep as Step } from '..'
 
 figma.connect(
     EbayProgressStepper,

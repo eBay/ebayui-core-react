@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '.'
+import { EbaySnackbarDialog, EbaySnackbarDialogAction } from '..'
 
 // no action needed
 figma.connect(

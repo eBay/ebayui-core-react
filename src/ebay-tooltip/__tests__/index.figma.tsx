@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbayTooltip, EbayTooltipHost, EbayTooltipContent } from '.'
+import { EbayTooltip, EbayTooltipHost, EbayTooltipContent } from '..'
 /* @ts-ignore: this is only to help code connect */
 import { EbayButton } from '@ebay/ui-core-react/ebay-button'
 

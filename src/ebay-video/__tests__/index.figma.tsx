@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbayVideo, EbayVideoSource } from '.'
+import { EbayVideo, EbayVideoSource } from '..'
 
 figma.connect(
     EbayVideo,

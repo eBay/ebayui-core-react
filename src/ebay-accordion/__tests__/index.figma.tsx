@@ -1,9 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import {
-    EbayAccordion, EbayDetails
-} from '.'
+import { EbayAccordion, EbayDetails } from '..'
 
 figma.connect(
     EbayAccordion,

@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbayPagination, EbayPaginationItem } from '.'
+import { EbayPagination, EbayPaginationItem } from '..'
 
 figma.connect(
     EbayPagination,

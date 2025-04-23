@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbayTabs, EbayTab, EbayTabPanel } from '.'
+import { EbayTabs, EbayTab, EbayTabPanel } from '..'
 
 figma.connect(
     EbayTabs,

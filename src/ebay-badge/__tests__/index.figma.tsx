@@ -1,7 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import { EbayBadge } from '.'
+import { EbayBadge } from '..'
 
 figma.connect(
     EbayBadge,

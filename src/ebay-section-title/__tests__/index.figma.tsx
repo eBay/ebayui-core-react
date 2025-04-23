@@ -1,11 +1,7 @@
 import figma from '@figma/code-connect'
 
 import React from 'react'
-import {
-    EbaySectionTitle,
-    EbaySectionTitleTitle,
-    EbaySectionTitleSubtitle
-} from '.'
+import { EbaySectionTitle, EbaySectionTitleTitle, EbaySectionTitleSubtitle } from '..'
 
 // has both button and subtitle set
 figma.connect(
