@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EbayFakeLink /> rendering renders default story correctly 1`] = `
+<div>
+  <button
+    class="fake-link"
+    type="button"
+  >
+    Fake-Link
+  </button>
+</div>
+`;
+
+exports[`<EbayFakeLink /> rendering renders disabled button correctly 1`] = `
+<div>
+  <button
+    class="fake-link"
+    disabled=""
+    type="button"
+  >
+    Fake-Link
+  </button>
+</div>
+`;

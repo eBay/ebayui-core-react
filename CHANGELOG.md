@@ -1,5 +1,33 @@
 # @ebay/ui-core-react
 
+## 8.2.2
+
+### Patch Changes
+
+- [#471](https://github.com/eBay/ebayui-core-react/pull/471) [`e68676a`](https://github.com/eBay/ebayui-core-react/commit/e68676a9663d837cfeb8c0c4b4661ca56bc3410f) Thanks [@bruno2kd](https://github.com/bruno2kd)! - fix: onClose type on ebay lightbox dialog
+
+## 8.2.1
+
+### Patch Changes
+
+- [#468](https://github.com/eBay/ebayui-core-react/pull/468) [`fd4c0e1`](https://github.com/eBay/ebayui-core-react/commit/fd4c0e16530c41674df69b5e4d6ebe4a6cdb119e) Thanks [@bruno2kd](https://github.com/bruno2kd)! - fix: ebay-textbox fluid floating label
+
+## 8.2.0
+
+### Minor Changes
+
+- [#456](https://github.com/eBay/ebayui-core-react/pull/456) [`a27ca63`](https://github.com/eBay/ebayui-core-react/commit/a27ca63505aa902ded34228586fab2ef4859aa35) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat: Add EbayChip and EbayChipsCombobox components
+
+- [#456](https://github.com/eBay/ebayui-core-react/pull/456) [`2693bfc`](https://github.com/eBay/ebayui-core-react/commit/2693bfc59b986a560956c2bde3ae3c26fa7d845e) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat: Add new EbayFilterMenuButton component
+
+- [#456](https://github.com/eBay/ebayui-core-react/pull/456) [`b60346f`](https://github.com/eBay/ebayui-core-react/commit/b60346f878431853afee924974e581d6e732fe32) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat: Add new EbayFakeLink component
+
+- [#456](https://github.com/eBay/ebayui-core-react/pull/456) [`acdf45d`](https://github.com/eBay/ebayui-core-react/commit/acdf45d4db3185f25a58a7ed8c87eda7594089a3) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(Filter): add new component
+
+- [#456](https://github.com/eBay/ebayui-core-react/pull/456) [`11c7457`](https://github.com/eBay/ebayui-core-react/commit/11c745758f11def720fb14f7a0ce56a6b7c5b525) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat: add new EbayFilterMenu component
+
+- [#456](https://github.com/eBay/ebayui-core-react/pull/456) [`530190c`](https://github.com/eBay/ebayui-core-react/commit/530190c0b05af4e437f5b15ddf89f0197c927801) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat: add new EbayEducationNotice component
+
 ## 8.1.3
 
 ### Patch Changes

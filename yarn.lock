@@ -8094,6 +8094,18 @@ makeup-next-id@^0.5.3:
   resolved "https://registry.yarnpkg.com/makeup-next-id/-/makeup-next-id-0.5.3.tgz#030ba8122b38d32ae96bf23e1d8ca72bcc128ed5"
   integrity sha512-FBxUdgW32y8bW9Qcz/5zqqhvh7dn2rJGcRphB9QUdCMswWq4F1zzYITX8K0Xm9hrDwlPAlznjJNWl5xlXwoVUw==
 
+makeup-prevent-scroll-keys@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/makeup-prevent-scroll-keys/-/makeup-prevent-scroll-keys-0.3.3.tgz#3f95496c49e8e408aed9bf88beed995a2c67cbf8"
+  integrity sha512-x6LaY0D3oGHbV3sl7AVcrPtAT256FCI1RtuELCi+Ta/IkHbj3u8t5JsKCH+9FApl3u0mz2xR+mI3zG5mlnqUgQ==
+
+makeup-roving-tabindex@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/makeup-roving-tabindex/-/makeup-roving-tabindex-0.7.3.tgz#48700535eb5fe776628ca30b880d607515cb1be6"
+  integrity sha512-DSKbELv8JE0SxRLpgkBDSR1oIyLCPhbuUM/7E7BFJtvfeMBxdu7cEtArogf7wGiymJKllkvu0pPXy3JDGWdHJA==
+  dependencies:
+    makeup-navigation-emitter "^0.7.3"
+
 makeup-screenreader-trap@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/makeup-screenreader-trap/-/makeup-screenreader-trap-0.4.2.tgz#3dc2762494c3568edd4f548c7395e193f2457cdf"
@@ -10778,9 +10790,9 @@ vite-plugin-cjs-interop@^2.1.6:
     minimatch "^10.0.1"
 
 vite@^5.4.7:
-  version "5.4.14"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-5.4.14.tgz#ff8255edb02134df180dcfca1916c37a6abe8408"
-  integrity sha512-EK5cY7Q1D8JNhSaPKVK4pwBFvaTmZxEnoKXLG/U9gmdDcihQGNzFlgIvaxezFR4glP1LsuiedwMBqCXH3wZccA==
+  version "5.4.17"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-5.4.17.tgz#4bf61dd4cdbf64b0d6661f5dba76954cc81d5082"
+  integrity sha512-5+VqZryDj4wgCs55o9Lp+p8GE78TLVg0lasCH5xFZ4jacZjtqZa6JUw9/p0WeAojaOfncSM6v77InkFPGnvPvg==
   dependencies:
     esbuild "^0.21.3"
     postcss "^8.4.43"

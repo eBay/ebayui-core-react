@@ -46,6 +46,10 @@ Execute `yarn test` to run all tests or `yarn coverage` to run test with coverag
 
 Most of our tests verify html snapshots against the generated html that the current component outputs. If these change the test will fail. In order to update the snapshots, one needs to run `yarn test -u` and then new snapshots will be generated, which should be checked in. Please make sure that snapshot changes make sense.
 
+### Changesets
+
+We use [changesets](https://github.com/changesets/changesets) to manage our releases. This allows us to create a changelog and versioning for our packages. To create a changeset, run `yarn change` and follow the prompts. This will create a new file in the `.changeset` directory.
+Make sure to commit the changeset file to your branch.
 
 ## Pull Requests
 
@@ -227,9 +231,6 @@ This will update `EbaySvg` and `EbayIcon` components:
 ```shell script
 yarn update-icons
 ```
-
-
-
 
 ## Support
 

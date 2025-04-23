@@ -12,10 +12,10 @@ eBayUI React components
 
 ### eBayUI Components
 * [ ] `ebay-3d-viewer`
+* [x] [ebay-accordion](src/ebay-accordion)
 * [x] [ebay-alert-dialog](src/ebay-alert-dialog)
 * [ ] `ebay-area-chart`
-* [ ] `ebay-avatar`
-* [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
+* [x] [`ebay-avatar`](src/ebay-avatar)
 * [x] [ebay-badge](src/ebay-badge)
 * [ ] `ebay-bar-chart`
 * [x] [ebay-breadcrumbs](src/ebay-breadcrumbs)
@@ -25,24 +25,24 @@ eBayUI React components
 * [x] [ebay-carousel](src/ebay-carousel)
 * [ ] `ebay-chart-legend`
 * [x] [ebay-checkbox](src/ebay-checkbox)
-* [ ] `ebay-chip`
-* [ ] `ebay-chips-combobox`
-* [ ] `ebay-combobox`
+* [x] [ebay-chip](src/ebay-chip)
+* [x] [ebay-chips-combobox](src/ebay-chips-combobox)
+* [x] [ebay-combobox](src/ebay-combobox)
 * [x] [ebay-confirm-dialog](src/ebay-confirm-dialog)
 * [x] [ebay-cta-button](src/ebay-cta-button)
 * [x] [ebay-date-textbox](src/ebay-date-textbox)
-* [ ] `ebay-details`
+* [x] [ebay-details](src/ebay-details)
 * [ ] `ebay-donut-chart`
-* [ ] `ebay-education-notice`
+* [x] [ebay-education-notice](src/ebay-education-notice)
 * [x] [ebay-eek](src/ebay-eek)
-* [ ] `ebay-fake-link`
+* [x] [ebay-fake-link](src/ebay-fake-link)
 * [x] [ebay-fake-menu](src/ebay-fake-menu)
 * [x] [ebay-fake-menu-button](src/ebay-fake-menu-button)
 * [x] [ebay-fake-tabs](src/ebay-fake-tabs)
 * [x] [ebay-field](src/ebay-field)
-* [ ] `ebay-filter`
-* [ ] `ebay-filter-menu`
-* [ ] `ebay-filter-menu-button`
+* [x] [ebay-filter](src/ebay-filter)
+* [x] [ebay-filter-menu](src/ebay-filter-menu)
+* [x] [ebay-filter-menu-button](src/ebay-filter-menu-button)
 * [ ] `ebay-flag`
 * [x] [ebay-icon-button](src/ebay-icon-button)
 * [x] [ebay-icon](src/ebay-icon)
@@ -52,7 +52,7 @@ eBayUI React components
 * [x] [ebay-lightbox-dialog](src/ebay-lightbox-dialog)
 * [ ] `ebay-line-chart`
 * [x] [ebay-listbox-button](src/ebay-listbox-button)
-* [ ] `ebay-listbox`
+* [x] [ebay-listbox](src/ebay-listbox)
 * [x] [ebay-menu](src/ebay-menu)
 * [x] [ebay-menu-button](src/ebay-menu-button)
 * [x] [ebay-page-notice](src/ebay-page-notice)
@@ -69,13 +69,14 @@ eBayUI React components
 * [x] [ebay-segmented-buttons](src/ebay-segmented-buttons)
 * [x] [ebay-select](src/ebay-select)
 * [x] [ebay-signal](src/ebay-signal)
-* [ ] `ebay-skeleton`
+* [x] [ebay-skeleton](src/ebay-skeleton)
 * [x] [ebay-snackbar-dialog](src/ebay-snackbar-dialog)
 * [ ] `ebay-spark-line`
 * [x] [ebay-split-button](src/ebay-split-button)
 * [x] [ebay-star-rating](src/ebay-star-rating)
 * [x] [ebay-star-rating-select](src/ebay-star-rating-select)
 * [x] [ebay-switch](src/ebay-switch)
+* [x] [ebay-table](src/ebay-table)
 * [x] [ebay-tabs](src/ebay-tabs)
 * [x] [ebay-textbox](src/ebay-textbox)
 * [x] [ebay-toast-dialog](src/ebay-toast-dialog)
@@ -83,7 +84,7 @@ eBayUI React components
 * [x] [ebay-toggle-button-group](src/ebay-toast-dialog)
 * [x] [ebay-tooltip](src/ebay-tooltip)
 * [x] [ebay-tourtip](src/ebay-tourtip)
-* [ ] `ebay-tri-state-checkbox`
+* [x] [ebay-tristatecheckbox](src/ebay-tri-state-checkbox)
 * [x] [ebay-video](src/ebay-video)
 
 ## Getting Started

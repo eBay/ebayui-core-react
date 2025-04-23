@@ -80,7 +80,8 @@ const EbayTextbox: FC<EbayTextboxProps> = ({
         invalid,
         type,
         opaqueLabel,
-        onMount: onFloatingLabelInit
+        onMount: onFloatingLabelInit,
+        containerTagName: fluid ? 'div' : 'span'
     })
 
     const handleFocus = (event?: FocusEvent<HTMLInputElement & HTMLTextAreaElement>) => {

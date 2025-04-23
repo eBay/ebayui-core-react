@@ -15,6 +15,7 @@ const {
     WithPrePostfixText,
     PlaceholderTextbox,
     FloatingLabel,
+    FloatingLabelFluid,
     FloatingLabelInvalid,
     FloatingLabelTypeDate
 } = composeStories(stories)
@@ -106,7 +107,7 @@ describe('ebay-textbox rendering', () => {
     })
 
     it('renders floating label story correctly', () => {
-        render(<FloatingLabel />)
+        const { container } = render(<FloatingLabel />)
 
         const textbox = screen.getByRole('textbox')
         expect(textbox).toHaveAttribute('value', '')
@@ -114,6 +115,19 @@ describe('ebay-textbox rendering', () => {
 
         const label = screen.getByText('Floating label')
         expect(label).toHaveClass('floating-label__label')
+        expect(container).toMatchSnapshot()
+    })
+
+    it('renders floating label fluid story correctly', () => {
+        const { container } = render(<FloatingLabelFluid />)
+
+        const textbox = screen.getByRole('textbox')
+        expect(textbox).toHaveAttribute('value', '')
+        expect(textbox).toHaveClass('textbox__control')
+
+        const label = screen.getByText('Floating label')
+        expect(label).toHaveClass('floating-label__label')
+        expect(container).toMatchSnapshot()
     })
 
     it('renders floating label invalid story correctly', () => {

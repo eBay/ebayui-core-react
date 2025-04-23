@@ -1,6 +1,7 @@
 import React, {
     ComponentProps,
     FC,
+    MutableRefObject,
     Ref,
     useCallback,
     useMemo,
@@ -44,6 +45,7 @@ export type EbayComboboxProps =
         listSelection?: ListSelection;
         forwardedRef?: Ref<HTMLInputElement>;
         opaqueLabel?: boolean;
+        dropdownRef?: MutableRefObject<HTMLElement>;
         onFocus?: ComboboxFocusHandler;
         onClick?: ComboboxClickHandler;
         onExpand?: () => void;
@@ -68,6 +70,7 @@ const EbayCombobox: FC<EbayComboboxProps> = ({
     placeholder,
     opaqueLabel,
     children,
+    dropdownRef,
     onFocus = () => {},
     onClick = () => {},
     onExpand = () => {},
@@ -85,7 +88,7 @@ const EbayCombobox: FC<EbayComboboxProps> = ({
     const comboboxRef = useRef<HTMLInputElement>(null)
     const listboxRef = useRef<HTMLDivElement>(null)
     const expander = useExpander({
-        ref: containerRef,
+        ref: dropdownRef || containerRef,
         expanded,
         options: {
             autoCollapse: expanded,
