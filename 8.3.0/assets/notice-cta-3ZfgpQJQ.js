@@ -1,0 +1,1 @@
+import{a as o,c as s}from"./index-Zi3BSDNR.js";const r=({className:c,type:a,children:t,...e})=>o("p",{className:s(c,`${a}-notice__cta`),...e,children:t});try{noticecta.displayName="noticecta",noticecta.__docgenInfo={description:"",displayName:"noticecta",props:{}}}catch{}export{r as N};
