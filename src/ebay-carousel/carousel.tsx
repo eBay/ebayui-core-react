@@ -7,6 +7,7 @@ import { animateCarouselLoop, getMaxOffset, getNextIndex, getOffset, getSlide } 
 import { debounce } from '../common/debounce'
 import { EbayIcon } from '../ebay-icon'
 import reactDom from 'react-dom'
+import { useReducedMotion } from '../utils'
 
 // Make sure to support React 16
 const flushSync = reactDom.flushSync || (callback => callback())
@@ -103,11 +104,11 @@ const EbayCarousel: FC<CarouselProps> = ({
         setSlideWidth(containerWidth)
     }, [containerRef.current])
 
-    const [paused, setPaused] = useState(false)
+    const isReducedMotion = useReducedMotion()
+    const [paused, setPaused] = useState(isReducedMotion)
     useEffect(() => {
-        const isReducedMotion = Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches)
         setPaused(isReducedMotion)
-    }, [])
+    }, [isReducedMotion])
 
     const togglePlayback = (event) => {
         setPaused(!paused)
