@@ -61,7 +61,7 @@ eBayUI React components
 * [x] [ebay-panel-dialog](src/ebay-panel-dialog)
 * [ ] `ebay-phone-input`
 * [x] [ebay-progress-bar](src/ebay-progress-bar)
-* [ ] `ebay-progress-bar-expressive`
+* [x] [`ebay-progress-bar-expressive`](src/ebay-progress-bar-expressive)
 * [x] [ebay-progress-spinner](src/ebay-progress-spinner)
 * [x] [ebay-progress-stepper](src/ebay-progress-stepper)
 * [x] [ebay-radio](src/ebay-radio)
