@@ -1,0 +1,35 @@
+{
+  "codeConnect": {
+    "include": ["src/**/*.figma.tsx", "src/**/*.tsx"],
+    "exclude": ["test/**", "docs/**", "build/**"],
+
+    "react": {
+      "importPaths": {
+          "src/ebay-accordion/__tests__/*": "@ebay/ui-core-react/ebay-accordion",
+          "src/ebay-alert-dialog/__tests__/*": "@ebay/ui-core-react/ebay-alert-dialog",
+          "src/ebay-badge/__tests__/*": "@ebay/ui-core-react/ebay-badge",
+          "src/ebay-breadcrumbs/__tests__/*": "@ebay/ui-core-react/ebay-breadcrumbs",
+          "src/ebay-button/__tests__/*": "@ebay/ui-core-react/ebay-button",
+          "src/ebay-calendar/__tests__/*": "@ebay/ui-core-react/ebay-calendar",
+          "src/ebay-carousel/__tests__/*": "@ebay/ui-core-react/ebay-carousel",
+          "src/ebay-icon-button/__tests__/*": "@ebay/ui-core-react/ebay-icon-button",
+          "src/ebay-page-notice/__tests__/*": "@ebay/ui-core-react/ebay-page-notice",
+          "src/ebay-pagination/__tests__/*": "@ebay/ui-core-react/ebay-pagination",
+          "src/ebay-progress-stepper/__tests__/*": "@ebay/ui-core-react/ebay-progress-stepper",
+          "src/ebay-radio/__tests__/*": "@ebay/ui-core-react/ebay-radio",
+          "src/ebay-select/__tests__/*": "@ebay/ui-core-react/ebay-select",
+          "src/ebay-section-title/__tests__/*": "@ebay/ui-core-react/ebay-section-title",
+          "src/ebay-signal/__tests__/*": "@ebay/ui-core-react/ebay-signal",
+          "src/ebay-skeleton/__tests__/*": "@ebay/ui-core-react/ebay-skeleton",
+          "src/ebay-snackbar-dialog/__tests__/*": "@ebay/ui-core-react/ebay-snackbar-dialog",
+          "src/ebay-switch/__tests__/*": "@ebay/ui-core-react/ebay-switch",
+          "src/ebay-tabs/__tests__/*": "@ebay/ui-core-react/ebay-tabs",
+          "src/ebay-textbox/__tests__/*": "@ebay/ui-core-react/ebay-textbox",
+          "src/ebay-tooltip/__tests__/*": "@ebay/ui-core-react/ebay-tooltip",
+          "src/ebay-tourtip/__tests__/*": "@ebay/ui-core-react/ebay-tourtip",
+          "src/ebay-video/__tests__/*": "@ebay/ui-core-react/ebay-video"
+      },
+      "paths": {}
+    }
+  }
+}
