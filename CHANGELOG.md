@@ -1,5 +1,13 @@
 # @ebay/ui-core-react
 
+## 8.3.0
+
+### Minor Changes
+
+- [#480](https://github.com/eBay/ebayui-core-react/pull/480) [`c8b4725`](https://github.com/eBay/ebayui-core-react/commit/c8b4725465b4d5890ce678f5856067d58253bc13) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat(ProgressBarExpressive): new component
+
+- [#480](https://github.com/eBay/ebayui-core-react/pull/480) [`a09c01d`](https://github.com/eBay/ebayui-core-react/commit/a09c01dee0cab64da028591d2f6695e431a00715) Thanks [@HenriqueLimas](https://github.com/HenriqueLimas)! - feat: add new EbayFilePreviewCard component
+
 ## 8.2.2
 
 ### Patch Changes
