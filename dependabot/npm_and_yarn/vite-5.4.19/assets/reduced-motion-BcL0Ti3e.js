@@ -1,0 +1,1 @@
+import{r}from"./index-CBqU2yxZ.js";function u(){return r.useSyncExternalStore(()=>()=>{},()=>t(),()=>!1)}function t(){var e,o;return!!((o=(e=window.matchMedia)==null?void 0:e.call(window,"(prefers-reduced-motion: reduce)"))!=null&&o.matches)}export{u};

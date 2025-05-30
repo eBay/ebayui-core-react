@@ -1,0 +1,1 @@
+function i(n,e,t=()=>{}){n.includes(e.key)&&t()}function c(n,e){o(n.key)&&e()}function o(n){return[" ","Enter"].includes(n)}function a(n,e){i(["Esc","Escape"],n,e)}function s(n,e){i(["Left","ArrowLeft","Right","ArrowRight"],n,e)}export{s as a,a as b,c as h,o as i};
